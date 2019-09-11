@@ -46,53 +46,7 @@ type APIClient struct {
 
 	// API Services
 
-	AuthenticationApi *AuthenticationApiService
-
-	BillingApi *BillingApiService
-
-	BulkMessageSessionsApi *BulkMessageSessionsApiService
-
-	CallsApi *CallsApiService
-
-	ChatsApi *ChatsApiService
-
-	CommonApi *CommonApiService
-
-	ContactListsApi *ContactListsApiService
-
-	ContactNotesApi *ContactNotesApiService
-
-	ContactsApi *ContactsApiService
-
-	ContactsImportApi *ContactsImportApiService
-
-	CustomFieldsApi *CustomFieldsApiService
-
-	InboundMessagesApi *InboundMessagesApiService
-
-	IntegrationApi *IntegrationApiService
-
-	NumbersApi *NumbersApiService
-
-	OutboundMessageSessionsApi *OutboundMessageSessionsApiService
-
-	OutboundMessagesApi *OutboundMessagesApiService
-
-	ScheduledMessagesApi *ScheduledMessagesApiService
-
-	StatisticApi *StatisticApiService
-
-	SurveysApi *SurveysApiService
-
-	TemplatesApi *TemplatesApiService
-
-	ToolsApi *ToolsApiService
-
-	UserApi *UserApiService
-
-	UserSettingsApi *UserSettingsApiService
-
-	UserSubaccountsApi *UserSubaccountsApiService
+	TextMagicApi *TextMagicApiService
 }
 
 type service struct {
@@ -111,30 +65,7 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
-	c.AuthenticationApi = (*AuthenticationApiService)(&c.common)
-	c.BillingApi = (*BillingApiService)(&c.common)
-	c.BulkMessageSessionsApi = (*BulkMessageSessionsApiService)(&c.common)
-	c.CallsApi = (*CallsApiService)(&c.common)
-	c.ChatsApi = (*ChatsApiService)(&c.common)
-	c.CommonApi = (*CommonApiService)(&c.common)
-	c.ContactListsApi = (*ContactListsApiService)(&c.common)
-	c.ContactNotesApi = (*ContactNotesApiService)(&c.common)
-	c.ContactsApi = (*ContactsApiService)(&c.common)
-	c.ContactsImportApi = (*ContactsImportApiService)(&c.common)
-	c.CustomFieldsApi = (*CustomFieldsApiService)(&c.common)
-	c.InboundMessagesApi = (*InboundMessagesApiService)(&c.common)
-	c.IntegrationApi = (*IntegrationApiService)(&c.common)
-	c.NumbersApi = (*NumbersApiService)(&c.common)
-	c.OutboundMessageSessionsApi = (*OutboundMessageSessionsApiService)(&c.common)
-	c.OutboundMessagesApi = (*OutboundMessagesApiService)(&c.common)
-	c.ScheduledMessagesApi = (*ScheduledMessagesApiService)(&c.common)
-	c.StatisticApi = (*StatisticApiService)(&c.common)
-	c.SurveysApi = (*SurveysApiService)(&c.common)
-	c.TemplatesApi = (*TemplatesApiService)(&c.common)
-	c.ToolsApi = (*ToolsApiService)(&c.common)
-	c.UserApi = (*UserApiService)(&c.common)
-	c.UserSettingsApi = (*UserSettingsApiService)(&c.common)
-	c.UserSubaccountsApi = (*UserSubaccountsApiService)(&c.common)
+	c.TextMagicApi = (*TextMagicApiService)(&c.common)
 
 	return c
 }

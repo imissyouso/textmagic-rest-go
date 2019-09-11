@@ -22,179 +22,179 @@ All URIs are relative to *http://my.textmagic.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*AuthenticationApi* | [**CheckPhoneVerificationCode**](docs/AuthenticationApi.md#checkphoneverificationcode) | **Put** /api/v2/user/phone/verification | Check user phone verification code
-*AuthenticationApi* | [**DoAuth**](docs/AuthenticationApi.md#doauth) | **Post** /api/v2/auth | Authenticate user by given username and password.
-*AuthenticationApi* | [**SendEmailVerificationCode**](docs/AuthenticationApi.md#sendemailverificationcode) | **Get** /api/v2/user/email/verification | Send user email verification
-*AuthenticationApi* | [**SendPhoneVerificationCode**](docs/AuthenticationApi.md#sendphoneverificationcode) | **Get** /api/v2/user/phone/verification | Send user phone verification
-*AuthenticationApi* | [**UpdatePassword**](docs/AuthenticationApi.md#updatepassword) | **Put** /api/v2/user/password/change | Change user password.
-*BillingApi* | [**GetInvoices**](docs/BillingApi.md#getinvoices) | **Get** /api/v2/invoices | Return account invoices.
-*BillingApi* | [**GetSpendingStat**](docs/BillingApi.md#getspendingstat) | **Get** /api/v2/stats/spending | Return account spending statistics.
-*BulkMessageSessionsApi* | [**GetAllBulkSessions**](docs/BulkMessageSessionsApi.md#getallbulksessions) | **Get** /api/v2/bulks | Get all bulk sending sessions.
-*BulkMessageSessionsApi* | [**GetBulkSession**](docs/BulkMessageSessionsApi.md#getbulksession) | **Get** /api/v2/bulks/{id} | Get bulk message session status.
-*CallsApi* | [**GetCallsPrices**](docs/CallsApi.md#getcallsprices) | **Get** /api/v2/calls/price | Check pricing for a inbound/outbound call.
-*CallsApi* | [**GetForwardedCalls**](docs/CallsApi.md#getforwardedcalls) | **Get** /api/v2/calls | Get all forwarded calls.
-*ChatsApi* | [**CloseChatsBulk**](docs/ChatsApi.md#closechatsbulk) | **Post** /api/v2/chats/close/bulk | Close chats by chat ids or close all chats
-*ChatsApi* | [**CloseReadChats**](docs/ChatsApi.md#closereadchats) | **Post** /api/v2/chats/close/read | Close all chats that have no unread messages.
-*ChatsApi* | [**DeleteChatMessages**](docs/ChatsApi.md#deletechatmessages) | **Post** /api/v2/chats/{id}/messages/delete | Delete messages from chat by given messages ID(s).
-*ChatsApi* | [**DeleteChatsBulk**](docs/ChatsApi.md#deletechatsbulk) | **Post** /api/v2/chats/delete | Delete chats by given ID(s) or delete all chats.
-*ChatsApi* | [**GetAllChats**](docs/ChatsApi.md#getallchats) | **Get** /api/v2/chats | Get all user chats.
-*ChatsApi* | [**GetChat**](docs/ChatsApi.md#getchat) | **Get** /api/v2/chats/{id} | Get a single chat.
-*ChatsApi* | [**GetChatByPhone**](docs/ChatsApi.md#getchatbyphone) | **Get** /api/v2/chats/{phone}/by/phone | Find chats by phone.
-*ChatsApi* | [**GetChatMessages**](docs/ChatsApi.md#getchatmessages) | **Get** /api/v2/chats/{id}/message | Fetch messages from chat with specified chat id.
-*ChatsApi* | [**GetUnreadMessagesTotal**](docs/ChatsApi.md#getunreadmessagestotal) | **Get** /api/v2/chats/unread/count | Get total amount of unread messages in the current user chats.
-*ChatsApi* | [**MarkChatsReadBulk**](docs/ChatsApi.md#markchatsreadbulk) | **Post** /api/v2/chats/read/bulk | Mark several chats as read by chat ids or mark all chats as read
-*ChatsApi* | [**MarkChatsUnreadBulk**](docs/ChatsApi.md#markchatsunreadbulk) | **Post** /api/v2/chats/unread/bulk | Mark several chats as UNread by chat ids or mark all chats as UNread
-*ChatsApi* | [**MuteChat**](docs/ChatsApi.md#mutechat) | **Post** /api/v2/chats/mute | Set mute mode.
-*ChatsApi* | [**MuteChatsBulk**](docs/ChatsApi.md#mutechatsbulk) | **Post** /api/v2/chats/mute/bulk | Mute several chats by chat ids or mute all chats
-*ChatsApi* | [**ReopenChatsBulk**](docs/ChatsApi.md#reopenchatsbulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats by chat ids or reopen all chats
-*ChatsApi* | [**SearchChats**](docs/ChatsApi.md#searchchats) | **Get** /api/v2/chats/search | Find chats by inbound or outbound messages text.
-*ChatsApi* | [**SearchChatsByIds**](docs/ChatsApi.md#searchchatsbyids) | **Get** /api/v2/chats/search/ids | Find chats by IDs.
-*ChatsApi* | [**SearchChatsByReceipent**](docs/ChatsApi.md#searchchatsbyreceipent) | **Get** /api/v2/chats/search/recipients | Find chats by recipient (contact, list name or phone number).
-*ChatsApi* | [**SetChatStatus**](docs/ChatsApi.md#setchatstatus) | **Post** /api/v2/chats/status | Set status of the chat given by ID.
-*ChatsApi* | [**UnmuteChatsBulk**](docs/ChatsApi.md#unmutechatsbulk) | **Post** /api/v2/chats/unmute/bulk | Unmute several chats by chat ids or unmute all chats
-*CommonApi* | [**GetCountries**](docs/CommonApi.md#getcountries) | **Get** /api/v2/countries | Return list of countries.
-*CommonApi* | [**GetState**](docs/CommonApi.md#getstate) | **Get** /api/v2/state | Get current entities state
-*CommonApi* | [**GetTimezones**](docs/CommonApi.md#gettimezones) | **Get** /api/v2/timezones | Return all available timezone IDs.
-*CommonApi* | [**GetVersions**](docs/CommonApi.md#getversions) | **Get** /api/v2/versions | Get minimal valid apps versions
-*CommonApi* | [**Ping**](docs/CommonApi.md#ping) | **Get** /api/v2/ping | Just does a pong.
-*ContactListsApi* | [**AssignContactsToList**](docs/ContactListsApi.md#assigncontactstolist) | **Put** /api/v2/lists/{id}/contacts | Assign contacts to the specified list.
-*ContactListsApi* | [**ClearAndAssignContactsToList**](docs/ContactListsApi.md#clearandassigncontactstolist) | **Post** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
-*ContactListsApi* | [**CreateList**](docs/ContactListsApi.md#createlist) | **Post** /api/v2/lists | Create a new list from the submitted data.
-*ContactListsApi* | [**DeleteContactsFromList**](docs/ContactListsApi.md#deletecontactsfromlist) | **Delete** /api/v2/lists/{id}/contacts | Unassign contacts from the specified list.
-*ContactListsApi* | [**DeleteList**](docs/ContactListsApi.md#deletelist) | **Delete** /api/v2/lists/{id} | Delete a single list.
-*ContactListsApi* | [**DeleteListAvatar**](docs/ContactListsApi.md#deletelistavatar) | **Delete** /api/v2/lists/{id}/avatar | Delete an avatar for the list.
-*ContactListsApi* | [**DeleteListContactsBulk**](docs/ContactListsApi.md#deletelistcontactsbulk) | **Post** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list.
-*ContactListsApi* | [**DeleteListsBulk**](docs/ContactListsApi.md#deletelistsbulk) | **Post** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists.
-*ContactListsApi* | [**GetContactsByListId**](docs/ContactListsApi.md#getcontactsbylistid) | **Get** /api/v2/lists/{id}/contacts | Fetch user contacts by given group id.
-*ContactListsApi* | [**GetList**](docs/ContactListsApi.md#getlist) | **Get** /api/v2/lists/{id} | Get a single list.
-*ContactListsApi* | [**GetListContactsIds**](docs/ContactListsApi.md#getlistcontactsids) | **Get** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
-*ContactListsApi* | [**GetListsOfContact**](docs/ContactListsApi.md#getlistsofcontact) | **Get** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
-*ContactListsApi* | [**GetUserLists**](docs/ContactListsApi.md#getuserlists) | **Get** /api/v2/lists | Get all user lists.
-*ContactListsApi* | [**SearchLists**](docs/ContactListsApi.md#searchlists) | **Get** /api/v2/lists/search | Find contact lists by given parameters.
-*ContactListsApi* | [**UpdateList**](docs/ContactListsApi.md#updatelist) | **Put** /api/v2/lists/{id} | Update existing list.
-*ContactListsApi* | [**UploadListAvatar**](docs/ContactListsApi.md#uploadlistavatar) | **Post** /api/v2/lists/{id}/avatar | Add an avatar for the list.
-*ContactNotesApi* | [**CreateContactNote**](docs/ContactNotesApi.md#createcontactnote) | **Post** /api/v2/contacts/{id}/notes | Create a new contact note.
-*ContactNotesApi* | [**DeleteContactNote**](docs/ContactNotesApi.md#deletecontactnote) | **Delete** /api/v2/notes/{id} | Delete a single contact note.
-*ContactNotesApi* | [**DeleteContactNotesBulk**](docs/ContactNotesApi.md#deletecontactnotesbulk) | **Post** /api/v2/contacts/{id}/notes/delete | Delete contact note by given ID(s) or delete all contact notes.
-*ContactNotesApi* | [**GetContactNote**](docs/ContactNotesApi.md#getcontactnote) | **Get** /api/v2/notes/{id} | Get a single contact note.
-*ContactNotesApi* | [**GetContactNotes**](docs/ContactNotesApi.md#getcontactnotes) | **Get** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
-*ContactNotesApi* | [**UpdateContactNote**](docs/ContactNotesApi.md#updatecontactnote) | **Put** /api/v2/notes/{id} | Update existing contact note.
-*ContactsApi* | [**BlockContact**](docs/ContactsApi.md#blockcontact) | **Post** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
-*ContactsApi* | [**CreateContact**](docs/ContactsApi.md#createcontact) | **Post** /api/v2/contacts | Create a new contact from the submitted data.
-*ContactsApi* | [**DeleteAllContacts**](docs/ContactsApi.md#deleteallcontacts) | **Delete** /api/v2/contact/all | Delete all contacts.
-*ContactsApi* | [**DeleteContact**](docs/ContactsApi.md#deletecontact) | **Delete** /api/v2/contacts/{id} | Delete a single contact.
-*ContactsApi* | [**DeleteContactAvatar**](docs/ContactsApi.md#deletecontactavatar) | **Delete** /api/v2/contacts/{id}/avatar | Delete an avatar for the contact.
-*ContactsApi* | [**DeleteContactsByIds**](docs/ContactsApi.md#deletecontactsbyids) | **Post** /api/v2/contacts/delete | Delete contact by given ID(s) or delete all contacts.
-*ContactsApi* | [**GetBlockedContacts**](docs/ContactsApi.md#getblockedcontacts) | **Get** /api/v2/contacts/block/list | Get blocked contacts.
-*ContactsApi* | [**GetContact**](docs/ContactsApi.md#getcontact) | **Get** /api/v2/contacts/{id} | Get a single contact.
-*ContactsApi* | [**GetContactByPhone**](docs/ContactsApi.md#getcontactbyphone) | **Get** /api/v2/contacts/phone/{phone} | Get a single contact by phone number.
-*ContactsApi* | [**GetContactIfBlocked**](docs/ContactsApi.md#getcontactifblocked) | **Get** /api/v2/contacts/block/phone | Check is that phone number blocked
-*ContactsApi* | [**GetContacts**](docs/ContactsApi.md#getcontacts) | **Get** /api/v2/contacts | Get all user contacts.
-*ContactsApi* | [**GetContactsAutocomplete**](docs/ContactsApi.md#getcontactsautocomplete) | **Get** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions by given search term.
-*ContactsApi* | [**GetFavourites**](docs/ContactsApi.md#getfavourites) | **Get** /api/v2/contacts/favorite | Get favorite contacts and lists.
-*ContactsApi* | [**GetUnsubscribedContact**](docs/ContactsApi.md#getunsubscribedcontact) | **Get** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
-*ContactsApi* | [**GetUnsubscribers**](docs/ContactsApi.md#getunsubscribers) | **Get** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
-*ContactsApi* | [**SearchContacts**](docs/ContactsApi.md#searchcontacts) | **Get** /api/v2/contacts/search | Find user contacts by given parameters.
-*ContactsApi* | [**UnblockContact**](docs/ContactsApi.md#unblockcontact) | **Post** /api/v2/contacts/unblock | Unblock contact by phone number.
-*ContactsApi* | [**UnblockContactsBulk**](docs/ContactsApi.md#unblockcontactsbulk) | **Post** /api/v2/contacts/unblock/bulk | Unblock several contacts by blocked contact ids or unblock all contacts
-*ContactsApi* | [**UnsubscribeContact**](docs/ContactsApi.md#unsubscribecontact) | **Post** /api/v2/unsubscribers | Unsubscribe contact from your communication by phone number.
-*ContactsApi* | [**UpdateContact**](docs/ContactsApi.md#updatecontact) | **Put** /api/v2/contacts/{id} | Update existing contact.
-*ContactsApi* | [**UploadContactAvatar**](docs/ContactsApi.md#uploadcontactavatar) | **Post** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
-*ContactsImportApi* | [**GetContactImportSessionProgress**](docs/ContactsImportApi.md#getcontactimportsessionprogress) | **Get** /api/v2/contacts/import/progress/{id} | Get contact import session progress.
-*CustomFieldsApi* | [**CreateCustomField**](docs/CustomFieldsApi.md#createcustomfield) | **Post** /api/v2/customfields | Create a new custom field from the submitted data.
-*CustomFieldsApi* | [**DeleteCustomField**](docs/CustomFieldsApi.md#deletecustomfield) | **Delete** /api/v2/customfields/{id} | Delete a single custom field.
-*CustomFieldsApi* | [**GetCustomField**](docs/CustomFieldsApi.md#getcustomfield) | **Get** /api/v2/customfields/{id} | Get a single custom field.
-*CustomFieldsApi* | [**GetCustomFields**](docs/CustomFieldsApi.md#getcustomfields) | **Get** /api/v2/customfields | Get all contact custom fields.
-*CustomFieldsApi* | [**UpdateCustomField**](docs/CustomFieldsApi.md#updatecustomfield) | **Put** /api/v2/customfields/{id} | Update existing custom field.
-*CustomFieldsApi* | [**UpdateCustomFieldValue**](docs/CustomFieldsApi.md#updatecustomfieldvalue) | **Put** /api/v2/customfields/{id}/update | Update contact&#39;s custom field value.
-*InboundMessagesApi* | [**DeleteInboundMessage**](docs/InboundMessagesApi.md#deleteinboundmessage) | **Delete** /api/v2/replies/{id} | Delete the incoming message.
-*InboundMessagesApi* | [**DeleteInboundMessagesBulk**](docs/InboundMessagesApi.md#deleteinboundmessagesbulk) | **Post** /api/v2/replies/delete | Delete inbound messages by given ID(s) or delete all inbound messages.
-*InboundMessagesApi* | [**GetAllInboundMessages**](docs/InboundMessagesApi.md#getallinboundmessages) | **Get** /api/v2/replies | Get all inbox messages.
-*InboundMessagesApi* | [**GetInboundMessage**](docs/InboundMessagesApi.md#getinboundmessage) | **Get** /api/v2/replies/{id} | Get a single inbox message.
-*InboundMessagesApi* | [**SearchInboundMessages**](docs/InboundMessagesApi.md#searchinboundmessages) | **Get** /api/v2/replies/search | Find inbound messages by given parameters.
-*IntegrationApi* | [**CreatePushToken**](docs/IntegrationApi.md#createpushtoken) | **Post** /api/v2/push/tokens | Add or update a device token.
-*IntegrationApi* | [**DeletePushToken**](docs/IntegrationApi.md#deletepushtoken) | **Delete** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
-*IntegrationApi* | [**GetPushTokens**](docs/IntegrationApi.md#getpushtokens) | **Get** /api/v2/push/tokens | Get all device tokens assigned to the current account
-*NumbersApi* | [**BuyDedicatedNumber**](docs/NumbersApi.md#buydedicatednumber) | **Post** /api/v2/numbers | Buy a dedicated number and assign it to the specified account.
-*NumbersApi* | [**DeleteDedicatedNumber**](docs/NumbersApi.md#deletededicatednumber) | **Delete** /api/v2/numbers/{id} | Cancel dedicated number subscription.
-*NumbersApi* | [**DeleteSenderId**](docs/NumbersApi.md#deletesenderid) | **Delete** /api/v2/senderids/{id} | Delete a Sender ID.
-*NumbersApi* | [**GetAvailableDedicatedNumbers**](docs/NumbersApi.md#getavailablededicatednumbers) | **Get** /api/v2/numbers/available | Find available dedicated numbers to buy.
-*NumbersApi* | [**GetDedicatedNumber**](docs/NumbersApi.md#getdedicatednumber) | **Get** /api/v2/numbers/{id} | Get a single dedicated number.
-*NumbersApi* | [**GetSenderId**](docs/NumbersApi.md#getsenderid) | **Get** /api/v2/senderids/{id} | Get a single Sender ID.
-*NumbersApi* | [**GetSenderIds**](docs/NumbersApi.md#getsenderids) | **Get** /api/v2/senderids | Get all sender IDs of current user.
-*NumbersApi* | [**GetSenderSettings**](docs/NumbersApi.md#getsendersettings) | **Get** /api/v2/sender/settings | Get current user sender settings.
-*NumbersApi* | [**GetUserDedicatedNumbers**](docs/NumbersApi.md#getuserdedicatednumbers) | **Get** /api/v2/numbers | Get user&#39;s dedicated numbers.
-*NumbersApi* | [**RequestSenderId**](docs/NumbersApi.md#requestsenderid) | **Post** /api/v2/senderids | Request for a new Sender ID.
-*NumbersApi* | [**UpdateSenderSetting**](docs/NumbersApi.md#updatesendersetting) | **Put** /api/v2/sender/settings | Change sender settings for specified country.
-*OutboundMessageSessionsApi* | [**DeleteMessageSession**](docs/OutboundMessageSessionsApi.md#deletemessagesession) | **Delete** /api/v2/sessions/{id} | Delete a message session, together with all nested messages.
-*OutboundMessageSessionsApi* | [**DeleteMessageSessionsBulk**](docs/OutboundMessageSessionsApi.md#deletemessagesessionsbulk) | **Post** /api/v2/sessions/delete | Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
-*OutboundMessageSessionsApi* | [**GetAllMessageSessions**](docs/OutboundMessageSessionsApi.md#getallmessagesessions) | **Get** /api/v2/sessions | Get all message sending sessions.
-*OutboundMessageSessionsApi* | [**GetMessageSession**](docs/OutboundMessageSessionsApi.md#getmessagesession) | **Get** /api/v2/sessions/{id} | Get a message session.
-*OutboundMessageSessionsApi* | [**GetMessageSessionStat**](docs/OutboundMessageSessionsApi.md#getmessagesessionstat) | **Get** /api/v2/sessions/{id}/stat | Get sending session statistics.
-*OutboundMessageSessionsApi* | [**GetMessagesBySessionId**](docs/OutboundMessageSessionsApi.md#getmessagesbysessionid) | **Get** /api/v2/sessions/{id}/messages | Fetch messages by given session id.
-*OutboundMessagesApi* | [**DeleteAllOutboundMessages**](docs/OutboundMessagesApi.md#deletealloutboundmessages) | **Delete** /api/v2/message/all | Delete all messages
-*OutboundMessagesApi* | [**DeleteOutboundMessage**](docs/OutboundMessagesApi.md#deleteoutboundmessage) | **Delete** /api/v2/messages/{id} | Delete message
-*OutboundMessagesApi* | [**DeleteOutboundMessagesBulk**](docs/OutboundMessagesApi.md#deleteoutboundmessagesbulk) | **Post** /api/v2/messages/delete | Delete messages by IDs
-*OutboundMessagesApi* | [**GetAllOutboundMessages**](docs/OutboundMessagesApi.md#getalloutboundmessages) | **Get** /api/v2/messages | Get all messages
-*OutboundMessagesApi* | [**GetMessagePreview**](docs/OutboundMessagesApi.md#getmessagepreview) | **Get** /api/v2/messages/preview | Preview message
-*OutboundMessagesApi* | [**GetMessagePrice**](docs/OutboundMessagesApi.md#getmessageprice) | **Get** /api/v2/messages/price | Check price
-*OutboundMessagesApi* | [**GetMessagePrices**](docs/OutboundMessagesApi.md#getmessageprices) | **Get** /api/v2/messages/prices | Get pricing
-*OutboundMessagesApi* | [**GetOutboundMessage**](docs/OutboundMessagesApi.md#getoutboundmessage) | **Get** /api/v2/messages/{id} | Get a single message
-*OutboundMessagesApi* | [**GetOutboundMessagesHistory**](docs/OutboundMessagesApi.md#getoutboundmessageshistory) | **Get** /api/v2/history | Get history
-*OutboundMessagesApi* | [**SearchOutboundMessages**](docs/OutboundMessagesApi.md#searchoutboundmessages) | **Get** /api/v2/messages/search | Find messages
-*OutboundMessagesApi* | [**SendMessage**](docs/OutboundMessagesApi.md#sendmessage) | **Post** /api/v2/messages | Send message
-*OutboundMessagesApi* | [**UploadMessageAttachment**](docs/OutboundMessagesApi.md#uploadmessageattachment) | **Post** /api/v2/messages/attachment | Upload message attachment
-*ScheduledMessagesApi* | [**DeleteScheduledMessage**](docs/ScheduledMessagesApi.md#deletescheduledmessage) | **Delete** /api/v2/schedules/{id} | Delete a message session, together with all nested messages.
-*ScheduledMessagesApi* | [**DeleteScheduledMessagesBulk**](docs/ScheduledMessagesApi.md#deletescheduledmessagesbulk) | **Post** /api/v2/schedules/delete | Delete scheduled messages by given ID(s) or delete all scheduled messages.
-*ScheduledMessagesApi* | [**GetAllScheduledMessages**](docs/ScheduledMessagesApi.md#getallscheduledmessages) | **Get** /api/v2/schedules | Get all scheduled messages.
-*ScheduledMessagesApi* | [**GetScheduledMessage**](docs/ScheduledMessagesApi.md#getscheduledmessage) | **Get** /api/v2/schedules/{id} | Get message schedule.
-*ScheduledMessagesApi* | [**SearchScheduledMessages**](docs/ScheduledMessagesApi.md#searchscheduledmessages) | **Get** /api/v2/schedules/search | Find scheduled messages by given parameters.
-*StatisticApi* | [**GetMessagingCounters**](docs/StatisticApi.md#getmessagingcounters) | **Get** /api/v2/stats/messaging/data | Return counters for messaging data views.
-*StatisticApi* | [**GetMessagingStat**](docs/StatisticApi.md#getmessagingstat) | **Get** /api/v2/stats/messaging | Return messaging statistics.
-*SurveysApi* | [**CancelSurvey**](docs/SurveysApi.md#cancelsurvey) | **Put** /api/v2/surveys/{id}/cancel | Cancel a survey.
-*SurveysApi* | [**CreateSurvey**](docs/SurveysApi.md#createsurvey) | **Post** /api/v2/surveys | Create a new survey from the submitted data.
-*SurveysApi* | [**CreateSurveyNode**](docs/SurveysApi.md#createsurveynode) | **Post** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
-*SurveysApi* | [**DeleteSurvey**](docs/SurveysApi.md#deletesurvey) | **Delete** /api/v2/surveys/{id} | Delete a survey.
-*SurveysApi* | [**DeleteSurveyNode**](docs/SurveysApi.md#deletesurveynode) | **Delete** /api/v2/surveys/nodes/{id} | Delete a node.
-*SurveysApi* | [**DuplicateSurvey**](docs/SurveysApi.md#duplicatesurvey) | **Put** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
-*SurveysApi* | [**GetSurvey**](docs/SurveysApi.md#getsurvey) | **Get** /api/v2/surveys/{id} | Get a survey by id.
-*SurveysApi* | [**GetSurveyNode**](docs/SurveysApi.md#getsurveynode) | **Get** /api/v2/surveys/nodes/{id} | Get a node by id.
-*SurveysApi* | [**GetSurveyNodes**](docs/SurveysApi.md#getsurveynodes) | **Get** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
-*SurveysApi* | [**GetSurveys**](docs/SurveysApi.md#getsurveys) | **Get** /api/v2/surveys | Get all user surveys.
-*SurveysApi* | [**MergeSurveyNodes**](docs/SurveysApi.md#mergesurveynodes) | **Post** /api/v2/surveys/nodes/merge | Merge two question nodes.
-*SurveysApi* | [**ResetSurvey**](docs/SurveysApi.md#resetsurvey) | **Put** /api/v2/surveys/{id}/reset | Reset a survey flow.
-*SurveysApi* | [**StartSurvey**](docs/SurveysApi.md#startsurvey) | **Put** /api/v2/surveys/{id}/start | Start a survey.
-*SurveysApi* | [**UpdateSurvey**](docs/SurveysApi.md#updatesurvey) | **Put** /api/v2/surveys/{id} | Update existing survey.
-*SurveysApi* | [**UpdateSurveyNode**](docs/SurveysApi.md#updatesurveynode) | **Put** /api/v2/surveys/nodes/{id} | Update existing node.
-*TemplatesApi* | [**CreateTemplate**](docs/TemplatesApi.md#createtemplate) | **Post** /api/v2/templates | Create a new template from the submitted data.
-*TemplatesApi* | [**DeleteTemplate**](docs/TemplatesApi.md#deletetemplate) | **Delete** /api/v2/templates/{id} | Delete a single template.
-*TemplatesApi* | [**DeleteTemplatesBulk**](docs/TemplatesApi.md#deletetemplatesbulk) | **Post** /api/v2/templates/delete | Delete template by given ID(s) or delete all templates.
-*TemplatesApi* | [**GetAllTemplates**](docs/TemplatesApi.md#getalltemplates) | **Get** /api/v2/templates | Get all user templates.
-*TemplatesApi* | [**GetTemplate**](docs/TemplatesApi.md#gettemplate) | **Get** /api/v2/templates/{id} | Get a single template.
-*TemplatesApi* | [**SearchTemplates**](docs/TemplatesApi.md#searchtemplates) | **Get** /api/v2/templates/search | Find user templates by given parameters.
-*TemplatesApi* | [**UpdateTemplate**](docs/TemplatesApi.md#updatetemplate) | **Put** /api/v2/templates/{id} | Update existing template.
-*ToolsApi* | [**DoCarrierLookup**](docs/ToolsApi.md#docarrierlookup) | **Get** /api/v2/lookups/{phone} | Carrier Lookup
-*ToolsApi* | [**DoEmailLookup**](docs/ToolsApi.md#doemaillookup) | **Get** /api/v2/email-lookups/{email} | Validate Email address using Email Lookup tool
-*UserApi* | [**DeleteAvatar**](docs/UserApi.md#deleteavatar) | **Delete** /api/v2/user/avatar | Delete an avatar for the current user.\\
-*UserApi* | [**GetCurrentUser**](docs/UserApi.md#getcurrentuser) | **Get** /api/v2/user | Get current user info.
-*UserApi* | [**GetDisallowedRules**](docs/UserApi.md#getdisallowedrules) | **Get** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
-*UserApi* | [**UpdateCurrentUser**](docs/UserApi.md#updatecurrentuser) | **Put** /api/v2/user | Update current user info.
-*UserApi* | [**UploadAvatar**](docs/UserApi.md#uploadavatar) | **Post** /api/v2/user/avatar | Add an avatar for the current user.
-*UserSettingsApi* | [**GetAvailableSenderSettingOptions**](docs/UserSettingsApi.md#getavailablesendersettingoptions) | **Get** /api/v2/sources | Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
-*UserSettingsApi* | [**GetBalanceNotificationOptions**](docs/UserSettingsApi.md#getbalancenotificationoptions) | **Get** /api/v2/user/notification/balance/bundles | Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
-*UserSettingsApi* | [**GetBalanceNotificationSettings**](docs/UserSettingsApi.md#getbalancenotificationsettings) | **Get** /api/v2/user/notification/balance | Get balance notification settings
-*UserSettingsApi* | [**GetCallbackSettings**](docs/UserSettingsApi.md#getcallbacksettings) | **Get** /api/v2/callback/settings | Fetch callback URL settings
-*UserSettingsApi* | [**GetInboundMessagesNotificationSettings**](docs/UserSettingsApi.md#getinboundmessagesnotificationsettings) | **Get** /api/v2/user/notification/inbound | Get inbound messages notification settings
-*UserSettingsApi* | [**UpdateBalanceNotificationSettings**](docs/UserSettingsApi.md#updatebalancenotificationsettings) | **Put** /api/v2/user/notification/balance | Update balance notification settings
-*UserSettingsApi* | [**UpdateCallbackSettings**](docs/UserSettingsApi.md#updatecallbacksettings) | **Put** /api/v2/callback/settings | Update callback URL settings
-*UserSettingsApi* | [**UpdateChatDesktopNotificationSettings**](docs/UserSettingsApi.md#updatechatdesktopnotificationsettings) | **Put** /api/v2/user/desktop/notification | Update chat desktop notification settings
-*UserSettingsApi* | [**UpdateInboundMessagesNotificationSettings**](docs/UserSettingsApi.md#updateinboundmessagesnotificationsettings) | **Put** /api/v2/user/notification/inbound | Update inbound messages notification settings
-*UserSubaccountsApi* | [**CloseSubaccount**](docs/UserSubaccountsApi.md#closesubaccount) | **Delete** /api/v2/subaccounts/{id} | Close subaccount.
-*UserSubaccountsApi* | [**GetSubaccount**](docs/UserSubaccountsApi.md#getsubaccount) | **Get** /api/v2/subaccounts/{id} | Get a single subaccount.
-*UserSubaccountsApi* | [**GetSubaccounts**](docs/UserSubaccountsApi.md#getsubaccounts) | **Get** /api/v2/subaccounts | Get all subaccounts of current user.
-*UserSubaccountsApi* | [**GetSubaccountsWithTokens**](docs/UserSubaccountsApi.md#getsubaccountswithtokens) | **Post** /api/v2/subaccounts/tokens/list | Get all subaccounts with their REST API tokens associated with specified app name.
-*UserSubaccountsApi* | [**InviteSubaccount**](docs/UserSubaccountsApi.md#invitesubaccount) | **Post** /api/v2/subaccounts | Invite new subaccount.
-*UserSubaccountsApi* | [**RequestNewSubaccountToken**](docs/UserSubaccountsApi.md#requestnewsubaccounttoken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
+*TextMagicApi* | [**AssignContactsToList**](docs/TextMagicApi.md#assigncontactstolist) | **Put** /api/v2/lists/{id}/contacts | Assign contacts to the specified list.
+*TextMagicApi* | [**BlockContact**](docs/TextMagicApi.md#blockcontact) | **Post** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
+*TextMagicApi* | [**BuyDedicatedNumber**](docs/TextMagicApi.md#buydedicatednumber) | **Post** /api/v2/numbers | Buy a dedicated number and assign it to the specified account.
+*TextMagicApi* | [**CancelSurvey**](docs/TextMagicApi.md#cancelsurvey) | **Put** /api/v2/surveys/{id}/cancel | Cancel a survey.
+*TextMagicApi* | [**CheckPhoneVerificationCode**](docs/TextMagicApi.md#checkphoneverificationcode) | **Put** /api/v2/user/phone/verification | Check user phone verification code
+*TextMagicApi* | [**ClearAndAssignContactsToList**](docs/TextMagicApi.md#clearandassigncontactstolist) | **Post** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
+*TextMagicApi* | [**CloseChatsBulk**](docs/TextMagicApi.md#closechatsbulk) | **Post** /api/v2/chats/close/bulk | Close chats by chat ids or close all chats
+*TextMagicApi* | [**CloseReadChats**](docs/TextMagicApi.md#closereadchats) | **Post** /api/v2/chats/close/read | Close all chats that have no unread messages.
+*TextMagicApi* | [**CloseSubaccount**](docs/TextMagicApi.md#closesubaccount) | **Delete** /api/v2/subaccounts/{id} | Close subaccount.
+*TextMagicApi* | [**CreateContact**](docs/TextMagicApi.md#createcontact) | **Post** /api/v2/contacts | Create a new contact from the submitted data.
+*TextMagicApi* | [**CreateContactNote**](docs/TextMagicApi.md#createcontactnote) | **Post** /api/v2/contacts/{id}/notes | Create a new contact note.
+*TextMagicApi* | [**CreateCustomField**](docs/TextMagicApi.md#createcustomfield) | **Post** /api/v2/customfields | Create a new custom field from the submitted data.
+*TextMagicApi* | [**CreateList**](docs/TextMagicApi.md#createlist) | **Post** /api/v2/lists | Create a new list from the submitted data.
+*TextMagicApi* | [**CreatePushToken**](docs/TextMagicApi.md#createpushtoken) | **Post** /api/v2/push/tokens | Add or update a device token.
+*TextMagicApi* | [**CreateSurvey**](docs/TextMagicApi.md#createsurvey) | **Post** /api/v2/surveys | Create a new survey from the submitted data.
+*TextMagicApi* | [**CreateSurveyNode**](docs/TextMagicApi.md#createsurveynode) | **Post** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
+*TextMagicApi* | [**CreateTemplate**](docs/TextMagicApi.md#createtemplate) | **Post** /api/v2/templates | Create a new template from the submitted data.
+*TextMagicApi* | [**DeleteAllContacts**](docs/TextMagicApi.md#deleteallcontacts) | **Delete** /api/v2/contact/all | Delete all contacts.
+*TextMagicApi* | [**DeleteAllOutboundMessages**](docs/TextMagicApi.md#deletealloutboundmessages) | **Delete** /api/v2/message/all | Delete all messages
+*TextMagicApi* | [**DeleteAvatar**](docs/TextMagicApi.md#deleteavatar) | **Delete** /api/v2/user/avatar | Delete an avatar for the current user.\\
+*TextMagicApi* | [**DeleteChatMessages**](docs/TextMagicApi.md#deletechatmessages) | **Post** /api/v2/chats/{id}/messages/delete | Delete messages from chat by given messages ID(s).
+*TextMagicApi* | [**DeleteChatsBulk**](docs/TextMagicApi.md#deletechatsbulk) | **Post** /api/v2/chats/delete | Delete chats by given ID(s) or delete all chats.
+*TextMagicApi* | [**DeleteContact**](docs/TextMagicApi.md#deletecontact) | **Delete** /api/v2/contacts/{id} | Delete a single contact.
+*TextMagicApi* | [**DeleteContactAvatar**](docs/TextMagicApi.md#deletecontactavatar) | **Delete** /api/v2/contacts/{id}/avatar | Delete an avatar for the contact.
+*TextMagicApi* | [**DeleteContactNote**](docs/TextMagicApi.md#deletecontactnote) | **Delete** /api/v2/notes/{id} | Delete a single contact note.
+*TextMagicApi* | [**DeleteContactNotesBulk**](docs/TextMagicApi.md#deletecontactnotesbulk) | **Post** /api/v2/contacts/{id}/notes/delete | Delete contact note by given ID(s) or delete all contact notes.
+*TextMagicApi* | [**DeleteContactsByIds**](docs/TextMagicApi.md#deletecontactsbyids) | **Post** /api/v2/contacts/delete | Delete contact by given ID(s) or delete all contacts.
+*TextMagicApi* | [**DeleteContactsFromList**](docs/TextMagicApi.md#deletecontactsfromlist) | **Delete** /api/v2/lists/{id}/contacts | Unassign contacts from the specified list.
+*TextMagicApi* | [**DeleteCustomField**](docs/TextMagicApi.md#deletecustomfield) | **Delete** /api/v2/customfields/{id} | Delete a single custom field.
+*TextMagicApi* | [**DeleteDedicatedNumber**](docs/TextMagicApi.md#deletededicatednumber) | **Delete** /api/v2/numbers/{id} | Cancel dedicated number subscription.
+*TextMagicApi* | [**DeleteInboundMessage**](docs/TextMagicApi.md#deleteinboundmessage) | **Delete** /api/v2/replies/{id} | Delete the incoming message.
+*TextMagicApi* | [**DeleteInboundMessagesBulk**](docs/TextMagicApi.md#deleteinboundmessagesbulk) | **Post** /api/v2/replies/delete | Delete inbound messages by given ID(s) or delete all inbound messages.
+*TextMagicApi* | [**DeleteList**](docs/TextMagicApi.md#deletelist) | **Delete** /api/v2/lists/{id} | Delete a single list.
+*TextMagicApi* | [**DeleteListAvatar**](docs/TextMagicApi.md#deletelistavatar) | **Delete** /api/v2/lists/{id}/avatar | Delete an avatar for the list.
+*TextMagicApi* | [**DeleteListContactsBulk**](docs/TextMagicApi.md#deletelistcontactsbulk) | **Post** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list.
+*TextMagicApi* | [**DeleteListsBulk**](docs/TextMagicApi.md#deletelistsbulk) | **Post** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists.
+*TextMagicApi* | [**DeleteMessageSession**](docs/TextMagicApi.md#deletemessagesession) | **Delete** /api/v2/sessions/{id} | Delete a message session, together with all nested messages.
+*TextMagicApi* | [**DeleteMessageSessionsBulk**](docs/TextMagicApi.md#deletemessagesessionsbulk) | **Post** /api/v2/sessions/delete | Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+*TextMagicApi* | [**DeleteOutboundMessage**](docs/TextMagicApi.md#deleteoutboundmessage) | **Delete** /api/v2/messages/{id} | Delete message
+*TextMagicApi* | [**DeleteOutboundMessagesBulk**](docs/TextMagicApi.md#deleteoutboundmessagesbulk) | **Post** /api/v2/messages/delete | Delete messages by IDs
+*TextMagicApi* | [**DeletePushToken**](docs/TextMagicApi.md#deletepushtoken) | **Delete** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
+*TextMagicApi* | [**DeleteScheduledMessage**](docs/TextMagicApi.md#deletescheduledmessage) | **Delete** /api/v2/schedules/{id} | Delete a message session, together with all nested messages.
+*TextMagicApi* | [**DeleteScheduledMessagesBulk**](docs/TextMagicApi.md#deletescheduledmessagesbulk) | **Post** /api/v2/schedules/delete | Delete scheduled messages by given ID(s) or delete all scheduled messages.
+*TextMagicApi* | [**DeleteSenderId**](docs/TextMagicApi.md#deletesenderid) | **Delete** /api/v2/senderids/{id} | Delete a Sender ID.
+*TextMagicApi* | [**DeleteSurvey**](docs/TextMagicApi.md#deletesurvey) | **Delete** /api/v2/surveys/{id} | Delete a survey.
+*TextMagicApi* | [**DeleteSurveyNode**](docs/TextMagicApi.md#deletesurveynode) | **Delete** /api/v2/surveys/nodes/{id} | Delete a node.
+*TextMagicApi* | [**DeleteTemplate**](docs/TextMagicApi.md#deletetemplate) | **Delete** /api/v2/templates/{id} | Delete a single template.
+*TextMagicApi* | [**DeleteTemplatesBulk**](docs/TextMagicApi.md#deletetemplatesbulk) | **Post** /api/v2/templates/delete | Delete template by given ID(s) or delete all templates.
+*TextMagicApi* | [**DoAuth**](docs/TextMagicApi.md#doauth) | **Post** /api/v2/auth | Authenticate user by given username and password.
+*TextMagicApi* | [**DoCarrierLookup**](docs/TextMagicApi.md#docarrierlookup) | **Get** /api/v2/lookups/{phone} | Carrier Lookup
+*TextMagicApi* | [**DoEmailLookup**](docs/TextMagicApi.md#doemaillookup) | **Get** /api/v2/email-lookups/{email} | Validate Email address using Email Lookup tool
+*TextMagicApi* | [**DuplicateSurvey**](docs/TextMagicApi.md#duplicatesurvey) | **Put** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
+*TextMagicApi* | [**GetAllBulkSessions**](docs/TextMagicApi.md#getallbulksessions) | **Get** /api/v2/bulks | Get all bulk sending sessions.
+*TextMagicApi* | [**GetAllChats**](docs/TextMagicApi.md#getallchats) | **Get** /api/v2/chats | Get all user chats.
+*TextMagicApi* | [**GetAllInboundMessages**](docs/TextMagicApi.md#getallinboundmessages) | **Get** /api/v2/replies | Get all inbox messages.
+*TextMagicApi* | [**GetAllMessageSessions**](docs/TextMagicApi.md#getallmessagesessions) | **Get** /api/v2/sessions | Get all message sending sessions.
+*TextMagicApi* | [**GetAllOutboundMessages**](docs/TextMagicApi.md#getalloutboundmessages) | **Get** /api/v2/messages | Get all messages
+*TextMagicApi* | [**GetAllScheduledMessages**](docs/TextMagicApi.md#getallscheduledmessages) | **Get** /api/v2/schedules | Get all scheduled messages.
+*TextMagicApi* | [**GetAllTemplates**](docs/TextMagicApi.md#getalltemplates) | **Get** /api/v2/templates | Get all user templates.
+*TextMagicApi* | [**GetAvailableDedicatedNumbers**](docs/TextMagicApi.md#getavailablededicatednumbers) | **Get** /api/v2/numbers/available | Find available dedicated numbers to buy.
+*TextMagicApi* | [**GetAvailableSenderSettingOptions**](docs/TextMagicApi.md#getavailablesendersettingoptions) | **Get** /api/v2/sources | Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+*TextMagicApi* | [**GetBalanceNotificationOptions**](docs/TextMagicApi.md#getbalancenotificationoptions) | **Get** /api/v2/user/notification/balance/bundles | Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
+*TextMagicApi* | [**GetBalanceNotificationSettings**](docs/TextMagicApi.md#getbalancenotificationsettings) | **Get** /api/v2/user/notification/balance | Get balance notification settings
+*TextMagicApi* | [**GetBlockedContacts**](docs/TextMagicApi.md#getblockedcontacts) | **Get** /api/v2/contacts/block/list | Get blocked contacts.
+*TextMagicApi* | [**GetBulkSession**](docs/TextMagicApi.md#getbulksession) | **Get** /api/v2/bulks/{id} | Get bulk message session status.
+*TextMagicApi* | [**GetCallbackSettings**](docs/TextMagicApi.md#getcallbacksettings) | **Get** /api/v2/callback/settings | Fetch callback URL settings
+*TextMagicApi* | [**GetCallsPrices**](docs/TextMagicApi.md#getcallsprices) | **Get** /api/v2/calls/price | Check pricing for a inbound/outbound call.
+*TextMagicApi* | [**GetChat**](docs/TextMagicApi.md#getchat) | **Get** /api/v2/chats/{id} | Get a single chat.
+*TextMagicApi* | [**GetChatByPhone**](docs/TextMagicApi.md#getchatbyphone) | **Get** /api/v2/chats/{phone}/by/phone | Find chats by phone.
+*TextMagicApi* | [**GetChatMessages**](docs/TextMagicApi.md#getchatmessages) | **Get** /api/v2/chats/{id}/message | Fetch messages from chat with specified chat id.
+*TextMagicApi* | [**GetContact**](docs/TextMagicApi.md#getcontact) | **Get** /api/v2/contacts/{id} | Get a single contact.
+*TextMagicApi* | [**GetContactByPhone**](docs/TextMagicApi.md#getcontactbyphone) | **Get** /api/v2/contacts/phone/{phone} | Get a single contact by phone number.
+*TextMagicApi* | [**GetContactIfBlocked**](docs/TextMagicApi.md#getcontactifblocked) | **Get** /api/v2/contacts/block/phone | Check is that phone number blocked
+*TextMagicApi* | [**GetContactImportSessionProgress**](docs/TextMagicApi.md#getcontactimportsessionprogress) | **Get** /api/v2/contacts/import/progress/{id} | Get contact import session progress.
+*TextMagicApi* | [**GetContactNote**](docs/TextMagicApi.md#getcontactnote) | **Get** /api/v2/notes/{id} | Get a single contact note.
+*TextMagicApi* | [**GetContactNotes**](docs/TextMagicApi.md#getcontactnotes) | **Get** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
+*TextMagicApi* | [**GetContacts**](docs/TextMagicApi.md#getcontacts) | **Get** /api/v2/contacts | Get all user contacts.
+*TextMagicApi* | [**GetContactsAutocomplete**](docs/TextMagicApi.md#getcontactsautocomplete) | **Get** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions by given search term.
+*TextMagicApi* | [**GetContactsByListId**](docs/TextMagicApi.md#getcontactsbylistid) | **Get** /api/v2/lists/{id}/contacts | Fetch user contacts by given group id.
+*TextMagicApi* | [**GetCountries**](docs/TextMagicApi.md#getcountries) | **Get** /api/v2/countries | Return list of countries.
+*TextMagicApi* | [**GetCurrentUser**](docs/TextMagicApi.md#getcurrentuser) | **Get** /api/v2/user | Get current user info.
+*TextMagicApi* | [**GetCustomField**](docs/TextMagicApi.md#getcustomfield) | **Get** /api/v2/customfields/{id} | Get a single custom field.
+*TextMagicApi* | [**GetCustomFields**](docs/TextMagicApi.md#getcustomfields) | **Get** /api/v2/customfields | Get all contact custom fields.
+*TextMagicApi* | [**GetDedicatedNumber**](docs/TextMagicApi.md#getdedicatednumber) | **Get** /api/v2/numbers/{id} | Get a single dedicated number.
+*TextMagicApi* | [**GetDisallowedRules**](docs/TextMagicApi.md#getdisallowedrules) | **Get** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
+*TextMagicApi* | [**GetFavourites**](docs/TextMagicApi.md#getfavourites) | **Get** /api/v2/contacts/favorite | Get favorite contacts and lists.
+*TextMagicApi* | [**GetForwardedCalls**](docs/TextMagicApi.md#getforwardedcalls) | **Get** /api/v2/calls | Get all forwarded calls.
+*TextMagicApi* | [**GetInboundMessage**](docs/TextMagicApi.md#getinboundmessage) | **Get** /api/v2/replies/{id} | Get a single inbox message.
+*TextMagicApi* | [**GetInboundMessagesNotificationSettings**](docs/TextMagicApi.md#getinboundmessagesnotificationsettings) | **Get** /api/v2/user/notification/inbound | Get inbound messages notification settings
+*TextMagicApi* | [**GetInvoices**](docs/TextMagicApi.md#getinvoices) | **Get** /api/v2/invoices | Return account invoices.
+*TextMagicApi* | [**GetList**](docs/TextMagicApi.md#getlist) | **Get** /api/v2/lists/{id} | Get a single list.
+*TextMagicApi* | [**GetListContactsIds**](docs/TextMagicApi.md#getlistcontactsids) | **Get** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
+*TextMagicApi* | [**GetListsOfContact**](docs/TextMagicApi.md#getlistsofcontact) | **Get** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
+*TextMagicApi* | [**GetMessagePreview**](docs/TextMagicApi.md#getmessagepreview) | **Get** /api/v2/messages/preview | Preview message
+*TextMagicApi* | [**GetMessagePrice**](docs/TextMagicApi.md#getmessageprice) | **Get** /api/v2/messages/price | Check price
+*TextMagicApi* | [**GetMessagePrices**](docs/TextMagicApi.md#getmessageprices) | **Get** /api/v2/messages/prices | Get pricing
+*TextMagicApi* | [**GetMessageSession**](docs/TextMagicApi.md#getmessagesession) | **Get** /api/v2/sessions/{id} | Get a message session.
+*TextMagicApi* | [**GetMessageSessionStat**](docs/TextMagicApi.md#getmessagesessionstat) | **Get** /api/v2/sessions/{id}/stat | Get sending session statistics.
+*TextMagicApi* | [**GetMessagesBySessionId**](docs/TextMagicApi.md#getmessagesbysessionid) | **Get** /api/v2/sessions/{id}/messages | Fetch messages by given session id.
+*TextMagicApi* | [**GetMessagingCounters**](docs/TextMagicApi.md#getmessagingcounters) | **Get** /api/v2/stats/messaging/data | Return counters for messaging data views.
+*TextMagicApi* | [**GetMessagingStat**](docs/TextMagicApi.md#getmessagingstat) | **Get** /api/v2/stats/messaging | Return messaging statistics.
+*TextMagicApi* | [**GetOutboundMessage**](docs/TextMagicApi.md#getoutboundmessage) | **Get** /api/v2/messages/{id} | Get a single message
+*TextMagicApi* | [**GetOutboundMessagesHistory**](docs/TextMagicApi.md#getoutboundmessageshistory) | **Get** /api/v2/history | Get history
+*TextMagicApi* | [**GetPushTokens**](docs/TextMagicApi.md#getpushtokens) | **Get** /api/v2/push/tokens | Get all device tokens assigned to the current account
+*TextMagicApi* | [**GetScheduledMessage**](docs/TextMagicApi.md#getscheduledmessage) | **Get** /api/v2/schedules/{id} | Get message schedule.
+*TextMagicApi* | [**GetSenderId**](docs/TextMagicApi.md#getsenderid) | **Get** /api/v2/senderids/{id} | Get a single Sender ID.
+*TextMagicApi* | [**GetSenderIds**](docs/TextMagicApi.md#getsenderids) | **Get** /api/v2/senderids | Get all sender IDs of current user.
+*TextMagicApi* | [**GetSenderSettings**](docs/TextMagicApi.md#getsendersettings) | **Get** /api/v2/sender/settings | Get current user sender settings.
+*TextMagicApi* | [**GetSpendingStat**](docs/TextMagicApi.md#getspendingstat) | **Get** /api/v2/stats/spending | Return account spending statistics.
+*TextMagicApi* | [**GetState**](docs/TextMagicApi.md#getstate) | **Get** /api/v2/state | Get current entities state
+*TextMagicApi* | [**GetSubaccount**](docs/TextMagicApi.md#getsubaccount) | **Get** /api/v2/subaccounts/{id} | Get a single subaccount.
+*TextMagicApi* | [**GetSubaccounts**](docs/TextMagicApi.md#getsubaccounts) | **Get** /api/v2/subaccounts | Get all subaccounts of current user.
+*TextMagicApi* | [**GetSubaccountsWithTokens**](docs/TextMagicApi.md#getsubaccountswithtokens) | **Post** /api/v2/subaccounts/tokens/list | Get all subaccounts with their REST API tokens associated with specified app name.
+*TextMagicApi* | [**GetSurvey**](docs/TextMagicApi.md#getsurvey) | **Get** /api/v2/surveys/{id} | Get a survey by id.
+*TextMagicApi* | [**GetSurveyNode**](docs/TextMagicApi.md#getsurveynode) | **Get** /api/v2/surveys/nodes/{id} | Get a node by id.
+*TextMagicApi* | [**GetSurveyNodes**](docs/TextMagicApi.md#getsurveynodes) | **Get** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
+*TextMagicApi* | [**GetSurveys**](docs/TextMagicApi.md#getsurveys) | **Get** /api/v2/surveys | Get all user surveys.
+*TextMagicApi* | [**GetTemplate**](docs/TextMagicApi.md#gettemplate) | **Get** /api/v2/templates/{id} | Get a single template.
+*TextMagicApi* | [**GetTimezones**](docs/TextMagicApi.md#gettimezones) | **Get** /api/v2/timezones | Return all available timezone IDs.
+*TextMagicApi* | [**GetUnreadMessagesTotal**](docs/TextMagicApi.md#getunreadmessagestotal) | **Get** /api/v2/chats/unread/count | Get total amount of unread messages in the current user chats.
+*TextMagicApi* | [**GetUnsubscribedContact**](docs/TextMagicApi.md#getunsubscribedcontact) | **Get** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
+*TextMagicApi* | [**GetUnsubscribers**](docs/TextMagicApi.md#getunsubscribers) | **Get** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
+*TextMagicApi* | [**GetUserDedicatedNumbers**](docs/TextMagicApi.md#getuserdedicatednumbers) | **Get** /api/v2/numbers | Get user&#39;s dedicated numbers.
+*TextMagicApi* | [**GetUserLists**](docs/TextMagicApi.md#getuserlists) | **Get** /api/v2/lists | Get all user lists.
+*TextMagicApi* | [**GetVersions**](docs/TextMagicApi.md#getversions) | **Get** /api/v2/versions | Get minimal valid apps versions
+*TextMagicApi* | [**InviteSubaccount**](docs/TextMagicApi.md#invitesubaccount) | **Post** /api/v2/subaccounts | Invite new subaccount.
+*TextMagicApi* | [**MarkChatsReadBulk**](docs/TextMagicApi.md#markchatsreadbulk) | **Post** /api/v2/chats/read/bulk | Mark several chats as read by chat ids or mark all chats as read
+*TextMagicApi* | [**MarkChatsUnreadBulk**](docs/TextMagicApi.md#markchatsunreadbulk) | **Post** /api/v2/chats/unread/bulk | Mark several chats as UNread by chat ids or mark all chats as UNread
+*TextMagicApi* | [**MergeSurveyNodes**](docs/TextMagicApi.md#mergesurveynodes) | **Post** /api/v2/surveys/nodes/merge | Merge two question nodes.
+*TextMagicApi* | [**MuteChat**](docs/TextMagicApi.md#mutechat) | **Post** /api/v2/chats/mute | Set mute mode.
+*TextMagicApi* | [**MuteChatsBulk**](docs/TextMagicApi.md#mutechatsbulk) | **Post** /api/v2/chats/mute/bulk | Mute several chats by chat ids or mute all chats
+*TextMagicApi* | [**Ping**](docs/TextMagicApi.md#ping) | **Get** /api/v2/ping | Just does a pong.
+*TextMagicApi* | [**ReopenChatsBulk**](docs/TextMagicApi.md#reopenchatsbulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats by chat ids or reopen all chats
+*TextMagicApi* | [**RequestNewSubaccountToken**](docs/TextMagicApi.md#requestnewsubaccounttoken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
+*TextMagicApi* | [**RequestSenderId**](docs/TextMagicApi.md#requestsenderid) | **Post** /api/v2/senderids | Request for a new Sender ID.
+*TextMagicApi* | [**ResetSurvey**](docs/TextMagicApi.md#resetsurvey) | **Put** /api/v2/surveys/{id}/reset | Reset a survey flow.
+*TextMagicApi* | [**SearchChats**](docs/TextMagicApi.md#searchchats) | **Get** /api/v2/chats/search | Find chats by inbound or outbound messages text.
+*TextMagicApi* | [**SearchChatsByIds**](docs/TextMagicApi.md#searchchatsbyids) | **Get** /api/v2/chats/search/ids | Find chats by IDs.
+*TextMagicApi* | [**SearchChatsByReceipent**](docs/TextMagicApi.md#searchchatsbyreceipent) | **Get** /api/v2/chats/search/recipients | Find chats by recipient (contact, list name or phone number).
+*TextMagicApi* | [**SearchContacts**](docs/TextMagicApi.md#searchcontacts) | **Get** /api/v2/contacts/search | Find user contacts by given parameters.
+*TextMagicApi* | [**SearchInboundMessages**](docs/TextMagicApi.md#searchinboundmessages) | **Get** /api/v2/replies/search | Find inbound messages by given parameters.
+*TextMagicApi* | [**SearchLists**](docs/TextMagicApi.md#searchlists) | **Get** /api/v2/lists/search | Find contact lists by given parameters.
+*TextMagicApi* | [**SearchOutboundMessages**](docs/TextMagicApi.md#searchoutboundmessages) | **Get** /api/v2/messages/search | Find messages
+*TextMagicApi* | [**SearchScheduledMessages**](docs/TextMagicApi.md#searchscheduledmessages) | **Get** /api/v2/schedules/search | Find scheduled messages by given parameters.
+*TextMagicApi* | [**SearchTemplates**](docs/TextMagicApi.md#searchtemplates) | **Get** /api/v2/templates/search | Find user templates by given parameters.
+*TextMagicApi* | [**SendEmailVerificationCode**](docs/TextMagicApi.md#sendemailverificationcode) | **Get** /api/v2/user/email/verification | Send user email verification
+*TextMagicApi* | [**SendMessage**](docs/TextMagicApi.md#sendmessage) | **Post** /api/v2/messages | Send message
+*TextMagicApi* | [**SendPhoneVerificationCode**](docs/TextMagicApi.md#sendphoneverificationcode) | **Get** /api/v2/user/phone/verification | Send user phone verification
+*TextMagicApi* | [**SetChatStatus**](docs/TextMagicApi.md#setchatstatus) | **Post** /api/v2/chats/status | Set status of the chat given by ID.
+*TextMagicApi* | [**StartSurvey**](docs/TextMagicApi.md#startsurvey) | **Put** /api/v2/surveys/{id}/start | Start a survey.
+*TextMagicApi* | [**UnblockContact**](docs/TextMagicApi.md#unblockcontact) | **Post** /api/v2/contacts/unblock | Unblock contact by phone number.
+*TextMagicApi* | [**UnblockContactsBulk**](docs/TextMagicApi.md#unblockcontactsbulk) | **Post** /api/v2/contacts/unblock/bulk | Unblock several contacts by blocked contact ids or unblock all contacts
+*TextMagicApi* | [**UnmuteChatsBulk**](docs/TextMagicApi.md#unmutechatsbulk) | **Post** /api/v2/chats/unmute/bulk | Unmute several chats by chat ids or unmute all chats
+*TextMagicApi* | [**UnsubscribeContact**](docs/TextMagicApi.md#unsubscribecontact) | **Post** /api/v2/unsubscribers | Unsubscribe contact from your communication by phone number.
+*TextMagicApi* | [**UpdateBalanceNotificationSettings**](docs/TextMagicApi.md#updatebalancenotificationsettings) | **Put** /api/v2/user/notification/balance | Update balance notification settings
+*TextMagicApi* | [**UpdateCallbackSettings**](docs/TextMagicApi.md#updatecallbacksettings) | **Put** /api/v2/callback/settings | Update callback URL settings
+*TextMagicApi* | [**UpdateChatDesktopNotificationSettings**](docs/TextMagicApi.md#updatechatdesktopnotificationsettings) | **Put** /api/v2/user/desktop/notification | Update chat desktop notification settings
+*TextMagicApi* | [**UpdateContact**](docs/TextMagicApi.md#updatecontact) | **Put** /api/v2/contacts/{id} | Update existing contact.
+*TextMagicApi* | [**UpdateContactNote**](docs/TextMagicApi.md#updatecontactnote) | **Put** /api/v2/notes/{id} | Update existing contact note.
+*TextMagicApi* | [**UpdateCurrentUser**](docs/TextMagicApi.md#updatecurrentuser) | **Put** /api/v2/user | Update current user info.
+*TextMagicApi* | [**UpdateCustomField**](docs/TextMagicApi.md#updatecustomfield) | **Put** /api/v2/customfields/{id} | Update existing custom field.
+*TextMagicApi* | [**UpdateCustomFieldValue**](docs/TextMagicApi.md#updatecustomfieldvalue) | **Put** /api/v2/customfields/{id}/update | Update contact&#39;s custom field value.
+*TextMagicApi* | [**UpdateInboundMessagesNotificationSettings**](docs/TextMagicApi.md#updateinboundmessagesnotificationsettings) | **Put** /api/v2/user/notification/inbound | Update inbound messages notification settings
+*TextMagicApi* | [**UpdateList**](docs/TextMagicApi.md#updatelist) | **Put** /api/v2/lists/{id} | Update existing list.
+*TextMagicApi* | [**UpdatePassword**](docs/TextMagicApi.md#updatepassword) | **Put** /api/v2/user/password/change | Change user password.
+*TextMagicApi* | [**UpdateSenderSetting**](docs/TextMagicApi.md#updatesendersetting) | **Put** /api/v2/sender/settings | Change sender settings for specified country.
+*TextMagicApi* | [**UpdateSurvey**](docs/TextMagicApi.md#updatesurvey) | **Put** /api/v2/surveys/{id} | Update existing survey.
+*TextMagicApi* | [**UpdateSurveyNode**](docs/TextMagicApi.md#updatesurveynode) | **Put** /api/v2/surveys/nodes/{id} | Update existing node.
+*TextMagicApi* | [**UpdateTemplate**](docs/TextMagicApi.md#updatetemplate) | **Put** /api/v2/templates/{id} | Update existing template.
+*TextMagicApi* | [**UploadAvatar**](docs/TextMagicApi.md#uploadavatar) | **Post** /api/v2/user/avatar | Add an avatar for the current user.
+*TextMagicApi* | [**UploadContactAvatar**](docs/TextMagicApi.md#uploadcontactavatar) | **Post** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
+*TextMagicApi* | [**UploadListAvatar**](docs/TextMagicApi.md#uploadlistavatar) | **Post** /api/v2/lists/{id}/avatar | Add an avatar for the list.
+*TextMagicApi* | [**UploadMessageAttachment**](docs/TextMagicApi.md#uploadmessageattachment) | **Post** /api/v2/messages/attachment | Upload message attachment
 
 
 ## Documentation For Models
@@ -243,28 +243,53 @@ Class | Method | HTTP request | Description
  - [DoEmailLookupResponse](docs/DoEmailLookupResponse.md)
  - [FavoriteContact](docs/FavoriteContact.md)
  - [ForwardedCall](docs/ForwardedCall.md)
+ - [GetAllBulkSessionsResponse](docs/GetAllBulkSessionsResponse.md)
+ - [GetAllChatsResponse](docs/GetAllChatsResponse.md)
+ - [GetAllInboundMessagesResponse](docs/GetAllInboundMessagesResponse.md)
+ - [GetAllMessageSessionsResponse](docs/GetAllMessageSessionsResponse.md)
+ - [GetAllOutboundMessagesResponse](docs/GetAllOutboundMessagesResponse.md)
+ - [GetAllScheduledMessagesResponse](docs/GetAllScheduledMessagesResponse.md)
+ - [GetAllTemplatesResponse](docs/GetAllTemplatesResponse.md)
  - [GetAvailableDedicatedNumbersResponse](docs/GetAvailableDedicatedNumbersResponse.md)
  - [GetAvailableSenderSettingOptionsResponse](docs/GetAvailableSenderSettingOptionsResponse.md)
  - [GetBalanceNotificationOptionsResponse](docs/GetBalanceNotificationOptionsResponse.md)
  - [GetBalanceNotificationSettingsResponse](docs/GetBalanceNotificationSettingsResponse.md)
+ - [GetBlockedContactsResponse](docs/GetBlockedContactsResponse.md)
  - [GetCallbackSettingsResponse](docs/GetCallbackSettingsResponse.md)
+ - [GetChatMessagesResponse](docs/GetChatMessagesResponse.md)
  - [GetContactImportSessionProgressResponse](docs/GetContactImportSessionProgressResponse.md)
+ - [GetContactNotesResponse](docs/GetContactNotesResponse.md)
  - [GetContactsAutocompleteResponse](docs/GetContactsAutocompleteResponse.md)
+ - [GetContactsByListIdResponse](docs/GetContactsByListIdResponse.md)
+ - [GetContactsResponse](docs/GetContactsResponse.md)
+ - [GetCustomFieldsResponse](docs/GetCustomFieldsResponse.md)
+ - [GetFavouritesResponse](docs/GetFavouritesResponse.md)
+ - [GetForwardedCallsResponse](docs/GetForwardedCallsResponse.md)
  - [GetInboundMessagesNotificationSettingsResponse](docs/GetInboundMessagesNotificationSettingsResponse.md)
+ - [GetInvoicesResponse](docs/GetInvoicesResponse.md)
  - [GetListContactsIdsResponse](docs/GetListContactsIdsResponse.md)
+ - [GetListsOfContactResponse](docs/GetListsOfContactResponse.md)
  - [GetMessagePreviewResponse](docs/GetMessagePreviewResponse.md)
  - [GetMessagePriceResponse](docs/GetMessagePriceResponse.md)
  - [GetMessagePricesResponse](docs/GetMessagePricesResponse.md)
  - [GetMessageSessionStatResponse](docs/GetMessageSessionStatResponse.md)
+ - [GetMessagesBySessionIdResponse](docs/GetMessagesBySessionIdResponse.md)
  - [GetMessagingCountersResponse](docs/GetMessagingCountersResponse.md)
  - [GetMessagingStatResponse](docs/GetMessagingStatResponse.md)
+ - [GetOutboundMessagesHistoryResponse](docs/GetOutboundMessagesHistoryResponse.md)
  - [GetPushTokensResponse](docs/GetPushTokensResponse.md)
+ - [GetSenderIdsResponse](docs/GetSenderIdsResponse.md)
  - [GetSenderSettingsResponse](docs/GetSenderSettingsResponse.md)
+ - [GetSpendingStatResponse](docs/GetSpendingStatResponse.md)
  - [GetStateResponse](docs/GetStateResponse.md)
  - [GetSubaccountsWithTokensInputObject](docs/GetSubaccountsWithTokensInputObject.md)
  - [GetSubaccountsWithTokensResponse](docs/GetSubaccountsWithTokensResponse.md)
  - [GetSurveyNodesResponse](docs/GetSurveyNodesResponse.md)
+ - [GetSurveysResponse](docs/GetSurveysResponse.md)
  - [GetUnreadMessagesTotalResponse](docs/GetUnreadMessagesTotalResponse.md)
+ - [GetUnsubscribersResponse](docs/GetUnsubscribersResponse.md)
+ - [GetUserDedicatedNumbersResponse](docs/GetUserDedicatedNumbersResponse.md)
+ - [GetUserListsResponse](docs/GetUserListsResponse.md)
  - [GetVersionsResponse](docs/GetVersionsResponse.md)
  - [Group](docs/Group.md)
  - [GroupImage](docs/GroupImage.md)
@@ -291,6 +316,15 @@ Class | Method | HTTP request | Description
  - [RequestNewSubaccountTokenInputObject](docs/RequestNewSubaccountTokenInputObject.md)
  - [RequestSenderIdInputObject](docs/RequestSenderIdInputObject.md)
  - [ResourceLinkResponse](docs/ResourceLinkResponse.md)
+ - [SearchChatsByIdsResponse](docs/SearchChatsByIdsResponse.md)
+ - [SearchChatsByReceipentResponse](docs/SearchChatsByReceipentResponse.md)
+ - [SearchChatsResponse](docs/SearchChatsResponse.md)
+ - [SearchContactsResponse](docs/SearchContactsResponse.md)
+ - [SearchInboundMessagesResponse](docs/SearchInboundMessagesResponse.md)
+ - [SearchListsResponse](docs/SearchListsResponse.md)
+ - [SearchOutboundMessagesResponse](docs/SearchOutboundMessagesResponse.md)
+ - [SearchScheduledMessagesResponse](docs/SearchScheduledMessagesResponse.md)
+ - [SearchTemplatesResponse](docs/SearchTemplatesResponse.md)
  - [SendMessageInputObject](docs/SendMessageInputObject.md)
  - [SendMessageResponse](docs/SendMessageResponse.md)
  - [SenderId](docs/SenderId.md)
