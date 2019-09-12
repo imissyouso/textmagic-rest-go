@@ -576,42 +576,6 @@ paths:
           \ $e) {\n    echo 'Exception when calling TextMagicApi->updateCurrentUser:\
           \ ', $e->getMessage(), PHP_EOL;\n}"
   /api/v2/user/avatar:
-    post:
-      tags:
-      - "TextMagic"
-      summary: "Add an avatar for the current user."
-      operationId: "uploadAvatar"
-      consumes:
-      - "multipart/form-data"
-      parameters:
-      - name: "image"
-        in: "formData"
-        description: "User avatar. Should be PNG or JPG file not more than 10 MB"
-        required: true
-        type: "file"
-        format: "binary"
-        x-exportParamName: "Image"
-      responses:
-        201:
-          description: "Returned when successful"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\UploadAvatarInputObject;\nuse TextMagic\\Api\\TextMagicApi;\nuse\
-          \ TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$input = new UploadAvatarInputObject();\n\ntry {\n    $result = $api->uploadAvatar($input);\n\
-          \    print_r($result);\n} catch (Exception $e) {\n    echo 'Exception when\
-          \ calling TextMagicApi->uploadAvatar: ', $e->getMessage(), PHP_EOL;\n}"
     delete:
       tags:
       - "TextMagic"
@@ -3384,56 +3348,6 @@ paths:
           \ when calling TextMagicApi->deleteContactNotesBulk: ', $e->getMessage(),\
           \ PHP_EOL;\n}"
   /api/v2/contacts/{id}/avatar:
-    post:
-      tags:
-      - "TextMagic"
-      summary: "Add an avatar for the contact."
-      operationId: "uploadContactAvatar"
-      consumes:
-      - "multipart/form-data"
-      parameters:
-      - name: "image"
-        in: "formData"
-        description: "Contact avatar. Should be PNG or JPG file not more than 10 MB"
-        required: true
-        type: "file"
-        x-exportParamName: "Image"
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-        default: 1
-        x-exportParamName: "Id"
-      responses:
-        201:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/ResourceLinkResponse"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        403:
-          description: "Returned when trying to edit contact shared to current user"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\UploadContactAvatarInputObject;\nuse TextMagic\\Api\\TextMagicApi;\n\
-          use TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$input = new UploadContactAvatarInputObject();\n\n$id = 1;\n\ntry\
-          \ {\n    $result = $api->uploadContactAvatar($input, $id);\n    print_r($result);\n\
-          } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->uploadContactAvatar:\
-          \ ', $e->getMessage(), PHP_EOL;\n}"
     delete:
       tags:
       - "TextMagic"
@@ -4345,57 +4259,6 @@ paths:
           \ when calling TextMagicApi->deleteListContactsBulk: ', $e->getMessage(),\
           \ PHP_EOL;\n}"
   /api/v2/lists/{id}/avatar:
-    post:
-      tags:
-      - "TextMagic"
-      summary: "Add an avatar for the list."
-      operationId: "uploadListAvatar"
-      consumes:
-      - "multipart/form-data"
-      parameters:
-      - name: "image"
-        in: "formData"
-        description: "List avatar. Should be PNG or JPG file not more than 10 MB"
-        required: true
-        type: "file"
-        format: "binary"
-        x-exportParamName: "Image"
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-        x-example: 1
-        x-exportParamName: "Id"
-      responses:
-        201:
-          description: "Avatar uploaded with success"
-          schema:
-            $ref: "#/definitions/ResourceLinkResponse"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        403:
-          description: "Returned when trying to edit list shared to current user"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\UploadListAvatarInputObject;\nuse TextMagic\\Api\\TextMagicApi;\n\
-          use TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$input = new UploadListAvatarInputObject();\n\n$id = 1;\n\ntry {\n\
-          \    $result = $api->uploadListAvatar($input, $id);\n    print_r($result);\n\
-          } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->uploadListAvatar:\
-          \ ', $e->getMessage(), PHP_EOL;\n}"
     delete:
       tags:
       - "TextMagic"
@@ -5548,47 +5411,7 @@ paths:
           \    print_r($result);\n} catch (Exception $e) {\n    echo 'Exception when\
           \ calling TextMagicApi->searchOutboundMessages: ', $e->getMessage(), PHP_EOL;\n\
           }"
-  /api/v2/messages/attachment:
-    post:
-      tags:
-      - "TextMagic"
-      summary: "Upload message attachment"
-      description: "Upload a new file to insert it as a link."
-      operationId: "uploadMessageAttachment"
-      consumes:
-      - "multipart/form-data"
-      parameters:
-      - name: "file"
-        in: "formData"
-        description: "Attachment. Supports .jpg, .gif, .png, .pdf, .txt, .csv, .doc,\
-          \ .docx, .xls, .xlsx, .ppt, .pptx & .vcf file formats"
-        required: true
-        type: "file"
-        x-exportParamName: "File"
-      responses:
-        201:
-          description: "File uploaded with success"
-          schema:
-            $ref: "#/definitions/UploadMessageAttachmentResponse"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\UploadMessageAttachmentInputObject;\nuse TextMagic\\Api\\TextMagicApi;\n\
-          use TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$input = new UploadMessageAttachmentInputObject();\n\ntry {\n    $result\
-          \ = $api->uploadMessageAttachment($input);\n    print_r($result);\n} catch\
-          \ (Exception $e) {\n    echo 'Exception when calling TextMagicApi->uploadMessageAttachment:\
-          \ ', $e->getMessage(), PHP_EOL;\n}"
+  /api/v2/messages/attachment: {}
   /api/v2/schedules/search:
     get:
       tags:
@@ -9480,11 +9303,6 @@ definitions:
       size:
         type: "integer"
         example: 32640
-    example:
-      size: 32640
-      name: "test.pdf"
-      href: "click/So4LP"
-      chars: 10
   GetMessagePricesResponse:
     example:
       VU:

@@ -191,10 +191,6 @@ Class | Method | HTTP request | Description
 *TextMagicApi* | [**UpdateSurvey**](docs/TextMagicApi.md#updatesurvey) | **Put** /api/v2/surveys/{id} | Update existing survey.
 *TextMagicApi* | [**UpdateSurveyNode**](docs/TextMagicApi.md#updatesurveynode) | **Put** /api/v2/surveys/nodes/{id} | Update existing node.
 *TextMagicApi* | [**UpdateTemplate**](docs/TextMagicApi.md#updatetemplate) | **Put** /api/v2/templates/{id} | Update existing template.
-*TextMagicApi* | [**UploadAvatar**](docs/TextMagicApi.md#uploadavatar) | **Post** /api/v2/user/avatar | Add an avatar for the current user.
-*TextMagicApi* | [**UploadContactAvatar**](docs/TextMagicApi.md#uploadcontactavatar) | **Post** /api/v2/contacts/{id}/avatar | Add an avatar for the contact.
-*TextMagicApi* | [**UploadListAvatar**](docs/TextMagicApi.md#uploadlistavatar) | **Post** /api/v2/lists/{id}/avatar | Add an avatar for the list.
-*TextMagicApi* | [**UploadMessageAttachment**](docs/TextMagicApi.md#uploadmessageattachment) | **Post** /api/v2/messages/attachment | Upload message attachment
 
 
 ## Documentation For Models
