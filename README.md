@@ -56,3 +56,7 @@ func main() {
     }
 }
 ```
+
+## Limitations
+
+Due https://github.com/swagger-api/swagger-codegen/issues/7311 issue current version of Go SDK does not support any file uploading API calls.
