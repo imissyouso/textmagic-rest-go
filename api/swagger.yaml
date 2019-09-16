@@ -8900,50 +8900,11 @@ definitions:
     - "nodes"
     - "rows"
     properties:
-      nodes:
-        type: "array"
-        items:
-          $ref: "#/definitions/SurveyNode"
-      rows:
-        type: "array"
-        items:
-          type: "array"
-          items:
-            type: "integer"
-            example: 1
+      nodes: {}
+      rows: {}
     example:
-      nodes:
-      - isEndNode: false
-        endNodes:
-        - "1"
-        - "1"
-        startNodes:
-        - "1"
-        - "1"
-        id: 1
-        label: "Question 1"
-        body: "Hello {First name}! Would you like to participate in a short survey?\
-          \ To continue, just reply Yes."
-        nodeType: "q"
-        sendDelay: 0
-      - isEndNode: false
-        endNodes:
-        - "1"
-        - "1"
-        startNodes:
-        - "1"
-        - "1"
-        id: 1
-        label: "Question 1"
-        body: "Hello {First name}! Would you like to participate in a short survey?\
-          \ To continue, just reply Yes."
-        nodeType: "q"
-        sendDelay: 0
-      rows:
-      - - 1
-        - 1
-      - - 1
-        - 1
+      nodes: ""
+      rows: ""
   GetBalanceNotificationOptionsResponse:
     required:
     - "1"

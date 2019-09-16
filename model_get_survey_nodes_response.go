@@ -11,6 +11,6 @@
 package TextMagic
 
 type GetSurveyNodesResponse struct {
-	Nodes []SurveyNode `json:"nodes"`
-	Rows [][]int32 `json:"rows"`
+	Nodes *interface{} `json:"nodes"`
+	Rows *interface{} `json:"rows"`
 }
