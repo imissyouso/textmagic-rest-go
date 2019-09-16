@@ -9054,11 +9054,7 @@ definitions:
       alertEmail2: "test@test.com"
       alertEmail3: "test@test.com"
       lowBalanceNotification: true
-  GetListContactsIdsResponse:
-    type: "array"
-    items:
-      type: "integer"
-      example: 1
+  GetListContactsIdsResponse: {}
   GetMessagePriceResponse:
     required:
     - "countries"
