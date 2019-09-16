@@ -8803,10 +8803,7 @@ definitions:
       hasAaaa: true
       hasAa: true
       status: "valid"
-  GetMessagingStatResponse:
-    type: "array"
-    items:
-      $ref: "#/definitions/MessagingStatItem"
+  GetMessagingStatResponse: {}
   GetSenderSettingsResponse:
     type: "object"
     required:
@@ -8896,14 +8893,8 @@ definitions:
       numbers:
       - 18887777773
       - 18887777775
-  GetSubaccountsWithTokensResponse:
-    type: "array"
-    items:
-      $ref: "#/definitions/SubaccountWithToken"
-  GetPushTokensResponse:
-    type: "array"
-    items:
-      $ref: "#/definitions/PushToken"
+  GetSubaccountsWithTokensResponse: {}
+  GetPushTokensResponse: {}
   GetSurveyNodesResponse:
     required:
     - "nodes"
