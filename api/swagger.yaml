@@ -1,7 +1,7 @@
 ---
 swagger: "2.0"
 info:
-  description: "# Overview\n## Introduction\n<img style=\"float: right; margin-left:\
+  description: "# Overview\n## Introduction\n123\n<img style=\"float: right; margin-left:\
     \ 10px; width: 100px;\" src=\"images/phone.png\">\nTextMagic SMS API is a platform\
     \ for building your own messaging app using our messaging infrastructure.\nIt\
     \ allows you to send and receive SMS text messages, query information about inbound\
