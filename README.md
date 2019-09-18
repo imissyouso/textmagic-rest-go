@@ -7,7 +7,7 @@ For detailed documentation, please visit [http://docs.textmagictesting.com/](htt
 ## Installation
 
 ```
-go get -u github.com/textmagic-rest-perl/textmagic-rest-go
+go get -u github.com/textmagic-rest-go/textmagic-rest-go
 ```
 
 ## Usage Example
@@ -19,7 +19,7 @@ import (
     "context"
     "fmt"
     "github.com/antihax/optional"
-    tm "github.com/textmagic-rest-perl/textmagic-rest-go"
+    tm "github.com/textmagic-rest-go/textmagic-rest-go"
 )
 
 func main() {
