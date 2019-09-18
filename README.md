@@ -7,7 +7,7 @@ For detailed documentation, please visit [http://docs.textmagictesting.com/](htt
 ## Installation
 
 ```
-go get -u github.com/imissyouso/textmagic-rest-go
+go get -u github.com/textmagic-rest-perl/textmagic-rest-go
 ```
 
 ## Usage Example
@@ -19,18 +19,18 @@ import (
     "context"
     "fmt"
     "github.com/antihax/optional"
-    tm "github.com/imissyouso/textmagic-rest-go"
+    tm "github.com/textmagic-rest-perl/textmagic-rest-go"
 )
 
 func main() {
 
     cfg := tm.NewConfiguration()
-    cfg.BasePath = "http://localhost"
+    cfg.BasePath = "https://rest.textmagic.com"
     client := tm.NewAPIClient(cfg)
 
     auth := context.WithValue(context.Background(), tm.ContextBasicAuth, tm.BasicAuth{
-        UserName: "test",
-        Password: "mdwpeFrNGc7GyV1V4J6UJawcp0XTLm",
+        UserName: "YOUR_USERNAME",
+        Password: "YOUR_PASSWORD",
     })
 
     sendMessageResponse, _, err := client.TextMagicApi.SendMessage(auth, tm.SendMessageInputObject{
