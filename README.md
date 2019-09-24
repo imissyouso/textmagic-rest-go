@@ -23,6 +23,7 @@ import (
     "fmt"
     "github.com/antihax/optional"
     tm "github.com/imissyouso/textmagic-rest-go"
+    "log"
 )
 
 func main() {
