@@ -1,17 +1,17 @@
 # TextMagic Go SDK
 
-This library provides you with an easy solution to send SMS and receive replies by integrating TextMagic SMS Gateway to your Go application.
+This library provides you with an easy way of sending SMS and receiving replies by integrating TextMagic SMS Gateway into your Go application.
 
-## What is TextMagic?
-TextMagic's application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
+## What Is TextMagic?
+TextMagic’s application programming interface (API) provides the communication link between your application and TextMagic’s SMS Gateway, allowing you to send and receive text messages and to check the delivery status of text messages you’ve already sent.
 
-For detailed documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)
+For detailed documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).
 
 ## Installation
 
 With go.mod:
 ```bash
-go get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.393
+go get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.401
 ```
 
 without go.mod:
@@ -21,7 +21,7 @@ go get -u github.com/imissyouso/textmagic-rest-go
 
 ## Dependencies:
 
-- https://github.com/antihax/optional - this library is used to provide optional argument types for API calls. See `GetAllOutboundMessages` call example below.
+- https://github.com/antihax/optional - this library is used to provide optional argument types for API calls. See the `GetAllOutboundMessages` call example below.
 
 ## Usage Example
 
@@ -85,7 +85,7 @@ func main() {
 ```
 
 ## Limitations
-Due https://github.com/swagger-api/swagger-codegen/issues/7311 issue current version of Go SDK does not support any file uploading API calls.
+Due to the issue at https://github.com/swagger-api/swagger-codegen/issues/7311, the current version of Go SDK does not support any file uploading API calls.
 
 ## License
 The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
