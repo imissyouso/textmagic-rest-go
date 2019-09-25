@@ -9,9 +9,19 @@ For detailed documentation and more examples, please visit [http://docs.textmagi
 
 ## Installation
 
+With go.mod:
+```bash
+go get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.390
 ```
+
+without go.mod:
+```bash
 go get -u github.com/imissyouso/textmagic-rest-go
 ```
+
+## Dependencies:
+
+- https://github.com/antihax/optional - this library is used to provide optional argument types for API calls. See `GetAllOutboundMessages` call example below.
 
 ## Usage Example
 
@@ -22,6 +32,8 @@ import (
     "context"
     "fmt"
     "github.com/antihax/optional"
+    // If you're using go.mod use line below to import our module
+    // 	tm "github.com/imissyouso/textmagic-rest-go/v2"
     tm "github.com/imissyouso/textmagic-rest-go"
     "log"
 )
