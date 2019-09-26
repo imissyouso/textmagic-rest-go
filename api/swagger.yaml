@@ -513,10 +513,13 @@ paths:
           use TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
           \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$input = new UpdateCurrentUserInputObject();\n\ntry {\n    $result\
-          \ = $api->updateCurrentUser($input);\n    print_r($result);\n} catch (Exception\
-          \ $e) {\n    echo 'Exception when calling TextMagicApi->updateCurrentUser:\
-          \ ', $e->getMessage(), PHP_EOL;\n}"
+          );\n\n$input = new UpdateCurrentUserInputObject();\n$input->setUsername('Test');\n\
+          $input->setFirstName('Test');\n$input->setLastName('Test');\n$input->setEmail('test@test.com');\n\
+          $input->setPhone('79030011222');\n$input->setCompany('Dummy company');\n\
+          $input->setTimezone(2);\n\ntry {\n    $result = $api->updateCurrentUser($input);\n\
+          \    print_r($result);\n} catch (Exception $e) {\n    echo 'Exception when\
+          \ calling TextMagicApi->updateCurrentUser: ', $e->getMessage(), PHP_EOL;\n\
+          }"
   /api/v2/user/avatar:
     delete:
       tags:
@@ -8506,38 +8509,6 @@ definitions:
       cost: 0.04
       type: "mobile"
       local: "(541) 754-3010"
-  UpdateCurrentUserInputObject:
-    properties:
-      username:
-        type: "string"
-        example: "Test"
-      firstName:
-        type: "string"
-        example: "Test"
-      lastName:
-        type: "string"
-        example: "Test"
-      email:
-        type: "string"
-        example: "test@test.com"
-      phone:
-        type: "string"
-        example: "79030011222"
-      company:
-        type: "string"
-        example: "Dummy company"
-      timezone:
-        type: "integer"
-        example: 2
-        description: "timezone id"
-    example:
-      firstName: "Test"
-      lastName: "Test"
-      phone: "79030011222"
-      timezone: 2
-      company: "Dummy company"
-      email: "test@test.com"
-      username: "Test"
   UpdateCurrentUserResponse:
     properties:
       username:
@@ -16609,6 +16580,38 @@ definitions:
     example:
       deviceId: "123"
       pushServiceType: "a"
+  UpdateCurrentUserInputObject:
+    properties:
+      username:
+        type: "string"
+        example: "Test"
+      firstName:
+        type: "string"
+        example: "Test"
+      lastName:
+        type: "string"
+        example: "Test"
+      email:
+        type: "string"
+        example: "test@test.com"
+      phone:
+        type: "string"
+        example: "79030011222"
+      company:
+        type: "string"
+        example: "Dummy company"
+      timezone:
+        type: "integer"
+        example: 2
+        description: "timezone id"
+    example:
+      firstName: "Test"
+      lastName: "Test"
+      phone: "79030011222"
+      timezone: 2
+      company: "Dummy company"
+      email: "test@test.com"
+      username: "Test"
   CheckPhoneVerificationCodeInputObject:
     required:
     - "code"
