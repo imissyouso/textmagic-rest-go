@@ -10,5 +10,9 @@
 
 package TextMagic
 
-type GetContactsAutocompleteResponse struct {
+type GetChatMessagesPaginatedResponse struct {
+	Page int32 `json:"page"`
+	PageCount int32 `json:"pageCount"`
+	Limit int32 `json:"limit"`
+	Resources []Conversation `json:"resources"`
 }

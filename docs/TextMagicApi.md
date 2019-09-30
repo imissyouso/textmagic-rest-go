@@ -1538,7 +1538,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAllBulkSessions**
-> GetAllBulkSessionsResponse GetAllBulkSessions(ctx, optional)
+> GetAllBulkSessionsPaginatedResponse GetAllBulkSessions(ctx, optional)
 Get all bulk sending sessions.
 
 ### Required Parameters
@@ -1558,7 +1558,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllBulkSessionsResponse**](GetAllBulkSessionsResponse.md)
+[**GetAllBulkSessionsPaginatedResponse**](GetAllBulkSessionsPaginatedResponse.md)
 
 ### Authorization
 
@@ -1572,7 +1572,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAllChats**
-> GetAllChatsResponse GetAllChats(ctx, optional)
+> GetAllChatsPaginatedResponse GetAllChats(ctx, optional)
 Get all user chats.
 
 ### Required Parameters
@@ -1596,7 +1596,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllChatsResponse**](GetAllChatsResponse.md)
+[**GetAllChatsPaginatedResponse**](GetAllChatsPaginatedResponse.md)
 
 ### Authorization
 
@@ -1610,7 +1610,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAllInboundMessages**
-> GetAllInboundMessagesResponse GetAllInboundMessages(ctx, optional)
+> GetAllInboundMessagesPaginatedResponse GetAllInboundMessages(ctx, optional)
 Get all inbox messages.
 
 ### Required Parameters
@@ -1632,7 +1632,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllInboundMessagesResponse**](GetAllInboundMessagesResponse.md)
+[**GetAllInboundMessagesPaginatedResponse**](GetAllInboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -1646,7 +1646,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAllMessageSessions**
-> GetAllMessageSessionsResponse GetAllMessageSessions(ctx, optional)
+> GetAllMessageSessionsPaginatedResponse GetAllMessageSessions(ctx, optional)
 Get all message sending sessions.
 
 ### Required Parameters
@@ -1666,7 +1666,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllMessageSessionsResponse**](GetAllMessageSessionsResponse.md)
+[**GetAllMessageSessionsPaginatedResponse**](GetAllMessageSessionsPaginatedResponse.md)
 
 ### Authorization
 
@@ -1680,7 +1680,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAllOutboundMessages**
-> GetAllOutboundMessagesResponse GetAllOutboundMessages(ctx, optional)
+> GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages(ctx, optional)
 Get all messages
 
 Get all user oubound messages.
@@ -1703,7 +1703,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllOutboundMessagesResponse**](GetAllOutboundMessagesResponse.md)
+[**GetAllOutboundMessagesPaginatedResponse**](GetAllOutboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -1717,7 +1717,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAllScheduledMessages**
-> GetAllScheduledMessagesResponse GetAllScheduledMessages(ctx, optional)
+> GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages(ctx, optional)
 Get all scheduled messages.
 
 ### Required Parameters
@@ -1740,7 +1740,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllScheduledMessagesResponse**](GetAllScheduledMessagesResponse.md)
+[**GetAllScheduledMessagesPaginatedResponse**](GetAllScheduledMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -1754,7 +1754,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetAllTemplates**
-> GetAllTemplatesResponse GetAllTemplates(ctx, optional)
+> GetAllTemplatesPaginatedResponse GetAllTemplates(ctx, optional)
 Get all user templates.
 
 ### Required Parameters
@@ -1774,7 +1774,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetAllTemplatesResponse**](GetAllTemplatesResponse.md)
+[**GetAllTemplatesPaginatedResponse**](GetAllTemplatesPaginatedResponse.md)
 
 ### Authorization
 
@@ -1901,7 +1901,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetBlockedContacts**
-> GetBlockedContactsResponse GetBlockedContacts(ctx, optional)
+> GetBlockedContactsPaginatedResponse GetBlockedContacts(ctx, optional)
 Get blocked contacts.
 
 ### Required Parameters
@@ -1924,7 +1924,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetBlockedContactsResponse**](GetBlockedContactsResponse.md)
+[**GetBlockedContactsPaginatedResponse**](GetBlockedContactsPaginatedResponse.md)
 
 ### Authorization
 
@@ -1986,7 +1986,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetCallsPrices**
-> map[string]interface{} GetCallsPrices(ctx, )
+> GetCallsPricesResponse GetCallsPrices(ctx, )
 Check pricing for a inbound/outbound call.
 
 ### Required Parameters
@@ -1994,7 +1994,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**map[string]interface{}**](interface{}.md)
+[**GetCallsPricesResponse**](GetCallsPricesResponse.md)
 
 ### Authorization
 
@@ -2070,7 +2070,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetChatMessages**
-> GetChatMessagesResponse GetChatMessages(ctx, id, optional)
+> GetChatMessagesPaginatedResponse GetChatMessages(ctx, id, optional)
 Fetch messages from chat with specified chat id.
 
 ### Required Parameters
@@ -2097,7 +2097,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetChatMessagesResponse**](GetChatMessagesResponse.md)
+[**GetChatMessagesPaginatedResponse**](GetChatMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -2241,7 +2241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetContactNotes**
-> GetContactNotesResponse GetContactNotes(ctx, id, optional)
+> GetContactNotesPaginatedResponse GetContactNotes(ctx, id, optional)
 Fetch notes assigned to the given contact.
 
 ### Required Parameters
@@ -2263,7 +2263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContactNotesResponse**](GetContactNotesResponse.md)
+[**GetContactNotesPaginatedResponse**](GetContactNotesPaginatedResponse.md)
 
 ### Authorization
 
@@ -2277,7 +2277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetContacts**
-> GetContactsResponse GetContacts(ctx, optional)
+> GetContactsPaginatedResponse GetContacts(ctx, optional)
 Get all user contacts.
 
 ### Required Parameters
@@ -2300,7 +2300,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContactsResponse**](GetContactsResponse.md)
+[**GetContactsPaginatedResponse**](GetContactsPaginatedResponse.md)
 
 ### Authorization
 
@@ -2314,7 +2314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetContactsAutocomplete**
-> []GetContactsAutocompleteResponse GetContactsAutocomplete(ctx, query, optional)
+> GetContactsAutocompleteResponse GetContactsAutocomplete(ctx, query, optional)
 Get contacts autocomplete suggestions by given search term.
 
 ### Required Parameters
@@ -2336,7 +2336,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[]GetContactsAutocompleteResponse**](GetContactsAutocompleteResponse.md)
+[**GetContactsAutocompleteResponse**](GetContactsAutocompleteResponse.md)
 
 ### Authorization
 
@@ -2350,7 +2350,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetContactsByListId**
-> GetContactsByListIdResponse GetContactsByListId(ctx, id, optional)
+> GetContactsByListIdPaginatedResponse GetContactsByListId(ctx, id, optional)
 Fetch user contacts by given group id.
 
 A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
@@ -2376,7 +2376,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetContactsByListIdResponse**](GetContactsByListIdResponse.md)
+[**GetContactsByListIdPaginatedResponse**](GetContactsByListIdPaginatedResponse.md)
 
 ### Authorization
 
@@ -2390,7 +2390,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetCountries**
-> []Country GetCountries(ctx, )
+> GetCountriesResponse GetCountries(ctx, )
 Return list of countries.
 
 ### Required Parameters
@@ -2398,7 +2398,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[]Country**](Country.md)
+[**GetCountriesResponse**](GetCountriesResponse.md)
 
 ### Authorization
 
@@ -2460,7 +2460,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetCustomFields**
-> GetCustomFieldsResponse GetCustomFields(ctx, optional)
+> GetCustomFieldsPaginatedResponse GetCustomFields(ctx, optional)
 Get all contact custom fields.
 
 ### Required Parameters
@@ -2480,7 +2480,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetCustomFieldsResponse**](GetCustomFieldsResponse.md)
+[**GetCustomFieldsPaginatedResponse**](GetCustomFieldsPaginatedResponse.md)
 
 ### Authorization
 
@@ -2520,7 +2520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetDisallowedRules**
-> []string GetDisallowedRules(ctx, )
+> GetDisallowedRulesResponse GetDisallowedRules(ctx, )
 Get an array of all rules that are disallowed to the current account.
 
 ### Required Parameters
@@ -2528,7 +2528,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-**[]string**
+[**GetDisallowedRulesResponse**](GetDisallowedRulesResponse.md)
 
 ### Authorization
 
@@ -2542,7 +2542,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetFavourites**
-> GetFavouritesResponse GetFavourites(ctx, optional)
+> GetFavouritesPaginatedResponse GetFavourites(ctx, optional)
 Get favorite contacts and lists.
 
 ### Required Parameters
@@ -2563,7 +2563,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetFavouritesResponse**](GetFavouritesResponse.md)
+[**GetFavouritesPaginatedResponse**](GetFavouritesPaginatedResponse.md)
 
 ### Authorization
 
@@ -2577,7 +2577,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetForwardedCalls**
-> GetForwardedCallsResponse GetForwardedCalls(ctx, optional)
+> GetForwardedCallsPaginatedResponse GetForwardedCalls(ctx, optional)
 Get all forwarded calls.
 
 ### Required Parameters
@@ -2597,7 +2597,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetForwardedCallsResponse**](GetForwardedCallsResponse.md)
+[**GetForwardedCallsPaginatedResponse**](GetForwardedCallsPaginatedResponse.md)
 
 ### Authorization
 
@@ -2659,7 +2659,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetInvoices**
-> GetInvoicesResponse GetInvoices(ctx, optional)
+> GetInvoicesPaginatedResponse GetInvoices(ctx, optional)
 Return account invoices.
 
 ### Required Parameters
@@ -2679,7 +2679,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetInvoicesResponse**](GetInvoicesResponse.md)
+[**GetInvoicesPaginatedResponse**](GetInvoicesPaginatedResponse.md)
 
 ### Authorization
 
@@ -2745,7 +2745,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetListsOfContact**
-> GetListsOfContactResponse GetListsOfContact(ctx, id, optional)
+> GetListsOfContactPaginatedResponse GetListsOfContact(ctx, id, optional)
 Return lists which contact belongs to.
 
 ### Required Parameters
@@ -2767,7 +2767,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetListsOfContactResponse**](GetListsOfContactResponse.md)
+[**GetListsOfContactPaginatedResponse**](GetListsOfContactPaginatedResponse.md)
 
 ### Authorization
 
@@ -2969,7 +2969,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetMessagesBySessionId**
-> GetMessagesBySessionIdResponse GetMessagesBySessionId(ctx, id, optional)
+> GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId(ctx, id, optional)
 Fetch messages by given session id.
 
 A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
@@ -2995,7 +2995,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMessagesBySessionIdResponse**](GetMessagesBySessionIdResponse.md)
+[**GetMessagesBySessionIdPaginatedResponse**](GetMessagesBySessionIdPaginatedResponse.md)
 
 ### Authorization
 
@@ -3094,7 +3094,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetOutboundMessagesHistory**
-> GetOutboundMessagesHistoryResponse GetOutboundMessagesHistory(ctx, optional)
+> GetOutboundMessagesHistoryPaginatedResponse GetOutboundMessagesHistory(ctx, optional)
 Get history
 
 Get outbound messages history.
@@ -3119,7 +3119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetOutboundMessagesHistoryResponse**](GetOutboundMessagesHistoryResponse.md)
+[**GetOutboundMessagesHistoryPaginatedResponse**](GetOutboundMessagesHistoryPaginatedResponse.md)
 
 ### Authorization
 
@@ -3207,7 +3207,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSenderIds**
-> GetSenderIdsResponse GetSenderIds(ctx, optional)
+> GetSenderIdsPaginatedResponse GetSenderIds(ctx, optional)
 Get all sender IDs of current user.
 
 ### Required Parameters
@@ -3227,7 +3227,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSenderIdsResponse**](GetSenderIdsResponse.md)
+[**GetSenderIdsPaginatedResponse**](GetSenderIdsPaginatedResponse.md)
 
 ### Authorization
 
@@ -3274,7 +3274,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSpendingStat**
-> GetSpendingStatResponse GetSpendingStat(ctx, optional)
+> GetSpendingStatPaginatedResponse GetSpendingStat(ctx, optional)
 Return account spending statistics.
 
 ### Required Parameters
@@ -3296,7 +3296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSpendingStatResponse**](GetSpendingStatResponse.md)
+[**GetSpendingStatPaginatedResponse**](GetSpendingStatPaginatedResponse.md)
 
 ### Authorization
 
@@ -3508,7 +3508,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetSurveys**
-> GetSurveysResponse GetSurveys(ctx, optional)
+> GetSurveysPaginatedResponse GetSurveys(ctx, optional)
 Get all user surveys.
 
 ### Required Parameters
@@ -3528,7 +3528,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetSurveysResponse**](GetSurveysResponse.md)
+[**GetSurveysPaginatedResponse**](GetSurveysPaginatedResponse.md)
 
 ### Authorization
 
@@ -3568,7 +3568,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetTimezones**
-> interface{} GetTimezones(ctx, optional)
+> GetTimezonesResponse GetTimezones(ctx, optional)
 Return all available timezone IDs.
 
 ### Required Parameters
@@ -3587,7 +3587,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**interface{}**](interface{}.md)
+[**GetTimezonesResponse**](GetTimezonesResponse.md)
 
 ### Authorization
 
@@ -3649,7 +3649,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetUnsubscribers**
-> GetUnsubscribersResponse GetUnsubscribers(ctx, optional)
+> GetUnsubscribersPaginatedResponse GetUnsubscribers(ctx, optional)
 Get all contact have unsubscribed from your communication.
 
 ### Required Parameters
@@ -3669,7 +3669,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetUnsubscribersResponse**](GetUnsubscribersResponse.md)
+[**GetUnsubscribersPaginatedResponse**](GetUnsubscribersPaginatedResponse.md)
 
 ### Authorization
 
@@ -3683,7 +3683,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetUserDedicatedNumbers**
-> GetUserDedicatedNumbersResponse GetUserDedicatedNumbers(ctx, optional)
+> GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers(ctx, optional)
 Get user's dedicated numbers.
 
 ### Required Parameters
@@ -3704,7 +3704,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetUserDedicatedNumbersResponse**](GetUserDedicatedNumbersResponse.md)
+[**GetUserDedicatedNumbersPaginatedResponse**](GetUserDedicatedNumbersPaginatedResponse.md)
 
 ### Authorization
 
@@ -3718,7 +3718,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetUserLists**
-> GetUserListsResponse GetUserLists(ctx, optional)
+> GetUserListsPaginatedResponse GetUserLists(ctx, optional)
 Get all user lists.
 
 ### Required Parameters
@@ -3742,7 +3742,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetUserListsResponse**](GetUserListsResponse.md)
+[**GetUserListsPaginatedResponse**](GetUserListsPaginatedResponse.md)
 
 ### Authorization
 
@@ -4062,7 +4062,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchChats**
-> SearchChatsResponse SearchChats(ctx, optional)
+> SearchChatsPaginatedResponse SearchChats(ctx, optional)
 Find chats by inbound or outbound messages text.
 
 ### Required Parameters
@@ -4083,7 +4083,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchChatsResponse**](SearchChatsResponse.md)
+[**SearchChatsPaginatedResponse**](SearchChatsPaginatedResponse.md)
 
 ### Authorization
 
@@ -4097,7 +4097,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchChatsByIds**
-> SearchChatsByIdsResponse SearchChatsByIds(ctx, optional)
+> SearchChatsByIdsPaginatedResponse SearchChatsByIds(ctx, optional)
 Find chats by IDs.
 
 ### Required Parameters
@@ -4118,7 +4118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchChatsByIdsResponse**](SearchChatsByIdsResponse.md)
+[**SearchChatsByIdsPaginatedResponse**](SearchChatsByIdsPaginatedResponse.md)
 
 ### Authorization
 
@@ -4132,7 +4132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchChatsByReceipent**
-> SearchChatsByReceipentResponse SearchChatsByReceipent(ctx, optional)
+> SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent(ctx, optional)
 Find chats by recipient (contact, list name or phone number).
 
 ### Required Parameters
@@ -4154,7 +4154,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchChatsByReceipentResponse**](SearchChatsByReceipentResponse.md)
+[**SearchChatsByReceipentPaginatedResponse**](SearchChatsByReceipentPaginatedResponse.md)
 
 ### Authorization
 
@@ -4168,7 +4168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchContacts**
-> SearchContactsResponse SearchContacts(ctx, optional)
+> SearchContactsPaginatedResponse SearchContacts(ctx, optional)
 Find user contacts by given parameters.
 
 ### Required Parameters
@@ -4197,7 +4197,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchContactsResponse**](SearchContactsResponse.md)
+[**SearchContactsPaginatedResponse**](SearchContactsPaginatedResponse.md)
 
 ### Authorization
 
@@ -4211,7 +4211,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchInboundMessages**
-> SearchInboundMessagesResponse SearchInboundMessages(ctx, optional)
+> SearchInboundMessagesPaginatedResponse SearchInboundMessages(ctx, optional)
 Find inbound messages by given parameters.
 
 ### Required Parameters
@@ -4236,7 +4236,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchInboundMessagesResponse**](SearchInboundMessagesResponse.md)
+[**SearchInboundMessagesPaginatedResponse**](SearchInboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -4250,7 +4250,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchLists**
-> SearchListsResponse SearchLists(ctx, optional)
+> SearchListsPaginatedResponse SearchLists(ctx, optional)
 Find contact lists by given parameters.
 
 ### Required Parameters
@@ -4276,7 +4276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchListsResponse**](SearchListsResponse.md)
+[**SearchListsPaginatedResponse**](SearchListsPaginatedResponse.md)
 
 ### Authorization
 
@@ -4290,7 +4290,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchOutboundMessages**
-> SearchOutboundMessagesResponse SearchOutboundMessages(ctx, optional)
+> SearchOutboundMessagesPaginatedResponse SearchOutboundMessages(ctx, optional)
 Find messages
 
 Find outbound messages by given parameters.
@@ -4318,7 +4318,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchOutboundMessagesResponse**](SearchOutboundMessagesResponse.md)
+[**SearchOutboundMessagesPaginatedResponse**](SearchOutboundMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -4332,7 +4332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchScheduledMessages**
-> SearchScheduledMessagesResponse SearchScheduledMessages(ctx, optional)
+> SearchScheduledMessagesPaginatedResponse SearchScheduledMessages(ctx, optional)
 Find scheduled messages by given parameters.
 
 ### Required Parameters
@@ -4357,7 +4357,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchScheduledMessagesResponse**](SearchScheduledMessagesResponse.md)
+[**SearchScheduledMessagesPaginatedResponse**](SearchScheduledMessagesPaginatedResponse.md)
 
 ### Authorization
 
@@ -4371,7 +4371,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SearchTemplates**
-> SearchTemplatesResponse SearchTemplates(ctx, optional)
+> SearchTemplatesPaginatedResponse SearchTemplates(ctx, optional)
 Find user templates by given parameters.
 
 ### Required Parameters
@@ -4394,7 +4394,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**SearchTemplatesResponse**](SearchTemplatesResponse.md)
+[**SearchTemplatesPaginatedResponse**](SearchTemplatesPaginatedResponse.md)
 
 ### Authorization
 

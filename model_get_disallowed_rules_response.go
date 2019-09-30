@@ -10,5 +10,5 @@
 
 package TextMagic
 
-type GetContactsAutocompleteResponse struct {
+type GetDisallowedRulesResponse struct {
 }

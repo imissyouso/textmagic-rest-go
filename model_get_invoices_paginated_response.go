@@ -10,5 +10,9 @@
 
 package TextMagic
 
-type GetContactsAutocompleteResponse struct {
+type GetInvoicesPaginatedResponse struct {
+	Page int32 `json:"page"`
+	PageCount int32 `json:"pageCount"`
+	Limit int32 `json:"limit"`
+	Resources []Invoice `json:"resources"`
 }

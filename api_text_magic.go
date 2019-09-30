@@ -5172,7 +5172,7 @@ TextMagicApiService Get all bulk sending sessions.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetAllBulkSessionsResponse
+@return GetAllBulkSessionsPaginatedResponse
 */
 
 type GetAllBulkSessionsOpts struct { 
@@ -5180,13 +5180,13 @@ type GetAllBulkSessionsOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetAllBulkSessions(ctx context.Context, localVarOptionals *GetAllBulkSessionsOpts) (GetAllBulkSessionsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetAllBulkSessions(ctx context.Context, localVarOptionals *GetAllBulkSessionsOpts) (GetAllBulkSessionsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetAllBulkSessionsResponse
+		localVarReturnValue GetAllBulkSessionsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -5250,7 +5250,7 @@ func (a *TextMagicApiService) GetAllBulkSessions(ctx context.Context, localVarOp
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetAllBulkSessionsResponse
+			var v GetAllBulkSessionsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -5288,7 +5288,7 @@ TextMagicApiService Get all user chats.
      * @param "Voice" (optional.Int32) -  Fetch results with voice calls
      * @param "Flat" (optional.Int32) -  Should additional contact info be included
 
-@return GetAllChatsResponse
+@return GetAllChatsPaginatedResponse
 */
 
 type GetAllChatsOpts struct { 
@@ -5300,13 +5300,13 @@ type GetAllChatsOpts struct {
 	Flat optional.Int32
 }
 
-func (a *TextMagicApiService) GetAllChats(ctx context.Context, localVarOptionals *GetAllChatsOpts) (GetAllChatsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetAllChats(ctx context.Context, localVarOptionals *GetAllChatsOpts) (GetAllChatsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetAllChatsResponse
+		localVarReturnValue GetAllChatsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -5382,7 +5382,7 @@ func (a *TextMagicApiService) GetAllChats(ctx context.Context, localVarOptionals
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetAllChatsResponse
+			var v GetAllChatsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -5418,7 +5418,7 @@ TextMagicApiService Get all inbox messages.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return GetAllInboundMessagesResponse
+@return GetAllInboundMessagesPaginatedResponse
 */
 
 type GetAllInboundMessagesOpts struct { 
@@ -5428,13 +5428,13 @@ type GetAllInboundMessagesOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) GetAllInboundMessages(ctx context.Context, localVarOptionals *GetAllInboundMessagesOpts) (GetAllInboundMessagesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetAllInboundMessages(ctx context.Context, localVarOptionals *GetAllInboundMessagesOpts) (GetAllInboundMessagesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetAllInboundMessagesResponse
+		localVarReturnValue GetAllInboundMessagesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -5504,7 +5504,7 @@ func (a *TextMagicApiService) GetAllInboundMessages(ctx context.Context, localVa
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetAllInboundMessagesResponse
+			var v GetAllInboundMessagesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -5538,7 +5538,7 @@ TextMagicApiService Get all message sending sessions.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetAllMessageSessionsResponse
+@return GetAllMessageSessionsPaginatedResponse
 */
 
 type GetAllMessageSessionsOpts struct { 
@@ -5546,13 +5546,13 @@ type GetAllMessageSessionsOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetAllMessageSessions(ctx context.Context, localVarOptionals *GetAllMessageSessionsOpts) (GetAllMessageSessionsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetAllMessageSessions(ctx context.Context, localVarOptionals *GetAllMessageSessionsOpts) (GetAllMessageSessionsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetAllMessageSessionsResponse
+		localVarReturnValue GetAllMessageSessionsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -5616,7 +5616,7 @@ func (a *TextMagicApiService) GetAllMessageSessions(ctx context.Context, localVa
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetAllMessageSessionsResponse
+			var v GetAllMessageSessionsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -5652,7 +5652,7 @@ Get all user oubound messages.
      * @param "Limit" (optional.Int32) -  How many results to return
      * @param "LastId" (optional.Int32) -  Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
 
-@return GetAllOutboundMessagesResponse
+@return GetAllOutboundMessagesPaginatedResponse
 */
 
 type GetAllOutboundMessagesOpts struct { 
@@ -5661,13 +5661,13 @@ type GetAllOutboundMessagesOpts struct {
 	LastId optional.Int32
 }
 
-func (a *TextMagicApiService) GetAllOutboundMessages(ctx context.Context, localVarOptionals *GetAllOutboundMessagesOpts) (GetAllOutboundMessagesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetAllOutboundMessages(ctx context.Context, localVarOptionals *GetAllOutboundMessagesOpts) (GetAllOutboundMessagesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetAllOutboundMessagesResponse
+		localVarReturnValue GetAllOutboundMessagesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -5734,7 +5734,7 @@ func (a *TextMagicApiService) GetAllOutboundMessages(ctx context.Context, localV
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetAllOutboundMessagesResponse
+			var v GetAllOutboundMessagesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -5782,7 +5782,7 @@ TextMagicApiService Get all scheduled messages.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return GetAllScheduledMessagesResponse
+@return GetAllScheduledMessagesPaginatedResponse
 */
 
 type GetAllScheduledMessagesOpts struct { 
@@ -5793,13 +5793,13 @@ type GetAllScheduledMessagesOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) GetAllScheduledMessages(ctx context.Context, localVarOptionals *GetAllScheduledMessagesOpts) (GetAllScheduledMessagesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetAllScheduledMessages(ctx context.Context, localVarOptionals *GetAllScheduledMessagesOpts) (GetAllScheduledMessagesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetAllScheduledMessagesResponse
+		localVarReturnValue GetAllScheduledMessagesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -5872,7 +5872,7 @@ func (a *TextMagicApiService) GetAllScheduledMessages(ctx context.Context, local
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetAllScheduledMessagesResponse
+			var v GetAllScheduledMessagesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -5906,7 +5906,7 @@ TextMagicApiService Get all user templates.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetAllTemplatesResponse
+@return GetAllTemplatesPaginatedResponse
 */
 
 type GetAllTemplatesOpts struct { 
@@ -5914,13 +5914,13 @@ type GetAllTemplatesOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetAllTemplates(ctx context.Context, localVarOptionals *GetAllTemplatesOpts) (GetAllTemplatesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetAllTemplates(ctx context.Context, localVarOptionals *GetAllTemplatesOpts) (GetAllTemplatesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetAllTemplatesResponse
+		localVarReturnValue GetAllTemplatesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -5984,7 +5984,7 @@ func (a *TextMagicApiService) GetAllTemplates(ctx context.Context, localVarOptio
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetAllTemplatesResponse
+			var v GetAllTemplatesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -6458,7 +6458,7 @@ TextMagicApiService Get blocked contacts.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return GetBlockedContactsResponse
+@return GetBlockedContactsPaginatedResponse
 */
 
 type GetBlockedContactsOpts struct { 
@@ -6469,13 +6469,13 @@ type GetBlockedContactsOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) GetBlockedContacts(ctx context.Context, localVarOptionals *GetBlockedContactsOpts) (GetBlockedContactsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetBlockedContacts(ctx context.Context, localVarOptionals *GetBlockedContactsOpts) (GetBlockedContactsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetBlockedContactsResponse
+		localVarReturnValue GetBlockedContactsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -6548,7 +6548,7 @@ func (a *TextMagicApiService) GetBlockedContacts(ctx context.Context, localVarOp
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetBlockedContactsResponse
+			var v GetBlockedContactsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -6797,15 +6797,15 @@ func (a *TextMagicApiService) GetCallbackSettings(ctx context.Context) (GetCallb
 TextMagicApiService Check pricing for a inbound/outbound call.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
-@return map[string]interface{}
+@return GetCallsPricesResponse
 */
-func (a *TextMagicApiService) GetCallsPrices(ctx context.Context) (map[string]interface{}, *http.Response, error) {
+func (a *TextMagicApiService) GetCallsPrices(ctx context.Context) (GetCallsPricesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue map[string]interface{}
+		localVarReturnValue GetCallsPricesResponse
 	)
 
 	// create path and map variables
@@ -6863,7 +6863,7 @@ func (a *TextMagicApiService) GetCallsPrices(ctx context.Context) (map[string]in
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v map[string]interface{}
+			var v GetCallsPricesResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -7138,7 +7138,7 @@ TextMagicApiService Fetch messages from chat with specified chat id.
      * @param "Direction" (optional.String) -  Order direction. Default is desc
      * @param "Voice" (optional.Int32) -  Fetch results with voice calls
 
-@return GetChatMessagesResponse
+@return GetChatMessagesPaginatedResponse
 */
 
 type GetChatMessagesOpts struct { 
@@ -7151,13 +7151,13 @@ type GetChatMessagesOpts struct {
 	Voice optional.Int32
 }
 
-func (a *TextMagicApiService) GetChatMessages(ctx context.Context, id int32, localVarOptionals *GetChatMessagesOpts) (GetChatMessagesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetChatMessages(ctx context.Context, id int32, localVarOptionals *GetChatMessagesOpts) (GetChatMessagesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetChatMessagesResponse
+		localVarReturnValue GetChatMessagesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -7237,7 +7237,7 @@ func (a *TextMagicApiService) GetChatMessages(ctx context.Context, id int32, loc
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetChatMessagesResponse
+			var v GetChatMessagesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -7811,7 +7811,7 @@ TextMagicApiService Fetch notes assigned to the given contact.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetContactNotesResponse
+@return GetContactNotesPaginatedResponse
 */
 
 type GetContactNotesOpts struct { 
@@ -7819,13 +7819,13 @@ type GetContactNotesOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetContactNotes(ctx context.Context, id int32, localVarOptionals *GetContactNotesOpts) (GetContactNotesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetContactNotes(ctx context.Context, id int32, localVarOptionals *GetContactNotesOpts) (GetContactNotesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetContactNotesResponse
+		localVarReturnValue GetContactNotesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -7890,7 +7890,7 @@ func (a *TextMagicApiService) GetContactNotes(ctx context.Context, id int32, loc
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetContactNotesResponse
+			var v GetContactNotesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -7938,7 +7938,7 @@ TextMagicApiService Get all user contacts.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return GetContactsResponse
+@return GetContactsPaginatedResponse
 */
 
 type GetContactsOpts struct { 
@@ -7949,13 +7949,13 @@ type GetContactsOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) GetContacts(ctx context.Context, localVarOptionals *GetContactsOpts) (GetContactsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetContacts(ctx context.Context, localVarOptionals *GetContactsOpts) (GetContactsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetContactsResponse
+		localVarReturnValue GetContactsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -8028,7 +8028,7 @@ func (a *TextMagicApiService) GetContacts(ctx context.Context, localVarOptionals
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetContactsResponse
+			var v GetContactsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -8063,7 +8063,7 @@ TextMagicApiService Get contacts autocomplete suggestions by given search term.
      * @param "Limit" (optional.Int32) -  How many results to return
      * @param "Lists" (optional.Int32) -  Should lists be returned or not
 
-@return []GetContactsAutocompleteResponse
+@return GetContactsAutocompleteResponse
 */
 
 type GetContactsAutocompleteOpts struct { 
@@ -8071,13 +8071,13 @@ type GetContactsAutocompleteOpts struct {
 	Lists optional.Int32
 }
 
-func (a *TextMagicApiService) GetContactsAutocomplete(ctx context.Context, query string, localVarOptionals *GetContactsAutocompleteOpts) ([]GetContactsAutocompleteResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetContactsAutocomplete(ctx context.Context, query string, localVarOptionals *GetContactsAutocompleteOpts) (GetContactsAutocompleteResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []GetContactsAutocompleteResponse
+		localVarReturnValue GetContactsAutocompleteResponse
 	)
 
 	// create path and map variables
@@ -8142,7 +8142,7 @@ func (a *TextMagicApiService) GetContactsAutocomplete(ctx context.Context, query
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []GetContactsAutocompleteResponse
+			var v GetContactsAutocompleteResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -8180,7 +8180,7 @@ A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return GetContactsByListIdResponse
+@return GetContactsByListIdPaginatedResponse
 */
 
 type GetContactsByListIdOpts struct { 
@@ -8190,13 +8190,13 @@ type GetContactsByListIdOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) GetContactsByListId(ctx context.Context, id int32, localVarOptionals *GetContactsByListIdOpts) (GetContactsByListIdResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetContactsByListId(ctx context.Context, id int32, localVarOptionals *GetContactsByListIdOpts) (GetContactsByListIdPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetContactsByListIdResponse
+		localVarReturnValue GetContactsByListIdPaginatedResponse
 	)
 
 	// create path and map variables
@@ -8267,7 +8267,7 @@ func (a *TextMagicApiService) GetContactsByListId(ctx context.Context, id int32,
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetContactsByListIdResponse
+			var v GetContactsByListIdPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -8309,15 +8309,15 @@ func (a *TextMagicApiService) GetContactsByListId(ctx context.Context, id int32,
 TextMagicApiService Return list of countries.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
-@return []Country
+@return GetCountriesResponse
 */
-func (a *TextMagicApiService) GetCountries(ctx context.Context) ([]Country, *http.Response, error) {
+func (a *TextMagicApiService) GetCountries(ctx context.Context) (GetCountriesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []Country
+		localVarReturnValue GetCountriesResponse
 	)
 
 	// create path and map variables
@@ -8375,7 +8375,7 @@ func (a *TextMagicApiService) GetCountries(ctx context.Context) ([]Country, *htt
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []Country
+			var v GetCountriesResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -8616,7 +8616,7 @@ TextMagicApiService Get all contact custom fields.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetCustomFieldsResponse
+@return GetCustomFieldsPaginatedResponse
 */
 
 type GetCustomFieldsOpts struct { 
@@ -8624,13 +8624,13 @@ type GetCustomFieldsOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetCustomFields(ctx context.Context, localVarOptionals *GetCustomFieldsOpts) (GetCustomFieldsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetCustomFields(ctx context.Context, localVarOptionals *GetCustomFieldsOpts) (GetCustomFieldsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetCustomFieldsResponse
+		localVarReturnValue GetCustomFieldsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -8694,7 +8694,7 @@ func (a *TextMagicApiService) GetCustomFields(ctx context.Context, localVarOptio
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetCustomFieldsResponse
+			var v GetCustomFieldsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -8835,15 +8835,15 @@ func (a *TextMagicApiService) GetDedicatedNumber(ctx context.Context, id int32) 
 TextMagicApiService Get an array of all rules that are disallowed to the current account.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
-@return []string
+@return GetDisallowedRulesResponse
 */
-func (a *TextMagicApiService) GetDisallowedRules(ctx context.Context) ([]string, *http.Response, error) {
+func (a *TextMagicApiService) GetDisallowedRules(ctx context.Context) (GetDisallowedRulesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue []string
+		localVarReturnValue GetDisallowedRulesResponse
 	)
 
 	// create path and map variables
@@ -8901,7 +8901,7 @@ func (a *TextMagicApiService) GetDisallowedRules(ctx context.Context) ([]string,
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v []string
+			var v GetDisallowedRulesResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -8936,7 +8936,7 @@ TextMagicApiService Get favorite contacts and lists.
      * @param "Limit" (optional.Int32) -  How many results to return
      * @param "Query" (optional.String) -  Find contacts or lists by specified search query
 
-@return GetFavouritesResponse
+@return GetFavouritesPaginatedResponse
 */
 
 type GetFavouritesOpts struct { 
@@ -8945,13 +8945,13 @@ type GetFavouritesOpts struct {
 	Query optional.String
 }
 
-func (a *TextMagicApiService) GetFavourites(ctx context.Context, localVarOptionals *GetFavouritesOpts) (GetFavouritesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetFavourites(ctx context.Context, localVarOptionals *GetFavouritesOpts) (GetFavouritesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetFavouritesResponse
+		localVarReturnValue GetFavouritesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -9018,7 +9018,7 @@ func (a *TextMagicApiService) GetFavourites(ctx context.Context, localVarOptiona
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetFavouritesResponse
+			var v GetFavouritesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -9052,7 +9052,7 @@ TextMagicApiService Get all forwarded calls.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetForwardedCallsResponse
+@return GetForwardedCallsPaginatedResponse
 */
 
 type GetForwardedCallsOpts struct { 
@@ -9060,13 +9060,13 @@ type GetForwardedCallsOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetForwardedCalls(ctx context.Context, localVarOptionals *GetForwardedCallsOpts) (GetForwardedCallsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetForwardedCalls(ctx context.Context, localVarOptionals *GetForwardedCallsOpts) (GetForwardedCallsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetForwardedCallsResponse
+		localVarReturnValue GetForwardedCallsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -9130,7 +9130,7 @@ func (a *TextMagicApiService) GetForwardedCalls(ctx context.Context, localVarOpt
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetForwardedCallsResponse
+			var v GetForwardedCallsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -9371,7 +9371,7 @@ TextMagicApiService Return account invoices.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetInvoicesResponse
+@return GetInvoicesPaginatedResponse
 */
 
 type GetInvoicesOpts struct { 
@@ -9379,13 +9379,13 @@ type GetInvoicesOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetInvoices(ctx context.Context, localVarOptionals *GetInvoicesOpts) (GetInvoicesResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetInvoices(ctx context.Context, localVarOptionals *GetInvoicesOpts) (GetInvoicesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetInvoicesResponse
+		localVarReturnValue GetInvoicesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -9449,7 +9449,7 @@ func (a *TextMagicApiService) GetInvoices(ctx context.Context, localVarOptionals
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetInvoicesResponse
+			var v GetInvoicesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -9715,7 +9715,7 @@ TextMagicApiService Return lists which contact belongs to.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetListsOfContactResponse
+@return GetListsOfContactPaginatedResponse
 */
 
 type GetListsOfContactOpts struct { 
@@ -9723,13 +9723,13 @@ type GetListsOfContactOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetListsOfContact(ctx context.Context, id int32, localVarOptionals *GetListsOfContactOpts) (GetListsOfContactResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetListsOfContact(ctx context.Context, id int32, localVarOptionals *GetListsOfContactOpts) (GetListsOfContactPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetListsOfContactResponse
+		localVarReturnValue GetListsOfContactPaginatedResponse
 	)
 
 	// create path and map variables
@@ -9794,7 +9794,7 @@ func (a *TextMagicApiService) GetListsOfContact(ctx context.Context, id int32, l
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetListsOfContactResponse
+			var v GetListsOfContactPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -10574,7 +10574,7 @@ A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;
      * @param "Statuses" (optional.String) -  Find messages by status
      * @param "IncludeDeleted" (optional.Int32) -  Search also in deleted messages
 
-@return GetMessagesBySessionIdResponse
+@return GetMessagesBySessionIdPaginatedResponse
 */
 
 type GetMessagesBySessionIdOpts struct { 
@@ -10584,13 +10584,13 @@ type GetMessagesBySessionIdOpts struct {
 	IncludeDeleted optional.Int32
 }
 
-func (a *TextMagicApiService) GetMessagesBySessionId(ctx context.Context, id int32, localVarOptionals *GetMessagesBySessionIdOpts) (GetMessagesBySessionIdResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetMessagesBySessionId(ctx context.Context, id int32, localVarOptionals *GetMessagesBySessionIdOpts) (GetMessagesBySessionIdPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetMessagesBySessionIdResponse
+		localVarReturnValue GetMessagesBySessionIdPaginatedResponse
 	)
 
 	// create path and map variables
@@ -10661,7 +10661,7 @@ func (a *TextMagicApiService) GetMessagesBySessionId(ctx context.Context, id int
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetMessagesBySessionIdResponse
+			var v GetMessagesBySessionIdPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -11035,7 +11035,7 @@ Get outbound messages history.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return GetOutboundMessagesHistoryResponse
+@return GetOutboundMessagesHistoryPaginatedResponse
 */
 
 type GetOutboundMessagesHistoryOpts struct { 
@@ -11046,13 +11046,13 @@ type GetOutboundMessagesHistoryOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) GetOutboundMessagesHistory(ctx context.Context, localVarOptionals *GetOutboundMessagesHistoryOpts) (GetOutboundMessagesHistoryResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetOutboundMessagesHistory(ctx context.Context, localVarOptionals *GetOutboundMessagesHistoryOpts) (GetOutboundMessagesHistoryPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetOutboundMessagesHistoryResponse
+		localVarReturnValue GetOutboundMessagesHistoryPaginatedResponse
 	)
 
 	// create path and map variables
@@ -11125,7 +11125,7 @@ func (a *TextMagicApiService) GetOutboundMessagesHistory(ctx context.Context, lo
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetOutboundMessagesHistoryResponse
+			var v GetOutboundMessagesHistoryPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -11487,7 +11487,7 @@ TextMagicApiService Get all sender IDs of current user.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetSenderIdsResponse
+@return GetSenderIdsPaginatedResponse
 */
 
 type GetSenderIdsOpts struct { 
@@ -11495,13 +11495,13 @@ type GetSenderIdsOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetSenderIds(ctx context.Context, localVarOptionals *GetSenderIdsOpts) (GetSenderIdsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetSenderIds(ctx context.Context, localVarOptionals *GetSenderIdsOpts) (GetSenderIdsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetSenderIdsResponse
+		localVarReturnValue GetSenderIdsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -11565,7 +11565,7 @@ func (a *TextMagicApiService) GetSenderIds(ctx context.Context, localVarOptional
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetSenderIdsResponse
+			var v GetSenderIdsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -11708,7 +11708,7 @@ TextMagicApiService Return account spending statistics.
      * @param "Start" (optional.Int32) -  Optional. Start date in unix timestamp format. Default is 7 days ago
      * @param "End" (optional.Int32) -  Optional. End date in unix timestamp format. Default is now
 
-@return GetSpendingStatResponse
+@return GetSpendingStatPaginatedResponse
 */
 
 type GetSpendingStatOpts struct { 
@@ -11718,13 +11718,13 @@ type GetSpendingStatOpts struct {
 	End optional.Int32
 }
 
-func (a *TextMagicApiService) GetSpendingStat(ctx context.Context, localVarOptionals *GetSpendingStatOpts) (GetSpendingStatResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetSpendingStat(ctx context.Context, localVarOptionals *GetSpendingStatOpts) (GetSpendingStatPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetSpendingStatResponse
+		localVarReturnValue GetSpendingStatPaginatedResponse
 	)
 
 	// create path and map variables
@@ -11794,7 +11794,7 @@ func (a *TextMagicApiService) GetSpendingStat(ctx context.Context, localVarOptio
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetSpendingStatResponse
+			var v GetSpendingStatPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -12615,7 +12615,7 @@ TextMagicApiService Get all user surveys.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetSurveysResponse
+@return GetSurveysPaginatedResponse
 */
 
 type GetSurveysOpts struct { 
@@ -12623,13 +12623,13 @@ type GetSurveysOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetSurveys(ctx context.Context, localVarOptionals *GetSurveysOpts) (GetSurveysResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetSurveys(ctx context.Context, localVarOptionals *GetSurveysOpts) (GetSurveysPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetSurveysResponse
+		localVarReturnValue GetSurveysPaginatedResponse
 	)
 
 	// create path and map variables
@@ -12693,7 +12693,7 @@ func (a *TextMagicApiService) GetSurveys(ctx context.Context, localVarOptionals 
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetSurveysResponse
+			var v GetSurveysPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -12836,20 +12836,20 @@ TextMagicApiService Return all available timezone IDs.
  * @param optional nil or *GetTimezonesOpts - Optional Parameters:
      * @param "Full" (optional.Int32) -  Return full info about timezones in array (0 or 1). Default is 0
 
-@return interface{}
+@return GetTimezonesResponse
 */
 
 type GetTimezonesOpts struct { 
 	Full optional.Int32
 }
 
-func (a *TextMagicApiService) GetTimezones(ctx context.Context, localVarOptionals *GetTimezonesOpts) (interface{}, *http.Response, error) {
+func (a *TextMagicApiService) GetTimezones(ctx context.Context, localVarOptionals *GetTimezonesOpts) (GetTimezonesResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue interface{}
+		localVarReturnValue GetTimezonesResponse
 	)
 
 	// create path and map variables
@@ -12910,7 +12910,7 @@ func (a *TextMagicApiService) GetTimezones(ctx context.Context, localVarOptional
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v interface{}
+			var v GetTimezonesResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -13162,7 +13162,7 @@ TextMagicApiService Get all contact have unsubscribed from your communication.
      * @param "Page" (optional.Int32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
 
-@return GetUnsubscribersResponse
+@return GetUnsubscribersPaginatedResponse
 */
 
 type GetUnsubscribersOpts struct { 
@@ -13170,13 +13170,13 @@ type GetUnsubscribersOpts struct {
 	Limit optional.Int32
 }
 
-func (a *TextMagicApiService) GetUnsubscribers(ctx context.Context, localVarOptionals *GetUnsubscribersOpts) (GetUnsubscribersResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetUnsubscribers(ctx context.Context, localVarOptionals *GetUnsubscribersOpts) (GetUnsubscribersPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetUnsubscribersResponse
+		localVarReturnValue GetUnsubscribersPaginatedResponse
 	)
 
 	// create path and map variables
@@ -13240,7 +13240,7 @@ func (a *TextMagicApiService) GetUnsubscribers(ctx context.Context, localVarOpti
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetUnsubscribersResponse
+			var v GetUnsubscribersPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -13275,7 +13275,7 @@ TextMagicApiService Get user&#39;s dedicated numbers.
      * @param "Limit" (optional.Int32) -  How many results to return
      * @param "SurveyId" (optional.Int32) -  Fetch only that numbers which are ready for the survey
 
-@return GetUserDedicatedNumbersResponse
+@return GetUserDedicatedNumbersPaginatedResponse
 */
 
 type GetUserDedicatedNumbersOpts struct { 
@@ -13284,13 +13284,13 @@ type GetUserDedicatedNumbersOpts struct {
 	SurveyId optional.Int32
 }
 
-func (a *TextMagicApiService) GetUserDedicatedNumbers(ctx context.Context, localVarOptionals *GetUserDedicatedNumbersOpts) (GetUserDedicatedNumbersResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetUserDedicatedNumbers(ctx context.Context, localVarOptionals *GetUserDedicatedNumbersOpts) (GetUserDedicatedNumbersPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetUserDedicatedNumbersResponse
+		localVarReturnValue GetUserDedicatedNumbersPaginatedResponse
 	)
 
 	// create path and map variables
@@ -13357,7 +13357,7 @@ func (a *TextMagicApiService) GetUserDedicatedNumbers(ctx context.Context, local
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetUserDedicatedNumbersResponse
+			var v GetUserDedicatedNumbersPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -13406,7 +13406,7 @@ TextMagicApiService Get all user lists.
      * @param "FavoriteOnly" (optional.Int32) -  Return only favorite lists
      * @param "OnlyMine" (optional.Int32) -  Return only current user lists
 
-@return GetUserListsResponse
+@return GetUserListsPaginatedResponse
 */
 
 type GetUserListsOpts struct { 
@@ -13418,13 +13418,13 @@ type GetUserListsOpts struct {
 	OnlyMine optional.Int32
 }
 
-func (a *TextMagicApiService) GetUserLists(ctx context.Context, localVarOptionals *GetUserListsOpts) (GetUserListsResponse, *http.Response, error) {
+func (a *TextMagicApiService) GetUserLists(ctx context.Context, localVarOptionals *GetUserListsOpts) (GetUserListsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue GetUserListsResponse
+		localVarReturnValue GetUserListsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -13500,7 +13500,7 @@ func (a *TextMagicApiService) GetUserLists(ctx context.Context, localVarOptional
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v GetUserListsResponse
+			var v GetUserListsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -14775,7 +14775,7 @@ TextMagicApiService Find chats by inbound or outbound messages text.
      * @param "Limit" (optional.Int32) -  How many results to return
      * @param "Query" (optional.String) -  Find chats by specified search query
 
-@return SearchChatsResponse
+@return SearchChatsPaginatedResponse
 */
 
 type SearchChatsOpts struct { 
@@ -14784,13 +14784,13 @@ type SearchChatsOpts struct {
 	Query optional.String
 }
 
-func (a *TextMagicApiService) SearchChats(ctx context.Context, localVarOptionals *SearchChatsOpts) (SearchChatsResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchChats(ctx context.Context, localVarOptionals *SearchChatsOpts) (SearchChatsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchChatsResponse
+		localVarReturnValue SearchChatsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -14857,7 +14857,7 @@ func (a *TextMagicApiService) SearchChats(ctx context.Context, localVarOptionals
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchChatsResponse
+			var v SearchChatsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -14892,7 +14892,7 @@ TextMagicApiService Find chats by IDs.
      * @param "Limit" (optional.Int32) -  How many results to return
      * @param "Ids" (optional.String) -  Find chats by ID(s)
 
-@return SearchChatsByIdsResponse
+@return SearchChatsByIdsPaginatedResponse
 */
 
 type SearchChatsByIdsOpts struct { 
@@ -14901,13 +14901,13 @@ type SearchChatsByIdsOpts struct {
 	Ids optional.String
 }
 
-func (a *TextMagicApiService) SearchChatsByIds(ctx context.Context, localVarOptionals *SearchChatsByIdsOpts) (SearchChatsByIdsResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchChatsByIds(ctx context.Context, localVarOptionals *SearchChatsByIdsOpts) (SearchChatsByIdsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchChatsByIdsResponse
+		localVarReturnValue SearchChatsByIdsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -14974,7 +14974,7 @@ func (a *TextMagicApiService) SearchChatsByIds(ctx context.Context, localVarOpti
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchChatsByIdsResponse
+			var v SearchChatsByIdsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -15010,7 +15010,7 @@ TextMagicApiService Find chats by recipient (contact, list name or phone number)
      * @param "Query" (optional.String) -  Find chats by specified search query
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
 
-@return SearchChatsByReceipentResponse
+@return SearchChatsByReceipentPaginatedResponse
 */
 
 type SearchChatsByReceipentOpts struct { 
@@ -15020,13 +15020,13 @@ type SearchChatsByReceipentOpts struct {
 	OrderBy optional.String
 }
 
-func (a *TextMagicApiService) SearchChatsByReceipent(ctx context.Context, localVarOptionals *SearchChatsByReceipentOpts) (SearchChatsByReceipentResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchChatsByReceipent(ctx context.Context, localVarOptionals *SearchChatsByReceipentOpts) (SearchChatsByReceipentPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchChatsByReceipentResponse
+		localVarReturnValue SearchChatsByReceipentPaginatedResponse
 	)
 
 	// create path and map variables
@@ -15096,7 +15096,7 @@ func (a *TextMagicApiService) SearchChatsByReceipent(ctx context.Context, localV
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchChatsByReceipentResponse
+			var v SearchChatsByReceipentPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -15139,7 +15139,7 @@ TextMagicApiService Find user contacts by given parameters.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return SearchContactsResponse
+@return SearchContactsPaginatedResponse
 */
 
 type SearchContactsOpts struct { 
@@ -15156,13 +15156,13 @@ type SearchContactsOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) SearchContacts(ctx context.Context, localVarOptionals *SearchContactsOpts) (SearchContactsResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchContacts(ctx context.Context, localVarOptionals *SearchContactsOpts) (SearchContactsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchContactsResponse
+		localVarReturnValue SearchContactsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -15253,7 +15253,7 @@ func (a *TextMagicApiService) SearchContacts(ctx context.Context, localVarOption
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchContactsResponse
+			var v SearchContactsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -15292,7 +15292,7 @@ TextMagicApiService Find inbound messages by given parameters.
      * @param "Direction" (optional.String) -  Order direction. Default is desc
      * @param "Expand" (optional.Int32) -  Expand by adding firstName, lastName and contactId
 
-@return SearchInboundMessagesResponse
+@return SearchInboundMessagesPaginatedResponse
 */
 
 type SearchInboundMessagesOpts struct { 
@@ -15305,13 +15305,13 @@ type SearchInboundMessagesOpts struct {
 	Expand optional.Int32
 }
 
-func (a *TextMagicApiService) SearchInboundMessages(ctx context.Context, localVarOptionals *SearchInboundMessagesOpts) (SearchInboundMessagesResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchInboundMessages(ctx context.Context, localVarOptionals *SearchInboundMessagesOpts) (SearchInboundMessagesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchInboundMessagesResponse
+		localVarReturnValue SearchInboundMessagesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -15390,7 +15390,7 @@ func (a *TextMagicApiService) SearchInboundMessages(ctx context.Context, localVa
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchInboundMessagesResponse
+			var v SearchInboundMessagesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -15441,7 +15441,7 @@ TextMagicApiService Find contact lists by given parameters.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return SearchListsResponse
+@return SearchListsPaginatedResponse
 */
 
 type SearchListsOpts struct { 
@@ -15455,13 +15455,13 @@ type SearchListsOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) SearchLists(ctx context.Context, localVarOptionals *SearchListsOpts) (SearchListsResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchLists(ctx context.Context, localVarOptionals *SearchListsOpts) (SearchListsPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchListsResponse
+		localVarReturnValue SearchListsPaginatedResponse
 	)
 
 	// create path and map variables
@@ -15543,7 +15543,7 @@ func (a *TextMagicApiService) SearchLists(ctx context.Context, localVarOptionals
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchListsResponse
+			var v SearchListsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -15595,7 +15595,7 @@ Find outbound messages by given parameters.
      * @param "IncludeDeleted" (optional.Int32) -  Search also in deleted messages
      * @param "Query" (optional.String) -  Find messages by specified search query
 
-@return SearchOutboundMessagesResponse
+@return SearchOutboundMessagesPaginatedResponse
 */
 
 type SearchOutboundMessagesOpts struct { 
@@ -15609,13 +15609,13 @@ type SearchOutboundMessagesOpts struct {
 	Query optional.String
 }
 
-func (a *TextMagicApiService) SearchOutboundMessages(ctx context.Context, localVarOptionals *SearchOutboundMessagesOpts) (SearchOutboundMessagesResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchOutboundMessages(ctx context.Context, localVarOptionals *SearchOutboundMessagesOpts) (SearchOutboundMessagesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchOutboundMessagesResponse
+		localVarReturnValue SearchOutboundMessagesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -15697,7 +15697,7 @@ func (a *TextMagicApiService) SearchOutboundMessages(ctx context.Context, localV
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchOutboundMessagesResponse
+			var v SearchOutboundMessagesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -15747,7 +15747,7 @@ TextMagicApiService Find scheduled messages by given parameters.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
-@return SearchScheduledMessagesResponse
+@return SearchScheduledMessagesPaginatedResponse
 */
 
 type SearchScheduledMessagesOpts struct { 
@@ -15760,13 +15760,13 @@ type SearchScheduledMessagesOpts struct {
 	Direction optional.String
 }
 
-func (a *TextMagicApiService) SearchScheduledMessages(ctx context.Context, localVarOptionals *SearchScheduledMessagesOpts) (SearchScheduledMessagesResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchScheduledMessages(ctx context.Context, localVarOptionals *SearchScheduledMessagesOpts) (SearchScheduledMessagesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchScheduledMessagesResponse
+		localVarReturnValue SearchScheduledMessagesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -15845,7 +15845,7 @@ func (a *TextMagicApiService) SearchScheduledMessages(ctx context.Context, local
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchScheduledMessagesResponse
+			var v SearchScheduledMessagesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -15893,7 +15893,7 @@ TextMagicApiService Find user templates by given parameters.
      * @param "Name" (optional.String) -  Find template by name
      * @param "Content" (optional.String) -  Find template by content
 
-@return SearchTemplatesResponse
+@return SearchTemplatesPaginatedResponse
 */
 
 type SearchTemplatesOpts struct { 
@@ -15904,13 +15904,13 @@ type SearchTemplatesOpts struct {
 	Content optional.String
 }
 
-func (a *TextMagicApiService) SearchTemplates(ctx context.Context, localVarOptionals *SearchTemplatesOpts) (SearchTemplatesResponse, *http.Response, error) {
+func (a *TextMagicApiService) SearchTemplates(ctx context.Context, localVarOptionals *SearchTemplatesOpts) (SearchTemplatesPaginatedResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue SearchTemplatesResponse
+		localVarReturnValue SearchTemplatesPaginatedResponse
 	)
 
 	// create path and map variables
@@ -15983,7 +15983,7 @@ func (a *TextMagicApiService) SearchTemplates(ctx context.Context, localVarOptio
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v SearchTemplatesResponse
+			var v SearchTemplatesPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()

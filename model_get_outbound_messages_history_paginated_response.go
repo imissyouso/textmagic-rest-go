@@ -10,5 +10,9 @@
 
 package TextMagic
 
-type GetContactsAutocompleteResponse struct {
+type GetOutboundMessagesHistoryPaginatedResponse struct {
+	LastId int32 `json:"lastId"`
+	NextLastId int32 `json:"nextLastId"`
+	Limit int32 `json:"limit"`
+	Resources []MessageOut `json:"resources"`
 }

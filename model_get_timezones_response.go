@@ -10,5 +10,5 @@
 
 package TextMagic
 
-type GetContactsAutocompleteResponse struct {
+type GetTimezonesResponse struct {
 }
