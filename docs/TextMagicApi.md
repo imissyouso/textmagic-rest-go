@@ -203,7 +203,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **BlockContact**
-> ResourceLinkResponse BlockContact(ctx, blockContactInputObject, optional)
+> ResourceLinkResponse BlockContact(ctx, blockContactInputObject)
 Block contact from inbound and outbound communication by phone number.
 
 ### Required Parameters
@@ -212,15 +212,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **blockContactInputObject** | [**BlockContactInputObject**](BlockContactInputObject.md)|  | 
- **optional** | ***BlockContactOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a BlockContactOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -238,7 +229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **BuyDedicatedNumber**
-> BuyDedicatedNumber(ctx, buyDedicatedNumberInputObject, optional)
+> BuyDedicatedNumber(ctx, buyDedicatedNumberInputObject)
 Buy a dedicated number and assign it to the specified account.
 
 ### Required Parameters
@@ -247,15 +238,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **buyDedicatedNumberInputObject** | [**BuyDedicatedNumberInputObject**](BuyDedicatedNumberInputObject.md)|  | 
- **optional** | ***BuyDedicatedNumberOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a BuyDedicatedNumberOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -299,7 +281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CheckPhoneVerificationCode**
-> CheckPhoneVerificationCode(ctx, checkPhoneVerificationCodeInputObject, optional)
+> CheckPhoneVerificationCode(ctx, checkPhoneVerificationCodeInputObject)
 Check user phone verification code
 
 ### Required Parameters
@@ -308,15 +290,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
- **optional** | ***CheckPhoneVerificationCodeOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CheckPhoneVerificationCodeOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -361,7 +334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CloseChatsBulk**
-> CloseChatsBulk(ctx, closeChatsBulkInputObject, optional)
+> CloseChatsBulk(ctx, closeChatsBulkInputObject)
 Close chats by chat ids or close all chats
 
 ### Required Parameters
@@ -370,15 +343,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **closeChatsBulkInputObject** | [**CloseChatsBulkInputObject**](CloseChatsBulkInputObject.md)|  | 
- **optional** | ***CloseChatsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CloseChatsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -444,7 +408,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateContact**
-> ResourceLinkResponse CreateContact(ctx, createContactInputObject, optional)
+> ResourceLinkResponse CreateContact(ctx, createContactInputObject)
 Create a new contact from the submitted data.
 
 ### Required Parameters
@@ -453,15 +417,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createContactInputObject** | [**CreateContactInputObject**](CreateContactInputObject.md)|  | 
- **optional** | ***CreateContactOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreateContactOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -479,7 +434,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateContactNote**
-> ResourceLinkResponse CreateContactNote(ctx, createContactNoteInputObject, id, optional)
+> ResourceLinkResponse CreateContactNote(ctx, createContactNoteInputObject, id)
 Create a new contact note.
 
 ### Required Parameters
@@ -489,16 +444,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createContactNoteInputObject** | [**CreateContactNoteInputObject**](CreateContactNoteInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***CreateContactNoteOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreateContactNoteOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -516,7 +461,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateCustomField**
-> ResourceLinkResponse CreateCustomField(ctx, createCustomFieldInputObject, optional)
+> ResourceLinkResponse CreateCustomField(ctx, createCustomFieldInputObject)
 Create a new custom field from the submitted data.
 
 ### Required Parameters
@@ -525,15 +470,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createCustomFieldInputObject** | [**CreateCustomFieldInputObject**](CreateCustomFieldInputObject.md)|  | 
- **optional** | ***CreateCustomFieldOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreateCustomFieldOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -551,7 +487,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateList**
-> ResourceLinkResponse CreateList(ctx, createListInputObject, optional)
+> ResourceLinkResponse CreateList(ctx, createListInputObject)
 Create a new list from the submitted data.
 
 ### Required Parameters
@@ -560,15 +496,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createListInputObject** | [**CreateListInputObject**](CreateListInputObject.md)|  | 
- **optional** | ***CreateListOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreateListOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -586,7 +513,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreatePushToken**
-> CreatePushToken(ctx, createPushTokenInputObject, optional)
+> CreatePushToken(ctx, createPushTokenInputObject)
 Add or update a device token.
 
 ### Required Parameters
@@ -595,15 +522,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createPushTokenInputObject** | [**CreatePushTokenInputObject**](CreatePushTokenInputObject.md)|  | 
- **optional** | ***CreatePushTokenOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreatePushTokenOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -621,7 +539,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateSurvey**
-> ResourceLinkResponse CreateSurvey(ctx, createSurveyInputObject, optional)
+> ResourceLinkResponse CreateSurvey(ctx, createSurveyInputObject)
 Create a new survey from the submitted data.
 
 ### Required Parameters
@@ -630,15 +548,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createSurveyInputObject** | [**CreateSurveyInputObject**](CreateSurveyInputObject.md)|  | 
- **optional** | ***CreateSurveyOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreateSurveyOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -656,7 +565,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateSurveyNode**
-> ResourceLinkResponse CreateSurveyNode(ctx, createSurveyNodeInputObject, id, optional)
+> ResourceLinkResponse CreateSurveyNode(ctx, createSurveyNodeInputObject, id)
 Create a new node from the submitted data.
 
 ### Required Parameters
@@ -666,16 +575,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createSurveyNodeInputObject** | [**CreateSurveyNodeInputObject**](CreateSurveyNodeInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***CreateSurveyNodeOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreateSurveyNodeOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -693,7 +592,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **CreateTemplate**
-> ResourceLinkResponse CreateTemplate(ctx, createTemplateInputObject, optional)
+> ResourceLinkResponse CreateTemplate(ctx, createTemplateInputObject)
 Create a new template from the submitted data.
 
 ### Required Parameters
@@ -702,15 +601,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createTemplateInputObject** | [**CreateTemplateInputObject**](CreateTemplateInputObject.md)|  | 
- **optional** | ***CreateTemplateOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a CreateTemplateOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -796,7 +686,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteChatMessages**
-> DeleteChatMessages(ctx, deleteChatMessagesBulkInputObject, id, optional)
+> DeleteChatMessages(ctx, deleteChatMessagesBulkInputObject, id)
 Delete messages from chat by given messages ID(s).
 
 ### Required Parameters
@@ -806,16 +696,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteChatMessagesBulkInputObject** | [**DeleteChatMessagesBulkInputObject**](DeleteChatMessagesBulkInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***DeleteChatMessagesOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteChatMessagesOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -833,7 +713,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteChatsBulk**
-> DeleteChatsBulk(ctx, deleteChatsBulkInputObject, optional)
+> DeleteChatsBulk(ctx, deleteChatsBulkInputObject)
 Delete chats by given ID(s) or delete all chats.
 
 ### Required Parameters
@@ -842,15 +722,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteChatsBulkInputObject** | [**DeleteChatsBulkInputObject**](DeleteChatsBulkInputObject.md)|  | 
- **optional** | ***DeleteChatsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteChatsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -946,7 +817,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteContactNotesBulk**
-> DeleteContactNotesBulk(ctx, id, deleteContactNotesBulkInputObject, optional)
+> DeleteContactNotesBulk(ctx, id, deleteContactNotesBulkInputObject)
 Delete contact note by given ID(s) or delete all contact notes.
 
 ### Required Parameters
@@ -956,16 +827,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **id** | **int32**|  | 
   **deleteContactNotesBulkInputObject** | [**DeleteContactNotesBulkInputObject**](DeleteContactNotesBulkInputObject.md)|  | 
- **optional** | ***DeleteContactNotesBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteContactNotesBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -983,7 +844,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteContactsByIds**
-> DeleteContactsByIds(ctx, deleteContactsByIdsInputObject, optional)
+> DeleteContactsByIds(ctx, deleteContactsByIdsInputObject)
 Delete contact by given ID(s) or delete all contacts.
 
 ### Required Parameters
@@ -992,15 +853,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteContactsByIdsInputObject** | [**DeleteContactsByIdsInputObject**](DeleteContactsByIdsInputObject.md)|  | 
- **optional** | ***DeleteContactsByIdsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteContactsByIdsOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1123,7 +975,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteInboundMessagesBulk**
-> DeleteInboundMessagesBulk(ctx, deleteInboundMessagesBulkInputObject, optional)
+> DeleteInboundMessagesBulk(ctx, deleteInboundMessagesBulkInputObject)
 Delete inbound messages by given ID(s) or delete all inbound messages.
 
 ### Required Parameters
@@ -1132,15 +984,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteInboundMessagesBulkInputObject** | [**DeleteInboundMessagesBulkInputObject**](DeleteInboundMessagesBulkInputObject.md)|  | 
- **optional** | ***DeleteInboundMessagesBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteInboundMessagesBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1210,7 +1053,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteListContactsBulk**
-> DeleteListContactsBulk(ctx, deleteListContactsBulkInputObject, id, optional)
+> DeleteListContactsBulk(ctx, deleteListContactsBulkInputObject, id)
 Delete contact from list by given ID(s) or all contacts from list.
 
 ### Required Parameters
@@ -1220,16 +1063,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteListContactsBulkInputObject** | [**DeleteListContactsBulkInputObject**](DeleteListContactsBulkInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***DeleteListContactsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteListContactsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1247,7 +1080,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteListsBulk**
-> DeleteListsBulk(ctx, deleteListsBulkInputObject, optional)
+> DeleteListsBulk(ctx, deleteListsBulkInputObject)
 Delete list by given ID(s) or delete all lists.
 
 ### Required Parameters
@@ -1256,15 +1089,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteListsBulkInputObject** | [**DeleteListsBulkInputObject**](DeleteListsBulkInputObject.md)|  | 
- **optional** | ***DeleteListsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteListsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1308,7 +1132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteMessageSessionsBulk**
-> DeleteMessageSessionsBulk(ctx, deleteMessageSessionsBulkInputObject, optional)
+> DeleteMessageSessionsBulk(ctx, deleteMessageSessionsBulkInputObject)
 Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
 
 ### Required Parameters
@@ -1317,15 +1141,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteMessageSessionsBulkInputObject** | [**DeleteMessageSessionsBulkInputObject**](DeleteMessageSessionsBulkInputObject.md)|  | 
- **optional** | ***DeleteMessageSessionsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteMessageSessionsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1371,7 +1186,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteOutboundMessagesBulk**
-> DeleteOutboundMessagesBulk(ctx, deleteOutboundMessagesBulkInputObject, optional)
+> DeleteOutboundMessagesBulk(ctx, deleteOutboundMessagesBulkInputObject)
 Delete messages by IDs
 
 Delete outbound messages by given ID(s) or delete all outbound messages.
@@ -1382,15 +1197,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteOutboundMessagesBulkInputObject** | [**DeleteOutboundMessagesBulkInputObject**](DeleteOutboundMessagesBulkInputObject.md)|  | 
- **optional** | ***DeleteOutboundMessagesBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteOutboundMessagesBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1461,7 +1267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteScheduledMessagesBulk**
-> DeleteScheduledMessagesBulk(ctx, deleteScheduledMessagesBulkInputObject, optional)
+> DeleteScheduledMessagesBulk(ctx, deleteScheduledMessagesBulkInputObject)
 Delete scheduled messages by given ID(s) or delete all scheduled messages.
 
 ### Required Parameters
@@ -1470,15 +1276,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteScheduledMessagesBulkInputObject** | [**DeleteScheduledMessagesBulkInputObject**](DeleteScheduledMessagesBulkInputObject.md)|  | 
- **optional** | ***DeleteScheduledMessagesBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteScheduledMessagesBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1600,7 +1397,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DeleteTemplatesBulk**
-> DeleteTemplatesBulk(ctx, deleteTemplatesBulkInputObject, optional)
+> DeleteTemplatesBulk(ctx, deleteTemplatesBulkInputObject)
 Delete template by given ID(s) or delete all templates.
 
 ### Required Parameters
@@ -1609,15 +1406,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **deleteTemplatesBulkInputObject** | [**DeleteTemplatesBulkInputObject**](DeleteTemplatesBulkInputObject.md)|  | 
- **optional** | ***DeleteTemplatesBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DeleteTemplatesBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -1635,7 +1423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **DoAuth**
-> DoAuthResponse DoAuth(ctx, doAuthInputObject, optional)
+> DoAuthResponse DoAuth(ctx, doAuthInputObject)
 Authenticate user by given username and password.
 
 Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
@@ -1646,15 +1434,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **doAuthInputObject** | [**DoAuthInputObject**](DoAuthInputObject.md)|  | 
- **optional** | ***DoAuthOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a DoAuthOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -3634,7 +3413,6 @@ Name | Type | Description  | Notes
 
  **page** | **optional.Float32**| Fetch specified results page | [default to 1]
  **limit** | **optional.Int32**| How many results to return | [default to 10]
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4000,7 +3778,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **InviteSubaccount**
-> InviteSubaccount(ctx, inviteSubaccountInputObject, optional)
+> InviteSubaccount(ctx, inviteSubaccountInputObject)
 Invite new subaccount.
 
 ### Required Parameters
@@ -4009,15 +3787,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **inviteSubaccountInputObject** | [**InviteSubaccountInputObject**](InviteSubaccountInputObject.md)|  | 
- **optional** | ***InviteSubaccountOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a InviteSubaccountOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4035,7 +3804,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **MarkChatsReadBulk**
-> MarkChatsReadBulk(ctx, markChatsReadBulkInputObject, optional)
+> MarkChatsReadBulk(ctx, markChatsReadBulkInputObject)
 Mark several chats as read by chat ids or mark all chats as read
 
 ### Required Parameters
@@ -4044,15 +3813,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **markChatsReadBulkInputObject** | [**MarkChatsReadBulkInputObject**](MarkChatsReadBulkInputObject.md)|  | 
- **optional** | ***MarkChatsReadBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a MarkChatsReadBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4070,7 +3830,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **MarkChatsUnreadBulk**
-> MarkChatsUnreadBulk(ctx, markChatsUnreadBulkInputObject, optional)
+> MarkChatsUnreadBulk(ctx, markChatsUnreadBulkInputObject)
 Mark several chats as UNread by chat ids or mark all chats as UNread
 
 ### Required Parameters
@@ -4079,15 +3839,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **markChatsUnreadBulkInputObject** | [**MarkChatsUnreadBulkInputObject**](MarkChatsUnreadBulkInputObject.md)|  | 
- **optional** | ***MarkChatsUnreadBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a MarkChatsUnreadBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4105,7 +3856,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **MergeSurveyNodes**
-> MergeSurveyNodes(ctx, mergeSurveyNodesInputObject, optional)
+> MergeSurveyNodes(ctx, mergeSurveyNodesInputObject)
 Merge two question nodes.
 
 ### Required Parameters
@@ -4114,15 +3865,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **mergeSurveyNodesInputObject** | [**MergeSurveyNodesInputObject**](MergeSurveyNodesInputObject.md)|  | 
- **optional** | ***MergeSurveyNodesOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a MergeSurveyNodesOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4140,7 +3882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **MuteChat**
-> ResourceLinkResponse MuteChat(ctx, muteChatInputObject, optional)
+> ResourceLinkResponse MuteChat(ctx, muteChatInputObject)
 Set mute mode.
 
 ### Required Parameters
@@ -4149,15 +3891,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **muteChatInputObject** | [**MuteChatInputObject**](MuteChatInputObject.md)|  | 
- **optional** | ***MuteChatOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a MuteChatOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4175,7 +3908,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **MuteChatsBulk**
-> MuteChatsBulk(ctx, muteChatsBulkInputObject, optional)
+> MuteChatsBulk(ctx, muteChatsBulkInputObject)
 Mute several chats by chat ids or mute all chats
 
 ### Required Parameters
@@ -4184,15 +3917,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **muteChatsBulkInputObject** | [**MuteChatsBulkInputObject**](MuteChatsBulkInputObject.md)|  | 
- **optional** | ***MuteChatsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a MuteChatsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4232,7 +3956,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **ReopenChatsBulk**
-> ReopenChatsBulk(ctx, reopenChatsBulkInputObject, optional)
+> ReopenChatsBulk(ctx, reopenChatsBulkInputObject)
 Reopen chats by chat ids or reopen all chats
 
 ### Required Parameters
@@ -4241,15 +3965,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **reopenChatsBulkInputObject** | [**ReopenChatsBulkInputObject**](ReopenChatsBulkInputObject.md)|  | 
- **optional** | ***ReopenChatsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a ReopenChatsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4267,7 +3982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **RequestNewSubaccountToken**
-> User RequestNewSubaccountToken(ctx, requestNewSubaccountTokenInputObject, optional)
+> User RequestNewSubaccountToken(ctx, requestNewSubaccountTokenInputObject)
 Request a new REST API token for subaccount.
 
 Returning user object, key and app name.
@@ -4278,15 +3993,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **requestNewSubaccountTokenInputObject** | [**RequestNewSubaccountTokenInputObject**](RequestNewSubaccountTokenInputObject.md)|  | 
- **optional** | ***RequestNewSubaccountTokenOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a RequestNewSubaccountTokenOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4304,7 +4010,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **RequestSenderId**
-> ResourceLinkResponse RequestSenderId(ctx, requestSenderIdInputObject, optional)
+> ResourceLinkResponse RequestSenderId(ctx, requestSenderIdInputObject)
 Request for a new Sender ID.
 
 ### Required Parameters
@@ -4313,15 +4019,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **requestSenderIdInputObject** | [**RequestSenderIdInputObject**](RequestSenderIdInputObject.md)|  | 
- **optional** | ***RequestSenderIdOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a RequestSenderIdOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4733,7 +4430,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SendMessage**
-> SendMessageResponse SendMessage(ctx, sendMessageInputObject, optional)
+> SendMessageResponse SendMessage(ctx, sendMessageInputObject)
 Send message
 
 The main entrypoint to send messages. See examples above for the reference.
@@ -4744,15 +4441,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **sendMessageInputObject** | [**SendMessageInputObject**](SendMessageInputObject.md)|  | 
- **optional** | ***SendMessageOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a SendMessageOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4792,7 +4480,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **SetChatStatus**
-> ResourceLinkResponse SetChatStatus(ctx, setChatStatusInputObject, optional)
+> ResourceLinkResponse SetChatStatus(ctx, setChatStatusInputObject)
 Set status of the chat given by ID.
 
 ### Required Parameters
@@ -4801,15 +4489,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **setChatStatusInputObject** | [**SetChatStatusInputObject**](SetChatStatusInputObject.md)|  | 
- **optional** | ***SetChatStatusOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a SetChatStatusOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4853,7 +4532,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UnblockContact**
-> UnblockContact(ctx, unblockContactInputObject, optional)
+> UnblockContact(ctx, unblockContactInputObject)
 Unblock contact by phone number.
 
 ### Required Parameters
@@ -4862,15 +4541,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **unblockContactInputObject** | [**UnblockContactInputObject**](UnblockContactInputObject.md)|  | 
- **optional** | ***UnblockContactOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UnblockContactOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4888,7 +4558,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UnblockContactsBulk**
-> UnblockContactsBulk(ctx, unblockContactsBulkInputObject, optional)
+> UnblockContactsBulk(ctx, unblockContactsBulkInputObject)
 Unblock several contacts by blocked contact ids or unblock all contacts
 
 ### Required Parameters
@@ -4897,15 +4567,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **unblockContactsBulkInputObject** | [**UnblockContactsBulkInputObject**](UnblockContactsBulkInputObject.md)|  | 
- **optional** | ***UnblockContactsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UnblockContactsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4923,7 +4584,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UnmuteChatsBulk**
-> UnmuteChatsBulk(ctx, unmuteChatsBulkInputObject, optional)
+> UnmuteChatsBulk(ctx, unmuteChatsBulkInputObject)
 Unmute several chats by chat ids or unmute all chats
 
 ### Required Parameters
@@ -4932,15 +4593,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **unmuteChatsBulkInputObject** | [**UnmuteChatsBulkInputObject**](UnmuteChatsBulkInputObject.md)|  | 
- **optional** | ***UnmuteChatsBulkOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UnmuteChatsBulkOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4958,7 +4610,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UnsubscribeContact**
-> ResourceLinkResponse UnsubscribeContact(ctx, unsubscribeContactInputObject, optional)
+> ResourceLinkResponse UnsubscribeContact(ctx, unsubscribeContactInputObject)
 Unsubscribe contact from your communication by phone number.
 
 ### Required Parameters
@@ -4967,15 +4619,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **unsubscribeContactInputObject** | [**UnsubscribeContactInputObject**](UnsubscribeContactInputObject.md)|  | 
- **optional** | ***UnsubscribeContactOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UnsubscribeContactOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -4993,7 +4636,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateBalanceNotificationSettings**
-> UpdateBalanceNotificationSettings(ctx, updateBalanceNotificationSettingsInputObject, optional)
+> UpdateBalanceNotificationSettings(ctx, updateBalanceNotificationSettingsInputObject)
 Update balance notification settings
 
 ### Required Parameters
@@ -5002,15 +4645,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateBalanceNotificationSettingsInputObject** | [**UpdateBalanceNotificationSettingsInputObject**](UpdateBalanceNotificationSettingsInputObject.md)|  | 
- **optional** | ***UpdateBalanceNotificationSettingsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateBalanceNotificationSettingsOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5028,7 +4662,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateCallbackSettings**
-> UpdateCallbackSettings(ctx, updateCallbackSettingsInputObject, optional)
+> UpdateCallbackSettings(ctx, updateCallbackSettingsInputObject)
 Update callback URL settings
 
 ### Required Parameters
@@ -5037,15 +4671,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateCallbackSettingsInputObject** | [**UpdateCallbackSettingsInputObject**](UpdateCallbackSettingsInputObject.md)|  | 
- **optional** | ***UpdateCallbackSettingsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateCallbackSettingsOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5063,7 +4688,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateChatDesktopNotificationSettings**
-> UpdateChatDesktopNotificationSettings(ctx, updateChatDesktopNotificationSettingsInputObject, optional)
+> UpdateChatDesktopNotificationSettings(ctx, updateChatDesktopNotificationSettingsInputObject)
 Update chat desktop notification settings
 
 ### Required Parameters
@@ -5072,15 +4697,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateChatDesktopNotificationSettingsInputObject** | [**UpdateChatDesktopNotificationSettingsInputObject**](UpdateChatDesktopNotificationSettingsInputObject.md)|  | 
- **optional** | ***UpdateChatDesktopNotificationSettingsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateChatDesktopNotificationSettingsOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5098,7 +4714,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateContact**
-> ResourceLinkResponse UpdateContact(ctx, updateContactInputObject, id, optional)
+> ResourceLinkResponse UpdateContact(ctx, updateContactInputObject, id)
 Update existing contact.
 
 ### Required Parameters
@@ -5108,16 +4724,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateContactInputObject** | [**UpdateContactInputObject**](UpdateContactInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***UpdateContactOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateContactOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5135,7 +4741,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateContactNote**
-> ResourceLinkResponse UpdateContactNote(ctx, updateContactNoteInputObject, id, optional)
+> ResourceLinkResponse UpdateContactNote(ctx, updateContactNoteInputObject, id)
 Update existing contact note.
 
 ### Required Parameters
@@ -5145,16 +4751,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateContactNoteInputObject** | [**UpdateContactNoteInputObject**](UpdateContactNoteInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***UpdateContactNoteOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateContactNoteOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5172,7 +4768,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateCurrentUser**
-> UpdateCurrentUserResponse UpdateCurrentUser(ctx, updateCurrentUserInputObject, optional)
+> UpdateCurrentUserResponse UpdateCurrentUser(ctx, updateCurrentUserInputObject)
 Update current user info.
 
 ### Required Parameters
@@ -5181,15 +4777,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateCurrentUserInputObject** | [**UpdateCurrentUserInputObject**](UpdateCurrentUserInputObject.md)|  | 
- **optional** | ***UpdateCurrentUserOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateCurrentUserOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5207,7 +4794,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateCustomField**
-> ResourceLinkResponse UpdateCustomField(ctx, updateCustomFieldInputObject, id, optional)
+> ResourceLinkResponse UpdateCustomField(ctx, updateCustomFieldInputObject, id)
 Update existing custom field.
 
 ### Required Parameters
@@ -5217,16 +4804,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateCustomFieldInputObject** | [**UpdateCustomFieldInputObject**](UpdateCustomFieldInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***UpdateCustomFieldOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateCustomFieldOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5244,7 +4821,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateCustomFieldValue**
-> ResourceLinkResponse UpdateCustomFieldValue(ctx, updateCustomFieldValueInputObject, id, optional)
+> ResourceLinkResponse UpdateCustomFieldValue(ctx, updateCustomFieldValueInputObject, id)
 Update contact's custom field value.
 
 ### Required Parameters
@@ -5254,16 +4831,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateCustomFieldValueInputObject** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
   **id** | **string**|  | 
- **optional** | ***UpdateCustomFieldValueOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateCustomFieldValueOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5281,7 +4848,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateInboundMessagesNotificationSettings**
-> UpdateInboundMessagesNotificationSettings(ctx, updateInboundMessagesNotificationSettingsInputObject, optional)
+> UpdateInboundMessagesNotificationSettings(ctx, updateInboundMessagesNotificationSettingsInputObject)
 Update inbound messages notification settings
 
 ### Required Parameters
@@ -5290,15 +4857,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateInboundMessagesNotificationSettingsInputObject** | [**UpdateInboundMessagesNotificationSettingsInputObject**](UpdateInboundMessagesNotificationSettingsInputObject.md)|  | 
- **optional** | ***UpdateInboundMessagesNotificationSettingsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateInboundMessagesNotificationSettingsOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5351,7 +4909,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdatePassword**
-> UpdatePassword(ctx, updatePasswordInputObject, optional)
+> UpdatePassword(ctx, updatePasswordInputObject)
 Change user password.
 
 ### Required Parameters
@@ -5360,15 +4918,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updatePasswordInputObject** | [**UpdatePasswordInputObject**](UpdatePasswordInputObject.md)|  | 
- **optional** | ***UpdatePasswordOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdatePasswordOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5386,7 +4935,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateSenderSetting**
-> UpdateSenderSetting(ctx, updateSenderSettingInputObject, optional)
+> UpdateSenderSetting(ctx, updateSenderSettingInputObject)
 Change sender settings for specified country.
 
 ### Required Parameters
@@ -5395,15 +4944,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateSenderSettingInputObject** | [**UpdateSenderSettingInputObject**](UpdateSenderSettingInputObject.md)|  | 
- **optional** | ***UpdateSenderSettingOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateSenderSettingOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5421,7 +4961,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateSurvey**
-> ResourceLinkResponse UpdateSurvey(ctx, updateSurveyInputObject, id, optional)
+> ResourceLinkResponse UpdateSurvey(ctx, updateSurveyInputObject, id)
 Update existing survey.
 
 ### Required Parameters
@@ -5431,16 +4971,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateSurveyInputObject** | [**UpdateSurveyInputObject**](UpdateSurveyInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***UpdateSurveyOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateSurveyOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5458,7 +4988,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateSurveyNode**
-> ResourceLinkResponse UpdateSurveyNode(ctx, updateSurveyNodeInputObject, id, optional)
+> ResourceLinkResponse UpdateSurveyNode(ctx, updateSurveyNodeInputObject, id)
 Update existing node.
 
 ### Required Parameters
@@ -5468,16 +4998,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateSurveyNodeInputObject** | [**UpdateSurveyNodeInputObject**](UpdateSurveyNodeInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***UpdateSurveyNodeOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateSurveyNodeOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 
@@ -5495,7 +5015,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **UpdateTemplate**
-> ResourceLinkResponse UpdateTemplate(ctx, updateTemplateInputObject, id, optional)
+> ResourceLinkResponse UpdateTemplate(ctx, updateTemplateInputObject, id)
 Update existing template.
 
 ### Required Parameters
@@ -5505,16 +5025,6 @@ Name | Type | Description  | Notes
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateTemplateInputObject** | [**UpdateTemplateInputObject**](UpdateTemplateInputObject.md)|  | 
   **id** | **int32**|  | 
- **optional** | ***UpdateTemplateOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a UpdateTemplateOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-
-
- **xIgnoreNullValues** | **optional.Bool**|  | [default to true]
 
 ### Return type
 

@@ -36,6 +36,8 @@ tags:
     \n### Sending more than 1,000 messages in one session\nTODO\n\n### How to send\
     \ a text message with an attachment\nTODO\n\n### Delivery status callback\n"
   x-displayName: "Outgoing messages\n"
+- name: "User"
+- name: "Contacts"
 schemes:
 - "http"
 - "https"
@@ -61,13 +63,6 @@ paths:
         schema:
           $ref: "#/definitions/DoAuthInputObject"
         x-exportParamName: "DoAuthInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         200:
           description: "Returned when successful"
@@ -247,13 +242,6 @@ paths:
         schema:
           $ref: "#/definitions/CreatePushTokenInputObject"
         x-exportParamName: "CreatePushTokenInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when created with success."
@@ -486,13 +474,6 @@ paths:
         schema:
           $ref: "#/definitions/UpdateCurrentUserInputObject"
         x-exportParamName: "UpdateCurrentUserInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Updated with success"
@@ -583,13 +564,6 @@ paths:
         schema:
           $ref: "#/definitions/CheckPhoneVerificationCodeInputObject"
         x-exportParamName: "CheckPhoneVerificationCodeInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           description: "Verification code has been approved with success"
@@ -653,13 +627,6 @@ paths:
         schema:
           $ref: "#/definitions/UpdatePasswordInputObject"
         x-exportParamName: "UpdatePasswordInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           description: "Password has been updated with success"
@@ -764,13 +731,6 @@ paths:
         schema:
           $ref: "#/definitions/UpdateSenderSettingInputObject"
         x-exportParamName: "UpdateSenderSettingInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           description: "Sender settings have been updated with success"
@@ -864,13 +824,6 @@ paths:
         schema:
           $ref: "#/definitions/BuyDedicatedNumberInputObject"
         x-exportParamName: "BuyDedicatedNumberInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Number has been bought with success"
@@ -1086,13 +1039,6 @@ paths:
         schema:
           $ref: "#/definitions/RequestSenderIdInputObject"
         x-exportParamName: "RequestSenderIdInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Sender ID request has been created with success"
@@ -1243,13 +1189,6 @@ paths:
         schema:
           $ref: "#/definitions/InviteSubaccountInputObject"
         x-exportParamName: "InviteSubaccountInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -1291,13 +1230,6 @@ paths:
         schema:
           $ref: "#/definitions/RequestNewSubaccountTokenInputObject"
         x-exportParamName: "RequestNewSubaccountTokenInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         200:
           description: "Created Subaccount data returned with success"
@@ -1357,13 +1289,6 @@ paths:
         default: 10
         x-exportParamName: "Limit"
         x-optionalDataType: "Int32"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         200:
           description: "Returned when successful"
@@ -1533,13 +1458,6 @@ paths:
         schema:
           $ref: "#/definitions/UpdateBalanceNotificationSettingsInputObject"
         x-exportParamName: "UpdateBalanceNotificationSettingsInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -1604,13 +1522,6 @@ paths:
         schema:
           $ref: "#/definitions/UpdateInboundMessagesNotificationSettingsInputObject"
         x-exportParamName: "UpdateInboundMessagesNotificationSettingsInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -1650,13 +1561,6 @@ paths:
         schema:
           $ref: "#/definitions/UpdateChatDesktopNotificationSettingsInputObject"
         x-exportParamName: "UpdateChatDesktopNotificationSettingsInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         200:
           $ref: "#/definitions/SuccessfulResponse"
@@ -1718,13 +1622,6 @@ paths:
         schema:
           $ref: "#/definitions/UpdateCallbackSettingsInputObject"
         x-exportParamName: "UpdateCallbackSettingsInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         200:
           $ref: "#/definitions/SuccessfulResponse"
@@ -2151,13 +2048,6 @@ paths:
         schema:
           $ref: "#/definitions/CreateContactInputObject"
         x-exportParamName: "CreateContactInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Contact has been created with success"
@@ -2240,13 +2130,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Contact has been created with success"
@@ -2348,13 +2231,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteContactsByIdsInputObject"
         x-exportParamName: "DeleteContactsByIdsInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -2436,13 +2312,6 @@ paths:
         schema:
           $ref: "#/definitions/CreateCustomFieldInputObject"
         x-exportParamName: "CreateCustomFieldInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Contact has been created with success"
@@ -2521,13 +2390,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when updated with success"
@@ -2610,13 +2472,6 @@ paths:
         type: "string"
         default: "1"
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when updated with success"
@@ -2752,13 +2607,6 @@ paths:
         schema:
           $ref: "#/definitions/UnsubscribeContactInputObject"
         x-exportParamName: "UnsubscribeContactInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when updated with success"
@@ -2837,13 +2685,6 @@ paths:
         schema:
           $ref: "#/definitions/BlockContactInputObject"
         x-exportParamName: "BlockContactInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when updated with success"
@@ -2886,13 +2727,6 @@ paths:
         schema:
           $ref: "#/definitions/UnblockContactInputObject"
         x-exportParamName: "UnblockContactInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -2933,13 +2767,6 @@ paths:
         schema:
           $ref: "#/definitions/UnblockContactsBulkInputObject"
         x-exportParamName: "UnblockContactsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -3076,13 +2903,6 @@ paths:
         type: "integer"
         default: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when created with success"
@@ -3165,13 +2985,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -3258,13 +3071,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteContactNotesBulkInputObject"
         x-exportParamName: "DeleteContactNotesBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -3694,13 +3500,6 @@ paths:
         schema:
           $ref: "#/definitions/CreateListInputObject"
         x-exportParamName: "CreateListInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -4115,13 +3914,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteListsBulkInputObject"
         x-exportParamName: "DeleteListsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -4169,13 +3961,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -4358,13 +4143,6 @@ paths:
         schema:
           $ref: "#/definitions/CreateTemplateInputObject"
         x-exportParamName: "CreateTemplateInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -4441,13 +4219,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -4522,13 +4293,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteTemplatesBulkInputObject"
         x-exportParamName: "DeleteTemplatesBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -4626,13 +4390,6 @@ paths:
         schema:
           $ref: "#/definitions/SendMessageInputObject"
         x-exportParamName: "SendMessageInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -4753,13 +4510,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteOutboundMessagesBulkInputObject"
         x-exportParamName: "DeleteOutboundMessagesBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -6001,13 +5751,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteMessageSessionsBulkInputObject"
         x-exportParamName: "DeleteMessageSessionsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -6191,13 +5934,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteScheduledMessagesBulkInputObject"
         x-exportParamName: "DeleteScheduledMessagesBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -6375,13 +6111,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteInboundMessagesBulkInputObject"
         x-exportParamName: "DeleteInboundMessagesBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -6957,13 +6686,6 @@ paths:
         schema:
           $ref: "#/definitions/MuteChatInputObject"
         x-exportParamName: "MuteChatInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -7006,13 +6728,6 @@ paths:
         schema:
           $ref: "#/definitions/MuteChatsBulkInputObject"
         x-exportParamName: "MuteChatsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7049,13 +6764,6 @@ paths:
         schema:
           $ref: "#/definitions/UnmuteChatsBulkInputObject"
         x-exportParamName: "UnmuteChatsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7093,13 +6801,6 @@ paths:
         schema:
           $ref: "#/definitions/MarkChatsUnreadBulkInputObject"
         x-exportParamName: "MarkChatsUnreadBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7137,13 +6838,6 @@ paths:
         schema:
           $ref: "#/definitions/MarkChatsReadBulkInputObject"
         x-exportParamName: "MarkChatsReadBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7181,13 +6875,6 @@ paths:
         schema:
           $ref: "#/definitions/CloseChatsBulkInputObject"
         x-exportParamName: "CloseChatsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7250,13 +6937,6 @@ paths:
         schema:
           $ref: "#/definitions/ReopenChatsBulkInputObject"
         x-exportParamName: "ReopenChatsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7293,13 +6973,6 @@ paths:
         schema:
           $ref: "#/definitions/SetChatStatusInputObject"
         x-exportParamName: "SetChatStatusInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -7338,13 +7011,6 @@ paths:
         schema:
           $ref: "#/definitions/DeleteChatsBulkInputObject"
         x-exportParamName: "DeleteChatsBulkInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7388,13 +7054,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -7754,13 +7413,6 @@ paths:
         schema:
           $ref: "#/definitions/CreateSurveyInputObject"
         x-exportParamName: "CreateSurveyInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -7838,13 +7490,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -7961,13 +7606,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -8047,13 +7685,6 @@ paths:
         type: "integer"
         x-example: 1
         x-exportParamName: "Id"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         201:
           description: "Returned when successful"
@@ -8126,13 +7757,6 @@ paths:
         schema:
           $ref: "#/definitions/MergeSurveyNodesInputObject"
         x-exportParamName: "MergeSurveyNodesInputObject"
-      - name: "X-Ignore-Null-Values"
-        in: "header"
-        required: false
-        type: "boolean"
-        default: true
-        x-exportParamName: "XIgnoreNullValues"
-        x-optionalDataType: "Bool"
       responses:
         204:
           $ref: "#/definitions/SuccessfulResponse"
@@ -17903,3 +17527,9 @@ x-tagGroups:
 - name: "Messaging"
   tags:
   - "Outbound Messages"
+- name: "Users"
+  tags:
+  - "User"
+- name: "Contacts"
+  tags:
+  - "Contacts"

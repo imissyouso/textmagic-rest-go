@@ -155,17 +155,10 @@ func (a *TextMagicApiService) AssignContactsToList(ctx context.Context, assignCo
 TextMagicApiService Block contact from inbound and outbound communication by phone number.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param blockContactInputObject
- * @param optional nil or *BlockContactOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type BlockContactOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) BlockContact(ctx context.Context, blockContactInputObject BlockContactInputObject, localVarOptionals *BlockContactOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) BlockContact(ctx context.Context, blockContactInputObject BlockContactInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -197,9 +190,6 @@ func (a *TextMagicApiService) BlockContact(ctx context.Context, blockContactInpu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &blockContactInputObject
@@ -287,17 +277,10 @@ func (a *TextMagicApiService) BlockContact(ctx context.Context, blockContactInpu
 TextMagicApiService Buy a dedicated number and assign it to the specified account.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param buyDedicatedNumberInputObject
- * @param optional nil or *BuyDedicatedNumberOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type BuyDedicatedNumberOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) BuyDedicatedNumber(ctx context.Context, buyDedicatedNumberInputObject BuyDedicatedNumberInputObject, localVarOptionals *BuyDedicatedNumberOpts) (*http.Response, error) {
+func (a *TextMagicApiService) BuyDedicatedNumber(ctx context.Context, buyDedicatedNumberInputObject BuyDedicatedNumberInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -329,9 +312,6 @@ func (a *TextMagicApiService) BuyDedicatedNumber(ctx context.Context, buyDedicat
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &buyDedicatedNumberInputObject
@@ -511,17 +491,10 @@ func (a *TextMagicApiService) CancelSurvey(ctx context.Context, id int32) (Resou
 TextMagicApiService Check user phone verification code
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param checkPhoneVerificationCodeInputObject
- * @param optional nil or *CheckPhoneVerificationCodeOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type CheckPhoneVerificationCodeOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CheckPhoneVerificationCode(ctx context.Context, checkPhoneVerificationCodeInputObject CheckPhoneVerificationCodeInputObject, localVarOptionals *CheckPhoneVerificationCodeOpts) (*http.Response, error) {
+func (a *TextMagicApiService) CheckPhoneVerificationCode(ctx context.Context, checkPhoneVerificationCodeInputObject CheckPhoneVerificationCodeInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -553,9 +526,6 @@ func (a *TextMagicApiService) CheckPhoneVerificationCode(ctx context.Context, ch
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &checkPhoneVerificationCodeInputObject
@@ -738,17 +708,10 @@ func (a *TextMagicApiService) ClearAndAssignContactsToList(ctx context.Context, 
 TextMagicApiService Close chats by chat ids or close all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param closeChatsBulkInputObject
- * @param optional nil or *CloseChatsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type CloseChatsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CloseChatsBulk(ctx context.Context, closeChatsBulkInputObject CloseChatsBulkInputObject, localVarOptionals *CloseChatsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) CloseChatsBulk(ctx context.Context, closeChatsBulkInputObject CloseChatsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -780,9 +743,6 @@ func (a *TextMagicApiService) CloseChatsBulk(ctx context.Context, closeChatsBulk
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &closeChatsBulkInputObject
@@ -1012,17 +972,10 @@ func (a *TextMagicApiService) CloseSubaccount(ctx context.Context, id int32) (*h
 TextMagicApiService Create a new contact from the submitted data.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createContactInputObject
- * @param optional nil or *CreateContactOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type CreateContactOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreateContact(ctx context.Context, createContactInputObject CreateContactInputObject, localVarOptionals *CreateContactOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) CreateContact(ctx context.Context, createContactInputObject CreateContactInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1054,9 +1007,6 @@ func (a *TextMagicApiService) CreateContact(ctx context.Context, createContactIn
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createContactInputObject
@@ -1134,17 +1084,10 @@ TextMagicApiService Create a new contact note.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createContactNoteInputObject
  * @param id
- * @param optional nil or *CreateContactNoteOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type CreateContactNoteOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreateContactNote(ctx context.Context, createContactNoteInputObject CreateContactNoteInputObject, id int32, localVarOptionals *CreateContactNoteOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) CreateContactNote(ctx context.Context, createContactNoteInputObject CreateContactNoteInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1177,9 +1120,6 @@ func (a *TextMagicApiService) CreateContactNote(ctx context.Context, createConta
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createContactNoteInputObject
@@ -1267,17 +1207,10 @@ func (a *TextMagicApiService) CreateContactNote(ctx context.Context, createConta
 TextMagicApiService Create a new custom field from the submitted data.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createCustomFieldInputObject
- * @param optional nil or *CreateCustomFieldOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type CreateCustomFieldOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreateCustomField(ctx context.Context, createCustomFieldInputObject CreateCustomFieldInputObject, localVarOptionals *CreateCustomFieldOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) CreateCustomField(ctx context.Context, createCustomFieldInputObject CreateCustomFieldInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1309,9 +1242,6 @@ func (a *TextMagicApiService) CreateCustomField(ctx context.Context, createCusto
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createCustomFieldInputObject
@@ -1399,17 +1329,10 @@ func (a *TextMagicApiService) CreateCustomField(ctx context.Context, createCusto
 TextMagicApiService Create a new list from the submitted data.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createListInputObject
- * @param optional nil or *CreateListOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type CreateListOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreateList(ctx context.Context, createListInputObject CreateListInputObject, localVarOptionals *CreateListOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) CreateList(ctx context.Context, createListInputObject CreateListInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1441,9 +1364,6 @@ func (a *TextMagicApiService) CreateList(ctx context.Context, createListInputObj
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createListInputObject
@@ -1520,17 +1440,10 @@ func (a *TextMagicApiService) CreateList(ctx context.Context, createListInputObj
 TextMagicApiService Add or update a device token.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createPushTokenInputObject
- * @param optional nil or *CreatePushTokenOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type CreatePushTokenOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreatePushToken(ctx context.Context, createPushTokenInputObject CreatePushTokenInputObject, localVarOptionals *CreatePushTokenOpts) (*http.Response, error) {
+func (a *TextMagicApiService) CreatePushToken(ctx context.Context, createPushTokenInputObject CreatePushTokenInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1562,9 +1475,6 @@ func (a *TextMagicApiService) CreatePushToken(ctx context.Context, createPushTok
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createPushTokenInputObject
@@ -1623,17 +1533,10 @@ func (a *TextMagicApiService) CreatePushToken(ctx context.Context, createPushTok
 TextMagicApiService Create a new survey from the submitted data.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createSurveyInputObject
- * @param optional nil or *CreateSurveyOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type CreateSurveyOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreateSurvey(ctx context.Context, createSurveyInputObject CreateSurveyInputObject, localVarOptionals *CreateSurveyOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) CreateSurvey(ctx context.Context, createSurveyInputObject CreateSurveyInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1665,9 +1568,6 @@ func (a *TextMagicApiService) CreateSurvey(ctx context.Context, createSurveyInpu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createSurveyInputObject
@@ -1745,17 +1645,10 @@ TextMagicApiService Create a new node from the submitted data.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createSurveyNodeInputObject
  * @param id
- * @param optional nil or *CreateSurveyNodeOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type CreateSurveyNodeOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreateSurveyNode(ctx context.Context, createSurveyNodeInputObject CreateSurveyNodeInputObject, id int32, localVarOptionals *CreateSurveyNodeOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) CreateSurveyNode(ctx context.Context, createSurveyNodeInputObject CreateSurveyNodeInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1788,9 +1681,6 @@ func (a *TextMagicApiService) CreateSurveyNode(ctx context.Context, createSurvey
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createSurveyNodeInputObject
@@ -1867,17 +1757,10 @@ func (a *TextMagicApiService) CreateSurveyNode(ctx context.Context, createSurvey
 TextMagicApiService Create a new template from the submitted data.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createTemplateInputObject
- * @param optional nil or *CreateTemplateOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type CreateTemplateOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) CreateTemplate(ctx context.Context, createTemplateInputObject CreateTemplateInputObject, localVarOptionals *CreateTemplateOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) CreateTemplate(ctx context.Context, createTemplateInputObject CreateTemplateInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -1909,9 +1792,6 @@ func (a *TextMagicApiService) CreateTemplate(ctx context.Context, createTemplate
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &createTemplateInputObject
@@ -2205,17 +2085,10 @@ TextMagicApiService Delete messages from chat by given messages ID(s).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteChatMessagesBulkInputObject
  * @param id
- * @param optional nil or *DeleteChatMessagesOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteChatMessagesOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteChatMessages(ctx context.Context, deleteChatMessagesBulkInputObject DeleteChatMessagesBulkInputObject, id int32, localVarOptionals *DeleteChatMessagesOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteChatMessages(ctx context.Context, deleteChatMessagesBulkInputObject DeleteChatMessagesBulkInputObject, id int32) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2248,9 +2121,6 @@ func (a *TextMagicApiService) DeleteChatMessages(ctx context.Context, deleteChat
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteChatMessagesBulkInputObject
@@ -2309,17 +2179,10 @@ func (a *TextMagicApiService) DeleteChatMessages(ctx context.Context, deleteChat
 TextMagicApiService Delete chats by given ID(s) or delete all chats.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteChatsBulkInputObject
- * @param optional nil or *DeleteChatsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteChatsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteChatsBulk(ctx context.Context, deleteChatsBulkInputObject DeleteChatsBulkInputObject, localVarOptionals *DeleteChatsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteChatsBulk(ctx context.Context, deleteChatsBulkInputObject DeleteChatsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2351,9 +2214,6 @@ func (a *TextMagicApiService) DeleteChatsBulk(ctx context.Context, deleteChatsBu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteChatsBulkInputObject
@@ -2689,17 +2549,10 @@ TextMagicApiService Delete contact note by given ID(s) or delete all contact not
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param deleteContactNotesBulkInputObject
- * @param optional nil or *DeleteContactNotesBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteContactNotesBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteContactNotesBulk(ctx context.Context, id int32, deleteContactNotesBulkInputObject DeleteContactNotesBulkInputObject, localVarOptionals *DeleteContactNotesBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteContactNotesBulk(ctx context.Context, id int32, deleteContactNotesBulkInputObject DeleteContactNotesBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2732,9 +2585,6 @@ func (a *TextMagicApiService) DeleteContactNotesBulk(ctx context.Context, id int
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteContactNotesBulkInputObject
@@ -2804,17 +2654,10 @@ func (a *TextMagicApiService) DeleteContactNotesBulk(ctx context.Context, id int
 TextMagicApiService Delete contact by given ID(s) or delete all contacts.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteContactsByIdsInputObject
- * @param optional nil or *DeleteContactsByIdsOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteContactsByIdsOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteContactsByIds(ctx context.Context, deleteContactsByIdsInputObject DeleteContactsByIdsInputObject, localVarOptionals *DeleteContactsByIdsOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteContactsByIds(ctx context.Context, deleteContactsByIdsInputObject DeleteContactsByIdsInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -2846,9 +2689,6 @@ func (a *TextMagicApiService) DeleteContactsByIds(ctx context.Context, deleteCon
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteContactsByIdsInputObject
@@ -3289,17 +3129,10 @@ func (a *TextMagicApiService) DeleteInboundMessage(ctx context.Context, id int32
 TextMagicApiService Delete inbound messages by given ID(s) or delete all inbound messages.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteInboundMessagesBulkInputObject
- * @param optional nil or *DeleteInboundMessagesBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteInboundMessagesBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteInboundMessagesBulk(ctx context.Context, deleteInboundMessagesBulkInputObject DeleteInboundMessagesBulkInputObject, localVarOptionals *DeleteInboundMessagesBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteInboundMessagesBulk(ctx context.Context, deleteInboundMessagesBulkInputObject DeleteInboundMessagesBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3331,9 +3164,6 @@ func (a *TextMagicApiService) DeleteInboundMessagesBulk(ctx context.Context, del
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteInboundMessagesBulkInputObject
@@ -3577,17 +3407,10 @@ TextMagicApiService Delete contact from list by given ID(s) or all contacts from
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteListContactsBulkInputObject
  * @param id
- * @param optional nil or *DeleteListContactsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteListContactsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteListContactsBulk(ctx context.Context, deleteListContactsBulkInputObject DeleteListContactsBulkInputObject, id int32, localVarOptionals *DeleteListContactsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteListContactsBulk(ctx context.Context, deleteListContactsBulkInputObject DeleteListContactsBulkInputObject, id int32) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3620,9 +3443,6 @@ func (a *TextMagicApiService) DeleteListContactsBulk(ctx context.Context, delete
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteListContactsBulkInputObject
@@ -3692,17 +3512,10 @@ func (a *TextMagicApiService) DeleteListContactsBulk(ctx context.Context, delete
 TextMagicApiService Delete list by given ID(s) or delete all lists.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteListsBulkInputObject
- * @param optional nil or *DeleteListsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteListsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteListsBulk(ctx context.Context, deleteListsBulkInputObject DeleteListsBulkInputObject, localVarOptionals *DeleteListsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteListsBulk(ctx context.Context, deleteListsBulkInputObject DeleteListsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3734,9 +3547,6 @@ func (a *TextMagicApiService) DeleteListsBulk(ctx context.Context, deleteListsBu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteListsBulkInputObject
@@ -3898,17 +3708,10 @@ func (a *TextMagicApiService) DeleteMessageSession(ctx context.Context, id int32
 TextMagicApiService Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteMessageSessionsBulkInputObject
- * @param optional nil or *DeleteMessageSessionsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteMessageSessionsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteMessageSessionsBulk(ctx context.Context, deleteMessageSessionsBulkInputObject DeleteMessageSessionsBulkInputObject, localVarOptionals *DeleteMessageSessionsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteMessageSessionsBulk(ctx context.Context, deleteMessageSessionsBulkInputObject DeleteMessageSessionsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -3940,9 +3743,6 @@ func (a *TextMagicApiService) DeleteMessageSessionsBulk(ctx context.Context, del
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteMessageSessionsBulkInputObject
@@ -4084,17 +3884,10 @@ TextMagicApiService Delete messages by IDs
 Delete outbound messages by given ID(s) or delete all outbound messages.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteOutboundMessagesBulkInputObject
- * @param optional nil or *DeleteOutboundMessagesBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteOutboundMessagesBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteOutboundMessagesBulk(ctx context.Context, deleteOutboundMessagesBulkInputObject DeleteOutboundMessagesBulkInputObject, localVarOptionals *DeleteOutboundMessagesBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteOutboundMessagesBulk(ctx context.Context, deleteOutboundMessagesBulkInputObject DeleteOutboundMessagesBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -4126,9 +3919,6 @@ func (a *TextMagicApiService) DeleteOutboundMessagesBulk(ctx context.Context, de
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteOutboundMessagesBulkInputObject
@@ -4384,17 +4174,10 @@ func (a *TextMagicApiService) DeleteScheduledMessage(ctx context.Context, id int
 TextMagicApiService Delete scheduled messages by given ID(s) or delete all scheduled messages.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteScheduledMessagesBulkInputObject
- * @param optional nil or *DeleteScheduledMessagesBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteScheduledMessagesBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteScheduledMessagesBulk(ctx context.Context, deleteScheduledMessagesBulkInputObject DeleteScheduledMessagesBulkInputObject, localVarOptionals *DeleteScheduledMessagesBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteScheduledMessagesBulk(ctx context.Context, deleteScheduledMessagesBulkInputObject DeleteScheduledMessagesBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -4426,9 +4209,6 @@ func (a *TextMagicApiService) DeleteScheduledMessagesBulk(ctx context.Context, d
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteScheduledMessagesBulkInputObject
@@ -4833,17 +4613,10 @@ func (a *TextMagicApiService) DeleteTemplate(ctx context.Context, id int32) (*ht
 TextMagicApiService Delete template by given ID(s) or delete all templates.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteTemplatesBulkInputObject
- * @param optional nil or *DeleteTemplatesBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type DeleteTemplatesBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DeleteTemplatesBulk(ctx context.Context, deleteTemplatesBulkInputObject DeleteTemplatesBulkInputObject, localVarOptionals *DeleteTemplatesBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) DeleteTemplatesBulk(ctx context.Context, deleteTemplatesBulkInputObject DeleteTemplatesBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -4875,9 +4648,6 @@ func (a *TextMagicApiService) DeleteTemplatesBulk(ctx context.Context, deleteTem
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &deleteTemplatesBulkInputObject
@@ -4948,17 +4718,10 @@ TextMagicApiService Authenticate user by given username and password.
 Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param doAuthInputObject
- * @param optional nil or *DoAuthOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return DoAuthResponse
 */
-
-type DoAuthOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) DoAuth(ctx context.Context, doAuthInputObject DoAuthInputObject, localVarOptionals *DoAuthOpts) (DoAuthResponse, *http.Response, error) {
+func (a *TextMagicApiService) DoAuth(ctx context.Context, doAuthInputObject DoAuthInputObject) (DoAuthResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -4990,9 +4753,6 @@ func (a *TextMagicApiService) DoAuth(ctx context.Context, doAuthInputObject DoAu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &doAuthInputObject
@@ -12399,7 +12159,6 @@ When more than one token related to app name, last key will be returned.
  * @param optional nil or *GetSubaccountsWithTokensOpts - Optional Parameters:
      * @param "Page" (optional.Float32) -  Fetch specified results page
      * @param "Limit" (optional.Int32) -  How many results to return
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return GetSubaccountsWithTokensResponse
 */
@@ -12407,7 +12166,6 @@ When more than one token related to app name, last key will be returned.
 type GetSubaccountsWithTokensOpts struct { 
 	Page optional.Float32
 	Limit optional.Int32
-	XIgnoreNullValues optional.Bool
 }
 
 func (a *TextMagicApiService) GetSubaccountsWithTokens(ctx context.Context, getSubaccountsWithTokensInputObject GetSubaccountsWithTokensInputObject, localVarOptionals *GetSubaccountsWithTokensOpts) (GetSubaccountsWithTokensResponse, *http.Response, error) {
@@ -12448,9 +12206,6 @@ func (a *TextMagicApiService) GetSubaccountsWithTokens(ctx context.Context, getS
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &getSubaccountsWithTokensInputObject
@@ -13884,17 +13639,10 @@ func (a *TextMagicApiService) GetVersions(ctx context.Context) (GetVersionsRespo
 TextMagicApiService Invite new subaccount.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param inviteSubaccountInputObject
- * @param optional nil or *InviteSubaccountOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type InviteSubaccountOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) InviteSubaccount(ctx context.Context, inviteSubaccountInputObject InviteSubaccountInputObject, localVarOptionals *InviteSubaccountOpts) (*http.Response, error) {
+func (a *TextMagicApiService) InviteSubaccount(ctx context.Context, inviteSubaccountInputObject InviteSubaccountInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -13926,9 +13674,6 @@ func (a *TextMagicApiService) InviteSubaccount(ctx context.Context, inviteSubacc
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &inviteSubaccountInputObject
@@ -13998,17 +13743,10 @@ func (a *TextMagicApiService) InviteSubaccount(ctx context.Context, inviteSubacc
 TextMagicApiService Mark several chats as read by chat ids or mark all chats as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param markChatsReadBulkInputObject
- * @param optional nil or *MarkChatsReadBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type MarkChatsReadBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) MarkChatsReadBulk(ctx context.Context, markChatsReadBulkInputObject MarkChatsReadBulkInputObject, localVarOptionals *MarkChatsReadBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) MarkChatsReadBulk(ctx context.Context, markChatsReadBulkInputObject MarkChatsReadBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14040,9 +13778,6 @@ func (a *TextMagicApiService) MarkChatsReadBulk(ctx context.Context, markChatsRe
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &markChatsReadBulkInputObject
@@ -14101,17 +13836,10 @@ func (a *TextMagicApiService) MarkChatsReadBulk(ctx context.Context, markChatsRe
 TextMagicApiService Mark several chats as UNread by chat ids or mark all chats as UNread
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param markChatsUnreadBulkInputObject
- * @param optional nil or *MarkChatsUnreadBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type MarkChatsUnreadBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) MarkChatsUnreadBulk(ctx context.Context, markChatsUnreadBulkInputObject MarkChatsUnreadBulkInputObject, localVarOptionals *MarkChatsUnreadBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) MarkChatsUnreadBulk(ctx context.Context, markChatsUnreadBulkInputObject MarkChatsUnreadBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14143,9 +13871,6 @@ func (a *TextMagicApiService) MarkChatsUnreadBulk(ctx context.Context, markChats
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &markChatsUnreadBulkInputObject
@@ -14204,17 +13929,10 @@ func (a *TextMagicApiService) MarkChatsUnreadBulk(ctx context.Context, markChats
 TextMagicApiService Merge two question nodes.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param mergeSurveyNodesInputObject
- * @param optional nil or *MergeSurveyNodesOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type MergeSurveyNodesOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) MergeSurveyNodes(ctx context.Context, mergeSurveyNodesInputObject MergeSurveyNodesInputObject, localVarOptionals *MergeSurveyNodesOpts) (*http.Response, error) {
+func (a *TextMagicApiService) MergeSurveyNodes(ctx context.Context, mergeSurveyNodesInputObject MergeSurveyNodesInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14246,9 +13964,6 @@ func (a *TextMagicApiService) MergeSurveyNodes(ctx context.Context, mergeSurveyN
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &mergeSurveyNodesInputObject
@@ -14318,17 +14033,10 @@ func (a *TextMagicApiService) MergeSurveyNodes(ctx context.Context, mergeSurveyN
 TextMagicApiService Set mute mode.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param muteChatInputObject
- * @param optional nil or *MuteChatOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type MuteChatOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) MuteChat(ctx context.Context, muteChatInputObject MuteChatInputObject, localVarOptionals *MuteChatOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) MuteChat(ctx context.Context, muteChatInputObject MuteChatInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14360,9 +14068,6 @@ func (a *TextMagicApiService) MuteChat(ctx context.Context, muteChatInputObject 
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &muteChatInputObject
@@ -14450,17 +14155,10 @@ func (a *TextMagicApiService) MuteChat(ctx context.Context, muteChatInputObject 
 TextMagicApiService Mute several chats by chat ids or mute all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param muteChatsBulkInputObject
- * @param optional nil or *MuteChatsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type MuteChatsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) MuteChatsBulk(ctx context.Context, muteChatsBulkInputObject MuteChatsBulkInputObject, localVarOptionals *MuteChatsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) MuteChatsBulk(ctx context.Context, muteChatsBulkInputObject MuteChatsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14492,9 +14190,6 @@ func (a *TextMagicApiService) MuteChatsBulk(ctx context.Context, muteChatsBulkIn
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &muteChatsBulkInputObject
@@ -14650,17 +14345,10 @@ func (a *TextMagicApiService) Ping(ctx context.Context) (PingResponse, *http.Res
 TextMagicApiService Reopen chats by chat ids or reopen all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param reopenChatsBulkInputObject
- * @param optional nil or *ReopenChatsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type ReopenChatsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) ReopenChatsBulk(ctx context.Context, reopenChatsBulkInputObject ReopenChatsBulkInputObject, localVarOptionals *ReopenChatsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) ReopenChatsBulk(ctx context.Context, reopenChatsBulkInputObject ReopenChatsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14692,9 +14380,6 @@ func (a *TextMagicApiService) ReopenChatsBulk(ctx context.Context, reopenChatsBu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &reopenChatsBulkInputObject
@@ -14754,17 +14439,10 @@ TextMagicApiService Request a new REST API token for subaccount.
 Returning user object, key and app name.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param requestNewSubaccountTokenInputObject
- * @param optional nil or *RequestNewSubaccountTokenOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return User
 */
-
-type RequestNewSubaccountTokenOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) RequestNewSubaccountToken(ctx context.Context, requestNewSubaccountTokenInputObject RequestNewSubaccountTokenInputObject, localVarOptionals *RequestNewSubaccountTokenOpts) (User, *http.Response, error) {
+func (a *TextMagicApiService) RequestNewSubaccountToken(ctx context.Context, requestNewSubaccountTokenInputObject RequestNewSubaccountTokenInputObject) (User, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14796,9 +14474,6 @@ func (a *TextMagicApiService) RequestNewSubaccountToken(ctx context.Context, req
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &requestNewSubaccountTokenInputObject
@@ -14875,17 +14550,10 @@ func (a *TextMagicApiService) RequestNewSubaccountToken(ctx context.Context, req
 TextMagicApiService Request for a new Sender ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param requestSenderIdInputObject
- * @param optional nil or *RequestSenderIdOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type RequestSenderIdOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) RequestSenderId(ctx context.Context, requestSenderIdInputObject RequestSenderIdInputObject, localVarOptionals *RequestSenderIdOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) RequestSenderId(ctx context.Context, requestSenderIdInputObject RequestSenderIdInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -14917,9 +14585,6 @@ func (a *TextMagicApiService) RequestSenderId(ctx context.Context, requestSender
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &requestSenderIdInputObject
@@ -16440,17 +16105,10 @@ TextMagicApiService Send message
 The main entrypoint to send messages. See examples above for the reference.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sendMessageInputObject
- * @param optional nil or *SendMessageOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return SendMessageResponse
 */
-
-type SendMessageOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) SendMessage(ctx context.Context, sendMessageInputObject SendMessageInputObject, localVarOptionals *SendMessageOpts) (SendMessageResponse, *http.Response, error) {
+func (a *TextMagicApiService) SendMessage(ctx context.Context, sendMessageInputObject SendMessageInputObject) (SendMessageResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -16482,9 +16140,6 @@ func (a *TextMagicApiService) SendMessage(ctx context.Context, sendMessageInputO
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &sendMessageInputObject
@@ -16651,17 +16306,10 @@ func (a *TextMagicApiService) SendPhoneVerificationCode(ctx context.Context) (*h
 TextMagicApiService Set status of the chat given by ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param setChatStatusInputObject
- * @param optional nil or *SetChatStatusOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type SetChatStatusOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) SetChatStatus(ctx context.Context, setChatStatusInputObject SetChatStatusInputObject, localVarOptionals *SetChatStatusOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) SetChatStatus(ctx context.Context, setChatStatusInputObject SetChatStatusInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -16693,9 +16341,6 @@ func (a *TextMagicApiService) SetChatStatus(ctx context.Context, setChatStatusIn
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &setChatStatusInputObject
@@ -16893,17 +16538,10 @@ func (a *TextMagicApiService) StartSurvey(ctx context.Context, id int32) (Resour
 TextMagicApiService Unblock contact by phone number.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unblockContactInputObject
- * @param optional nil or *UnblockContactOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UnblockContactOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UnblockContact(ctx context.Context, unblockContactInputObject UnblockContactInputObject, localVarOptionals *UnblockContactOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UnblockContact(ctx context.Context, unblockContactInputObject UnblockContactInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -16935,9 +16573,6 @@ func (a *TextMagicApiService) UnblockContact(ctx context.Context, unblockContact
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &unblockContactInputObject
@@ -17007,17 +16642,10 @@ func (a *TextMagicApiService) UnblockContact(ctx context.Context, unblockContact
 TextMagicApiService Unblock several contacts by blocked contact ids or unblock all contacts
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unblockContactsBulkInputObject
- * @param optional nil or *UnblockContactsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UnblockContactsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UnblockContactsBulk(ctx context.Context, unblockContactsBulkInputObject UnblockContactsBulkInputObject, localVarOptionals *UnblockContactsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UnblockContactsBulk(ctx context.Context, unblockContactsBulkInputObject UnblockContactsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -17049,9 +16677,6 @@ func (a *TextMagicApiService) UnblockContactsBulk(ctx context.Context, unblockCo
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &unblockContactsBulkInputObject
@@ -17121,17 +16746,10 @@ func (a *TextMagicApiService) UnblockContactsBulk(ctx context.Context, unblockCo
 TextMagicApiService Unmute several chats by chat ids or unmute all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unmuteChatsBulkInputObject
- * @param optional nil or *UnmuteChatsBulkOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UnmuteChatsBulkOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UnmuteChatsBulk(ctx context.Context, unmuteChatsBulkInputObject UnmuteChatsBulkInputObject, localVarOptionals *UnmuteChatsBulkOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UnmuteChatsBulk(ctx context.Context, unmuteChatsBulkInputObject UnmuteChatsBulkInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -17163,9 +16781,6 @@ func (a *TextMagicApiService) UnmuteChatsBulk(ctx context.Context, unmuteChatsBu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &unmuteChatsBulkInputObject
@@ -17224,17 +16839,10 @@ func (a *TextMagicApiService) UnmuteChatsBulk(ctx context.Context, unmuteChatsBu
 TextMagicApiService Unsubscribe contact from your communication by phone number.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unsubscribeContactInputObject
- * @param optional nil or *UnsubscribeContactOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UnsubscribeContactOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UnsubscribeContact(ctx context.Context, unsubscribeContactInputObject UnsubscribeContactInputObject, localVarOptionals *UnsubscribeContactOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UnsubscribeContact(ctx context.Context, unsubscribeContactInputObject UnsubscribeContactInputObject) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}
@@ -17266,9 +16874,6 @@ func (a *TextMagicApiService) UnsubscribeContact(ctx context.Context, unsubscrib
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &unsubscribeContactInputObject
@@ -17356,17 +16961,10 @@ func (a *TextMagicApiService) UnsubscribeContact(ctx context.Context, unsubscrib
 TextMagicApiService Update balance notification settings
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateBalanceNotificationSettingsInputObject
- * @param optional nil or *UpdateBalanceNotificationSettingsOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UpdateBalanceNotificationSettingsOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateBalanceNotificationSettings(ctx context.Context, updateBalanceNotificationSettingsInputObject UpdateBalanceNotificationSettingsInputObject, localVarOptionals *UpdateBalanceNotificationSettingsOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UpdateBalanceNotificationSettings(ctx context.Context, updateBalanceNotificationSettingsInputObject UpdateBalanceNotificationSettingsInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -17398,9 +16996,6 @@ func (a *TextMagicApiService) UpdateBalanceNotificationSettings(ctx context.Cont
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateBalanceNotificationSettingsInputObject
@@ -17459,17 +17054,10 @@ func (a *TextMagicApiService) UpdateBalanceNotificationSettings(ctx context.Cont
 TextMagicApiService Update callback URL settings
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCallbackSettingsInputObject
- * @param optional nil or *UpdateCallbackSettingsOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UpdateCallbackSettingsOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateCallbackSettings(ctx context.Context, updateCallbackSettingsInputObject UpdateCallbackSettingsInputObject, localVarOptionals *UpdateCallbackSettingsOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UpdateCallbackSettings(ctx context.Context, updateCallbackSettingsInputObject UpdateCallbackSettingsInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -17501,9 +17089,6 @@ func (a *TextMagicApiService) UpdateCallbackSettings(ctx context.Context, update
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateCallbackSettingsInputObject
@@ -17562,17 +17147,10 @@ func (a *TextMagicApiService) UpdateCallbackSettings(ctx context.Context, update
 TextMagicApiService Update chat desktop notification settings
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateChatDesktopNotificationSettingsInputObject
- * @param optional nil or *UpdateChatDesktopNotificationSettingsOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UpdateChatDesktopNotificationSettingsOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateChatDesktopNotificationSettings(ctx context.Context, updateChatDesktopNotificationSettingsInputObject UpdateChatDesktopNotificationSettingsInputObject, localVarOptionals *UpdateChatDesktopNotificationSettingsOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UpdateChatDesktopNotificationSettings(ctx context.Context, updateChatDesktopNotificationSettingsInputObject UpdateChatDesktopNotificationSettingsInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -17604,9 +17182,6 @@ func (a *TextMagicApiService) UpdateChatDesktopNotificationSettings(ctx context.
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateChatDesktopNotificationSettingsInputObject
@@ -17666,17 +17241,10 @@ TextMagicApiService Update existing contact.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateContactInputObject
  * @param id
- * @param optional nil or *UpdateContactOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UpdateContactOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateContact(ctx context.Context, updateContactInputObject UpdateContactInputObject, id int32, localVarOptionals *UpdateContactOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateContact(ctx context.Context, updateContactInputObject UpdateContactInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -17709,9 +17277,6 @@ func (a *TextMagicApiService) UpdateContact(ctx context.Context, updateContactIn
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateContactInputObject
@@ -17800,17 +17365,10 @@ TextMagicApiService Update existing contact note.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateContactNoteInputObject
  * @param id
- * @param optional nil or *UpdateContactNoteOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UpdateContactNoteOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateContactNote(ctx context.Context, updateContactNoteInputObject UpdateContactNoteInputObject, id int32, localVarOptionals *UpdateContactNoteOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateContactNote(ctx context.Context, updateContactNoteInputObject UpdateContactNoteInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -17843,9 +17401,6 @@ func (a *TextMagicApiService) UpdateContactNote(ctx context.Context, updateConta
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateContactNoteInputObject
@@ -17933,17 +17488,10 @@ func (a *TextMagicApiService) UpdateContactNote(ctx context.Context, updateConta
 TextMagicApiService Update current user info.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCurrentUserInputObject
- * @param optional nil or *UpdateCurrentUserOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return UpdateCurrentUserResponse
 */
-
-type UpdateCurrentUserOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateCurrentUser(ctx context.Context, updateCurrentUserInputObject UpdateCurrentUserInputObject, localVarOptionals *UpdateCurrentUserOpts) (UpdateCurrentUserResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateCurrentUser(ctx context.Context, updateCurrentUserInputObject UpdateCurrentUserInputObject) (UpdateCurrentUserResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -17975,9 +17523,6 @@ func (a *TextMagicApiService) UpdateCurrentUser(ctx context.Context, updateCurre
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateCurrentUserInputObject
@@ -18055,17 +17600,10 @@ TextMagicApiService Update existing custom field.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCustomFieldInputObject
  * @param id
- * @param optional nil or *UpdateCustomFieldOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UpdateCustomFieldOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateCustomField(ctx context.Context, updateCustomFieldInputObject UpdateCustomFieldInputObject, id int32, localVarOptionals *UpdateCustomFieldOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateCustomField(ctx context.Context, updateCustomFieldInputObject UpdateCustomFieldInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -18098,9 +17636,6 @@ func (a *TextMagicApiService) UpdateCustomField(ctx context.Context, updateCusto
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateCustomFieldInputObject
@@ -18189,17 +17724,10 @@ TextMagicApiService Update contact&#39;s custom field value.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCustomFieldValueInputObject
  * @param id
- * @param optional nil or *UpdateCustomFieldValueOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UpdateCustomFieldValueOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateCustomFieldValue(ctx context.Context, updateCustomFieldValueInputObject UpdateCustomFieldValueInputObject, id string, localVarOptionals *UpdateCustomFieldValueOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateCustomFieldValue(ctx context.Context, updateCustomFieldValueInputObject UpdateCustomFieldValueInputObject, id string) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -18232,9 +17760,6 @@ func (a *TextMagicApiService) UpdateCustomFieldValue(ctx context.Context, update
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateCustomFieldValueInputObject
@@ -18322,17 +17847,10 @@ func (a *TextMagicApiService) UpdateCustomFieldValue(ctx context.Context, update
 TextMagicApiService Update inbound messages notification settings
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateInboundMessagesNotificationSettingsInputObject
- * @param optional nil or *UpdateInboundMessagesNotificationSettingsOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UpdateInboundMessagesNotificationSettingsOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateInboundMessagesNotificationSettings(ctx context.Context, updateInboundMessagesNotificationSettingsInputObject UpdateInboundMessagesNotificationSettingsInputObject, localVarOptionals *UpdateInboundMessagesNotificationSettingsOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UpdateInboundMessagesNotificationSettings(ctx context.Context, updateInboundMessagesNotificationSettingsInputObject UpdateInboundMessagesNotificationSettingsInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -18364,9 +17882,6 @@ func (a *TextMagicApiService) UpdateInboundMessagesNotificationSettings(ctx cont
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateInboundMessagesNotificationSettingsInputObject
@@ -18529,17 +18044,10 @@ func (a *TextMagicApiService) UpdateList(ctx context.Context, id int32, localVar
 TextMagicApiService Change user password.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updatePasswordInputObject
- * @param optional nil or *UpdatePasswordOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UpdatePasswordOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdatePassword(ctx context.Context, updatePasswordInputObject UpdatePasswordInputObject, localVarOptionals *UpdatePasswordOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UpdatePassword(ctx context.Context, updatePasswordInputObject UpdatePasswordInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -18571,9 +18079,6 @@ func (a *TextMagicApiService) UpdatePassword(ctx context.Context, updatePassword
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updatePasswordInputObject
@@ -18632,17 +18137,10 @@ func (a *TextMagicApiService) UpdatePassword(ctx context.Context, updatePassword
 TextMagicApiService Change sender settings for specified country.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSenderSettingInputObject
- * @param optional nil or *UpdateSenderSettingOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 
 */
-
-type UpdateSenderSettingOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateSenderSetting(ctx context.Context, updateSenderSettingInputObject UpdateSenderSettingInputObject, localVarOptionals *UpdateSenderSettingOpts) (*http.Response, error) {
+func (a *TextMagicApiService) UpdateSenderSetting(ctx context.Context, updateSenderSettingInputObject UpdateSenderSettingInputObject) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -18674,9 +18172,6 @@ func (a *TextMagicApiService) UpdateSenderSetting(ctx context.Context, updateSen
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateSenderSettingInputObject
@@ -18747,17 +18242,10 @@ TextMagicApiService Update existing survey.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSurveyInputObject
  * @param id
- * @param optional nil or *UpdateSurveyOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UpdateSurveyOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateSurvey(ctx context.Context, updateSurveyInputObject UpdateSurveyInputObject, id int32, localVarOptionals *UpdateSurveyOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateSurvey(ctx context.Context, updateSurveyInputObject UpdateSurveyInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -18790,9 +18278,6 @@ func (a *TextMagicApiService) UpdateSurvey(ctx context.Context, updateSurveyInpu
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateSurveyInputObject
@@ -18881,17 +18366,10 @@ TextMagicApiService Update existing node.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSurveyNodeInputObject
  * @param id
- * @param optional nil or *UpdateSurveyNodeOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UpdateSurveyNodeOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateSurveyNode(ctx context.Context, updateSurveyNodeInputObject UpdateSurveyNodeInputObject, id int32, localVarOptionals *UpdateSurveyNodeOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateSurveyNode(ctx context.Context, updateSurveyNodeInputObject UpdateSurveyNodeInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -18924,9 +18402,6 @@ func (a *TextMagicApiService) UpdateSurveyNode(ctx context.Context, updateSurvey
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateSurveyNodeInputObject
@@ -19015,17 +18490,10 @@ TextMagicApiService Update existing template.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateTemplateInputObject
  * @param id
- * @param optional nil or *UpdateTemplateOpts - Optional Parameters:
-     * @param "XIgnoreNullValues" (optional.Bool) - 
 
 @return ResourceLinkResponse
 */
-
-type UpdateTemplateOpts struct { 
-	XIgnoreNullValues optional.Bool
-}
-
-func (a *TextMagicApiService) UpdateTemplate(ctx context.Context, updateTemplateInputObject UpdateTemplateInputObject, id int32, localVarOptionals *UpdateTemplateOpts) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateTemplate(ctx context.Context, updateTemplateInputObject UpdateTemplateInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -19058,9 +18526,6 @@ func (a *TextMagicApiService) UpdateTemplate(ctx context.Context, updateTemplate
 	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
 	if localVarHttpHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	if localVarOptionals != nil && localVarOptionals.XIgnoreNullValues.IsSet() {
-		localVarHeaderParams["X-Ignore-Null-Values"] = parameterToString(localVarOptionals.XIgnoreNullValues.Value(), "")
 	}
 	// body params
 	localVarPostBody = &updateTemplateInputObject
