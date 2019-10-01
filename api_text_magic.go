@@ -29,6 +29,7 @@ type TextMagicApiService service
 
 /* 
 TextMagicApiService Assign contacts to the specified list.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param assignContactsToListInputObject Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user
  * @param id
@@ -153,6 +154,7 @@ func (a *TextMagicApiService) AssignContactsToList(ctx context.Context, assignCo
 
 /* 
 TextMagicApiService Block contact from inbound and outbound communication by phone number.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param blockContactInputObject
 
@@ -275,6 +277,7 @@ func (a *TextMagicApiService) BlockContact(ctx context.Context, blockContactInpu
 
 /* 
 TextMagicApiService Buy a dedicated number and assign it to the specified account.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param buyDedicatedNumberInputObject
 
@@ -379,6 +382,7 @@ func (a *TextMagicApiService) BuyDedicatedNumber(ctx context.Context, buyDedicat
 
 /* 
 TextMagicApiService Cancel a survey.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -489,6 +493,7 @@ func (a *TextMagicApiService) CancelSurvey(ctx context.Context, id int32) (Resou
 
 /* 
 TextMagicApiService Check user phone verification code
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param checkPhoneVerificationCodeInputObject
 
@@ -582,6 +587,7 @@ func (a *TextMagicApiService) CheckPhoneVerificationCode(ctx context.Context, ch
 
 /* 
 TextMagicApiService Reset list members to the specified contacts.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param clearAndAssignContactsToListInputObject Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user
  * @param id
@@ -706,6 +712,7 @@ func (a *TextMagicApiService) ClearAndAssignContactsToList(ctx context.Context, 
 
 /* 
 TextMagicApiService Close chats by chat ids or close all chats
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param closeChatsBulkInputObject
 
@@ -799,6 +806,7 @@ func (a *TextMagicApiService) CloseChatsBulk(ctx context.Context, closeChatsBulk
 
 /* 
 TextMagicApiService Close all chats that have no unread messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -878,6 +886,7 @@ func (a *TextMagicApiService) CloseReadChats(ctx context.Context) (*http.Respons
 
 /* 
 TextMagicApiService Close subaccount.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -970,6 +979,7 @@ func (a *TextMagicApiService) CloseSubaccount(ctx context.Context, id int32) (*h
 
 /* 
 TextMagicApiService Create a new contact from the submitted data.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createContactInputObject
 
@@ -1081,6 +1091,7 @@ func (a *TextMagicApiService) CreateContact(ctx context.Context, createContactIn
 
 /* 
 TextMagicApiService Create a new contact note.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createContactNoteInputObject
  * @param id
@@ -1205,6 +1216,7 @@ func (a *TextMagicApiService) CreateContactNote(ctx context.Context, createConta
 
 /* 
 TextMagicApiService Create a new custom field from the submitted data.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createCustomFieldInputObject
 
@@ -1327,6 +1339,7 @@ func (a *TextMagicApiService) CreateCustomField(ctx context.Context, createCusto
 
 /* 
 TextMagicApiService Create a new list from the submitted data.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createListInputObject
 
@@ -1438,6 +1451,7 @@ func (a *TextMagicApiService) CreateList(ctx context.Context, createListInputObj
 
 /* 
 TextMagicApiService Add or update a device token.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createPushTokenInputObject
 
@@ -1531,6 +1545,7 @@ func (a *TextMagicApiService) CreatePushToken(ctx context.Context, createPushTok
 
 /* 
 TextMagicApiService Create a new survey from the submitted data.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createSurveyInputObject
 
@@ -1642,6 +1657,7 @@ func (a *TextMagicApiService) CreateSurvey(ctx context.Context, createSurveyInpu
 
 /* 
 TextMagicApiService Create a new node from the submitted data.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createSurveyNodeInputObject
  * @param id
@@ -1755,6 +1771,7 @@ func (a *TextMagicApiService) CreateSurveyNode(ctx context.Context, createSurvey
 
 /* 
 TextMagicApiService Create a new template from the submitted data.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createTemplateInputObject
 
@@ -1855,6 +1872,7 @@ func (a *TextMagicApiService) CreateTemplate(ctx context.Context, createTemplate
 
 /* 
 TextMagicApiService Delete all contacts.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -1923,7 +1941,7 @@ func (a *TextMagicApiService) DeleteAllContacts(ctx context.Context) (*http.Resp
 
 /* 
 TextMagicApiService Delete all messages
-Delete all messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -2003,6 +2021,7 @@ func (a *TextMagicApiService) DeleteAllOutboundMessages(ctx context.Context) (*h
 
 /* 
 TextMagicApiService Delete an avatar for the current user.\\
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -2082,6 +2101,7 @@ func (a *TextMagicApiService) DeleteAvatar(ctx context.Context) (*http.Response,
 
 /* 
 TextMagicApiService Delete messages from chat by given messages ID(s).
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteChatMessagesBulkInputObject
  * @param id
@@ -2177,6 +2197,7 @@ func (a *TextMagicApiService) DeleteChatMessages(ctx context.Context, deleteChat
 
 /* 
 TextMagicApiService Delete chats by given ID(s) or delete all chats.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteChatsBulkInputObject
 
@@ -2270,6 +2291,7 @@ func (a *TextMagicApiService) DeleteChatsBulk(ctx context.Context, deleteChatsBu
 
 /* 
 TextMagicApiService Delete a single contact.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -2362,6 +2384,7 @@ func (a *TextMagicApiService) DeleteContact(ctx context.Context, id int32) (*htt
 
 /* 
 TextMagicApiService Delete an avatar for the contact.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -2454,6 +2477,7 @@ func (a *TextMagicApiService) DeleteContactAvatar(ctx context.Context, id int32)
 
 /* 
 TextMagicApiService Delete a single contact note.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -2546,6 +2570,7 @@ func (a *TextMagicApiService) DeleteContactNote(ctx context.Context, id int32) (
 
 /* 
 TextMagicApiService Delete contact note by given ID(s) or delete all contact notes.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param deleteContactNotesBulkInputObject
@@ -2652,6 +2677,7 @@ func (a *TextMagicApiService) DeleteContactNotesBulk(ctx context.Context, id int
 
 /* 
 TextMagicApiService Delete contact by given ID(s) or delete all contacts.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteContactsByIdsInputObject
 
@@ -2756,6 +2782,7 @@ func (a *TextMagicApiService) DeleteContactsByIds(ctx context.Context, deleteCon
 
 /* 
 TextMagicApiService Unassign contacts from the specified list.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteContacsFromListObject Contact ID(s), separated by comma
  * @param id
@@ -2851,6 +2878,7 @@ func (a *TextMagicApiService) DeleteContactsFromList(ctx context.Context, delete
 
 /* 
 TextMagicApiService Delete a single custom field.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -2943,6 +2971,7 @@ func (a *TextMagicApiService) DeleteCustomField(ctx context.Context, id int32) (
 
 /* 
 TextMagicApiService Cancel dedicated number subscription.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3035,6 +3064,7 @@ func (a *TextMagicApiService) DeleteDedicatedNumber(ctx context.Context, id int3
 
 /* 
 TextMagicApiService Delete the incoming message.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3127,6 +3157,7 @@ func (a *TextMagicApiService) DeleteInboundMessage(ctx context.Context, id int32
 
 /* 
 TextMagicApiService Delete inbound messages by given ID(s) or delete all inbound messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteInboundMessagesBulkInputObject
 
@@ -3220,6 +3251,7 @@ func (a *TextMagicApiService) DeleteInboundMessagesBulk(ctx context.Context, del
 
 /* 
 TextMagicApiService Delete a single list.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3312,6 +3344,7 @@ func (a *TextMagicApiService) DeleteList(ctx context.Context, id int32) (*http.R
 
 /* 
 TextMagicApiService Delete an avatar for the list.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3404,6 +3437,7 @@ func (a *TextMagicApiService) DeleteListAvatar(ctx context.Context, id int32) (*
 
 /* 
 TextMagicApiService Delete contact from list by given ID(s) or all contacts from list.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteListContactsBulkInputObject
  * @param id
@@ -3510,6 +3544,7 @@ func (a *TextMagicApiService) DeleteListContactsBulk(ctx context.Context, delete
 
 /* 
 TextMagicApiService Delete list by given ID(s) or delete all lists.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteListsBulkInputObject
 
@@ -3614,6 +3649,7 @@ func (a *TextMagicApiService) DeleteListsBulk(ctx context.Context, deleteListsBu
 
 /* 
 TextMagicApiService Delete a message session, together with all nested messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3706,6 +3742,7 @@ func (a *TextMagicApiService) DeleteMessageSession(ctx context.Context, id int32
 
 /* 
 TextMagicApiService Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteMessageSessionsBulkInputObject
 
@@ -3788,7 +3825,7 @@ func (a *TextMagicApiService) DeleteMessageSessionsBulk(ctx context.Context, del
 
 /* 
 TextMagicApiService Delete message
-Delete a single message.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3881,7 +3918,7 @@ func (a *TextMagicApiService) DeleteOutboundMessage(ctx context.Context, id int3
 
 /* 
 TextMagicApiService Delete messages by IDs
-Delete outbound messages by given ID(s) or delete all outbound messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteOutboundMessagesBulkInputObject
 
@@ -3975,6 +4012,7 @@ func (a *TextMagicApiService) DeleteOutboundMessagesBulk(ctx context.Context, de
 
 /* 
 TextMagicApiService Delete a push notification device token.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param type_
  * @param deviceId
@@ -4080,6 +4118,7 @@ func (a *TextMagicApiService) DeletePushToken(ctx context.Context, type_ string,
 
 /* 
 TextMagicApiService Delete a message session, together with all nested messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -4172,6 +4211,7 @@ func (a *TextMagicApiService) DeleteScheduledMessage(ctx context.Context, id int
 
 /* 
 TextMagicApiService Delete scheduled messages by given ID(s) or delete all scheduled messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteScheduledMessagesBulkInputObject
 
@@ -4265,6 +4305,7 @@ func (a *TextMagicApiService) DeleteScheduledMessagesBulk(ctx context.Context, d
 
 /* 
 TextMagicApiService Delete a Sender ID.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -4357,6 +4398,7 @@ func (a *TextMagicApiService) DeleteSenderId(ctx context.Context, id int32) (*ht
 
 /* 
 TextMagicApiService Delete a survey.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -4449,6 +4491,7 @@ func (a *TextMagicApiService) DeleteSurvey(ctx context.Context, id int32) (*http
 
 /* 
 TextMagicApiService Delete a node.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -4519,6 +4562,7 @@ func (a *TextMagicApiService) DeleteSurveyNode(ctx context.Context, id int32) (*
 
 /* 
 TextMagicApiService Delete a single template.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -4611,6 +4655,7 @@ func (a *TextMagicApiService) DeleteTemplate(ctx context.Context, id int32) (*ht
 
 /* 
 TextMagicApiService Delete template by given ID(s) or delete all templates.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteTemplatesBulkInputObject
 
@@ -4715,7 +4760,7 @@ func (a *TextMagicApiService) DeleteTemplatesBulk(ctx context.Context, deleteTem
 
 /* 
 TextMagicApiService Authenticate user by given username and password.
-Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param doAuthInputObject
 
@@ -4816,6 +4861,7 @@ func (a *TextMagicApiService) DoAuth(ctx context.Context, doAuthInputObject DoAu
 
 /* 
 TextMagicApiService Carrier Lookup
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param phone
  * @param optional nil or *DoCarrierLookupOpts - Optional Parameters:
@@ -4936,6 +4982,7 @@ func (a *TextMagicApiService) DoCarrierLookup(ctx context.Context, phone string,
 
 /* 
 TextMagicApiService Validate Email address using Email Lookup tool
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param email
 
@@ -5057,6 +5104,7 @@ func (a *TextMagicApiService) DoEmailLookup(ctx context.Context, email string) (
 
 /* 
 TextMagicApiService Duplicate a survey.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -5167,6 +5215,7 @@ func (a *TextMagicApiService) DuplicateSurvey(ctx context.Context, id int32) (Re
 
 /* 
 TextMagicApiService Get all bulk sending sessions.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllBulkSessionsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -5279,6 +5328,7 @@ func (a *TextMagicApiService) GetAllBulkSessions(ctx context.Context, localVarOp
 
 /* 
 TextMagicApiService Get all user chats.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllChatsOpts - Optional Parameters:
      * @param "Status" (optional.String) -  Fetch only (a)ctive, (c)losed or (d)eleted chats
@@ -5411,6 +5461,7 @@ func (a *TextMagicApiService) GetAllChats(ctx context.Context, localVarOptionals
 
 /* 
 TextMagicApiService Get all inbox messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllInboundMessagesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -5533,6 +5584,7 @@ func (a *TextMagicApiService) GetAllInboundMessages(ctx context.Context, localVa
 
 /* 
 TextMagicApiService Get all message sending sessions.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllMessageSessionsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -5645,7 +5697,7 @@ func (a *TextMagicApiService) GetAllMessageSessions(ctx context.Context, localVa
 
 /* 
 TextMagicApiService Get all messages
-Get all user oubound messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllOutboundMessagesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -5774,6 +5826,7 @@ func (a *TextMagicApiService) GetAllOutboundMessages(ctx context.Context, localV
 
 /* 
 TextMagicApiService Get all scheduled messages.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllScheduledMessagesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -5901,6 +5954,7 @@ func (a *TextMagicApiService) GetAllScheduledMessages(ctx context.Context, local
 
 /* 
 TextMagicApiService Get all user templates.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllTemplatesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -6013,6 +6067,7 @@ func (a *TextMagicApiService) GetAllTemplates(ctx context.Context, localVarOptio
 
 /* 
 TextMagicApiService Find available dedicated numbers to buy.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param country Dedicated number country. Two letters in upper case
  * @param optional nil or *GetAvailableDedicatedNumbersOpts - Optional Parameters:
@@ -6149,6 +6204,7 @@ func (a *TextMagicApiService) GetAvailableDedicatedNumbers(ctx context.Context, 
 
 /* 
 TextMagicApiService Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAvailableSenderSettingOptionsOpts - Optional Parameters:
      * @param "Country" (optional.String) -  Return sender setting options available in specific country only. Two upper case characters
@@ -6256,6 +6312,7 @@ func (a *TextMagicApiService) GetAvailableSenderSettingOptions(ctx context.Conte
 
 /* 
 TextMagicApiService Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetBalanceNotificationOptionsResponse
@@ -6353,6 +6410,7 @@ func (a *TextMagicApiService) GetBalanceNotificationOptions(ctx context.Context)
 
 /* 
 TextMagicApiService Get balance notification settings
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetBalanceNotificationSettingsResponse
@@ -6450,6 +6508,7 @@ func (a *TextMagicApiService) GetBalanceNotificationSettings(ctx context.Context
 
 /* 
 TextMagicApiService Get blocked contacts.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetBlockedContactsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -6588,6 +6647,7 @@ func (a *TextMagicApiService) GetBlockedContacts(ctx context.Context, localVarOp
 
 /* 
 TextMagicApiService Get bulk message session status.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -6698,6 +6758,7 @@ func (a *TextMagicApiService) GetBulkSession(ctx context.Context, id int32) (Bul
 
 /* 
 TextMagicApiService Fetch callback URL settings
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetCallbackSettingsResponse
@@ -6795,6 +6856,7 @@ func (a *TextMagicApiService) GetCallbackSettings(ctx context.Context) (GetCallb
 
 /* 
 TextMagicApiService Check pricing for a inbound/outbound call.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetCallsPricesResponse
@@ -6892,6 +6954,7 @@ func (a *TextMagicApiService) GetCallsPrices(ctx context.Context) (GetCallsPrice
 
 /* 
 TextMagicApiService Get a single chat.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -7002,6 +7065,7 @@ func (a *TextMagicApiService) GetChat(ctx context.Context, id int32) (Chat, *htt
 
 /* 
 TextMagicApiService Find chats by phone.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param phone
  * @param optional nil or *GetChatByPhoneOpts - Optional Parameters:
@@ -7127,6 +7191,7 @@ func (a *TextMagicApiService) GetChatByPhone(ctx context.Context, phone string, 
 
 /* 
 TextMagicApiService Fetch messages from chat with specified chat id.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetChatMessagesOpts - Optional Parameters:
@@ -7255,6 +7320,7 @@ func (a *TextMagicApiService) GetChatMessages(ctx context.Context, id int32, loc
 
 /* 
 TextMagicApiService Get a single contact.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id The contact id
 
@@ -7365,6 +7431,7 @@ func (a *TextMagicApiService) GetContact(ctx context.Context, id int32) (Contact
 
 /* 
 TextMagicApiService Get a single contact by phone number.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param phone
 
@@ -7475,6 +7542,7 @@ func (a *TextMagicApiService) GetContactByPhone(ctx context.Context, phone strin
 
 /* 
 TextMagicApiService Check is that phone number blocked
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param phone Phone number to check
 
@@ -7585,6 +7653,7 @@ func (a *TextMagicApiService) GetContactIfBlocked(ctx context.Context, phone str
 
 /* 
 TextMagicApiService Get contact import session progress.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -7695,6 +7764,7 @@ func (a *TextMagicApiService) GetContactImportSessionProgress(ctx context.Contex
 
 /* 
 TextMagicApiService Get a single contact note.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -7805,6 +7875,7 @@ func (a *TextMagicApiService) GetContactNote(ctx context.Context, id int32) (Con
 
 /* 
 TextMagicApiService Fetch notes assigned to the given contact.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetContactNotesOpts - Optional Parameters:
@@ -7930,6 +8001,7 @@ func (a *TextMagicApiService) GetContactNotes(ctx context.Context, id int32, loc
 
 /* 
 TextMagicApiService Get all user contacts.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetContactsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -8057,6 +8129,7 @@ func (a *TextMagicApiService) GetContacts(ctx context.Context, localVarOptionals
 
 /* 
 TextMagicApiService Get contacts autocomplete suggestions by given search term.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param query Find recipients by specified search query
  * @param optional nil or *GetContactsAutocompleteOpts - Optional Parameters:
@@ -8171,7 +8244,7 @@ func (a *TextMagicApiService) GetContactsAutocomplete(ctx context.Context, query
 
 /* 
 TextMagicApiService Fetch user contacts by given group id.
-A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Given group Id.
  * @param optional nil or *GetContactsByListIdOpts - Optional Parameters:
@@ -8307,6 +8380,7 @@ func (a *TextMagicApiService) GetContactsByListId(ctx context.Context, id int32,
 
 /* 
 TextMagicApiService Return list of countries.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetCountriesResponse
@@ -8404,6 +8478,7 @@ func (a *TextMagicApiService) GetCountries(ctx context.Context) (GetCountriesRes
 
 /* 
 TextMagicApiService Get current user info.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return User
@@ -8512,6 +8587,7 @@ func (a *TextMagicApiService) GetCurrentUser(ctx context.Context) (User, *http.R
 
 /* 
 TextMagicApiService Get a single custom field.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -8611,6 +8687,7 @@ func (a *TextMagicApiService) GetCustomField(ctx context.Context, id int32) (Use
 
 /* 
 TextMagicApiService Get all contact custom fields.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetCustomFieldsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -8723,6 +8800,7 @@ func (a *TextMagicApiService) GetCustomFields(ctx context.Context, localVarOptio
 
 /* 
 TextMagicApiService Get a single dedicated number.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -8833,6 +8911,7 @@ func (a *TextMagicApiService) GetDedicatedNumber(ctx context.Context, id int32) 
 
 /* 
 TextMagicApiService Get an array of all rules that are disallowed to the current account.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetDisallowedRulesResponse
@@ -8930,6 +9009,7 @@ func (a *TextMagicApiService) GetDisallowedRules(ctx context.Context) (GetDisall
 
 /* 
 TextMagicApiService Get favorite contacts and lists.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetFavouritesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -9047,6 +9127,7 @@ func (a *TextMagicApiService) GetFavourites(ctx context.Context, localVarOptiona
 
 /* 
 TextMagicApiService Get all forwarded calls.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetForwardedCallsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -9159,6 +9240,7 @@ func (a *TextMagicApiService) GetForwardedCalls(ctx context.Context, localVarOpt
 
 /* 
 TextMagicApiService Get a single inbox message.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -9269,6 +9351,7 @@ func (a *TextMagicApiService) GetInboundMessage(ctx context.Context, id int32) (
 
 /* 
 TextMagicApiService Get inbound messages notification settings
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetInboundMessagesNotificationSettingsResponse
@@ -9366,6 +9449,7 @@ func (a *TextMagicApiService) GetInboundMessagesNotificationSettings(ctx context
 
 /* 
 TextMagicApiService Return account invoices.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetInvoicesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -9489,6 +9573,7 @@ func (a *TextMagicApiService) GetInvoices(ctx context.Context, localVarOptionals
 
 /* 
 TextMagicApiService Get a single list.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -9599,6 +9684,7 @@ func (a *TextMagicApiService) GetList(ctx context.Context, id int32) (Group, *ht
 
 /* 
 TextMagicApiService Fetch all contacts IDs belonging to the list with ID.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -9709,6 +9795,7 @@ func (a *TextMagicApiService) GetListContactsIds(ctx context.Context, id int32) 
 
 /* 
 TextMagicApiService Return lists which contact belongs to.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetListsOfContactOpts - Optional Parameters:
@@ -9834,7 +9921,7 @@ func (a *TextMagicApiService) GetListsOfContact(ctx context.Context, id int32, l
 
 /* 
 TextMagicApiService Preview message
-Get messages preview (with tags merged) up to 100 messages per session.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetMessagePreviewOpts - Optional Parameters:
      * @param "Text" (optional.String) -  Message text. Required if template_id is not set
@@ -10033,7 +10120,7 @@ func (a *TextMagicApiService) GetMessagePreview(ctx context.Context, localVarOpt
 
 /* 
 TextMagicApiService Check price
-Check pricing for a new outbound message.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetMessagePriceOpts - Optional Parameters:
      * @param "IncludeBlocked" (optional.Int32) -  Should we show pricing for the blocked contacts.
@@ -10237,7 +10324,7 @@ func (a *TextMagicApiService) GetMessagePrice(ctx context.Context, localVarOptio
 
 /* 
 TextMagicApiService Get pricing
-Get message prices for all countries.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetMessagePricesResponse
@@ -10335,6 +10422,7 @@ func (a *TextMagicApiService) GetMessagePrices(ctx context.Context) (GetMessageP
 
 /* 
 TextMagicApiService Get a message session.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -10445,6 +10533,7 @@ func (a *TextMagicApiService) GetMessageSession(ctx context.Context, id int32) (
 
 /* 
 TextMagicApiService Get sending session statistics.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetMessageSessionStatOpts - Optional Parameters:
@@ -10565,7 +10654,7 @@ func (a *TextMagicApiService) GetMessageSessionStat(ctx context.Context, id int3
 
 /* 
 TextMagicApiService Fetch messages by given session id.
-A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetMessagesBySessionIdOpts - Optional Parameters:
@@ -10690,6 +10779,7 @@ func (a *TextMagicApiService) GetMessagesBySessionId(ctx context.Context, id int
 
 /* 
 TextMagicApiService Return counters for messaging data views.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetMessagingCountersResponse
@@ -10787,6 +10877,7 @@ func (a *TextMagicApiService) GetMessagingCounters(ctx context.Context) (GetMess
 
 /* 
 TextMagicApiService Return messaging statistics.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetMessagingStatOpts - Optional Parameters:
      * @param "By" (optional.String) -  Group results by specified period: off, day, month or year. Default is off
@@ -10915,7 +11006,7 @@ func (a *TextMagicApiService) GetMessagingStat(ctx context.Context, localVarOpti
 
 /* 
 TextMagicApiService Get a single message
-Get a single outgoing message.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -11026,7 +11117,7 @@ func (a *TextMagicApiService) GetOutboundMessage(ctx context.Context, id int32) 
 
 /* 
 TextMagicApiService Get history
-Get outbound messages history.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetOutboundMessagesHistoryOpts - Optional Parameters:
      * @param "Limit" (optional.Int32) -  How many results to return
@@ -11165,6 +11256,7 @@ func (a *TextMagicApiService) GetOutboundMessagesHistory(ctx context.Context, lo
 
 /* 
 TextMagicApiService Get all device tokens assigned to the current account
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetPushTokensResponse
@@ -11262,6 +11354,7 @@ func (a *TextMagicApiService) GetPushTokens(ctx context.Context) (GetPushTokensR
 
 /* 
 TextMagicApiService Get message schedule.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -11372,6 +11465,7 @@ func (a *TextMagicApiService) GetScheduledMessage(ctx context.Context, id int32)
 
 /* 
 TextMagicApiService Get a single Sender ID.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -11482,6 +11576,7 @@ func (a *TextMagicApiService) GetSenderId(ctx context.Context, id int32) (Sender
 
 /* 
 TextMagicApiService Get all sender IDs of current user.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSenderIdsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -11594,6 +11689,7 @@ func (a *TextMagicApiService) GetSenderIds(ctx context.Context, localVarOptional
 
 /* 
 TextMagicApiService Get current user sender settings.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSenderSettingsOpts - Optional Parameters:
      * @param "Country" (optional.String) -  Return sender settings enabled for sending to specified country. Two upper case characters
@@ -11701,6 +11797,7 @@ func (a *TextMagicApiService) GetSenderSettings(ctx context.Context, localVarOpt
 
 /* 
 TextMagicApiService Return account spending statistics.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSpendingStatOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -11834,6 +11931,7 @@ func (a *TextMagicApiService) GetSpendingStat(ctx context.Context, localVarOptio
 
 /* 
 TextMagicApiService Get current entities state
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetStateResponse
@@ -11931,6 +12029,7 @@ func (a *TextMagicApiService) GetState(ctx context.Context) (GetStateResponse, *
 
 /* 
 TextMagicApiService Get a single subaccount.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -12041,6 +12140,7 @@ func (a *TextMagicApiService) GetSubaccount(ctx context.Context, id int32) (User
 
 /* 
 TextMagicApiService Get all subaccounts of current user.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSubaccountsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -12153,7 +12253,7 @@ func (a *TextMagicApiService) GetSubaccounts(ctx context.Context, localVarOption
 
 /* 
 TextMagicApiService Get all subaccounts with their REST API tokens associated with specified app name.
-When more than one token related to app name, last key will be returned.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param getSubaccountsWithTokensInputObject
  * @param optional nil or *GetSubaccountsWithTokensOpts - Optional Parameters:
@@ -12280,6 +12380,7 @@ func (a *TextMagicApiService) GetSubaccountsWithTokens(ctx context.Context, getS
 
 /* 
 TextMagicApiService Get a survey by id.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -12390,6 +12491,7 @@ func (a *TextMagicApiService) GetSurvey(ctx context.Context, id int32) (Survey, 
 
 /* 
 TextMagicApiService Get a node by id.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -12500,6 +12602,7 @@ func (a *TextMagicApiService) GetSurveyNode(ctx context.Context, id int32) (Surv
 
 /* 
 TextMagicApiService Fetch nodes by given survey id.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -12610,6 +12713,7 @@ func (a *TextMagicApiService) GetSurveyNodes(ctx context.Context, id int32) (Get
 
 /* 
 TextMagicApiService Get all user surveys.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSurveysOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -12722,6 +12826,7 @@ func (a *TextMagicApiService) GetSurveys(ctx context.Context, localVarOptionals 
 
 /* 
 TextMagicApiService Get a single template.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -12832,6 +12937,7 @@ func (a *TextMagicApiService) GetTemplate(ctx context.Context, id int32) (Messag
 
 /* 
 TextMagicApiService Return all available timezone IDs.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetTimezonesOpts - Optional Parameters:
      * @param "Full" (optional.Int32) -  Return full info about timezones in array (0 or 1). Default is 0
@@ -12950,6 +13056,7 @@ func (a *TextMagicApiService) GetTimezones(ctx context.Context, localVarOptional
 
 /* 
 TextMagicApiService Get total amount of unread messages in the current user chats.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetUnreadMessagesTotalResponse
@@ -13047,6 +13154,7 @@ func (a *TextMagicApiService) GetUnreadMessagesTotal(ctx context.Context) (GetUn
 
 /* 
 TextMagicApiService Get a single unsubscribed contact.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -13157,6 +13265,7 @@ func (a *TextMagicApiService) GetUnsubscribedContact(ctx context.Context, id int
 
 /* 
 TextMagicApiService Get all contact have unsubscribed from your communication.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUnsubscribersOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -13269,6 +13378,7 @@ func (a *TextMagicApiService) GetUnsubscribers(ctx context.Context, localVarOpti
 
 /* 
 TextMagicApiService Get user&#39;s dedicated numbers.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUserDedicatedNumbersOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -13397,6 +13507,7 @@ func (a *TextMagicApiService) GetUserDedicatedNumbers(ctx context.Context, local
 
 /* 
 TextMagicApiService Get all user lists.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUserListsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -13540,6 +13651,7 @@ func (a *TextMagicApiService) GetUserLists(ctx context.Context, localVarOptional
 
 /* 
 TextMagicApiService Get minimal valid apps versions
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetVersionsResponse
@@ -13637,6 +13749,7 @@ func (a *TextMagicApiService) GetVersions(ctx context.Context) (GetVersionsRespo
 
 /* 
 TextMagicApiService Invite new subaccount.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param inviteSubaccountInputObject
 
@@ -13741,6 +13854,7 @@ func (a *TextMagicApiService) InviteSubaccount(ctx context.Context, inviteSubacc
 
 /* 
 TextMagicApiService Mark several chats as read by chat ids or mark all chats as read
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param markChatsReadBulkInputObject
 
@@ -13834,6 +13948,7 @@ func (a *TextMagicApiService) MarkChatsReadBulk(ctx context.Context, markChatsRe
 
 /* 
 TextMagicApiService Mark several chats as UNread by chat ids or mark all chats as UNread
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param markChatsUnreadBulkInputObject
 
@@ -13927,6 +14042,7 @@ func (a *TextMagicApiService) MarkChatsUnreadBulk(ctx context.Context, markChats
 
 /* 
 TextMagicApiService Merge two question nodes.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param mergeSurveyNodesInputObject
 
@@ -14031,6 +14147,7 @@ func (a *TextMagicApiService) MergeSurveyNodes(ctx context.Context, mergeSurveyN
 
 /* 
 TextMagicApiService Set mute mode.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param muteChatInputObject
 
@@ -14153,6 +14270,7 @@ func (a *TextMagicApiService) MuteChat(ctx context.Context, muteChatInputObject 
 
 /* 
 TextMagicApiService Mute several chats by chat ids or mute all chats
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param muteChatsBulkInputObject
 
@@ -14246,6 +14364,7 @@ func (a *TextMagicApiService) MuteChatsBulk(ctx context.Context, muteChatsBulkIn
 
 /* 
 TextMagicApiService Just does a pong.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return PingResponse
@@ -14343,6 +14462,7 @@ func (a *TextMagicApiService) Ping(ctx context.Context) (PingResponse, *http.Res
 
 /* 
 TextMagicApiService Reopen chats by chat ids or reopen all chats
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param reopenChatsBulkInputObject
 
@@ -14436,7 +14556,7 @@ func (a *TextMagicApiService) ReopenChatsBulk(ctx context.Context, reopenChatsBu
 
 /* 
 TextMagicApiService Request a new REST API token for subaccount.
-Returning user object, key and app name.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param requestNewSubaccountTokenInputObject
 
@@ -14548,6 +14668,7 @@ func (a *TextMagicApiService) RequestNewSubaccountToken(ctx context.Context, req
 
 /* 
 TextMagicApiService Request for a new Sender ID.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param requestSenderIdInputObject
 
@@ -14659,6 +14780,7 @@ func (a *TextMagicApiService) RequestSenderId(ctx context.Context, requestSender
 
 /* 
 TextMagicApiService Reset a survey flow.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -14769,6 +14891,7 @@ func (a *TextMagicApiService) ResetSurvey(ctx context.Context, id int32) (Resour
 
 /* 
 TextMagicApiService Find chats by inbound or outbound messages text.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchChatsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -14886,6 +15009,7 @@ func (a *TextMagicApiService) SearchChats(ctx context.Context, localVarOptionals
 
 /* 
 TextMagicApiService Find chats by IDs.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchChatsByIdsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -15003,6 +15127,7 @@ func (a *TextMagicApiService) SearchChatsByIds(ctx context.Context, localVarOpti
 
 /* 
 TextMagicApiService Find chats by recipient (contact, list name or phone number).
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchChatsByReceipentOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -15125,6 +15250,7 @@ func (a *TextMagicApiService) SearchChatsByReceipent(ctx context.Context, localV
 
 /* 
 TextMagicApiService Find user contacts by given parameters.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchContactsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -15282,6 +15408,7 @@ func (a *TextMagicApiService) SearchContacts(ctx context.Context, localVarOption
 
 /* 
 TextMagicApiService Find inbound messages by given parameters.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchInboundMessagesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -15430,6 +15557,7 @@ func (a *TextMagicApiService) SearchInboundMessages(ctx context.Context, localVa
 
 /* 
 TextMagicApiService Find contact lists by given parameters.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchListsOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -15583,7 +15711,7 @@ func (a *TextMagicApiService) SearchLists(ctx context.Context, localVarOptionals
 
 /* 
 TextMagicApiService Find messages
-Find outbound messages by given parameters.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchOutboundMessagesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -15737,6 +15865,7 @@ func (a *TextMagicApiService) SearchOutboundMessages(ctx context.Context, localV
 
 /* 
 TextMagicApiService Find scheduled messages by given parameters.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchScheduledMessagesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -15885,6 +16014,7 @@ func (a *TextMagicApiService) SearchScheduledMessages(ctx context.Context, local
 
 /* 
 TextMagicApiService Find user templates by given parameters.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchTemplatesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page
@@ -16012,6 +16142,7 @@ func (a *TextMagicApiService) SearchTemplates(ctx context.Context, localVarOptio
 
 /* 
 TextMagicApiService Send user email verification
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -16102,7 +16233,7 @@ func (a *TextMagicApiService) SendEmailVerificationCode(ctx context.Context) (*h
 
 /* 
 TextMagicApiService Send message
-The main entrypoint to send messages. See examples above for the reference.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sendMessageInputObject
 
@@ -16214,6 +16345,7 @@ func (a *TextMagicApiService) SendMessage(ctx context.Context, sendMessageInputO
 
 /* 
 TextMagicApiService Send user phone verification
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -16304,6 +16436,7 @@ func (a *TextMagicApiService) SendPhoneVerificationCode(ctx context.Context) (*h
 
 /* 
 TextMagicApiService Set status of the chat given by ID.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param setChatStatusInputObject
 
@@ -16415,6 +16548,7 @@ func (a *TextMagicApiService) SetChatStatus(ctx context.Context, setChatStatusIn
 
 /* 
 TextMagicApiService Start a survey.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -16536,6 +16670,7 @@ func (a *TextMagicApiService) StartSurvey(ctx context.Context, id int32) (Resour
 
 /* 
 TextMagicApiService Unblock contact by phone number.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unblockContactInputObject
 
@@ -16640,6 +16775,7 @@ func (a *TextMagicApiService) UnblockContact(ctx context.Context, unblockContact
 
 /* 
 TextMagicApiService Unblock several contacts by blocked contact ids or unblock all contacts
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unblockContactsBulkInputObject
 
@@ -16744,6 +16880,7 @@ func (a *TextMagicApiService) UnblockContactsBulk(ctx context.Context, unblockCo
 
 /* 
 TextMagicApiService Unmute several chats by chat ids or unmute all chats
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unmuteChatsBulkInputObject
 
@@ -16837,6 +16974,7 @@ func (a *TextMagicApiService) UnmuteChatsBulk(ctx context.Context, unmuteChatsBu
 
 /* 
 TextMagicApiService Unsubscribe contact from your communication by phone number.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unsubscribeContactInputObject
 
@@ -16959,6 +17097,7 @@ func (a *TextMagicApiService) UnsubscribeContact(ctx context.Context, unsubscrib
 
 /* 
 TextMagicApiService Update balance notification settings
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateBalanceNotificationSettingsInputObject
 
@@ -17052,6 +17191,7 @@ func (a *TextMagicApiService) UpdateBalanceNotificationSettings(ctx context.Cont
 
 /* 
 TextMagicApiService Update callback URL settings
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCallbackSettingsInputObject
 
@@ -17145,6 +17285,7 @@ func (a *TextMagicApiService) UpdateCallbackSettings(ctx context.Context, update
 
 /* 
 TextMagicApiService Update chat desktop notification settings
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateChatDesktopNotificationSettingsInputObject
 
@@ -17238,6 +17379,7 @@ func (a *TextMagicApiService) UpdateChatDesktopNotificationSettings(ctx context.
 
 /* 
 TextMagicApiService Update existing contact.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateContactInputObject
  * @param id
@@ -17362,6 +17504,7 @@ func (a *TextMagicApiService) UpdateContact(ctx context.Context, updateContactIn
 
 /* 
 TextMagicApiService Update existing contact note.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateContactNoteInputObject
  * @param id
@@ -17486,6 +17629,7 @@ func (a *TextMagicApiService) UpdateContactNote(ctx context.Context, updateConta
 
 /* 
 TextMagicApiService Update current user info.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCurrentUserInputObject
 
@@ -17597,6 +17741,7 @@ func (a *TextMagicApiService) UpdateCurrentUser(ctx context.Context, updateCurre
 
 /* 
 TextMagicApiService Update existing custom field.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCustomFieldInputObject
  * @param id
@@ -17721,6 +17866,7 @@ func (a *TextMagicApiService) UpdateCustomField(ctx context.Context, updateCusto
 
 /* 
 TextMagicApiService Update contact&#39;s custom field value.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCustomFieldValueInputObject
  * @param id
@@ -17845,6 +17991,7 @@ func (a *TextMagicApiService) UpdateCustomFieldValue(ctx context.Context, update
 
 /* 
 TextMagicApiService Update inbound messages notification settings
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateInboundMessagesNotificationSettingsInputObject
 
@@ -17938,6 +18085,7 @@ func (a *TextMagicApiService) UpdateInboundMessagesNotificationSettings(ctx cont
 
 /* 
 TextMagicApiService Update existing list.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *UpdateListOpts - Optional Parameters:
@@ -18042,6 +18190,7 @@ func (a *TextMagicApiService) UpdateList(ctx context.Context, id int32, localVar
 
 /* 
 TextMagicApiService Change user password.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updatePasswordInputObject
 
@@ -18135,6 +18284,7 @@ func (a *TextMagicApiService) UpdatePassword(ctx context.Context, updatePassword
 
 /* 
 TextMagicApiService Change sender settings for specified country.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSenderSettingInputObject
 
@@ -18239,6 +18389,7 @@ func (a *TextMagicApiService) UpdateSenderSetting(ctx context.Context, updateSen
 
 /* 
 TextMagicApiService Update existing survey.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSurveyInputObject
  * @param id
@@ -18363,6 +18514,7 @@ func (a *TextMagicApiService) UpdateSurvey(ctx context.Context, updateSurveyInpu
 
 /* 
 TextMagicApiService Update existing node.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSurveyNodeInputObject
  * @param id
@@ -18487,6 +18639,7 @@ func (a *TextMagicApiService) UpdateSurveyNode(ctx context.Context, updateSurvey
 
 /* 
 TextMagicApiService Update existing template.
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateTemplateInputObject
  * @param id

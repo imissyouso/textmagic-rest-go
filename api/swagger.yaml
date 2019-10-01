@@ -17,27 +17,15 @@ info:
 host: "my.textmagic.com"
 tags:
 - name: "Outbound Messages"
-  description: "### How to send a single text message\n\nTo send a simple text message\
-    \ to one recipient, you should set only the `text` and the `phones` parameters.\
-    \ `text` should\ncontain that desired text and `phones` should be set to the recipient’\
-    s international phone number.\n\nFor example, to send an SMS message with the\
-    \ text “I love TextMagic” to the phone number +44 (0) 7 860021130, use the command:\n\
-    \n> POST https://rest.textmagic.com/api/v2/messages\n\nwith the following parameters:\n\
-    \n| Parameter | Value |\n| --------- | ----- |\n| text |I love TextMagic (don’\
-    t forget to urlencode your string!) |\n| phones | 447860021130 |\n\nYou will receive\
-    \ a result like this:\n\n| Parameter | Example |\n| --------- | ------- |\n| id\
-    \ | 49576009 |\n| href | /api/v2/messages/49576009 |\n| type | message |\n| sessionId\
-    \ | 34436600 |\n| bulkId | null |\n| messageId | 49576009 |\n| scheduleId | null\
-    \ |\n\nAs long as you have sent a message to at least one recipient, the TextMagic\
-    \ API will return not only the session ID,\nbut also the single message ID. Also,\
-    \ you can watch for the delivery status changes using this ID without\nfetching\
-    \ session messages first. Since this is not a bulk session or scheduled message,\n\
-    `bulkId` and `scheduleId` are null.\n\n### How to send bulk text messages\nTODO\n\
-    \n### Sending more than 1,000 messages in one session\nTODO\n\n### How to send\
-    \ a text message with an attachment\nTODO\n\n### Delivery status callback\n"
+  description: ""
   x-displayName: "Outgoing messages\n"
+  x-key: "outbound-messages-tag"
 - name: "User"
+  description: ""
+  x-key: "user-tag"
 - name: "Contacts"
+  description: ""
+  x-key: "contacts-tag"
 schemes:
 - "http"
 - "https"
@@ -53,8 +41,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Authenticate user by given username and password."
-      description: "Returning a username and token that you should pass to the all\
-        \ requests (in X-TM-Username and X-TM-Key, respectively)"
+      description: ""
       operationId: "doAuth"
       parameters:
       - in: "body"
@@ -245,6 +232,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Return all available timezone IDs."
+      description: ""
       operationId: "getTimezones"
       parameters:
       - name: "full"
@@ -402,6 +390,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Just does a pong."
+      description: ""
       operationId: "ping"
       parameters: []
       responses:
@@ -526,6 +515,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get an array of all rules that are disallowed to the current account."
+      description: ""
       operationId: "getDisallowedRules"
       parameters: []
       responses:
@@ -653,6 +643,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all device tokens assigned to the current account"
+      description: ""
       operationId: "getPushTokens"
       parameters: []
       responses:
@@ -779,6 +770,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Add or update a device token."
+      description: ""
       operationId: "createPushToken"
       parameters:
       - in: "body"
@@ -927,6 +919,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a push notification device token."
+      description: ""
       operationId: "deletePushToken"
       produces: []
       parameters:
@@ -1074,6 +1067,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get current entities state"
+      description: ""
       operationId: "getState"
       parameters: []
       responses:
@@ -1200,6 +1194,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get minimal valid apps versions"
+      description: ""
       operationId: "getVersions"
       parameters: []
       responses:
@@ -1326,6 +1321,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Carrier Lookup"
+      description: ""
       operationId: "doCarrierLookup"
       parameters:
       - name: "phone"
@@ -1495,6 +1491,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Return list of countries."
+      description: ""
       operationId: "getCountries"
       parameters: []
       responses:
@@ -1621,6 +1618,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get current user info."
+      description: ""
       operationId: "getCurrentUser"
       parameters: []
       responses:
@@ -1748,6 +1746,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update current user info."
+      description: ""
       operationId: "updateCurrentUser"
       parameters:
       - in: "body"
@@ -1930,6 +1929,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete an avatar for the current user.\\"
+      description: ""
       operationId: "deleteAvatar"
       produces: []
       parameters: []
@@ -2046,6 +2046,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Send user phone verification"
+      description: ""
       operationId: "sendPhoneVerificationCode"
       parameters: []
       responses:
@@ -2168,6 +2169,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Check user phone verification code"
+      description: ""
       operationId: "checkPhoneVerificationCode"
       parameters:
       - in: "body"
@@ -2311,6 +2313,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Send user email verification"
+      description: ""
       operationId: "sendEmailVerificationCode"
       parameters: []
       responses:
@@ -2434,6 +2437,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Change user password."
+      description: ""
       operationId: "updatePassword"
       produces: []
       parameters:
@@ -2586,6 +2590,7 @@ paths:
       - "TextMagic"
       summary: "Get all available sender setting options which could be used in \"\
         from\" parameter of POST messages method."
+      description: ""
       operationId: "getAvailableSenderSettingOptions"
       parameters:
       - name: "country"
@@ -2739,6 +2744,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get current user sender settings."
+      description: ""
       operationId: "getSenderSettings"
       parameters:
       - name: "country"
@@ -2890,6 +2896,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Change sender settings for specified country."
+      description: ""
       operationId: "updateSenderSetting"
       produces: []
       parameters:
@@ -3054,6 +3061,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get user's dedicated numbers."
+      description: ""
       operationId: "getUserDedicatedNumbers"
       parameters:
       - name: "page"
@@ -3233,6 +3241,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Buy a dedicated number and assign it to the specified account."
+      description: ""
       operationId: "buyDedicatedNumber"
       parameters:
       - in: "body"
@@ -3388,6 +3397,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find available dedicated numbers to buy."
+      description: ""
       operationId: "getAvailableDedicatedNumbers"
       parameters:
       - name: "prefix"
@@ -3580,6 +3590,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single dedicated number."
+      description: ""
       operationId: "getDedicatedNumber"
       parameters:
       - name: "id"
@@ -3717,6 +3728,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Cancel dedicated number subscription."
+      description: ""
       operationId: "deleteDedicatedNumber"
       produces: []
       parameters:
@@ -3847,6 +3859,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all sender IDs of current user."
+      description: ""
       operationId: "getSenderIds"
       parameters:
       - name: "page"
@@ -4005,6 +4018,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Request for a new Sender ID."
+      description: ""
       operationId: "requestSenderId"
       parameters:
       - in: "body"
@@ -4164,6 +4178,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single Sender ID."
+      description: ""
       operationId: "getSenderId"
       parameters:
       - name: "id"
@@ -4299,6 +4314,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a Sender ID."
+      description: ""
       operationId: "deleteSenderId"
       produces: []
       parameters:
@@ -4429,6 +4445,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all subaccounts of current user."
+      description: ""
       operationId: "getSubaccounts"
       parameters:
       - name: "page"
@@ -4588,6 +4605,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Invite new subaccount."
+      description: ""
       operationId: "inviteSubaccount"
       produces: []
       parameters:
@@ -4741,7 +4759,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Request a new REST API token for subaccount."
-      description: "Returning user object, key and app name."
+      description: ""
       operationId: "requestNewSubaccountToken"
       parameters:
       - in: "body"
@@ -4913,8 +4931,7 @@ paths:
       - "TextMagic"
       summary: "Get all subaccounts with their REST API tokens associated with specified\
         \ app name."
-      description: "When more than one token related to app name, last key will be\
-        \ returned."
+      description: ""
       operationId: "getSubaccountsWithTokens"
       parameters:
       - in: "body"
@@ -5113,6 +5130,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single subaccount."
+      description: ""
       operationId: "getSubaccount"
       parameters:
       - name: "id"
@@ -5250,6 +5268,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Close subaccount."
+      description: ""
       operationId: "closeSubaccount"
       produces: []
       parameters:
@@ -5384,6 +5403,7 @@ paths:
       summary: "Returns the list of available balance options which can be used as\
         \ a bound to determine when to send email to user with low balance notification.\
         \ See https://my.textmagic.com/online/account/notifications/balance"
+      description: ""
       operationId: "getBalanceNotificationOptions"
       parameters: []
       responses:
@@ -5514,6 +5534,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get balance notification settings"
+      description: ""
       operationId: "getBalanceNotificationSettings"
       parameters: []
       responses:
@@ -5642,6 +5663,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update balance notification settings"
+      description: ""
       operationId: "updateBalanceNotificationSettings"
       produces: []
       parameters:
@@ -5824,6 +5846,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get inbound messages notification settings"
+      description: ""
       operationId: "getInboundMessagesNotificationSettings"
       parameters: []
       responses:
@@ -5956,6 +5979,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update inbound messages notification settings"
+      description: ""
       operationId: "updateInboundMessagesNotificationSettings"
       produces: []
       parameters:
@@ -6138,6 +6162,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update chat desktop notification settings"
+      description: ""
       operationId: "updateChatDesktopNotificationSettings"
       parameters:
       - in: "body"
@@ -6300,6 +6325,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Fetch callback URL settings"
+      description: ""
       operationId: "getCallbackSettings"
       parameters: []
       responses:
@@ -6427,6 +6453,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update callback URL settings"
+      description: ""
       operationId: "updateCallbackSettings"
       parameters:
       - in: "body"
@@ -6589,6 +6616,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Check pricing for a inbound/outbound call."
+      description: ""
       operationId: "getCallsPrices"
       parameters: []
       responses:
@@ -6716,6 +6744,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get contacts autocomplete suggestions by given search term."
+      description: ""
       operationId: "getContactsAutocomplete"
       parameters:
       - name: "limit"
@@ -6894,6 +6923,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get favorite contacts and lists."
+      description: ""
       operationId: "getFavourites"
       parameters:
       - name: "page"
@@ -7068,6 +7098,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find user contacts by given parameters."
+      description: ""
       operationId: "searchContacts"
       parameters:
       - name: "page"
@@ -7360,6 +7391,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single contact by phone number."
+      description: ""
       operationId: "getContactByPhone"
       parameters:
       - name: "phone"
@@ -7499,6 +7531,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all user contacts."
+      description: ""
       operationId: "getContacts"
       parameters:
       - name: "page"
@@ -7709,6 +7742,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Create a new contact from the submitted data."
+      description: ""
       operationId: "createContact"
       parameters:
       - in: "body"
@@ -7912,6 +7946,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single contact."
+      description: ""
       operationId: "getContact"
       parameters:
       - name: "id"
@@ -8048,6 +8083,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update existing contact."
+      description: ""
       operationId: "updateContact"
       parameters:
       - in: "body"
@@ -8261,6 +8297,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a single contact."
+      description: ""
       operationId: "deleteContact"
       produces: []
       parameters:
@@ -8393,6 +8430,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete all contacts."
+      description: ""
       operationId: "deleteAllContacts"
       produces: []
       parameters: []
@@ -8507,6 +8545,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete contact by given ID(s) or delete all contacts."
+      description: ""
       operationId: "deleteContactsByIds"
       produces: []
       parameters:
@@ -8661,6 +8700,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all contact custom fields."
+      description: ""
       operationId: "getCustomFields"
       parameters:
       - name: "page"
@@ -8820,6 +8860,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Create a new custom field from the submitted data."
+      description: ""
       operationId: "createCustomField"
       parameters:
       - in: "body"
@@ -8978,6 +9019,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single custom field."
+      description: ""
       operationId: "getCustomField"
       parameters:
       - name: "id"
@@ -9111,6 +9153,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update existing custom field."
+      description: ""
       operationId: "updateCustomField"
       parameters:
       - in: "body"
@@ -9277,6 +9320,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a single custom field."
+      description: ""
       operationId: "deleteCustomField"
       produces: []
       parameters:
@@ -9407,6 +9451,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update contact's custom field value."
+      description: ""
       operationId: "updateCustomFieldValue"
       parameters:
       - in: "body"
@@ -9583,6 +9628,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Return lists which contact belongs to."
+      description: ""
       operationId: "getListsOfContact"
       parameters:
       - name: "page"
@@ -9756,6 +9802,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all contact have unsubscribed from your communication."
+      description: ""
       operationId: "getUnsubscribers"
       parameters:
       - name: "page"
@@ -9915,6 +9962,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Unsubscribe contact from your communication by phone number."
+      description: ""
       operationId: "unsubscribeContact"
       parameters:
       - in: "body"
@@ -10081,6 +10129,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single unsubscribed contact."
+      description: ""
       operationId: "getUnsubscribedContact"
       parameters:
       - name: "id"
@@ -10220,6 +10269,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Block contact from inbound and outbound communication by phone number."
+      description: ""
       operationId: "blockContact"
       parameters:
       - in: "body"
@@ -10380,6 +10430,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Unblock contact by phone number."
+      description: ""
       operationId: "unblockContact"
       produces: []
       parameters:
@@ -10532,6 +10583,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Unblock several contacts by blocked contact ids or unblock all contacts"
+      description: ""
       operationId: "unblockContactsBulk"
       produces: []
       parameters:
@@ -10686,6 +10738,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Check is that phone number blocked"
+      description: ""
       operationId: "getContactIfBlocked"
       parameters:
       - name: "phone"
@@ -10829,6 +10882,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Fetch notes assigned to the given contact."
+      description: ""
       operationId: "getContactNotes"
       parameters:
       - name: "page"
@@ -11001,6 +11055,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Create a new contact note."
+      description: ""
       operationId: "createContactNote"
       parameters:
       - in: "body"
@@ -11171,6 +11226,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single contact note."
+      description: ""
       operationId: "getContactNote"
       parameters:
       - name: "id"
@@ -11308,6 +11364,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update existing contact note."
+      description: ""
       operationId: "updateContactNote"
       parameters:
       - in: "body"
@@ -11475,6 +11532,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a single contact note."
+      description: ""
       operationId: "deleteContactNote"
       produces: []
       parameters:
@@ -11605,6 +11663,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete contact note by given ID(s) or delete all contact notes."
+      description: ""
       operationId: "deleteContactNotesBulk"
       produces: []
       parameters:
@@ -11770,6 +11829,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete an avatar for the contact."
+      description: ""
       operationId: "deleteContactAvatar"
       parameters:
       - name: "id"
@@ -11901,6 +11961,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get contact import session progress."
+      description: ""
       operationId: "getContactImportSessionProgress"
       parameters:
       - name: "id"
@@ -12046,6 +12107,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get blocked contacts."
+      description: ""
       operationId: "getBlockedContacts"
       parameters:
       - name: "page"
@@ -12259,6 +12321,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Validate Email address using Email Lookup tool"
+      description: ""
       operationId: "doEmailLookup"
       parameters:
       - name: "email"
@@ -12409,6 +12472,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find contact lists by given parameters."
+      description: ""
       operationId: "searchLists"
       parameters:
       - name: "page"
@@ -12662,6 +12726,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all user lists."
+      description: ""
       operationId: "getUserLists"
       parameters:
       - name: "page"
@@ -12894,6 +12959,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Create a new list from the submitted data."
+      description: ""
       operationId: "createList"
       parameters:
       - in: "body"
@@ -13064,8 +13130,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Fetch user contacts by given group id."
-      description: "A useful synonym for \"contacts/search\" command with provided\
-        \ \"listId\" parameter."
+      description: ""
       operationId: "getContactsByListId"
       parameters:
       - name: "page"
@@ -13275,6 +13340,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Reset list members to the specified contacts."
+      description: ""
       operationId: "clearAndAssignContactsToList"
       parameters:
       - in: "body"
@@ -13447,6 +13513,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Assign contacts to the specified list."
+      description: ""
       operationId: "assignContactsToList"
       parameters:
       - in: "body"
@@ -13615,6 +13682,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Unassign contacts from the specified list."
+      description: ""
       operationId: "deleteContactsFromList"
       produces: []
       parameters:
@@ -13756,6 +13824,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Fetch all contacts IDs belonging to the list with ID."
+      description: ""
       operationId: "getListContactsIds"
       parameters:
       - name: "id"
@@ -13894,6 +13963,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single list."
+      description: ""
       operationId: "getList"
       parameters:
       - name: "id"
@@ -14029,6 +14099,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update existing list."
+      description: ""
       operationId: "updateList"
       parameters:
       - in: "body"
@@ -14205,6 +14276,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a single list."
+      description: ""
       operationId: "deleteList"
       produces: []
       parameters:
@@ -14340,6 +14412,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete list by given ID(s) or delete all lists."
+      description: ""
       operationId: "deleteListsBulk"
       produces: []
       parameters:
@@ -14493,6 +14566,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete contact from list by given ID(s) or all contacts from list."
+      description: ""
       operationId: "deleteListContactsBulk"
       produces: []
       parameters:
@@ -14658,6 +14732,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete an avatar for the list."
+      description: ""
       operationId: "deleteListAvatar"
       parameters:
       - name: "id"
@@ -14789,6 +14864,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find user templates by given parameters."
+      description: ""
       operationId: "searchTemplates"
       parameters:
       - name: "page"
@@ -14987,6 +15063,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all user templates."
+      description: ""
       operationId: "getAllTemplates"
       parameters:
       - name: "page"
@@ -15146,6 +15223,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Create a new template from the submitted data."
+      description: ""
       operationId: "createTemplate"
       parameters:
       - in: "body"
@@ -15305,6 +15383,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single template."
+      description: ""
       operationId: "getTemplate"
       parameters:
       - name: "id"
@@ -15442,6 +15521,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update existing template."
+      description: ""
       operationId: "updateTemplate"
       parameters:
       - in: "body"
@@ -15613,6 +15693,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a single template."
+      description: ""
       operationId: "deleteTemplate"
       produces: []
       parameters:
@@ -15743,6 +15824,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete template by given ID(s) or delete all templates."
+      description: ""
       operationId: "deleteTemplatesBulk"
       produces: []
       parameters:
@@ -15897,7 +15979,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all messages"
-      description: "Get all user oubound messages."
+      description: ""
       operationId: "getAllOutboundMessages"
       parameters:
       - name: "page"
@@ -16077,8 +16159,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Send message"
-      description: "The main entrypoint to send messages. See examples above for the\
-        \ reference."
+      description: ""
       operationId: "sendMessage"
       parameters:
       - in: "body"
@@ -16314,7 +16395,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single message"
-      description: "Get a single outgoing message."
+      description: ""
       operationId: "getOutboundMessage"
       parameters:
       - name: "id"
@@ -16451,7 +16532,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete message"
-      description: "Delete a single message."
+      description: ""
       operationId: "deleteOutboundMessage"
       produces: []
       parameters:
@@ -16582,8 +16663,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete messages by IDs"
-      description: "Delete outbound messages by given ID(s) or delete all outbound\
-        \ messages."
+      description: ""
       operationId: "deleteOutboundMessagesBulk"
       produces: []
       parameters:
@@ -16734,7 +16814,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete all messages"
-      description: "Delete all messages."
+      description: ""
       operationId: "deleteAllOutboundMessages"
       produces: []
       parameters: []
@@ -16855,7 +16935,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Check price"
-      description: "Check pricing for a new outbound message."
+      description: ""
       operationId: "getMessagePrice"
       parameters:
       - name: "includeBlocked"
@@ -17283,8 +17363,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Preview message"
-      description: "Get messages preview (with tags merged) up to 100 messages per\
-        \ session."
+      description: ""
       operationId: "getMessagePreview"
       parameters:
       - name: "text"
@@ -17697,7 +17776,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find messages"
-      description: "Find outbound messages by given parameters."
+      description: ""
       operationId: "searchOutboundMessages"
       parameters:
       - name: "page"
@@ -17961,6 +18040,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find scheduled messages by given parameters."
+      description: ""
       operationId: "searchScheduledMessages"
       parameters:
       - name: "page"
@@ -18208,6 +18288,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find inbound messages by given parameters."
+      description: ""
       operationId: "searchInboundMessages"
       parameters:
       - name: "page"
@@ -18455,7 +18536,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get pricing"
-      description: "Get message prices for all countries."
+      description: ""
       operationId: "getMessagePrices"
       parameters: []
       responses:
@@ -18583,7 +18664,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get history"
-      description: "Get outbound messages history."
+      description: ""
       operationId: "getOutboundMessagesHistory"
       parameters:
       - name: "limit"
@@ -18803,6 +18884,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a message session."
+      description: ""
       operationId: "getMessageSession"
       parameters:
       - name: "id"
@@ -18940,6 +19022,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a message session, together with all nested messages."
+      description: ""
       operationId: "deleteMessageSession"
       produces: []
       parameters:
@@ -19070,6 +19153,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all message sending sessions."
+      description: ""
       operationId: "getAllMessageSessions"
       parameters:
       - name: "page"
@@ -19231,6 +19315,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get bulk message session status."
+      description: ""
       operationId: "getBulkSession"
       parameters:
       - name: "id"
@@ -19369,6 +19454,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all bulk sending sessions."
+      description: ""
       operationId: "getAllBulkSessions"
       parameters:
       - name: "page"
@@ -19529,8 +19615,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Fetch messages by given session id."
-      description: "A useful synonym for \"messages/search\" command with provided\
-        \ \"sessionId\" parameter."
+      description: ""
       operationId: "getMessagesBySessionId"
       parameters:
       - name: "page"
@@ -19747,6 +19832,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get sending session statistics."
+      description: ""
       operationId: "getMessageSessionStat"
       parameters:
       - name: "includeDeleted"
@@ -19915,6 +20001,7 @@ paths:
       - "TextMagic"
       summary: "Delete messages sessions, together with all nested messages, by given\
         \ ID(s) or delete all messages sessions."
+      description: ""
       operationId: "deleteMessageSessionsBulk"
       produces: []
       parameters:
@@ -20061,6 +20148,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all scheduled messages."
+      description: ""
       operationId: "getAllScheduledMessages"
       parameters:
       - name: "page"
@@ -20277,6 +20365,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get message schedule."
+      description: ""
       operationId: "getScheduledMessage"
       parameters:
       - name: "id"
@@ -20414,6 +20503,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a message session, together with all nested messages."
+      description: ""
       operationId: "deleteScheduledMessage"
       produces: []
       parameters:
@@ -20546,6 +20636,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete scheduled messages by given ID(s) or delete all scheduled messages."
+      description: ""
       operationId: "deleteScheduledMessagesBulk"
       produces: []
       parameters:
@@ -20701,6 +20792,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all inbox messages."
+      description: ""
       operationId: "getAllInboundMessages"
       parameters:
       - name: "page"
@@ -20903,6 +20995,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single inbox message."
+      description: ""
       operationId: "getInboundMessage"
       parameters:
       - name: "id"
@@ -21039,6 +21132,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete the incoming message."
+      description: ""
       operationId: "deleteInboundMessage"
       produces: []
       parameters:
@@ -21169,6 +21263,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete inbound messages by given ID(s) or delete all inbound messages."
+      description: ""
       operationId: "deleteInboundMessagesBulk"
       produces: []
       parameters:
@@ -21319,6 +21414,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Return messaging statistics."
+      description: ""
       operationId: "getMessagingStat"
       parameters:
       - name: "by"
@@ -21502,6 +21598,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Return account spending statistics."
+      description: ""
       operationId: "getSpendingStat"
       parameters:
       - name: "page"
@@ -21691,6 +21788,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Return account invoices."
+      description: ""
       operationId: "getInvoices"
       parameters:
       - name: "page"
@@ -21856,6 +21954,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Return counters for messaging data views."
+      description: ""
       operationId: "getMessagingCounters"
       parameters: []
       responses:
@@ -21984,6 +22083,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find chats by inbound or outbound messages text."
+      description: ""
       operationId: "searchChats"
       parameters:
       - name: "page"
@@ -22157,6 +22257,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find chats by IDs."
+      description: ""
       operationId: "searchChatsByIds"
       parameters:
       - name: "page"
@@ -22332,6 +22433,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find chats by recipient (contact, list name or phone number)."
+      description: ""
       operationId: "searchChatsByReceipent"
       parameters:
       - name: "page"
@@ -22525,6 +22627,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all user chats."
+      description: ""
       operationId: "getAllChats"
       parameters:
       - name: "status"
@@ -22749,6 +22852,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Fetch messages from chat with specified chat id."
+      description: ""
       operationId: "getChatMessages"
       parameters:
       - name: "page"
@@ -22984,6 +23088,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Set mute mode."
+      description: ""
       operationId: "muteChat"
       parameters:
       - in: "body"
@@ -23149,6 +23254,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Mute several chats by chat ids or mute all chats"
+      description: ""
       operationId: "muteChatsBulk"
       produces: []
       parameters:
@@ -23301,6 +23407,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Unmute several chats by chat ids or unmute all chats"
+      description: ""
       operationId: "unmuteChatsBulk"
       produces: []
       parameters:
@@ -23451,6 +23558,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Mark several chats as UNread by chat ids or mark all chats as UNread"
+      description: ""
       operationId: "markChatsUnreadBulk"
       produces: []
       parameters:
@@ -23601,6 +23709,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Mark several chats as read by chat ids or mark all chats as read"
+      description: ""
       operationId: "markChatsReadBulk"
       produces: []
       parameters:
@@ -23751,6 +23860,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Close chats by chat ids or close all chats"
+      description: ""
       operationId: "closeChatsBulk"
       produces: []
       parameters:
@@ -23901,6 +24011,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Close all chats that have no unread messages."
+      description: ""
       operationId: "closeReadChats"
       produces: []
       parameters: []
@@ -24028,6 +24139,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Reopen chats by chat ids or reopen all chats"
+      description: ""
       operationId: "reopenChatsBulk"
       produces: []
       parameters:
@@ -24178,6 +24290,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Set status of the chat given by ID."
+      description: ""
       operationId: "setChatStatus"
       parameters:
       - in: "body"
@@ -24332,6 +24445,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete chats by given ID(s) or delete all chats."
+      description: ""
       operationId: "deleteChatsBulk"
       produces: []
       parameters:
@@ -24486,6 +24600,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete messages from chat by given messages ID(s)."
+      description: ""
       operationId: "deleteChatMessages"
       produces: []
       parameters:
@@ -24657,6 +24772,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Find chats by phone."
+      description: ""
       operationId: "getChatByPhone"
       parameters:
       - name: "upsert"
@@ -24839,6 +24955,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get total amount of unread messages in the current user chats."
+      description: ""
       operationId: "getUnreadMessagesTotal"
       parameters: []
       responses:
@@ -24967,6 +25084,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a single chat."
+      description: ""
       operationId: "getChat"
       parameters:
       - name: "id"
@@ -25103,6 +25221,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Start a survey."
+      description: ""
       operationId: "startSurvey"
       parameters:
       - name: "id"
@@ -25258,6 +25377,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Duplicate a survey."
+      description: ""
       operationId: "duplicateSurvey"
       parameters:
       - name: "id"
@@ -25408,6 +25528,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Cancel a survey."
+      description: ""
       operationId: "cancelSurvey"
       parameters:
       - name: "id"
@@ -25559,6 +25680,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Reset a survey flow."
+      description: ""
       operationId: "resetSurvey"
       parameters:
       - name: "id"
@@ -25709,6 +25831,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all user surveys."
+      description: ""
       operationId: "getSurveys"
       parameters:
       - name: "page"
@@ -25867,6 +25990,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Create a new survey from the submitted data."
+      description: ""
       operationId: "createSurvey"
       parameters:
       - in: "body"
@@ -26021,6 +26145,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a survey by id."
+      description: ""
       operationId: "getSurvey"
       parameters:
       - name: "id"
@@ -26156,6 +26281,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update existing survey."
+      description: ""
       operationId: "updateSurvey"
       parameters:
       - in: "body"
@@ -26340,6 +26466,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a survey."
+      description: ""
       operationId: "deleteSurvey"
       produces: []
       parameters:
@@ -26470,6 +26597,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Fetch nodes by given survey id."
+      description: ""
       operationId: "getSurveyNodes"
       parameters:
       - name: "id"
@@ -26607,6 +26735,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Create a new node from the submitted data."
+      description: ""
       operationId: "createSurveyNode"
       parameters:
       - in: "body"
@@ -26788,6 +26917,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get a node by id."
+      description: ""
       operationId: "getSurveyNode"
       parameters:
       - name: "id"
@@ -26924,6 +27054,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Update existing node."
+      description: ""
       operationId: "updateSurveyNode"
       parameters:
       - in: "body"
@@ -27105,6 +27236,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a node."
+      description: ""
       operationId: "deleteSurveyNode"
       produces: []
       parameters:
@@ -27229,6 +27361,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Merge two question nodes."
+      description: ""
       operationId: "mergeSurveyNodes"
       produces: []
       parameters:
@@ -27381,6 +27514,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get all forwarded calls."
+      description: ""
       operationId: "getForwardedCalls"
       parameters:
       - name: "page"

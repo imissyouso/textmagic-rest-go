@@ -179,6 +179,8 @@ Method | HTTP request | Description
 > ResourceLinkResponse AssignContactsToList(ctx, assignContactsToListInputObject, id)
 Assign contacts to the specified list.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -206,6 +208,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse BlockContact(ctx, blockContactInputObject)
 Block contact from inbound and outbound communication by phone number.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -231,6 +235,8 @@ Name | Type | Description  | Notes
 # **BuyDedicatedNumber**
 > BuyDedicatedNumber(ctx, buyDedicatedNumberInputObject)
 Buy a dedicated number and assign it to the specified account.
+
+
 
 ### Required Parameters
 
@@ -258,6 +264,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse CancelSurvey(ctx, id)
 Cancel a survey.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -284,6 +292,8 @@ Name | Type | Description  | Notes
 > CheckPhoneVerificationCode(ctx, checkPhoneVerificationCodeInputObject)
 Check user phone verification code
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -309,6 +319,8 @@ Name | Type | Description  | Notes
 # **ClearAndAssignContactsToList**
 > ResourceLinkResponse ClearAndAssignContactsToList(ctx, clearAndAssignContactsToListInputObject, id)
 Reset list members to the specified contacts.
+
+
 
 ### Required Parameters
 
@@ -337,6 +349,8 @@ Name | Type | Description  | Notes
 > CloseChatsBulk(ctx, closeChatsBulkInputObject)
 Close chats by chat ids or close all chats
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -363,6 +377,8 @@ Name | Type | Description  | Notes
 > CloseReadChats(ctx, )
 Close all chats that have no unread messages.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -384,6 +400,8 @@ This endpoint does not need any parameter.
 # **CloseSubaccount**
 > CloseSubaccount(ctx, id)
 Close subaccount.
+
+
 
 ### Required Parameters
 
@@ -411,6 +429,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse CreateContact(ctx, createContactInputObject)
 Create a new contact from the submitted data.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -436,6 +456,8 @@ Name | Type | Description  | Notes
 # **CreateContactNote**
 > ResourceLinkResponse CreateContactNote(ctx, createContactNoteInputObject, id)
 Create a new contact note.
+
+
 
 ### Required Parameters
 
@@ -464,6 +486,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse CreateCustomField(ctx, createCustomFieldInputObject)
 Create a new custom field from the submitted data.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -489,6 +513,8 @@ Name | Type | Description  | Notes
 # **CreateList**
 > ResourceLinkResponse CreateList(ctx, createListInputObject)
 Create a new list from the submitted data.
+
+
 
 ### Required Parameters
 
@@ -516,6 +542,8 @@ Name | Type | Description  | Notes
 > CreatePushToken(ctx, createPushTokenInputObject)
 Add or update a device token.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -542,6 +570,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse CreateSurvey(ctx, createSurveyInputObject)
 Create a new survey from the submitted data.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -567,6 +597,8 @@ Name | Type | Description  | Notes
 # **CreateSurveyNode**
 > ResourceLinkResponse CreateSurveyNode(ctx, createSurveyNodeInputObject, id)
 Create a new node from the submitted data.
+
+
 
 ### Required Parameters
 
@@ -595,6 +627,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse CreateTemplate(ctx, createTemplateInputObject)
 Create a new template from the submitted data.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -621,6 +655,8 @@ Name | Type | Description  | Notes
 > DeleteAllContacts(ctx, )
 Delete all contacts.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -643,7 +679,7 @@ This endpoint does not need any parameter.
 > DeleteAllOutboundMessages(ctx, )
 Delete all messages
 
-Delete all messages.
+
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -667,6 +703,8 @@ This endpoint does not need any parameter.
 > DeleteAvatar(ctx, )
 Delete an avatar for the current user.\\
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -688,6 +726,8 @@ This endpoint does not need any parameter.
 # **DeleteChatMessages**
 > DeleteChatMessages(ctx, deleteChatMessagesBulkInputObject, id)
 Delete messages from chat by given messages ID(s).
+
+
 
 ### Required Parameters
 
@@ -716,6 +756,8 @@ Name | Type | Description  | Notes
 > DeleteChatsBulk(ctx, deleteChatsBulkInputObject)
 Delete chats by given ID(s) or delete all chats.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -741,6 +783,8 @@ Name | Type | Description  | Notes
 # **DeleteContact**
 > DeleteContact(ctx, id)
 Delete a single contact.
+
+
 
 ### Required Parameters
 
@@ -768,6 +812,8 @@ Name | Type | Description  | Notes
 > DeleteContactAvatar(ctx, id)
 Delete an avatar for the contact.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -794,6 +840,8 @@ Name | Type | Description  | Notes
 > DeleteContactNote(ctx, id)
 Delete a single contact note.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -819,6 +867,8 @@ Name | Type | Description  | Notes
 # **DeleteContactNotesBulk**
 > DeleteContactNotesBulk(ctx, id, deleteContactNotesBulkInputObject)
 Delete contact note by given ID(s) or delete all contact notes.
+
+
 
 ### Required Parameters
 
@@ -847,6 +897,8 @@ Name | Type | Description  | Notes
 > DeleteContactsByIds(ctx, deleteContactsByIdsInputObject)
 Delete contact by given ID(s) or delete all contacts.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -872,6 +924,8 @@ Name | Type | Description  | Notes
 # **DeleteContactsFromList**
 > DeleteContactsFromList(ctx, deleteContacsFromListObject, id)
 Unassign contacts from the specified list.
+
+
 
 ### Required Parameters
 
@@ -900,6 +954,8 @@ Name | Type | Description  | Notes
 > DeleteCustomField(ctx, id)
 Delete a single custom field.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -925,6 +981,8 @@ Name | Type | Description  | Notes
 # **DeleteDedicatedNumber**
 > DeleteDedicatedNumber(ctx, id)
 Cancel dedicated number subscription.
+
+
 
 ### Required Parameters
 
@@ -952,6 +1010,8 @@ Name | Type | Description  | Notes
 > DeleteInboundMessage(ctx, id)
 Delete the incoming message.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -977,6 +1037,8 @@ Name | Type | Description  | Notes
 # **DeleteInboundMessagesBulk**
 > DeleteInboundMessagesBulk(ctx, deleteInboundMessagesBulkInputObject)
 Delete inbound messages by given ID(s) or delete all inbound messages.
+
+
 
 ### Required Parameters
 
@@ -1004,6 +1066,8 @@ Name | Type | Description  | Notes
 > DeleteList(ctx, id)
 Delete a single list.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1030,6 +1094,8 @@ Name | Type | Description  | Notes
 > DeleteListAvatar(ctx, id)
 Delete an avatar for the list.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1055,6 +1121,8 @@ Name | Type | Description  | Notes
 # **DeleteListContactsBulk**
 > DeleteListContactsBulk(ctx, deleteListContactsBulkInputObject, id)
 Delete contact from list by given ID(s) or all contacts from list.
+
+
 
 ### Required Parameters
 
@@ -1083,6 +1151,8 @@ Name | Type | Description  | Notes
 > DeleteListsBulk(ctx, deleteListsBulkInputObject)
 Delete list by given ID(s) or delete all lists.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1108,6 +1178,8 @@ Name | Type | Description  | Notes
 # **DeleteMessageSession**
 > DeleteMessageSession(ctx, id)
 Delete a message session, together with all nested messages.
+
+
 
 ### Required Parameters
 
@@ -1135,6 +1207,8 @@ Name | Type | Description  | Notes
 > DeleteMessageSessionsBulk(ctx, deleteMessageSessionsBulkInputObject)
 Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1161,7 +1235,7 @@ Name | Type | Description  | Notes
 > DeleteOutboundMessage(ctx, id)
 Delete message
 
-Delete a single message.
+
 
 ### Required Parameters
 
@@ -1189,7 +1263,7 @@ Name | Type | Description  | Notes
 > DeleteOutboundMessagesBulk(ctx, deleteOutboundMessagesBulkInputObject)
 Delete messages by IDs
 
-Delete outbound messages by given ID(s) or delete all outbound messages.
+
 
 ### Required Parameters
 
@@ -1216,6 +1290,8 @@ Name | Type | Description  | Notes
 # **DeletePushToken**
 > DeletePushToken(ctx, type_, deviceId)
 Delete a push notification device token.
+
+
 
 ### Required Parameters
 
@@ -1244,6 +1320,8 @@ Name | Type | Description  | Notes
 > DeleteScheduledMessage(ctx, id)
 Delete a message session, together with all nested messages.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1269,6 +1347,8 @@ Name | Type | Description  | Notes
 # **DeleteScheduledMessagesBulk**
 > DeleteScheduledMessagesBulk(ctx, deleteScheduledMessagesBulkInputObject)
 Delete scheduled messages by given ID(s) or delete all scheduled messages.
+
+
 
 ### Required Parameters
 
@@ -1296,6 +1376,8 @@ Name | Type | Description  | Notes
 > DeleteSenderId(ctx, id)
 Delete a Sender ID.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1321,6 +1403,8 @@ Name | Type | Description  | Notes
 # **DeleteSurvey**
 > DeleteSurvey(ctx, id)
 Delete a survey.
+
+
 
 ### Required Parameters
 
@@ -1348,6 +1432,8 @@ Name | Type | Description  | Notes
 > DeleteSurveyNode(ctx, id)
 Delete a node.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1373,6 +1459,8 @@ Name | Type | Description  | Notes
 # **DeleteTemplate**
 > DeleteTemplate(ctx, id)
 Delete a single template.
+
+
 
 ### Required Parameters
 
@@ -1400,6 +1488,8 @@ Name | Type | Description  | Notes
 > DeleteTemplatesBulk(ctx, deleteTemplatesBulkInputObject)
 Delete template by given ID(s) or delete all templates.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1426,7 +1516,7 @@ Name | Type | Description  | Notes
 > DoAuthResponse DoAuth(ctx, doAuthInputObject)
 Authenticate user by given username and password.
 
-Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
+
 
 ### Required Parameters
 
@@ -1453,6 +1543,8 @@ No authorization required
 # **DoCarrierLookup**
 > DoCarrierLookupResponse DoCarrierLookup(ctx, phone, optional)
 Carrier Lookup
+
+
 
 ### Required Parameters
 
@@ -1489,6 +1581,8 @@ Name | Type | Description  | Notes
 > DoEmailLookupResponse DoEmailLookup(ctx, email)
 Validate Email address using Email Lookup tool
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1515,6 +1609,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse DuplicateSurvey(ctx, id)
 Duplicate a survey.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1540,6 +1636,8 @@ Name | Type | Description  | Notes
 # **GetAllBulkSessions**
 > GetAllBulkSessionsPaginatedResponse GetAllBulkSessions(ctx, optional)
 Get all bulk sending sessions.
+
+
 
 ### Required Parameters
 
@@ -1574,6 +1672,8 @@ Name | Type | Description  | Notes
 # **GetAllChats**
 > GetAllChatsPaginatedResponse GetAllChats(ctx, optional)
 Get all user chats.
+
+
 
 ### Required Parameters
 
@@ -1613,6 +1713,8 @@ Name | Type | Description  | Notes
 > GetAllInboundMessagesPaginatedResponse GetAllInboundMessages(ctx, optional)
 Get all inbox messages.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1649,6 +1751,8 @@ Name | Type | Description  | Notes
 > GetAllMessageSessionsPaginatedResponse GetAllMessageSessions(ctx, optional)
 Get all message sending sessions.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1683,7 +1787,7 @@ Name | Type | Description  | Notes
 > GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages(ctx, optional)
 Get all messages
 
-Get all user oubound messages.
+
 
 ### Required Parameters
 
@@ -1719,6 +1823,8 @@ Name | Type | Description  | Notes
 # **GetAllScheduledMessages**
 > GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages(ctx, optional)
 Get all scheduled messages.
+
+
 
 ### Required Parameters
 
@@ -1757,6 +1863,8 @@ Name | Type | Description  | Notes
 > GetAllTemplatesPaginatedResponse GetAllTemplates(ctx, optional)
 Get all user templates.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1790,6 +1898,8 @@ Name | Type | Description  | Notes
 # **GetAvailableDedicatedNumbers**
 > GetAvailableDedicatedNumbersResponse GetAvailableDedicatedNumbers(ctx, country, optional)
 Find available dedicated numbers to buy.
+
+
 
 ### Required Parameters
 
@@ -1827,6 +1937,8 @@ Name | Type | Description  | Notes
 > GetAvailableSenderSettingOptionsResponse GetAvailableSenderSettingOptions(ctx, optional)
 Get all available sender setting options which could be used in \"from\" parameter of POST messages method.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1860,6 +1972,8 @@ Name | Type | Description  | Notes
 > GetBalanceNotificationOptionsResponse GetBalanceNotificationOptions(ctx, )
 Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -1882,6 +1996,8 @@ This endpoint does not need any parameter.
 > GetBalanceNotificationSettingsResponse GetBalanceNotificationSettings(ctx, )
 Get balance notification settings
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -1903,6 +2019,8 @@ This endpoint does not need any parameter.
 # **GetBlockedContacts**
 > GetBlockedContactsPaginatedResponse GetBlockedContacts(ctx, optional)
 Get blocked contacts.
+
+
 
 ### Required Parameters
 
@@ -1941,6 +2059,8 @@ Name | Type | Description  | Notes
 > BulkSession GetBulkSession(ctx, id)
 Get bulk message session status.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -1967,6 +2087,8 @@ Name | Type | Description  | Notes
 > GetCallbackSettingsResponse GetCallbackSettings(ctx, )
 Fetch callback URL settings
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -1989,6 +2111,8 @@ This endpoint does not need any parameter.
 > GetCallsPricesResponse GetCallsPrices(ctx, )
 Check pricing for a inbound/outbound call.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -2010,6 +2134,8 @@ This endpoint does not need any parameter.
 # **GetChat**
 > Chat GetChat(ctx, id)
 Get a single chat.
+
+
 
 ### Required Parameters
 
@@ -2036,6 +2162,8 @@ Name | Type | Description  | Notes
 # **GetChatByPhone**
 > Chat GetChatByPhone(ctx, phone, optional)
 Find chats by phone.
+
+
 
 ### Required Parameters
 
@@ -2072,6 +2200,8 @@ Name | Type | Description  | Notes
 # **GetChatMessages**
 > GetChatMessagesPaginatedResponse GetChatMessages(ctx, id, optional)
 Fetch messages from chat with specified chat id.
+
+
 
 ### Required Parameters
 
@@ -2114,6 +2244,8 @@ Name | Type | Description  | Notes
 > Contact GetContact(ctx, id)
 Get a single contact.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2139,6 +2271,8 @@ Name | Type | Description  | Notes
 # **GetContactByPhone**
 > Contact GetContactByPhone(ctx, phone)
 Get a single contact by phone number.
+
+
 
 ### Required Parameters
 
@@ -2166,6 +2300,8 @@ Name | Type | Description  | Notes
 > Contact GetContactIfBlocked(ctx, phone)
 Check is that phone number blocked
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2191,6 +2327,8 @@ Name | Type | Description  | Notes
 # **GetContactImportSessionProgress**
 > GetContactImportSessionProgressResponse GetContactImportSessionProgress(ctx, id)
 Get contact import session progress.
+
+
 
 ### Required Parameters
 
@@ -2218,6 +2356,8 @@ Name | Type | Description  | Notes
 > ContactNote GetContactNote(ctx, id)
 Get a single contact note.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2243,6 +2383,8 @@ Name | Type | Description  | Notes
 # **GetContactNotes**
 > GetContactNotesPaginatedResponse GetContactNotes(ctx, id, optional)
 Fetch notes assigned to the given contact.
+
+
 
 ### Required Parameters
 
@@ -2279,6 +2421,8 @@ Name | Type | Description  | Notes
 # **GetContacts**
 > GetContactsPaginatedResponse GetContacts(ctx, optional)
 Get all user contacts.
+
+
 
 ### Required Parameters
 
@@ -2317,6 +2461,8 @@ Name | Type | Description  | Notes
 > GetContactsAutocompleteResponse GetContactsAutocomplete(ctx, query, optional)
 Get contacts autocomplete suggestions by given search term.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2353,7 +2499,7 @@ Name | Type | Description  | Notes
 > GetContactsByListIdPaginatedResponse GetContactsByListId(ctx, id, optional)
 Fetch user contacts by given group id.
 
-A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
+
 
 ### Required Parameters
 
@@ -2393,6 +2539,8 @@ Name | Type | Description  | Notes
 > GetCountriesResponse GetCountries(ctx, )
 Return list of countries.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -2415,6 +2563,8 @@ This endpoint does not need any parameter.
 > User GetCurrentUser(ctx, )
 Get current user info.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -2436,6 +2586,8 @@ This endpoint does not need any parameter.
 # **GetCustomField**
 > UserCustomField GetCustomField(ctx, id)
 Get a single custom field.
+
+
 
 ### Required Parameters
 
@@ -2462,6 +2614,8 @@ Name | Type | Description  | Notes
 # **GetCustomFields**
 > GetCustomFieldsPaginatedResponse GetCustomFields(ctx, optional)
 Get all contact custom fields.
+
+
 
 ### Required Parameters
 
@@ -2497,6 +2651,8 @@ Name | Type | Description  | Notes
 > UsersInbound GetDedicatedNumber(ctx, id)
 Get a single dedicated number.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2523,6 +2679,8 @@ Name | Type | Description  | Notes
 > GetDisallowedRulesResponse GetDisallowedRules(ctx, )
 Get an array of all rules that are disallowed to the current account.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -2544,6 +2702,8 @@ This endpoint does not need any parameter.
 # **GetFavourites**
 > GetFavouritesPaginatedResponse GetFavourites(ctx, optional)
 Get favorite contacts and lists.
+
+
 
 ### Required Parameters
 
@@ -2580,6 +2740,8 @@ Name | Type | Description  | Notes
 > GetForwardedCallsPaginatedResponse GetForwardedCalls(ctx, optional)
 Get all forwarded calls.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2614,6 +2776,8 @@ Name | Type | Description  | Notes
 > MessageIn GetInboundMessage(ctx, id)
 Get a single inbox message.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2640,6 +2804,8 @@ Name | Type | Description  | Notes
 > GetInboundMessagesNotificationSettingsResponse GetInboundMessagesNotificationSettings(ctx, )
 Get inbound messages notification settings
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -2661,6 +2827,8 @@ This endpoint does not need any parameter.
 # **GetInvoices**
 > GetInvoicesPaginatedResponse GetInvoices(ctx, optional)
 Return account invoices.
+
+
 
 ### Required Parameters
 
@@ -2696,6 +2864,8 @@ Name | Type | Description  | Notes
 > Group GetList(ctx, id)
 Get a single list.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2722,6 +2892,8 @@ Name | Type | Description  | Notes
 > GetListContactsIdsResponse GetListContactsIds(ctx, id)
 Fetch all contacts IDs belonging to the list with ID.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -2747,6 +2919,8 @@ Name | Type | Description  | Notes
 # **GetListsOfContact**
 > GetListsOfContactPaginatedResponse GetListsOfContact(ctx, id, optional)
 Return lists which contact belongs to.
+
+
 
 ### Required Parameters
 
@@ -2784,7 +2958,7 @@ Name | Type | Description  | Notes
 > GetMessagePreviewResponse GetMessagePreview(ctx, optional)
 Preview message
 
-Get messages preview (with tags merged) up to 100 messages per session.
+
 
 ### Required Parameters
 
@@ -2835,7 +3009,7 @@ Name | Type | Description  | Notes
 > GetMessagePriceResponse GetMessagePrice(ctx, optional)
 Check price
 
-Check pricing for a new outbound message.
+
 
 ### Required Parameters
 
@@ -2887,7 +3061,7 @@ Name | Type | Description  | Notes
 > GetMessagePricesResponse GetMessagePrices(ctx, )
 Get pricing
 
-Get message prices for all countries.
+
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -2910,6 +3084,8 @@ This endpoint does not need any parameter.
 # **GetMessageSession**
 > MessageSession GetMessageSession(ctx, id)
 Get a message session.
+
+
 
 ### Required Parameters
 
@@ -2936,6 +3112,8 @@ Name | Type | Description  | Notes
 # **GetMessageSessionStat**
 > GetMessageSessionStatResponse GetMessageSessionStat(ctx, id, optional)
 Get sending session statistics.
+
+
 
 ### Required Parameters
 
@@ -2972,7 +3150,7 @@ Name | Type | Description  | Notes
 > GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId(ctx, id, optional)
 Fetch messages by given session id.
 
-A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
+
 
 ### Required Parameters
 
@@ -3012,6 +3190,8 @@ Name | Type | Description  | Notes
 > GetMessagingCountersResponse GetMessagingCounters(ctx, )
 Return counters for messaging data views.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -3033,6 +3213,8 @@ This endpoint does not need any parameter.
 # **GetMessagingStat**
 > GetMessagingStatResponse GetMessagingStat(ctx, optional)
 Return messaging statistics.
+
+
 
 ### Required Parameters
 
@@ -3069,7 +3251,7 @@ Name | Type | Description  | Notes
 > MessageOut GetOutboundMessage(ctx, id)
 Get a single message
 
-Get a single outgoing message.
+
 
 ### Required Parameters
 
@@ -3097,7 +3279,7 @@ Name | Type | Description  | Notes
 > GetOutboundMessagesHistoryPaginatedResponse GetOutboundMessagesHistory(ctx, optional)
 Get history
 
-Get outbound messages history.
+
 
 ### Required Parameters
 
@@ -3136,6 +3318,8 @@ Name | Type | Description  | Notes
 > GetPushTokensResponse GetPushTokens(ctx, )
 Get all device tokens assigned to the current account
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -3157,6 +3341,8 @@ This endpoint does not need any parameter.
 # **GetScheduledMessage**
 > MessagesIcs GetScheduledMessage(ctx, id)
 Get message schedule.
+
+
 
 ### Required Parameters
 
@@ -3184,6 +3370,8 @@ Name | Type | Description  | Notes
 > SenderId GetSenderId(ctx, id)
 Get a single Sender ID.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3209,6 +3397,8 @@ Name | Type | Description  | Notes
 # **GetSenderIds**
 > GetSenderIdsPaginatedResponse GetSenderIds(ctx, optional)
 Get all sender IDs of current user.
+
+
 
 ### Required Parameters
 
@@ -3244,6 +3434,8 @@ Name | Type | Description  | Notes
 > GetSenderSettingsResponse GetSenderSettings(ctx, optional)
 Get current user sender settings.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3276,6 +3468,8 @@ Name | Type | Description  | Notes
 # **GetSpendingStat**
 > GetSpendingStatPaginatedResponse GetSpendingStat(ctx, optional)
 Return account spending statistics.
+
+
 
 ### Required Parameters
 
@@ -3313,6 +3507,8 @@ Name | Type | Description  | Notes
 > GetStateResponse GetState(ctx, )
 Get current entities state
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -3334,6 +3530,8 @@ This endpoint does not need any parameter.
 # **GetSubaccount**
 > User GetSubaccount(ctx, id)
 Get a single subaccount.
+
+
 
 ### Required Parameters
 
@@ -3360,6 +3558,8 @@ Name | Type | Description  | Notes
 # **GetSubaccounts**
 > User GetSubaccounts(ctx, optional)
 Get all subaccounts of current user.
+
+
 
 ### Required Parameters
 
@@ -3395,7 +3595,7 @@ Name | Type | Description  | Notes
 > GetSubaccountsWithTokensResponse GetSubaccountsWithTokens(ctx, getSubaccountsWithTokensInputObject, optional)
 Get all subaccounts with their REST API tokens associated with specified app name.
 
-When more than one token related to app name, last key will be returned.
+
 
 ### Required Parameters
 
@@ -3433,6 +3633,8 @@ Name | Type | Description  | Notes
 > Survey GetSurvey(ctx, id)
 Get a survey by id.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3458,6 +3660,8 @@ Name | Type | Description  | Notes
 # **GetSurveyNode**
 > SurveyNode GetSurveyNode(ctx, id)
 Get a node by id.
+
+
 
 ### Required Parameters
 
@@ -3485,6 +3689,8 @@ Name | Type | Description  | Notes
 > GetSurveyNodesResponse GetSurveyNodes(ctx, id)
 Fetch nodes by given survey id.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3510,6 +3716,8 @@ Name | Type | Description  | Notes
 # **GetSurveys**
 > GetSurveysPaginatedResponse GetSurveys(ctx, optional)
 Get all user surveys.
+
+
 
 ### Required Parameters
 
@@ -3545,6 +3753,8 @@ Name | Type | Description  | Notes
 > MessageTemplate GetTemplate(ctx, id)
 Get a single template.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3570,6 +3780,8 @@ Name | Type | Description  | Notes
 # **GetTimezones**
 > GetTimezonesResponse GetTimezones(ctx, optional)
 Return all available timezone IDs.
+
+
 
 ### Required Parameters
 
@@ -3604,6 +3816,8 @@ Name | Type | Description  | Notes
 > GetUnreadMessagesTotalResponse GetUnreadMessagesTotal(ctx, )
 Get total amount of unread messages in the current user chats.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -3625,6 +3839,8 @@ This endpoint does not need any parameter.
 # **GetUnsubscribedContact**
 > UnsubscribedContact GetUnsubscribedContact(ctx, id)
 Get a single unsubscribed contact.
+
+
 
 ### Required Parameters
 
@@ -3651,6 +3867,8 @@ Name | Type | Description  | Notes
 # **GetUnsubscribers**
 > GetUnsubscribersPaginatedResponse GetUnsubscribers(ctx, optional)
 Get all contact have unsubscribed from your communication.
+
+
 
 ### Required Parameters
 
@@ -3686,6 +3904,8 @@ Name | Type | Description  | Notes
 > GetUserDedicatedNumbersPaginatedResponse GetUserDedicatedNumbers(ctx, optional)
 Get user's dedicated numbers.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3720,6 +3940,8 @@ Name | Type | Description  | Notes
 # **GetUserLists**
 > GetUserListsPaginatedResponse GetUserLists(ctx, optional)
 Get all user lists.
+
+
 
 ### Required Parameters
 
@@ -3759,6 +3981,8 @@ Name | Type | Description  | Notes
 > GetVersionsResponse GetVersions(ctx, )
 Get minimal valid apps versions
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -3780,6 +4004,8 @@ This endpoint does not need any parameter.
 # **InviteSubaccount**
 > InviteSubaccount(ctx, inviteSubaccountInputObject)
 Invite new subaccount.
+
+
 
 ### Required Parameters
 
@@ -3807,6 +4033,8 @@ Name | Type | Description  | Notes
 > MarkChatsReadBulk(ctx, markChatsReadBulkInputObject)
 Mark several chats as read by chat ids or mark all chats as read
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3832,6 +4060,8 @@ Name | Type | Description  | Notes
 # **MarkChatsUnreadBulk**
 > MarkChatsUnreadBulk(ctx, markChatsUnreadBulkInputObject)
 Mark several chats as UNread by chat ids or mark all chats as UNread
+
+
 
 ### Required Parameters
 
@@ -3859,6 +4089,8 @@ Name | Type | Description  | Notes
 > MergeSurveyNodes(ctx, mergeSurveyNodesInputObject)
 Merge two question nodes.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3884,6 +4116,8 @@ Name | Type | Description  | Notes
 # **MuteChat**
 > ResourceLinkResponse MuteChat(ctx, muteChatInputObject)
 Set mute mode.
+
+
 
 ### Required Parameters
 
@@ -3911,6 +4145,8 @@ Name | Type | Description  | Notes
 > MuteChatsBulk(ctx, muteChatsBulkInputObject)
 Mute several chats by chat ids or mute all chats
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -3937,6 +4173,8 @@ Name | Type | Description  | Notes
 > PingResponse Ping(ctx, )
 Just does a pong.
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -3958,6 +4196,8 @@ This endpoint does not need any parameter.
 # **ReopenChatsBulk**
 > ReopenChatsBulk(ctx, reopenChatsBulkInputObject)
 Reopen chats by chat ids or reopen all chats
+
+
 
 ### Required Parameters
 
@@ -3985,7 +4225,7 @@ Name | Type | Description  | Notes
 > User RequestNewSubaccountToken(ctx, requestNewSubaccountTokenInputObject)
 Request a new REST API token for subaccount.
 
-Returning user object, key and app name.
+
 
 ### Required Parameters
 
@@ -4013,6 +4253,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse RequestSenderId(ctx, requestSenderIdInputObject)
 Request for a new Sender ID.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4039,6 +4281,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse ResetSurvey(ctx, id)
 Reset a survey flow.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4064,6 +4308,8 @@ Name | Type | Description  | Notes
 # **SearchChats**
 > SearchChatsPaginatedResponse SearchChats(ctx, optional)
 Find chats by inbound or outbound messages text.
+
+
 
 ### Required Parameters
 
@@ -4100,6 +4346,8 @@ Name | Type | Description  | Notes
 > SearchChatsByIdsPaginatedResponse SearchChatsByIds(ctx, optional)
 Find chats by IDs.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4134,6 +4382,8 @@ Name | Type | Description  | Notes
 # **SearchChatsByReceipent**
 > SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent(ctx, optional)
 Find chats by recipient (contact, list name or phone number).
+
+
 
 ### Required Parameters
 
@@ -4170,6 +4420,8 @@ Name | Type | Description  | Notes
 # **SearchContacts**
 > SearchContactsPaginatedResponse SearchContacts(ctx, optional)
 Find user contacts by given parameters.
+
+
 
 ### Required Parameters
 
@@ -4214,6 +4466,8 @@ Name | Type | Description  | Notes
 > SearchInboundMessagesPaginatedResponse SearchInboundMessages(ctx, optional)
 Find inbound messages by given parameters.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4252,6 +4506,8 @@ Name | Type | Description  | Notes
 # **SearchLists**
 > SearchListsPaginatedResponse SearchLists(ctx, optional)
 Find contact lists by given parameters.
+
+
 
 ### Required Parameters
 
@@ -4293,7 +4549,7 @@ Name | Type | Description  | Notes
 > SearchOutboundMessagesPaginatedResponse SearchOutboundMessages(ctx, optional)
 Find messages
 
-Find outbound messages by given parameters.
+
 
 ### Required Parameters
 
@@ -4335,6 +4591,8 @@ Name | Type | Description  | Notes
 > SearchScheduledMessagesPaginatedResponse SearchScheduledMessages(ctx, optional)
 Find scheduled messages by given parameters.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4374,6 +4632,8 @@ Name | Type | Description  | Notes
 > SearchTemplatesPaginatedResponse SearchTemplates(ctx, optional)
 Find user templates by given parameters.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4411,6 +4671,8 @@ Name | Type | Description  | Notes
 > SendEmailVerificationCode(ctx, )
 Send user email verification
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -4433,7 +4695,7 @@ This endpoint does not need any parameter.
 > SendMessageResponse SendMessage(ctx, sendMessageInputObject)
 Send message
 
-The main entrypoint to send messages. See examples above for the reference.
+
 
 ### Required Parameters
 
@@ -4461,6 +4723,8 @@ Name | Type | Description  | Notes
 > SendPhoneVerificationCode(ctx, )
 Send user phone verification
 
+
+
 ### Required Parameters
 This endpoint does not need any parameter.
 
@@ -4482,6 +4746,8 @@ This endpoint does not need any parameter.
 # **SetChatStatus**
 > ResourceLinkResponse SetChatStatus(ctx, setChatStatusInputObject)
 Set status of the chat given by ID.
+
+
 
 ### Required Parameters
 
@@ -4509,6 +4775,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse StartSurvey(ctx, id)
 Start a survey.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4534,6 +4802,8 @@ Name | Type | Description  | Notes
 # **UnblockContact**
 > UnblockContact(ctx, unblockContactInputObject)
 Unblock contact by phone number.
+
+
 
 ### Required Parameters
 
@@ -4561,6 +4831,8 @@ Name | Type | Description  | Notes
 > UnblockContactsBulk(ctx, unblockContactsBulkInputObject)
 Unblock several contacts by blocked contact ids or unblock all contacts
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4586,6 +4858,8 @@ Name | Type | Description  | Notes
 # **UnmuteChatsBulk**
 > UnmuteChatsBulk(ctx, unmuteChatsBulkInputObject)
 Unmute several chats by chat ids or unmute all chats
+
+
 
 ### Required Parameters
 
@@ -4613,6 +4887,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse UnsubscribeContact(ctx, unsubscribeContactInputObject)
 Unsubscribe contact from your communication by phone number.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4638,6 +4914,8 @@ Name | Type | Description  | Notes
 # **UpdateBalanceNotificationSettings**
 > UpdateBalanceNotificationSettings(ctx, updateBalanceNotificationSettingsInputObject)
 Update balance notification settings
+
+
 
 ### Required Parameters
 
@@ -4665,6 +4943,8 @@ Name | Type | Description  | Notes
 > UpdateCallbackSettings(ctx, updateCallbackSettingsInputObject)
 Update callback URL settings
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4691,6 +4971,8 @@ Name | Type | Description  | Notes
 > UpdateChatDesktopNotificationSettings(ctx, updateChatDesktopNotificationSettingsInputObject)
 Update chat desktop notification settings
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4716,6 +4998,8 @@ Name | Type | Description  | Notes
 # **UpdateContact**
 > ResourceLinkResponse UpdateContact(ctx, updateContactInputObject, id)
 Update existing contact.
+
+
 
 ### Required Parameters
 
@@ -4744,6 +5028,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse UpdateContactNote(ctx, updateContactNoteInputObject, id)
 Update existing contact note.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4771,6 +5057,8 @@ Name | Type | Description  | Notes
 > UpdateCurrentUserResponse UpdateCurrentUser(ctx, updateCurrentUserInputObject)
 Update current user info.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4796,6 +5084,8 @@ Name | Type | Description  | Notes
 # **UpdateCustomField**
 > ResourceLinkResponse UpdateCustomField(ctx, updateCustomFieldInputObject, id)
 Update existing custom field.
+
+
 
 ### Required Parameters
 
@@ -4824,6 +5114,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse UpdateCustomFieldValue(ctx, updateCustomFieldValueInputObject, id)
 Update contact's custom field value.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4851,6 +5143,8 @@ Name | Type | Description  | Notes
 > UpdateInboundMessagesNotificationSettings(ctx, updateInboundMessagesNotificationSettingsInputObject)
 Update inbound messages notification settings
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4876,6 +5170,8 @@ Name | Type | Description  | Notes
 # **UpdateList**
 > ResourceLinkResponse UpdateList(ctx, id, optional)
 Update existing list.
+
+
 
 ### Required Parameters
 
@@ -4912,6 +5208,8 @@ Name | Type | Description  | Notes
 > UpdatePassword(ctx, updatePasswordInputObject)
 Change user password.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4938,6 +5236,8 @@ Name | Type | Description  | Notes
 > UpdateSenderSetting(ctx, updateSenderSettingInputObject)
 Change sender settings for specified country.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -4963,6 +5263,8 @@ Name | Type | Description  | Notes
 # **UpdateSurvey**
 > ResourceLinkResponse UpdateSurvey(ctx, updateSurveyInputObject, id)
 Update existing survey.
+
+
 
 ### Required Parameters
 
@@ -4991,6 +5293,8 @@ Name | Type | Description  | Notes
 > ResourceLinkResponse UpdateSurveyNode(ctx, updateSurveyNodeInputObject, id)
 Update existing node.
 
+
+
 ### Required Parameters
 
 Name | Type | Description  | Notes
@@ -5017,6 +5321,8 @@ Name | Type | Description  | Notes
 # **UpdateTemplate**
 > ResourceLinkResponse UpdateTemplate(ctx, updateTemplateInputObject, id)
 Update existing template.
+
+
 
 ### Required Parameters
 
