@@ -129,22 +129,22 @@ tags:
     \ request** or **Booking confirmation.** You can use any of them.\n*   A sufficient\
     \ balance in your account to send this SMS message to the contact list.\n\n> POST\
     \ https://rest.textmagic.com/api/v2/messages\n\nwith the following parameters:\n\
-    \n|Parameter|Value\n|**templateId**|`10541`\n|**lists**|`55313`\n\nYou will receive\
-    \ a result like this:\n\n|Parameter|Example\n|**id**|`34436613`\n|**href**|`/api/v2/sessions/34436613`\n\
-    |**type**|`session`\n|**sessionId**|`34436613`\n|**bulkId**|`null`\n|**messageId**|`null`\n\
-    |**scheduleId**|`null`\n\nThis is a sending session with more than one recipient\
-    \ (but less than 1,000);\_see the notes above about sending bulk messages. We\
-    \ cannot select just one message from this session, so the **messageId** is also\
-    \ empty. However, you can\_[get the session for the messages](/docs/api/sms-sessions/)\
-    \ and then fetch the messages one by one.\n\n## How to send a text message with\
-    \ an attachment\n\nText messages can include only text symbols. And if you need\
-    \ to send a PDF document or an image you can upload it to some cloud storage service\
-    \ first and then insert a link to this document into your text message. TextMagic\
-    \ offers the Attachments feature which allows you to upload your document to TextMagic\
-    \ servers and get a relatively short download link. After that, you just need\
-    \ to insert this link into your message text.\n\nTo upload an attachment, use:\n\
-    \n> POST https://rest.textmagic.com/api/v2/messages/attachment\n\nwith a single\
-    \ parameter:\n\n|Parameter|Value|Description|\n|---------|-----|-----------|\n\
+    \n|Parameter|Value|\n|---------|-----|\n|**templateId**|`10541`|\n|**lists**|`55313`|\n\
+    \nYou will receive a result like this:\n\n|Parameter|Example|\n|---------|-------|\n\
+    |**id**|`34436613`|\n|**href**|`/api/v2/sessions/34436613`|\n|**type**|`session`|\n\
+    |**sessionId**|`34436613`|\n|**bulkId**|`null`|\n|**messageId**|`null`|\n|**scheduleId**|`null`|\n\
+    \nThis is a sending session with more than one recipient (but less than 1,000);\_\
+    see the notes above about sending bulk messages. We cannot select just one message\
+    \ from this session, so the **messageId** is also empty. However, you can\_[get\
+    \ the session for the messages](/docs/api/sms-sessions/) and then fetch the messages\
+    \ one by one.\n\n## How to send a text message with an attachment\n\nText messages\
+    \ can include only text symbols. And if you need to send a PDF document or an\
+    \ image you can upload it to some cloud storage service first and then insert\
+    \ a link to this document into your text message. TextMagic offers the Attachments\
+    \ feature which allows you to upload your document to TextMagic servers and get\
+    \ a relatively short download link. After that, you just need to insert this link\
+    \ into your message text.\n\nTo upload an attachment, use:\n\n> POST https://rest.textmagic.com/api/v2/messages/attachment\n\
+    \nwith a single parameter:\n\n|Parameter|Value|Description|\n|---------|-----|-----------|\n\
     |**file**|`[multipart/form-data]`|Your request with attachment should be sent\
     \ in `multipart/form-data` format.**Note:** Only .jpg, .gif, .png, .pdf, .txt,\
     \ .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf attachment files up to 10\
