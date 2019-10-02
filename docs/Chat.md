@@ -3,13 +3,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [default to null]
+**Id** | **int32** | Chat ID. | [default to null]
 **OriginalId** | **int32** |  | [default to null]
-**Phone** | **string** |  | [default to null]
+**Phone** | **string** | Chat partner phone number. | [default to null]
 **Contact** | [***Contact**](Contact.md) |  | [default to null]
 **UnsubscribedContactId** | **int32** |  | [default to null]
-**Unread** | **int32** |  | [default to null]
-**UpdatedAt** | [**time.Time**](time.Time.md) |  | [default to null]
+**Unread** | **int32** | Unread incoming messages count. | [default to null]
+**UpdatedAt** | [**time.Time**](time.Time.md) | Time when last incoming message arrived at this chat. | [default to null]
 **Status** | **string** |  | [default to null]
 **Mute** | **int32** |  | [default to null]
 **LastMessage** | **string** |  | [default to null]

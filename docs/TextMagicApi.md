@@ -8,10 +8,12 @@ Method | HTTP request | Description
 [**BlockContact**](TextMagicApi.md#BlockContact) | **Post** /api/v2/contacts/block | Block contact from inbound and outbound communication by phone number.
 [**BuyDedicatedNumber**](TextMagicApi.md#BuyDedicatedNumber) | **Post** /api/v2/numbers | Buy a dedicated number and assign it to the specified account.
 [**CancelSurvey**](TextMagicApi.md#CancelSurvey) | **Put** /api/v2/surveys/{id}/cancel | Cancel a survey.
+[**CancelVerification**](TextMagicApi.md#CancelVerification) | **Delete** /api/v2/verify/{verifyId} | Cancel verification process
 [**CheckPhoneVerificationCode**](TextMagicApi.md#CheckPhoneVerificationCode) | **Put** /api/v2/user/phone/verification | Check user phone verification code
+[**CheckPhoneVerificationCode_0**](TextMagicApi.md#CheckPhoneVerificationCode_0) | **Put** /api/v2/verify | Step 2: Check the verification code 
 [**ClearAndAssignContactsToList**](TextMagicApi.md#ClearAndAssignContactsToList) | **Post** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
-[**CloseChatsBulk**](TextMagicApi.md#CloseChatsBulk) | **Post** /api/v2/chats/close/bulk | Close chats by chat ids or close all chats
-[**CloseReadChats**](TextMagicApi.md#CloseReadChats) | **Post** /api/v2/chats/close/read | Close all chats that have no unread messages.
+[**CloseChatsBulk**](TextMagicApi.md#CloseChatsBulk) | **Post** /api/v2/chats/close/bulk | Close chats (bulk)
+[**CloseReadChats**](TextMagicApi.md#CloseReadChats) | **Post** /api/v2/chats/close/read | Close read chats
 [**CloseSubaccount**](TextMagicApi.md#CloseSubaccount) | **Delete** /api/v2/subaccounts/{id} | Close subaccount.
 [**CreateContact**](TextMagicApi.md#CreateContact) | **Post** /api/v2/contacts | Create a new contact from the submitted data.
 [**CreateContactNote**](TextMagicApi.md#CreateContactNote) | **Post** /api/v2/contacts/{id}/notes | Create a new contact note.
@@ -20,12 +22,12 @@ Method | HTTP request | Description
 [**CreatePushToken**](TextMagicApi.md#CreatePushToken) | **Post** /api/v2/push/tokens | Add or update a device token.
 [**CreateSurvey**](TextMagicApi.md#CreateSurvey) | **Post** /api/v2/surveys | Create a new survey from the submitted data.
 [**CreateSurveyNode**](TextMagicApi.md#CreateSurveyNode) | **Post** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
-[**CreateTemplate**](TextMagicApi.md#CreateTemplate) | **Post** /api/v2/templates | Create a new template from the submitted data.
+[**CreateTemplate**](TextMagicApi.md#CreateTemplate) | **Post** /api/v2/templates | Create a template
 [**DeleteAllContacts**](TextMagicApi.md#DeleteAllContacts) | **Delete** /api/v2/contact/all | Delete all contacts.
 [**DeleteAllOutboundMessages**](TextMagicApi.md#DeleteAllOutboundMessages) | **Delete** /api/v2/message/all | Delete all messages
 [**DeleteAvatar**](TextMagicApi.md#DeleteAvatar) | **Delete** /api/v2/user/avatar | Delete an avatar for the current user.\\
-[**DeleteChatMessages**](TextMagicApi.md#DeleteChatMessages) | **Post** /api/v2/chats/{id}/messages/delete | Delete messages from chat by given messages ID(s).
-[**DeleteChatsBulk**](TextMagicApi.md#DeleteChatsBulk) | **Post** /api/v2/chats/delete | Delete chats by given ID(s) or delete all chats.
+[**DeleteChatMessages**](TextMagicApi.md#DeleteChatMessages) | **Post** /api/v2/chats/{id}/messages/delete | Delete chat messages by ID(s)
+[**DeleteChatsBulk**](TextMagicApi.md#DeleteChatsBulk) | **Post** /api/v2/chats/delete | Delete chats (bulk)
 [**DeleteContact**](TextMagicApi.md#DeleteContact) | **Delete** /api/v2/contacts/{id} | Delete a single contact.
 [**DeleteContactAvatar**](TextMagicApi.md#DeleteContactAvatar) | **Delete** /api/v2/contacts/{id}/avatar | Delete an avatar for the contact.
 [**DeleteContactNote**](TextMagicApi.md#DeleteContactNote) | **Delete** /api/v2/notes/{id} | Delete a single contact note.
@@ -34,35 +36,35 @@ Method | HTTP request | Description
 [**DeleteContactsFromList**](TextMagicApi.md#DeleteContactsFromList) | **Delete** /api/v2/lists/{id}/contacts | Unassign contacts from the specified list.
 [**DeleteCustomField**](TextMagicApi.md#DeleteCustomField) | **Delete** /api/v2/customfields/{id} | Delete a single custom field.
 [**DeleteDedicatedNumber**](TextMagicApi.md#DeleteDedicatedNumber) | **Delete** /api/v2/numbers/{id} | Cancel dedicated number subscription.
-[**DeleteInboundMessage**](TextMagicApi.md#DeleteInboundMessage) | **Delete** /api/v2/replies/{id} | Delete the incoming message.
-[**DeleteInboundMessagesBulk**](TextMagicApi.md#DeleteInboundMessagesBulk) | **Post** /api/v2/replies/delete | Delete inbound messages by given ID(s) or delete all inbound messages.
+[**DeleteInboundMessage**](TextMagicApi.md#DeleteInboundMessage) | **Delete** /api/v2/replies/{id} | Delete a single inbound message
+[**DeleteInboundMessagesBulk**](TextMagicApi.md#DeleteInboundMessagesBulk) | **Post** /api/v2/replies/delete | Delete inbound messages (bulk)
 [**DeleteList**](TextMagicApi.md#DeleteList) | **Delete** /api/v2/lists/{id} | Delete a single list.
 [**DeleteListAvatar**](TextMagicApi.md#DeleteListAvatar) | **Delete** /api/v2/lists/{id}/avatar | Delete an avatar for the list.
 [**DeleteListContactsBulk**](TextMagicApi.md#DeleteListContactsBulk) | **Post** /api/v2/lists/{id}/contacts/delete | Delete contact from list by given ID(s) or all contacts from list.
 [**DeleteListsBulk**](TextMagicApi.md#DeleteListsBulk) | **Post** /api/v2/lists/delete | Delete list by given ID(s) or delete all lists.
-[**DeleteMessageSession**](TextMagicApi.md#DeleteMessageSession) | **Delete** /api/v2/sessions/{id} | Delete a message session, together with all nested messages.
-[**DeleteMessageSessionsBulk**](TextMagicApi.md#DeleteMessageSessionsBulk) | **Post** /api/v2/sessions/delete | Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+[**DeleteMessageSession**](TextMagicApi.md#DeleteMessageSession) | **Delete** /api/v2/sessions/{id} | Delete a session
+[**DeleteMessageSessionsBulk**](TextMagicApi.md#DeleteMessageSessionsBulk) | **Post** /api/v2/sessions/delete | Delete sessions (bulk)
 [**DeleteOutboundMessage**](TextMagicApi.md#DeleteOutboundMessage) | **Delete** /api/v2/messages/{id} | Delete message
-[**DeleteOutboundMessagesBulk**](TextMagicApi.md#DeleteOutboundMessagesBulk) | **Post** /api/v2/messages/delete | Delete messages by IDs
+[**DeleteOutboundMessagesBulk**](TextMagicApi.md#DeleteOutboundMessagesBulk) | **Post** /api/v2/messages/delete | Delete messages (bulk)
 [**DeletePushToken**](TextMagicApi.md#DeletePushToken) | **Delete** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
-[**DeleteScheduledMessage**](TextMagicApi.md#DeleteScheduledMessage) | **Delete** /api/v2/schedules/{id} | Delete a message session, together with all nested messages.
-[**DeleteScheduledMessagesBulk**](TextMagicApi.md#DeleteScheduledMessagesBulk) | **Post** /api/v2/schedules/delete | Delete scheduled messages by given ID(s) or delete all scheduled messages.
+[**DeleteScheduledMessage**](TextMagicApi.md#DeleteScheduledMessage) | **Delete** /api/v2/schedules/{id} | Delete a single scheduled message
+[**DeleteScheduledMessagesBulk**](TextMagicApi.md#DeleteScheduledMessagesBulk) | **Post** /api/v2/schedules/delete | Delete scheduled messages (bulk)
 [**DeleteSenderId**](TextMagicApi.md#DeleteSenderId) | **Delete** /api/v2/senderids/{id} | Delete a Sender ID.
 [**DeleteSurvey**](TextMagicApi.md#DeleteSurvey) | **Delete** /api/v2/surveys/{id} | Delete a survey.
 [**DeleteSurveyNode**](TextMagicApi.md#DeleteSurveyNode) | **Delete** /api/v2/surveys/nodes/{id} | Delete a node.
-[**DeleteTemplate**](TextMagicApi.md#DeleteTemplate) | **Delete** /api/v2/templates/{id} | Delete a single template.
-[**DeleteTemplatesBulk**](TextMagicApi.md#DeleteTemplatesBulk) | **Post** /api/v2/templates/delete | Delete template by given ID(s) or delete all templates.
+[**DeleteTemplate**](TextMagicApi.md#DeleteTemplate) | **Delete** /api/v2/templates/{id} | Delete a template
+[**DeleteTemplatesBulk**](TextMagicApi.md#DeleteTemplatesBulk) | **Post** /api/v2/templates/delete | Delete templates (bulk)
 [**DoAuth**](TextMagicApi.md#DoAuth) | **Post** /api/v2/auth | Authenticate user by given username and password.
 [**DoCarrierLookup**](TextMagicApi.md#DoCarrierLookup) | **Get** /api/v2/lookups/{phone} | Carrier Lookup
 [**DoEmailLookup**](TextMagicApi.md#DoEmailLookup) | **Get** /api/v2/email-lookups/{email} | Validate Email address using Email Lookup tool
 [**DuplicateSurvey**](TextMagicApi.md#DuplicateSurvey) | **Put** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
 [**GetAllBulkSessions**](TextMagicApi.md#GetAllBulkSessions) | **Get** /api/v2/bulks | Get all bulk sending sessions.
-[**GetAllChats**](TextMagicApi.md#GetAllChats) | **Get** /api/v2/chats | Get all user chats.
-[**GetAllInboundMessages**](TextMagicApi.md#GetAllInboundMessages) | **Get** /api/v2/replies | Get all inbox messages.
-[**GetAllMessageSessions**](TextMagicApi.md#GetAllMessageSessions) | **Get** /api/v2/sessions | Get all message sending sessions.
+[**GetAllChats**](TextMagicApi.md#GetAllChats) | **Get** /api/v2/chats | Get all chats
+[**GetAllInboundMessages**](TextMagicApi.md#GetAllInboundMessages) | **Get** /api/v2/replies | Get all inbound messages
+[**GetAllMessageSessions**](TextMagicApi.md#GetAllMessageSessions) | **Get** /api/v2/sessions | Get all sessions
 [**GetAllOutboundMessages**](TextMagicApi.md#GetAllOutboundMessages) | **Get** /api/v2/messages | Get all messages
-[**GetAllScheduledMessages**](TextMagicApi.md#GetAllScheduledMessages) | **Get** /api/v2/schedules | Get all scheduled messages.
-[**GetAllTemplates**](TextMagicApi.md#GetAllTemplates) | **Get** /api/v2/templates | Get all user templates.
+[**GetAllScheduledMessages**](TextMagicApi.md#GetAllScheduledMessages) | **Get** /api/v2/schedules | Get all scheduled messages
+[**GetAllTemplates**](TextMagicApi.md#GetAllTemplates) | **Get** /api/v2/templates | Get all templates
 [**GetAvailableDedicatedNumbers**](TextMagicApi.md#GetAvailableDedicatedNumbers) | **Get** /api/v2/numbers/available | Find available dedicated numbers to buy.
 [**GetAvailableSenderSettingOptions**](TextMagicApi.md#GetAvailableSenderSettingOptions) | **Get** /api/v2/sources | Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
 [**GetBalanceNotificationOptions**](TextMagicApi.md#GetBalanceNotificationOptions) | **Get** /api/v2/user/notification/balance/bundles | Returns the list of available balance options which can be used as a bound to determine when to send email to user with low balance notification. See https://my.textmagic.com/online/account/notifications/balance
@@ -71,9 +73,9 @@ Method | HTTP request | Description
 [**GetBulkSession**](TextMagicApi.md#GetBulkSession) | **Get** /api/v2/bulks/{id} | Get bulk message session status.
 [**GetCallbackSettings**](TextMagicApi.md#GetCallbackSettings) | **Get** /api/v2/callback/settings | Fetch callback URL settings
 [**GetCallsPrices**](TextMagicApi.md#GetCallsPrices) | **Get** /api/v2/calls/price | Check pricing for a inbound/outbound call.
-[**GetChat**](TextMagicApi.md#GetChat) | **Get** /api/v2/chats/{id} | Get a single chat.
-[**GetChatByPhone**](TextMagicApi.md#GetChatByPhone) | **Get** /api/v2/chats/{phone}/by/phone | Find chats by phone.
-[**GetChatMessages**](TextMagicApi.md#GetChatMessages) | **Get** /api/v2/chats/{id}/message | Fetch messages from chat with specified chat id.
+[**GetChat**](TextMagicApi.md#GetChat) | **Get** /api/v2/chats/{id} | Get a single chat
+[**GetChatByPhone**](TextMagicApi.md#GetChatByPhone) | **Get** /api/v2/chats/{phone}/by/phone | Find chats by phone
+[**GetChatMessages**](TextMagicApi.md#GetChatMessages) | **Get** /api/v2/chats/{id}/message | Get chat messages
 [**GetContact**](TextMagicApi.md#GetContact) | **Get** /api/v2/contacts/{id} | Get a single contact.
 [**GetContactByPhone**](TextMagicApi.md#GetContactByPhone) | **Get** /api/v2/contacts/phone/{phone} | Get a single contact by phone number.
 [**GetContactIfBlocked**](TextMagicApi.md#GetContactIfBlocked) | **Get** /api/v2/contacts/block/phone | Check is that phone number blocked
@@ -90,8 +92,7 @@ Method | HTTP request | Description
 [**GetDedicatedNumber**](TextMagicApi.md#GetDedicatedNumber) | **Get** /api/v2/numbers/{id} | Get a single dedicated number.
 [**GetDisallowedRules**](TextMagicApi.md#GetDisallowedRules) | **Get** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
 [**GetFavourites**](TextMagicApi.md#GetFavourites) | **Get** /api/v2/contacts/favorite | Get favorite contacts and lists.
-[**GetForwardedCalls**](TextMagicApi.md#GetForwardedCalls) | **Get** /api/v2/calls | Get all forwarded calls.
-[**GetInboundMessage**](TextMagicApi.md#GetInboundMessage) | **Get** /api/v2/replies/{id} | Get a single inbox message.
+[**GetInboundMessage**](TextMagicApi.md#GetInboundMessage) | **Get** /api/v2/replies/{id} | Get a single inbound message
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#GetInboundMessagesNotificationSettings) | **Get** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**GetInvoices**](TextMagicApi.md#GetInvoices) | **Get** /api/v2/invoices | Return account invoices.
 [**GetList**](TextMagicApi.md#GetList) | **Get** /api/v2/lists/{id} | Get a single list.
@@ -100,15 +101,15 @@ Method | HTTP request | Description
 [**GetMessagePreview**](TextMagicApi.md#GetMessagePreview) | **Get** /api/v2/messages/preview | Preview message
 [**GetMessagePrice**](TextMagicApi.md#GetMessagePrice) | **Get** /api/v2/messages/price | Check price
 [**GetMessagePrices**](TextMagicApi.md#GetMessagePrices) | **Get** /api/v2/messages/prices | Get pricing
-[**GetMessageSession**](TextMagicApi.md#GetMessageSession) | **Get** /api/v2/sessions/{id} | Get a message session.
-[**GetMessageSessionStat**](TextMagicApi.md#GetMessageSessionStat) | **Get** /api/v2/sessions/{id}/stat | Get sending session statistics.
-[**GetMessagesBySessionId**](TextMagicApi.md#GetMessagesBySessionId) | **Get** /api/v2/sessions/{id}/messages | Fetch messages by given session id.
+[**GetMessageSession**](TextMagicApi.md#GetMessageSession) | **Get** /api/v2/sessions/{id} | Get a session details
+[**GetMessageSessionStat**](TextMagicApi.md#GetMessageSessionStat) | **Get** /api/v2/sessions/{id}/stat | Get a session statistics
+[**GetMessagesBySessionId**](TextMagicApi.md#GetMessagesBySessionId) | **Get** /api/v2/sessions/{id}/messages | Get a session messages
 [**GetMessagingCounters**](TextMagicApi.md#GetMessagingCounters) | **Get** /api/v2/stats/messaging/data | Return counters for messaging data views.
 [**GetMessagingStat**](TextMagicApi.md#GetMessagingStat) | **Get** /api/v2/stats/messaging | Return messaging statistics.
 [**GetOutboundMessage**](TextMagicApi.md#GetOutboundMessage) | **Get** /api/v2/messages/{id} | Get a single message
 [**GetOutboundMessagesHistory**](TextMagicApi.md#GetOutboundMessagesHistory) | **Get** /api/v2/history | Get history
 [**GetPushTokens**](TextMagicApi.md#GetPushTokens) | **Get** /api/v2/push/tokens | Get all device tokens assigned to the current account
-[**GetScheduledMessage**](TextMagicApi.md#GetScheduledMessage) | **Get** /api/v2/schedules/{id} | Get message schedule.
+[**GetScheduledMessage**](TextMagicApi.md#GetScheduledMessage) | **Get** /api/v2/schedules/{id} | Get a single scheduled message
 [**GetSenderId**](TextMagicApi.md#GetSenderId) | **Get** /api/v2/senderids/{id} | Get a single Sender ID.
 [**GetSenderIds**](TextMagicApi.md#GetSenderIds) | **Get** /api/v2/senderids | Get all sender IDs of current user.
 [**GetSenderSettings**](TextMagicApi.md#GetSenderSettings) | **Get** /api/v2/sender/settings | Get current user sender settings.
@@ -121,42 +122,43 @@ Method | HTTP request | Description
 [**GetSurveyNode**](TextMagicApi.md#GetSurveyNode) | **Get** /api/v2/surveys/nodes/{id} | Get a node by id.
 [**GetSurveyNodes**](TextMagicApi.md#GetSurveyNodes) | **Get** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
 [**GetSurveys**](TextMagicApi.md#GetSurveys) | **Get** /api/v2/surveys | Get all user surveys.
-[**GetTemplate**](TextMagicApi.md#GetTemplate) | **Get** /api/v2/templates/{id} | Get a single template.
+[**GetTemplate**](TextMagicApi.md#GetTemplate) | **Get** /api/v2/templates/{id} | Get a template details
 [**GetTimezones**](TextMagicApi.md#GetTimezones) | **Get** /api/v2/timezones | Return all available timezone IDs.
-[**GetUnreadMessagesTotal**](TextMagicApi.md#GetUnreadMessagesTotal) | **Get** /api/v2/chats/unread/count | Get total amount of unread messages in the current user chats.
+[**GetUnreadMessagesTotal**](TextMagicApi.md#GetUnreadMessagesTotal) | **Get** /api/v2/chats/unread/count | Get unread messages number
 [**GetUnsubscribedContact**](TextMagicApi.md#GetUnsubscribedContact) | **Get** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
 [**GetUnsubscribers**](TextMagicApi.md#GetUnsubscribers) | **Get** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
 [**GetUserDedicatedNumbers**](TextMagicApi.md#GetUserDedicatedNumbers) | **Get** /api/v2/numbers | Get user&#39;s dedicated numbers.
 [**GetUserLists**](TextMagicApi.md#GetUserLists) | **Get** /api/v2/lists | Get all user lists.
 [**GetVersions**](TextMagicApi.md#GetVersions) | **Get** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#InviteSubaccount) | **Post** /api/v2/subaccounts | Invite new subaccount.
-[**MarkChatsReadBulk**](TextMagicApi.md#MarkChatsReadBulk) | **Post** /api/v2/chats/read/bulk | Mark several chats as read by chat ids or mark all chats as read
-[**MarkChatsUnreadBulk**](TextMagicApi.md#MarkChatsUnreadBulk) | **Post** /api/v2/chats/unread/bulk | Mark several chats as UNread by chat ids or mark all chats as UNread
+[**MarkChatsReadBulk**](TextMagicApi.md#MarkChatsReadBulk) | **Post** /api/v2/chats/read/bulk | Mark chats as read (bulk)
+[**MarkChatsUnreadBulk**](TextMagicApi.md#MarkChatsUnreadBulk) | **Post** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**MergeSurveyNodes**](TextMagicApi.md#MergeSurveyNodes) | **Post** /api/v2/surveys/nodes/merge | Merge two question nodes.
-[**MuteChat**](TextMagicApi.md#MuteChat) | **Post** /api/v2/chats/mute | Set mute mode.
-[**MuteChatsBulk**](TextMagicApi.md#MuteChatsBulk) | **Post** /api/v2/chats/mute/bulk | Mute several chats by chat ids or mute all chats
+[**MuteChat**](TextMagicApi.md#MuteChat) | **Post** /api/v2/chats/mute | Mute chat sounds
+[**MuteChatsBulk**](TextMagicApi.md#MuteChatsBulk) | **Post** /api/v2/chats/mute/bulk | Mute chats (bulk)
 [**Ping**](TextMagicApi.md#Ping) | **Get** /api/v2/ping | Just does a pong.
-[**ReopenChatsBulk**](TextMagicApi.md#ReopenChatsBulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats by chat ids or reopen all chats
+[**ReopenChatsBulk**](TextMagicApi.md#ReopenChatsBulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#RequestNewSubaccountToken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
 [**RequestSenderId**](TextMagicApi.md#RequestSenderId) | **Post** /api/v2/senderids | Request for a new Sender ID.
 [**ResetSurvey**](TextMagicApi.md#ResetSurvey) | **Put** /api/v2/surveys/{id}/reset | Reset a survey flow.
-[**SearchChats**](TextMagicApi.md#SearchChats) | **Get** /api/v2/chats/search | Find chats by inbound or outbound messages text.
-[**SearchChatsByIds**](TextMagicApi.md#SearchChatsByIds) | **Get** /api/v2/chats/search/ids | Find chats by IDs.
-[**SearchChatsByReceipent**](TextMagicApi.md#SearchChatsByReceipent) | **Get** /api/v2/chats/search/recipients | Find chats by recipient (contact, list name or phone number).
+[**SearchChats**](TextMagicApi.md#SearchChats) | **Get** /api/v2/chats/search | Find chats by message text
+[**SearchChatsByIds**](TextMagicApi.md#SearchChatsByIds) | **Get** /api/v2/chats/search/ids | Find chats (bulk)
+[**SearchChatsByReceipent**](TextMagicApi.md#SearchChatsByReceipent) | **Get** /api/v2/chats/search/recipients | Find chats by recipient
 [**SearchContacts**](TextMagicApi.md#SearchContacts) | **Get** /api/v2/contacts/search | Find user contacts by given parameters.
-[**SearchInboundMessages**](TextMagicApi.md#SearchInboundMessages) | **Get** /api/v2/replies/search | Find inbound messages by given parameters.
+[**SearchInboundMessages**](TextMagicApi.md#SearchInboundMessages) | **Get** /api/v2/replies/search | Find inbound messages
 [**SearchLists**](TextMagicApi.md#SearchLists) | **Get** /api/v2/lists/search | Find contact lists by given parameters.
 [**SearchOutboundMessages**](TextMagicApi.md#SearchOutboundMessages) | **Get** /api/v2/messages/search | Find messages
-[**SearchScheduledMessages**](TextMagicApi.md#SearchScheduledMessages) | **Get** /api/v2/schedules/search | Find scheduled messages by given parameters.
-[**SearchTemplates**](TextMagicApi.md#SearchTemplates) | **Get** /api/v2/templates/search | Find user templates by given parameters.
+[**SearchScheduledMessages**](TextMagicApi.md#SearchScheduledMessages) | **Get** /api/v2/schedules/search | Find scheduled messages
+[**SearchTemplates**](TextMagicApi.md#SearchTemplates) | **Get** /api/v2/templates/search | Find templates by criteria
 [**SendEmailVerificationCode**](TextMagicApi.md#SendEmailVerificationCode) | **Get** /api/v2/user/email/verification | Send user email verification
 [**SendMessage**](TextMagicApi.md#SendMessage) | **Post** /api/v2/messages | Send message
 [**SendPhoneVerificationCode**](TextMagicApi.md#SendPhoneVerificationCode) | **Get** /api/v2/user/phone/verification | Send user phone verification
-[**SetChatStatus**](TextMagicApi.md#SetChatStatus) | **Post** /api/v2/chats/status | Set status of the chat given by ID.
+[**SendPhoneVerificationCode_0**](TextMagicApi.md#SendPhoneVerificationCode_0) | **Post** /api/v2/verify | Step 1: Send a verification code 
+[**SetChatStatus**](TextMagicApi.md#SetChatStatus) | **Post** /api/v2/chats/status | Change chat status
 [**StartSurvey**](TextMagicApi.md#StartSurvey) | **Put** /api/v2/surveys/{id}/start | Start a survey.
 [**UnblockContact**](TextMagicApi.md#UnblockContact) | **Post** /api/v2/contacts/unblock | Unblock contact by phone number.
 [**UnblockContactsBulk**](TextMagicApi.md#UnblockContactsBulk) | **Post** /api/v2/contacts/unblock/bulk | Unblock several contacts by blocked contact ids or unblock all contacts
-[**UnmuteChatsBulk**](TextMagicApi.md#UnmuteChatsBulk) | **Post** /api/v2/chats/unmute/bulk | Unmute several chats by chat ids or unmute all chats
+[**UnmuteChatsBulk**](TextMagicApi.md#UnmuteChatsBulk) | **Post** /api/v2/chats/unmute/bulk | Unmute chats (bulk)
 [**UnsubscribeContact**](TextMagicApi.md#UnsubscribeContact) | **Post** /api/v2/unsubscribers | Unsubscribe contact from your communication by phone number.
 [**UpdateBalanceNotificationSettings**](TextMagicApi.md#UpdateBalanceNotificationSettings) | **Put** /api/v2/user/notification/balance | Update balance notification settings
 [**UpdateCallbackSettings**](TextMagicApi.md#UpdateCallbackSettings) | **Put** /api/v2/callback/settings | Update callback URL settings
@@ -172,7 +174,7 @@ Method | HTTP request | Description
 [**UpdateSenderSetting**](TextMagicApi.md#UpdateSenderSetting) | **Put** /api/v2/sender/settings | Change sender settings for specified country.
 [**UpdateSurvey**](TextMagicApi.md#UpdateSurvey) | **Put** /api/v2/surveys/{id} | Update existing survey.
 [**UpdateSurveyNode**](TextMagicApi.md#UpdateSurveyNode) | **Put** /api/v2/surveys/nodes/{id} | Update existing node.
-[**UpdateTemplate**](TextMagicApi.md#UpdateTemplate) | **Put** /api/v2/templates/{id} | Update existing template.
+[**UpdateTemplate**](TextMagicApi.md#UpdateTemplate) | **Put** /api/v2/templates/{id} | Update a template
 
 
 # **AssignContactsToList**
@@ -288,6 +290,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **CancelVerification**
+> CancelVerification(ctx, verifyId)
+Cancel verification process
+
+You can cancel the verification not earlier than 30 seconds after the initial request.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **verifyId** | **string**| the verifyId that you received in Step 1. | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **CheckPhoneVerificationCode**
 > CheckPhoneVerificationCode(ctx, checkPhoneVerificationCodeInputObject)
 Check user phone verification code
@@ -300,6 +330,34 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
+
+### Return type
+
+ (empty response body)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **CheckPhoneVerificationCode_0**
+> CheckPhoneVerificationCode_0(ctx, checkPhoneVerificationCodeInputObject)
+Step 2: Check the verification code 
+
+Check received code from user with the code which was actually sent.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject1**](CheckPhoneVerificationCodeInputObject1.md)|  | 
 
 ### Return type
 
@@ -347,9 +405,9 @@ Name | Type | Description  | Notes
 
 # **CloseChatsBulk**
 > CloseChatsBulk(ctx, closeChatsBulkInputObject)
+Close chats (bulk)
+
 Close chats by chat ids or close all chats
-
-
 
 ### Required Parameters
 
@@ -375,9 +433,9 @@ Name | Type | Description  | Notes
 
 # **CloseReadChats**
 > CloseReadChats(ctx, )
+Close read chats
+
 Close all chats that have no unread messages.
-
-
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -625,7 +683,7 @@ Name | Type | Description  | Notes
 
 # **CreateTemplate**
 > ResourceLinkResponse CreateTemplate(ctx, createTemplateInputObject)
-Create a new template from the submitted data.
+Create a template
 
 
 
@@ -679,7 +737,7 @@ This endpoint does not need any parameter.
 > DeleteAllOutboundMessages(ctx, )
 Delete all messages
 
-
+Delete all messages.
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -725,9 +783,9 @@ This endpoint does not need any parameter.
 
 # **DeleteChatMessages**
 > DeleteChatMessages(ctx, deleteChatMessagesBulkInputObject, id)
+Delete chat messages by ID(s)
+
 Delete messages from chat by given messages ID(s).
-
-
 
 ### Required Parameters
 
@@ -754,9 +812,9 @@ Name | Type | Description  | Notes
 
 # **DeleteChatsBulk**
 > DeleteChatsBulk(ctx, deleteChatsBulkInputObject)
+Delete chats (bulk)
+
 Delete chats by given ID(s) or delete all chats.
-
-
 
 ### Required Parameters
 
@@ -1008,16 +1066,16 @@ Name | Type | Description  | Notes
 
 # **DeleteInboundMessage**
 > DeleteInboundMessage(ctx, id)
-Delete the incoming message.
+Delete a single inbound message
 
-
+> Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
+  **id** | **int32**| The unique numeric ID for the inbound message. | 
 
 ### Return type
 
@@ -1036,9 +1094,9 @@ Name | Type | Description  | Notes
 
 # **DeleteInboundMessagesBulk**
 > DeleteInboundMessagesBulk(ctx, deleteInboundMessagesBulkInputObject)
-Delete inbound messages by given ID(s) or delete all inbound messages.
+Delete inbound messages (bulk)
 
-
+> Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
 
 ### Required Parameters
 
@@ -1177,7 +1235,7 @@ Name | Type | Description  | Notes
 
 # **DeleteMessageSession**
 > DeleteMessageSession(ctx, id)
-Delete a message session, together with all nested messages.
+Delete a session
 
 
 
@@ -1205,7 +1263,7 @@ Name | Type | Description  | Notes
 
 # **DeleteMessageSessionsBulk**
 > DeleteMessageSessionsBulk(ctx, deleteMessageSessionsBulkInputObject)
-Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+Delete sessions (bulk)
 
 
 
@@ -1235,7 +1293,7 @@ Name | Type | Description  | Notes
 > DeleteOutboundMessage(ctx, id)
 Delete message
 
-
+Delete a single message.
 
 ### Required Parameters
 
@@ -1261,9 +1319,9 @@ Name | Type | Description  | Notes
 
 # **DeleteOutboundMessagesBulk**
 > DeleteOutboundMessagesBulk(ctx, deleteOutboundMessagesBulkInputObject)
-Delete messages by IDs
+Delete messages (bulk)
 
-
+Delete outbound messages by given ID(s) or delete all outbound messages.
 
 ### Required Parameters
 
@@ -1318,7 +1376,7 @@ Name | Type | Description  | Notes
 
 # **DeleteScheduledMessage**
 > DeleteScheduledMessage(ctx, id)
-Delete a message session, together with all nested messages.
+Delete a single scheduled message
 
 
 
@@ -1346,7 +1404,7 @@ Name | Type | Description  | Notes
 
 # **DeleteScheduledMessagesBulk**
 > DeleteScheduledMessagesBulk(ctx, deleteScheduledMessagesBulkInputObject)
-Delete scheduled messages by given ID(s) or delete all scheduled messages.
+Delete scheduled messages (bulk)
 
 
 
@@ -1458,7 +1516,7 @@ Name | Type | Description  | Notes
 
 # **DeleteTemplate**
 > DeleteTemplate(ctx, id)
-Delete a single template.
+Delete a template
 
 
 
@@ -1486,7 +1544,7 @@ Name | Type | Description  | Notes
 
 # **DeleteTemplatesBulk**
 > DeleteTemplatesBulk(ctx, deleteTemplatesBulkInputObject)
-Delete template by given ID(s) or delete all templates.
+Delete templates (bulk)
 
 
 
@@ -1516,7 +1574,7 @@ Name | Type | Description  | Notes
 > DoAuthResponse DoAuth(ctx, doAuthInputObject)
 Authenticate user by given username and password.
 
-
+Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
 
 ### Required Parameters
 
@@ -1651,8 +1709,8 @@ Optional parameters are passed through a pointer to a GetAllBulkSessionsOpts str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -1671,7 +1729,7 @@ Name | Type | Description  | Notes
 
 # **GetAllChats**
 > GetAllChatsPaginatedResponse GetAllChats(ctx, optional)
-Get all user chats.
+Get all chats
 
 
 
@@ -1688,8 +1746,8 @@ Optional parameters are passed through a pointer to a GetAllChatsOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **status** | **optional.String**| Fetch only (a)ctive, (c)losed or (d)eleted chats | 
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
  **voice** | **optional.Int32**| Fetch results with voice calls | [default to 0]
  **flat** | **optional.Int32**| Should additional contact info be included | [default to 0]
@@ -1711,7 +1769,7 @@ Name | Type | Description  | Notes
 
 # **GetAllInboundMessages**
 > GetAllInboundMessagesPaginatedResponse GetAllInboundMessages(ctx, optional)
-Get all inbox messages.
+Get all inbound messages
 
 
 
@@ -1727,8 +1785,8 @@ Optional parameters are passed through a pointer to a GetAllInboundMessagesOpts 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
  **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
 
@@ -1749,7 +1807,7 @@ Name | Type | Description  | Notes
 
 # **GetAllMessageSessions**
 > GetAllMessageSessionsPaginatedResponse GetAllMessageSessions(ctx, optional)
-Get all message sending sessions.
+Get all sessions
 
 
 
@@ -1765,8 +1823,8 @@ Optional parameters are passed through a pointer to a GetAllMessageSessionsOpts 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -1787,7 +1845,7 @@ Name | Type | Description  | Notes
 > GetAllOutboundMessagesPaginatedResponse GetAllOutboundMessages(ctx, optional)
 Get all messages
 
-
+Get all user oubound messages.
 
 ### Required Parameters
 
@@ -1801,8 +1859,8 @@ Optional parameters are passed through a pointer to a GetAllOutboundMessagesOpts
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **lastId** | **optional.Int32**| Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | 
 
 ### Return type
@@ -1822,7 +1880,7 @@ Name | Type | Description  | Notes
 
 # **GetAllScheduledMessages**
 > GetAllScheduledMessagesPaginatedResponse GetAllScheduledMessages(ctx, optional)
-Get all scheduled messages.
+Get all scheduled messages
 
 
 
@@ -1838,8 +1896,8 @@ Optional parameters are passed through a pointer to a GetAllScheduledMessagesOpt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **status** | **optional.String**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [default to x]
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
  **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
@@ -1861,7 +1919,7 @@ Name | Type | Description  | Notes
 
 # **GetAllTemplates**
 > GetAllTemplatesPaginatedResponse GetAllTemplates(ctx, optional)
-Get all user templates.
+Get all templates
 
 
 
@@ -1877,8 +1935,8 @@ Optional parameters are passed through a pointer to a GetAllTemplatesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | 
- **limit** | **optional.Int32**| How many results to return | 
+ **page** | **optional.Int32**| Fetch specified results page. | 
+ **limit** | **optional.Int32**| The number of results per page. | 
 
 ### Return type
 
@@ -2034,8 +2092,8 @@ Optional parameters are passed through a pointer to a GetBlockedContactsOpts str
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **query** | **optional.String**| Find blocked contacts by specified search query | 
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
  **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
@@ -2133,7 +2191,7 @@ This endpoint does not need any parameter.
 
 # **GetChat**
 > Chat GetChat(ctx, id)
-Get a single chat.
+Get a single chat
 
 
 
@@ -2161,7 +2219,7 @@ Name | Type | Description  | Notes
 
 # **GetChatByPhone**
 > Chat GetChatByPhone(ctx, phone, optional)
-Find chats by phone.
+Find chats by phone
 
 
 
@@ -2199,7 +2257,7 @@ Name | Type | Description  | Notes
 
 # **GetChatMessages**
 > GetChatMessagesPaginatedResponse GetChatMessages(ctx, id, optional)
-Fetch messages from chat with specified chat id.
+Get chat messages
 
 
 
@@ -2217,8 +2275,8 @@ Optional parameters are passed through a pointer to a GetChatMessagesOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **query** | **optional.String**| Find messages by specified search query | 
  **start** | **optional.Int32**| Return messages since specified timestamp only | 
  **end** | **optional.Int32**| Return messages up to specified timestamp only | 
@@ -2400,8 +2458,8 @@ Optional parameters are passed through a pointer to a GetContactNotesOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -2436,8 +2494,8 @@ Optional parameters are passed through a pointer to a GetContactsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **shared** | **optional.Int32**| Should shared contacts to be included | [default to 0]
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
  **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
@@ -2477,7 +2535,7 @@ Optional parameters are passed through a pointer to a GetContactsAutocompleteOpt
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **lists** | **optional.Int32**| Should lists be returned or not | [default to 0]
 
 ### Return type
@@ -2499,7 +2557,7 @@ Name | Type | Description  | Notes
 > GetContactsByListIdPaginatedResponse GetContactsByListId(ctx, id, optional)
 Fetch user contacts by given group id.
 
-
+A useful synonym for \"contacts/search\" command with provided \"listId\" parameter.
 
 ### Required Parameters
 
@@ -2515,8 +2573,8 @@ Optional parameters are passed through a pointer to a GetContactsByListIdOpts st
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
  **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
 
@@ -2629,8 +2687,8 @@ Optional parameters are passed through a pointer to a GetCustomFieldsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -2717,8 +2775,8 @@ Optional parameters are passed through a pointer to a GetFavouritesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **query** | **optional.String**| Find contacts or lists by specified search query | [default to A]
 
 ### Return type
@@ -2736,45 +2794,9 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **GetForwardedCalls**
-> GetForwardedCallsPaginatedResponse GetForwardedCalls(ctx, optional)
-Get all forwarded calls.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GetForwardedCallsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a GetForwardedCallsOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
-
-### Return type
-
-[**GetForwardedCallsPaginatedResponse**](GetForwardedCallsPaginatedResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **GetInboundMessage**
 > MessageIn GetInboundMessage(ctx, id)
-Get a single inbox message.
+Get a single inbound message
 
 
 
@@ -2783,7 +2805,7 @@ Get a single inbox message.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
+  **id** | **int32**| The unique numeric ID for the inbound message. | 
 
 ### Return type
 
@@ -2842,8 +2864,8 @@ Optional parameters are passed through a pointer to a GetInvoicesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -2936,8 +2958,8 @@ Optional parameters are passed through a pointer to a GetListsOfContactOpts stru
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -2958,7 +2980,7 @@ Name | Type | Description  | Notes
 > GetMessagePreviewResponse GetMessagePreview(ctx, optional)
 Preview message
 
-
+Get messages preview (with tags merged) up to 100 messages per session.
 
 ### Required Parameters
 
@@ -3009,7 +3031,7 @@ Name | Type | Description  | Notes
 > GetMessagePriceResponse GetMessagePrice(ctx, optional)
 Check price
 
-
+Check pricing for a new outbound message.
 
 ### Required Parameters
 
@@ -3061,7 +3083,7 @@ Name | Type | Description  | Notes
 > GetMessagePricesResponse GetMessagePrices(ctx, )
 Get pricing
 
-
+Get message prices for all countries.
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -3083,7 +3105,7 @@ This endpoint does not need any parameter.
 
 # **GetMessageSession**
 > MessageSession GetMessageSession(ctx, id)
-Get a message session.
+Get a session details
 
 
 
@@ -3092,7 +3114,7 @@ Get a message session.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
+  **id** | **int32**| a session ID | 
 
 ### Return type
 
@@ -3111,7 +3133,7 @@ Name | Type | Description  | Notes
 
 # **GetMessageSessionStat**
 > GetMessageSessionStatResponse GetMessageSessionStat(ctx, id, optional)
-Get sending session statistics.
+Get a session statistics
 
 
 
@@ -3148,9 +3170,9 @@ Name | Type | Description  | Notes
 
 # **GetMessagesBySessionId**
 > GetMessagesBySessionIdPaginatedResponse GetMessagesBySessionId(ctx, id, optional)
-Fetch messages by given session id.
+Get a session messages
 
-
+A useful synonym for \"messages/search\" command with provided \"sessionId\" parameter.
 
 ### Required Parameters
 
@@ -3166,8 +3188,8 @@ Optional parameters are passed through a pointer to a GetMessagesBySessionIdOpts
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **statuses** | **optional.String**| Find messages by status | 
  **includeDeleted** | **optional.Int32**| Search also in deleted messages | [default to 0]
 
@@ -3251,7 +3273,7 @@ Name | Type | Description  | Notes
 > MessageOut GetOutboundMessage(ctx, id)
 Get a single message
 
-
+Get a single outgoing message.
 
 ### Required Parameters
 
@@ -3279,7 +3301,7 @@ Name | Type | Description  | Notes
 > GetOutboundMessagesHistoryPaginatedResponse GetOutboundMessagesHistory(ctx, optional)
 Get history
 
-
+Get outbound messages history.
 
 ### Required Parameters
 
@@ -3293,7 +3315,7 @@ Optional parameters are passed through a pointer to a GetOutboundMessagesHistory
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **lastId** | **optional.Int32**| Filter results by ID, selecting all values lesser than the specified ID. | 
  **query** | **optional.String**| Find message by specified search query | 
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
@@ -3340,7 +3362,7 @@ This endpoint does not need any parameter.
 
 # **GetScheduledMessage**
 > MessagesIcs GetScheduledMessage(ctx, id)
-Get message schedule.
+Get a single scheduled message
 
 
 
@@ -3412,8 +3434,8 @@ Optional parameters are passed through a pointer to a GetSenderIdsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -3483,8 +3505,8 @@ Optional parameters are passed through a pointer to a GetSpendingStatOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **start** | **optional.Int32**| Optional. Start date in unix timestamp format. Default is 7 days ago | 
  **end** | **optional.Int32**| Optional. End date in unix timestamp format. Default is now | 
 
@@ -3573,8 +3595,8 @@ Optional parameters are passed through a pointer to a GetSubaccountsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -3595,7 +3617,7 @@ Name | Type | Description  | Notes
 > GetSubaccountsWithTokensResponse GetSubaccountsWithTokens(ctx, getSubaccountsWithTokensInputObject, optional)
 Get all subaccounts with their REST API tokens associated with specified app name.
 
-
+When more than one token related to app name, last key will be returned.
 
 ### Required Parameters
 
@@ -3611,8 +3633,8 @@ Optional parameters are passed through a pointer to a GetSubaccountsWithTokensOp
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **page** | **optional.Float32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Float32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -3731,8 +3753,8 @@ Optional parameters are passed through a pointer to a GetSurveysOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -3751,7 +3773,7 @@ Name | Type | Description  | Notes
 
 # **GetTemplate**
 > MessageTemplate GetTemplate(ctx, id)
-Get a single template.
+Get a template details
 
 
 
@@ -3814,9 +3836,9 @@ Name | Type | Description  | Notes
 
 # **GetUnreadMessagesTotal**
 > GetUnreadMessagesTotalResponse GetUnreadMessagesTotal(ctx, )
+Get unread messages number
+
 Get total amount of unread messages in the current user chats.
-
-
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -3882,8 +3904,8 @@ Optional parameters are passed through a pointer to a GetUnsubscribersOpts struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
 
 ### Return type
 
@@ -3918,8 +3940,8 @@ Optional parameters are passed through a pointer to a GetUserDedicatedNumbersOpt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **surveyId** | **optional.Int32**| Fetch only that numbers which are ready for the survey | 
 
 ### Return type
@@ -3955,8 +3977,8 @@ Optional parameters are passed through a pointer to a GetUserListsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
  **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
  **favoriteOnly** | **optional.Int32**| Return only favorite lists | [default to 0]
@@ -4031,9 +4053,9 @@ Name | Type | Description  | Notes
 
 # **MarkChatsReadBulk**
 > MarkChatsReadBulk(ctx, markChatsReadBulkInputObject)
+Mark chats as read (bulk)
+
 Mark several chats as read by chat ids or mark all chats as read
-
-
 
 ### Required Parameters
 
@@ -4059,9 +4081,9 @@ Name | Type | Description  | Notes
 
 # **MarkChatsUnreadBulk**
 > MarkChatsUnreadBulk(ctx, markChatsUnreadBulkInputObject)
+Mark chats as unread (bulk)
+
 Mark several chats as UNread by chat ids or mark all chats as UNread
-
-
 
 ### Required Parameters
 
@@ -4115,7 +4137,7 @@ Name | Type | Description  | Notes
 
 # **MuteChat**
 > ResourceLinkResponse MuteChat(ctx, muteChatInputObject)
-Set mute mode.
+Mute chat sounds
 
 
 
@@ -4143,9 +4165,9 @@ Name | Type | Description  | Notes
 
 # **MuteChatsBulk**
 > MuteChatsBulk(ctx, muteChatsBulkInputObject)
+Mute chats (bulk)
+
 Mute several chats by chat ids or mute all chats
-
-
 
 ### Required Parameters
 
@@ -4195,9 +4217,9 @@ This endpoint does not need any parameter.
 
 # **ReopenChatsBulk**
 > ReopenChatsBulk(ctx, reopenChatsBulkInputObject)
+Reopen chats (bulk)
+
 Reopen chats by chat ids or reopen all chats
-
-
 
 ### Required Parameters
 
@@ -4225,7 +4247,7 @@ Name | Type | Description  | Notes
 > User RequestNewSubaccountToken(ctx, requestNewSubaccountTokenInputObject)
 Request a new REST API token for subaccount.
 
-
+Returning user object, key and app name.
 
 ### Required Parameters
 
@@ -4307,7 +4329,7 @@ Name | Type | Description  | Notes
 
 # **SearchChats**
 > SearchChatsPaginatedResponse SearchChats(ctx, optional)
-Find chats by inbound or outbound messages text.
+Find chats by message text
 
 
 
@@ -4323,8 +4345,8 @@ Optional parameters are passed through a pointer to a SearchChatsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **query** | **optional.String**| Find chats by specified search query | 
 
 ### Return type
@@ -4344,7 +4366,7 @@ Name | Type | Description  | Notes
 
 # **SearchChatsByIds**
 > SearchChatsByIdsPaginatedResponse SearchChatsByIds(ctx, optional)
-Find chats by IDs.
+Find chats (bulk)
 
 
 
@@ -4360,8 +4382,8 @@ Optional parameters are passed through a pointer to a SearchChatsByIdsOpts struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **ids** | **optional.String**| Find chats by ID(s) | 
 
 ### Return type
@@ -4381,9 +4403,9 @@ Name | Type | Description  | Notes
 
 # **SearchChatsByReceipent**
 > SearchChatsByReceipentPaginatedResponse SearchChatsByReceipent(ctx, optional)
+Find chats by recipient
+
 Find chats by recipient (contact, list name or phone number).
-
-
 
 ### Required Parameters
 
@@ -4397,8 +4419,8 @@ Optional parameters are passed through a pointer to a SearchChatsByReceipentOpts
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **query** | **optional.String**| Find chats by specified search query | 
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
 
@@ -4435,8 +4457,8 @@ Optional parameters are passed through a pointer to a SearchContactsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **shared** | **optional.Int32**| Should shared contacts to be included | [default to 0]
  **ids** | **optional.String**| Find contact by ID(s) | 
  **listId** | **optional.Int32**| Find contact by List ID | 
@@ -4464,9 +4486,9 @@ Name | Type | Description  | Notes
 
 # **SearchInboundMessages**
 > SearchInboundMessagesPaginatedResponse SearchInboundMessages(ctx, optional)
+Find inbound messages
+
 Find inbound messages by given parameters.
-
-
 
 ### Required Parameters
 
@@ -4480,8 +4502,8 @@ Optional parameters are passed through a pointer to a SearchInboundMessagesOpts 
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **ids** | **optional.String**| Find message by ID(s) | 
  **query** | **optional.String**| Find recipients by specified search query | 
  **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
@@ -4521,8 +4543,8 @@ Optional parameters are passed through a pointer to a SearchListsOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **ids** | **optional.String**| Find lists by ID(s) | 
  **query** | **optional.String**| Find lists by specified search query | 
  **onlyMine** | **optional.Int32**| Return only current user lists | [default to 0]
@@ -4549,7 +4571,7 @@ Name | Type | Description  | Notes
 > SearchOutboundMessagesPaginatedResponse SearchOutboundMessages(ctx, optional)
 Find messages
 
-
+Find outbound messages by given parameters.
 
 ### Required Parameters
 
@@ -4563,8 +4585,8 @@ Optional parameters are passed through a pointer to a SearchOutboundMessagesOpts
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **lastId** | **optional.Int32**| Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified | 
  **ids** | **optional.String**| Find message by ID(s) | 
  **sessionId** | **optional.Int32**| Find messages by session ID | 
@@ -4589,7 +4611,7 @@ Name | Type | Description  | Notes
 
 # **SearchScheduledMessages**
 > SearchScheduledMessagesPaginatedResponse SearchScheduledMessages(ctx, optional)
-Find scheduled messages by given parameters.
+Find scheduled messages
 
 
 
@@ -4605,8 +4627,8 @@ Optional parameters are passed through a pointer to a SearchScheduledMessagesOpt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **query** | **optional.String**| Find messages by specified search query | 
  **ids** | **optional.String**| Find schedules by ID(s) | 
  **status** | **optional.String**| Fetch schedules with the specific status: a - actual, c - completed, x - all | [default to x]
@@ -4630,7 +4652,7 @@ Name | Type | Description  | Notes
 
 # **SearchTemplates**
 > SearchTemplatesPaginatedResponse SearchTemplates(ctx, optional)
-Find user templates by given parameters.
+Find templates by criteria
 
 
 
@@ -4646,8 +4668,8 @@ Optional parameters are passed through a pointer to a SearchTemplatesOpts struct
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page | [default to 1]
- **limit** | **optional.Int32**| How many results to return | [default to 10]
+ **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
  **ids** | **optional.String**| Find template by ID(s) | 
  **name** | **optional.String**| Find template by name | 
  **content** | **optional.String**| Find template by content | 
@@ -4695,7 +4717,7 @@ This endpoint does not need any parameter.
 > SendMessageResponse SendMessage(ctx, sendMessageInputObject)
 Send message
 
-
+The main entrypoint to send messages. See examples above for the reference.
 
 ### Required Parameters
 
@@ -4743,11 +4765,39 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **SendPhoneVerificationCode_0**
+> SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0(ctx, sendPhoneVerificationCodeInputObject)
+Step 1: Send a verification code 
+
+Sends verification code to specified phone number.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **sendPhoneVerificationCodeInputObject** | [**SendPhoneVerificationCodeInputObject**](SendPhoneVerificationCodeInputObject.md)|  | 
+
+### Return type
+
+[**SendPhoneVerificationCodeResponse**](SendPhoneVerificationCodeResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **SetChatStatus**
 > ResourceLinkResponse SetChatStatus(ctx, setChatStatusInputObject)
+Change chat status
+
 Set status of the chat given by ID.
-
-
 
 ### Required Parameters
 
@@ -4857,9 +4907,9 @@ Name | Type | Description  | Notes
 
 # **UnmuteChatsBulk**
 > UnmuteChatsBulk(ctx, unmuteChatsBulkInputObject)
+Unmute chats (bulk)
+
 Unmute several chats by chat ids or unmute all chats
-
-
 
 ### Required Parameters
 
@@ -5320,7 +5370,7 @@ Name | Type | Description  | Notes
 
 # **UpdateTemplate**
 > ResourceLinkResponse UpdateTemplate(ctx, updateTemplateInputObject, id)
-Update existing template.
+Update a template
 
 
 

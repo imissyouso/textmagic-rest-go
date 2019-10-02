@@ -15,12 +15,16 @@ import (
 )
 
 type Chat struct {
+	// Chat ID.
 	Id int32 `json:"id"`
 	OriginalId int32 `json:"originalId"`
+	// Chat partner phone number.
 	Phone string `json:"phone"`
 	Contact *Contact `json:"contact"`
 	UnsubscribedContactId int32 `json:"unsubscribedContactId"`
+	// Unread incoming messages count.
 	Unread int32 `json:"unread"`
+	// Time when last incoming message arrived at this chat.
 	UpdatedAt time.Time `json:"updatedAt"`
 	Status string `json:"status"`
 	Mute int32 `json:"mute"`

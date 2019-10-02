@@ -15,24 +15,33 @@ import (
 )
 
 type MessageOut struct {
+	// Message ID.
 	Id int32 `json:"id"`
+	// Message sender (phone number or alphanumeric Sender ID).
+	Sender string `json:"sender,omitempty"`
+	// Recipient phone number.
+	Receiver string `json:"receiver,omitempty"`
+	Text string `json:"text"`
+	// Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. 
+	Status string `json:"status"`
 	ContactId int32 `json:"contactId"`
 	SessionId int32 `json:"sessionId"`
-	Receiver string `json:"receiver,omitempty"`
+	// Sending time.
 	MessageTime time.Time `json:"messageTime"`
-	// q - queued s - scheduled queue e - sending error r - enroute a - acked d - delivered b - buffered f - failed u - unknown j - rejected i - bulk insert p - scheduled suspend h - queue suspend
-	Status string `json:"status"`
 	Avatar string `json:"avatar"`
-	Text string `json:"text"`
 	Deleted bool `json:"deleted,omitempty"`
+	// Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
 	Charset string `json:"charset"`
 	CharsetLabel string `json:"charsetLabel"`
+	// @TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
 	FirstName string `json:"firstName"`
+	// Contact last name.
 	LastName string `json:"lastName"`
+	// Two-letter ISO country code of the recipient phone number. 
 	Country string `json:"country"`
-	Sender string `json:"sender,omitempty"`
 	Phone string `json:"phone,omitempty"`
 	Price float32 `json:"price,omitempty"`
+	// Message parts (multiples of 160 characters) count.
 	PartsCount int32 `json:"partsCount"`
 	FromEmail string `json:"fromEmail,omitempty"`
 	FromNumber string `json:"fromNumber,omitempty"`

@@ -10,9 +10,9 @@
 
 package TextMagic
 
-type GetForwardedCallsPaginatedResponse struct {
-	Page int32 `json:"page"`
-	PageCount int32 `json:"pageCount"`
-	Limit int32 `json:"limit"`
-	Resources []ForwardedCall `json:"resources"`
+type CheckPhoneVerificationCodeInputObject1 struct {
+	// Verification code that was received by the user and entered into the form field.
+	Code int32 `json:"code"`
+	// VerifyId from Step 1 to match both requests together.
+	VerifyId string `json:"verifyId"`
 }

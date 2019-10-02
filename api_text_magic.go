@@ -492,6 +492,88 @@ func (a *TextMagicApiService) CancelSurvey(ctx context.Context, id int32) (Resou
 }
 
 /* 
+TextMagicApiService Cancel verification process
+You can cancel the verification not earlier than 30 seconds after the initial request.
+ * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param verifyId the verifyId that you received in Step 1.
+
+
+*/
+func (a *TextMagicApiService) CancelVerification(ctx context.Context, verifyId string) (*http.Response, error) {
+	var (
+		localVarHttpMethod = strings.ToUpper("Delete")
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/api/v2/verify/{verifyId}"
+	localVarPath = strings.Replace(localVarPath, "{"+"verifyId"+"}", fmt.Sprintf("%v", verifyId), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHttpContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
+	if localVarHttpContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	}
+
+	// to determine the Accept header
+	localVarHttpHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
+	if localVarHttpHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHttpResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHttpResponse == nil {
+		return localVarHttpResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarHttpResponse.Body.Close()
+	if err != nil {
+		return localVarHttpResponse, err
+	}
+
+
+	if localVarHttpResponse.StatusCode >= 300 {
+		newErr := GenericSwaggerError{
+			body: localVarBody,
+			error: localVarHttpResponse.Status,
+		}
+		
+		if localVarHttpResponse.StatusCode == 401 {
+			var v UnauthorizedResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarHttpResponse, newErr
+		}
+		
+		return localVarHttpResponse, newErr
+	}
+
+	return localVarHttpResponse, nil
+}
+
+/* 
 TextMagicApiService Check user phone verification code
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -510,6 +592,100 @@ func (a *TextMagicApiService) CheckPhoneVerificationCode(ctx context.Context, ch
 
 	// create path and map variables
 	localVarPath := a.client.cfg.BasePath + "/api/v2/user/phone/verification"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHttpContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
+	if localVarHttpContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	}
+
+	// to determine the Accept header
+	localVarHttpHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
+	if localVarHttpHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	// body params
+	localVarPostBody = &checkPhoneVerificationCodeInputObject
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return nil, err
+	}
+
+	localVarHttpResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHttpResponse == nil {
+		return localVarHttpResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarHttpResponse.Body.Close()
+	if err != nil {
+		return localVarHttpResponse, err
+	}
+
+
+	if localVarHttpResponse.StatusCode >= 300 {
+		newErr := GenericSwaggerError{
+			body: localVarBody,
+			error: localVarHttpResponse.Status,
+		}
+		
+		if localVarHttpResponse.StatusCode == 400 {
+			var v BadRequestResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarHttpResponse, newErr
+		}
+		
+		if localVarHttpResponse.StatusCode == 401 {
+			var v UnauthorizedResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarHttpResponse, newErr
+		}
+		
+		return localVarHttpResponse, newErr
+	}
+
+	return localVarHttpResponse, nil
+}
+
+/* 
+TextMagicApiService Step 2: Check the verification code 
+Check received code from user with the code which was actually sent.
+ * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param checkPhoneVerificationCodeInputObject
+
+
+*/
+func (a *TextMagicApiService) CheckPhoneVerificationCode_1(ctx context.Context, checkPhoneVerificationCodeInputObject CheckPhoneVerificationCodeInputObject1) (*http.Response, error) {
+	var (
+		localVarHttpMethod = strings.ToUpper("Put")
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/api/v2/verify"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -711,8 +887,8 @@ func (a *TextMagicApiService) ClearAndAssignContactsToList(ctx context.Context, 
 }
 
 /* 
-TextMagicApiService Close chats by chat ids or close all chats
-
+TextMagicApiService Close chats (bulk)
+Close chats by chat ids or close all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param closeChatsBulkInputObject
 
@@ -805,8 +981,8 @@ func (a *TextMagicApiService) CloseChatsBulk(ctx context.Context, closeChatsBulk
 }
 
 /* 
-TextMagicApiService Close all chats that have no unread messages.
-
+TextMagicApiService Close read chats
+Close all chats that have no unread messages.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -1770,7 +1946,7 @@ func (a *TextMagicApiService) CreateSurveyNode(ctx context.Context, createSurvey
 }
 
 /* 
-TextMagicApiService Create a new template from the submitted data.
+TextMagicApiService Create a template
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createTemplateInputObject
@@ -1941,7 +2117,7 @@ func (a *TextMagicApiService) DeleteAllContacts(ctx context.Context) (*http.Resp
 
 /* 
 TextMagicApiService Delete all messages
-
+Delete all messages.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 
@@ -2100,8 +2276,8 @@ func (a *TextMagicApiService) DeleteAvatar(ctx context.Context) (*http.Response,
 }
 
 /* 
-TextMagicApiService Delete messages from chat by given messages ID(s).
-
+TextMagicApiService Delete chat messages by ID(s)
+Delete messages from chat by given messages ID(s).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteChatMessagesBulkInputObject
  * @param id
@@ -2196,8 +2372,8 @@ func (a *TextMagicApiService) DeleteChatMessages(ctx context.Context, deleteChat
 }
 
 /* 
-TextMagicApiService Delete chats by given ID(s) or delete all chats.
-
+TextMagicApiService Delete chats (bulk)
+Delete chats by given ID(s) or delete all chats.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteChatsBulkInputObject
 
@@ -3063,10 +3239,10 @@ func (a *TextMagicApiService) DeleteDedicatedNumber(ctx context.Context, id int3
 }
 
 /* 
-TextMagicApiService Delete the incoming message.
-
+TextMagicApiService Delete a single inbound message
+&gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+ * @param id The unique numeric ID for the inbound message.
 
 
 */
@@ -3156,8 +3332,8 @@ func (a *TextMagicApiService) DeleteInboundMessage(ctx context.Context, id int32
 }
 
 /* 
-TextMagicApiService Delete inbound messages by given ID(s) or delete all inbound messages.
-
+TextMagicApiService Delete inbound messages (bulk)
+&gt; Note, deleted inbound message will disappear from TextMagic Online, chats, and any other place they are referenced.  So, be careful! 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteInboundMessagesBulkInputObject
 
@@ -3648,7 +3824,7 @@ func (a *TextMagicApiService) DeleteListsBulk(ctx context.Context, deleteListsBu
 }
 
 /* 
-TextMagicApiService Delete a message session, together with all nested messages.
+TextMagicApiService Delete a session
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -3741,7 +3917,7 @@ func (a *TextMagicApiService) DeleteMessageSession(ctx context.Context, id int32
 }
 
 /* 
-TextMagicApiService Delete messages sessions, together with all nested messages, by given ID(s) or delete all messages sessions.
+TextMagicApiService Delete sessions (bulk)
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteMessageSessionsBulkInputObject
@@ -3825,7 +4001,7 @@ func (a *TextMagicApiService) DeleteMessageSessionsBulk(ctx context.Context, del
 
 /* 
 TextMagicApiService Delete message
-
+Delete a single message.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -3917,8 +4093,8 @@ func (a *TextMagicApiService) DeleteOutboundMessage(ctx context.Context, id int3
 }
 
 /* 
-TextMagicApiService Delete messages by IDs
-
+TextMagicApiService Delete messages (bulk)
+Delete outbound messages by given ID(s) or delete all outbound messages.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteOutboundMessagesBulkInputObject
 
@@ -4117,7 +4293,7 @@ func (a *TextMagicApiService) DeletePushToken(ctx context.Context, type_ string,
 }
 
 /* 
-TextMagicApiService Delete a message session, together with all nested messages.
+TextMagicApiService Delete a single scheduled message
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -4210,7 +4386,7 @@ func (a *TextMagicApiService) DeleteScheduledMessage(ctx context.Context, id int
 }
 
 /* 
-TextMagicApiService Delete scheduled messages by given ID(s) or delete all scheduled messages.
+TextMagicApiService Delete scheduled messages (bulk)
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteScheduledMessagesBulkInputObject
@@ -4561,7 +4737,7 @@ func (a *TextMagicApiService) DeleteSurveyNode(ctx context.Context, id int32) (*
 }
 
 /* 
-TextMagicApiService Delete a single template.
+TextMagicApiService Delete a template
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -4654,7 +4830,7 @@ func (a *TextMagicApiService) DeleteTemplate(ctx context.Context, id int32) (*ht
 }
 
 /* 
-TextMagicApiService Delete template by given ID(s) or delete all templates.
+TextMagicApiService Delete templates (bulk)
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteTemplatesBulkInputObject
@@ -4760,7 +4936,7 @@ func (a *TextMagicApiService) DeleteTemplatesBulk(ctx context.Context, deleteTem
 
 /* 
 TextMagicApiService Authenticate user by given username and password.
-
+Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param doAuthInputObject
 
@@ -5218,8 +5394,8 @@ TextMagicApiService Get all bulk sending sessions.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllBulkSessionsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetAllBulkSessionsPaginatedResponse
 */
@@ -5327,13 +5503,13 @@ func (a *TextMagicApiService) GetAllBulkSessions(ctx context.Context, localVarOp
 }
 
 /* 
-TextMagicApiService Get all user chats.
+TextMagicApiService Get all chats
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllChatsOpts - Optional Parameters:
      * @param "Status" (optional.String) -  Fetch only (a)ctive, (c)losed or (d)eleted chats
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Voice" (optional.Int32) -  Fetch results with voice calls
      * @param "Flat" (optional.Int32) -  Should additional contact info be included
@@ -5460,12 +5636,12 @@ func (a *TextMagicApiService) GetAllChats(ctx context.Context, localVarOptionals
 }
 
 /* 
-TextMagicApiService Get all inbox messages.
+TextMagicApiService Get all inbound messages
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllInboundMessagesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
@@ -5583,12 +5759,12 @@ func (a *TextMagicApiService) GetAllInboundMessages(ctx context.Context, localVa
 }
 
 /* 
-TextMagicApiService Get all message sending sessions.
+TextMagicApiService Get all sessions
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllMessageSessionsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetAllMessageSessionsPaginatedResponse
 */
@@ -5697,11 +5873,11 @@ func (a *TextMagicApiService) GetAllMessageSessions(ctx context.Context, localVa
 
 /* 
 TextMagicApiService Get all messages
-
+Get all user oubound messages.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllOutboundMessagesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "LastId" (optional.Int32) -  Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
 
 @return GetAllOutboundMessagesPaginatedResponse
@@ -5825,12 +6001,12 @@ func (a *TextMagicApiService) GetAllOutboundMessages(ctx context.Context, localV
 }
 
 /* 
-TextMagicApiService Get all scheduled messages.
+TextMagicApiService Get all scheduled messages
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllScheduledMessagesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Status" (optional.String) -  Fetch schedules with the specific status: a - actual, c - completed, x - all
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
@@ -5953,12 +6129,12 @@ func (a *TextMagicApiService) GetAllScheduledMessages(ctx context.Context, local
 }
 
 /* 
-TextMagicApiService Get all user templates.
+TextMagicApiService Get all templates
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAllTemplatesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetAllTemplatesPaginatedResponse
 */
@@ -6511,8 +6687,8 @@ TextMagicApiService Get blocked contacts.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetBlockedContactsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Query" (optional.String) -  Find blocked contacts by specified search query
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
@@ -6953,7 +7129,7 @@ func (a *TextMagicApiService) GetCallsPrices(ctx context.Context) (GetCallsPrice
 }
 
 /* 
-TextMagicApiService Get a single chat.
+TextMagicApiService Get a single chat
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -7064,7 +7240,7 @@ func (a *TextMagicApiService) GetChat(ctx context.Context, id int32) (Chat, *htt
 }
 
 /* 
-TextMagicApiService Find chats by phone.
+TextMagicApiService Find chats by phone
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param phone
@@ -7190,13 +7366,13 @@ func (a *TextMagicApiService) GetChatByPhone(ctx context.Context, phone string, 
 }
 
 /* 
-TextMagicApiService Fetch messages from chat with specified chat id.
+TextMagicApiService Get chat messages
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetChatMessagesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Query" (optional.String) -  Find messages by specified search query
      * @param "Start" (optional.Int32) -  Return messages since specified timestamp only
      * @param "End" (optional.Int32) -  Return messages up to specified timestamp only
@@ -7879,8 +8055,8 @@ TextMagicApiService Fetch notes assigned to the given contact.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetContactNotesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetContactNotesPaginatedResponse
 */
@@ -8004,8 +8180,8 @@ TextMagicApiService Get all user contacts.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetContactsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Shared" (optional.Int32) -  Should shared contacts to be included
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
@@ -8133,7 +8309,7 @@ TextMagicApiService Get contacts autocomplete suggestions by given search term.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param query Find recipients by specified search query
  * @param optional nil or *GetContactsAutocompleteOpts - Optional Parameters:
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Lists" (optional.Int32) -  Should lists be returned or not
 
 @return GetContactsAutocompleteResponse
@@ -8244,12 +8420,12 @@ func (a *TextMagicApiService) GetContactsAutocomplete(ctx context.Context, query
 
 /* 
 TextMagicApiService Fetch user contacts by given group id.
-
+A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Given group Id.
  * @param optional nil or *GetContactsByListIdOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
 
@@ -8690,8 +8866,8 @@ TextMagicApiService Get all contact custom fields.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetCustomFieldsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetCustomFieldsPaginatedResponse
 */
@@ -9012,8 +9188,8 @@ TextMagicApiService Get favorite contacts and lists.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetFavouritesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Query" (optional.String) -  Find contacts or lists by specified search query
 
 @return GetFavouritesPaginatedResponse
@@ -9126,123 +9302,10 @@ func (a *TextMagicApiService) GetFavourites(ctx context.Context, localVarOptiona
 }
 
 /* 
-TextMagicApiService Get all forwarded calls.
+TextMagicApiService Get a single inbound message
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetForwardedCallsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
-
-@return GetForwardedCallsPaginatedResponse
-*/
-
-type GetForwardedCallsOpts struct { 
-	Page optional.Int32
-	Limit optional.Int32
-}
-
-func (a *TextMagicApiService) GetForwardedCalls(ctx context.Context, localVarOptionals *GetForwardedCallsOpts) (GetForwardedCallsPaginatedResponse, *http.Response, error) {
-	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
-		localVarReturnValue GetForwardedCallsPaginatedResponse
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/calls"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
-		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Limit.IsSet() {
-		localVarQueryParams.Add("limit", parameterToString(localVarOptionals.Limit.Value(), ""))
-	}
-	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
-	}
-
-	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarReturnValue, localVarHttpResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
-	if err != nil {
-		return localVarReturnValue, localVarHttpResponse, err
-	}
-
-	if localVarHttpResponse.StatusCode < 300 {
-		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
-	}
-
-	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
-			body: localVarBody,
-			error: localVarHttpResponse.Status,
-		}
-		
-		if localVarHttpResponse.StatusCode == 200 {
-			var v GetForwardedCallsPaginatedResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
-				return localVarReturnValue, localVarHttpResponse, newErr
-		}
-		
-		if localVarHttpResponse.StatusCode == 401 {
-			var v UnauthorizedResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
-				return localVarReturnValue, localVarHttpResponse, newErr
-		}
-		
-		return localVarReturnValue, localVarHttpResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHttpResponse, nil
-}
-
-/* 
-TextMagicApiService Get a single inbox message.
-
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+ * @param id The unique numeric ID for the inbound message.
 
 @return MessageIn
 */
@@ -9452,8 +9515,8 @@ TextMagicApiService Return account invoices.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetInvoicesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetInvoicesPaginatedResponse
 */
@@ -9799,8 +9862,8 @@ TextMagicApiService Return lists which contact belongs to.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetListsOfContactOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetListsOfContactPaginatedResponse
 */
@@ -9921,7 +9984,7 @@ func (a *TextMagicApiService) GetListsOfContact(ctx context.Context, id int32, l
 
 /* 
 TextMagicApiService Preview message
-
+Get messages preview (with tags merged) up to 100 messages per session.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetMessagePreviewOpts - Optional Parameters:
      * @param "Text" (optional.String) -  Message text. Required if template_id is not set
@@ -10120,7 +10183,7 @@ func (a *TextMagicApiService) GetMessagePreview(ctx context.Context, localVarOpt
 
 /* 
 TextMagicApiService Check price
-
+Check pricing for a new outbound message.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetMessagePriceOpts - Optional Parameters:
      * @param "IncludeBlocked" (optional.Int32) -  Should we show pricing for the blocked contacts.
@@ -10324,7 +10387,7 @@ func (a *TextMagicApiService) GetMessagePrice(ctx context.Context, localVarOptio
 
 /* 
 TextMagicApiService Get pricing
-
+Get message prices for all countries.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetMessagePricesResponse
@@ -10421,10 +10484,10 @@ func (a *TextMagicApiService) GetMessagePrices(ctx context.Context) (GetMessageP
 }
 
 /* 
-TextMagicApiService Get a message session.
+TextMagicApiService Get a session details
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param id
+ * @param id a session ID
 
 @return MessageSession
 */
@@ -10532,7 +10595,7 @@ func (a *TextMagicApiService) GetMessageSession(ctx context.Context, id int32) (
 }
 
 /* 
-TextMagicApiService Get sending session statistics.
+TextMagicApiService Get a session statistics
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -10653,13 +10716,13 @@ func (a *TextMagicApiService) GetMessageSessionStat(ctx context.Context, id int3
 }
 
 /* 
-TextMagicApiService Fetch messages by given session id.
-
+TextMagicApiService Get a session messages
+A useful synonym for \&quot;messages/search\&quot; command with provided \&quot;sessionId\&quot; parameter.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
  * @param optional nil or *GetMessagesBySessionIdOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Statuses" (optional.String) -  Find messages by status
      * @param "IncludeDeleted" (optional.Int32) -  Search also in deleted messages
 
@@ -11006,7 +11069,7 @@ func (a *TextMagicApiService) GetMessagingStat(ctx context.Context, localVarOpti
 
 /* 
 TextMagicApiService Get a single message
-
+Get a single outgoing message.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -11117,10 +11180,10 @@ func (a *TextMagicApiService) GetOutboundMessage(ctx context.Context, id int32) 
 
 /* 
 TextMagicApiService Get history
-
+Get outbound messages history.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetOutboundMessagesHistoryOpts - Optional Parameters:
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "LastId" (optional.Int32) -  Filter results by ID, selecting all values lesser than the specified ID.
      * @param "Query" (optional.String) -  Find message by specified search query
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
@@ -11353,7 +11416,7 @@ func (a *TextMagicApiService) GetPushTokens(ctx context.Context) (GetPushTokensR
 }
 
 /* 
-TextMagicApiService Get message schedule.
+TextMagicApiService Get a single scheduled message
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -11579,8 +11642,8 @@ TextMagicApiService Get all sender IDs of current user.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSenderIdsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetSenderIdsPaginatedResponse
 */
@@ -11800,8 +11863,8 @@ TextMagicApiService Return account spending statistics.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSpendingStatOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Start" (optional.Int32) -  Optional. Start date in unix timestamp format. Default is 7 days ago
      * @param "End" (optional.Int32) -  Optional. End date in unix timestamp format. Default is now
 
@@ -12143,8 +12206,8 @@ TextMagicApiService Get all subaccounts of current user.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSubaccountsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return User
 */
@@ -12253,12 +12316,12 @@ func (a *TextMagicApiService) GetSubaccounts(ctx context.Context, localVarOption
 
 /* 
 TextMagicApiService Get all subaccounts with their REST API tokens associated with specified app name.
-
+When more than one token related to app name, last key will be returned.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param getSubaccountsWithTokensInputObject
  * @param optional nil or *GetSubaccountsWithTokensOpts - Optional Parameters:
-     * @param "Page" (optional.Float32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Float32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetSubaccountsWithTokensResponse
 */
@@ -12716,8 +12779,8 @@ TextMagicApiService Get all user surveys.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSurveysOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetSurveysPaginatedResponse
 */
@@ -12825,7 +12888,7 @@ func (a *TextMagicApiService) GetSurveys(ctx context.Context, localVarOptionals 
 }
 
 /* 
-TextMagicApiService Get a single template.
+TextMagicApiService Get a template details
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -13055,8 +13118,8 @@ func (a *TextMagicApiService) GetTimezones(ctx context.Context, localVarOptional
 }
 
 /* 
-TextMagicApiService Get total amount of unread messages in the current user chats.
-
+TextMagicApiService Get unread messages number
+Get total amount of unread messages in the current user chats.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetUnreadMessagesTotalResponse
@@ -13268,8 +13331,8 @@ TextMagicApiService Get all contact have unsubscribed from your communication.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUnsubscribersOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
 
 @return GetUnsubscribersPaginatedResponse
 */
@@ -13381,8 +13444,8 @@ TextMagicApiService Get user&#39;s dedicated numbers.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUserDedicatedNumbersOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "SurveyId" (optional.Int32) -  Fetch only that numbers which are ready for the survey
 
 @return GetUserDedicatedNumbersPaginatedResponse
@@ -13510,8 +13573,8 @@ TextMagicApiService Get all user lists.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUserListsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
      * @param "Direction" (optional.String) -  Order direction. Default is desc
      * @param "FavoriteOnly" (optional.Int32) -  Return only favorite lists
@@ -13853,8 +13916,8 @@ func (a *TextMagicApiService) InviteSubaccount(ctx context.Context, inviteSubacc
 }
 
 /* 
-TextMagicApiService Mark several chats as read by chat ids or mark all chats as read
-
+TextMagicApiService Mark chats as read (bulk)
+Mark several chats as read by chat ids or mark all chats as read
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param markChatsReadBulkInputObject
 
@@ -13947,8 +14010,8 @@ func (a *TextMagicApiService) MarkChatsReadBulk(ctx context.Context, markChatsRe
 }
 
 /* 
-TextMagicApiService Mark several chats as UNread by chat ids or mark all chats as UNread
-
+TextMagicApiService Mark chats as unread (bulk)
+Mark several chats as UNread by chat ids or mark all chats as UNread
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param markChatsUnreadBulkInputObject
 
@@ -14146,7 +14209,7 @@ func (a *TextMagicApiService) MergeSurveyNodes(ctx context.Context, mergeSurveyN
 }
 
 /* 
-TextMagicApiService Set mute mode.
+TextMagicApiService Mute chat sounds
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param muteChatInputObject
@@ -14269,8 +14332,8 @@ func (a *TextMagicApiService) MuteChat(ctx context.Context, muteChatInputObject 
 }
 
 /* 
-TextMagicApiService Mute several chats by chat ids or mute all chats
-
+TextMagicApiService Mute chats (bulk)
+Mute several chats by chat ids or mute all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param muteChatsBulkInputObject
 
@@ -14461,8 +14524,8 @@ func (a *TextMagicApiService) Ping(ctx context.Context) (PingResponse, *http.Res
 }
 
 /* 
-TextMagicApiService Reopen chats by chat ids or reopen all chats
-
+TextMagicApiService Reopen chats (bulk)
+Reopen chats by chat ids or reopen all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param reopenChatsBulkInputObject
 
@@ -14556,7 +14619,7 @@ func (a *TextMagicApiService) ReopenChatsBulk(ctx context.Context, reopenChatsBu
 
 /* 
 TextMagicApiService Request a new REST API token for subaccount.
-
+Returning user object, key and app name.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param requestNewSubaccountTokenInputObject
 
@@ -14890,12 +14953,12 @@ func (a *TextMagicApiService) ResetSurvey(ctx context.Context, id int32) (Resour
 }
 
 /* 
-TextMagicApiService Find chats by inbound or outbound messages text.
+TextMagicApiService Find chats by message text
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchChatsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Query" (optional.String) -  Find chats by specified search query
 
 @return SearchChatsPaginatedResponse
@@ -15008,12 +15071,12 @@ func (a *TextMagicApiService) SearchChats(ctx context.Context, localVarOptionals
 }
 
 /* 
-TextMagicApiService Find chats by IDs.
+TextMagicApiService Find chats (bulk)
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchChatsByIdsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Ids" (optional.String) -  Find chats by ID(s)
 
 @return SearchChatsByIdsPaginatedResponse
@@ -15126,12 +15189,12 @@ func (a *TextMagicApiService) SearchChatsByIds(ctx context.Context, localVarOpti
 }
 
 /* 
-TextMagicApiService Find chats by recipient (contact, list name or phone number).
-
+TextMagicApiService Find chats by recipient
+Find chats by recipient (contact, list name or phone number).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchChatsByReceipentOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Query" (optional.String) -  Find chats by specified search query
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
 
@@ -15253,8 +15316,8 @@ TextMagicApiService Find user contacts by given parameters.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchContactsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Shared" (optional.Int32) -  Should shared contacts to be included
      * @param "Ids" (optional.String) -  Find contact by ID(s)
      * @param "ListId" (optional.Int32) -  Find contact by List ID
@@ -15407,12 +15470,12 @@ func (a *TextMagicApiService) SearchContacts(ctx context.Context, localVarOption
 }
 
 /* 
-TextMagicApiService Find inbound messages by given parameters.
-
+TextMagicApiService Find inbound messages
+Find inbound messages by given parameters.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchInboundMessagesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Ids" (optional.String) -  Find message by ID(s)
      * @param "Query" (optional.String) -  Find recipients by specified search query
      * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
@@ -15560,8 +15623,8 @@ TextMagicApiService Find contact lists by given parameters.
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchListsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Ids" (optional.String) -  Find lists by ID(s)
      * @param "Query" (optional.String) -  Find lists by specified search query
      * @param "OnlyMine" (optional.Int32) -  Return only current user lists
@@ -15711,11 +15774,11 @@ func (a *TextMagicApiService) SearchLists(ctx context.Context, localVarOptionals
 
 /* 
 TextMagicApiService Find messages
-
+Find outbound messages by given parameters.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchOutboundMessagesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "LastId" (optional.Int32) -  Filter results by ID, selecting all values lesser than the specified ID. Note that \\&#39;page\\&#39; parameter is ignored when \\&#39;lastId\\&#39; is specified
      * @param "Ids" (optional.String) -  Find message by ID(s)
      * @param "SessionId" (optional.Int32) -  Find messages by session ID
@@ -15864,12 +15927,12 @@ func (a *TextMagicApiService) SearchOutboundMessages(ctx context.Context, localV
 }
 
 /* 
-TextMagicApiService Find scheduled messages by given parameters.
+TextMagicApiService Find scheduled messages
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchScheduledMessagesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Query" (optional.String) -  Find messages by specified search query
      * @param "Ids" (optional.String) -  Find schedules by ID(s)
      * @param "Status" (optional.String) -  Fetch schedules with the specific status: a - actual, c - completed, x - all
@@ -16013,12 +16076,12 @@ func (a *TextMagicApiService) SearchScheduledMessages(ctx context.Context, local
 }
 
 /* 
-TextMagicApiService Find user templates by given parameters.
+TextMagicApiService Find templates by criteria
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchTemplatesOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page
-     * @param "Limit" (optional.Int32) -  How many results to return
+     * @param "Page" (optional.Int32) -  Fetch specified results page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
      * @param "Ids" (optional.String) -  Find template by ID(s)
      * @param "Name" (optional.String) -  Find template by name
      * @param "Content" (optional.String) -  Find template by content
@@ -16233,7 +16296,7 @@ func (a *TextMagicApiService) SendEmailVerificationCode(ctx context.Context) (*h
 
 /* 
 TextMagicApiService Send message
-
+The main entrypoint to send messages. See examples above for the reference.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param sendMessageInputObject
 
@@ -16435,8 +16498,120 @@ func (a *TextMagicApiService) SendPhoneVerificationCode(ctx context.Context) (*h
 }
 
 /* 
-TextMagicApiService Set status of the chat given by ID.
+TextMagicApiService Step 1: Send a verification code 
+Sends verification code to specified phone number.
+ * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param sendPhoneVerificationCodeInputObject
 
+@return SendPhoneVerificationCodeResponse
+*/
+func (a *TextMagicApiService) SendPhoneVerificationCode_2(ctx context.Context, sendPhoneVerificationCodeInputObject SendPhoneVerificationCodeInputObject) (SendPhoneVerificationCodeResponse, *http.Response, error) {
+	var (
+		localVarHttpMethod = strings.ToUpper("Post")
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		localVarReturnValue SendPhoneVerificationCodeResponse
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/api/v2/verify"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHttpContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
+	if localVarHttpContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	}
+
+	// to determine the Accept header
+	localVarHttpHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
+	if localVarHttpHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	// body params
+	localVarPostBody = &sendPhoneVerificationCodeInputObject
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHttpResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHttpResponse == nil {
+		return localVarReturnValue, localVarHttpResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarHttpResponse.Body.Close()
+	if err != nil {
+		return localVarReturnValue, localVarHttpResponse, err
+	}
+
+	if localVarHttpResponse.StatusCode < 300 {
+		// If we succeed, return the data, otherwise pass on to decode error.
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		if err == nil { 
+			return localVarReturnValue, localVarHttpResponse, err
+		}
+	}
+
+	if localVarHttpResponse.StatusCode >= 300 {
+		newErr := GenericSwaggerError{
+			body: localVarBody,
+			error: localVarHttpResponse.Status,
+		}
+		
+		if localVarHttpResponse.StatusCode == 200 {
+			var v SendPhoneVerificationCodeResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		if localVarHttpResponse.StatusCode == 400 {
+			var v BadRequestResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		if localVarHttpResponse.StatusCode == 401 {
+			var v UnauthorizedResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		return localVarReturnValue, localVarHttpResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHttpResponse, nil
+}
+
+/* 
+TextMagicApiService Change chat status
+Set status of the chat given by ID.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param setChatStatusInputObject
 
@@ -16879,8 +17054,8 @@ func (a *TextMagicApiService) UnblockContactsBulk(ctx context.Context, unblockCo
 }
 
 /* 
-TextMagicApiService Unmute several chats by chat ids or unmute all chats
-
+TextMagicApiService Unmute chats (bulk)
+Unmute several chats by chat ids or unmute all chats
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param unmuteChatsBulkInputObject
 
@@ -18638,7 +18813,7 @@ func (a *TextMagicApiService) UpdateSurveyNode(ctx context.Context, updateSurvey
 }
 
 /* 
-TextMagicApiService Update existing template.
+TextMagicApiService Update a template
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateTemplateInputObject

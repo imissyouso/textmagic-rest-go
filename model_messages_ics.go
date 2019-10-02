@@ -15,8 +15,11 @@ import (
 )
 
 type MessagesIcs struct {
+	// Schedule ID.
 	Id int32 `json:"id"`
+	// Next send date in [ISO 8601](https://en.wikipedia.org/?title=ISO_8601) format. 
 	NextSend time.Time `json:"nextSend"`
+	// [iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string. 
 	Rrule string `json:"rrule"`
 	Session *MessageSession `json:"session"`
 	LastSent time.Time `json:"lastSent"`

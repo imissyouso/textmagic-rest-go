@@ -15,10 +15,15 @@ import (
 )
 
 type MessageIn struct {
+	// The ID of the inbound message.
 	Id int32 `json:"id"`
+	// The sender’s phone number.
 	Sender string `json:"sender"`
+	// The receiver’s phone number (i.e. your dedicated or shared reply number).
 	Receiver string `json:"receiver"`
+	// The time when the message reached the TextMagic API endpoint.
 	MessageTime time.Time `json:"messageTime"`
+	// The text from the received message.
 	Text string `json:"text"`
 	ContactId int32 `json:"contactId,omitempty"`
 	FirstName string `json:"firstName,omitempty"`
