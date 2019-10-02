@@ -11,7 +11,10 @@
 package TextMagic
 
 type Currency struct {
+	// Three-letter ISO currency ID.
 	Id string `json:"id"`
+	// Unicode-compatible currency symbol.
 	UnicodeSymbol string `json:"unicodeSymbol"`
+	// HTML-compatible currency symbol.
 	HtmlSymbol string `json:"htmlSymbol"`
 }

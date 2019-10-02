@@ -11,7 +11,10 @@
 package TextMagic
 
 type GetMessagingCountersResponse struct {
+	// Total contacts amount.
 	Contacts int32 `json:"contacts"`
+	// Total sent messages amount.
 	Sent int32 `json:"sent"`
+	// Total received messages amount.
 	Received int32 `json:"received"`
 }

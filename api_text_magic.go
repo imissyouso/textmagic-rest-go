@@ -1061,7 +1061,7 @@ func (a *TextMagicApiService) CloseReadChats(ctx context.Context) (*http.Respons
 }
 
 /* 
-TextMagicApiService Close subaccount.
+TextMagicApiService Close sub-account
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -2196,7 +2196,7 @@ func (a *TextMagicApiService) DeleteAllOutboundMessages(ctx context.Context) (*h
 }
 
 /* 
-TextMagicApiService Delete an avatar for the current user.\\
+TextMagicApiService Delete an avatar
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
@@ -8653,7 +8653,7 @@ func (a *TextMagicApiService) GetCountries(ctx context.Context) (GetCountriesRes
 }
 
 /* 
-TextMagicApiService Get current user info.
+TextMagicApiService Get current account information
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
@@ -9086,8 +9086,8 @@ func (a *TextMagicApiService) GetDedicatedNumber(ctx context.Context, id int32) 
 }
 
 /* 
-TextMagicApiService Get an array of all rules that are disallowed to the current account.
-
+TextMagicApiService Get disallowed permissions
+Get an array of all rules that are disallowed to the current account.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetDisallowedRulesResponse
@@ -9511,8 +9511,8 @@ func (a *TextMagicApiService) GetInboundMessagesNotificationSettings(ctx context
 }
 
 /* 
-TextMagicApiService Return account invoices.
-
+TextMagicApiService Get all invoices
+With the TextMagic API, you can check the invoices and transactions for your account.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetInvoicesOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page.
@@ -10841,8 +10841,8 @@ func (a *TextMagicApiService) GetMessagesBySessionId(ctx context.Context, id int
 }
 
 /* 
-TextMagicApiService Return counters for messaging data views.
-
+TextMagicApiService Get sent/received messages counters values
+Get total contacts, sent messages and received messages counters values.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return GetMessagingCountersResponse
@@ -10939,13 +10939,13 @@ func (a *TextMagicApiService) GetMessagingCounters(ctx context.Context) (GetMess
 }
 
 /* 
-TextMagicApiService Return messaging statistics.
+TextMagicApiService Get messaging statistics
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetMessagingStatOpts - Optional Parameters:
-     * @param "By" (optional.String) -  Group results by specified period: off, day, month or year. Default is off
-     * @param "Start" (optional.Int32) -  Start date in unix timestamp format. Default is 7 days ago
-     * @param "End" (optional.String) -  End date in unix timestamp format. Default is now
+     * @param "By" (optional.String) -  *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year 
+     * @param "Start" (optional.Int32) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
+     * @param "End" (optional.String) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 
 @return GetMessagingStatResponse
 */
@@ -11859,14 +11859,14 @@ func (a *TextMagicApiService) GetSenderSettings(ctx context.Context, localVarOpt
 }
 
 /* 
-TextMagicApiService Return account spending statistics.
+TextMagicApiService Get spending statistics
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSpendingStatOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page.
      * @param "Limit" (optional.Int32) -  The number of results per page.
-     * @param "Start" (optional.Int32) -  Optional. Start date in unix timestamp format. Default is 7 days ago
-     * @param "End" (optional.Int32) -  Optional. End date in unix timestamp format. Default is now
+     * @param "Start" (optional.Int32) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
+     * @param "End" (optional.String) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 
 @return GetSpendingStatPaginatedResponse
 */
@@ -11875,7 +11875,7 @@ type GetSpendingStatOpts struct {
 	Page optional.Int32
 	Limit optional.Int32
 	Start optional.Int32
-	End optional.Int32
+	End optional.String
 }
 
 func (a *TextMagicApiService) GetSpendingStat(ctx context.Context, localVarOptionals *GetSpendingStatOpts) (GetSpendingStatPaginatedResponse, *http.Response, error) {
@@ -12091,7 +12091,7 @@ func (a *TextMagicApiService) GetState(ctx context.Context) (GetStateResponse, *
 }
 
 /* 
-TextMagicApiService Get a single subaccount.
+TextMagicApiService Get sub-account information
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -12202,7 +12202,7 @@ func (a *TextMagicApiService) GetSubaccount(ctx context.Context, id int32) (User
 }
 
 /* 
-TextMagicApiService Get all subaccounts of current user.
+TextMagicApiService Get sub-accounts list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSubaccountsOpts - Optional Parameters:
@@ -12315,8 +12315,8 @@ func (a *TextMagicApiService) GetSubaccounts(ctx context.Context, localVarOption
 }
 
 /* 
-TextMagicApiService Get all subaccounts with their REST API tokens associated with specified app name.
-When more than one token related to app name, last key will be returned.
+TextMagicApiService Get all sub-accounts with their REST API tokens associated with app name
+Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param getSubaccountsWithTokensInputObject
  * @param optional nil or *GetSubaccountsWithTokensOpts - Optional Parameters:
@@ -13811,7 +13811,7 @@ func (a *TextMagicApiService) GetVersions(ctx context.Context) (GetVersionsRespo
 }
 
 /* 
-TextMagicApiService Invite new subaccount.
+TextMagicApiService Invite a new sub-account
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param inviteSubaccountInputObject
@@ -14618,7 +14618,7 @@ func (a *TextMagicApiService) ReopenChatsBulk(ctx context.Context, reopenChatsBu
 }
 
 /* 
-TextMagicApiService Request a new REST API token for subaccount.
+TextMagicApiService Request a new REST API token for sub-account
 Returning user object, key and app name.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param requestNewSubaccountTokenInputObject
@@ -17803,7 +17803,7 @@ func (a *TextMagicApiService) UpdateContactNote(ctx context.Context, updateConta
 }
 
 /* 
-TextMagicApiService Update current user info.
+TextMagicApiService Edit current account info
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateCurrentUserInputObject

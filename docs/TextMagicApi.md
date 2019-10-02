@@ -14,7 +14,7 @@ Method | HTTP request | Description
 [**ClearAndAssignContactsToList**](TextMagicApi.md#ClearAndAssignContactsToList) | **Post** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
 [**CloseChatsBulk**](TextMagicApi.md#CloseChatsBulk) | **Post** /api/v2/chats/close/bulk | Close chats (bulk)
 [**CloseReadChats**](TextMagicApi.md#CloseReadChats) | **Post** /api/v2/chats/close/read | Close read chats
-[**CloseSubaccount**](TextMagicApi.md#CloseSubaccount) | **Delete** /api/v2/subaccounts/{id} | Close subaccount.
+[**CloseSubaccount**](TextMagicApi.md#CloseSubaccount) | **Delete** /api/v2/subaccounts/{id} | Close sub-account
 [**CreateContact**](TextMagicApi.md#CreateContact) | **Post** /api/v2/contacts | Create a new contact from the submitted data.
 [**CreateContactNote**](TextMagicApi.md#CreateContactNote) | **Post** /api/v2/contacts/{id}/notes | Create a new contact note.
 [**CreateCustomField**](TextMagicApi.md#CreateCustomField) | **Post** /api/v2/customfields | Create a new custom field from the submitted data.
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**CreateTemplate**](TextMagicApi.md#CreateTemplate) | **Post** /api/v2/templates | Create a template
 [**DeleteAllContacts**](TextMagicApi.md#DeleteAllContacts) | **Delete** /api/v2/contact/all | Delete all contacts.
 [**DeleteAllOutboundMessages**](TextMagicApi.md#DeleteAllOutboundMessages) | **Delete** /api/v2/message/all | Delete all messages
-[**DeleteAvatar**](TextMagicApi.md#DeleteAvatar) | **Delete** /api/v2/user/avatar | Delete an avatar for the current user.\\
+[**DeleteAvatar**](TextMagicApi.md#DeleteAvatar) | **Delete** /api/v2/user/avatar | Delete an avatar
 [**DeleteChatMessages**](TextMagicApi.md#DeleteChatMessages) | **Post** /api/v2/chats/{id}/messages/delete | Delete chat messages by ID(s)
 [**DeleteChatsBulk**](TextMagicApi.md#DeleteChatsBulk) | **Post** /api/v2/chats/delete | Delete chats (bulk)
 [**DeleteContact**](TextMagicApi.md#DeleteContact) | **Delete** /api/v2/contacts/{id} | Delete a single contact.
@@ -86,15 +86,15 @@ Method | HTTP request | Description
 [**GetContactsAutocomplete**](TextMagicApi.md#GetContactsAutocomplete) | **Get** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions by given search term.
 [**GetContactsByListId**](TextMagicApi.md#GetContactsByListId) | **Get** /api/v2/lists/{id}/contacts | Fetch user contacts by given group id.
 [**GetCountries**](TextMagicApi.md#GetCountries) | **Get** /api/v2/countries | Return list of countries.
-[**GetCurrentUser**](TextMagicApi.md#GetCurrentUser) | **Get** /api/v2/user | Get current user info.
+[**GetCurrentUser**](TextMagicApi.md#GetCurrentUser) | **Get** /api/v2/user | Get current account information
 [**GetCustomField**](TextMagicApi.md#GetCustomField) | **Get** /api/v2/customfields/{id} | Get a single custom field.
 [**GetCustomFields**](TextMagicApi.md#GetCustomFields) | **Get** /api/v2/customfields | Get all contact custom fields.
 [**GetDedicatedNumber**](TextMagicApi.md#GetDedicatedNumber) | **Get** /api/v2/numbers/{id} | Get the details of a specific dedicated number
-[**GetDisallowedRules**](TextMagicApi.md#GetDisallowedRules) | **Get** /api/v2/user/disallowed-rules | Get an array of all rules that are disallowed to the current account.
+[**GetDisallowedRules**](TextMagicApi.md#GetDisallowedRules) | **Get** /api/v2/user/disallowed-rules | Get disallowed permissions
 [**GetFavourites**](TextMagicApi.md#GetFavourites) | **Get** /api/v2/contacts/favorite | Get favorite contacts and lists.
 [**GetInboundMessage**](TextMagicApi.md#GetInboundMessage) | **Get** /api/v2/replies/{id} | Get a single inbound message
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#GetInboundMessagesNotificationSettings) | **Get** /api/v2/user/notification/inbound | Get inbound messages notification settings
-[**GetInvoices**](TextMagicApi.md#GetInvoices) | **Get** /api/v2/invoices | Return account invoices.
+[**GetInvoices**](TextMagicApi.md#GetInvoices) | **Get** /api/v2/invoices | Get all invoices
 [**GetList**](TextMagicApi.md#GetList) | **Get** /api/v2/lists/{id} | Get a single list.
 [**GetListContactsIds**](TextMagicApi.md#GetListContactsIds) | **Get** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
 [**GetListsOfContact**](TextMagicApi.md#GetListsOfContact) | **Get** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
@@ -104,8 +104,8 @@ Method | HTTP request | Description
 [**GetMessageSession**](TextMagicApi.md#GetMessageSession) | **Get** /api/v2/sessions/{id} | Get a session details
 [**GetMessageSessionStat**](TextMagicApi.md#GetMessageSessionStat) | **Get** /api/v2/sessions/{id}/stat | Get a session statistics
 [**GetMessagesBySessionId**](TextMagicApi.md#GetMessagesBySessionId) | **Get** /api/v2/sessions/{id}/messages | Get a session messages
-[**GetMessagingCounters**](TextMagicApi.md#GetMessagingCounters) | **Get** /api/v2/stats/messaging/data | Return counters for messaging data views.
-[**GetMessagingStat**](TextMagicApi.md#GetMessagingStat) | **Get** /api/v2/stats/messaging | Return messaging statistics.
+[**GetMessagingCounters**](TextMagicApi.md#GetMessagingCounters) | **Get** /api/v2/stats/messaging/data | Get sent/received messages counters values
+[**GetMessagingStat**](TextMagicApi.md#GetMessagingStat) | **Get** /api/v2/stats/messaging | Get messaging statistics
 [**GetOutboundMessage**](TextMagicApi.md#GetOutboundMessage) | **Get** /api/v2/messages/{id} | Get a single message
 [**GetOutboundMessagesHistory**](TextMagicApi.md#GetOutboundMessagesHistory) | **Get** /api/v2/history | Get history
 [**GetPushTokens**](TextMagicApi.md#GetPushTokens) | **Get** /api/v2/push/tokens | Get all device tokens assigned to the current account
@@ -113,11 +113,11 @@ Method | HTTP request | Description
 [**GetSenderId**](TextMagicApi.md#GetSenderId) | **Get** /api/v2/senderids/{id} | Get the details of a specific Sender ID
 [**GetSenderIds**](TextMagicApi.md#GetSenderIds) | **Get** /api/v2/senderids | Get all your approved Sender IDs
 [**GetSenderSettings**](TextMagicApi.md#GetSenderSettings) | **Get** /api/v2/sender/settings | Get current sender settings
-[**GetSpendingStat**](TextMagicApi.md#GetSpendingStat) | **Get** /api/v2/stats/spending | Return account spending statistics.
+[**GetSpendingStat**](TextMagicApi.md#GetSpendingStat) | **Get** /api/v2/stats/spending | Get spending statistics
 [**GetState**](TextMagicApi.md#GetState) | **Get** /api/v2/state | Get current entities state
-[**GetSubaccount**](TextMagicApi.md#GetSubaccount) | **Get** /api/v2/subaccounts/{id} | Get a single subaccount.
-[**GetSubaccounts**](TextMagicApi.md#GetSubaccounts) | **Get** /api/v2/subaccounts | Get all subaccounts of current user.
-[**GetSubaccountsWithTokens**](TextMagicApi.md#GetSubaccountsWithTokens) | **Post** /api/v2/subaccounts/tokens/list | Get all subaccounts with their REST API tokens associated with specified app name.
+[**GetSubaccount**](TextMagicApi.md#GetSubaccount) | **Get** /api/v2/subaccounts/{id} | Get sub-account information
+[**GetSubaccounts**](TextMagicApi.md#GetSubaccounts) | **Get** /api/v2/subaccounts | Get sub-accounts list
+[**GetSubaccountsWithTokens**](TextMagicApi.md#GetSubaccountsWithTokens) | **Post** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
 [**GetSurvey**](TextMagicApi.md#GetSurvey) | **Get** /api/v2/surveys/{id} | Get a survey by id.
 [**GetSurveyNode**](TextMagicApi.md#GetSurveyNode) | **Get** /api/v2/surveys/nodes/{id} | Get a node by id.
 [**GetSurveyNodes**](TextMagicApi.md#GetSurveyNodes) | **Get** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
@@ -130,7 +130,7 @@ Method | HTTP request | Description
 [**GetUserDedicatedNumbers**](TextMagicApi.md#GetUserDedicatedNumbers) | **Get** /api/v2/numbers | Get all your dedicated numbers
 [**GetUserLists**](TextMagicApi.md#GetUserLists) | **Get** /api/v2/lists | Get all user lists.
 [**GetVersions**](TextMagicApi.md#GetVersions) | **Get** /api/v2/versions | Get minimal valid apps versions
-[**InviteSubaccount**](TextMagicApi.md#InviteSubaccount) | **Post** /api/v2/subaccounts | Invite new subaccount.
+[**InviteSubaccount**](TextMagicApi.md#InviteSubaccount) | **Post** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#MarkChatsReadBulk) | **Post** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#MarkChatsUnreadBulk) | **Post** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**MergeSurveyNodes**](TextMagicApi.md#MergeSurveyNodes) | **Post** /api/v2/surveys/nodes/merge | Merge two question nodes.
@@ -138,7 +138,7 @@ Method | HTTP request | Description
 [**MuteChatsBulk**](TextMagicApi.md#MuteChatsBulk) | **Post** /api/v2/chats/mute/bulk | Mute chats (bulk)
 [**Ping**](TextMagicApi.md#Ping) | **Get** /api/v2/ping | Just does a pong.
 [**ReopenChatsBulk**](TextMagicApi.md#ReopenChatsBulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
-[**RequestNewSubaccountToken**](TextMagicApi.md#RequestNewSubaccountToken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for subaccount.
+[**RequestNewSubaccountToken**](TextMagicApi.md#RequestNewSubaccountToken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#RequestSenderId) | **Post** /api/v2/senderids | Apply for a new Sender ID
 [**ResetSurvey**](TextMagicApi.md#ResetSurvey) | **Put** /api/v2/surveys/{id}/reset | Reset a survey flow.
 [**SearchChats**](TextMagicApi.md#SearchChats) | **Get** /api/v2/chats/search | Find chats by message text
@@ -165,7 +165,7 @@ Method | HTTP request | Description
 [**UpdateChatDesktopNotificationSettings**](TextMagicApi.md#UpdateChatDesktopNotificationSettings) | **Put** /api/v2/user/desktop/notification | Update chat desktop notification settings
 [**UpdateContact**](TextMagicApi.md#UpdateContact) | **Put** /api/v2/contacts/{id} | Update existing contact.
 [**UpdateContactNote**](TextMagicApi.md#UpdateContactNote) | **Put** /api/v2/notes/{id} | Update existing contact note.
-[**UpdateCurrentUser**](TextMagicApi.md#UpdateCurrentUser) | **Put** /api/v2/user | Update current user info.
+[**UpdateCurrentUser**](TextMagicApi.md#UpdateCurrentUser) | **Put** /api/v2/user | Edit current account info
 [**UpdateCustomField**](TextMagicApi.md#UpdateCustomField) | **Put** /api/v2/customfields/{id} | Update existing custom field.
 [**UpdateCustomFieldValue**](TextMagicApi.md#UpdateCustomFieldValue) | **Put** /api/v2/customfields/{id}/update | Update contact&#39;s custom field value.
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#UpdateInboundMessagesNotificationSettings) | **Put** /api/v2/user/notification/inbound | Update inbound messages notification settings
@@ -457,7 +457,7 @@ This endpoint does not need any parameter.
 
 # **CloseSubaccount**
 > CloseSubaccount(ctx, id)
-Close subaccount.
+Close sub-account
 
 
 
@@ -759,7 +759,7 @@ This endpoint does not need any parameter.
 
 # **DeleteAvatar**
 > DeleteAvatar(ctx, )
-Delete an avatar for the current user.\\
+Delete an avatar
 
 
 
@@ -2619,7 +2619,7 @@ This endpoint does not need any parameter.
 
 # **GetCurrentUser**
 > User GetCurrentUser(ctx, )
-Get current user info.
+Get current account information
 
 
 
@@ -2735,9 +2735,9 @@ Name | Type | Description  | Notes
 
 # **GetDisallowedRules**
 > GetDisallowedRulesResponse GetDisallowedRules(ctx, )
+Get disallowed permissions
+
 Get an array of all rules that are disallowed to the current account.
-
-
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -2848,9 +2848,9 @@ This endpoint does not need any parameter.
 
 # **GetInvoices**
 > GetInvoicesPaginatedResponse GetInvoices(ctx, optional)
-Return account invoices.
+Get all invoices
 
-
+With the TextMagic API, you can check the invoices and transactions for your account.
 
 ### Required Parameters
 
@@ -3210,9 +3210,9 @@ Name | Type | Description  | Notes
 
 # **GetMessagingCounters**
 > GetMessagingCountersResponse GetMessagingCounters(ctx, )
-Return counters for messaging data views.
+Get sent/received messages counters values
 
-
+Get total contacts, sent messages and received messages counters values.
 
 ### Required Parameters
 This endpoint does not need any parameter.
@@ -3234,7 +3234,7 @@ This endpoint does not need any parameter.
 
 # **GetMessagingStat**
 > GetMessagingStatResponse GetMessagingStat(ctx, optional)
-Return messaging statistics.
+Get messaging statistics
 
 
 
@@ -3250,9 +3250,9 @@ Optional parameters are passed through a pointer to a GetMessagingStatOpts struc
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **by** | **optional.String**| Group results by specified period: off, day, month or year. Default is off | [default to off]
- **start** | **optional.Int32**| Start date in unix timestamp format. Default is 7 days ago | 
- **end** | **optional.String**| End date in unix timestamp format. Default is now | 
+ **by** | **optional.String**| *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  | [default to off]
+ **start** | **optional.Int32**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | 
+ **end** | **optional.String**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | 
 
 ### Return type
 
@@ -3489,7 +3489,7 @@ Name | Type | Description  | Notes
 
 # **GetSpendingStat**
 > GetSpendingStatPaginatedResponse GetSpendingStat(ctx, optional)
-Return account spending statistics.
+Get spending statistics
 
 
 
@@ -3507,8 +3507,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
  **limit** | **optional.Int32**| The number of results per page. | [default to 10]
- **start** | **optional.Int32**| Optional. Start date in unix timestamp format. Default is 7 days ago | 
- **end** | **optional.Int32**| Optional. End date in unix timestamp format. Default is now | 
+ **start** | **optional.Int32**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | 
+ **end** | **optional.String**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | 
 
 ### Return type
 
@@ -3551,7 +3551,7 @@ This endpoint does not need any parameter.
 
 # **GetSubaccount**
 > User GetSubaccount(ctx, id)
-Get a single subaccount.
+Get sub-account information
 
 
 
@@ -3579,7 +3579,7 @@ Name | Type | Description  | Notes
 
 # **GetSubaccounts**
 > User GetSubaccounts(ctx, optional)
-Get all subaccounts of current user.
+Get sub-accounts list
 
 
 
@@ -3615,9 +3615,9 @@ Name | Type | Description  | Notes
 
 # **GetSubaccountsWithTokens**
 > GetSubaccountsWithTokensResponse GetSubaccountsWithTokens(ctx, getSubaccountsWithTokensInputObject, optional)
-Get all subaccounts with their REST API tokens associated with specified app name.
+Get all sub-accounts with their REST API tokens associated with app name
 
-When more than one token related to app name, last key will be returned.
+Get all sub-accounts with their REST API tokens associated with specified app name. When more than one token related to app name, last key will be returned.
 
 ### Required Parameters
 
@@ -4025,7 +4025,7 @@ This endpoint does not need any parameter.
 
 # **InviteSubaccount**
 > InviteSubaccount(ctx, inviteSubaccountInputObject)
-Invite new subaccount.
+Invite a new sub-account
 
 
 
@@ -4245,7 +4245,7 @@ Name | Type | Description  | Notes
 
 # **RequestNewSubaccountToken**
 > User RequestNewSubaccountToken(ctx, requestNewSubaccountTokenInputObject)
-Request a new REST API token for subaccount.
+Request a new REST API token for sub-account
 
 Returning user object, key and app name.
 
@@ -5105,7 +5105,7 @@ Name | Type | Description  | Notes
 
 # **UpdateCurrentUser**
 > UpdateCurrentUserResponse UpdateCurrentUser(ctx, updateCurrentUserInputObject)
-Update current user info.
+Edit current account info
 
 
 

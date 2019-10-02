@@ -11,18 +11,27 @@
 package TextMagic
 
 type User struct {
+	// User ID.
 	Id int32 `json:"id"`
+	// Username.
 	Username string `json:"username"`
+	// Account first name.
 	FirstName string `json:"firstName"`
+	// Account last name.
 	LastName string `json:"lastName"`
+	// User email address.
 	Email string `json:"email"`
+	// Current account status: * **A** for Active * **T** for Trial. 
 	Status string `json:"status"`
+	// Account balance (in account currency).
 	Balance float32 `json:"balance"`
 	Phone string `json:"phone"`
+	// Account company name.
 	Company string `json:"company"`
 	Currency *Currency `json:"currency"`
 	Country *Country `json:"country"`
 	Timezone *Timezone `json:"timezone"`
+	// Type of account: * **P** for Parent User * **A** for Administrator Sub-Account * **U** for Regular User 
 	SubaccountType string `json:"subaccountType"`
 	EmailAccepted bool `json:"emailAccepted"`
 	PhoneAccepted bool `json:"phoneAccepted"`

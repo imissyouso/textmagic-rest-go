@@ -11,9 +11,13 @@
 package TextMagic
 
 type Timezone struct {
+	// Internal timezone ID.
 	Id int32 `json:"id"`
+	// Timezone area.
 	Area string `json:"area"`
+	// Is Daylight saving time used in this timezone?
 	Dst int32 `json:"dst"`
 	Offset int32 `json:"offset"`
+	// User-friendly timezone name (with spaces replaced by underscores).
 	Timezone string `json:"timezone"`
 }
