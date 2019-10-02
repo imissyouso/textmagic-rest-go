@@ -131,7 +131,7 @@ tags:
     \n| Tag | Description |\n|-----|-------------|\n| **First name** | Contact first\
     \ name. |\n| **Last name** | Contact last name. |\n| **Company name** | Contact\
     \ company. |\n| **Phone** | Contact phone number. |\n| **Email** | Email. |\n\
-    | @TODO [Custom fields](/docs/api/custom-fields/) | Contact custom field values.\
+    | TODO [Custom fields](/docs/api/custom-fields/) | Contact custom field values.\
     \ |"
   x-displayName: "Templates"
 - name: "Send Email to SMS"
@@ -28697,7 +28697,7 @@ definitions:
         format: "float"
         example: 2.4
         description: "Dedicated number monthly fee for this country. Returned in current\
-          \ [account](/docs/api/account/) currency.@TODO"
+          \ [account](/docs/api/account/) currency.TODO"
     example:
       price: 2.4
       numbers:
@@ -29985,7 +29985,7 @@ definitions:
       content:
         type: "string"
         example: "Hello {First name}!"
-        description: "Template text. May contain the tags listed below @TODO."
+        description: "Template text. May contain the tags listed below TODO."
       lastModified:
         type: "string"
         format: "date-time"
@@ -30033,7 +30033,7 @@ definitions:
       status:
         type: "string"
         example: "d"
-        description: "Delivery status of the message.\n@TODO: Please see the table\
+        description: "Delivery status of the message.\nTODO: Please see the table\
           \ below to see different delivery statuses.\n"
         enum:
         - "q"
@@ -30082,7 +30082,7 @@ definitions:
       firstName:
         type: "string"
         example: "John"
-        description: "@TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/)\
+        description: "TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/)\
           \ (even if you submitted phone number instead of contact ID).\n"
         x-nullable: true
       lastName:

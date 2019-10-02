@@ -22,7 +22,7 @@ type MessageOut struct {
 	// Recipient phone number.
 	Receiver string `json:"receiver,omitempty"`
 	Text string `json:"text"`
-	// Delivery status of the message. @TODO: Please see the table below to see different delivery statuses. 
+	// Delivery status of the message. TODO: Please see the table below to see different delivery statuses. 
 	Status string `json:"status"`
 	ContactId int32 `json:"contactId"`
 	SessionId int32 `json:"sessionId"`
@@ -33,7 +33,7 @@ type MessageOut struct {
 	// Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
 	Charset string `json:"charset"`
 	CharsetLabel string `json:"charsetLabel"`
-	// @TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
+	// TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
 	FirstName string `json:"firstName"`
 	// Contact last name.
 	LastName string `json:"lastName"`
