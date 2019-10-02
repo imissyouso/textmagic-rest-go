@@ -16,6 +16,12 @@ info:
     altText: "TextMagic"
 host: "my.textmagic.com"
 tags:
+- name: "Introduction"
+  description: ""
+- name: "Getting started"
+  description: ""
+- name: "Sandbox"
+  description: ""
 - name: "Outbound Messages"
   description: "## How to send a single text message\n\nTo send a simple text message\
     \ to one recipient, you should set only the `text` and the `phones` parameters.\
@@ -38019,6 +38025,11 @@ externalDocs:
 x-ignoredHeaderParameters:
 - "X-Ignore-Null-Values"
 x-tagGroups:
+- name: "Overview"
+  tags:
+  - "Introduction"
+  - "Getting started"
+  - "Sandbox"
 - name: "Messaging"
   tags:
   - "Outbound Messages"
