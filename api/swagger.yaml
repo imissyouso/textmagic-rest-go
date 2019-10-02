@@ -80,8 +80,9 @@ tags:
     \ to erase them.\n\n![alt text](images/sandbox.png)\n\n\n### TODO: здесь будет\
     \ новая песочница чуть позже"
 - name: "Outbound Messages"
-  description: "## How to send a single text message\n\nTo send a simple text message\
-    \ to one recipient, you should set only the `text` and the `phones` parameters.\
+  description: "The primary reason for using the TextMagic API is to send SMS text\
+    \ messages. \n\n## How to send a single text message\n\nTo send a simple text\
+    \ message to one recipient, you should set only the `text` and the `phones` parameters.\
     \ `text` should\ncontain that desired text and `phones` should be set to the recipient’\
     s international phone number.\n\nFor example, to send an SMS message with the\
     \ text “I love TextMagic” to the phone number +44 (0) 7 860021130, use the command:\n\
@@ -95,24 +96,117 @@ tags:
     \ API will return not only the session ID,\nbut also the single message ID. Also,\
     \ you can watch for the delivery status changes using this ID without\nfetching\
     \ session messages first. Since this is not a bulk session or scheduled message,\n\
-    `bulkId` and `scheduleId` are null.\n\n## How to send bulk text messages\nTODO\n\
-    \n## Sending more than 1,000 messages in one session\nTODO\n\n## How to send a\
-    \ text message with an attachment\nTODO\n\n## Delivery status callback\n\n## Delivery\
-    \ status codes\n\nBelow you’ll find several delivery statuses for sent messages,\
-    \ which are divided into two types:\n*   **Intermediate** – temporary statuses\
-    \ that can change as the messages are processed.\n*   **Final** – these statuses\
-    \ are final and will not change.\n\n| Delivery status | Type | Description |\n\
-    |-----------------|------|-------------|\n| **a** | intermediate | The mobile\
-    \ operator has acknowledged the message. |\n| **b** | intermediate |The mobile\
-    \ operator has queued the message. |\n|**d** | final | The message has been successfully\
-    \ delivered to the handset. |\n| **e** | final | An error occurred while sending\
-    \ the message. |\n| **f** | final | An error occurred while delivering the message.\
-    \ |\n| **j** | final | The mobile operator has rejected the message. |\n| **q**\
-    \ | intermediate | The message is queued on the TextMagic server. |\n| **r** |\
-    \ intermediate | The message has been sent to the mobile operator. | \n| **s**\
-    \ | intermediate |This message is scheduled to be sent later. |\n| **u** | final\
-    \ | The status is unknown. |"
-  x-displayName: "Outgoing messages\n"
+    `bulkId` and `scheduleId` are null.\n\n## How to send bulk text messages\nYou\
+    \ can also send a message to many recipients simultaneously. Let’s see how it’\
+    s done in the example below.\n\nAssuming that you have a list ID 55314 (with 100\
+    \ recipients), write:\n\n> POST https://rest.textmagic.com/api/v2/messages\n\n\
+    | Parameter | Value |\n|-----------|-------|\n| **text** | `Hello, how are you?`\
+    \ |\n| **lists** | `55314` |\n| **phones** | `447860021130,447860021131,447860021132,447860021134`\
+    \ |\n| **contacts** | `318,395,3348015` |\n\nYou will receive a result like this:\n\
+    \n|Parameter|Example|\n|---------|-------|\n|**id**|`357122`|\n|**href**|`/api/v2/sessions/357122`|\n\
+    |**type**|`session`|\n|**sessionId**|`357122`|\n|**bulkId**|`null`|\n|**messageId**|`null`|\n\
+    |**scheduleId**|`null`|\n\n## Sending more than 1,000 messages in one session\n\
+    A **Bulk session** in TextMagic is when you send a message to more than 1,000\
+    \ recipients. Since processing such a large session could take a long time (i.e.\
+    \ more than a few seconds), the messages are stored in a queue temporarily. You\
+    \ can check the progress of the messages by sending a **GET\_**to:\n> GET /api/v2/bulks/{id}\n\
+    \nAssuming that you have list ID 55315 with more than 1,000 recipients, call:\n\
+    \n> POST https://rest.textmagic.com/api/v2/messages\n\nwith the following parameters:\n\
+    \n|Parameter|Value|\n|---------|-----|\n|**templateId**|`10541`|\n|**lists**|`55315`|\n\
+    \nYou will receive a result like this:\n\n|Parameter|Example|\n|---------|-------|\n\
+    |**id**|`357122`|\n|**href**|`/api/v2/bulks/357122`|\n|**type**|`bulk`|\n|**sessionId**|`null`|\n\
+    |**bulkId**|`357122`|\n|**messageId**|`null`|\n|**scheduleId**|`null`|\n\nAs you\
+    \ can see, the **session** has not been created yet, since it will be created\
+    \ after processing all the contacts you supplied during request.\n\n## How to\
+    \ send a text message using an SMS template\n\nNext, let’s try to send an SMS\
+    \ to a contact list using a message template instead of specifying the message\
+    \ text. An extra feature we can use is the\_[Custom fields](/docs/api/custom-fields/)\
+    \ tags, which we can apply to send personalized texts to all recipients.\n\nAssuming\
+    \ you have these items:\n\n*   A contact list with ID 10541 (with two or more\
+    \ contacts). You can use test number 999 .\n*   The message template with ID 55313\
+    \ (with **First name** and **Last name** tags). When you sign up for a TextMagic\
+    \ account, you automatically receive several message templates, such as **Callback\
+    \ request** or **Booking confirmation.** You can use any of them.\n*   A sufficient\
+    \ balance in your account to send this SMS message to the contact list.\n\n> POST\
+    \ https://rest.textmagic.com/api/v2/messages\n\nwith the following parameters:\n\
+    \n|Parameter|Value\n|**templateId**|`10541`\n|**lists**|`55313`\n\nYou will receive\
+    \ a result like this:\n\n|Parameter|Example\n|**id**|`34436613`\n|**href**|`/api/v2/sessions/34436613`\n\
+    |**type**|`session`\n|**sessionId**|`34436613`\n|**bulkId**|`null`\n|**messageId**|`null`\n\
+    |**scheduleId**|`null`\n\nThis is a sending session with more than one recipient\
+    \ (but less than 1,000);\_see the notes above about sending bulk messages. We\
+    \ cannot select just one message from this session, so the **messageId** is also\
+    \ empty. However, you can\_[get the session for the messages](/docs/api/sms-sessions/)\
+    \ and then fetch the messages one by one.\n\n## How to send a text message with\
+    \ an attachment\n\nText messages can include only text symbols. And if you need\
+    \ to send a PDF document or an image you can upload it to some cloud storage service\
+    \ first and then insert a link to this document into your text message. TextMagic\
+    \ offers the Attachments feature which allows you to upload your document to TextMagic\
+    \ servers and get a relatively short download link. After that, you just need\
+    \ to insert this link into your message text.\n\nTo upload an attachment, use:\n\
+    \n> POST https://rest.textmagic.com/api/v2/messages/attachment\n\nwith a single\
+    \ parameter:\n\n|Parameter|Value|Description|\n|---------|-----|-----------|\n\
+    |**file**|`[multipart/form-data]`|Your request with attachment should be sent\
+    \ in `multipart/form-data` format.**Note:** Only .jpg, .gif, .png, .pdf, .txt,\
+    \ .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf attachment files up to 10\
+    \ MB are supported.|\n\nYou will receive a result like this:\n\n|Parameter|Example|Description|\n\
+    |---------|-------|-----------|\n|**href**|`click/Zwcj9`|This is a relative link\
+    \ to your file. To construct a full link, just add “https://my.textmagic.com/”\
+    \ to the beginning (like this: [https://my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9)).\
+    \ For most modern devices, you can omit “https://” part and write just [my.textmagic.com/click/Zwcj9](https://my.textmagic.com/click/Zwcj9),\
+    \ it will save you 8 characters.|\n|**chars**|`/api/v2/sessions/11`|`href` field\
+    \ characters count.|**name**|`screen.png`|Original file name that will be displayed\
+    \ on the download/preview page.|\n|**size**|`1094`|Attachment size in bytes.|\n\
+    \nIt is as simple as that. Now you can send a text message with this link as described\
+    \ above.\n\n## Delivery status callback\n\nA callback is a mechanism that posts\
+    \ the JSON body of a sent message to the URL on a server that you specify. The\
+    \ server application which receives the callback can check the message status\
+    \ and trigger some actions based on that data.\n\nHere is how to set up the delivery\
+    \ status callback URL:\n\n1.  [Log in](https://my.textmagic.com/) to TextMagic\
+    \ (or [start a free trial](https://my.textmagic.com/register/) if you haven’t\
+    \ registered yet).\n2.  Go to the\_[API](https://my.textmagic.com/online/api/rest-api/keys)\
+    \ page.\n3.  Enter your callback URL into the\_**Callback URL for delivery notifications**\
+    \ field.\n4.  Click the\_**Test** button to test your URL.\n5.  If it’s successful,\
+    \ click **Save changes**.\n\nYour server should reply with a **200 OK** response\
+    \ at this URL. If it does not, your callback URL will be treated as invalid and\
+    \ the inbound messages will not be passed to your application.\n\n## Call parameters\n\
+    \nYour callback URL will be triggered immediately when sent message status changes.\
+    \ The parameters are passed by the **POST** method and contain the following information\
+    \ (i.e. exact copy of the **message** resource plus custom **referenceId**, if\
+    \ you have specified it when sending message via **POST /api/v2/messages**). The\_\
+    Resource format is basically the format of the reply when making the request to\
+    \ the specific API resource.\n\n|Parameter|Example|Description|\n|---------|-------|-----------|\n\
+    |**id**|`4991`|Message ID.|**sender**|\n|**sender**|`447624800500`|Message sender\
+    \ (phone number or alphanumeric Sender ID).|\n|**receiver**|`447860021130`|\n\
+    |Recipient phone number.|**text**|`Hello John!`|\n|Message text (after tags substitution,\
+    \ if any).|\n|**price**|`0.25`||Message cost (in account currency).|\n|**status**|`d`|Delivery\
+    \ status of the message. Please see the table at the [Sessions](/docs/api/sms-sessions/#message-delivery-statuses)\
+    \ section to see different delivery statuses.|\n|**partsCount**|`2`|Message parts\
+    \ (multiples of 160 characters) count.|\n|**messageTime**|`2015-06-19T09:48:24+0000`|Sending\
+    \ time.|\n|**charset**|`UTF-16BE`|Message charset. Could be:*   **ISO-8859-1**\
+    \ for plaintext SMS*   **UTF-16BE** for Unicode SMS\n|**firstName**|`John`|Contact\
+    \ first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even\
+    \ if you submitted phone number instead of contact ID).|\n|**lastName**|`Conway`|Contact\
+    \ last name.|\n|**country**|`DK`|Two-letter ISO country code of the recipient\
+    \ phone number.|\n|**referenceId**|`my-reference-id-319`|Custom message reference\
+    \ ID. You can use your internal IDs to identify the DLRs more easily when doing\
+    \ **POST /api/v2/messages**.|\n\n## Delivery status codes\n\nBelow you’ll find\
+    \ several delivery statuses for sent messages, which are divided into two types:\n\
+    *   **Intermediate** – temporary statuses that can change as the messages are\
+    \ processed.\n*   **Final** – these statuses are final and will not change.\n\n\
+    | Delivery status | Type | Description |\n|-----------------|------|-------------|\n\
+    | **a** | intermediate | The mobile operator has acknowledged the message. |\n\
+    | **b** | intermediate |The mobile operator has queued the message. |\n| **d**\
+    \ | final | The message has been successfully delivered to the handset. |\n| **e**\
+    \ | final | An error occurred while sending the message. |\n| **f** | final |\
+    \ An error occurred while delivering the message. |\n| **j** | final | The mobile\
+    \ operator has rejected the message. |\n| **q** | intermediate | The message is\
+    \ queued on the TextMagic server. |\n| **r** | intermediate | The message has\
+    \ been sent to the mobile operator. | \n| **s** | intermediate |This message is\
+    \ scheduled to be sent later. |\n| **u** | final | The status is unknown. |\n\n\
+    # API endpoints documentation\n\nPreviously we considered special cases of sending\
+    \ SMS. For common documentation of all available SMS sending API endpoints, see\
+    \ the section below."
+  x-displayName: "Messages : Send\n"
 - name: "Inbound Messages"
   description: "With the TextMagic API, you can establish a full two-way communication\
     \ pipeline for sending and receiving text messages within your application.\n\n\
@@ -138,12 +232,12 @@ tags:
     \ | Receiver phone number (i.e. **your** dedicated or shared reply number). |\n\
     | **messageTime** | `2012-11-28T18:38:28+0000` | The time when the message reached\
     \ the TextMagic server. |\n| **text** | `Test reply` | Inbound message text. |\n"
-  x-displayName: "Incoming messages"
+  x-displayName: "Messages : Receive\n"
 - name: "Scheduled Messages"
   description: "You can schedule text messages to be sent at a later date or time,\
     \ or can create recurring text message sessions with TextMagic API. Below is a\
     \ detailed overview of how to do both.\n"
-  x-displayName: "Messages scheduling"
+  x-displayName: "Messages: Schedule\n"
 - name: "Two Factor auth"
   description: "You can easily verify your customers using their phone numbers with\
     \ the help of 2FA (better known as two-factor authentication) and protect against\
