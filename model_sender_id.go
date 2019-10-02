@@ -11,9 +11,11 @@
 package TextMagic
 
 type SenderId struct {
+	// Numeric sender ID.
 	Id int32 `json:"id"`
+	// Alphanumeric ID.
 	SenderId string `json:"senderId"`
 	User *User `json:"user"`
-	// A - accepted, R - rejected, P - pending
+	// *   **P** for Pending. This Sender ID is being reviewed by our support team. *   **R** for Rejected. Our support team rejected your application for this Sender ID. *   **A** for Active. 
 	Status string `json:"status"`
 }

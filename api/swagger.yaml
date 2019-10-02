@@ -126,8 +126,91 @@ tags:
   description: "Templates can save time and effort when the same message format is\
     \ required. Furthermore, \nyour customers will receive personalized messages even\
     \ when you’ve applied templates. \nAll you have to do is use the embed **tags**\
-    \ into the template text."
+    \ into the template text.\n\n## Custom fields list (Merge tags)\n\nAll tags should\
+    \ be inputted inside curly braces (e.g., `{First name}` for **First name**).\n\
+    \n| Tag | Description |\n|-----|-------------|\n| **First name** | Contact first\
+    \ name. |\n| **Last name** | Contact last name. |\n| **Company name** | Contact\
+    \ company. |\n| **Phone** | Contact phone number. |\n| **Email** | Email. |\n\
+    | @TODO [Custom fields](/docs/api/custom-fields/) | Contact custom field values.\
+    \ |"
   x-displayName: "Templates"
+- name: "Send Email to SMS"
+  description: ""
+- name: "Receive SMS to Email"
+  description: "When someone replies to an SMS you’ve sent via email to the SMS service,\
+    \ the reply will be sent to the originating email address. This means that you\
+    \ can simply reply to all incoming emails from the TextMagic service and the recipient\
+    \ will receive the reply as an SMS.\n\n## How to set up incoming SMS alerts\n\n\
+    To set up an incoming messages notification:\n\n1.  [Log in](https://my.textmagic.com/)\
+    \ to TextMagic (or [start a free trial](https://my.textmagic.com/register/) if\
+    \ you haven’t registered yet).\n2.  Go to [Incoming SMS alerts](https://my.textmagic.com/online/account/notifications/incoming).\n\
+    3.  To turn on the receiving **SMS to Email** service, enable the\_**New incoming\
+    \ SMS** option.\n4.  If you want the last ten messages from your conversation\
+    \ included in the email reply, turn on the **Recent Chat History** feature.\n\n\
+    > Normally, the reply is sent to the email address that started the conversation.\
+    \ For example, if you sent an email from **charles@example.com** to [447971001234@textmagic.com](mailto:447971001234@textmagic.com)\_\
+    and the recipient replied to that address, that reply will be sent to **charles@example.com**\
+    \ by default. However, you can also nominate up to three additional email addresses\
+    \ to receive a copy of that email. Add them into the **Forward incoming SMS to\
+    \ email 1**, **2** or **3** fields.\n\n## Incoming SMS email alert (an example)\n\
+    \nWhen someone replies to your message sent using\_**Email To SMS**, TextMagic\
+    \ will forward the reply to your email.\n\n| Variable | Value |\n|-------|-------|\n\
+    | From: | 4912345678@textmagic.com |\n| Body: | Hi, I just received your message.\
+    \ Phil. |\n"
+- name: "Distribution Lists"
+  description: "In this section, you’ll learn how to forward your emails as text messages\
+    \ to one or even to hundreds of people and learn how to never miss another alert\
+    \ or notification.\n\n## How distribution lists work\n\nAll emails sent to your\
+    \ SMS distribution list email addresses will be immediately forwarded as text\
+    \ messages to all the mobile phone numbers in that distribution list. You can\
+    \ read more about distribution lists from our [marketing site](https://www.textmagic.com/sms-distribution-lists/)\
+    \ or [help center](https://support.textmagic.com/article/how-to-forward-to-distribution-list-members-via-email-to-sms/).\n\
+    \n## How to create a distribution list\n\nTo create a distribution list:\n\n1.\
+    \  Go to [Distribution lists](https://my.textmagic.com/online/emailtosms/distribution-lists).\n\
+    2.  Click **New distribution list**.\n3.  Give your list a name.\n4.  Add recipients\
+    \ (phone numbers, contacts or lists).\n5.  Choose the content and message length\
+    \ settings.\n6.  6\\. Choose what phone number will be sent with the messages.\
+    \ Click here to learn more about [sender settings](https://support.textmagic.com/article/how-to-manage-sender-settings/).\n\
+    7.  Click **Continue**.\n\nNow you can set up forwarding in your email application\
+    \ or send emails to the distribution address.\n\n> Anyone who knows the email\
+    \ address associated with your distribution list could send an email to it. This\
+    \ could result in several messages being sent from your account. Therefore, it\
+    \ is advised that you don’t use this email address for signing up an account or\
+    \ share it with the public. Keep it secret.\n\n## Distribution list usage (example)\n\
+    \nLet’s imagine we’ve created a distribution list `fe5436332432733@textmagic.com`\
+    \ and have added `+447812345678`, `+447812345679`, `+447812345670` numbers as\
+    \ recipients.  \n  \nIn order for all of them to receive the text message, we\
+    \ send an email with following details:\n\n| Variable | Value |\n|-------|-------|\n\
+    | From: | `your_email@yourdomain.com` |\n| To: | `fe5436332432733@textmagic.com`\
+    \ |\n| Subject: | You can leave the subject blank. |\n| Body: |  `Server downtime\
+    \ started 10:32:02 UTC. Please react ASAP.`|\n\nAs a result, all three recipients\
+    \ will receive the text message and will be able to react quickly to fix the server\
+    \ issue.\n\n> You can also include TextMagic contact **lists** and separate **contacts**\
+    \ in the distribution list’s recipients field to avoid having to add numbers one\
+    \ by one."
+- name: "Sender Settings"
+  description: "In this section, you’ll learn about the different sender settings\
+    \ and how to set the reply number in messages.\n\n## The differences among sender\
+    \ settings\n\nBy default, the SMS you’ve sent will use the reply numbers that\
+    \ are shared among all your customers.* Those can be used for free. However, to\
+    \ personalize the number, there are four different sender settings:\n\n| Feature\
+    \ | Shared reply number | Dedicated number | Alphanumeric Sender ID | Own mobile\
+    \ number | \n|---------|---------------------|------------------|------------------------|-------------------|\n\
+    | Can receive replies | Yes | Yes | No | To mobile |\n| Is shared among sub-accounts\
+    \ | Yes | No | Yes | No | \n| Monthly fee | FREE | From £2.40 | FREE | FREE\n\n\
+    \\* \_Even though the numbers are shared, every customer can only see their own\
+    \ replies. [Read more](https://support.textmagic.com/faq/what-is-the-difference-between-dedicated-number-and-shared-number/)."
+  x-displayName: "Overview"
+- name: "Sender IDs"
+  description: "Sender ID allows you to show your company name instead of the reply\
+    \ number.\n\n## What is an alphanumeric Sender ID?\nSender IDs allow you to send\
+    \ personalized text messages that do not need a reply. You can apply for Sender\
+    \ IDs that are closely connected to your business; for example, **HotPizza**,\
+    \ **ITDelivery**, **Insurance** This is the best solution for transactional SMSs\
+    \ with order confirmations or temporary security codes.\n\n> All Sender IDs are\
+    \ reviewed by our support team.\n \n> Note, in [several countries](https://support.textmagic.com/article/how-to-understand-sender-setting-restrictions/)\_\
+    the sender ID feature is not supported. Please test before using it in real sending\
+    \ sessions.\n \n "
 schemes:
 - "http"
 - "https"
@@ -2686,17 +2769,18 @@ paths:
     get:
       tags:
       - "TextMagic"
-      summary: "Get all available sender setting options which could be used in \"\
-        from\" parameter of POST messages method."
-      description: ""
+      summary: "Get available sender settings"
+      description: "Get all available sender setting options which could be used in\
+        \ \"from\" parameter of POST messages method."
       operationId: "getAvailableSenderSettingOptions"
       parameters:
       - name: "country"
         in: "query"
-        description: "Return sender setting options available in specific country\
-          \ only. Two upper case characters"
+        description: "Two-letter ISO country ID. If not specified, it returns all\
+          \ the available sender settings."
         required: false
         type: "string"
+        x-example: "US"
         x-exportParamName: "Country"
         x-optionalDataType: "String"
       responses:
@@ -2715,10 +2799,10 @@ paths:
           \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
           );\n\n// Optional, you can pass them as null values to getAvailableSenderSettingOptions\
-          \ method below, default values will be used\n$country = \"sampleValue\"\
-          ;\n\ntry {\n    // GetAvailableSenderSettingOptionsResponse class object\n\
-          \    $result = $api->getAvailableSenderSettingOptions($country);\n    //\
-          \ ...\n} catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->getAvailableSenderSettingOptions:\
+          \ method below, default values will be used\n$country = \"US\";\n\ntry {\n\
+          \    // GetAvailableSenderSettingOptionsResponse class object\n    $result\
+          \ = $api->getAvailableSenderSettingOptions($country);\n    // ...\n} catch\
+          \ (Exception $e) {\n    echo 'Exception when calling TextMagicApi->getAvailableSenderSettingOptions:\
           \ ', $e->getMessage(), PHP_EOL;\n}"
       - lang: "Java"
         source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
@@ -2731,7 +2815,7 @@ paths:
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        // Optional, you can pass them as null values to getAvailableSenderSettingOptions\
           \ method below, default values will be used\n        String country = \"\
-          sampleValue\";\n\n        try {\n            // GetAvailableSenderSettingOptionsResponse\
+          US\";\n\n        try {\n            // GetAvailableSenderSettingOptionsResponse\
           \ class object\n            GetAvailableSenderSettingOptionsResponse obj\
           \ = apiInstance.getAvailableSenderSettingOptions(country);\n           \
           \ // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
@@ -2743,7 +2827,7 @@ paths:
           const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
-          \ = {\n// Optional parameters\n    country: \"sampleValue\",\n}\n\napi.getAvailableSenderSettingOptions().then(function\
+          \ = {\n// Optional parameters\n    country: \"US\",\n}\n\napi.getAvailableSenderSettingOptions().then(function\
           \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
           });"
       - lang: "Ruby"
@@ -2751,7 +2835,7 @@ paths:
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
-          \  country: 'sampleValue',\n}\n\nbegin\n    # GetAvailableSenderSettingOptionsResponse\
+          \  country: 'US',\n}\n\nbegin\n    # GetAvailableSenderSettingOptionsResponse\
           \ object\n    result = api.get_available_sender_setting_options(params)\n\
           \    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception when calling\
           \ TextMagicApi->get_available_sender_setting_options: #{e}\"\nend"
@@ -2765,7 +2849,7 @@ paths:
           \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
           \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
           \ you can pass them as null values to getAvailableSenderSettingOptions method\
-          \ below, default values will be used\n            string country = \"sampleValue\"\
+          \ below, default values will be used\n            string country = \"US\"\
           ;\n\n            try {\n                // GetAvailableSenderSettingOptionsResponse\
           \ class object\n                var result = apiInstance.GetAvailableSenderSettingOptions(country);\n\
           \                // ...\n            } catch (Exception e) {\n         \
@@ -2780,7 +2864,7 @@ paths:
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
           \ you can pass them as null values to getAvailableSenderSettingOptions method\
           \ below, default values will be used\n        Dim country As String = \"\
-          sampleValue\"\n\n        Try\n            ' GetAvailableSenderSettingOptionsResponse\
+          US\"\n\n        Try\n            ' GetAvailableSenderSettingOptionsResponse\
           \ class object\n            Dim result = apiInstance.GetAvailableSenderSettingOptions(country)\n\
           \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
           Exception when calling getAvailableSenderSettingOptions: \" + e.Message)\n\
@@ -2795,8 +2879,8 @@ paths:
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetAvailableSenderSettingOptionsOpts{\n\
           \        // Optional parameters\n        Country: optional.NewString(\"\
-          sampleValue\"),\n    }\n\n    // tm.GetAvailableSenderSettingOptionsResponse\
-          \ struct\n    result, _, err := client.TextMagicApi.GetAvailableSenderSettingOptions(auth,\
+          US\"),\n    }\n\n    // tm.GetAvailableSenderSettingOptionsResponse struct\n\
+          \    result, _, err := client.TextMagicApi.GetAvailableSenderSettingOptions(auth,\
           \ &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
           \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
@@ -2811,7 +2895,7 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
           \ if you want to use default value then pass boost::none value\n    std::string\
-          \ country = \"sampleValue\";\n\n    try {\n        pplx::task<std::shared_ptr<GetAvailableSenderSettingOptionsResponse>>\
+          \ country = \"US\";\n\n    try {\n        pplx::task<std::shared_ptr<GetAvailableSenderSettingOptionsResponse>>\
           \ result = api.getAvailableSenderSettingOptions(country);\n        result.wait();\n\
           \        // put operations with result here...\n    } catch(const std::exception&\
           \ e) {\n        std::cout << \"getAvailableSenderSettingOptions() exception:\
@@ -2823,7 +2907,7 @@ paths:
           \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
-          \ params, you can skip them\ncountry = \"sampleValue\"\n\ntry:\n    # GetAvailableSenderSettingOptionsResponse\
+          \ params, you can skip them\ncountry = \"US\"\n\ntry:\n    # GetAvailableSenderSettingOptionsResponse\
           \ object\n    result = api_instance.get_available_sender_setting_options(country=country)\n\
           \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
           \ TextMagicApi->get_available_sender_setting_options: %s\\n\" % e)\n"
@@ -2833,16 +2917,16 @@ paths:
           \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
           \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
           \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
-          \ params, you can skip them\nmy $country = 'sampleValue';\n\neval {\n  \
-          \  # GetAvailableSenderSettingOptionsResponse object\n    my $result = $api_instance->get_available_sender_setting_options(country\
+          \ params, you can skip them\nmy $country = 'US';\n\neval {\n    # GetAvailableSenderSettingOptionsResponse\
+          \ object\n    my $result = $api_instance->get_available_sender_setting_options(country\
           \ => $country);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->get_available_sender_setting_options: $@\\n\";\n}"
   /api/v2/sender/settings:
     get:
       tags:
       - "TextMagic"
-      summary: "Get current user sender settings."
-      description: ""
+      summary: "Get current sender settings"
+      description: "@TODO"
       operationId: "getSenderSettings"
       parameters:
       - name: "country"
@@ -2851,6 +2935,7 @@ paths:
           \ Two upper case characters"
         required: false
         type: "string"
+        x-example: "US"
         x-exportParamName: "Country"
         x-optionalDataType: "String"
       responses:
@@ -2869,11 +2954,10 @@ paths:
           \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
           );\n\n// Optional, you can pass them as null values to getSenderSettings\
-          \ method below, default values will be used\n$country = \"sampleValue\"\
-          ;\n\ntry {\n    // GetSenderSettingsResponse class object\n    $result =\
-          \ $api->getSenderSettings($country);\n    // ...\n} catch (Exception $e)\
-          \ {\n    echo 'Exception when calling TextMagicApi->getSenderSettings: ',\
-          \ $e->getMessage(), PHP_EOL;\n}"
+          \ method below, default values will be used\n$country = \"US\";\n\ntry {\n\
+          \    // GetSenderSettingsResponse class object\n    $result = $api->getSenderSettings($country);\n\
+          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
+          \ TextMagicApi->getSenderSettings: ', $e->getMessage(), PHP_EOL;\n}"
       - lang: "Java"
         source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
           import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
@@ -2885,8 +2969,8 @@ paths:
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        // Optional, you can pass them as null values to getSenderSettings\
           \ method below, default values will be used\n        String country = \"\
-          sampleValue\";\n\n        try {\n            // GetSenderSettingsResponse\
-          \ class object\n            GetSenderSettingsResponse obj = apiInstance.getSenderSettings(country);\n\
+          US\";\n\n        try {\n            // GetSenderSettingsResponse class object\n\
+          \            GetSenderSettingsResponse obj = apiInstance.getSenderSettings(country);\n\
           \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
           Exception when calling getSenderSettings\");\n            e.printStackTrace();\n\
           \        }\n    }\n}"
@@ -2896,7 +2980,7 @@ paths:
           const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
-          \ = {\n// Optional parameters\n    country: \"sampleValue\",\n}\n\napi.getSenderSettings().then(function\
+          \ = {\n// Optional parameters\n    country: \"US\",\n}\n\napi.getSenderSettings().then(function\
           \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
           });"
       - lang: "Ruby"
@@ -2904,9 +2988,9 @@ paths:
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
-          \  country: 'sampleValue',\n}\n\nbegin\n    # GetSenderSettingsResponse\
-          \ object\n    result = api.get_sender_settings(params)\n    # ...\nrescue\
-          \ TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->get_sender_settings:\
+          \  country: 'US',\n}\n\nbegin\n    # GetSenderSettingsResponse object\n\
+          \    result = api.get_sender_settings(params)\n    # ...\nrescue TextMagic::ApiError\
+          \ => e\n    puts \"Exception when calling TextMagicApi->get_sender_settings:\
           \ #{e}\"\nend"
       - lang: "C#"
         source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
@@ -2918,8 +3002,8 @@ paths:
           \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
           \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
           \ you can pass them as null values to getSenderSettings method below, default\
-          \ values will be used\n            string country = \"sampleValue\";\n\n\
-          \            try {\n                // GetSenderSettingsResponse class object\n\
+          \ values will be used\n            string country = \"US\";\n\n        \
+          \    try {\n                // GetSenderSettingsResponse class object\n\
           \                var result = apiInstance.GetSenderSettings(country);\n\
           \                // ...\n            } catch (Exception e) {\n         \
           \       Console.WriteLine(\"Exception when calling getSenderSettings: \"\
@@ -2932,12 +3016,12 @@ paths:
           \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
           \ you can pass them as null values to getSenderSettings method below, default\
-          \ values will be used\n        Dim country As String = \"sampleValue\"\n\
-          \n        Try\n            ' GetSenderSettingsResponse class object\n  \
-          \          Dim result = apiInstance.GetSenderSettings(country)\n       \
-          \     ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
-          Exception when calling getSenderSettings: \" + e.Message)\n        End Try\n\
-          \    End Sub\nEnd Module"
+          \ values will be used\n        Dim country As String = \"US\"\n\n      \
+          \  Try\n            ' GetSenderSettingsResponse class object\n         \
+          \   Dim result = apiInstance.GetSenderSettings(country)\n            ' ...\n\
+          \        Catch e As Exception\n            Console.WriteLine(\"Exception\
+          \ when calling getSenderSettings: \" + e.Message)\n        End Try\n   \
+          \ End Sub\nEnd Module"
       - lang: "Go"
         source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
           \n    // If you're using go.mod use line below to import our module\n  \
@@ -2948,9 +3032,9 @@ paths:
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetSenderSettingsOpts{\n\
           \        // Optional parameters\n        Country: optional.NewString(\"\
-          sampleValue\"),\n    }\n\n    // tm.GetSenderSettingsResponse struct\n \
-          \   result, _, err := client.TextMagicApi.GetSenderSettings(auth, &opts)\n\
-          \n    if err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
+          US\"),\n    }\n\n    // tm.GetSenderSettingsResponse struct\n    result,\
+          \ _, err := client.TextMagicApi.GetSenderSettings(auth, &opts)\n\n    if\
+          \ err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
           %+v\\n\", result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
         source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
@@ -2964,7 +3048,7 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
           \ if you want to use default value then pass boost::none value\n    std::string\
-          \ country = \"sampleValue\";\n\n    try {\n        pplx::task<std::shared_ptr<GetSenderSettingsResponse>>\
+          \ country = \"US\";\n\n    try {\n        pplx::task<std::shared_ptr<GetSenderSettingsResponse>>\
           \ result = api.getSenderSettings(country);\n        result.wait();\n   \
           \     // put operations with result here...\n    } catch(const std::exception&\
           \ e) {\n        std::cout << \"getSenderSettings() exception: \" << e.what()\
@@ -2976,7 +3060,7 @@ paths:
           \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
-          \ params, you can skip them\ncountry = \"sampleValue\"\n\ntry:\n    # GetSenderSettingsResponse\
+          \ params, you can skip them\ncountry = \"US\"\n\ntry:\n    # GetSenderSettingsResponse\
           \ object\n    result = api_instance.get_sender_settings(country=country)\n\
           \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
           \ TextMagicApi->get_sender_settings: %s\\n\" % e)\n"
@@ -2986,15 +3070,15 @@ paths:
           \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
           \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
           \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
-          \ params, you can skip them\nmy $country = 'sampleValue';\n\neval {\n  \
-          \  # GetSenderSettingsResponse object\n    my $result = $api_instance->get_sender_settings(country\
-          \ => $country);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
+          \ params, you can skip them\nmy $country = 'US';\n\neval {\n    # GetSenderSettingsResponse\
+          \ object\n    my $result = $api_instance->get_sender_settings(country =>\
+          \ $country);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->get_sender_settings: $@\\n\";\n}"
     put:
       tags:
       - "TextMagic"
-      summary: "Change sender settings for specified country."
-      description: ""
+      summary: "Change sender settings"
+      description: "@TODO"
       operationId: "updateSenderSetting"
       produces: []
       parameters:
@@ -3153,11 +3237,205 @@ paths:
           );\n\neval {\n    $api_instance->update_sender_setting(update_sender_setting_input_object\
           \ => $input);\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->update_sender_setting:\
           \ $@\\n\";\n}"
+  /api/v2/numbers/available:
+    get:
+      tags:
+      - "TextMagic"
+      summary: "Find dedicated numbers available for purchase"
+      description: ""
+      operationId: "getAvailableDedicatedNumbers"
+      parameters:
+      - name: "prefix"
+        in: "query"
+        description: "Desired number prefix. Should include country code (i.e. 447\
+          \ for UK phone number format). Leave blank to get all the available numbers\
+          \ for the specified country."
+        required: false
+        type: "integer"
+        default: 1
+        x-example: 447155
+        x-exportParamName: "Prefix"
+        x-optionalDataType: "Int32"
+      - name: "tollfree"
+        in: "query"
+        description: "Should we show only tollfree numbers (tollfree available only\
+          \ for US)."
+        required: false
+        type: "integer"
+        default: 0
+        enum:
+        - 0
+        - 1
+        x-exportParamName: "Tollfree"
+        x-optionalDataType: "Int32"
+      - name: "country"
+        in: "query"
+        description: "Two-letter dedicated number country ISO code."
+        required: true
+        type: "string"
+        x-example: "GB"
+        x-exportParamName: "Country"
+      responses:
+        200:
+          description: "The list of available to buy dedicated numbers"
+          schema:
+            $ref: "#/definitions/GetAvailableDedicatedNumbersResponse"
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/BadRequestResponse"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+        404:
+          description: "Request data not found"
+          schema:
+            $ref: "#/definitions/NotFoundResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
+          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
+          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
+          );\n\n$country = \"GB\";\n// Optional, you can pass them as null values\
+          \ to getAvailableDedicatedNumbers method below, default values will be used\n\
+          $prefix = 447155;\n$tollfree = 0;\n\ntry {\n    // GetAvailableDedicatedNumbersResponse\
+          \ class object\n    $result = $api->getAvailableDedicatedNumbers($country,\
+          \ $prefix, $tollfree);\n    // ...\n} catch (Exception $e) {\n    echo 'Exception\
+          \ when calling TextMagicApi->getAvailableDedicatedNumbers: ', $e->getMessage(),\
+          \ PHP_EOL;\n}"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        String country = \"GB\";\n        // Optional, you can pass them\
+          \ as null values to getAvailableDedicatedNumbers method below, default values\
+          \ will be used\n        int prefix = 447155;\n        int tollfree = 0;\n\
+          \n        try {\n            // GetAvailableDedicatedNumbersResponse class\
+          \ object\n            GetAvailableDedicatedNumbersResponse obj = apiInstance.getAvailableDedicatedNumbers(country,\
+          \ prefix, tollfree);\n            // ...\n        } catch (ApiException\
+          \ e) {\n            System.err.println(\"Exception when calling getAvailableDedicatedNumbers\"\
+          );\n            e.printStackTrace();\n        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
+          \ = {\n    country: \"GB\",\n// Optional parameters\n    prefix: 447155,\n\
+          \    tollfree: 0,\n}\n\napi.getAvailableDedicatedNumbers().then(function\
+          \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  country: 'GB',\n\
+          \  # Optional parameters\n  prefix: 447155,\n  tollfree: 0,\n}\n\nbegin\n\
+          \    # GetAvailableDedicatedNumbersResponse object\n    result = api.get_available_dedicated_numbers(params)\n\
+          \    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception when calling\
+          \ TextMagicApi->get_available_dedicated_numbers: #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            string\
+          \ country = \"GB\";\n            // Optional, you can pass them as null\
+          \ values to getAvailableDedicatedNumbers method below, default values will\
+          \ be used\n            int prefix = 447155;\n            int tollfree =\
+          \ 0;\n\n            try {\n                // GetAvailableDedicatedNumbersResponse\
+          \ class object\n                var result = apiInstance.GetAvailableDedicatedNumbers(country,\
+          \ prefix, tollfree);\n                // ...\n            } catch (Exception\
+          \ e) {\n                Console.WriteLine(\"Exception when calling getAvailableDedicatedNumbers:\
+          \ \"+e.Message);\n            }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim country\
+          \ As String = \"GB\"\n        ' Optional, you can pass them as null values\
+          \ to getAvailableDedicatedNumbers method below, default values will be used\n\
+          \        Dim prefix As Integer = 447155\n        Dim tollfree As Integer\
+          \ = 0\n\n        Try\n            ' GetAvailableDedicatedNumbersResponse\
+          \ class object\n            Dim result = apiInstance.GetAvailableDedicatedNumbers(country,\
+          \ prefix, tollfree)\n            ' ...\n        Catch e As Exception\n \
+          \           Console.WriteLine(\"Exception when calling getAvailableDedicatedNumbers:\
+          \ \" + e.Message)\n        End Try\n    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetAvailableDedicatedNumbersOpts{\n\
+          \        // Required parameters\n        Country: \"GB\",\n        // Optional\
+          \ parameters\n        Prefix: optional.NewInt32(447155),\n        Tollfree:\
+          \ optional.NewInt32(0),\n    }\n\n    // tm.GetAvailableDedicatedNumbersResponse\
+          \ struct\n    result, _, err := client.TextMagicApi.GetAvailableDedicatedNumbers(auth,\
+          \ &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
+          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    std::string country = \"GB\";\n\
+          \    // Optional parameters. Important: if you want to use default value\
+          \ then pass boost::none value\n    int prefix = 447155;\n    int tollfree\
+          \ = 0;\n\n    try {\n        pplx::task<std::shared_ptr<GetAvailableDedicatedNumbersResponse>>\
+          \ result = api.getAvailableDedicatedNumbers(country, prefix, tollfree);\n\
+          \        result.wait();\n        // put operations with result here...\n\
+          \    } catch(const std::exception& e) {\n        std::cout << \"getAvailableDedicatedNumbers()\
+          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ncountry\
+          \ = \"GB\"\n# Optional params, you can skip them\nprefix = 447155\ntollfree\
+          \ = 0\n\ntry:\n    # GetAvailableDedicatedNumbersResponse object\n    result\
+          \ = api_instance.get_available_dedicated_numbers(country=country, prefix=prefix,\
+          \ tollfree=tollfree)\n    # ...\nexcept ApiException as e:\n    print(\"\
+          Exception when calling TextMagicApi->get_available_dedicated_numbers: %s\\\
+          n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
+          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
+          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
+          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $country\
+          \ = 'GB';\n# Optional params, you can skip them\nmy $prefix = 447155;\n\
+          my $tollfree = 0;\n\neval {\n    # GetAvailableDedicatedNumbersResponse\
+          \ object\n    my $result = $api_instance->get_available_dedicated_numbers(country\
+          \ => $country, prefix => $prefix, tollfree => $tollfree);\n    # ...\n};\n\
+          \nif ($@) {\n    warn \"Exception when calling TextMagicApi->get_available_dedicated_numbers:\
+          \ $@\\n\";\n}"
   /api/v2/numbers:
     get:
       tags:
       - "TextMagic"
-      summary: "Get user's dedicated numbers."
+      summary: "Get all your dedicated numbers"
       description: ""
       operationId: "getUserDedicatedNumbers"
       parameters:
@@ -3337,8 +3615,10 @@ paths:
     post:
       tags:
       - "TextMagic"
-      summary: "Buy a dedicated number and assign it to the specified account."
-      description: ""
+      summary: "Buy a dedicated number"
+      description: "To buy a dedicated number, you first need to find an available\
+        \ number matching your criteria using the `/api/v2/numbers/available` command\
+        \ described above."
       operationId: "buyDedicatedNumber"
       parameters:
       - in: "body"
@@ -3369,8 +3649,8 @@ paths:
           \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
           \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
           \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new BuyDedicatedNumberInputObject();\n\
-          \n// Required parameters\n$input->setPhone(\"123456780\");\n$input->setCountry(\"\
-          AU\");\n$input->setUserId();\n\ntry {\n    $api->buyDedicatedNumber($input);\n\
+          \n// Required parameters\n$input->setPhone(\"447860021130\");\n$input->setCountry(\"\
+          AU\");\n$input->setUserId(5501);\n\ntry {\n    $api->buyDedicatedNumber($input);\n\
           } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->buyDedicatedNumber:\
           \ ', $e->getMessage(), PHP_EOL;\n}"
       - lang: "Java"
@@ -3383,29 +3663,30 @@ paths:
           );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        BuyDedicatedNumberInputObject input = new BuyDedicatedNumberInputObject();\n\
-          \n        // Required parameters\n        input.setPhone(\"123456780\");\n\
-          \        input.setCountry(\"AU\");\n        input.setUserId();\n\n     \
-          \   try {\n            apiInstance.buyDedicatedNumber(input);\n        }\
-          \ catch (ApiException e) {\n            System.err.println(\"Exception when\
-          \ calling buyDedicatedNumber\");\n            e.printStackTrace();\n   \
-          \     }\n    }\n}"
+          \n        // Required parameters\n        input.setPhone(\"447860021130\"\
+          );\n        input.setCountry(\"AU\");\n        input.setUserId(5501);\n\n\
+          \        try {\n            apiInstance.buyDedicatedNumber(input);\n   \
+          \     } catch (ApiException e) {\n            System.err.println(\"Exception\
+          \ when calling buyDedicatedNumber\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
       - lang: "JavaScript"
         source: "const textmagicClient = require('textmagic-client');\n\nconst client\
           \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
           const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ input = {\n    phone: \"123456780\",\n    country: \"AU\",\n    userId:\
-          \ ,\n}\n\napi.buyDedicatedNumber(input).then(function (data) {\n    console.log(data);\n\
-          }).catch(function(err){\n    console.error(err);\n});"
+          \ input = {\n    phone: \"447860021130\",\n    country: \"AU\",\n    userId:\
+          \ 5501,\n}\n\napi.buyDedicatedNumber(input).then(function (data) {\n   \
+          \ console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
       - lang: "Ruby"
         source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::BuyDedicatedNumberInputObject.new\n\
-          \n# Required parameters\nobj.phone = \"123456780\"\nobj.country = \"AU\"\
-          \nobj.user_id = \n\nbegin\n    api.buy_dedicated_number(input)\nrescue TextMagic::ApiError\
-          \ => e\n    puts \"Exception when calling TextMagicApi->buy_dedicated_number:\
+          \n# Required parameters\nobj.phone = \"447860021130\"\nobj.country = \"\
+          AU\"\nobj.user_id = 5501\n\nbegin\n    api.buy_dedicated_number(input)\n\
+          rescue TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->buy_dedicated_number:\
           \ #{e}\"\nend"
       - lang: "C#"
         source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
@@ -3417,11 +3698,11 @@ paths:
           \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
           \            var apiInstance = new TextMagicApi();\n\n            var obj\
           \ = new BuyDedicatedNumberInputObject();\n\n            // Required parameters\n\
-          \            obj.Phone = \"123456780\";\n            obj.Country = \"AU\"\
-          ;\n            obj.UserId = ;\n\n            try {\n                apiInstance.BuyDedicatedNumber(obj);\n\
-          \            } catch (Exception e) {\n                Console.WriteLine(\"\
-          Exception when calling buyDedicatedNumber: \"+e.Message);\n            }\n\
-          \        }\n    }\n}"
+          \            obj.Phone = \"447860021130\";\n            obj.Country = \"\
+          AU\";\n            obj.UserId = 5501;\n\n            try {\n           \
+          \     apiInstance.BuyDedicatedNumber(obj);\n            } catch (Exception\
+          \ e) {\n                Console.WriteLine(\"Exception when calling buyDedicatedNumber:\
+          \ \"+e.Message);\n            }\n        }\n    }\n}"
       - lang: "VB.Net"
         source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
           Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
@@ -3429,10 +3710,10 @@ paths:
           \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
           \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
-          \ BuyDedicatedNumberInputObject With {\n            .Phone = \"123456780\"\
-          ,\n            .Country = \"AU\",\n            .UserId = \n        }\n\n\
-          \        Try\n            apiInstance.BuyDedicatedNumber(obj)\n        \
-          \    ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          \ BuyDedicatedNumberInputObject With {\n            .Phone = \"447860021130\"\
+          ,\n            .Country = \"AU\",\n            .UserId = 5501\n        }\n\
+          \n        Try\n            apiInstance.BuyDedicatedNumber(obj)\n       \
+          \     ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
           Exception when calling buyDedicatedNumber: \" + e.Message)\n        End\
           \ Try\n    End Sub\nEnd Module"
       - lang: "Go"
@@ -3444,8 +3725,8 @@ paths:
           \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
-          \        // Required parameters\n        Phone: \"123456780\",\n       \
-          \ Country: \"AU\",\n        UserId: ,\n    }\n\n    client.TextMagicApi.BuyDedicatedNumber(auth,\
+          \        // Required parameters\n        Phone: \"447860021130\",\n    \
+          \    Country: \"AU\",\n        UserId: 5501,\n    }\n\n    client.TextMagicApi.BuyDedicatedNumber(auth,\
           \ input)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
           \        // ...\n    }\n}\n"
       - lang: "Cpp"
@@ -3460,8 +3741,8 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<BuyDedicatedNumberInputObject>\
           \ input(new BuyDedicatedNumberInputObject);\n    // Required parameters\n\
-          \    input->setPhone(\"123456780\");\n    input->setCountry(\"AU\");\n \
-          \   input->setUserId();\n\n    try {\n        pplx::task result = api.buyDedicatedNumber(input);\n\
+          \    input->setPhone(\"447860021130\");\n    input->setCountry(\"AU\");\n\
+          \    input->setUserId(5501);\n\n    try {\n        pplx::task result = api.buyDedicatedNumber(input);\n\
           \        result.wait();\n    } catch(const std::exception& e) {\n      \
           \  std::cout << \"buyDedicatedNumber() exception: \" << e.what() << '\\\
           n';\n    }\n\n    return 0;\n}"
@@ -3473,8 +3754,8 @@ paths:
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
           \ = TextMagic.BuyDedicatedNumberInputObject()\n\n# Required parameters\n\
-          input.phone = \"123456780\"\ninput.country = \"AU\"\ninput.user_id = \n\n\
-          try:\n    api_instance.buy_dedicated_number(buy_dedicated_number_input_object=input)\n\
+          input.phone = \"447860021130\"\ninput.country = \"AU\"\ninput.user_id =\
+          \ 5501\n\ntry:\n    api_instance.buy_dedicated_number(buy_dedicated_number_input_object=input)\n\
           except ApiException as e:\n    print(\"Exception when calling TextMagicApi->buy_dedicated_number:\
           \ %s\\n\" % e)\n"
       - lang: "Perl"
@@ -3484,208 +3765,15 @@ paths:
           \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
           \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
           \nmy $input = Net::Sms::TextMagicClient::Object::BuyDedicatedNumberInputObject->new(\n\
-          \    # Required parameters\n    phone => '123456780',\n    country => 'AU',\n\
-          \    userId => ,\n);\n\neval {\n    $api_instance->buy_dedicated_number(buy_dedicated_number_input_object\
+          \    # Required parameters\n    phone => '447860021130',\n    country =>\
+          \ 'AU',\n    userId => 5501,\n);\n\neval {\n    $api_instance->buy_dedicated_number(buy_dedicated_number_input_object\
           \ => $input);\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->buy_dedicated_number:\
-          \ $@\\n\";\n}"
-  /api/v2/numbers/available:
-    get:
-      tags:
-      - "TextMagic"
-      summary: "Find available dedicated numbers to buy."
-      description: ""
-      operationId: "getAvailableDedicatedNumbers"
-      parameters:
-      - name: "prefix"
-        in: "query"
-        description: "Desired number prefix. Should include country code (i.e. 447\
-          \ for GB). In case provide tollfree = 1 parameter and there are available\
-          \ tollfree numbers, this parameter will be ignore."
-        required: false
-        type: "integer"
-        default: 1
-        x-exportParamName: "Prefix"
-        x-optionalDataType: "Int32"
-      - name: "tollfree"
-        in: "query"
-        description: "Should we show only tollfree numbers (tollfree available only\
-          \ for US). Default is false."
-        required: false
-        type: "integer"
-        default: 0
-        enum:
-        - 0
-        - 1
-        x-exportParamName: "Tollfree"
-        x-optionalDataType: "Int32"
-      - name: "country"
-        in: "query"
-        description: "Dedicated number country. Two letters in upper case"
-        required: true
-        type: "string"
-        x-example: "GB"
-        x-exportParamName: "Country"
-      responses:
-        200:
-          description: "The list of available to buy dedicated numbers"
-          schema:
-            $ref: "#/definitions/GetAvailableDedicatedNumbersResponse"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$country = \"GB\";\n// Optional, you can pass them as null values\
-          \ to getAvailableDedicatedNumbers method below, default values will be used\n\
-          $prefix = 1;\n$tollfree = 0;\n\ntry {\n    // GetAvailableDedicatedNumbersResponse\
-          \ class object\n    $result = $api->getAvailableDedicatedNumbers($country,\
-          \ $prefix, $tollfree);\n    // ...\n} catch (Exception $e) {\n    echo 'Exception\
-          \ when calling TextMagicApi->getAvailableDedicatedNumbers: ', $e->getMessage(),\
-          \ PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        String country = \"GB\";\n        // Optional, you can pass them\
-          \ as null values to getAvailableDedicatedNumbers method below, default values\
-          \ will be used\n        int prefix = 1;\n        int tollfree = 0;\n\n \
-          \       try {\n            // GetAvailableDedicatedNumbersResponse class\
-          \ object\n            GetAvailableDedicatedNumbersResponse obj = apiInstance.getAvailableDedicatedNumbers(country,\
-          \ prefix, tollfree);\n            // ...\n        } catch (ApiException\
-          \ e) {\n            System.err.println(\"Exception when calling getAvailableDedicatedNumbers\"\
-          );\n            e.printStackTrace();\n        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
-          \ = {\n    country: \"GB\",\n// Optional parameters\n    prefix: 1,\n  \
-          \  tollfree: 0,\n}\n\napi.getAvailableDedicatedNumbers().then(function (data)\
-          \ {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
-          });"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  country: 'GB',\n\
-          \  # Optional parameters\n  prefix: 1,\n  tollfree: 0,\n}\n\nbegin\n   \
-          \ # GetAvailableDedicatedNumbersResponse object\n    result = api.get_available_dedicated_numbers(params)\n\
-          \    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception when calling\
-          \ TextMagicApi->get_available_dedicated_numbers: #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            string\
-          \ country = \"GB\";\n            // Optional, you can pass them as null\
-          \ values to getAvailableDedicatedNumbers method below, default values will\
-          \ be used\n            int prefix = 1;\n            int tollfree = 0;\n\n\
-          \            try {\n                // GetAvailableDedicatedNumbersResponse\
-          \ class object\n                var result = apiInstance.GetAvailableDedicatedNumbers(country,\
-          \ prefix, tollfree);\n                // ...\n            } catch (Exception\
-          \ e) {\n                Console.WriteLine(\"Exception when calling getAvailableDedicatedNumbers:\
-          \ \"+e.Message);\n            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim country\
-          \ As String = \"GB\"\n        ' Optional, you can pass them as null values\
-          \ to getAvailableDedicatedNumbers method below, default values will be used\n\
-          \        Dim prefix As Integer = 1\n        Dim tollfree As Integer = 0\n\
-          \n        Try\n            ' GetAvailableDedicatedNumbersResponse class\
-          \ object\n            Dim result = apiInstance.GetAvailableDedicatedNumbers(country,\
-          \ prefix, tollfree)\n            ' ...\n        Catch e As Exception\n \
-          \           Console.WriteLine(\"Exception when calling getAvailableDedicatedNumbers:\
-          \ \" + e.Message)\n        End Try\n    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetAvailableDedicatedNumbersOpts{\n\
-          \        // Required parameters\n        Country: \"GB\",\n        // Optional\
-          \ parameters\n        Prefix: optional.NewInt32(1),\n        Tollfree: optional.NewInt32(0),\n\
-          \    }\n\n    // tm.GetAvailableDedicatedNumbersResponse struct\n    result,\
-          \ _, err := client.TextMagicApi.GetAvailableDedicatedNumbers(auth, &opts)\n\
-          \n    if err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
-          %+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    std::string country = \"GB\";\n\
-          \    // Optional parameters. Important: if you want to use default value\
-          \ then pass boost::none value\n    int prefix = 1;\n    int tollfree = 0;\n\
-          \n    try {\n        pplx::task<std::shared_ptr<GetAvailableDedicatedNumbersResponse>>\
-          \ result = api.getAvailableDedicatedNumbers(country, prefix, tollfree);\n\
-          \        result.wait();\n        // put operations with result here...\n\
-          \    } catch(const std::exception& e) {\n        std::cout << \"getAvailableDedicatedNumbers()\
-          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ncountry\
-          \ = \"GB\"\n# Optional params, you can skip them\nprefix = 1\ntollfree =\
-          \ 0\n\ntry:\n    # GetAvailableDedicatedNumbersResponse object\n    result\
-          \ = api_instance.get_available_dedicated_numbers(country=country, prefix=prefix,\
-          \ tollfree=tollfree)\n    # ...\nexcept ApiException as e:\n    print(\"\
-          Exception when calling TextMagicApi->get_available_dedicated_numbers: %s\\\
-          n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
-          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
-          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
-          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $country\
-          \ = 'GB';\n# Optional params, you can skip them\nmy $prefix = 1;\nmy $tollfree\
-          \ = 0;\n\neval {\n    # GetAvailableDedicatedNumbersResponse object\n  \
-          \  my $result = $api_instance->get_available_dedicated_numbers(country =>\
-          \ $country, prefix => $prefix, tollfree => $tollfree);\n    # ...\n};\n\n\
-          if ($@) {\n    warn \"Exception when calling TextMagicApi->get_available_dedicated_numbers:\
           \ $@\\n\";\n}"
   /api/v2/numbers/{id}:
     get:
       tags:
       - "TextMagic"
-      summary: "Get a single dedicated number."
+      summary: "Get the details of a specific dedicated number"
       description: ""
       operationId: "getDedicatedNumber"
       parameters:
@@ -3823,7 +3911,7 @@ paths:
     delete:
       tags:
       - "TextMagic"
-      summary: "Cancel dedicated number subscription."
+      summary: "Cancel dedicated number subscription"
       description: ""
       operationId: "deleteDedicatedNumber"
       produces: []
@@ -3954,7 +4042,7 @@ paths:
     get:
       tags:
       - "TextMagic"
-      summary: "Get all sender IDs of current user."
+      summary: "Get all your approved Sender IDs"
       description: ""
       operationId: "getSenderIds"
       parameters:
@@ -4113,8 +4201,8 @@ paths:
     post:
       tags:
       - "TextMagic"
-      summary: "Request for a new Sender ID."
-      description: ""
+      summary: "Apply for a new Sender ID"
+      description: "> Sender IDs are shared between all of your sub-accounts."
       operationId: "requestSenderId"
       parameters:
       - in: "body"
@@ -4143,10 +4231,10 @@ paths:
           \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
           \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
           \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new RequestSenderIdInputObject();\n\
-          \n// Required parameters\n$input->setSenderId(\"Testid1\");\n$input->setExplanation(\"\
-          Test description\");\n\ntry {\n    // ResourceLinkResponse class object\n\
-          \    $result = $api->requestSenderId($input);\n    // ...\n} catch (Exception\
-          \ $e) {\n    echo 'Exception when calling TextMagicApi->requestSenderId:\
+          \n// Required parameters\n$input->setSenderId(\"HotRod\");\n$input->setExplanation(\"\
+          Because it equals to my company name.\");\n\ntry {\n    // ResourceLinkResponse\
+          \ class object\n    $result = $api->requestSenderId($input);\n    // ...\n\
+          } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->requestSenderId:\
           \ ', $e->getMessage(), PHP_EOL;\n}"
       - lang: "Java"
         source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
@@ -4158,30 +4246,31 @@ paths:
           );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        RequestSenderIdInputObject input = new RequestSenderIdInputObject();\n\
-          \n        // Required parameters\n        input.setSenderId(\"Testid1\"\
-          );\n        input.setExplanation(\"Test description\");\n\n        try {\n\
-          \            // ResourceLinkResponse class object\n            ResourceLinkResponse\
-          \ obj = apiInstance.requestSenderId(input);\n            // ...\n      \
-          \  } catch (ApiException e) {\n            System.err.println(\"Exception\
-          \ when calling requestSenderId\");\n            e.printStackTrace();\n \
-          \       }\n    }\n}"
+          \n        // Required parameters\n        input.setSenderId(\"HotRod\");\n\
+          \        input.setExplanation(\"Because it equals to my company name.\"\
+          );\n\n        try {\n            // ResourceLinkResponse class object\n\
+          \            ResourceLinkResponse obj = apiInstance.requestSenderId(input);\n\
+          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
+          Exception when calling requestSenderId\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
       - lang: "JavaScript"
         source: "const textmagicClient = require('textmagic-client');\n\nconst client\
           \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
           const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ input = {\n    senderId: \"Testid1\",\n    explanation: \"Test description\"\
-          ,\n}\n\napi.requestSenderId(input).then(function (data) {\n    console.log(data);\n\
-          }).catch(function(err){\n    console.error(err);\n});"
+          \ input = {\n    senderId: \"HotRod\",\n    explanation: \"Because it equals\
+          \ to my company name.\",\n}\n\napi.requestSenderId(input).then(function\
+          \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
       - lang: "Ruby"
         source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::RequestSenderIdInputObject.new\n\
-          \n# Required parameters\nobj.sender_id = \"Testid1\"\nobj.explanation =\
-          \ \"Test description\"\n\nbegin\n    # ResourceLinkResponse object\n   \
-          \ result = api.request_sender_id(input)\n    # ...\nrescue TextMagic::ApiError\
+          \n# Required parameters\nobj.sender_id = \"HotRod\"\nobj.explanation = \"\
+          Because it equals to my company name.\"\n\nbegin\n    # ResourceLinkResponse\
+          \ object\n    result = api.request_sender_id(input)\n    # ...\nrescue TextMagic::ApiError\
           \ => e\n    puts \"Exception when calling TextMagicApi->request_sender_id:\
           \ #{e}\"\nend"
       - lang: "C#"
@@ -4194,12 +4283,13 @@ paths:
           \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
           \            var apiInstance = new TextMagicApi();\n\n            var obj\
           \ = new RequestSenderIdInputObject();\n\n            // Required parameters\n\
-          \            obj.SenderId = \"Testid1\";\n            obj.Explanation =\
-          \ \"Test description\";\n\n            try {\n                // ResourceLinkResponse\
-          \ class object\n                var result = apiInstance.RequestSenderId(obj);\n\
-          \                // ...\n            } catch (Exception e) {\n         \
-          \       Console.WriteLine(\"Exception when calling requestSenderId: \"+e.Message);\n\
-          \            }\n        }\n    }\n}"
+          \            obj.SenderId = \"HotRod\";\n            obj.Explanation = \"\
+          Because it equals to my company name.\";\n\n            try {\n        \
+          \        // ResourceLinkResponse class object\n                var result\
+          \ = apiInstance.RequestSenderId(obj);\n                // ...\n        \
+          \    } catch (Exception e) {\n                Console.WriteLine(\"Exception\
+          \ when calling requestSenderId: \"+e.Message);\n            }\n        }\n\
+          \    }\n}"
       - lang: "VB.Net"
         source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
           Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
@@ -4207,12 +4297,13 @@ paths:
           \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
           \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
-          \ RequestSenderIdInputObject With {\n            .SenderId = \"Testid1\"\
-          ,\n            .Explanation = \"Test description\"\n        }\n\n      \
-          \  Try\n            ' ResourceLinkResponse class object\n            Dim\
-          \ result = apiInstance.RequestSenderId(obj)\n            ' ...\n       \
-          \ Catch e As Exception\n            Console.WriteLine(\"Exception when calling\
-          \ requestSenderId: \" + e.Message)\n        End Try\n    End Sub\nEnd Module"
+          \ RequestSenderIdInputObject With {\n            .SenderId = \"HotRod\"\
+          ,\n            .Explanation = \"Because it equals to my company name.\"\n\
+          \        }\n\n        Try\n            ' ResourceLinkResponse class object\n\
+          \            Dim result = apiInstance.RequestSenderId(obj)\n           \
+          \ ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling requestSenderId: \" + e.Message)\n        End Try\n\
+          \    End Sub\nEnd Module"
       - lang: "Go"
         source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
           \n    // If you're using go.mod use line below to import our module\n  \
@@ -4222,9 +4313,9 @@ paths:
           \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
-          \        // Required parameters\n        SenderId: \"Testid1\",\n      \
-          \  Explanation: \"Test description\",\n    }\n\n    // tm.ResourceLinkResponse\
-          \ struct\n    result, _, err := client.TextMagicApi.RequestSenderId(auth,\
+          \        // Required parameters\n        SenderId: \"HotRod\",\n       \
+          \ Explanation: \"Because it equals to my company name.\",\n    }\n\n   \
+          \ // tm.ResourceLinkResponse struct\n    result, _, err := client.TextMagicApi.RequestSenderId(auth,\
           \ input)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
           \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
@@ -4239,8 +4330,8 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<RequestSenderIdInputObject>\
           \ input(new RequestSenderIdInputObject);\n    // Required parameters\n \
-          \   input->setSenderId(\"Testid1\");\n    input->setExplanation(\"Test description\"\
-          );\n\n    try {\n        pplx::task<std::shared_ptr<ResourceLinkResponse>>\
+          \   input->setSenderId(\"HotRod\");\n    input->setExplanation(\"Because\
+          \ it equals to my company name.\");\n\n    try {\n        pplx::task<std::shared_ptr<ResourceLinkResponse>>\
           \ result = api.requestSenderId(input);\n        result.wait();\n       \
           \ // put operations with result here...\n    } catch(const std::exception&\
           \ e) {\n        std::cout << \"requestSenderId() exception: \" << e.what()\
@@ -4253,8 +4344,8 @@ paths:
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
           \ = TextMagic.RequestSenderIdInputObject()\n\n# Required parameters\ninput.sender_id\
-          \ = \"Testid1\"\ninput.explanation = \"Test description\"\n\ntry:\n    #\
-          \ ResourceLinkResponse object\n    result = api_instance.request_sender_id(request_sender_id_input_object=input)\n\
+          \ = \"HotRod\"\ninput.explanation = \"Because it equals to my company name.\"\
+          \n\ntry:\n    # ResourceLinkResponse object\n    result = api_instance.request_sender_id(request_sender_id_input_object=input)\n\
           \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
           \ TextMagicApi->request_sender_id: %s\\n\" % e)\n"
       - lang: "Perl"
@@ -4264,16 +4355,16 @@ paths:
           \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
           \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
           \nmy $input = Net::Sms::TextMagicClient::Object::RequestSenderIdInputObject->new(\n\
-          \    # Required parameters\n    senderId => 'Testid1',\n    explanation\
-          \ => 'Test description',\n);\n\neval {\n    # ResourceLinkResponse object\n\
-          \    my $result = $api_instance->request_sender_id(request_sender_id_input_object\
+          \    # Required parameters\n    senderId => 'HotRod',\n    explanation =>\
+          \ 'Because it equals to my company name.',\n);\n\neval {\n    # ResourceLinkResponse\
+          \ object\n    my $result = $api_instance->request_sender_id(request_sender_id_input_object\
           \ => $input);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->request_sender_id: $@\\n\";\n}"
   /api/v2/senderids/{id}:
     get:
       tags:
       - "TextMagic"
-      summary: "Get a single Sender ID."
+      summary: "Get the details of a specific Sender ID"
       description: ""
       operationId: "getSenderId"
       parameters:
@@ -4409,7 +4500,7 @@ paths:
     delete:
       tags:
       - "TextMagic"
-      summary: "Delete a Sender ID."
+      summary: "Delete a Sender ID"
       description: ""
       operationId: "deleteSenderId"
       produces: []
@@ -14933,6 +15024,328 @@ paths:
           \neval {\n    $api_instance->delete_list_avatar(id => $id);\n};\n\nif ($@)\
           \ {\n    warn \"Exception when calling TextMagicApi->delete_list_avatar:\
           \ $@\\n\";\n}"
+  /api/v2/templates:
+    get:
+      tags:
+      - "TextMagic"
+      summary: "Get all templates"
+      description: ""
+      operationId: "getAllTemplates"
+      parameters:
+      - name: "page"
+        in: "query"
+        description: "Fetch specified results page."
+        required: false
+        type: "integer"
+        x-example: 1
+        x-exportParamName: "Page"
+        x-optionalDataType: "Int32"
+      - name: "limit"
+        in: "query"
+        description: "The number of results per page."
+        required: false
+        type: "integer"
+        x-example: 10
+        x-exportParamName: "Limit"
+        x-optionalDataType: "Int32"
+      responses:
+        200:
+          description: "Returned when successful"
+          schema:
+            $ref: "#/definitions/GetAllTemplatesPaginatedResponse"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
+          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
+          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
+          );\n\n// Optional, you can pass them as null values to getAllTemplates method\
+          \ below, default values will be used\n$page = 1;\n$limit = 10;\n\ntry {\n\
+          \    // GetAllTemplatesPaginatedResponse class object\n    $result = $api->getAllTemplates($page,\
+          \ $limit);\n    // ...\n} catch (Exception $e) {\n    echo 'Exception when\
+          \ calling TextMagicApi->getAllTemplates: ', $e->getMessage(), PHP_EOL;\n\
+          }"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        // Optional, you can pass them as null values to getAllTemplates\
+          \ method below, default values will be used\n        int page = 1;\n   \
+          \     int limit = 10;\n\n        try {\n            // GetAllTemplatesPaginatedResponse\
+          \ class object\n            GetAllTemplatesPaginatedResponse obj = apiInstance.getAllTemplates(page,\
+          \ limit);\n            // ...\n        } catch (ApiException e) {\n    \
+          \        System.err.println(\"Exception when calling getAllTemplates\");\n\
+          \            e.printStackTrace();\n        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
+          \ = {\n// Optional parameters\n    page: 1,\n    limit: 10,\n}\n\napi.getAllTemplates().then(function\
+          \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
+          \  page: 1,\n  limit: 10,\n}\n\nbegin\n    # GetAllTemplatesPaginatedResponse\
+          \ object\n    result = api.get_all_templates(params)\n    # ...\nrescue\
+          \ TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->get_all_templates:\
+          \ #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
+          \ you can pass them as null values to getAllTemplates method below, default\
+          \ values will be used\n            int page = 1;\n            int limit\
+          \ = 10;\n\n            try {\n                // GetAllTemplatesPaginatedResponse\
+          \ class object\n                var result = apiInstance.GetAllTemplates(page,\
+          \ limit);\n                // ...\n            } catch (Exception e) {\n\
+          \                Console.WriteLine(\"Exception when calling getAllTemplates:\
+          \ \"+e.Message);\n            }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
+          \ you can pass them as null values to getAllTemplates method below, default\
+          \ values will be used\n        Dim page As Integer = 1\n        Dim limit\
+          \ As Integer = 10\n\n        Try\n            ' GetAllTemplatesPaginatedResponse\
+          \ class object\n            Dim result = apiInstance.GetAllTemplates(page,\
+          \ limit)\n            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling getAllTemplates: \" + e.Message)\n        End Try\n\
+          \    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetAllTemplatesOpts{\n  \
+          \      // Optional parameters\n        Page: optional.NewInt32(1),\n   \
+          \     Limit: optional.NewInt32(10),\n    }\n\n    // tm.GetAllTemplatesPaginatedResponse\
+          \ struct\n    result, _, err := client.TextMagicApi.GetAllTemplates(auth,\
+          \ &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
+          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
+          \ if you want to use default value then pass boost::none value\n    int\
+          \ page = 1;\n    int limit = 10;\n\n    try {\n        pplx::task<std::shared_ptr<GetAllTemplatesPaginatedResponse>>\
+          \ result = api.getAllTemplates(page, limit);\n        result.wait();\n \
+          \       // put operations with result here...\n    } catch(const std::exception&\
+          \ e) {\n        std::cout << \"getAllTemplates() exception: \" << e.what()\
+          \ << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
+          \ params, you can skip them\npage = 1\nlimit = 10\n\ntry:\n    # GetAllTemplatesPaginatedResponse\
+          \ object\n    result = api_instance.get_all_templates(page=page, limit=limit)\n\
+          \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
+          \ TextMagicApi->get_all_templates: %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
+          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
+          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
+          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
+          \ params, you can skip them\nmy $page = 1;\nmy $limit = 10;\n\neval {\n\
+          \    # GetAllTemplatesPaginatedResponse object\n    my $result = $api_instance->get_all_templates(page\
+          \ => $page, limit => $limit);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
+          \ when calling TextMagicApi->get_all_templates: $@\\n\";\n}"
+    post:
+      tags:
+      - "TextMagic"
+      summary: "Create a template"
+      description: "There are times when creating a new template makes sense (such\
+        \ as when targeting specific clients or improving your business strategies).\
+        \ \nYou can create new SMS templates for marketing purposes or SMS templates\
+        \ for business campaigns.\n"
+      operationId: "createTemplate"
+      parameters:
+      - in: "body"
+        name: "CreateTemplateInputObject"
+        required: true
+        schema:
+          $ref: "#/definitions/CreateTemplateInputObject"
+        x-exportParamName: "CreateTemplateInputObject"
+      responses:
+        201:
+          description: "Returned when successful"
+          schema:
+            $ref: "#/definitions/ResourceLinkResponse"
+        400:
+          description: "Returned when the form has errors"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
+          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
+          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
+          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new CreateTemplateInputObject();\n\
+          \n// Required parameters\n$input->setName(\"New template name\");\n$input->setContent(\"\
+          New template content\");\n\ntry {\n    // ResourceLinkResponse class object\n\
+          \    $result = $api->createTemplate($input);\n    // ...\n} catch (Exception\
+          \ $e) {\n    echo 'Exception when calling TextMagicApi->createTemplate:\
+          \ ', $e->getMessage(), PHP_EOL;\n}"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        CreateTemplateInputObject input = new CreateTemplateInputObject();\n\
+          \n        // Required parameters\n        input.setName(\"New template name\"\
+          );\n        input.setContent(\"New template content\");\n\n        try {\n\
+          \            // ResourceLinkResponse class object\n            ResourceLinkResponse\
+          \ obj = apiInstance.createTemplate(input);\n            // ...\n       \
+          \ } catch (ApiException e) {\n            System.err.println(\"Exception\
+          \ when calling createTemplate\");\n            e.printStackTrace();\n  \
+          \      }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
+          \ input = {\n    name: \"New template name\",\n    content: \"New template\
+          \ content\",\n}\n\napi.createTemplate(input).then(function (data) {\n  \
+          \  console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::CreateTemplateInputObject.new\n\
+          \n# Required parameters\nobj.name = \"New template name\"\nobj.content =\
+          \ \"New template content\"\n\nbegin\n    # ResourceLinkResponse object\n\
+          \    result = api.create_template(input)\n    # ...\nrescue TextMagic::ApiError\
+          \ => e\n    puts \"Exception when calling TextMagicApi->create_template:\
+          \ #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            var obj\
+          \ = new CreateTemplateInputObject();\n\n            // Required parameters\n\
+          \            obj.Name = \"New template name\";\n            obj.Content\
+          \ = \"New template content\";\n\n            try {\n                // ResourceLinkResponse\
+          \ class object\n                var result = apiInstance.CreateTemplate(obj);\n\
+          \                // ...\n            } catch (Exception e) {\n         \
+          \       Console.WriteLine(\"Exception when calling createTemplate: \"+e.Message);\n\
+          \            }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
+          \ CreateTemplateInputObject With {\n            .Name = \"New template name\"\
+          ,\n            .Content = \"New template content\"\n        }\n\n      \
+          \  Try\n            ' ResourceLinkResponse class object\n            Dim\
+          \ result = apiInstance.CreateTemplate(obj)\n            ' ...\n        Catch\
+          \ e As Exception\n            Console.WriteLine(\"Exception when calling\
+          \ createTemplate: \" + e.Message)\n        End Try\n    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
+          \        // Required parameters\n        Name: \"New template name\",\n\
+          \        Content: \"New template content\",\n    }\n\n    // tm.ResourceLinkResponse\
+          \ struct\n    result, _, err := client.TextMagicApi.CreateTemplate(auth,\
+          \ input)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
+          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<CreateTemplateInputObject>\
+          \ input(new CreateTemplateInputObject);\n    // Required parameters\n  \
+          \  input->setName(\"New template name\");\n    input->setContent(\"New template\
+          \ content\");\n\n    try {\n        pplx::task<std::shared_ptr<ResourceLinkResponse>>\
+          \ result = api.createTemplate(input);\n        result.wait();\n        //\
+          \ put operations with result here...\n    } catch(const std::exception&\
+          \ e) {\n        std::cout << \"createTemplate() exception: \" << e.what()\
+          \ << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
+          \ = TextMagic.CreateTemplateInputObject()\n\n# Required parameters\ninput.name\
+          \ = \"New template name\"\ninput.content = \"New template content\"\n\n\
+          try:\n    # ResourceLinkResponse object\n    result = api_instance.create_template(create_template_input_object=input)\n\
+          \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
+          \ TextMagicApi->create_template: %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::CreateTemplateInputObject;\n\
+          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
+          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
+          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
+          \nmy $input = Net::Sms::TextMagicClient::Object::CreateTemplateInputObject->new(\n\
+          \    # Required parameters\n    name => 'New template name',\n    content\
+          \ => 'New template content',\n);\n\neval {\n    # ResourceLinkResponse object\n\
+          \    my $result = $api_instance->create_template(create_template_input_object\
+          \ => $input);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
+          \ TextMagicApi->create_template: $@\\n\";\n}"
   /api/v2/templates/search:
     get:
       tags:
@@ -15132,325 +15545,6 @@ paths:
           \ => $page, limit => $limit, ids => $ids, name => $name, content => $content);\n\
           \    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->search_templates:\
           \ $@\\n\";\n}"
-  /api/v2/templates:
-    get:
-      tags:
-      - "TextMagic"
-      summary: "Get all templates"
-      description: ""
-      operationId: "getAllTemplates"
-      parameters:
-      - name: "page"
-        in: "query"
-        description: "Fetch specified results page."
-        required: false
-        type: "integer"
-        x-example: 1
-        x-exportParamName: "Page"
-        x-optionalDataType: "Int32"
-      - name: "limit"
-        in: "query"
-        description: "The number of results per page."
-        required: false
-        type: "integer"
-        x-example: 10
-        x-exportParamName: "Limit"
-        x-optionalDataType: "Int32"
-      responses:
-        200:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/GetAllTemplatesPaginatedResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n// Optional, you can pass them as null values to getAllTemplates method\
-          \ below, default values will be used\n$page = 1;\n$limit = 10;\n\ntry {\n\
-          \    // GetAllTemplatesPaginatedResponse class object\n    $result = $api->getAllTemplates($page,\
-          \ $limit);\n    // ...\n} catch (Exception $e) {\n    echo 'Exception when\
-          \ calling TextMagicApi->getAllTemplates: ', $e->getMessage(), PHP_EOL;\n\
-          }"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        // Optional, you can pass them as null values to getAllTemplates\
-          \ method below, default values will be used\n        int page = 1;\n   \
-          \     int limit = 10;\n\n        try {\n            // GetAllTemplatesPaginatedResponse\
-          \ class object\n            GetAllTemplatesPaginatedResponse obj = apiInstance.getAllTemplates(page,\
-          \ limit);\n            // ...\n        } catch (ApiException e) {\n    \
-          \        System.err.println(\"Exception when calling getAllTemplates\");\n\
-          \            e.printStackTrace();\n        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
-          \ = {\n// Optional parameters\n    page: 1,\n    limit: 10,\n}\n\napi.getAllTemplates().then(function\
-          \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
-          });"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
-          \  page: 1,\n  limit: 10,\n}\n\nbegin\n    # GetAllTemplatesPaginatedResponse\
-          \ object\n    result = api.get_all_templates(params)\n    # ...\nrescue\
-          \ TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->get_all_templates:\
-          \ #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
-          \ you can pass them as null values to getAllTemplates method below, default\
-          \ values will be used\n            int page = 1;\n            int limit\
-          \ = 10;\n\n            try {\n                // GetAllTemplatesPaginatedResponse\
-          \ class object\n                var result = apiInstance.GetAllTemplates(page,\
-          \ limit);\n                // ...\n            } catch (Exception e) {\n\
-          \                Console.WriteLine(\"Exception when calling getAllTemplates:\
-          \ \"+e.Message);\n            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
-          \ you can pass them as null values to getAllTemplates method below, default\
-          \ values will be used\n        Dim page As Integer = 1\n        Dim limit\
-          \ As Integer = 10\n\n        Try\n            ' GetAllTemplatesPaginatedResponse\
-          \ class object\n            Dim result = apiInstance.GetAllTemplates(page,\
-          \ limit)\n            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
-          Exception when calling getAllTemplates: \" + e.Message)\n        End Try\n\
-          \    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetAllTemplatesOpts{\n  \
-          \      // Optional parameters\n        Page: optional.NewInt32(1),\n   \
-          \     Limit: optional.NewInt32(10),\n    }\n\n    // tm.GetAllTemplatesPaginatedResponse\
-          \ struct\n    result, _, err := client.TextMagicApi.GetAllTemplates(auth,\
-          \ &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
-          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
-          \ if you want to use default value then pass boost::none value\n    int\
-          \ page = 1;\n    int limit = 10;\n\n    try {\n        pplx::task<std::shared_ptr<GetAllTemplatesPaginatedResponse>>\
-          \ result = api.getAllTemplates(page, limit);\n        result.wait();\n \
-          \       // put operations with result here...\n    } catch(const std::exception&\
-          \ e) {\n        std::cout << \"getAllTemplates() exception: \" << e.what()\
-          \ << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
-          \ params, you can skip them\npage = 1\nlimit = 10\n\ntry:\n    # GetAllTemplatesPaginatedResponse\
-          \ object\n    result = api_instance.get_all_templates(page=page, limit=limit)\n\
-          \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
-          \ TextMagicApi->get_all_templates: %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
-          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
-          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
-          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
-          \ params, you can skip them\nmy $page = 1;\nmy $limit = 10;\n\neval {\n\
-          \    # GetAllTemplatesPaginatedResponse object\n    my $result = $api_instance->get_all_templates(page\
-          \ => $page, limit => $limit);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
-          \ when calling TextMagicApi->get_all_templates: $@\\n\";\n}"
-    post:
-      tags:
-      - "TextMagic"
-      summary: "Create a template"
-      description: ""
-      operationId: "createTemplate"
-      parameters:
-      - in: "body"
-        name: "CreateTemplateInputObject"
-        required: true
-        schema:
-          $ref: "#/definitions/CreateTemplateInputObject"
-        x-exportParamName: "CreateTemplateInputObject"
-      responses:
-        201:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/ResourceLinkResponse"
-        400:
-          description: "Returned when the form has errors"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
-          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
-          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
-          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new CreateTemplateInputObject();\n\
-          \n// Required parameters\n$input->setName(\"New template name\");\n$input->setContent(\"\
-          New template content\");\n\ntry {\n    // ResourceLinkResponse class object\n\
-          \    $result = $api->createTemplate($input);\n    // ...\n} catch (Exception\
-          \ $e) {\n    echo 'Exception when calling TextMagicApi->createTemplate:\
-          \ ', $e->getMessage(), PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        CreateTemplateInputObject input = new CreateTemplateInputObject();\n\
-          \n        // Required parameters\n        input.setName(\"New template name\"\
-          );\n        input.setContent(\"New template content\");\n\n        try {\n\
-          \            // ResourceLinkResponse class object\n            ResourceLinkResponse\
-          \ obj = apiInstance.createTemplate(input);\n            // ...\n       \
-          \ } catch (ApiException e) {\n            System.err.println(\"Exception\
-          \ when calling createTemplate\");\n            e.printStackTrace();\n  \
-          \      }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ input = {\n    name: \"New template name\",\n    content: \"New template\
-          \ content\",\n}\n\napi.createTemplate(input).then(function (data) {\n  \
-          \  console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
-          });"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::CreateTemplateInputObject.new\n\
-          \n# Required parameters\nobj.name = \"New template name\"\nobj.content =\
-          \ \"New template content\"\n\nbegin\n    # ResourceLinkResponse object\n\
-          \    result = api.create_template(input)\n    # ...\nrescue TextMagic::ApiError\
-          \ => e\n    puts \"Exception when calling TextMagicApi->create_template:\
-          \ #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            var obj\
-          \ = new CreateTemplateInputObject();\n\n            // Required parameters\n\
-          \            obj.Name = \"New template name\";\n            obj.Content\
-          \ = \"New template content\";\n\n            try {\n                // ResourceLinkResponse\
-          \ class object\n                var result = apiInstance.CreateTemplate(obj);\n\
-          \                // ...\n            } catch (Exception e) {\n         \
-          \       Console.WriteLine(\"Exception when calling createTemplate: \"+e.Message);\n\
-          \            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
-          \ CreateTemplateInputObject With {\n            .Name = \"New template name\"\
-          ,\n            .Content = \"New template content\"\n        }\n\n      \
-          \  Try\n            ' ResourceLinkResponse class object\n            Dim\
-          \ result = apiInstance.CreateTemplate(obj)\n            ' ...\n        Catch\
-          \ e As Exception\n            Console.WriteLine(\"Exception when calling\
-          \ createTemplate: \" + e.Message)\n        End Try\n    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
-          \        // Required parameters\n        Name: \"New template name\",\n\
-          \        Content: \"New template content\",\n    }\n\n    // tm.ResourceLinkResponse\
-          \ struct\n    result, _, err := client.TextMagicApi.CreateTemplate(auth,\
-          \ input)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
-          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<CreateTemplateInputObject>\
-          \ input(new CreateTemplateInputObject);\n    // Required parameters\n  \
-          \  input->setName(\"New template name\");\n    input->setContent(\"New template\
-          \ content\");\n\n    try {\n        pplx::task<std::shared_ptr<ResourceLinkResponse>>\
-          \ result = api.createTemplate(input);\n        result.wait();\n        //\
-          \ put operations with result here...\n    } catch(const std::exception&\
-          \ e) {\n        std::cout << \"createTemplate() exception: \" << e.what()\
-          \ << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
-          \ = TextMagic.CreateTemplateInputObject()\n\n# Required parameters\ninput.name\
-          \ = \"New template name\"\ninput.content = \"New template content\"\n\n\
-          try:\n    # ResourceLinkResponse object\n    result = api_instance.create_template(create_template_input_object=input)\n\
-          \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
-          \ TextMagicApi->create_template: %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::CreateTemplateInputObject;\n\
-          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
-          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
-          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
-          \nmy $input = Net::Sms::TextMagicClient::Object::CreateTemplateInputObject->new(\n\
-          \    # Required parameters\n    name => 'New template name',\n    content\
-          \ => 'New template content',\n);\n\neval {\n    # ResourceLinkResponse object\n\
-          \    my $result = $api_instance->create_template(create_template_input_object\
-          \ => $input);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
-          \ TextMagicApi->create_template: $@\\n\";\n}"
   /api/v2/templates/{id}:
     get:
       tags:
@@ -28164,6 +28258,7 @@ definitions:
         example:
         - 123456780
         - 987654321
+        description: "Array of dedicated numbers strings."
         items:
           type: "string"
       user:
@@ -28171,6 +28266,7 @@ definitions:
         example:
         - 123456780
         - 987654321
+        description: "Array of verified account phone numbers (currently only one)."
         items:
           type: "string"
       shared:
@@ -28178,6 +28274,7 @@ definitions:
         example:
         - 123456780
         - 987654321
+        description: "Array of shared numbers strings."
         items:
           type: "string"
       senderIds:
@@ -28185,6 +28282,7 @@ definitions:
         example:
         - 123456780
         - 987654321
+        description: "Array of alphanumeric sender IDs."
         items:
           type: "string"
     example:
@@ -28591,12 +28689,15 @@ definitions:
         example:
         - 18887777773
         - 18887777775
+        description: "Array of phone number strings."
         items:
           type: "string"
       price:
         type: "number"
         format: "float"
         example: 2.4
+        description: "Dedicated number monthly fee for this country. Returned in current\
+          \ [account](/docs/api/account/) currency.@TODO"
     example:
       price: 2.4
       numbers:
@@ -29291,36 +29392,42 @@ definitions:
     properties:
       id:
         type: "integer"
-        example: 1
+        example: 305
+        description: "Dedicated number ID."
+      phone:
+        type: "string"
+        example: "447860021130"
+        description: "Dedicated phone number."
       user:
         $ref: "#/definitions/User"
       purchasedAt:
         type: "string"
         format: "date-time"
+        example: "2014-10-02T11:07:04+0000"
+        description: "Time when the dedicated number was purchased."
       expireAt:
         type: "string"
         format: "date-time"
+        example: "2014-10-02T11:07:04+0000"
+        description: "Dedicated number subscription expiration time."
       status:
         type: "string"
         example: "U"
-        description: "A - active, in use (at least one message was sent/received from/to\
-          \ this number), U - never used before"
+        description: "Number status:\n*   **U** for Unused. No messages have been\
+          \ sent from (or received to) this number.\n*   **A** for Active.\n"
         enum:
         - "U"
         - "A"
       country:
         $ref: "#/definitions/Country"
-      phone:
-        type: "string"
-        example: "79030011222"
     example:
       country:
         name: "India"
         id: "US"
-      phone: "79030011222"
-      purchasedAt: "2000-01-23T04:56:07.000+00:00"
-      id: 1
-      expireAt: "2000-01-23T04:56:07.000+00:00"
+      phone: "447860021130"
+      purchasedAt: "2014-10-02T11:07:04+0000"
+      id: 305
+      expireAt: "2014-10-02T11:07:04+0000"
       user:
         emailAccepted: true
         lastName: "Test"
@@ -29360,23 +29467,27 @@ definitions:
     properties:
       id:
         type: "integer"
-        example: 332
+        example: 37
+        description: "Numeric sender ID."
       senderId:
         type: "string"
-        example: "Dummy sender id"
+        example: "HotRod"
+        description: "Alphanumeric ID."
       user:
         $ref: "#/definitions/User"
       status:
         type: "string"
         example: "A"
-        description: "A - accepted, R - rejected, P - pending"
+        description: "*   **P** for Pending. This Sender ID is being reviewed by our\
+          \ support team.\n*   **R** for Rejected. Our support team rejected your\
+          \ application for this Sender ID.\n*   **A** for Active.\n"
         enum:
         - "A"
         - "R"
         - "P"
     example:
-      senderId: "Dummy sender id"
-      id: 332
+      senderId: "HotRod"
+      id: 37
       user:
         emailAccepted: true
         lastName: "Test"
@@ -29865,22 +29976,27 @@ definitions:
     properties:
       id:
         type: "integer"
-        example: 1
+        example: 519
+        description: "Template ID."
       name:
         type: "string"
-        example: "This is test template name"
+        example: "Appointment reminder"
+        description: "Template name."
       content:
         type: "string"
-        example: "This is test template content"
+        example: "Hello {First name}!"
+        description: "Template text. May contain the tags listed below @TODO."
       lastModified:
         type: "string"
         format: "date-time"
+        example: "2014-09-11T08:12:01+0000"
+        description: "Time when template was last modified."
         x-nullable: true
     example:
-      name: "This is test template name"
-      id: 1
-      lastModified: "2000-01-23T04:56:07.000+00:00"
-      content: "This is test template content"
+      name: "Appointment reminder"
+      id: 519
+      lastModified: "2014-09-11T08:12:01+0000"
+      content: "Hello {First name}!"
   MessageOut:
     type: "object"
     required:
@@ -30894,9 +31010,11 @@ definitions:
       id:
         type: "string"
         example: "US"
+        description: "Two-letter ISO country ID."
       name:
         type: "string"
         example: "India"
+        description: "Full country name."
     example:
       name: "India"
       id: "US"
@@ -31304,10 +31422,10 @@ definitions:
       - country:
           name: "India"
           id: "US"
-        phone: "79030011222"
-        purchasedAt: "2000-01-23T04:56:07.000+00:00"
-        id: 1
-        expireAt: "2000-01-23T04:56:07.000+00:00"
+        phone: "447860021130"
+        purchasedAt: "2014-10-02T11:07:04+0000"
+        id: 305
+        expireAt: "2014-10-02T11:07:04+0000"
         user:
           emailAccepted: true
           lastName: "Test"
@@ -31340,10 +31458,10 @@ definitions:
       - country:
           name: "India"
           id: "US"
-        phone: "79030011222"
-        purchasedAt: "2000-01-23T04:56:07.000+00:00"
-        id: 1
-        expireAt: "2000-01-23T04:56:07.000+00:00"
+        phone: "447860021130"
+        purchasedAt: "2014-10-02T11:07:04+0000"
+        id: 305
+        expireAt: "2014-10-02T11:07:04+0000"
         user:
           emailAccepted: true
           lastName: "Test"
@@ -31400,8 +31518,8 @@ definitions:
       pageCount: 10
       limit: 10
       resources:
-      - senderId: "Dummy sender id"
-        id: 332
+      - senderId: "HotRod"
+        id: 37
         user:
           emailAccepted: true
           lastName: "Test"
@@ -31431,8 +31549,8 @@ definitions:
           username: "Test"
           status: "A"
         status: "A"
-      - senderId: "Dummy sender id"
-        id: 332
+      - senderId: "HotRod"
+        id: 37
         user:
           emailAccepted: true
           lastName: "Test"
@@ -33636,41 +33754,6 @@ definitions:
         email: "test@test.com"
         favorited: true
       page: 1
-  SearchTemplatesPaginatedResponse:
-    required:
-    - "limit"
-    - "page"
-    - "pageCount"
-    - "resources"
-    properties:
-      page:
-        type: "integer"
-        example: 1
-      pageCount:
-        type: "integer"
-        example: 10
-        description: "The total number of pages."
-      limit:
-        type: "integer"
-        example: 10
-        description: "The number of results per page."
-      resources:
-        type: "array"
-        items:
-          $ref: "#/definitions/MessageTemplate"
-    example:
-      pageCount: 10
-      limit: 10
-      resources:
-      - name: "This is test template name"
-        id: 1
-        lastModified: "2000-01-23T04:56:07.000+00:00"
-        content: "This is test template content"
-      - name: "This is test template name"
-        id: 1
-        lastModified: "2000-01-23T04:56:07.000+00:00"
-        content: "This is test template content"
-      page: 1
   GetAllTemplatesPaginatedResponse:
     required:
     - "limit"
@@ -33697,14 +33780,49 @@ definitions:
       pageCount: 10
       limit: 10
       resources:
-      - name: "This is test template name"
-        id: 1
-        lastModified: "2000-01-23T04:56:07.000+00:00"
-        content: "This is test template content"
-      - name: "This is test template name"
-        id: 1
-        lastModified: "2000-01-23T04:56:07.000+00:00"
-        content: "This is test template content"
+      - name: "Appointment reminder"
+        id: 519
+        lastModified: "2014-09-11T08:12:01+0000"
+        content: "Hello {First name}!"
+      - name: "Appointment reminder"
+        id: 519
+        lastModified: "2014-09-11T08:12:01+0000"
+        content: "Hello {First name}!"
+      page: 1
+  SearchTemplatesPaginatedResponse:
+    required:
+    - "limit"
+    - "page"
+    - "pageCount"
+    - "resources"
+    properties:
+      page:
+        type: "integer"
+        example: 1
+      pageCount:
+        type: "integer"
+        example: 10
+        description: "The total number of pages."
+      limit:
+        type: "integer"
+        example: 10
+        description: "The number of results per page."
+      resources:
+        type: "array"
+        items:
+          $ref: "#/definitions/MessageTemplate"
+    example:
+      pageCount: 10
+      limit: 10
+      resources:
+      - name: "Appointment reminder"
+        id: 519
+        lastModified: "2014-09-11T08:12:01+0000"
+        content: "Hello {First name}!"
+      - name: "Appointment reminder"
+        id: 519
+        lastModified: "2014-09-11T08:12:01+0000"
+        content: "Hello {First name}!"
       page: 1
   GetAllOutboundMessagesPaginatedResponse:
     required:
@@ -36598,19 +36716,21 @@ definitions:
     properties:
       phone:
         type: "string"
-        example: "123456780"
-        description: "Desired dedicated phone number in international E.164 format"
+        example: "447860021130"
+        description: "Dedicated phone number."
       country:
         type: "string"
         example: "AU"
-        description: "Dedicated number country. Two charactes in upper case."
+        description: "Country code phone number."
       userId:
         type: "integer"
-        description: "User ID this number will be assigned to"
+        example: 5501
+        description: "Assigned dedicated number. This number will be available for\
+          \ this account only. You cannot transfer numbers between sub-accounts.\n"
     example:
       country: "AU"
-      phone: "123456780"
-      userId: 0
+      phone: "447860021130"
+      userId: 5501
   RequestSenderIdInputObject:
     required:
     - "explanation"
@@ -36618,15 +36738,17 @@ definitions:
     properties:
       senderId:
         type: "string"
-        example: "Testid1"
-        description: "Alphanumeric Sender ID (maximum 11 characters)"
+        example: "HotRod"
+        description: "Sender ID that you are applying for.\n*   11 characters maximum\n\
+          *   Only Latin based characters and digits are allowed\n*   Should contain\
+          \ at least one letter\n"
       explanation:
         type: "string"
-        example: "Test description"
-        description: "Explain why do you need this Sender ID"
+        example: "Because it equals to my company name."
+        description: "Explanation why do you need this Sender ID."
     example:
-      senderId: "Testid1"
-      explanation: "Test description"
+      senderId: "HotRod"
+      explanation: "Because it equals to my company name."
   InviteSubaccountInputObject:
     required:
     - "email"
@@ -37906,3 +38028,13 @@ x-tagGroups:
   - "Chats"
   - "Outbound Message Sessions"
   - "Templates"
+- name: "Email to SMS"
+  tags:
+  - "Send Email to SMS"
+  - "Receive SMS to Email"
+  - "Distribution Lists"
+- name: "Sender Settings"
+  tags:
+  - "Sender Settings"
+  - "Numbers"
+  - "Sender IDs"

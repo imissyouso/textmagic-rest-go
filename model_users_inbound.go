@@ -15,12 +15,16 @@ import (
 )
 
 type UsersInbound struct {
+	// Dedicated number ID.
 	Id int32 `json:"id"`
+	// Dedicated phone number.
+	Phone string `json:"phone,omitempty"`
 	User *User `json:"user"`
+	// Time when the dedicated number was purchased.
 	PurchasedAt time.Time `json:"purchasedAt"`
+	// Dedicated number subscription expiration time.
 	ExpireAt time.Time `json:"expireAt"`
-	// A - active, in use (at least one message was sent/received from/to this number), U - never used before
+	// Number status: *   **U** for Unused. No messages have been sent from (or received to) this number. *   **A** for Active. 
 	Status string `json:"status"`
 	Country *Country `json:"country"`
-	Phone string `json:"phone,omitempty"`
 }

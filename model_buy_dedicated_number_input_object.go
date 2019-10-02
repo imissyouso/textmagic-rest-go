@@ -11,10 +11,10 @@
 package TextMagic
 
 type BuyDedicatedNumberInputObject struct {
-	// Desired dedicated phone number in international E.164 format
+	// Dedicated phone number.
 	Phone string `json:"phone"`
-	// Dedicated number country. Two charactes in upper case.
+	// Country code phone number.
 	Country string `json:"country"`
-	// User ID this number will be assigned to
+	// Assigned dedicated number. This number will be available for this account only. You cannot transfer numbers between sub-accounts. 
 	UserId int32 `json:"userId"`
 }

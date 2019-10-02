@@ -276,8 +276,8 @@ func (a *TextMagicApiService) BlockContact(ctx context.Context, blockContactInpu
 }
 
 /* 
-TextMagicApiService Buy a dedicated number and assign it to the specified account.
-
+TextMagicApiService Buy a dedicated number
+To buy a dedicated number, you first need to find an available number matching your criteria using the &#x60;/api/v2/numbers/available&#x60; command described above.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param buyDedicatedNumberInputObject
 
@@ -1947,7 +1947,7 @@ func (a *TextMagicApiService) CreateSurveyNode(ctx context.Context, createSurvey
 
 /* 
 TextMagicApiService Create a template
-
+There are times when creating a new template makes sense (such as when targeting specific clients or improving your business strategies).  You can create new SMS templates for marketing purposes or SMS templates for business campaigns. 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createTemplateInputObject
 
@@ -3146,7 +3146,7 @@ func (a *TextMagicApiService) DeleteCustomField(ctx context.Context, id int32) (
 }
 
 /* 
-TextMagicApiService Cancel dedicated number subscription.
+TextMagicApiService Cancel dedicated number subscription
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -4480,7 +4480,7 @@ func (a *TextMagicApiService) DeleteScheduledMessagesBulk(ctx context.Context, d
 }
 
 /* 
-TextMagicApiService Delete a Sender ID.
+TextMagicApiService Delete a Sender ID
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -6242,13 +6242,13 @@ func (a *TextMagicApiService) GetAllTemplates(ctx context.Context, localVarOptio
 }
 
 /* 
-TextMagicApiService Find available dedicated numbers to buy.
+TextMagicApiService Find dedicated numbers available for purchase
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param country Dedicated number country. Two letters in upper case
+ * @param country Two-letter dedicated number country ISO code.
  * @param optional nil or *GetAvailableDedicatedNumbersOpts - Optional Parameters:
-     * @param "Prefix" (optional.Int32) -  Desired number prefix. Should include country code (i.e. 447 for GB). In case provide tollfree &#x3D; 1 parameter and there are available tollfree numbers, this parameter will be ignore.
-     * @param "Tollfree" (optional.Int32) -  Should we show only tollfree numbers (tollfree available only for US). Default is false.
+     * @param "Prefix" (optional.Int32) -  Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country.
+     * @param "Tollfree" (optional.Int32) -  Should we show only tollfree numbers (tollfree available only for US).
 
 @return GetAvailableDedicatedNumbersResponse
 */
@@ -6379,11 +6379,11 @@ func (a *TextMagicApiService) GetAvailableDedicatedNumbers(ctx context.Context, 
 }
 
 /* 
-TextMagicApiService Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
-
+TextMagicApiService Get available sender settings
+Get all available sender setting options which could be used in \&quot;from\&quot; parameter of POST messages method.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetAvailableSenderSettingOptionsOpts - Optional Parameters:
-     * @param "Country" (optional.String) -  Return sender setting options available in specific country only. Two upper case characters
+     * @param "Country" (optional.String) -  Two-letter ISO country ID. If not specified, it returns all the available sender settings.
 
 @return GetAvailableSenderSettingOptionsResponse
 */
@@ -8975,7 +8975,7 @@ func (a *TextMagicApiService) GetCustomFields(ctx context.Context, localVarOptio
 }
 
 /* 
-TextMagicApiService Get a single dedicated number.
+TextMagicApiService Get the details of a specific dedicated number
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -11527,7 +11527,7 @@ func (a *TextMagicApiService) GetScheduledMessage(ctx context.Context, id int32)
 }
 
 /* 
-TextMagicApiService Get a single Sender ID.
+TextMagicApiService Get the details of a specific Sender ID
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -11638,7 +11638,7 @@ func (a *TextMagicApiService) GetSenderId(ctx context.Context, id int32) (Sender
 }
 
 /* 
-TextMagicApiService Get all sender IDs of current user.
+TextMagicApiService Get all your approved Sender IDs
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSenderIdsOpts - Optional Parameters:
@@ -11751,8 +11751,8 @@ func (a *TextMagicApiService) GetSenderIds(ctx context.Context, localVarOptional
 }
 
 /* 
-TextMagicApiService Get current user sender settings.
-
+TextMagicApiService Get current sender settings
+@TODO
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSenderSettingsOpts - Optional Parameters:
      * @param "Country" (optional.String) -  Return sender settings enabled for sending to specified country. Two upper case characters
@@ -13440,7 +13440,7 @@ func (a *TextMagicApiService) GetUnsubscribers(ctx context.Context, localVarOpti
 }
 
 /* 
-TextMagicApiService Get user&#39;s dedicated numbers.
+TextMagicApiService Get all your dedicated numbers
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUserDedicatedNumbersOpts - Optional Parameters:
@@ -14730,8 +14730,8 @@ func (a *TextMagicApiService) RequestNewSubaccountToken(ctx context.Context, req
 }
 
 /* 
-TextMagicApiService Request for a new Sender ID.
-
+TextMagicApiService Apply for a new Sender ID
+&gt; Sender IDs are shared between all of your sub-accounts.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param requestSenderIdInputObject
 
@@ -18458,8 +18458,8 @@ func (a *TextMagicApiService) UpdatePassword(ctx context.Context, updatePassword
 }
 
 /* 
-TextMagicApiService Change sender settings for specified country.
-
+TextMagicApiService Change sender settings
+@TODO
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSenderSettingInputObject
 

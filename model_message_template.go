@@ -15,8 +15,12 @@ import (
 )
 
 type MessageTemplate struct {
+	// Template ID.
 	Id int32 `json:"id"`
+	// Template name.
 	Name string `json:"name"`
+	// Template text. May contain the tags listed below @TODO.
 	Content string `json:"content"`
+	// Time when template was last modified.
 	LastModified time.Time `json:"lastModified"`
 }
