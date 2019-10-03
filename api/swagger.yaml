@@ -16,19 +16,6 @@ info:
     altText: "TextMagic"
 host: "rest.textmagic.com"
 tags:
-- name: "Introduction"
-  description: "<img style=\"float: right; margin-left: 10px; margin-top: -40px; width:\
-    \ 130px;\" src=\"images/phone.png\">\n\n[Try TextMagic API for Free](https://my.textmagic.com/register/)\n\
-    \n<button name=\"button\" onclick=\"http://www.google.com\" class=\"btn\">Try\
-    \ TextMagic API for Free</button>\n\n## Two Ways to Use TextMagic API\n* [REST\
-    \ API](https://www.textmagic.com/docs/api/start/) – get full access to TextMagic’\
-    s messaging gateway features\n* [Email to SMS API](https://www.textmagic.com/docs/api/send-email-to-sms/)\
-    \ – set up two-way SMS communication without the need to write any additional\
-    \ code\n\n## Code Libraries\nWe have created a set of client libraries for the\
-    \ most popular programming languages (such as REST API Java and REST API PHP).\
-    \ These libraries allow you to integrate our API into your code in minutes. Just\
-    \ choose your preferred language to get started:\n\n* Node.js\n* PHP\n* Java\n\
-    * Python\n* .NET\n* Ruby\n* Delphi\n* Go\n* Perl\n* C++\n* Shell\n* C#\n"
 - name: "Getting started"
   description: "Get Started with the TextMagic REST API\nTo start sending text messages\
     \ using the TextMagic REST API, just follow these steps:\n1. Generate the API\
@@ -38387,7 +38374,6 @@ x-ignoredHeaderParameters:
 x-tagGroups:
 - name: "Overview"
   tags:
-  - "Introduction"
   - "Getting started"
   - "Sandbox"
 - name: "Messaging"
