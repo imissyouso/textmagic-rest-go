@@ -31,9 +31,9 @@ tags:
     3.  Click the **Add new API key** button.\n4.  Enter an app name for this key.\
     \ Note, it’s just a label, so pick any name.\n5.  Click **Generate new key**.\n\
     6.  You should now see your new API key in the green notification banner above\
-    \ the table:\n\n![alt text](images/credentials.png)\n\n> Note for API v1 users\n\
-    > V1 keys are not compatible with the V2 version of the TextMagic REST API, so\
-    \ you will need to generate a new API key to use the V2 endpoint.\n\n## The API\
+    \ the table:\n\n![alt text](images/credentials.png)\n\n> **Note for API v1 users**<br/>\n\
+    V1 keys are not compatible with the V2 version of the TextMagic REST API, so you\
+    \ will need to generate a new API key to use the V2 endpoint.\n\n\n## The API\
     \ endpoint\nThe TextMagic REST API endpoint is:\n```\nhttps://rest.textmagic.com/api/v2\n\
     ```\nAll the URLs referenced in this documentation should use this base URL.\n\
     \n## How the REST API works\nREST APIs use the HTTP protocol to send and receive\
