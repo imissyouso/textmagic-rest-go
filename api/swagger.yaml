@@ -62,13 +62,13 @@ tags:
     \ to erase them.\n\n![alt text](images/sandbox.png)\n\n\n### TODO: здесь будет\
     \ новая песочница чуть позже"
 - name: "Outbound Messages"
-  description: "# Tutorials\nThe primary reason for using the TextMagic API is to\
-    \ send SMS text messages. \n\n## How to send a single text message\n\nTo send\
-    \ a simple text message to one recipient, you should set only the `text` and the\
-    \ `phones` parameters. `text` should\ncontain that desired text and `phones` should\
-    \ be set to the recipient’s international phone number.\n\nFor example, to send\
-    \ an SMS message with the text “I love TextMagic” to the phone number +44 (0)\
-    \ 7 860021130, use the command:\n\n> POST https://rest.textmagic.com/api/v2/messages\n\
+  description: "The primary reason for using the TextMagic API is to send SMS text\
+    \ messages. \n\n# Tutorials\n\nTODO: add some text\n\n## How to send a single\
+    \ text message\n\nTo send a simple text message to one recipient, you should set\
+    \ only the `text` and the `phones` parameters. `text` should\ncontain that desired\
+    \ text and `phones` should be set to the recipient’s international phone number.\n\
+    \nFor example, to send an SMS message with the text “I love TextMagic” to the\
+    \ phone number +44 (0) 7 860021130, use the command:\n\n> POST https://rest.textmagic.com/api/v2/messages\n\
     \nwith the following parameters:\n\n| Parameter | Value |\n| --------- | -----\
     \ |\n| text |I love TextMagic (don’t forget to urlencode your string!) |\n| phones\
     \ | 447860021130 |\n\nYou will receive a result like this:\n\n| Parameter | Example\
