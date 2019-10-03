@@ -22,7 +22,7 @@ type Contact struct {
 	Country *Country `json:"country"`
 	CustomFields []ContactCustomField `json:"customFields"`
 	User *User `json:"user"`
-	Lists []Group `json:"lists"`
+	Lists []List `json:"lists"`
 	PhoneType string `json:"phoneType"`
 	Avatar *ContactImage `json:"avatar"`
 	Notes []ContactNote `json:"notes"`

@@ -12,7 +12,9 @@ package TextMagic
 
 // Returned when the form has errors
 type BadRequestResponse struct {
+	// HTTP error code.
 	Code int32 `json:"code,omitempty"`
+	// Brief error message. You could display this message to your user or save it in a log.
 	Message string `json:"message,omitempty"`
 	Errors *BadRequestResponseErrors `json:"errors,omitempty"`
 }

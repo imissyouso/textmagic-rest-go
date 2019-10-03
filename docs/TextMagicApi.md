@@ -1,6 +1,6 @@
 # TextMagic\TextMagicApi
 
-All URIs are relative to *http://my.textmagic.com*
+All URIs are relative to *http://rest.textmagic.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**CancelSurvey**](TextMagicApi.md#CancelSurvey) | **Put** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**CancelVerification**](TextMagicApi.md#CancelVerification) | **Delete** /api/v2/verify/{verifyId} | Cancel verification process
 [**CheckPhoneVerificationCode**](TextMagicApi.md#CheckPhoneVerificationCode) | **Put** /api/v2/user/phone/verification | Check user phone verification code
-[**CheckPhoneVerificationCode_0**](TextMagicApi.md#CheckPhoneVerificationCode_0) | **Put** /api/v2/verify | Step 2: Check the verification code 
+[**CheckPhoneVerificationCodeTFA**](TextMagicApi.md#CheckPhoneVerificationCodeTFA) | **Put** /api/v2/verify | Step 2: Check the verification code 
 [**ClearAndAssignContactsToList**](TextMagicApi.md#ClearAndAssignContactsToList) | **Post** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts.
 [**CloseChatsBulk**](TextMagicApi.md#CloseChatsBulk) | **Post** /api/v2/chats/close/bulk | Close chats (bulk)
 [**CloseReadChats**](TextMagicApi.md#CloseReadChats) | **Post** /api/v2/chats/close/read | Close read chats
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 [**CreateContact**](TextMagicApi.md#CreateContact) | **Post** /api/v2/contacts | Create a new contact from the submitted data.
 [**CreateContactNote**](TextMagicApi.md#CreateContactNote) | **Post** /api/v2/contacts/{id}/notes | Create a new contact note.
 [**CreateCustomField**](TextMagicApi.md#CreateCustomField) | **Post** /api/v2/customfields | Create a new custom field from the submitted data.
-[**CreateList**](TextMagicApi.md#CreateList) | **Post** /api/v2/lists | Create a new list from the submitted data.
+[**CreateList**](TextMagicApi.md#CreateList) | **Post** /api/v2/lists | Create a new list
 [**CreatePushToken**](TextMagicApi.md#CreatePushToken) | **Post** /api/v2/push/tokens | Add or update a device token.
 [**CreateSurvey**](TextMagicApi.md#CreateSurvey) | **Post** /api/v2/surveys | Create a new survey from the submitted data.
 [**CreateSurveyNode**](TextMagicApi.md#CreateSurveyNode) | **Post** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
@@ -95,8 +95,9 @@ Method | HTTP request | Description
 [**GetInboundMessage**](TextMagicApi.md#GetInboundMessage) | **Get** /api/v2/replies/{id} | Get a single inbound message
 [**GetInboundMessagesNotificationSettings**](TextMagicApi.md#GetInboundMessagesNotificationSettings) | **Get** /api/v2/user/notification/inbound | Get inbound messages notification settings
 [**GetInvoices**](TextMagicApi.md#GetInvoices) | **Get** /api/v2/invoices | Get all invoices
-[**GetList**](TextMagicApi.md#GetList) | **Get** /api/v2/lists/{id} | Get a single list.
+[**GetList**](TextMagicApi.md#GetList) | **Get** /api/v2/lists/{id} | Get the details of a specific list
 [**GetListContactsIds**](TextMagicApi.md#GetListContactsIds) | **Get** /api/v2/lists/{id}/contacts/ids | Fetch all contacts IDs belonging to the list with ID.
+[**GetLists**](TextMagicApi.md#GetLists) | **Get** /api/v2/lists | Get all lists
 [**GetListsOfContact**](TextMagicApi.md#GetListsOfContact) | **Get** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
 [**GetMessagePreview**](TextMagicApi.md#GetMessagePreview) | **Get** /api/v2/messages/preview | Preview message
 [**GetMessagePrice**](TextMagicApi.md#GetMessagePrice) | **Get** /api/v2/messages/price | Check price
@@ -128,7 +129,6 @@ Method | HTTP request | Description
 [**GetUnsubscribedContact**](TextMagicApi.md#GetUnsubscribedContact) | **Get** /api/v2/unsubscribers/{id} | Get a single unsubscribed contact.
 [**GetUnsubscribers**](TextMagicApi.md#GetUnsubscribers) | **Get** /api/v2/unsubscribers | Get all contact have unsubscribed from your communication.
 [**GetUserDedicatedNumbers**](TextMagicApi.md#GetUserDedicatedNumbers) | **Get** /api/v2/numbers | Get all your dedicated numbers
-[**GetUserLists**](TextMagicApi.md#GetUserLists) | **Get** /api/v2/lists | Get all user lists.
 [**GetVersions**](TextMagicApi.md#GetVersions) | **Get** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#InviteSubaccount) | **Post** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#MarkChatsReadBulk) | **Post** /api/v2/chats/read/bulk | Mark chats as read (bulk)
@@ -153,7 +153,7 @@ Method | HTTP request | Description
 [**SendEmailVerificationCode**](TextMagicApi.md#SendEmailVerificationCode) | **Get** /api/v2/user/email/verification | Send user email verification
 [**SendMessage**](TextMagicApi.md#SendMessage) | **Post** /api/v2/messages | Send message
 [**SendPhoneVerificationCode**](TextMagicApi.md#SendPhoneVerificationCode) | **Get** /api/v2/user/phone/verification | Send user phone verification
-[**SendPhoneVerificationCode_0**](TextMagicApi.md#SendPhoneVerificationCode_0) | **Post** /api/v2/verify | Step 1: Send a verification code 
+[**SendPhoneVerificationCodeTFA**](TextMagicApi.md#SendPhoneVerificationCodeTFA) | **Post** /api/v2/verify | Step 1: Send a verification code 
 [**SetChatStatus**](TextMagicApi.md#SetChatStatus) | **Post** /api/v2/chats/status | Change chat status
 [**StartSurvey**](TextMagicApi.md#StartSurvey) | **Put** /api/v2/surveys/{id}/start | Start a survey.
 [**UnblockContact**](TextMagicApi.md#UnblockContact) | **Post** /api/v2/contacts/unblock | Unblock contact by phone number.
@@ -346,8 +346,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CheckPhoneVerificationCode_0**
-> CheckPhoneVerificationCode_0(ctx, checkPhoneVerificationCodeInputObject)
+# **CheckPhoneVerificationCodeTFA**
+> CheckPhoneVerificationCodeTFA(ctx, checkPhoneVerificationCodeInputObject)
 Step 2: Check the verification code 
 
 Check received code from user with the code which was actually sent.
@@ -570,7 +570,7 @@ Name | Type | Description  | Notes
 
 # **CreateList**
 > ResourceLinkResponse CreateList(ctx, createListInputObject)
-Create a new list from the submitted data.
+Create a new list
 
 
 
@@ -2883,8 +2883,8 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **GetList**
-> Group GetList(ctx, id)
-Get a single list.
+> List GetList(ctx, id)
+Get the details of a specific list
 
 
 
@@ -2897,7 +2897,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Group**](Group.md)
+[**List**](List.md)
 
 ### Authorization
 
@@ -2926,6 +2926,46 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetListContactsIdsResponse**](GetListContactsIdsResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **GetLists**
+> GetListsPaginatedResponse GetLists(ctx, optional)
+Get all lists
+
+
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***GetListsOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+Optional parameters are passed through a pointer to a GetListsOpts struct
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **optional.Int32**| The current fetched page. | [default to 1]
+ **limit** | **optional.Int32**| The number of results per page. | [default to 10]
+ **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
+ **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
+ **favoriteOnly** | **optional.Int32**| Return only favorite lists | [default to 0]
+ **onlyMine** | **optional.Int32**| Return only current user lists | [default to 0]
+
+### Return type
+
+[**GetListsPaginatedResponse**](GetListsPaginatedResponse.md)
 
 ### Authorization
 
@@ -3959,46 +3999,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **GetUserLists**
-> GetUserListsPaginatedResponse GetUserLists(ctx, optional)
-Get all user lists.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GetUserListsOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a GetUserListsOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
- **limit** | **optional.Int32**| The number of results per page. | [default to 10]
- **orderBy** | **optional.String**| Order results by some field. Default is id | [default to id]
- **direction** | **optional.String**| Order direction. Default is desc | [default to desc]
- **favoriteOnly** | **optional.Int32**| Return only favorite lists | [default to 0]
- **onlyMine** | **optional.Int32**| Return only current user lists | [default to 0]
-
-### Return type
-
-[**GetUserListsPaginatedResponse**](GetUserListsPaginatedResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **GetVersions**
 > GetVersionsResponse GetVersions(ctx, )
 Get minimal valid apps versions
@@ -4765,8 +4765,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **SendPhoneVerificationCode_0**
-> SendPhoneVerificationCodeResponse SendPhoneVerificationCode_0(ctx, sendPhoneVerificationCodeInputObject)
+# **SendPhoneVerificationCodeTFA**
+> SendPhoneVerificationCodeResponse SendPhoneVerificationCodeTFA(ctx, sendPhoneVerificationCodeInputObject)
 Step 1: Send a verification code 
 
 Sends verification code to specified phone number.

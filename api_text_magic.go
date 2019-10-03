@@ -675,7 +675,7 @@ Check received code from user with the code which was actually sent.
 
 
 */
-func (a *TextMagicApiService) CheckPhoneVerificationCode_1(ctx context.Context, checkPhoneVerificationCodeInputObject CheckPhoneVerificationCodeInputObject1) (*http.Response, error) {
+func (a *TextMagicApiService) CheckPhoneVerificationCodeTFA(ctx context.Context, checkPhoneVerificationCodeInputObject CheckPhoneVerificationCodeInputObject1) (*http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}
@@ -1514,7 +1514,7 @@ func (a *TextMagicApiService) CreateCustomField(ctx context.Context, createCusto
 }
 
 /* 
-TextMagicApiService Create a new list from the submitted data.
+TextMagicApiService Create a new list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param createListInputObject
@@ -9635,20 +9635,20 @@ func (a *TextMagicApiService) GetInvoices(ctx context.Context, localVarOptionals
 }
 
 /* 
-TextMagicApiService Get a single list.
+TextMagicApiService Get the details of a specific list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
-@return Group
+@return List
 */
-func (a *TextMagicApiService) GetList(ctx context.Context, id int32) (Group, *http.Response, error) {
+func (a *TextMagicApiService) GetList(ctx context.Context, id int32) (List, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Get")
 		localVarPostBody   interface{}
 		localVarFileName   string
 		localVarFileBytes  []byte
-		localVarReturnValue Group
+		localVarReturnValue List
 	)
 
 	// create path and map variables
@@ -9707,7 +9707,7 @@ func (a *TextMagicApiService) GetList(ctx context.Context, id int32) (Group, *ht
 		}
 		
 		if localVarHttpResponse.StatusCode == 200 {
-			var v Group
+			var v List
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -9819,6 +9819,150 @@ func (a *TextMagicApiService) GetListContactsIds(ctx context.Context, id int32) 
 		
 		if localVarHttpResponse.StatusCode == 200 {
 			var v GetListContactsIdsResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		if localVarHttpResponse.StatusCode == 401 {
+			var v UnauthorizedResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		if localVarHttpResponse.StatusCode == 404 {
+			var v NotFoundResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		return localVarReturnValue, localVarHttpResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHttpResponse, nil
+}
+
+/* 
+TextMagicApiService Get all lists
+
+ * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param optional nil or *GetListsOpts - Optional Parameters:
+     * @param "Page" (optional.Int32) -  The current fetched page.
+     * @param "Limit" (optional.Int32) -  The number of results per page.
+     * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
+     * @param "Direction" (optional.String) -  Order direction. Default is desc
+     * @param "FavoriteOnly" (optional.Int32) -  Return only favorite lists
+     * @param "OnlyMine" (optional.Int32) -  Return only current user lists
+
+@return GetListsPaginatedResponse
+*/
+
+type GetListsOpts struct { 
+	Page optional.Int32
+	Limit optional.Int32
+	OrderBy optional.String
+	Direction optional.String
+	FavoriteOnly optional.Int32
+	OnlyMine optional.Int32
+}
+
+func (a *TextMagicApiService) GetLists(ctx context.Context, localVarOptionals *GetListsOpts) (GetListsPaginatedResponse, *http.Response, error) {
+	var (
+		localVarHttpMethod = strings.ToUpper("Get")
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		localVarReturnValue GetListsPaginatedResponse
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/api/v2/lists"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
+		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.Limit.IsSet() {
+		localVarQueryParams.Add("limit", parameterToString(localVarOptionals.Limit.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.OrderBy.IsSet() {
+		localVarQueryParams.Add("orderBy", parameterToString(localVarOptionals.OrderBy.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.Direction.IsSet() {
+		localVarQueryParams.Add("direction", parameterToString(localVarOptionals.Direction.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.FavoriteOnly.IsSet() {
+		localVarQueryParams.Add("favoriteOnly", parameterToString(localVarOptionals.FavoriteOnly.Value(), ""))
+	}
+	if localVarOptionals != nil && localVarOptionals.OnlyMine.IsSet() {
+		localVarQueryParams.Add("onlyMine", parameterToString(localVarOptionals.OnlyMine.Value(), ""))
+	}
+	// to determine the Content-Type header
+	localVarHttpContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
+	if localVarHttpContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	}
+
+	// to determine the Accept header
+	localVarHttpHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
+	if localVarHttpHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHttpResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHttpResponse == nil {
+		return localVarReturnValue, localVarHttpResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarHttpResponse.Body.Close()
+	if err != nil {
+		return localVarReturnValue, localVarHttpResponse, err
+	}
+
+	if localVarHttpResponse.StatusCode < 300 {
+		// If we succeed, return the data, otherwise pass on to decode error.
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		if err == nil { 
+			return localVarReturnValue, localVarHttpResponse, err
+		}
+	}
+
+	if localVarHttpResponse.StatusCode >= 300 {
+		newErr := GenericSwaggerError{
+			body: localVarBody,
+			error: localVarHttpResponse.Status,
+		}
+		
+		if localVarHttpResponse.StatusCode == 200 {
+			var v GetListsPaginatedResponse
 			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
 				if err != nil {
 					newErr.error = err.Error()
@@ -13569,150 +13713,6 @@ func (a *TextMagicApiService) GetUserDedicatedNumbers(ctx context.Context, local
 }
 
 /* 
-TextMagicApiService Get all user lists.
-
- * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param optional nil or *GetUserListsOpts - Optional Parameters:
-     * @param "Page" (optional.Int32) -  Fetch specified results page.
-     * @param "Limit" (optional.Int32) -  The number of results per page.
-     * @param "OrderBy" (optional.String) -  Order results by some field. Default is id
-     * @param "Direction" (optional.String) -  Order direction. Default is desc
-     * @param "FavoriteOnly" (optional.Int32) -  Return only favorite lists
-     * @param "OnlyMine" (optional.Int32) -  Return only current user lists
-
-@return GetUserListsPaginatedResponse
-*/
-
-type GetUserListsOpts struct { 
-	Page optional.Int32
-	Limit optional.Int32
-	OrderBy optional.String
-	Direction optional.String
-	FavoriteOnly optional.Int32
-	OnlyMine optional.Int32
-}
-
-func (a *TextMagicApiService) GetUserLists(ctx context.Context, localVarOptionals *GetUserListsOpts) (GetUserListsPaginatedResponse, *http.Response, error) {
-	var (
-		localVarHttpMethod = strings.ToUpper("Get")
-		localVarPostBody   interface{}
-		localVarFileName   string
-		localVarFileBytes  []byte
-		localVarReturnValue GetUserListsPaginatedResponse
-	)
-
-	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/lists"
-
-	localVarHeaderParams := make(map[string]string)
-	localVarQueryParams := url.Values{}
-	localVarFormParams := url.Values{}
-
-	if localVarOptionals != nil && localVarOptionals.Page.IsSet() {
-		localVarQueryParams.Add("page", parameterToString(localVarOptionals.Page.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Limit.IsSet() {
-		localVarQueryParams.Add("limit", parameterToString(localVarOptionals.Limit.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.OrderBy.IsSet() {
-		localVarQueryParams.Add("orderBy", parameterToString(localVarOptionals.OrderBy.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.Direction.IsSet() {
-		localVarQueryParams.Add("direction", parameterToString(localVarOptionals.Direction.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.FavoriteOnly.IsSet() {
-		localVarQueryParams.Add("favoriteOnly", parameterToString(localVarOptionals.FavoriteOnly.Value(), ""))
-	}
-	if localVarOptionals != nil && localVarOptionals.OnlyMine.IsSet() {
-		localVarQueryParams.Add("onlyMine", parameterToString(localVarOptionals.OnlyMine.Value(), ""))
-	}
-	// to determine the Content-Type header
-	localVarHttpContentTypes := []string{"application/json"}
-
-	// set Content-Type header
-	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
-	if localVarHttpContentType != "" {
-		localVarHeaderParams["Content-Type"] = localVarHttpContentType
-	}
-
-	// to determine the Accept header
-	localVarHttpHeaderAccepts := []string{"application/json"}
-
-	// set Accept header
-	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
-	if localVarHttpHeaderAccept != "" {
-		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
-	}
-	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
-	if err != nil {
-		return localVarReturnValue, nil, err
-	}
-
-	localVarHttpResponse, err := a.client.callAPI(r)
-	if err != nil || localVarHttpResponse == nil {
-		return localVarReturnValue, localVarHttpResponse, err
-	}
-
-	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
-	localVarHttpResponse.Body.Close()
-	if err != nil {
-		return localVarReturnValue, localVarHttpResponse, err
-	}
-
-	if localVarHttpResponse.StatusCode < 300 {
-		// If we succeed, return the data, otherwise pass on to decode error.
-		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-		if err == nil { 
-			return localVarReturnValue, localVarHttpResponse, err
-		}
-	}
-
-	if localVarHttpResponse.StatusCode >= 300 {
-		newErr := GenericSwaggerError{
-			body: localVarBody,
-			error: localVarHttpResponse.Status,
-		}
-		
-		if localVarHttpResponse.StatusCode == 200 {
-			var v GetUserListsPaginatedResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
-				return localVarReturnValue, localVarHttpResponse, newErr
-		}
-		
-		if localVarHttpResponse.StatusCode == 401 {
-			var v UnauthorizedResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
-				return localVarReturnValue, localVarHttpResponse, newErr
-		}
-		
-		if localVarHttpResponse.StatusCode == 404 {
-			var v NotFoundResponse
-			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
-				if err != nil {
-					newErr.error = err.Error()
-					return localVarReturnValue, localVarHttpResponse, newErr
-				}
-				newErr.model = v
-				return localVarReturnValue, localVarHttpResponse, newErr
-		}
-		
-		return localVarReturnValue, localVarHttpResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHttpResponse, nil
-}
-
-/* 
 TextMagicApiService Get minimal valid apps versions
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -16505,7 +16505,7 @@ Sends verification code to specified phone number.
 
 @return SendPhoneVerificationCodeResponse
 */
-func (a *TextMagicApiService) SendPhoneVerificationCode_2(ctx context.Context, sendPhoneVerificationCodeInputObject SendPhoneVerificationCodeInputObject) (SendPhoneVerificationCodeResponse, *http.Response, error) {
+func (a *TextMagicApiService) SendPhoneVerificationCodeTFA(ctx context.Context, sendPhoneVerificationCodeInputObject SendPhoneVerificationCodeInputObject) (SendPhoneVerificationCodeResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Post")
 		localVarPostBody   interface{}

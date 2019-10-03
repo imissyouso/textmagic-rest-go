@@ -61,7 +61,7 @@ type Configuration struct {
 
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
-		BasePath:      "http://my.textmagic.com",
+		BasePath:      "http://rest.textmagic.com",
 		DefaultHeader: make(map[string]string),
 		UserAgent:     "textmagic client",
 	}

@@ -16,5 +16,5 @@ type GetListsOfContactPaginatedResponse struct {
 	PageCount int32 `json:"pageCount"`
 	// The number of results per page.
 	Limit int32 `json:"limit"`
-	Resources []Group `json:"resources"`
+	Resources []List `json:"resources"`
 }

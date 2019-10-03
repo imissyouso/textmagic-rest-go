@@ -11,6 +11,8 @@
 package TextMagic
 
 type ResourceLinkResponse struct {
+	// Resource ID.
 	Id int32 `json:"id"`
+	// A link to this resource. If you want to fetch it, just **GET** this address.
 	Href string `json:"href"`
 }

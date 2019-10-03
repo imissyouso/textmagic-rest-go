@@ -10,6 +10,6 @@
 
 package TextMagic
 
-// Request executed with success
-type SuccessfulResponse struct {
+type ListImage struct {
+	Href string `json:"href"`
 }

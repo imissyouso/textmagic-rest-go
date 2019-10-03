@@ -10,7 +10,7 @@
 
 package TextMagic
 
-type Group struct {
+type List struct {
 	Id int32 `json:"id"`
 	Name string `json:"name"`
 	Description string `json:"description"`
@@ -19,6 +19,6 @@ type Group struct {
 	User *User `json:"user"`
 	Service bool `json:"service"`
 	Shared bool `json:"shared"`
-	Avatar *GroupImage `json:"avatar"`
+	Avatar *ListImage `json:"avatar"`
 	IsDefault bool `json:"isDefault"`
 }
