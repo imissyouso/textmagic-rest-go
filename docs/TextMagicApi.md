@@ -101,7 +101,6 @@ Method | HTTP request | Description
 [**GetListsOfContact**](TextMagicApi.md#GetListsOfContact) | **Get** /api/v2/contacts/{id}/lists | Return lists which contact belongs to.
 [**GetMessagePreview**](TextMagicApi.md#GetMessagePreview) | **Get** /api/v2/messages/preview | Preview message
 [**GetMessagePrice**](TextMagicApi.md#GetMessagePrice) | **Get** /api/v2/messages/price | Check price
-[**GetMessagePrices**](TextMagicApi.md#GetMessagePrices) | **Get** /api/v2/messages/prices | Get pricing
 [**GetMessageSession**](TextMagicApi.md#GetMessageSession) | **Get** /api/v2/sessions/{id} | Get a session details
 [**GetMessageSessionStat**](TextMagicApi.md#GetMessageSessionStat) | **Get** /api/v2/sessions/{id}/stat | Get a session statistics
 [**GetMessagesBySessionId**](TextMagicApi.md#GetMessagesBySessionId) | **Get** /api/v2/sessions/{id}/messages | Get a session messages
@@ -3107,30 +3106,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetMessagePriceResponse**](GetMessagePriceResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **GetMessagePrices**
-> GetMessagePricesResponse GetMessagePrices(ctx, )
-Get pricing
-
-Get message prices for all countries.
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetMessagePricesResponse**](GetMessagePricesResponse.md)
 
 ### Authorization
 
