@@ -18,12 +18,7 @@ host: "rest.textmagic.com"
 tags:
 - name: "Introduction"
   description: "<img style=\"float: right; margin-left: 10px; margin-top: -40px; width:\
-    \ 130px;\" src=\"images/phone.png\">\n\n[TextMagic SMS API](https://www.textmagic.com/sms-gateway-api/)\
-    \ is a platform for building your own messaging app using our messaging infrastructure.\
-    \ It allows you to send and receive SMS text messages, query information about\
-    \ inbound and outbound messages, manage contacts, create templates (i.e. message\
-    \ formats and static texts) and schedule recurrent SMS messages as well as process\
-    \ bulk SMS messages.\n\n[Try TextMagic API for Free](https://my.textmagic.com/register/)\n\
+    \ 130px;\" src=\"images/phone.png\">\n\n[Try TextMagic API for Free](https://my.textmagic.com/register/)\n\
     \n<button name=\"button\" onclick=\"http://www.google.com\" class=\"btn\">Try\
     \ TextMagic API for Free</button>\n\n## Two Ways to Use TextMagic API\n* [REST\
     \ API](https://www.textmagic.com/docs/api/start/) – get full access to TextMagic’\
@@ -203,7 +198,7 @@ tags:
     \ queued on the TextMagic server. |\n| **r** | intermediate | The message has\
     \ been sent to the mobile operator. | \n| **s** | intermediate |This message is\
     \ scheduled to be sent later. |\n| **u** | final | The status is unknown. |\n"
-  x-displayName: "Messages : Send\n"
+  x-displayName: "Messages: Send\n"
 - name: "Inbound Messages"
   description: "With the TextMagic API, you can establish a full two-way communication\
     \ pipeline for sending and receiving text messages within your application.\n\n\
@@ -229,7 +224,7 @@ tags:
     \ | Receiver phone number (i.e. **your** dedicated or shared reply number). |\n\
     | **messageTime** | `2012-11-28T18:38:28+0000` | The time when the message reached\
     \ the TextMagic server. |\n| **text** | `Test reply` | Inbound message text. |\n"
-  x-displayName: "Messages : Receive\n"
+  x-displayName: "Messages: Receive\n"
 - name: "Scheduled Messages"
   description: "You can schedule text messages to be sent at a later date or time,\
     \ or can create recurring text message sessions with TextMagic API. Below is a\
