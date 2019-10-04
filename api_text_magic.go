@@ -10326,7 +10326,7 @@ func (a *TextMagicApiService) GetMessagePreview(ctx context.Context, localVarOpt
 }
 
 /* 
-TextMagicApiService Check price
+TextMagicApiService Check message price
 Check pricing for a new outbound message.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetMessagePriceOpts - Optional Parameters:

@@ -100,7 +100,7 @@ Method | HTTP request | Description
 [**GetLists**](TextMagicApi.md#GetLists) | **Get** /api/v2/lists | Get all lists
 [**GetListsOfContact**](TextMagicApi.md#GetListsOfContact) | **Get** /api/v2/contacts/{id}/lists | Get contact&#39;s lists
 [**GetMessagePreview**](TextMagicApi.md#GetMessagePreview) | **Get** /api/v2/messages/preview | Preview message
-[**GetMessagePrice**](TextMagicApi.md#GetMessagePrice) | **Get** /api/v2/messages/price | Check price
+[**GetMessagePrice**](TextMagicApi.md#GetMessagePrice) | **Get** /api/v2/messages/price | Check message price
 [**GetMessageSession**](TextMagicApi.md#GetMessageSession) | **Get** /api/v2/sessions/{id} | Get a session details
 [**GetMessageSessionStat**](TextMagicApi.md#GetMessageSessionStat) | **Get** /api/v2/sessions/{id}/stat | Get a session statistics
 [**GetMessagesBySessionId**](TextMagicApi.md#GetMessagesBySessionId) | **Get** /api/v2/sessions/{id}/messages | Get a session messages
@@ -3068,7 +3068,7 @@ Name | Type | Description  | Notes
 
 # **GetMessagePrice**
 > GetMessagePriceResponse GetMessagePrice(ctx, optional)
-Check price
+Check message price
 
 Check pricing for a new outbound message.
 
