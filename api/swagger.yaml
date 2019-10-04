@@ -480,7 +480,7 @@ tags:
     \n```javascript\n{\n    \"repositories\": [\n        {\n            \"type\":\
     \ \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.480\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.478\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -541,7 +541,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.480/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.481/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -713,24 +713,24 @@ tags:
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.477'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.481'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
-    # Load the gem\nrequire 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-    \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n    config.username\
-    \ = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\nend\n\napi_instance\
-    \ = TextMagic::TextMagicApi.new\n\n# Simple ping request example\nbegin\n    result\
-    \ = api_instance.ping\n    puts result.ping\nrescue TextMagic::ApiError => e\n\
-    \    puts \"Exception when calling TextMagicApi->ping: #{e}\"\nend\n\n# Send a\
-    \ new message request example\nsend_message_input_object = TextMagic::SendMessageInputObject.new\n\
+    \ # Load the gem\nrequire 'textmagic_rest_client'\n\n # Setup authorization\n\
+    TextMagic.configure do |config|\n    # Configure HTTP basic authorization: BasicAuth\n\
+    \    config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+    end\n\napi_instance = TextMagic::TextMagicApi.new\n\n # Simple ping request example\n\
+    begin\n    result = api_instance.ping\n    puts result.ping\nrescue TextMagic::ApiError\
+    \ => e\n    puts \"Exception when calling TextMagicApi->ping: #{e}\"\nend\n\n\
+    \ # Send a new message request example\nsend_message_input_object = TextMagic::SendMessageInputObject.new\n\
     send_message_input_object.text = 'I love TextMagic!'\nsend_message_input_object.phones\
     \ = '+19998887766'\n\nbegin\n    result = api_instance.send_message(send_message_input_object)\n\
     \    puts result.id\nrescue TextMagic::ApiError => e\n    puts \"Exception when\
-    \ calling TextMagicApi->send_message: #{e}\"\nend\n\n# Get all outgoing messages\
+    \ calling TextMagicApi->send_message: #{e}\"\nend\n\n # Get all outgoing messages\
     \ request example\nbegin\n    result = api_instance.get_all_outbound_messages(page:\
     \ 1, limit: 10)\n    puts result.resources[0].text\nrescue TextMagic::ApiError\
     \ => e\n    puts \"Exception when calling TextMagicApi->get_all_outbound_messages:\
-    \ #{e}\"\nend\n\n# Upload new avatar for contacts list (group) with Id 3223 example\n\
+    \ #{e}\"\nend\n\n # Upload new avatar for contacts list (group) with Id 3223 example\n\
     file = File.open('test.png', 'r')\nbegin\n    result = api_instance.upload_list_avatar(file,\
     \ 3223)\n    puts result.id\nrescue TextMagic::ApiError => e\n    puts \"Exception\
     \ when calling TextMagicApi->upload_list_avatar: #{e}\"\nend\n```\n\nRun the script:\n\
@@ -739,7 +739,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.480\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.481\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
