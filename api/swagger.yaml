@@ -458,6 +458,350 @@ tags:
     \ a concatenated Unicode text messages.\n\n| Number of SMSs|Total number of characters\
     \ in the linked message|\n|---------------|------------------------------------------------|\n\
     |1|70|\n|2|134|\n|3|201|\n|4|268|\n|5|335|\n|6|402|\n"
+- name: "Licence"
+  description: "These SDK libraries are available as open source under the terms of\
+    \ the [MIT License](http://opensource.org/licenses/MIT)."
+- name: "Introduction"
+  description: "The TextMagic SMS API PHP wrapper can save you a lot of time, as it\
+    \ includes all the necessary API commands and tests. It only takes a few seconds\
+    \ to download it from GitHub and to install it into your own app or software.\
+    \ After installation, you'll then be able to send text messages."
+- name: "Support"
+  description: "If you need help with the wrapper or if you have any suggestions for\
+    \ improvements, please contact us by emailing\_[support@textmagic.com](mailto:support@textmagic.com)."
+- name: "SDKs"
+  description: "<a class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-php\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-php on\
+    \ GitHub\">Star</a>\n\n\n## Requirements\n\nPHP 5.5 and later\n\n## Installation\n\
+    ### Composer\n\nTo install the bindings via [Composer](http://getcomposer.org/),\
+    \ add the following to `composer.json`:\n\n```javascript\n{\n    \"repositories\"\
+    : [\n        {\n            \"type\": \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
+    \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
+    : \"dev-master#v2.0.475\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
+    require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
+    \ follow the [installation](#installation) instructions and execute the following\
+    \ PHP code:\n\n```php\nrequire_once(__DIR__ . '/vendor/autoload.php');\n\nuse\
+    \ TextMagic\\Models\\SendMessageInputObject;\nuse TextMagic\\Api\\TextMagicApi;\n\
+    use TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
+    \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\n$api\
+    \ = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n);\n\n// Simple\
+    \ ping request example\ntry {\n    $result = $api->ping();\n    print_r($result);\n\
+    } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->ping:\
+    \ ', $e->getMessage(), PHP_EOL;\n}\n\n// Send a new message request example\n\
+    $input = new SendMessageInputObject();\n$input->setText('Test message test');\n\
+    $input->setPhones('+19993322111,+19993322110');\n\ntry {\n    $result = $api->sendMessage($input);\n\
+    \    print_r($result);\n} catch (Exception $e) {\n    echo 'Exception when calling\
+    \ TextMagicApi->sendMessage: ', $e->getMessage(), PHP_EOL;\n}\n\n// Get all outgoing\
+    \ messages request example\ntry {\n    $result = $api->getAllOutboundMessages(1,\
+    \ 10);\n    print_r($result);\n} catch (Exception $e) {\n    echo 'Exception when\
+    \ calling TextMagicApi->getAllOutboundMessages: ', $e->getMessage(), PHP_EOL;\n\
+    }\n\n// Upload an avatar for a contacts list (group) example. 3223 number here\
+    \ it is sample list ID\ntry {\n    $file = new SplFileObject(\"test.jpg\");\n\
+    \    $result = $api->uploadListAvatar($file, 3223);\n    print_r($result);\n}\
+    \ catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->uploadListAvatar:\
+    \ ', $e->getMessage(), PHP_EOL;\n}\n\n```\n\n\n<a class=\"github-button\" href=\"\
+    https://github.com/imissyouso/textmagic-rest-nodejs\" data-show-count=\"true\"\
+    \ aria-label=\"Star imissyouso/textmagic-rest-nodejs on GitHub\">Star</a>\n\n\
+    # TextMagic JavaScript SDK\nThis library provides you with an easy way of sending\
+    \ SMS and receiving replies by integrating TextMagic SMS Gateway into your JavaScript\
+    \ application.\n\n## What Is TextMagic?\nTextMagic’s application programming interface\
+    \ (API) provides the communication link between your application and TextMagic’\
+    s SMS Gateway, allowing you to send and receive text messages and to check the\
+    \ delivery status of text messages you’ve already sent.\n\nFor detailed documentation\
+    \ and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)\n\
+    \n## Installation\n\n```shell\nnpm install textmagic-client@2.0.475 --save\n```\n\
+    \n## Usage Example\n\nPlease follow the [installation](#installation) instructions\
+    \ and execute the following JS code:\n\n```javascript\nconst textmagicClient =\
+    \ require('textmagic-client');\n\nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
+    const auth = client.authentications['BasicAuth'];\n\nauth.username = 'YOUR_USERNAME';\n\
+    auth.password = 'YOUR_PASSWORD';\n\nconst api = new textmagicClient.TextMagicApi();\n\
+    \n// Simple ping request example\napi.ping().then(function (data) {\n    console.log(data.ping);\n\
+    }).catch(function(err){\n    console.error(err);\n});\n\n// Send a new message\
+    \ request example\napi.sendMessage({\n    'text': 'I love TextMagic!',\n    'phones':\
+    \ '+12341234123'\n}).then(function (data) {\n    console.log(data.id);\n}).catch(function(err){\n\
+    \    console.error(err);\n});\n\n// Get all outgoing messages request example\n\
+    api.getAllOutboundMessages({\n    'page': 1,\n    'limit': 200\n}).then(function\
+    \ (data) {\n    console.log(data.resources[0].text);\n}).catch(function(err){\n\
+    \    console.error(err);\n});\n\n// Upload new avatar for contacts list (group)\
+    \ with Id 3223 example\nlet stream = new fs.ReadStream('test.jpg');\napi.uploadListAvatar(stream,\
+    \ 3223).then(function (data) {\n    console.log(data.id);\n}).catch(function(err){\n\
+    \    console.error(err);\n});\n```\n\n## License\nThe library is available as\
+    \ open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).<a\
+    \ class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-csharp\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-csharp\
+    \ on GitHub\">Star</a>\n\n# TextMagic C# / .Net SDK\n\nThis library provides you\
+    \ with an easy way to send SMS and receive replies, by integrating the TextMagic\
+    \ SMS Gateway into your C# / .Net application.\n\n## What Is TextMagic?\nTextMagic’\
+    s application programming interface (API) provides the communication link between\
+    \ your application and TextMagic’s SMS Gateway, allowing you to send and receive\
+    \ text messages and to check the delivery status of text messages you’ve already\
+    \ sent.\n\nFor detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)\n\
+    \n## Frameworks supported\n- .NET 4.0 or later\n- Windows Phone 7.1 (Mango)\n\n\
+    ## Dependencies\n- [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0\
+    \ or later\n- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0\
+    \ or later\n- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0\
+    \ or later\n\nThe DLLs included in the package may not be the latest versions.\
+    \ We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget)\
+    \ to obtain the latest version of the packages:\n```\nInstall-Package RestSharp\n\
+    Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
+    \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
+    \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.475/).\n\
+    \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
+    using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+    {\n    class Program\n    {\n        static void Main(string[] args)\n       \
+    \ {\n            // Configure HTTP basic authorization: BasicAuth\n          \
+    \  Configuration.Default.Username = \"YOUR_USERNAME\";\n            Configuration.Default.Password\
+    \ = \"YOUR_PASSWORD\";\n            Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+    ;\n\n            var apiInstance = new TextMagicApi();\n\n            // Simple\
+    \ Ping request sample\n            try\n            {\n                var result\
+    \ = apiInstance.Ping();\n                Console.WriteLine(result.Ping);\n   \
+    \         }\n            catch (Exception e)\n            {\n                Console.WriteLine(\"\
+    Exception when calling TextMagicApi.Ping: \" + e.Message );\n            }\n\n\
+    \            // Send a new message request sample\n            try\n         \
+    \   {\n                var sendMessageInputObject = new SendMessageInputObject\n\
+    \                {\n                    Text = \"I love TextMagic!\", Phones =\
+    \ \"+199988887766\"\n                };\n\n                var result = apiInstance.SendMessage(sendMessageInputObject);\n\
+    \                Console.WriteLine(result.Id);\n            }\n            catch\
+    \ (Exception e)\n            {\n                Console.WriteLine(\"Exception\
+    \ when calling TextMagicApi.SendMessage: \" + e.Message );\n            }\n\n\
+    \            // Get all outgoing messages sample\n            try\n          \
+    \  {\n                var result = apiInstance.GetAllOutboundMessages(1, 10);\n\
+    \                Console.WriteLine(result.Resources[0].Id);\n            }\n \
+    \           catch (Exception e)\n            {\n                Console.WriteLine(\"\
+    Exception when calling TextMagicApi.GetAllOutboundMessages: \" + e.Message );\n\
+    \            }\n\n            // Upload list avatar sample, 3223 here is a sample\
+    \ list id\n            try\n            {\n                var stream = File.Open(\"\
+    /CustomPath/Images/test.png\", FileMode.Open);\n                var result = apiInstance.UploadListAvatar(stream,\
+    \ 3223);\n                Console.WriteLine(result.Href);\n            }\n   \
+    \         catch (Exception e)\n            {\n                Console.WriteLine(\"\
+    Exception when calling TextMagicApi.UploadListAvatar: \" + e.Message );\n    \
+    \        }\n        }\n    }\n}\n```\n\n## VB.Net usage example\n\n```vbnet\n\
+    Imports System\nImports System.IO\nImports TextMagicClient.Api\nImports TextMagicClient.Client\n\
+    Imports TextMagicClient.Model\n\nModule Program\n    Sub Main(args As String())\n\
+    \        Configuration.Default.Username = \"YOUR_USERNAME\"\n        Configuration.Default.Password\
+    \ = \"YOUR_PASSWORD\"\n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+    \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Simple Ping request\
+    \ sample\n        Try\n            Dim result = apiInstance.Ping()\n         \
+    \   Console.WriteLine(result.Ping)\n            Catch ex As Exception\n      \
+    \      Console.WriteLine(\"Exception when calling TextMagicApi.Ping: \" + ex.Message\
+    \ )\n        End Try\n\n        ' Send a new message request sample\n        Try\n\
+    \            Dim sendMessageInputObject = New SendMessageInputObject With {\n\
+    \            .Text = \"I love TextMagic!\",\n            .Phones = \"+199988887766\"\
+    \n            }\n            Dim result = apiInstance.SendMessage(sendMessageInputObject)\n\
+    \            Console.WriteLine(result.Id)\n        Catch e As Exception\n    \
+    \        Console.WriteLine(\"Exception when calling TextMagicApi.SendMessage:\
+    \ \" & e.Message)\n        End Try\n\n        ' Get all outgoing messages sample\n\
+    \        Try\n            Dim result = apiInstance.GetAllOutboundMessages(1, 10)\n\
+    \            Console.WriteLine(result.Resources(0).Id)\n        Catch e As Exception\n\
+    \            Console.WriteLine(\"Exception when calling TextMagicApi.GetAllOutboundMessages:\
+    \ \" & e.Message)\n        End Try\n\n        ' Upload list avatar sample, 3223\
+    \ here is a sample list id\n        Try\n            Dim stream = File.Open(\"\
+    /CustomPath/Images/test.png\", FileMode.Open)\n            Dim result = apiInstance.UploadListAvatar(stream,\
+    \ 3223)\n            Console.WriteLine(result.Href)\n        Catch e As Exception\n\
+    \            Console.WriteLine(\"Exception when calling TextMagicApi.UploadListAvatar:\
+    \ \" & e.Message)\n        End Try\n    End Sub\nEnd Module\n\n```\n\n## License\n\
+    The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).<a\
+    \ class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-cpp\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-cpp on\
+    \ GitHub\">Star</a>\n\n# TextMagic C++ SDK\n\nThis library provides you with an\
+    \ easy way to send SMS and receive replies, by integrating the TextMagic SMS Gateway\
+    \ into your C++ application.\n\n## What is TextMagic?\nTextMagic’s application\
+    \ programming interface (API) provides the communication link between your application\
+    \ and TextMagic’s SMS Gateway, allowing you to send and receive text messages\
+    \ and to check the delivery status of text messages you’ve already sent.\n\nFor\
+    \ detailed documentation, please visit http://docs.textmagictesting.com/.\n\n\
+    ## Requirements\n\n* CMake 2.8 and later (https://cmake.org/)\n* cpprest (https://github.com/microsoft/cpprestsdk)\n\
+    \nUbuntu dependencies quick installation example:\n```shell\napt-get install build-essential\
+    \ cmake libcpprest-dev\n```\n\n## Installation\n\nDownload and extract lib archive:\n\
+    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.475.tar.gz\
+    \ && \\\ntar zxf v2.0.475.tar.gz && \\\nrm -f v2.0.475.tar.gz && \\\ncd textmagic-rest-cpp-2.0.475\n\
+    ```\nBuild using cmake\n```shell\ncmake . && cmake --build .\n```\nThe output\
+    \ library file will be placed in `textmagic-rest-cpp-2.0.475/lib` directory:\n\
+    \n## Usage Example\nIn the example below, we assume that you moved the library\
+    \ sources `textmagic-rest-cpp-2.0.475` directory to your test project root directory.\n\
+    \nConfigure your `CMakeLists.txt` as shown here:\n```shell\ncmake_minimum_required(VERSION\
+    \ 2.8)\nproject(test)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(app main.cpp)\n\
+    \nadd_library(textmagic_client SHARED IMPORTED)\nset_property(TARGET textmagic_client\
+    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475/lib/libtextmagic_client.so\"\
+    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475\
+    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475/api)\n\
+    target_link_libraries(app boost_system cpprest crypto textmagic_client )\n```\n\
+    \n`main.cpp` file example:\n```cpp\n#include <iostream>\n#include <fstream>\n\
+    #include \"textmagic-rest-cpp-2.0.475/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.475/ApiConfiguration.h\"\
+    \n#include \"textmagic-rest-cpp-2.0.475/api/TextMagicApi.h\"\n\nusing namespace\
+    \ com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+    \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+    \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+    );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+    , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n    TextMagicApi\
+    \ api(apiClient);\n\n    // Simple ping request example\n    pplx::task<std::shared_ptr<PingResponse>>\
+    \ pingResponse = api.ping();\n    pingResponse.wait();\n\n    try {\n        std::cout\
+    \ << pingResponse.get()->getPing() << '\\n';\n    } catch(const std::exception&\
+    \ e) {\n        std::cout << \"getPing() exception: \" << e.what() << '\\n';\n\
+    \    }\n\n    // Send a new message request example\n    std::shared_ptr<SendMessageInputObject>\
+    \ sendMessageInputObject(new SendMessageInputObject);\n    sendMessageInputObject->setPhones(\"\
+    +19998887766\");\n    sendMessageInputObject->setText(\"I love TextMagic!\");\n\
+    \n    pplx::task<std::shared_ptr<SendMessageResponse>> sendMessageResponse = api.sendMessage(sendMessageInputObject,\
+    \ false);\n    sendMessageResponse.wait();\n\n    try {\n        std::cout <<\
+    \ sendMessageResponse.get()->getId() << '\\n';\n    } catch(const std::exception&\
+    \ e) {\n        std::cout << \"getId() exception: \" << e.what() << '\\n';\n \
+    \   }\n\n    // Get all outgoing messages request example\n    pplx::task<std::shared_ptr<GetAllOutboundMessagesResponse>>\
+    \ getAllOutboundMessagesResponse = api.getAllOutboundMessages(boost::none, boost::none,\
+    \ boost::none);\n    getAllOutboundMessagesResponse.wait();\n\n    try {\n   \
+    \     std::cout << getAllOutboundMessagesResponse.get()->getResources()[0]->getId()\
+    \ << '\\n';\n    } catch(const std::exception& e) {\n        std::cout << \"getId()\
+    \ exception: \" << e.what() << '\\n';\n    }\n\n    // Upload list avatar request\
+    \ example\n    std::filebuf fb;\n    fb.open (\"test.jpg\", std::ios::in);\n \
+    \   std::shared_ptr<std::istream> is(new std::istream(&fb));\n\n    std::shared_ptr<HttpContent>\
+    \ image(new HttpContent);\n    image->setName(\"test\");\n    image->setContentDisposition(\"\
+    attachment\");\n    image->setFileName(\"test.jpg\");\n\n    image->setContentType(\"\
+    image/jpeg\");\n    image->setData(is);\n\n    // List ID in current example is\
+    \ 3223\n    pplx::task<std::shared_ptr<ResourceLinkResponse>> resourceLinkResponse\
+    \ = api.uploadListAvatar(image, 3223);\n    resourceLinkResponse.wait();\n\n \
+    \   try {\n        std::cout << resourceLinkResponse.get()->getId() << '\\n';\n\
+    \    } catch(const std::exception& e) {\n        std::cout << \"getId() exception:\
+    \ \" << e.what() << '\\n';\n    }\n\n    return 0;\n}\n```\nBuild your test project:\n\
+    ```shell\ncmake . && cmake --build .\n```\nRun:\n```shell\n./app\n```\n\n## License\n\
+    \nThe library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).<a\
+    \ class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-python\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-python\
+    \ on GitHub\">Star</a>\n\n# TextMagic Python SDK\nThis library provides you with\
+    \ an easy way of sending SMS and receiving replies by integrating TextMagic SMS\
+    \ Gateway into your Python application.\n\n## What Is TextMagic?\nTextMagic’s\
+    \ application programming interface (API) provides the communication link between\
+    \ your application and TextMagic’s SMS Gateway, allowing you to send and receive\
+    \ text messages and to check the delivery status of text messages you’ve already\
+    \ sent.\n\nFor detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
+    \n## Requirements\nPython 2.7 and 3.4+\n\n## Installation\n\n```shell\npip install\
+    \ git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.475\n```\n\n\
+    ## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import ApiException\n\
+    \n# Configure HTTP basic authorization: BasicAuth\nconfiguration = TextMagic.Configuration()\n\
+    configuration.username = 'YOUR_USERNAME'\nconfiguration.password = 'YOUR_PASSWORD'\n\
+    \n# create an instance of the API class\napi_instance = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\
+    \n# Simple ping request example\ntry:\n    response = api_instance.ping()\n  \
+    \  print(response.ping)\nexcept ApiException as e:\n    print(\"Exception when\
+    \ calling TextMagicApi->ping: %s\\n\" % e)\n\n# Send a new message request example\n\
+    send_message_input_object = TextMagic.SendMessageInputObject()\nsend_message_input_object.text\
+    \ = \"I love TextMagic!\"\nsend_message_input_object.phones = \"+79998887766\"\
+    \n\ntry:\n    response = api_instance.send_message(send_message_input_object)\n\
+    \    print(response.id)\nexcept ApiException as e:\n    print(\"Exception when\
+    \ calling TextMagicApi->send_message: %s\\n\" % e)\n\n# Get all outgoing messages\
+    \ request example\ntry:\n    response = api_instance.get_all_outbound_messages(page=1,\
+    \ limit=200)\n    print(response.resources[0].text)\nexcept ApiException as e:\n\
+    \    print(\"Exception when calling TextMagicApi->get_all_outbound_messages: %s\\\
+    n\" % e)\n\n# Upload a new list (contacts group) avatar request example. 3223\
+    \ here is a test list id\ntry:\n    response = api_instance.upload_list_avatar('test.png',\
+    \ 3223)\n    print(response.id)\nexcept ApiException as e:\n    print(\"Exception\
+    \ when calling TextMagicApi->upload_list_avatar: %s\\n\" % e)\n\n```\n\n## License\n\
+    The library is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).<a\
+    \ class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-perl\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-perl on\
+    \ GitHub\">Star</a>\n\n# TextMagic Perl SDK\n\nThis library provides you with\
+    \ an easy way of sending SMS and receiving replies by integrating TextMagic SMS\
+    \ Gateway into your Perl application.\n\n## What is TextMagic?\nTextMagic’s application\
+    \ programming interface (API) provides the communication link between your application\
+    \ and TextMagic’s SMS Gateway, allowing you to send and receive text messages\
+    \ and to check the delivery status of text messages you’ve already sent.\n\nFor\
+    \ detailed documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
+    \n## Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.475.tar.gz\
+    \ && \\\ntar zxf v2.0.475.tar.gz && \\\nrm -f v2.0.475.tar.gz && \\\ncd textmagic-rest-perl-2.0.475\
+    \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
+    \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
+    \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
+    \ strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\nuse Net::Sms::TextMagicClient::TextMagicApi;\n\
+    use Net::Sms::TextMagicClient::Object::SendMessageInputObject;\n\nmy $client =\
+    \ Net::Sms::TextMagicClient::ApiClient::->new(\n    username   => 'YOUR_USERNAME',\n\
+    \    password   => 'YOUR_PASSWORD',\n    base_url  => 'https://rest.textmagic.com'\n\
+    );\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
+    \n# Ping request example\neval {\n    my $result = $api_instance->ping();\n  \
+    \  print $result->ping;\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->ping:\
+    \ $@\\n\";\n}\n\n# Send a new message request example\nmy $send_message_input_object\
+    \ = Net::Sms::TextMagicClient::Object::SendMessageInputObject->new(\n    text\
+    \ => 'I love TextMagic!',\n    phones => '+19998887766'\n);\n\neval {\n    my\
+    \ $result = $api_instance->send_message(send_message_input_object => $send_message_input_object);\n\
+    \    print $result->id;\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->send_message:\
+    \ $@\\n\";\n}\n\n# Get all outgoing messages request example\neval {\n    my $result\
+    \ = $api_instance->get_all_outbound_messages();\n    print $result->resources->[0]->message_time;\n\
+    };\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->get_all_inbound_messages:\
+    \ $@\\n\";\n}\n\n# Upload a new avatar for a  specified contacts list (group)\
+    \ request example (3223 it is sample list ID)\neval {\n    my $result = $api_instance->upload_list_avatar(image\
+    \ => \"test.jpg\", id => 3223);\n    print $result->id;\n};\n\nif ($@) {\n   \
+    \ warn \"Exception when calling TextMagicApi->upload_list_avatar: $@\\n\";\n}\n\
+    \n```\n\n## License\nThe library is available as open source under the terms of\
+    \ the [MIT License](http://opensource.org/licenses/MIT).<a class=\"github-button\"\
+    \ href=\"https://github.com/imissyouso/textmagic-rest-ruby\" data-show-count=\"\
+    true\" aria-label=\"Star imissyouso/textmagic-rest-ruby on GitHub\">Star</a>\n\
+    \n# TextMagic Ruby SDK\nThis library provides you with an easy way of sending\
+    \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Ruby\
+    \ application.\n\n## What Is TextMagic?\nTextMagic’s application programming interface\
+    \ (API) provides the communication link between your application and TextMagic’\
+    s SMS Gateway, allowing you to send and receive text messages and to check the\
+    \ delivery status of text messages you’ve already sent.\n\nFor detailed documentation\
+    \ and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
+    \n## Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.475'\n\
+    ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
+    \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
+    # Load the gem\nrequire 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+    \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n    config.username\
+    \ = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\nend\n\napi_instance\
+    \ = TextMagic::TextMagicApi.new\n\n# Simple ping request example\nbegin\n    result\
+    \ = api_instance.ping\n    puts result.ping\nrescue TextMagic::ApiError => e\n\
+    \    puts \"Exception when calling TextMagicApi->ping: #{e}\"\nend\n\n# Send a\
+    \ new message request example\nsend_message_input_object = TextMagic::SendMessageInputObject.new\n\
+    send_message_input_object.text = 'I love TextMagic!'\nsend_message_input_object.phones\
+    \ = '+19998887766'\n\nbegin\n    result = api_instance.send_message(send_message_input_object)\n\
+    \    puts result.id\nrescue TextMagic::ApiError => e\n    puts \"Exception when\
+    \ calling TextMagicApi->send_message: #{e}\"\nend\n\n# Get all outgoing messages\
+    \ request example\nbegin\n    result = api_instance.get_all_outbound_messages(page:\
+    \ 1, limit: 10)\n    puts result.resources[0].text\nrescue TextMagic::ApiError\
+    \ => e\n    puts \"Exception when calling TextMagicApi->get_all_outbound_messages:\
+    \ #{e}\"\nend\n\n# Upload new avatar for contacts list (group) with Id 3223 example\n\
+    file = File.open('test.png', 'r')\nbegin\n    result = api_instance.upload_list_avatar(file,\
+    \ 3223)\n    puts result.id\nrescue TextMagic::ApiError => e\n    puts \"Exception\
+    \ when calling TextMagicApi->upload_list_avatar: #{e}\"\nend\n```\n\nRun the script:\n\
+    ```\nbundle exec ruby test.rb\n```\n\n## License\nThe library is available as\
+    \ open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).\n\
+    <a class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-go\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-go on GitHub\"\
+    >Star</a>\n\n# TextMagic Go SDK\n\nThis library provides you with an easy way\
+    \ of sending SMS and receiving replies by integrating TextMagic SMS Gateway into\
+    \ your Go application.\n\n## What Is TextMagic?\nTextMagic’s application programming\
+    \ interface (API) provides the communication link between your application and\
+    \ TextMagic’s SMS Gateway, allowing you to send and receive text messages and\
+    \ to check the delivery status of text messages you’ve already sent.\n\nFor detailed\
+    \ documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
+    \n## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.475\n\
+    ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
+    ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
+    \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
+    \ call example below.\n\n## Usage Example\n\n```go\npackage main\n\nimport (\n\
+    \    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\n    // If\
+    \ you're using go.mod use line below to import our module\n    // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\
+    \n    tm \"github.com/imissyouso/textmagic-rest-go\"\n    \"log\"\n)\n\nfunc main()\
+    \ {\n\n    cfg := tm.NewConfiguration()\n    cfg.BasePath = \"https://rest.textmagic.com\"\
+    \n    client := tm.NewAPIClient(cfg)\n\n    auth := context.WithValue(context.Background(),\
+    \ tm.ContextBasicAuth, tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n \
+    \       Password: \"YOUR_PASSWORD\",\n    })\n\n    // Simple ping request example\n\
+    \    pingResponse, _, err := client.TextMagicApi.Ping(auth)\n\n    if err != nil\
+    \ {\n        log.Fatal(err)\n    } else {\n        fmt.Println(pingResponse.Ping)\n\
+    \    }\n\n    // Send a new message request example\n    sendMessageResponse,\
+    \ _, err := client.TextMagicApi.SendMessage(auth, tm.SendMessageInputObject{\n\
+    \        Text: \"I love TextMagic!\",\n        Phones: \"+19998887766\",\n   \
+    \ }, &tm.SendMessageOpts{})\n\n    if err != nil {\n        log.Fatal(err)\n \
+    \   } else {\n        fmt.Println(sendMessageResponse.Id)\n    }\n\n    // Get\
+    \ all outgoing messages request example\n    getAllOutboundMessageResponse, _,\
+    \ err := client.TextMagicApi.GetAllOutboundMessages(auth, &tm.GetAllOutboundMessagesOpts{\n\
+    \        Page: optional.NewInt32(1),\n        Limit: optional.NewInt32(250),\n\
+    \    })\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n       \
+    \ fmt.Println(getAllOutboundMessageResponse.Resources[0].Id)\n    }\n}\n```\n\n\
+    ## Limitations\nDue to the issue at https://github.com/swagger-api/swagger-codegen/issues/7311,\
+    \ the current version of Go SDK does not support any file uploading API calls.\n\
+    \n## License\nThe library is available as open source under the terms of the [MIT\
+    \ License](http://opensource.org/licenses/MIT)."
+  x-desplayName: "Available Wrappers"
 schemes:
 - "http"
 - "https"
@@ -38413,3 +38757,9 @@ x-tagGroups:
   - "Response Codes"
   - "Restrictions and Limits"
   - "Encoding"
+- name: "SDK Wrappers"
+  tags:
+  - "Introduction"
+  - "Support"
+  - "Licence"
+  - "SDKs"
