@@ -541,7 +541,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.481/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.480/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -713,7 +713,7 @@ tags:
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.481'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.480'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     \ # Load the gem\nrequire 'textmagic_rest_client'\n\n # Setup authorization\n\
@@ -739,7 +739,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.481\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.480\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\

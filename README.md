@@ -12,7 +12,7 @@ For detailed documentation and more examples, please visit [http://docs.textmagi
 
 With go.mod:
 ```bash
-go get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.481
+go get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.482
 ```
 
 without go.mod:
