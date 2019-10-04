@@ -17,6 +17,7 @@ type Timezone struct {
 	Area string `json:"area"`
 	// Is Daylight saving time used in this timezone?
 	Dst int32 `json:"dst"`
+	// Offset from UTC time in seconds. In this example it is 21600/60/60=6 hours.
 	Offset int32 `json:"offset"`
 	// User-friendly timezone name (with spaces replaced by underscores).
 	Timezone string `json:"timezone"`

@@ -13,10 +13,10 @@ package TextMagic
 type CreateListInputObject struct {
 	// List name.
 	Name string `json:"name"`
-	// Should new list be shared among all the sub-accounts? The default is 0 (false).
+	// Should new list be **shared** among all the sub-accounts?
 	Shared bool `json:"shared,omitempty"`
 	// Is list favorited. Default is false.
 	Favorited bool `json:"favorited,omitempty"`
-	// Is list default for new contacts (web only). Default is false.
+	// Is list default for new contacts (web only).
 	IsDefault bool `json:"isDefault,omitempty"`
 }

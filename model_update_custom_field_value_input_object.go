@@ -11,6 +11,8 @@
 package TextMagic
 
 type UpdateCustomFieldValueInputObject struct {
+	// [Contact](/docs/api/contacts/) 
 	ContactId int32 `json:"contactId,omitempty"`
+	// Custom field value. Note that this value is not parsed in any way. It is stored and used in tags exactly as you send it.
 	Value string `json:"value,omitempty"`
 }

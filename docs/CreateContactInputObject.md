@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FirstName** | **string** | Contact first name | [optional] [default to null]
-**LastName** | **string** | Contact last name | [optional] [default to null]
-**Phone** | **string** | Contact phone number in E.164 (international) format without leading + or zeroes | [default to null]
-**Email** | **string** | Contact email | [optional] [default to null]
-**CompanyName** | **string** | Contact company name | [optional] [default to null]
-**Lists** | **string** | Array of list resources id contact will be assigned to | [default to null]
+**FirstName** | **string** | Contact first name. | [optional] [default to null]
+**LastName** | **string** | Contact last name. | [optional] [default to null]
+**Phone** | **string** | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). | [default to null]
+**Email** | **string** | Contact email address. | [optional] [default to null]
+**CompanyName** | **string** | Company name. | [optional] [default to null]
+**Lists** | **string** | Contact [list](/docs/api/lists/) ID. Each contact must be assigned to at least one list. | [default to null]
 **Favorited** | **bool** | Is contact favorited | [optional] [default to null]
 **Blocked** | **bool** | Is contact blocked for outgoing and incoming messaging | [optional] [default to null]
 **Type_** | **int32** | Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection) | [optional] [default to null]

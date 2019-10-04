@@ -11,6 +11,6 @@
 package TextMagic
 
 type CreateCustomFieldInputObject struct {
-	// Custom field name
+	// Custom field name.
 	Name string `json:"name"`
 }

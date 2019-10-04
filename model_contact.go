@@ -11,15 +11,23 @@
 package TextMagic
 
 type Contact struct {
+	// Contact ID.
 	Id int32 `json:"id"`
 	Favorited bool `json:"favorited"`
 	Blocked bool `json:"blocked"`
+	// Contact first name.
 	FirstName string `json:"firstName"`
+	// Contact last name.
 	LastName string `json:"lastName"`
+	// Company name.
 	CompanyName string `json:"companyName"`
+	// Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
 	Phone string `json:"phone"`
+	// Contact email address.
 	Email string `json:"email"`
+	// Contact country.
 	Country *Country `json:"country"`
+	// See [Custom Fields](/docs/api/custom-fields/) section.
 	CustomFields []ContactCustomField `json:"customFields"`
 	User *User `json:"user"`
 	Lists []List `json:"lists"`

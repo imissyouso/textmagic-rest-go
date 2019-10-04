@@ -11,5 +11,6 @@
 package TextMagic
 
 type AssignContactsToListInputObject struct {
+	// Comma-separated array of [Contacts](/docs/api/contacts/) IDs.
 	Contacts string `json:"contacts"`
 }

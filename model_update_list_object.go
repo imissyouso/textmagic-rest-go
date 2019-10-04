@@ -11,11 +11,11 @@
 package TextMagic
 
 type UpdateListObject struct {
-	// List name
+	// List name.
 	Name string `json:"name"`
-	// Should this list be shared with sub-accounts
+	// Make this list shared or not?
 	Shared bool `json:"shared,omitempty"`
-	// Is list favorited. Default is false
+	// Is list favorited.
 	Favorited bool `json:"favorited,omitempty"`
 	// Is list default for new contacts (web only).
 	IsDefault bool `json:"isDefault,omitempty"`

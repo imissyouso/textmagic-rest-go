@@ -15,7 +15,10 @@ import (
 )
 
 type UserCustomField struct {
+	// Custom field ID.
 	Id int32 `json:"id"`
+	// Custom field name.
 	Name string `json:"name"`
+	// Custom field creation time.
 	CreatedAt time.Time `json:"createdAt"`
 }

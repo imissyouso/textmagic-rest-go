@@ -11,17 +11,17 @@
 package TextMagic
 
 type CreateContactInputObject struct {
-	// Contact first name
+	// Contact first name.
 	FirstName string `json:"firstName,omitempty"`
-	// Contact last name
+	// Contact last name.
 	LastName string `json:"lastName,omitempty"`
-	// Contact phone number in E.164 (international) format without leading + or zeroes
+	// Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164).
 	Phone string `json:"phone"`
-	// Contact email
+	// Contact email address.
 	Email string `json:"email,omitempty"`
-	// Contact company name
+	// Company name.
 	CompanyName string `json:"companyName,omitempty"`
-	// Array of list resources id contact will be assigned to
+	// Contact [list](/docs/api/lists/) ID. Each contact must be assigned to at least one list.
 	Lists string `json:"lists"`
 	// Is contact favorited
 	Favorited bool `json:"favorited,omitempty"`
