@@ -13,6 +13,8 @@ package TextMagic
 type SenderId struct {
 	// Numeric sender ID.
 	Id int32 `json:"id"`
+	// Format for representation of time
+	DisplayTimeFormat string `json:"displayTimeFormat,omitempty"`
 	// Alphanumeric ID.
 	SenderId string `json:"senderId"`
 	User *User `json:"user"`

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int32** | User ID. | [default to null]
+**DisplayTimeFormat** | **string** | Format for representation of time | [optional] [default to null]
 **Username** | **string** | Username. | [default to null]
 **FirstName** | **string** | Account first name. | [default to null]
 **LastName** | **string** | Account last name. | [default to null]

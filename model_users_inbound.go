@@ -17,6 +17,8 @@ import (
 type UsersInbound struct {
 	// Dedicated number ID.
 	Id int32 `json:"id"`
+	// Format for representation of time
+	DisplayTimeFormat string `json:"displayTimeFormat,omitempty"`
 	// Dedicated phone number.
 	Phone string `json:"phone,omitempty"`
 	User *User `json:"user"`

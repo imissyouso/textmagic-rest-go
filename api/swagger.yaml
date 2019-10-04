@@ -21917,7 +21917,7 @@ paths:
           \ format. The default is 7 days prior.\n"
         required: false
         type: "integer"
-        x-example: 1430438400
+        x-example: "2018-11-11 11:11"
         x-exportParamName: "Start"
         x-optionalDataType: "Int32"
       - name: "end"
@@ -21926,7 +21926,7 @@ paths:
           \ format. The default is today.\n"
         required: false
         type: "string"
-        x-example: 1431648000
+        x-example: "2019-11-11 11:11"
         x-exportParamName: "End"
         x-optionalDataType: "String"
       responses:
@@ -21950,7 +21950,7 @@ paths:
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
           );\n\n// Optional, you can pass them as null values to getSpendingStat method\
           \ below, default values will be used\n$page = 1;\n$limit = 10;\n$start =\
-          \ 1430438400;\n$end = \"1431648000\";\n\ntry {\n    // GetSpendingStatPaginatedResponse\
+          \ 2018-11-11 11:11;\n$end = \"2019-11-11 11:11\";\n\ntry {\n    // GetSpendingStatPaginatedResponse\
           \ class object\n    $result = $api->getSpendingStat($page, $limit, $start,\
           \ $end);\n    // ...\n} catch (Exception $e) {\n    echo 'Exception when\
           \ calling TextMagicApi->getSpendingStat: ', $e->getMessage(), PHP_EOL;\n\
@@ -21966,8 +21966,8 @@ paths:
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        // Optional, you can pass them as null values to getSpendingStat\
           \ method below, default values will be used\n        int page = 1;\n   \
-          \     int limit = 10;\n        int start = 1430438400;\n        String end\
-          \ = \"1431648000\";\n\n        try {\n            // GetSpendingStatPaginatedResponse\
+          \     int limit = 10;\n        int start = 2018-11-11 11:11;\n        String\
+          \ end = \"2019-11-11 11:11\";\n\n        try {\n            // GetSpendingStatPaginatedResponse\
           \ class object\n            GetSpendingStatPaginatedResponse obj = apiInstance.getSpendingStat(page,\
           \ limit, start, end);\n            // ...\n        } catch (ApiException\
           \ e) {\n            System.err.println(\"Exception when calling getSpendingStat\"\
@@ -21979,7 +21979,7 @@ paths:
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
           \ = {\n// Optional parameters\n    page: 1,\n    limit: 10,\n    start:\
-          \ 1430438400,\n    end: \"1431648000\",\n}\n\napi.getSpendingStat().then(function\
+          \ 2018-11-11 11:11,\n    end: \"2019-11-11 11:11\",\n}\n\napi.getSpendingStat().then(function\
           \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
           });"
       - lang: "Ruby"
@@ -21987,10 +21987,10 @@ paths:
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
-          \  page: 1,\n  limit: 10,\n  start: 1430438400,\n  end: '1431648000',\n\
-          }\n\nbegin\n    # GetSpendingStatPaginatedResponse object\n    result =\
-          \ api.get_spending_stat(params)\n    # ...\nrescue TextMagic::ApiError =>\
-          \ e\n    puts \"Exception when calling TextMagicApi->get_spending_stat:\
+          \  page: 1,\n  limit: 10,\n  start: 2018-11-11 11:11,\n  end: '2019-11-11\
+          \ 11:11',\n}\n\nbegin\n    # GetSpendingStatPaginatedResponse object\n \
+          \   result = api.get_spending_stat(params)\n    # ...\nrescue TextMagic::ApiError\
+          \ => e\n    puts \"Exception when calling TextMagicApi->get_spending_stat:\
           \ #{e}\"\nend"
       - lang: "C#"
         source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
@@ -22003,8 +22003,8 @@ paths:
           \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
           \ you can pass them as null values to getSpendingStat method below, default\
           \ values will be used\n            int page = 1;\n            int limit\
-          \ = 10;\n            int start = 1430438400;\n            string end = \"\
-          1431648000\";\n\n            try {\n                // GetSpendingStatPaginatedResponse\
+          \ = 10;\n            int start = 2018-11-11 11:11;\n            string end\
+          \ = \"2019-11-11 11:11\";\n\n            try {\n                // GetSpendingStatPaginatedResponse\
           \ class object\n                var result = apiInstance.GetSpendingStat(page,\
           \ limit, start, end);\n                // ...\n            } catch (Exception\
           \ e) {\n                Console.WriteLine(\"Exception when calling getSpendingStat:\
@@ -22018,12 +22018,13 @@ paths:
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
           \ you can pass them as null values to getSpendingStat method below, default\
           \ values will be used\n        Dim page As Integer = 1\n        Dim limit\
-          \ As Integer = 10\n        Dim start As Integer = 1430438400\n        Dim\
-          \ end As String = \"1431648000\"\n\n        Try\n            ' GetSpendingStatPaginatedResponse\
-          \ class object\n            Dim result = apiInstance.GetSpendingStat(page,\
-          \ limit, start, end)\n            ' ...\n        Catch e As Exception\n\
-          \            Console.WriteLine(\"Exception when calling getSpendingStat:\
-          \ \" + e.Message)\n        End Try\n    End Sub\nEnd Module"
+          \ As Integer = 10\n        Dim start As Integer = 2018-11-11 11:11\n   \
+          \     Dim end As String = \"2019-11-11 11:11\"\n\n        Try\n        \
+          \    ' GetSpendingStatPaginatedResponse class object\n            Dim result\
+          \ = apiInstance.GetSpendingStat(page, limit, start, end)\n            '\
+          \ ...\n        Catch e As Exception\n            Console.WriteLine(\"Exception\
+          \ when calling getSpendingStat: \" + e.Message)\n        End Try\n    End\
+          \ Sub\nEnd Module"
       - lang: "Go"
         source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
           \n    // If you're using go.mod use line below to import our module\n  \
@@ -22034,11 +22035,12 @@ paths:
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetSpendingStatOpts{\n  \
           \      // Optional parameters\n        Page: optional.NewInt32(1),\n   \
-          \     Limit: optional.NewInt32(10),\n        Start: optional.NewInt32(1430438400),\n\
-          \        End: optional.NewString(\"1431648000\"),\n    }\n\n    // tm.GetSpendingStatPaginatedResponse\
-          \ struct\n    result, _, err := client.TextMagicApi.GetSpendingStat(auth,\
-          \ &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
-          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+          \     Limit: optional.NewInt32(10),\n        Start: optional.NewInt32(2018-11-11\
+          \ 11:11),\n        End: optional.NewString(\"2019-11-11 11:11\"),\n    }\n\
+          \n    // tm.GetSpendingStatPaginatedResponse struct\n    result, _, err\
+          \ := client.TextMagicApi.GetSpendingStat(auth, &opts)\n\n    if err != nil\
+          \ {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"%+v\\n\"\
+          , result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
         source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
           \ where SDK lib is installed. See C++ SDK installation instructions for\
@@ -22051,8 +22053,8 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
           \ if you want to use default value then pass boost::none value\n    int\
-          \ page = 1;\n    int limit = 10;\n    int start = 1430438400;\n    std::string\
-          \ end = \"1431648000\";\n\n    try {\n        pplx::task<std::shared_ptr<GetSpendingStatPaginatedResponse>>\
+          \ page = 1;\n    int limit = 10;\n    int start = 2018-11-11 11:11;\n  \
+          \  std::string end = \"2019-11-11 11:11\";\n\n    try {\n        pplx::task<std::shared_ptr<GetSpendingStatPaginatedResponse>>\
           \ result = api.getSpendingStat(page, limit, start, end);\n        result.wait();\n\
           \        // put operations with result here...\n    } catch(const std::exception&\
           \ e) {\n        std::cout << \"getSpendingStat() exception: \" << e.what()\
@@ -22064,11 +22066,11 @@ paths:
           \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
-          \ params, you can skip them\npage = 1\nlimit = 10\nstart = 1430438400\n\
-          end = \"1431648000\"\n\ntry:\n    # GetSpendingStatPaginatedResponse object\n\
-          \    result = api_instance.get_spending_stat(page=page, limit=limit, start=start,\
-          \ end=end)\n    # ...\nexcept ApiException as e:\n    print(\"Exception\
-          \ when calling TextMagicApi->get_spending_stat: %s\\n\" % e)\n"
+          \ params, you can skip them\npage = 1\nlimit = 10\nstart = 2018-11-11 11:11\n\
+          end = \"2019-11-11 11:11\"\n\ntry:\n    # GetSpendingStatPaginatedResponse\
+          \ object\n    result = api_instance.get_spending_stat(page=page, limit=limit,\
+          \ start=start, end=end)\n    # ...\nexcept ApiException as e:\n    print(\"\
+          Exception when calling TextMagicApi->get_spending_stat: %s\\n\" % e)\n"
       - lang: "Perl"
         source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
           use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
@@ -22076,7 +22078,7 @@ paths:
           \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
           \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
           \ params, you can skip them\nmy $page = 1;\nmy $limit = 10;\nmy $start =\
-          \ 1430438400;\nmy $end = '1431648000';\n\neval {\n    # GetSpendingStatPaginatedResponse\
+          \ 2018-11-11 11:11;\nmy $end = '2019-11-11 11:11';\n\neval {\n    # GetSpendingStatPaginatedResponse\
           \ object\n    my $result = $api_instance->get_spending_stat(page => $page,\
           \ limit => $limit, start => $start, end => $end);\n    # ...\n};\n\nif ($@)\
           \ {\n    warn \"Exception when calling TextMagicApi->get_spending_stat:\
@@ -28337,6 +28339,7 @@ definitions:
     properties:
       verifyId:
         type: "string"
+        format: "uuid"
         example: "123e4567-e89b-12d3-a456-426655440000"
         description: "The ID of a verification request. This is required to finish\
           \ the verification request in the next step."
@@ -29454,6 +29457,10 @@ definitions:
         type: "integer"
         example: 305
         description: "User ID."
+      displayTimeFormat:
+        type: "string"
+        example: "24h"
+        description: "Format for representation of time"
       username:
         type: "string"
         example: "charles.conway"
@@ -29538,6 +29545,7 @@ definitions:
         unicodeSymbol: "£"
         id: "GBP"
       id: 305
+      displayTimeFormat: "24h"
       email: "charles@example.com"
       username: "charles.conway"
       status: "A"
@@ -29555,6 +29563,10 @@ definitions:
         type: "integer"
         example: 305
         description: "Dedicated number ID."
+      displayTimeFormat:
+        type: "string"
+        example: "24h"
+        description: "Format for representation of time"
       phone:
         type: "string"
         example: "447860021130"
@@ -29589,6 +29601,7 @@ definitions:
       purchasedAt: "2014-10-02T11:07:04+0000"
       id: 305
       expireAt: "2014-10-02T11:07:04+0000"
+      displayTimeFormat: "24h"
       user:
         emailAccepted: true
         lastName: "Conway"
@@ -29614,6 +29627,7 @@ definitions:
           unicodeSymbol: "£"
           id: "GBP"
         id: 305
+        displayTimeFormat: "24h"
         email: "charles@example.com"
         username: "charles.conway"
         status: "A"
@@ -29630,6 +29644,10 @@ definitions:
         type: "integer"
         example: 37
         description: "Numeric sender ID."
+      displayTimeFormat:
+        type: "string"
+        example: "24h"
+        description: "Format for representation of time"
       senderId:
         type: "string"
         example: "HotRod"
@@ -29649,6 +29667,7 @@ definitions:
     example:
       senderId: "HotRod"
       id: 37
+      displayTimeFormat: "24h"
       user:
         emailAccepted: true
         lastName: "Conway"
@@ -29674,6 +29693,7 @@ definitions:
           unicodeSymbol: "£"
           id: "GBP"
         id: 305
+        displayTimeFormat: "24h"
         email: "charles@example.com"
         username: "charles.conway"
         status: "A"
@@ -29783,6 +29803,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -29814,6 +29835,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -29869,6 +29891,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -29907,6 +29930,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -29937,6 +29961,7 @@ definitions:
           unicodeSymbol: "£"
           id: "GBP"
         id: 305
+        displayTimeFormat: "24h"
         email: "charles@example.com"
         username: "charles.conway"
         status: "A"
@@ -30040,6 +30065,7 @@ definitions:
           unicodeSymbol: "£"
           id: "GBP"
         id: 305
+        displayTimeFormat: "24h"
         email: "charles@example.com"
         username: "charles.conway"
         status: "A"
@@ -30124,6 +30150,7 @@ definitions:
           unicodeSymbol: "£"
           id: "GBP"
         id: 305
+        displayTimeFormat: "24h"
         email: "charles@example.com"
         username: "charles.conway"
         status: "A"
@@ -30848,6 +30875,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -30879,6 +30907,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -30934,6 +30963,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -30972,6 +31002,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -31002,6 +31033,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -31039,6 +31071,8 @@ definitions:
         enum:
         - "in"
         - "out"
+        - "o"
+        - "i"
       sender:
         type: "string"
         example: "447860021130"
@@ -31640,6 +31674,7 @@ definitions:
         purchasedAt: "2014-10-02T11:07:04+0000"
         id: 305
         expireAt: "2014-10-02T11:07:04+0000"
+        displayTimeFormat: "24h"
         user:
           emailAccepted: true
           lastName: "Conway"
@@ -31665,6 +31700,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -31676,6 +31712,7 @@ definitions:
         purchasedAt: "2014-10-02T11:07:04+0000"
         id: 305
         expireAt: "2014-10-02T11:07:04+0000"
+        displayTimeFormat: "24h"
         user:
           emailAccepted: true
           lastName: "Conway"
@@ -31701,6 +31738,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -31734,6 +31772,7 @@ definitions:
       resources:
       - senderId: "HotRod"
         id: 37
+        displayTimeFormat: "24h"
         user:
           emailAccepted: true
           lastName: "Conway"
@@ -31759,12 +31798,14 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
         status: "A"
       - senderId: "HotRod"
         id: 37
+        displayTimeFormat: "24h"
         user:
           emailAccepted: true
           lastName: "Conway"
@@ -31790,6 +31831,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -31908,6 +31950,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -31939,6 +31982,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -31994,6 +32038,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32032,6 +32077,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32062,6 +32108,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -32101,6 +32148,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32132,6 +32180,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32187,6 +32236,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32225,6 +32275,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32255,6 +32306,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -32321,6 +32373,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32352,6 +32405,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32407,6 +32461,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32445,6 +32500,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32475,6 +32531,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -32514,6 +32571,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32545,6 +32603,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32600,6 +32659,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32638,6 +32698,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -32668,6 +32729,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -32767,6 +32829,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -32805,6 +32868,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -32870,6 +32934,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -32908,6 +32973,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33004,6 +33070,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33035,6 +33102,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33099,6 +33167,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33130,6 +33199,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33185,6 +33255,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33223,6 +33294,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33253,6 +33325,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33292,6 +33365,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33323,6 +33397,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33378,6 +33453,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33416,6 +33492,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33446,6 +33523,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33512,6 +33590,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33550,6 +33629,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33615,6 +33695,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33646,6 +33727,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33701,6 +33783,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33739,6 +33822,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33769,6 +33853,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -33808,6 +33893,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33839,6 +33925,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33894,6 +33981,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33932,6 +34020,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -33962,6 +34051,7 @@ definitions:
             unicodeSymbol: "£"
             id: "GBP"
           id: 305
+          displayTimeFormat: "24h"
           email: "charles@example.com"
           username: "charles.conway"
           status: "A"
@@ -34939,6 +35029,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -34970,6 +35061,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35025,6 +35117,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35063,6 +35156,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35093,6 +35187,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -35149,6 +35244,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35180,6 +35276,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35235,6 +35332,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35273,6 +35371,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35303,6 +35402,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -35433,6 +35533,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35464,6 +35565,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35519,6 +35621,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35557,6 +35660,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35587,6 +35691,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -35643,6 +35748,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35674,6 +35780,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35729,6 +35836,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35767,6 +35875,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35797,6 +35906,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -35880,6 +35990,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35911,6 +36022,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -35966,6 +36078,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36004,6 +36117,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36034,6 +36148,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -36090,6 +36205,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36121,6 +36237,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36176,6 +36293,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36214,6 +36332,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36244,6 +36363,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -36327,6 +36447,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36358,6 +36479,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36413,6 +36535,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36451,6 +36574,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36481,6 +36605,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"
@@ -36537,6 +36662,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36568,6 +36694,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36623,6 +36750,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36661,6 +36789,7 @@ definitions:
                 unicodeSymbol: "£"
                 id: "GBP"
               id: 305
+              displayTimeFormat: "24h"
               email: "charles@example.com"
               username: "charles.conway"
               status: "A"
@@ -36691,6 +36820,7 @@ definitions:
               unicodeSymbol: "£"
               id: "GBP"
             id: 305
+            displayTimeFormat: "24h"
             email: "charles@example.com"
             username: "charles.conway"
             status: "A"

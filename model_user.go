@@ -13,6 +13,8 @@ package TextMagic
 type User struct {
 	// User ID.
 	Id int32 `json:"id"`
+	// Format for representation of time
+	DisplayTimeFormat string `json:"displayTimeFormat,omitempty"`
 	// Username.
 	Username string `json:"username"`
 	// Account first name.
