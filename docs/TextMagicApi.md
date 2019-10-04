@@ -5261,7 +5261,7 @@ Name | Type | Description  | Notes
 > UpdateSenderSetting(ctx, updateSenderSettingInputObject)
 Change sender settings
 
-@TODO
+
 
 ### Required Parameters
 

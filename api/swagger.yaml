@@ -3670,7 +3670,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Change sender settings"
-      description: "@TODO"
+      description: ""
       operationId: "updateSenderSetting"
       produces: []
       parameters:

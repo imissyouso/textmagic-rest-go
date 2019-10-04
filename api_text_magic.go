@@ -18361,7 +18361,7 @@ func (a *TextMagicApiService) UpdatePassword(ctx context.Context, updatePassword
 
 /* 
 TextMagicApiService Change sender settings
-@TODO
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param updateSenderSettingInputObject
 
