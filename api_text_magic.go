@@ -28,7 +28,7 @@ var (
 type TextMagicApiService service
 
 /* 
-TextMagicApiService Assign contacts to the specified list.
+TextMagicApiService Assign contacts to a list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param assignContactsToListInputObject Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user
@@ -762,7 +762,7 @@ func (a *TextMagicApiService) CheckPhoneVerificationCodeTFA(ctx context.Context,
 }
 
 /* 
-TextMagicApiService Reset list members to the specified contacts.
+TextMagicApiService Reset list members to the specified contacts
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param clearAndAssignContactsToListInputObject Contact ID(s), separated by comma or &#39;all&#39; to add all contacts belonging to the current user
@@ -2957,7 +2957,7 @@ func (a *TextMagicApiService) DeleteContactsByIds(ctx context.Context, deleteCon
 }
 
 /* 
-TextMagicApiService Unassign contacts from the specified list.
+TextMagicApiService Unassign contacts from a list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteContacsFromListObject Contact ID(s), separated by comma
@@ -3426,7 +3426,7 @@ func (a *TextMagicApiService) DeleteInboundMessagesBulk(ctx context.Context, del
 }
 
 /* 
-TextMagicApiService Delete a single list.
+TextMagicApiService Delete a single list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -3519,7 +3519,7 @@ func (a *TextMagicApiService) DeleteList(ctx context.Context, id int32) (*http.R
 }
 
 /* 
-TextMagicApiService Delete an avatar for the list.
+TextMagicApiService Delete an avatar for the list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -3612,7 +3612,7 @@ func (a *TextMagicApiService) DeleteListAvatar(ctx context.Context, id int32) (*
 }
 
 /* 
-TextMagicApiService Delete contact from list by given ID(s) or all contacts from list.
+TextMagicApiService Delete contact from list by given ID(s) or all contacts from list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteListContactsBulkInputObject
@@ -3719,7 +3719,7 @@ func (a *TextMagicApiService) DeleteListContactsBulk(ctx context.Context, delete
 }
 
 /* 
-TextMagicApiService Delete list by given ID(s) or delete all lists.
+TextMagicApiService Delete list by given ID(s) or delete all lists
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param deleteListsBulkInputObject
@@ -8419,7 +8419,7 @@ func (a *TextMagicApiService) GetContactsAutocomplete(ctx context.Context, query
 }
 
 /* 
-TextMagicApiService Fetch user contacts by given group id.
+TextMagicApiService Get all contacts in a list
 A useful synonym for \&quot;contacts/search\&quot; command with provided \&quot;listId\&quot; parameter.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id Given group Id.
@@ -9746,7 +9746,7 @@ func (a *TextMagicApiService) GetList(ctx context.Context, id int32) (List, *htt
 }
 
 /* 
-TextMagicApiService Fetch all contacts IDs belonging to the list with ID.
+TextMagicApiService Fetch all contacts IDs belonging to the list with ID
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
@@ -11798,7 +11798,7 @@ func (a *TextMagicApiService) GetSenderIds(ctx context.Context, localVarOptional
 
 /* 
 TextMagicApiService Get current sender settings
-@TODO
+
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetSenderSettingsOpts - Optional Parameters:
      * @param "Country" (optional.String) -  Return sender settings enabled for sending to specified country. Two upper case characters
@@ -15521,7 +15521,7 @@ func (a *TextMagicApiService) SearchInboundMessages(ctx context.Context, localVa
 }
 
 /* 
-TextMagicApiService Find contact lists by given parameters.
+TextMagicApiService Find contact lists by given parameters
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *SearchListsOpts - Optional Parameters:
@@ -18161,7 +18161,7 @@ func (a *TextMagicApiService) UpdateInboundMessagesNotificationSettings(ctx cont
 }
 
 /* 
-TextMagicApiService Update existing list.
+TextMagicApiService Update existing list
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id

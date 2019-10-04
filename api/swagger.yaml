@@ -477,7 +477,7 @@ tags:
     \ add the following to `composer.json`:\n\n```javascript\n{\n    \"repositories\"\
     : [\n        {\n            \"type\": \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.475\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.473\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -510,7 +510,7 @@ tags:
     s SMS Gateway, allowing you to send and receive text messages and to check the\
     \ delivery status of text messages you’ve already sent.\n\nFor detailed documentation\
     \ and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/)\n\
-    \n## Installation\n\n```shell\nnpm install textmagic-client@2.0.475 --save\n```\n\
+    \n## Installation\n\n```shell\nnpm install textmagic-client@2.0.473 --save\n```\n\
     \n## Usage Example\n\nPlease follow the [installation](#installation) instructions\
     \ and execute the following JS code:\n\n```javascript\nconst textmagicClient =\
     \ require('textmagic-client');\n\nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
@@ -547,7 +547,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.475/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.473/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -615,22 +615,22 @@ tags:
     ## Requirements\n\n* CMake 2.8 and later (https://cmake.org/)\n* cpprest (https://github.com/microsoft/cpprestsdk)\n\
     \nUbuntu dependencies quick installation example:\n```shell\napt-get install build-essential\
     \ cmake libcpprest-dev\n```\n\n## Installation\n\nDownload and extract lib archive:\n\
-    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.475.tar.gz\
-    \ && \\\ntar zxf v2.0.475.tar.gz && \\\nrm -f v2.0.475.tar.gz && \\\ncd textmagic-rest-cpp-2.0.475\n\
+    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.473.tar.gz\
+    \ && \\\ntar zxf v2.0.473.tar.gz && \\\nrm -f v2.0.473.tar.gz && \\\ncd textmagic-rest-cpp-2.0.473\n\
     ```\nBuild using cmake\n```shell\ncmake . && cmake --build .\n```\nThe output\
-    \ library file will be placed in `textmagic-rest-cpp-2.0.475/lib` directory:\n\
+    \ library file will be placed in `textmagic-rest-cpp-2.0.473/lib` directory:\n\
     \n## Usage Example\nIn the example below, we assume that you moved the library\
-    \ sources `textmagic-rest-cpp-2.0.475` directory to your test project root directory.\n\
+    \ sources `textmagic-rest-cpp-2.0.473` directory to your test project root directory.\n\
     \nConfigure your `CMakeLists.txt` as shown here:\n```shell\ncmake_minimum_required(VERSION\
     \ 2.8)\nproject(test)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(app main.cpp)\n\
     \nadd_library(textmagic_client SHARED IMPORTED)\nset_property(TARGET textmagic_client\
-    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475/lib/libtextmagic_client.so\"\
-    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475\
-    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.475/api)\n\
+    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.473/lib/libtextmagic_client.so\"\
+    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.473\
+    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.473/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.473/api)\n\
     target_link_libraries(app boost_system cpprest crypto textmagic_client )\n```\n\
     \n`main.cpp` file example:\n```cpp\n#include <iostream>\n#include <fstream>\n\
-    #include \"textmagic-rest-cpp-2.0.475/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.475/ApiConfiguration.h\"\
-    \n#include \"textmagic-rest-cpp-2.0.475/api/TextMagicApi.h\"\n\nusing namespace\
+    #include \"textmagic-rest-cpp-2.0.473/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.473/ApiConfiguration.h\"\
+    \n#include \"textmagic-rest-cpp-2.0.473/api/TextMagicApi.h\"\n\nusing namespace\
     \ com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
     \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
     \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
@@ -675,7 +675,7 @@ tags:
     \ text messages and to check the delivery status of text messages you’ve already\
     \ sent.\n\nFor detailed documentation, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
     \n## Requirements\nPython 2.7 and 3.4+\n\n## Installation\n\n```shell\npip install\
-    \ git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.475\n```\n\n\
+    \ git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.473\n```\n\n\
     ## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import ApiException\n\
     \n# Configure HTTP basic authorization: BasicAuth\nconfiguration = TextMagic.Configuration()\n\
     configuration.username = 'YOUR_USERNAME'\nconfiguration.password = 'YOUR_PASSWORD'\n\
@@ -705,8 +705,8 @@ tags:
     \ and TextMagic’s SMS Gateway, allowing you to send and receive text messages\
     \ and to check the delivery status of text messages you’ve already sent.\n\nFor\
     \ detailed documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
-    \n## Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.475.tar.gz\
-    \ && \\\ntar zxf v2.0.475.tar.gz && \\\nrm -f v2.0.475.tar.gz && \\\ncd textmagic-rest-perl-2.0.475\
+    \n## Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.473.tar.gz\
+    \ && \\\ntar zxf v2.0.473.tar.gz && \\\nrm -f v2.0.473.tar.gz && \\\ncd textmagic-rest-perl-2.0.473\
     \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
     \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
     \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
@@ -741,7 +741,7 @@ tags:
     \ delivery status of text messages you’ve already sent.\n\nFor detailed documentation\
     \ and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
     \n## Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.475'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.473'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     # Load the gem\nrequire 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
@@ -773,7 +773,7 @@ tags:
     \ TextMagic’s SMS Gateway, allowing you to send and receive text messages and\
     \ to check the delivery status of text messages you’ve already sent.\n\nFor detailed\
     \ documentation and more examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
-    \n## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.475\n\
+    \n## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.473\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -3518,7 +3518,7 @@ paths:
       tags:
       - "TextMagic"
       summary: "Get current sender settings"
-      description: "@TODO"
+      description: ""
       operationId: "getSenderSettings"
       parameters:
       - name: "country"
@@ -10931,7 +10931,7 @@ paths:
     put:
       tags:
       - "TextMagic"
-      summary: "Update existing list."
+      summary: "Update existing list"
       description: ""
       operationId: "updateList"
       parameters:
@@ -11107,7 +11107,7 @@ paths:
     delete:
       tags:
       - "TextMagic"
-      summary: "Delete a single list."
+      summary: "Delete a single list"
       description: ""
       operationId: "deleteList"
       produces: []
@@ -14077,11 +14077,704 @@ paths:
           \    my $result = $api_instance->do_email_lookup(email => $email);\n   \
           \ # ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->do_email_lookup:\
           \ $@\\n\";\n}"
+  /api/v2/lists/{id}/contacts:
+    get:
+      tags:
+      - "TextMagic"
+      summary: "Get all contacts in a list"
+      description: "A useful synonym for \"contacts/search\" command with provided\
+        \ \"listId\" parameter."
+      operationId: "getContactsByListId"
+      parameters:
+      - name: "page"
+        in: "query"
+        description: "Fetch specified results page."
+        required: false
+        type: "integer"
+        default: 1
+        x-exportParamName: "Page"
+        x-optionalDataType: "Int32"
+      - name: "limit"
+        in: "query"
+        description: "The number of results per page."
+        required: false
+        type: "integer"
+        default: 10
+        x-exportParamName: "Limit"
+        x-optionalDataType: "Int32"
+      - name: "orderBy"
+        in: "query"
+        description: "Order results by some field. Default is id"
+        required: false
+        type: "string"
+        default: "id"
+        enum:
+        - "id"
+        - "firstName"
+        - "lastName"
+        x-exportParamName: "OrderBy"
+        x-optionalDataType: "String"
+      - name: "direction"
+        in: "query"
+        description: "Order direction. Default is desc"
+        required: false
+        type: "string"
+        default: "desc"
+        enum:
+        - "asc"
+        - "desc"
+        x-exportParamName: "Direction"
+        x-optionalDataType: "String"
+      - name: "id"
+        in: "path"
+        description: "Given group Id."
+        required: true
+        type: "integer"
+        x-example: 1
+        x-exportParamName: "Id"
+      responses:
+        200:
+          description: "Returned when successful"
+          schema:
+            $ref: "#/definitions/GetContactsByListIdPaginatedResponse"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+        404:
+          description: "Request data not found"
+          schema:
+            $ref: "#/definitions/NotFoundResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
+          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
+          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
+          );\n\n$id = 1;\n// Optional, you can pass them as null values to getContactsByListId\
+          \ method below, default values will be used\n$page = 1;\n$limit = 10;\n\
+          $orderBy = \"id\";\n$direction = \"desc\";\n\ntry {\n    // GetContactsByListIdPaginatedResponse\
+          \ class object\n    $result = $api->getContactsByListId($id, $page, $limit,\
+          \ $orderBy, $direction);\n    // ...\n} catch (Exception $e) {\n    echo\
+          \ 'Exception when calling TextMagicApi->getContactsByListId: ', $e->getMessage(),\
+          \ PHP_EOL;\n}"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        int id = 1;\n        // Optional, you can pass them as null values\
+          \ to getContactsByListId method below, default values will be used\n   \
+          \     int page = 1;\n        int limit = 10;\n        String orderBy = \"\
+          id\";\n        String direction = \"desc\";\n\n        try {\n         \
+          \   // GetContactsByListIdPaginatedResponse class object\n            GetContactsByListIdPaginatedResponse\
+          \ obj = apiInstance.getContactsByListId(id, page, limit, orderBy, direction);\n\
+          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
+          Exception when calling getContactsByListId\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
+          \ id = 1;\nparams = {\n// Optional parameters\n    page: 1,\n    limit:\
+          \ 10,\n    orderBy: \"id\",\n    direction: \"desc\",\n}\n\napi.getContactsByListId(id,\
+          \ ).then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
+          \    console.error(err);\n});"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nid = 1\nparams = {\n  # Optional\
+          \ parameters\n  page: 1,\n  limit: 10,\n  order_by: 'id',\n  direction:\
+          \ 'desc',\n}\n\nbegin\n    # GetContactsByListIdPaginatedResponse object\n\
+          \    result = api.get_contacts_by_list_id(id, params)\n    # ...\nrescue\
+          \ TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->get_contacts_by_list_id:\
+          \ #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            int id\
+          \ = 1;\n            // Optional, you can pass them as null values to getContactsByListId\
+          \ method below, default values will be used\n            int page = 1;\n\
+          \            int limit = 10;\n            string orderBy = \"id\";\n   \
+          \         string direction = \"desc\";\n\n            try {\n          \
+          \      // GetContactsByListIdPaginatedResponse class object\n          \
+          \      var result = apiInstance.GetContactsByListId(id, page, limit, orderBy,\
+          \ direction);\n                // ...\n            } catch (Exception e)\
+          \ {\n                Console.WriteLine(\"Exception when calling getContactsByListId:\
+          \ \"+e.Message);\n            }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim id As Integer\
+          \ = 1\n        ' Optional, you can pass them as null values to getContactsByListId\
+          \ method below, default values will be used\n        Dim page As Integer\
+          \ = 1\n        Dim limit As Integer = 10\n        Dim orderBy As String\
+          \ = \"id\"\n        Dim direction As String = \"desc\"\n\n        Try\n\
+          \            ' GetContactsByListIdPaginatedResponse class object\n     \
+          \       Dim result = apiInstance.GetContactsByListId(id, page, limit, orderBy,\
+          \ direction)\n            ' ...\n        Catch e As Exception\n        \
+          \    Console.WriteLine(\"Exception when calling getContactsByListId: \"\
+          \ + e.Message)\n        End Try\n    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n    // Required\n    var id int32 = 1\n\n\
+          \    opts := tm.GetContactsByListIdOpts{\n        // Optional parameters\n\
+          \        Page: optional.NewInt32(1),\n        Limit: optional.NewInt32(10),\n\
+          \        OrderBy: optional.NewString(\"id\"),\n        Direction: optional.NewString(\"\
+          desc\"),\n    }\n\n    // tm.GetContactsByListIdPaginatedResponse struct\n\
+          \    result, _, err := client.TextMagicApi.GetContactsByListId(auth, id,\
+          \ &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
+          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    int id = 1;\n    // Optional parameters.\
+          \ Important: if you want to use default value then pass boost::none value\n\
+          \    int page = 1;\n    int limit = 10;\n    std::string orderBy = \"id\"\
+          ;\n    std::string direction = \"desc\";\n\n    try {\n        pplx::task<std::shared_ptr<GetContactsByListIdPaginatedResponse>>\
+          \ result = api.getContactsByListId(id, page, limit, orderBy, direction);\n\
+          \        result.wait();\n        // put operations with result here...\n\
+          \    } catch(const std::exception& e) {\n        std::cout << \"getContactsByListId()\
+          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\nid = 1\n\
+          # Optional params, you can skip them\npage = 1\nlimit = 10\norder_by = \"\
+          id\"\ndirection = \"desc\"\n\ntry:\n    # GetContactsByListIdPaginatedResponse\
+          \ object\n    result = api_instance.get_contacts_by_list_id(id=id, page=page,\
+          \ limit=limit, order_by=order_by, direction=direction)\n    # ...\nexcept\
+          \ ApiException as e:\n    print(\"Exception when calling TextMagicApi->get_contacts_by_list_id:\
+          \ %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
+          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
+          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
+          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $id = 1;\n\
+          # Optional params, you can skip them\nmy $page = 1;\nmy $limit = 10;\nmy\
+          \ $orderBy = 'id';\nmy $direction = 'desc';\n\neval {\n    # GetContactsByListIdPaginatedResponse\
+          \ object\n    my $result = $api_instance->get_contacts_by_list_id(id =>\
+          \ $id, page => $page, limit => $limit, orderBy => $orderBy, direction =>\
+          \ $direction);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
+          \ TextMagicApi->get_contacts_by_list_id: $@\\n\";\n}"
+    post:
+      tags:
+      - "TextMagic"
+      summary: "Reset list members to the specified contacts"
+      description: ""
+      operationId: "clearAndAssignContactsToList"
+      parameters:
+      - in: "body"
+        name: "ClearAndAssignContactsToListInputObject"
+        description: "Contact ID(s), separated by comma or 'all' to add all contacts\
+          \ belonging to the current user"
+        required: true
+        schema:
+          $ref: "#/definitions/ClearAndAssignContactsToListInputObject"
+        x-exportParamName: "ClearAndAssignContactsToListInputObject"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        x-example: 1
+        x-exportParamName: "Id"
+      responses:
+        201:
+          description: "Returned when successful"
+          schema:
+            $ref: "#/definitions/ResourceLinkResponse"
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/BadRequestResponse"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+        403:
+          description: "Returned when trying to edit list shared to you"
+        404:
+          description: "Request data not found"
+          schema:
+            $ref: "#/definitions/NotFoundResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
+          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
+          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
+          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new ClearAndAssignContactsToListInputObject();\n\
+          \n// Required parameters\n$input->setContacts(\"1,2\");\n$id = 1;\n\ntry\
+          \ {\n    // ResourceLinkResponse class object\n    $result = $api->clearAndAssignContactsToList($input$id);\n\
+          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
+          \ TextMagicApi->clearAndAssignContactsToList: ', $e->getMessage(), PHP_EOL;\n\
+          }"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        ClearAndAssignContactsToListInputObject input = new ClearAndAssignContactsToListInputObject();\n\
+          \n        // Required parameters\n        input.setContacts(\"1,2\");\n\
+          \        int id = 1;\n\n        try {\n            // ResourceLinkResponse\
+          \ class object\n            ResourceLinkResponse obj = apiInstance.clearAndAssignContactsToList(inputid);\n\
+          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
+          Exception when calling clearAndAssignContactsToList\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
+          \ input = {\n    contacts: \"1,2\",\n}\nconst id = 1;\n\napi.clearAndAssignContactsToList(input,\
+          \ id).then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
+          \    console.error(err);\n});"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::ClearAndAssignContactsToListInputObject.new\n\
+          \n# Required parameters\nobj.contacts = \"1,2\"\nid = 1\n\nbegin\n    #\
+          \ ResourceLinkResponse object\n    result = api.clear_and_assign_contacts_to_list(input,\
+          \ id)\n    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception\
+          \ when calling TextMagicApi->clear_and_assign_contacts_to_list: #{e}\"\n\
+          end"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            var obj\
+          \ = new ClearAndAssignContactsToListInputObject();\n\n            // Required\
+          \ parameters\n            obj.Contacts = \"1,2\";\n            int id =\
+          \ 1;\n\n            try {\n                // ResourceLinkResponse class\
+          \ object\n                var result = apiInstance.ClearAndAssignContactsToList(objid);\n\
+          \                // ...\n            } catch (Exception e) {\n         \
+          \       Console.WriteLine(\"Exception when calling clearAndAssignContactsToList:\
+          \ \"+e.Message);\n            }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
+          \ ClearAndAssignContactsToListInputObject With {\n            .Contacts\
+          \ = \"1,2\"\n        }\n        Dim id As Integer = 1\n\n        Try\n \
+          \           ' ResourceLinkResponse class object\n            Dim result\
+          \ = apiInstance.ClearAndAssignContactsToList(objid)\n            ' ...\n\
+          \        Catch e As Exception\n            Console.WriteLine(\"Exception\
+          \ when calling clearAndAssignContactsToList: \" + e.Message)\n        End\
+          \ Try\n    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
+          \        // Required parameters\n        Contacts: \"1,2\",\n    }\n   \
+          \ // Required\n    var id int32 = 1\n\n    // tm.ResourceLinkResponse struct\n\
+          \    result, _, err := client.TextMagicApi.ClearAndAssignContactsToList(auth,\
+          \ input, id)\n\n    if err != nil {\n        log.Fatal(err)\n    } else\
+          \ {\n        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<ClearAndAssignContactsToListInputObject>\
+          \ input(new ClearAndAssignContactsToListInputObject);\n    // Required parameters\n\
+          \    input->setContacts(\"1,2\");\n\n    int id = 1;\n\n    try {\n    \
+          \    pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.clearAndAssignContactsToList(input,\
+          \ id);\n        result.wait();\n        // put operations with result here...\n\
+          \    } catch(const std::exception& e) {\n        std::cout << \"clearAndAssignContactsToList()\
+          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
+          \ = TextMagic.ClearAndAssignContactsToListInputObject()\n\n# Required parameters\n\
+          input.contacts = \"1,2\"\nid = 1\n\ntry:\n    # ResourceLinkResponse object\n\
+          \    result = api_instance.clear_and_assign_contacts_to_list(clear_and_assign_contacts_to_list_input_object=input,\
+          \ id=id)\n    # ...\nexcept ApiException as e:\n    print(\"Exception when\
+          \ calling TextMagicApi->clear_and_assign_contacts_to_list: %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::ClearAndAssignContactsToListInputObject;\n\
+          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
+          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
+          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
+          \nmy $input = Net::Sms::TextMagicClient::Object::ClearAndAssignContactsToListInputObject->new(\n\
+          \    # Required parameters\n    contacts => '1,2',\n);\nmy $id = 1;\n\n\
+          eval {\n    # ResourceLinkResponse object\n    my $result = $api_instance->clear_and_assign_contacts_to_list(clear_and_assign_contacts_to_list_input_object\
+          \ => $input, id => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
+          \ when calling TextMagicApi->clear_and_assign_contacts_to_list: $@\\n\"\
+          ;\n}"
+    put:
+      tags:
+      - "TextMagic"
+      summary: "Assign contacts to a list"
+      description: ""
+      operationId: "assignContactsToList"
+      parameters:
+      - in: "body"
+        name: "AssignContactsToListInputObject"
+        description: "Contact ID(s), separated by comma or 'all' to add all contacts\
+          \ belonging to the current user"
+        required: true
+        schema:
+          $ref: "#/definitions/AssignContactsToListInputObject"
+        x-exportParamName: "AssignContactsToListInputObject"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        x-example: 1
+        x-exportParamName: "Id"
+      responses:
+        201:
+          description: "Returned when successful"
+          schema:
+            $ref: "#/definitions/ResourceLinkResponse"
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/BadRequestResponse"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+        403:
+          description: "Returned when trying to edit list shared to you"
+        404:
+          description: "Request data not found"
+          schema:
+            $ref: "#/definitions/NotFoundResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
+          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
+          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
+          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new AssignContactsToListInputObject();\n\
+          \n// Required parameters\n$input->setContacts(\"1,2\");\n$id = 1;\n\ntry\
+          \ {\n    // ResourceLinkResponse class object\n    $result = $api->assignContactsToList($input$id);\n\
+          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
+          \ TextMagicApi->assignContactsToList: ', $e->getMessage(), PHP_EOL;\n}"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        AssignContactsToListInputObject input = new AssignContactsToListInputObject();\n\
+          \n        // Required parameters\n        input.setContacts(\"1,2\");\n\
+          \        int id = 1;\n\n        try {\n            // ResourceLinkResponse\
+          \ class object\n            ResourceLinkResponse obj = apiInstance.assignContactsToList(inputid);\n\
+          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
+          Exception when calling assignContactsToList\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
+          \ input = {\n    contacts: \"1,2\",\n}\nconst id = 1;\n\napi.assignContactsToList(input,\
+          \ id).then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
+          \    console.error(err);\n});"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::AssignContactsToListInputObject.new\n\
+          \n# Required parameters\nobj.contacts = \"1,2\"\nid = 1\n\nbegin\n    #\
+          \ ResourceLinkResponse object\n    result = api.assign_contacts_to_list(input,\
+          \ id)\n    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception\
+          \ when calling TextMagicApi->assign_contacts_to_list: #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            var obj\
+          \ = new AssignContactsToListInputObject();\n\n            // Required parameters\n\
+          \            obj.Contacts = \"1,2\";\n            int id = 1;\n\n      \
+          \      try {\n                // ResourceLinkResponse class object\n   \
+          \             var result = apiInstance.AssignContactsToList(objid);\n  \
+          \              // ...\n            } catch (Exception e) {\n           \
+          \     Console.WriteLine(\"Exception when calling assignContactsToList: \"\
+          +e.Message);\n            }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
+          \ AssignContactsToListInputObject With {\n            .Contacts = \"1,2\"\
+          \n        }\n        Dim id As Integer = 1\n\n        Try\n            '\
+          \ ResourceLinkResponse class object\n            Dim result = apiInstance.AssignContactsToList(objid)\n\
+          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling assignContactsToList: \" + e.Message)\n        End\
+          \ Try\n    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
+          \        // Required parameters\n        Contacts: \"1,2\",\n    }\n   \
+          \ // Required\n    var id int32 = 1\n\n    // tm.ResourceLinkResponse struct\n\
+          \    result, _, err := client.TextMagicApi.AssignContactsToList(auth, input,\
+          \ id)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n   \
+          \     fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<AssignContactsToListInputObject>\
+          \ input(new AssignContactsToListInputObject);\n    // Required parameters\n\
+          \    input->setContacts(\"1,2\");\n\n    int id = 1;\n\n    try {\n    \
+          \    pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.assignContactsToList(input,\
+          \ id);\n        result.wait();\n        // put operations with result here...\n\
+          \    } catch(const std::exception& e) {\n        std::cout << \"assignContactsToList()\
+          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
+          \ = TextMagic.AssignContactsToListInputObject()\n\n# Required parameters\n\
+          input.contacts = \"1,2\"\nid = 1\n\ntry:\n    # ResourceLinkResponse object\n\
+          \    result = api_instance.assign_contacts_to_list(assign_contacts_to_list_input_object=input,\
+          \ id=id)\n    # ...\nexcept ApiException as e:\n    print(\"Exception when\
+          \ calling TextMagicApi->assign_contacts_to_list: %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::AssignContactsToListInputObject;\n\
+          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
+          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
+          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
+          \nmy $input = Net::Sms::TextMagicClient::Object::AssignContactsToListInputObject->new(\n\
+          \    # Required parameters\n    contacts => '1,2',\n);\nmy $id = 1;\n\n\
+          eval {\n    # ResourceLinkResponse object\n    my $result = $api_instance->assign_contacts_to_list(assign_contacts_to_list_input_object\
+          \ => $input, id => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
+          \ when calling TextMagicApi->assign_contacts_to_list: $@\\n\";\n}"
+    delete:
+      tags:
+      - "TextMagic"
+      summary: "Unassign contacts from a list"
+      description: ""
+      operationId: "deleteContactsFromList"
+      produces: []
+      parameters:
+      - in: "body"
+        name: "deleteContacsFromListObject"
+        description: "Contact ID(s), separated by comma"
+        required: true
+        schema:
+          $ref: "#/definitions/deleteContacsFromListObject"
+        x-exportParamName: "DeleteContacsFromListObject"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        x-example: 1
+        x-exportParamName: "Id"
+      responses:
+        204:
+          description: "Request executed with success"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+        403:
+          description: "Returned when trying to edit list shared to you"
+        404:
+          description: "Request data not found"
+          schema:
+            $ref: "#/definitions/NotFoundResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
+          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
+          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
+          );\n\n$id = 1;\n\ntry {\n    $api->deleteContactsFromList($id);\n} catch\
+          \ (Exception $e) {\n    echo 'Exception when calling TextMagicApi->deleteContactsFromList:\
+          \ ', $e->getMessage(), PHP_EOL;\n}"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        int id = 1;\n\n        try {\n            apiInstance.deleteContactsFromList(id);\n\
+          \        } catch (ApiException e) {\n            System.err.println(\"Exception\
+          \ when calling deleteContactsFromList\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
+          \ id = 1;\n\napi.deleteContactsFromList(id).then(function (data) {\n   \
+          \ console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nid = 1\n\nbegin\n    api.delete_contacts_from_list(id)\n\
+          rescue TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->delete_contacts_from_list:\
+          \ #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            int id\
+          \ = 1;\n\n            try {\n                apiInstance.DeleteContactsFromList(id);\n\
+          \            } catch (Exception e) {\n                Console.WriteLine(\"\
+          Exception when calling deleteContactsFromList: \"+e.Message);\n        \
+          \    }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim id As Integer\
+          \ = 1\n\n        Try\n            apiInstance.DeleteContactsFromList(id)\n\
+          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling deleteContactsFromList: \" + e.Message)\n       \
+          \ End Try\n    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n    // Required\n    var id int32 = 1\n\n\
+          \    client.TextMagicApi.DeleteContactsFromList(auth, id)\n\n    if err\
+          \ != nil {\n        log.Fatal(err)\n    } else {\n        // ...\n    }\n\
+          }\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    int id = 1;\n\n    try {\n    \
+          \    pplx::task result = api.deleteContactsFromList(id);\n        result.wait();\n\
+          \    } catch(const std::exception& e) {\n        std::cout << \"deleteContactsFromList()\
+          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\nid = 1\n\
+          \ntry:\n    api_instance.delete_contacts_from_list(id=id)\nexcept ApiException\
+          \ as e:\n    print(\"Exception when calling TextMagicApi->delete_contacts_from_list:\
+          \ %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
+          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
+          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
+          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $id = 1;\n\
+          \neval {\n    $api_instance->delete_contacts_from_list(id => $id);\n};\n\
+          \nif ($@) {\n    warn \"Exception when calling TextMagicApi->delete_contacts_from_list:\
+          \ $@\\n\";\n}"
   /api/v2/lists/search:
     get:
       tags:
       - "TextMagic"
-      summary: "Find contact lists by given parameters."
+      summary: "Find contact lists by given parameters"
       description: ""
       operationId: "searchLists"
       parameters:
@@ -14331,704 +15024,11 @@ paths:
           \ => $onlyDefault, orderBy => $orderBy, direction => $direction);\n    #\
           \ ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->search_lists:\
           \ $@\\n\";\n}"
-  /api/v2/lists/{id}/contacts:
-    get:
-      tags:
-      - "TextMagic"
-      summary: "Fetch user contacts by given group id."
-      description: "A useful synonym for \"contacts/search\" command with provided\
-        \ \"listId\" parameter."
-      operationId: "getContactsByListId"
-      parameters:
-      - name: "page"
-        in: "query"
-        description: "Fetch specified results page."
-        required: false
-        type: "integer"
-        default: 1
-        x-exportParamName: "Page"
-        x-optionalDataType: "Int32"
-      - name: "limit"
-        in: "query"
-        description: "The number of results per page."
-        required: false
-        type: "integer"
-        default: 10
-        x-exportParamName: "Limit"
-        x-optionalDataType: "Int32"
-      - name: "orderBy"
-        in: "query"
-        description: "Order results by some field. Default is id"
-        required: false
-        type: "string"
-        default: "id"
-        enum:
-        - "id"
-        - "firstName"
-        - "lastName"
-        x-exportParamName: "OrderBy"
-        x-optionalDataType: "String"
-      - name: "direction"
-        in: "query"
-        description: "Order direction. Default is desc"
-        required: false
-        type: "string"
-        default: "desc"
-        enum:
-        - "asc"
-        - "desc"
-        x-exportParamName: "Direction"
-        x-optionalDataType: "String"
-      - name: "id"
-        in: "path"
-        description: "Given group Id."
-        required: true
-        type: "integer"
-        x-example: 1
-        x-exportParamName: "Id"
-      responses:
-        200:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/GetContactsByListIdPaginatedResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$id = 1;\n// Optional, you can pass them as null values to getContactsByListId\
-          \ method below, default values will be used\n$page = 1;\n$limit = 10;\n\
-          $orderBy = \"id\";\n$direction = \"desc\";\n\ntry {\n    // GetContactsByListIdPaginatedResponse\
-          \ class object\n    $result = $api->getContactsByListId($id, $page, $limit,\
-          \ $orderBy, $direction);\n    // ...\n} catch (Exception $e) {\n    echo\
-          \ 'Exception when calling TextMagicApi->getContactsByListId: ', $e->getMessage(),\
-          \ PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        int id = 1;\n        // Optional, you can pass them as null values\
-          \ to getContactsByListId method below, default values will be used\n   \
-          \     int page = 1;\n        int limit = 10;\n        String orderBy = \"\
-          id\";\n        String direction = \"desc\";\n\n        try {\n         \
-          \   // GetContactsByListIdPaginatedResponse class object\n            GetContactsByListIdPaginatedResponse\
-          \ obj = apiInstance.getContactsByListId(id, page, limit, orderBy, direction);\n\
-          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
-          Exception when calling getContactsByListId\");\n            e.printStackTrace();\n\
-          \        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ id = 1;\nparams = {\n// Optional parameters\n    page: 1,\n    limit:\
-          \ 10,\n    orderBy: \"id\",\n    direction: \"desc\",\n}\n\napi.getContactsByListId(id,\
-          \ ).then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
-          \    console.error(err);\n});"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nid = 1\nparams = {\n  # Optional\
-          \ parameters\n  page: 1,\n  limit: 10,\n  order_by: 'id',\n  direction:\
-          \ 'desc',\n}\n\nbegin\n    # GetContactsByListIdPaginatedResponse object\n\
-          \    result = api.get_contacts_by_list_id(id, params)\n    # ...\nrescue\
-          \ TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->get_contacts_by_list_id:\
-          \ #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            int id\
-          \ = 1;\n            // Optional, you can pass them as null values to getContactsByListId\
-          \ method below, default values will be used\n            int page = 1;\n\
-          \            int limit = 10;\n            string orderBy = \"id\";\n   \
-          \         string direction = \"desc\";\n\n            try {\n          \
-          \      // GetContactsByListIdPaginatedResponse class object\n          \
-          \      var result = apiInstance.GetContactsByListId(id, page, limit, orderBy,\
-          \ direction);\n                // ...\n            } catch (Exception e)\
-          \ {\n                Console.WriteLine(\"Exception when calling getContactsByListId:\
-          \ \"+e.Message);\n            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim id As Integer\
-          \ = 1\n        ' Optional, you can pass them as null values to getContactsByListId\
-          \ method below, default values will be used\n        Dim page As Integer\
-          \ = 1\n        Dim limit As Integer = 10\n        Dim orderBy As String\
-          \ = \"id\"\n        Dim direction As String = \"desc\"\n\n        Try\n\
-          \            ' GetContactsByListIdPaginatedResponse class object\n     \
-          \       Dim result = apiInstance.GetContactsByListId(id, page, limit, orderBy,\
-          \ direction)\n            ' ...\n        Catch e As Exception\n        \
-          \    Console.WriteLine(\"Exception when calling getContactsByListId: \"\
-          \ + e.Message)\n        End Try\n    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n    // Required\n    var id int32 = 1\n\n\
-          \    opts := tm.GetContactsByListIdOpts{\n        // Optional parameters\n\
-          \        Page: optional.NewInt32(1),\n        Limit: optional.NewInt32(10),\n\
-          \        OrderBy: optional.NewString(\"id\"),\n        Direction: optional.NewString(\"\
-          desc\"),\n    }\n\n    // tm.GetContactsByListIdPaginatedResponse struct\n\
-          \    result, _, err := client.TextMagicApi.GetContactsByListId(auth, id,\
-          \ &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
-          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    int id = 1;\n    // Optional parameters.\
-          \ Important: if you want to use default value then pass boost::none value\n\
-          \    int page = 1;\n    int limit = 10;\n    std::string orderBy = \"id\"\
-          ;\n    std::string direction = \"desc\";\n\n    try {\n        pplx::task<std::shared_ptr<GetContactsByListIdPaginatedResponse>>\
-          \ result = api.getContactsByListId(id, page, limit, orderBy, direction);\n\
-          \        result.wait();\n        // put operations with result here...\n\
-          \    } catch(const std::exception& e) {\n        std::cout << \"getContactsByListId()\
-          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\nid = 1\n\
-          # Optional params, you can skip them\npage = 1\nlimit = 10\norder_by = \"\
-          id\"\ndirection = \"desc\"\n\ntry:\n    # GetContactsByListIdPaginatedResponse\
-          \ object\n    result = api_instance.get_contacts_by_list_id(id=id, page=page,\
-          \ limit=limit, order_by=order_by, direction=direction)\n    # ...\nexcept\
-          \ ApiException as e:\n    print(\"Exception when calling TextMagicApi->get_contacts_by_list_id:\
-          \ %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
-          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
-          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
-          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $id = 1;\n\
-          # Optional params, you can skip them\nmy $page = 1;\nmy $limit = 10;\nmy\
-          \ $orderBy = 'id';\nmy $direction = 'desc';\n\neval {\n    # GetContactsByListIdPaginatedResponse\
-          \ object\n    my $result = $api_instance->get_contacts_by_list_id(id =>\
-          \ $id, page => $page, limit => $limit, orderBy => $orderBy, direction =>\
-          \ $direction);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
-          \ TextMagicApi->get_contacts_by_list_id: $@\\n\";\n}"
-    post:
-      tags:
-      - "TextMagic"
-      summary: "Reset list members to the specified contacts."
-      description: ""
-      operationId: "clearAndAssignContactsToList"
-      parameters:
-      - in: "body"
-        name: "ClearAndAssignContactsToListInputObject"
-        description: "Contact ID(s), separated by comma or 'all' to add all contacts\
-          \ belonging to the current user"
-        required: true
-        schema:
-          $ref: "#/definitions/ClearAndAssignContactsToListInputObject"
-        x-exportParamName: "ClearAndAssignContactsToListInputObject"
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-        x-example: 1
-        x-exportParamName: "Id"
-      responses:
-        201:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/ResourceLinkResponse"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        403:
-          description: "Returned when trying to edit list shared to you"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
-          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
-          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
-          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new ClearAndAssignContactsToListInputObject();\n\
-          \n// Required parameters\n$input->setContacts(\"1,2\");\n$id = 1;\n\ntry\
-          \ {\n    // ResourceLinkResponse class object\n    $result = $api->clearAndAssignContactsToList($input$id);\n\
-          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
-          \ TextMagicApi->clearAndAssignContactsToList: ', $e->getMessage(), PHP_EOL;\n\
-          }"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        ClearAndAssignContactsToListInputObject input = new ClearAndAssignContactsToListInputObject();\n\
-          \n        // Required parameters\n        input.setContacts(\"1,2\");\n\
-          \        int id = 1;\n\n        try {\n            // ResourceLinkResponse\
-          \ class object\n            ResourceLinkResponse obj = apiInstance.clearAndAssignContactsToList(inputid);\n\
-          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
-          Exception when calling clearAndAssignContactsToList\");\n            e.printStackTrace();\n\
-          \        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ input = {\n    contacts: \"1,2\",\n}\nconst id = 1;\n\napi.clearAndAssignContactsToList(input,\
-          \ id).then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
-          \    console.error(err);\n});"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::ClearAndAssignContactsToListInputObject.new\n\
-          \n# Required parameters\nobj.contacts = \"1,2\"\nid = 1\n\nbegin\n    #\
-          \ ResourceLinkResponse object\n    result = api.clear_and_assign_contacts_to_list(input,\
-          \ id)\n    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception\
-          \ when calling TextMagicApi->clear_and_assign_contacts_to_list: #{e}\"\n\
-          end"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            var obj\
-          \ = new ClearAndAssignContactsToListInputObject();\n\n            // Required\
-          \ parameters\n            obj.Contacts = \"1,2\";\n            int id =\
-          \ 1;\n\n            try {\n                // ResourceLinkResponse class\
-          \ object\n                var result = apiInstance.ClearAndAssignContactsToList(objid);\n\
-          \                // ...\n            } catch (Exception e) {\n         \
-          \       Console.WriteLine(\"Exception when calling clearAndAssignContactsToList:\
-          \ \"+e.Message);\n            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
-          \ ClearAndAssignContactsToListInputObject With {\n            .Contacts\
-          \ = \"1,2\"\n        }\n        Dim id As Integer = 1\n\n        Try\n \
-          \           ' ResourceLinkResponse class object\n            Dim result\
-          \ = apiInstance.ClearAndAssignContactsToList(objid)\n            ' ...\n\
-          \        Catch e As Exception\n            Console.WriteLine(\"Exception\
-          \ when calling clearAndAssignContactsToList: \" + e.Message)\n        End\
-          \ Try\n    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
-          \        // Required parameters\n        Contacts: \"1,2\",\n    }\n   \
-          \ // Required\n    var id int32 = 1\n\n    // tm.ResourceLinkResponse struct\n\
-          \    result, _, err := client.TextMagicApi.ClearAndAssignContactsToList(auth,\
-          \ input, id)\n\n    if err != nil {\n        log.Fatal(err)\n    } else\
-          \ {\n        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<ClearAndAssignContactsToListInputObject>\
-          \ input(new ClearAndAssignContactsToListInputObject);\n    // Required parameters\n\
-          \    input->setContacts(\"1,2\");\n\n    int id = 1;\n\n    try {\n    \
-          \    pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.clearAndAssignContactsToList(input,\
-          \ id);\n        result.wait();\n        // put operations with result here...\n\
-          \    } catch(const std::exception& e) {\n        std::cout << \"clearAndAssignContactsToList()\
-          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
-          \ = TextMagic.ClearAndAssignContactsToListInputObject()\n\n# Required parameters\n\
-          input.contacts = \"1,2\"\nid = 1\n\ntry:\n    # ResourceLinkResponse object\n\
-          \    result = api_instance.clear_and_assign_contacts_to_list(clear_and_assign_contacts_to_list_input_object=input,\
-          \ id=id)\n    # ...\nexcept ApiException as e:\n    print(\"Exception when\
-          \ calling TextMagicApi->clear_and_assign_contacts_to_list: %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::ClearAndAssignContactsToListInputObject;\n\
-          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
-          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
-          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
-          \nmy $input = Net::Sms::TextMagicClient::Object::ClearAndAssignContactsToListInputObject->new(\n\
-          \    # Required parameters\n    contacts => '1,2',\n);\nmy $id = 1;\n\n\
-          eval {\n    # ResourceLinkResponse object\n    my $result = $api_instance->clear_and_assign_contacts_to_list(clear_and_assign_contacts_to_list_input_object\
-          \ => $input, id => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
-          \ when calling TextMagicApi->clear_and_assign_contacts_to_list: $@\\n\"\
-          ;\n}"
-    put:
-      tags:
-      - "TextMagic"
-      summary: "Assign contacts to the specified list."
-      description: ""
-      operationId: "assignContactsToList"
-      parameters:
-      - in: "body"
-        name: "AssignContactsToListInputObject"
-        description: "Contact ID(s), separated by comma or 'all' to add all contacts\
-          \ belonging to the current user"
-        required: true
-        schema:
-          $ref: "#/definitions/AssignContactsToListInputObject"
-        x-exportParamName: "AssignContactsToListInputObject"
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-        x-example: 1
-        x-exportParamName: "Id"
-      responses:
-        201:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/ResourceLinkResponse"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        403:
-          description: "Returned when trying to edit list shared to you"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
-          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
-          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
-          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new AssignContactsToListInputObject();\n\
-          \n// Required parameters\n$input->setContacts(\"1,2\");\n$id = 1;\n\ntry\
-          \ {\n    // ResourceLinkResponse class object\n    $result = $api->assignContactsToList($input$id);\n\
-          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
-          \ TextMagicApi->assignContactsToList: ', $e->getMessage(), PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        AssignContactsToListInputObject input = new AssignContactsToListInputObject();\n\
-          \n        // Required parameters\n        input.setContacts(\"1,2\");\n\
-          \        int id = 1;\n\n        try {\n            // ResourceLinkResponse\
-          \ class object\n            ResourceLinkResponse obj = apiInstance.assignContactsToList(inputid);\n\
-          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
-          Exception when calling assignContactsToList\");\n            e.printStackTrace();\n\
-          \        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ input = {\n    contacts: \"1,2\",\n}\nconst id = 1;\n\napi.assignContactsToList(input,\
-          \ id).then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
-          \    console.error(err);\n});"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::AssignContactsToListInputObject.new\n\
-          \n# Required parameters\nobj.contacts = \"1,2\"\nid = 1\n\nbegin\n    #\
-          \ ResourceLinkResponse object\n    result = api.assign_contacts_to_list(input,\
-          \ id)\n    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception\
-          \ when calling TextMagicApi->assign_contacts_to_list: #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            var obj\
-          \ = new AssignContactsToListInputObject();\n\n            // Required parameters\n\
-          \            obj.Contacts = \"1,2\";\n            int id = 1;\n\n      \
-          \      try {\n                // ResourceLinkResponse class object\n   \
-          \             var result = apiInstance.AssignContactsToList(objid);\n  \
-          \              // ...\n            } catch (Exception e) {\n           \
-          \     Console.WriteLine(\"Exception when calling assignContactsToList: \"\
-          +e.Message);\n            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
-          \ AssignContactsToListInputObject With {\n            .Contacts = \"1,2\"\
-          \n        }\n        Dim id As Integer = 1\n\n        Try\n            '\
-          \ ResourceLinkResponse class object\n            Dim result = apiInstance.AssignContactsToList(objid)\n\
-          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
-          Exception when calling assignContactsToList: \" + e.Message)\n        End\
-          \ Try\n    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
-          \        // Required parameters\n        Contacts: \"1,2\",\n    }\n   \
-          \ // Required\n    var id int32 = 1\n\n    // tm.ResourceLinkResponse struct\n\
-          \    result, _, err := client.TextMagicApi.AssignContactsToList(auth, input,\
-          \ id)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n   \
-          \     fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<AssignContactsToListInputObject>\
-          \ input(new AssignContactsToListInputObject);\n    // Required parameters\n\
-          \    input->setContacts(\"1,2\");\n\n    int id = 1;\n\n    try {\n    \
-          \    pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.assignContactsToList(input,\
-          \ id);\n        result.wait();\n        // put operations with result here...\n\
-          \    } catch(const std::exception& e) {\n        std::cout << \"assignContactsToList()\
-          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
-          \ = TextMagic.AssignContactsToListInputObject()\n\n# Required parameters\n\
-          input.contacts = \"1,2\"\nid = 1\n\ntry:\n    # ResourceLinkResponse object\n\
-          \    result = api_instance.assign_contacts_to_list(assign_contacts_to_list_input_object=input,\
-          \ id=id)\n    # ...\nexcept ApiException as e:\n    print(\"Exception when\
-          \ calling TextMagicApi->assign_contacts_to_list: %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::AssignContactsToListInputObject;\n\
-          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
-          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
-          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
-          \nmy $input = Net::Sms::TextMagicClient::Object::AssignContactsToListInputObject->new(\n\
-          \    # Required parameters\n    contacts => '1,2',\n);\nmy $id = 1;\n\n\
-          eval {\n    # ResourceLinkResponse object\n    my $result = $api_instance->assign_contacts_to_list(assign_contacts_to_list_input_object\
-          \ => $input, id => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
-          \ when calling TextMagicApi->assign_contacts_to_list: $@\\n\";\n}"
-    delete:
-      tags:
-      - "TextMagic"
-      summary: "Unassign contacts from the specified list."
-      description: ""
-      operationId: "deleteContactsFromList"
-      produces: []
-      parameters:
-      - in: "body"
-        name: "deleteContacsFromListObject"
-        description: "Contact ID(s), separated by comma"
-        required: true
-        schema:
-          $ref: "#/definitions/deleteContacsFromListObject"
-        x-exportParamName: "DeleteContacsFromListObject"
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-        x-example: 1
-        x-exportParamName: "Id"
-      responses:
-        204:
-          description: "Request executed with success"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        403:
-          description: "Returned when trying to edit list shared to you"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$id = 1;\n\ntry {\n    $api->deleteContactsFromList($id);\n} catch\
-          \ (Exception $e) {\n    echo 'Exception when calling TextMagicApi->deleteContactsFromList:\
-          \ ', $e->getMessage(), PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        int id = 1;\n\n        try {\n            apiInstance.deleteContactsFromList(id);\n\
-          \        } catch (ApiException e) {\n            System.err.println(\"Exception\
-          \ when calling deleteContactsFromList\");\n            e.printStackTrace();\n\
-          \        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ id = 1;\n\napi.deleteContactsFromList(id).then(function (data) {\n   \
-          \ console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
-          });"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nid = 1\n\nbegin\n    api.delete_contacts_from_list(id)\n\
-          rescue TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->delete_contacts_from_list:\
-          \ #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            int id\
-          \ = 1;\n\n            try {\n                apiInstance.DeleteContactsFromList(id);\n\
-          \            } catch (Exception e) {\n                Console.WriteLine(\"\
-          Exception when calling deleteContactsFromList: \"+e.Message);\n        \
-          \    }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim id As Integer\
-          \ = 1\n\n        Try\n            apiInstance.DeleteContactsFromList(id)\n\
-          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
-          Exception when calling deleteContactsFromList: \" + e.Message)\n       \
-          \ End Try\n    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n    // Required\n    var id int32 = 1\n\n\
-          \    client.TextMagicApi.DeleteContactsFromList(auth, id)\n\n    if err\
-          \ != nil {\n        log.Fatal(err)\n    } else {\n        // ...\n    }\n\
-          }\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    int id = 1;\n\n    try {\n    \
-          \    pplx::task result = api.deleteContactsFromList(id);\n        result.wait();\n\
-          \    } catch(const std::exception& e) {\n        std::cout << \"deleteContactsFromList()\
-          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\nid = 1\n\
-          \ntry:\n    api_instance.delete_contacts_from_list(id=id)\nexcept ApiException\
-          \ as e:\n    print(\"Exception when calling TextMagicApi->delete_contacts_from_list:\
-          \ %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
-          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
-          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
-          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $id = 1;\n\
-          \neval {\n    $api_instance->delete_contacts_from_list(id => $id);\n};\n\
-          \nif ($@) {\n    warn \"Exception when calling TextMagicApi->delete_contacts_from_list:\
-          \ $@\\n\";\n}"
   /api/v2/lists/{id}/contacts/ids:
     get:
       tags:
       - "TextMagic"
-      summary: "Fetch all contacts IDs belonging to the list with ID."
+      summary: "Fetch all contacts IDs belonging to the list with ID"
       description: ""
       operationId: "getListContactsIds"
       parameters:
@@ -15167,7 +15167,7 @@ paths:
     post:
       tags:
       - "TextMagic"
-      summary: "Delete list by given ID(s) or delete all lists."
+      summary: "Delete list by given ID(s) or delete all lists"
       description: ""
       operationId: "deleteListsBulk"
       produces: []
@@ -15320,7 +15320,7 @@ paths:
     post:
       tags:
       - "TextMagic"
-      summary: "Delete contact from list by given ID(s) or all contacts from list."
+      summary: "Delete contact from list by given ID(s) or all contacts from list"
       description: ""
       operationId: "deleteListContactsBulk"
       produces: []
@@ -15485,7 +15485,7 @@ paths:
     delete:
       tags:
       - "TextMagic"
-      summary: "Delete an avatar for the list."
+      summary: "Delete an avatar for the list"
       description: ""
       operationId: "deleteListAvatar"
       parameters:
@@ -33874,111 +33874,6 @@ definitions:
         email: "test@test.com"
         favorited: true
       page: 1
-  SearchListsPaginatedResponse:
-    required:
-    - "limit"
-    - "page"
-    - "pageCount"
-    - "resources"
-    properties:
-      page:
-        type: "integer"
-        example: 1
-      pageCount:
-        type: "integer"
-        example: 10
-        description: "The total number of pages."
-      limit:
-        type: "integer"
-        example: 10
-        description: "The number of results per page."
-      resources:
-        type: "array"
-        items:
-          $ref: "#/definitions/List"
-    example:
-      pageCount: 10
-      limit: 10
-      resources:
-      - shared: true
-        membersCount: 10
-        isDefault: true
-        service: true
-        name: "Test group"
-        description: "Test group description"
-        id: 1
-        avatar:
-          href: "href"
-        user:
-          emailAccepted: true
-          lastName: "Conway"
-          country:
-            name: "India"
-            id: "US"
-          subaccountType: "P"
-          timezone:
-            area: "Europe"
-            dst: 1
-            offset: 10800
-            timezone: "Europe\\/Tallinn"
-            id: 55
-          phoneAccepted: true
-          avatar:
-            href: "https://dummylogos.com/logo.png"
-          firstName: "Charles"
-          balance: 208.64
-          phone: "79030011222"
-          company: "Example Ltd."
-          currency:
-            htmlSymbol: "&pound;"
-            unicodeSymbol: "£"
-            id: "GBP"
-          id: 305
-          displayTimeFormat: "24h"
-          email: "charles@example.com"
-          username: "charles.conway"
-          status: "A"
-        favorited: false
-      - shared: true
-        membersCount: 10
-        isDefault: true
-        service: true
-        name: "Test group"
-        description: "Test group description"
-        id: 1
-        avatar:
-          href: "href"
-        user:
-          emailAccepted: true
-          lastName: "Conway"
-          country:
-            name: "India"
-            id: "US"
-          subaccountType: "P"
-          timezone:
-            area: "Europe"
-            dst: 1
-            offset: 10800
-            timezone: "Europe\\/Tallinn"
-            id: 55
-          phoneAccepted: true
-          avatar:
-            href: "https://dummylogos.com/logo.png"
-          firstName: "Charles"
-          balance: 208.64
-          phone: "79030011222"
-          company: "Example Ltd."
-          currency:
-            htmlSymbol: "&pound;"
-            unicodeSymbol: "£"
-            id: "GBP"
-          id: 305
-          displayTimeFormat: "24h"
-          email: "charles@example.com"
-          username: "charles.conway"
-          status: "A"
-        favorited: false
-      page: 1
   GetContactsByListIdPaginatedResponse:
     required:
     - "limit"
@@ -34401,6 +34296,111 @@ definitions:
           status: "A"
         email: "test@test.com"
         favorited: true
+      page: 1
+  SearchListsPaginatedResponse:
+    required:
+    - "limit"
+    - "page"
+    - "pageCount"
+    - "resources"
+    properties:
+      page:
+        type: "integer"
+        example: 1
+      pageCount:
+        type: "integer"
+        example: 10
+        description: "The total number of pages."
+      limit:
+        type: "integer"
+        example: 10
+        description: "The number of results per page."
+      resources:
+        type: "array"
+        items:
+          $ref: "#/definitions/List"
+    example:
+      pageCount: 10
+      limit: 10
+      resources:
+      - shared: true
+        membersCount: 10
+        isDefault: true
+        service: true
+        name: "Test group"
+        description: "Test group description"
+        id: 1
+        avatar:
+          href: "href"
+        user:
+          emailAccepted: true
+          lastName: "Conway"
+          country:
+            name: "India"
+            id: "US"
+          subaccountType: "P"
+          timezone:
+            area: "Europe"
+            dst: 1
+            offset: 10800
+            timezone: "Europe\\/Tallinn"
+            id: 55
+          phoneAccepted: true
+          avatar:
+            href: "https://dummylogos.com/logo.png"
+          firstName: "Charles"
+          balance: 208.64
+          phone: "79030011222"
+          company: "Example Ltd."
+          currency:
+            htmlSymbol: "&pound;"
+            unicodeSymbol: "£"
+            id: "GBP"
+          id: 305
+          displayTimeFormat: "24h"
+          email: "charles@example.com"
+          username: "charles.conway"
+          status: "A"
+        favorited: false
+      - shared: true
+        membersCount: 10
+        isDefault: true
+        service: true
+        name: "Test group"
+        description: "Test group description"
+        id: 1
+        avatar:
+          href: "href"
+        user:
+          emailAccepted: true
+          lastName: "Conway"
+          country:
+            name: "India"
+            id: "US"
+          subaccountType: "P"
+          timezone:
+            area: "Europe"
+            dst: 1
+            offset: 10800
+            timezone: "Europe\\/Tallinn"
+            id: 55
+          phoneAccepted: true
+          avatar:
+            href: "https://dummylogos.com/logo.png"
+          firstName: "Charles"
+          balance: 208.64
+          phone: "79030011222"
+          company: "Example Ltd."
+          currency:
+            htmlSymbol: "&pound;"
+            unicodeSymbol: "£"
+            id: "GBP"
+          id: 305
+          displayTimeFormat: "24h"
+          email: "charles@example.com"
+          username: "charles.conway"
+          status: "A"
+        favorited: false
       page: 1
   GetAllTemplatesPaginatedResponse:
     required:
