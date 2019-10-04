@@ -819,6 +819,9 @@ tags:
     \ prompt or execute in script:\n```bash\ntm.sh send --text=\"Hello from TextMagic\"\
     \ --phones=447860021130\n```\n\n"
   x-displayName: "SDK"
+- name: "Custom Fields"
+  description: "With custom fields, you can store custom data in contacts and use\
+    \ the data with\_[Templates](/docs/api/sms-templates/)."
 schemes:
 - "http"
 - "https"
