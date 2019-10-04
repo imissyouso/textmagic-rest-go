@@ -475,17 +475,12 @@ tags:
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your PHP application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n##\
-    \ What Is TextMagic?\nTextMagic’s application programming interface (API) provides\
-    \ the communication link between your application and TextMagic’s SMS Gateway,\
-    \ allowing you to send and receive text messages and to check the delivery status\
-    \ of text messages you’ve already sent.\n\nFor detailed documentation and more\
-    \ examples, please visit [http://docs.textmagictesting.com/](http://docs.textmagictesting.com/).\n\
-    \n## Requirements\n\nPHP 5.5 and later\n\n## Installation\n### Composer\n\nTo\
-    \ install the bindings via [Composer](http://getcomposer.org/), add the following\
-    \ to `composer.json`:\n\n```javascript\n{\n    \"repositories\": [\n        {\n\
-    \            \"type\": \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
+    \ Requirements\n\nPHP 5.5 and later\n\n## Installation\n### Composer\n\nTo install\
+    \ the bindings via [Composer](http://getcomposer.org/), add the following to `composer.json`:\n\
+    \n```javascript\n{\n    \"repositories\": [\n        {\n            \"type\":\
+    \ \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.478\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.480\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -513,8 +508,8 @@ tags:
     true\" aria-label=\"Star imissyouso/textmagic-rest-nodejs on GitHub\">Star</a>\n\
     \nThis library provides you with an easy way of sending SMS and receiving replies\
     \ by integrating TextMagic SMS Gateway into your Node.js application.\n\n[Get\
-    \ it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n## Installation\n\
-    \n```shell\nnpm install textmagic-client@2.0.478 --save\n```\n\n## Usage Example\n\
+    \ it now on GitHub](https://github.com/textmagic/textmagic-rest-nodejs)\n## Installation\n\
+    \n```shell\nnpm install textmagic-client@2.0.477 --save\n```\n\n## Usage Example\n\
     \nPlease follow the [installation](#installation) instructions and execute the\
     \ following JS code:\n\n```javascript\nconst textmagicClient = require('textmagic-client');\n\
     \nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
@@ -535,9 +530,9 @@ tags:
     true\" aria-label=\"Star imissyouso/textmagic-rest-csharp on GitHub\">Star</a>\n\
     \nThis library provides you with an easy way of sending SMS and receiving replies\
     \ by integrating TextMagic SMS Gateway into your C# / VB.NET application.\n\n\
-    [Get it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n\n##\
-    \ Frameworks supported\n- .NET 4.0 or later\n- Windows Phone 7.1 (Mango)\n\n##\
-    \ Dependencies\n- [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0\
+    [Get it now on GitHub](https://github.com/textmagic/textmagic-rest-csharp)\n\n\
+    ## Frameworks supported\n- .NET 4.0 or later\n- Windows Phone 7.1 (Mango)\n\n\
+    ## Dependencies\n- [RestSharp](https://www.nuget.org/packages/RestSharp) - 105.1.0\
     \ or later\n- [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0\
     \ or later\n- [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0\
     \ or later\n\nThe DLLs included in the package may not be the latest versions.\
@@ -546,7 +541,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.478/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.480/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -605,26 +600,26 @@ tags:
     \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-cpp on\
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your C++ application.\n\
-    \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n##\
+    \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-cpp)\n##\
     \ Requirements\n\n* CMake 2.8 and later (https://cmake.org/)\n* cpprest (https://github.com/microsoft/cpprestsdk)\n\
     \nUbuntu dependencies quick installation example:\n```shell\napt-get install build-essential\
     \ cmake libcpprest-dev\n```\n\n## Installation\n\nDownload and extract lib archive:\n\
-    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.478.tar.gz\
-    \ && \\\ntar zxf v2.0.478.tar.gz && \\\nrm -f v2.0.478.tar.gz && \\\ncd textmagic-rest-cpp-2.0.478\n\
+    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.477.tar.gz\
+    \ && \\\ntar zxf v2.0.477.tar.gz && \\\nrm -f v2.0.477.tar.gz && \\\ncd textmagic-rest-cpp-2.0.477\n\
     ```\nBuild using cmake\n```shell\ncmake . && cmake --build .\n```\nThe output\
-    \ library file will be placed in `textmagic-rest-cpp-2.0.478/lib` directory:\n\
+    \ library file will be placed in `textmagic-rest-cpp-2.0.477/lib` directory:\n\
     \n## Usage Example\nIn the example below, we assume that you moved the library\
-    \ sources `textmagic-rest-cpp-2.0.478` directory to your test project root directory.\n\
+    \ sources `textmagic-rest-cpp-2.0.477` directory to your test project root directory.\n\
     \nConfigure your `CMakeLists.txt` as shown here:\n```shell\ncmake_minimum_required(VERSION\
     \ 2.8)\nproject(test)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(app main.cpp)\n\
     \nadd_library(textmagic_client SHARED IMPORTED)\nset_property(TARGET textmagic_client\
-    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.478/lib/libtextmagic_client.so\"\
-    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.478\
-    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.478/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.478/api)\n\
+    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.477/lib/libtextmagic_client.so\"\
+    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.477\
+    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.477/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.477/api)\n\
     target_link_libraries(app boost_system cpprest crypto textmagic_client )\n```\n\
     \n`main.cpp` file example:\n```cpp\n#include <iostream>\n#include <fstream>\n\
-    #include \"textmagic-rest-cpp-2.0.478/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.478/ApiConfiguration.h\"\
-    \n#include \"textmagic-rest-cpp-2.0.478/api/TextMagicApi.h\"\n\nusing namespace\
+    #include \"textmagic-rest-cpp-2.0.477/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.477/ApiConfiguration.h\"\
+    \n#include \"textmagic-rest-cpp-2.0.477/api/TextMagicApi.h\"\n\nusing namespace\
     \ com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
     \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
     \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
@@ -662,8 +657,8 @@ tags:
     \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-python\
     \ on GitHub\">Star</a>\n\nThis library provides you with an easy way of sending\
     \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Python\
-    \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n\
-    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.478\n\
+    \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-python)\n\
+    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.477\n\
     ```\n\n## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import\
     \ ApiException\n\n# Configure HTTP basic authorization: BasicAuth\nconfiguration\
     \ = TextMagic.Configuration()\nconfiguration.username = 'YOUR_USERNAME'\nconfiguration.password\
@@ -687,9 +682,9 @@ tags:
     \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-perl on\
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your Perl application.\n\
-    \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n##\
-    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.478.tar.gz\
-    \ && \\\ntar zxf v2.0.478.tar.gz && \\\nrm -f v2.0.478.tar.gz && \\\ncd textmagic-rest-perl-2.0.478\
+    \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-perl)\n##\
+    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.477.tar.gz\
+    \ && \\\ntar zxf v2.0.477.tar.gz && \\\nrm -f v2.0.477.tar.gz && \\\ncd textmagic-rest-perl-2.0.477\
     \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
     \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
     \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
@@ -716,9 +711,9 @@ tags:
     \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-ruby on\
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
-    \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n##\
+    \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.478'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.477'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     # Load the gem\nrequire 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
@@ -743,8 +738,8 @@ tags:
     https://github.com/imissyouso/textmagic-rest-go\" data-show-count=\"true\" aria-label=\"\
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
-    \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-php)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.478\n\
+    \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.480\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -769,7 +764,49 @@ tags:
     \    })\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n       \
     \ fmt.Println(getAllOutboundMessageResponse.Resources[0].Id)\n    }\n}\n```\n\n\
     ## Limitations\nDue to the issue at https://github.com/swagger-api/swagger-codegen/issues/7311,\
-    \ the current version of Go SDK does not support any file uploading API calls.\n"
+    \ the current version of Go SDK does not support any file uploading API calls.\n\
+    # Delphi\n\n<a class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-object-pascal\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-object-pascal\
+    \ on GitHub\">Star</a>\n\nThis library provides you with an easy way of sending\
+    \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Delphi\
+    \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-object-pascal)\n\
+    \n## How to Install\nYou can clone the repo in your location of choice by using\
+    \ :\n```sh\ngit clone https://github.com/textmagic/textmagic-rest-object-pascal.git\n\
+    ```\nYou can also manually clone the project, or simply download the files.\n\
+    ## Getting it running\nYou'll need to make sure these 3 files are accessible by\
+    \ your project, either by adding them directly to the project, or making them\
+    \ accessible through your library path.\n- *TextmagicRestClient.pas* - The API\
+    \ wrapper itself.\n- *XSuperJSON.pas* - Helper library for JSON Parsing\n- *XSuperObject.pas*\
+    \ - Helper library for JSON Parsing\n\nOn your project you will only need to use\
+    \ the unit *TextmagicRestClient.pas*.\n\nThe wrapper uses Indy components to communicate\
+    \ with the REST API via SSL. In some cases, Indy will not be able to load the\
+    \ SSL libraries. If that happens, you can get them at [https://indy.fulgan.com/SSL/].\
+    \ You'll just need to make sure the files **libeay32.dll** and **ssleay32.dll**\
+    \ (note: we use 32 bit versions for example application) are accessible to your\
+    \ application.\n\nThat is all you need to start using the API.\n\n## Using the\
+    \ API\nThe entire API is accessible via the class **TTMClient**, found in the\
+    \ **TextmagicRestClient.pas** file. You'll need to provide your credentials when\
+    \ creating the object. Check the TextMagic API documentation for up to date instructions\
+    \ on how to do that.\n```Pascal\nvar TMC:TTMClient;\n...\nTMC := TTMClient.Create(Your_User_Name,\
+    \ Your_API_V2_Key);\n```\nThe TTMClient's methods and parameters are very self-explanatory\
+    \ and for the most part they correspond directly to the API functions. Keep in\
+    \ mind most of the methods return an instance of a class, so don't forget to correctly\
+    \ free them to avoid memory leaks.\nYou'll note several of the methods return\
+    \ a **TTMLinkResult** class. This is a generic response for several of the API\
+    \ functions and contains the **id** of the created/updated resource and a direct\
+    \ link to the resource itself.\n## A few examples\nGetting your user account details\
+    \ :\n```Pascal\nvar User:TTMUser;\n...\nUser:=TMC.GetUser;\nUser.free;\n```\n\
+    Creating a new contact list:\n```Pascal\nvar LinkResult:TTMLinkResult;\n...\n\
+    LinkResult:=TMC.CreateList('My new list');\n{ LinkResult.Id will contain the ID\
+    \ of the newly created list } \nLinkResult.free;\n```\n\nCreating a new contact:\n\
+    ```Pascal\nvar LinkResult:TTMLinkResult;\n...\n{ A list id is mandatory for creating\
+    \ contacts }\nLinkResult:=TMC.CreateContact('99911111337', MY_LIST_ID,'John','Doe');\n\
+    { LinkResult.Id will contain the ID of the newly created contact } \nLinkResult.free;\n\
+    ```\nSending a message to a single contact:\n```Pascal\nvar MR:TTMMessageResult;\n\
+    ...\nMR:=TMC.CreateMessage('My SMS message',null,null,MY_CONTACT_ID,null,null,null,null,null,null,null);\n\
+    MR.free;\n```\nSending a message to a list of contacts:\n```Pascal\nvar MR:TTMMessageResult;\n\
+    ...\nMR:=TMC.CreateMessage('My SMS message',null,null,null,MY_LIST_ID,null,null,null,null,null,null);\n\
+    MR.free;\n```\n\n"
   x-displayName: "Available Wrappers"
 schemes:
 - "http"
