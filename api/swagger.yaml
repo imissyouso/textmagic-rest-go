@@ -541,7 +541,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.483/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.485/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -739,7 +739,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.484\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.485\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -806,7 +806,18 @@ tags:
     ...\nMR:=TMC.CreateMessage('My SMS message',null,null,MY_CONTACT_ID,null,null,null,null,null,null,null);\n\
     MR.free;\n```\nSending a message to a list of contacts:\n```Pascal\nvar MR:TTMMessageResult;\n\
     ...\nMR:=TMC.CreateMessage('My SMS message',null,null,null,MY_LIST_ID,null,null,null,null,null,null);\n\
-    MR.free;\n```\n\n"
+    MR.free;\n```\n\n# Bash\n\n<a class=\"github-button\" href=\"https://github.com/imissyouso/textmagic-rest-bash\"\
+    \ data-show-count=\"true\" aria-label=\"Star imissyouso/textmagic-rest-bash on\
+    \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
+    \ and receiving replies by integrating TextMagic SMS Gateway into your Bash application.\n\
+    \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-bash)\n\n\
+    ## Installation Instructions\n1.  [Download](https://github.com/textmagic/textmagic-rest-bash)\
+    \ the latest version of the wrapper from GitHub.\n2.  Put **tm.sh** into any folder\
+    \ or into PATH, if you want to use it globally.\n\n## Requirements\nThe Shell\
+    \ wrapper for the TextMagic API has the following requirement:\n*   Bash version\
+    \ 3 or newer.\n\n## Send SMS via Shell (an example)\nRun this in your command\
+    \ prompt or execute in script:\n```bash\ntm.sh send --text=\"Hello from TextMagic\"\
+    \ --phones=447860021130\n```\n\n"
   x-displayName: "Available Wrappers"
 schemes:
 - "http"
