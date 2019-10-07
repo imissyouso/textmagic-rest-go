@@ -50,30 +50,31 @@ tags:
     \ need to install any applications or write any code.\n\n<a href=\"\">Go to TextMagic\
     \ Sandbox</a>\n\n## The credentials area\nTo make requests using your TextMagic\
     \ account, you need to enter your account `username` and your `API key` into\n\
-    the corresponding fields. To put them, press on button \"Authorize\" which circled\
-    \ in red on image below:\n\n<p style=\"text-align: center\">\n\t<img src=\"images/sandbox_login_btn.png\"\
-    \ style=\"width:200px;\">\n<p>\n\nThe credentials modal window will be shown.\
-    \ Put your `username` and `API key` and press \"Authorize\" button like shown\
-    \ on image below:\n\n<p style=\"text-align: center\">\n\t<img src=\"images/sandbox_auth_modal.png\"\
-    \ style=\"width:600px;\">\n<p>\n\n## Command documentation\n\nTo view the documentation\
-    \ for a command i.e. its parameters, filters, output format and return codes,\
-    \ simply click on its name:\n\n![alt text](images/sandbox_try_1.png)\n\n## How\
-    \ it works\n\nSandbox allows you to test the TextMagic REST API directly from\
-    \ your browser. No programming skills are required. To use Sandbox, simply click\
-    \ on the entry for the command you want to test and then press on \"Try it out\"\
-    \ button which is underlined on the image above.\n\nAs example, let's overview\
-    \ **create template** request:\n\n![alt text](images/sandbox_try_2.png)\n\nEnter\
-    \ the required parameters by editing input JSON structure (just use provided example)\
-    \ and then click **Execute** to make a request. The URL corresponds to the command\
-    \ you wish to use, e.g. `/api/v2/templates` corresponds to the templates command.\n\
-    \nYou will receive an HTTP response code along with a JSON response body showing\
-    \ whether the request was successful or not. You will find additional information\
-    \ provided in the HTTP response headers **Response Body** and the **Response Header**\
-    \ sections.\n\n![alt text](images/sandbox_try_3.png)\n\nWe have now **successfully\
-    \ created** a new message template, and saved it to the TextMagic database. It\
-    \ was created with an `ID` value of `630`. Now we can send a message using this\
-    \ template via API or TextMagic Online.\n\nLet’s retrieve the template now to\
-    \ verify that its content was saved correctly. To do this, use the GET `/api/v2/templates/{id}`\
+    the corresponding fields. To enter them, press on button \"Authorize\" which you\
+    \ can find at the right top corner of the page.\n\n<p style=\"text-align: center\"\
+    >\n\t<img src=\"images/sandbox_login_btn.png\" style=\"width:200px;\">\n<p>\n\n\
+    The credentials modal window will be shown. Put your `username` and `API key`\
+    \ and press \"Authorize\" button like shown on image below:\n\n<p style=\"text-align:\
+    \ center\">\n\t<img src=\"images/sandbox_auth_modal.png\" style=\"width:600px;\"\
+    >\n<p>\n\n## Command documentation\n\nTo view the documentation for a command\
+    \ i.e. its parameters, filters, output format and return codes, simply click on\
+    \ its name:\n\n![alt text](images/sandbox_try_1.png)\n\n## How it works\n\nSandbox\
+    \ allows you to test the TextMagic REST API directly from your browser. No programming\
+    \ skills are required. To use Sandbox, simply click on the entry for the command\
+    \ you want to test and then press on \"Try it out\" button which is underlined\
+    \ on the image above.\n\nAs example, let's overview **create template** request:\n\
+    \n![alt text](images/sandbox_try_2.png)\n\nEnter the required parameters by editing\
+    \ input JSON structure (just use provided example) and then click **Execute**\
+    \ to make a request. The URL corresponds to the command you wish to use, e.g.\
+    \ `/api/v2/templates` corresponds to the templates command.\n\nYou will receive\
+    \ an HTTP response code along with a JSON response body showing whether the request\
+    \ was successful or not. You will find additional information provided in the\
+    \ HTTP response headers **Response Body** and the **Response Header** sections.\n\
+    \n![alt text](images/sandbox_try_3.png)\n\nWe have now **successfully created**\
+    \ a new message template, and saved it to the TextMagic database. It was created\
+    \ with an `ID` value of `630`. Now we can send a message using this template via\
+    \ API or TextMagic Online.\n\nLet’s retrieve the template now to verify that its\
+    \ content was saved correctly. To do this, use the GET `/api/v2/templates/{id}`\
     \ command. Open it, enter the **template id** you obtained in the previous step\
     \ and click **Execute**.\n\n![alt text](images/sandbox_try_4.png)"
 - name: "Outbound Messages"
@@ -495,7 +496,7 @@ tags:
     \n```javascript\n{\n    \"repositories\": [\n        {\n            \"type\":\
     \ \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.511\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.509\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -524,7 +525,7 @@ tags:
     \nThis library provides you with an easy way of sending SMS and receiving replies\
     \ by integrating TextMagic SMS Gateway into your Node.js application.\n\n[Get\
     \ it now on GitHub](https://github.com/textmagic/textmagic-rest-nodejs)\n## Installation\n\
-    \n```shell\nnpm install textmagic-client@2.0.511 --save\n```\n\n## Usage Example\n\
+    \n```shell\nnpm install textmagic-client@2.0.509 --save\n```\n\n## Usage Example\n\
     \nPlease follow the [installation](#installation) instructions and execute the\
     \ following JS code:\n\n```javascript\nconst textmagicClient = require('textmagic-client');\n\
     \nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
@@ -556,7 +557,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.511/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.509/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -673,7 +674,7 @@ tags:
     \ on GitHub\">Star</a>\n\nThis library provides you with an easy way of sending\
     \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Python\
     \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-python)\n\
-    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.511\n\
+    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.509\n\
     ```\n\n## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import\
     \ ApiException\n\n# Configure HTTP basic authorization: BasicAuth\nconfiguration\
     \ = TextMagic.Configuration()\nconfiguration.username = 'YOUR_USERNAME'\nconfiguration.password\
@@ -698,8 +699,8 @@ tags:
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your Perl application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-perl)\n##\
-    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.511.tar.gz\
-    \ && \\\ntar zxf v2.0.511.tar.gz && \\\nrm -f v2.0.511.tar.gz && \\\ncd textmagic-rest-perl-2.0.511\
+    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.509.tar.gz\
+    \ && \\\ntar zxf v2.0.509.tar.gz && \\\nrm -f v2.0.509.tar.gz && \\\ncd textmagic-rest-perl-2.0.509\
     \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
     \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
     \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
@@ -728,7 +729,7 @@ tags:
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.511'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.509'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     \ # Load the gem\nrequire 'textmagic_rest_client'\n\n # Setup authorization\n\
@@ -754,7 +755,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.511\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.509\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
