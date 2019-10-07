@@ -2,15 +2,7 @@
 swagger: "2.0"
 info:
   version: "2"
-  title: "TextMagic API Documentation"
-  termsOfService: "http://swagger.io/terms/"
-  contact:
-    name: "API Support"
-    url: "http://docs.textmagictesting.com/"
-    email: "support@textmagi.biz"
-  license:
-    name: "Apache 2.0"
-    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+  title: "TextMagic API"
   x-logo:
     url: "https://www.textmagic.com/wp-content/themes/textmagic-genesis/assets/vendor/textmagic/marketing/css/../images/logo/logo.svg"
     altText: "TextMagic"
@@ -480,7 +472,7 @@ tags:
     \n```javascript\n{\n    \"repositories\": [\n        {\n            \"type\":\
     \ \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.498\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.496\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -509,7 +501,7 @@ tags:
     \nThis library provides you with an easy way of sending SMS and receiving replies\
     \ by integrating TextMagic SMS Gateway into your Node.js application.\n\n[Get\
     \ it now on GitHub](https://github.com/textmagic/textmagic-rest-nodejs)\n## Installation\n\
-    \n```shell\nnpm install textmagic-client@2.0.498 --save\n```\n\n## Usage Example\n\
+    \n```shell\nnpm install textmagic-client@2.0.496 --save\n```\n\n## Usage Example\n\
     \nPlease follow the [installation](#installation) instructions and execute the\
     \ following JS code:\n\n```javascript\nconst textmagicClient = require('textmagic-client');\n\
     \nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
@@ -541,7 +533,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.498/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.500/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -604,22 +596,22 @@ tags:
     \ Requirements\n\n* CMake 2.8 and later (https://cmake.org/)\n* cpprest (https://github.com/microsoft/cpprestsdk)\n\
     \nUbuntu dependencies quick installation example:\n```shell\napt-get install build-essential\
     \ cmake libcpprest-dev\n```\n\n## Installation\n\nDownload and extract lib archive:\n\
-    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.498.tar.gz\
-    \ && \\\ntar zxf v2.0.498.tar.gz && \\\nrm -f v2.0.498.tar.gz && \\\ncd textmagic-rest-cpp-2.0.498\n\
+    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.496.tar.gz\
+    \ && \\\ntar zxf v2.0.496.tar.gz && \\\nrm -f v2.0.496.tar.gz && \\\ncd textmagic-rest-cpp-2.0.496\n\
     ```\nBuild using cmake\n```shell\ncmake . && cmake --build .\n```\nThe output\
-    \ library file will be placed in `textmagic-rest-cpp-2.0.498/lib` directory:\n\
+    \ library file will be placed in `textmagic-rest-cpp-2.0.496/lib` directory:\n\
     \n## Usage Example\nIn the example below, we assume that you moved the library\
-    \ sources `textmagic-rest-cpp-2.0.498` directory to your test project root directory.\n\
+    \ sources `textmagic-rest-cpp-2.0.496` directory to your test project root directory.\n\
     \nConfigure your `CMakeLists.txt` as shown here:\n```shell\ncmake_minimum_required(VERSION\
     \ 2.8)\nproject(test)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(app main.cpp)\n\
     \nadd_library(textmagic_client SHARED IMPORTED)\nset_property(TARGET textmagic_client\
-    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.498/lib/libtextmagic_client.so\"\
-    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.498\
-    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.498/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.498/api)\n\
+    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.496/lib/libtextmagic_client.so\"\
+    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.496\
+    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.496/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.496/api)\n\
     target_link_libraries(app boost_system cpprest crypto textmagic_client )\n```\n\
     \n`main.cpp` file example:\n```cpp\n#include <iostream>\n#include <fstream>\n\
-    #include \"textmagic-rest-cpp-2.0.498/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.498/ApiConfiguration.h\"\
-    \n#include \"textmagic-rest-cpp-2.0.498/api/TextMagicApi.h\"\n\nusing namespace\
+    #include \"textmagic-rest-cpp-2.0.496/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.496/ApiConfiguration.h\"\
+    \n#include \"textmagic-rest-cpp-2.0.496/api/TextMagicApi.h\"\n\nusing namespace\
     \ com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
     \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
     \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
@@ -658,7 +650,7 @@ tags:
     \ on GitHub\">Star</a>\n\nThis library provides you with an easy way of sending\
     \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Python\
     \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-python)\n\
-    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.498\n\
+    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.496\n\
     ```\n\n## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import\
     \ ApiException\n\n# Configure HTTP basic authorization: BasicAuth\nconfiguration\
     \ = TextMagic.Configuration()\nconfiguration.username = 'YOUR_USERNAME'\nconfiguration.password\
@@ -683,8 +675,8 @@ tags:
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your Perl application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-perl)\n##\
-    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.498.tar.gz\
-    \ && \\\ntar zxf v2.0.498.tar.gz && \\\nrm -f v2.0.498.tar.gz && \\\ncd textmagic-rest-perl-2.0.498\
+    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.496.tar.gz\
+    \ && \\\ntar zxf v2.0.496.tar.gz && \\\nrm -f v2.0.496.tar.gz && \\\ncd textmagic-rest-perl-2.0.496\
     \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
     \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
     \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
@@ -713,7 +705,7 @@ tags:
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.498'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.496'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     \ # Load the gem\nrequire 'textmagic_rest_client'\n\n # Setup authorization\n\
@@ -739,7 +731,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.498\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.500\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -830,7 +822,6 @@ tags:
     \ or not, you can use the Carrier Lookup command. To upload and check numbers\
     \ in bulk – please use our [Web app](https://my.textmagic.com/online/carrier-lookup/)."
 schemes:
-- "http"
 - "https"
 consumes:
 - "application/json"
@@ -22791,6 +22782,7 @@ paths:
         - "a"
         - "c"
         - "d"
+        x-example: "a"
         x-exportParamName: "Status"
         x-optionalDataType: "String"
       - name: "page"
@@ -22860,12 +22852,12 @@ paths:
           \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
           );\n\n// Optional, you can pass them as null values to getAllChats method\
-          \ below, default values will be used\n$status = \"sampleValue\";\n$page\
-          \ = 1;\n$limit = 10;\n$orderBy = \"id\";\n$voice = 0;\n$flat = 1;\n\ntry\
-          \ {\n    // GetAllChatsPaginatedResponse class object\n    $result = $api->getAllChats($status,\
-          \ $page, $limit, $orderBy, $voice, $flat);\n    // ...\n} catch (Exception\
-          \ $e) {\n    echo 'Exception when calling TextMagicApi->getAllChats: ',\
-          \ $e->getMessage(), PHP_EOL;\n}"
+          \ below, default values will be used\n$status = \"a\";\n$page = 1;\n$limit\
+          \ = 10;\n$orderBy = \"id\";\n$voice = 0;\n$flat = 1;\n\ntry {\n    // GetAllChatsPaginatedResponse\
+          \ class object\n    $result = $api->getAllChats($status, $page, $limit,\
+          \ $orderBy, $voice, $flat);\n    // ...\n} catch (Exception $e) {\n    echo\
+          \ 'Exception when calling TextMagicApi->getAllChats: ', $e->getMessage(),\
+          \ PHP_EOL;\n}"
       - lang: "Java"
         source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
           import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
@@ -22876,9 +22868,9 @@ paths:
           );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        // Optional, you can pass them as null values to getAllChats method\
-          \ below, default values will be used\n        String status = \"sampleValue\"\
-          ;\n        int page = 1;\n        int limit = 10;\n        String orderBy\
-          \ = \"id\";\n        int voice = 0;\n        int flat = 1;\n\n        try\
+          \ below, default values will be used\n        String status = \"a\";\n \
+          \       int page = 1;\n        int limit = 10;\n        String orderBy =\
+          \ \"id\";\n        int voice = 0;\n        int flat = 1;\n\n        try\
           \ {\n            // GetAllChatsPaginatedResponse class object\n        \
           \    GetAllChatsPaginatedResponse obj = apiInstance.getAllChats(status,\
           \ page, limit, orderBy, voice, flat);\n            // ...\n        } catch\
@@ -22890,18 +22882,18 @@ paths:
           const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
-          \ = {\n// Optional parameters\n    status: \"sampleValue\",\n    page: 1,\n\
-          \    limit: 10,\n    orderBy: \"id\",\n    voice: 0,\n    flat: 1,\n}\n\n\
-          api.getAllChats().then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
-          \    console.error(err);\n});"
+          \ = {\n// Optional parameters\n    status: \"a\",\n    page: 1,\n    limit:\
+          \ 10,\n    orderBy: \"id\",\n    voice: 0,\n    flat: 1,\n}\n\napi.getAllChats().then(function\
+          \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
       - lang: "Ruby"
         source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
-          \  status: 'sampleValue',\n  page: 1,\n  limit: 10,\n  order_by: 'id',\n\
-          \  voice: 0,\n  flat: 1,\n}\n\nbegin\n    # GetAllChatsPaginatedResponse\
-          \ object\n    result = api.get_all_chats(params)\n    # ...\nrescue TextMagic::ApiError\
+          \  status: 'a',\n  page: 1,\n  limit: 10,\n  order_by: 'id',\n  voice: 0,\n\
+          \  flat: 1,\n}\n\nbegin\n    # GetAllChatsPaginatedResponse object\n   \
+          \ result = api.get_all_chats(params)\n    # ...\nrescue TextMagic::ApiError\
           \ => e\n    puts \"Exception when calling TextMagicApi->get_all_chats: #{e}\"\
           \nend"
       - lang: "C#"
@@ -22914,15 +22906,14 @@ paths:
           \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
           \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
           \ you can pass them as null values to getAllChats method below, default\
-          \ values will be used\n            string status = \"sampleValue\";\n  \
-          \          int page = 1;\n            int limit = 10;\n            string\
-          \ orderBy = \"id\";\n            int voice = 0;\n            int flat =\
-          \ 1;\n\n            try {\n                // GetAllChatsPaginatedResponse\
-          \ class object\n                var result = apiInstance.GetAllChats(status,\
-          \ page, limit, orderBy, voice, flat);\n                // ...\n        \
-          \    } catch (Exception e) {\n                Console.WriteLine(\"Exception\
-          \ when calling getAllChats: \"+e.Message);\n            }\n        }\n \
-          \   }\n}"
+          \ values will be used\n            string status = \"a\";\n            int\
+          \ page = 1;\n            int limit = 10;\n            string orderBy = \"\
+          id\";\n            int voice = 0;\n            int flat = 1;\n\n       \
+          \     try {\n                // GetAllChatsPaginatedResponse class object\n\
+          \                var result = apiInstance.GetAllChats(status, page, limit,\
+          \ orderBy, voice, flat);\n                // ...\n            } catch (Exception\
+          \ e) {\n                Console.WriteLine(\"Exception when calling getAllChats:\
+          \ \"+e.Message);\n            }\n        }\n    }\n}"
       - lang: "VB.Net"
         source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
           Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
@@ -22931,10 +22922,10 @@ paths:
           \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
           \ you can pass them as null values to getAllChats method below, default\
-          \ values will be used\n        Dim status As String = \"sampleValue\"\n\
-          \        Dim page As Integer = 1\n        Dim limit As Integer = 10\n  \
-          \      Dim orderBy As String = \"id\"\n        Dim voice As Integer = 0\n\
-          \        Dim flat As Integer = 1\n\n        Try\n            ' GetAllChatsPaginatedResponse\
+          \ values will be used\n        Dim status As String = \"a\"\n        Dim\
+          \ page As Integer = 1\n        Dim limit As Integer = 10\n        Dim orderBy\
+          \ As String = \"id\"\n        Dim voice As Integer = 0\n        Dim flat\
+          \ As Integer = 1\n\n        Try\n            ' GetAllChatsPaginatedResponse\
           \ class object\n            Dim result = apiInstance.GetAllChats(status,\
           \ page, limit, orderBy, voice, flat)\n            ' ...\n        Catch e\
           \ As Exception\n            Console.WriteLine(\"Exception when calling getAllChats:\
@@ -22948,8 +22939,8 @@ paths:
           \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetAllChatsOpts{\n      \
-          \  // Optional parameters\n        Status: optional.NewString(\"sampleValue\"\
-          ),\n        Page: optional.NewInt32(1),\n        Limit: optional.NewInt32(10),\n\
+          \  // Optional parameters\n        Status: optional.NewString(\"a\"),\n\
+          \        Page: optional.NewInt32(1),\n        Limit: optional.NewInt32(10),\n\
           \        OrderBy: optional.NewString(\"id\"),\n        Voice: optional.NewInt32(0),\n\
           \        Flat: optional.NewInt32(1),\n    }\n\n    // tm.GetAllChatsPaginatedResponse\
           \ struct\n    result, _, err := client.TextMagicApi.GetAllChats(auth, &opts)\n\
@@ -22967,12 +22958,12 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
           \ if you want to use default value then pass boost::none value\n    std::string\
-          \ status = \"sampleValue\";\n    int page = 1;\n    int limit = 10;\n  \
-          \  std::string orderBy = \"id\";\n    int voice = 0;\n    int flat = 1;\n\
-          \n    try {\n        pplx::task<std::shared_ptr<GetAllChatsPaginatedResponse>>\
-          \ result = api.getAllChats(status, page, limit, orderBy, voice, flat);\n\
-          \        result.wait();\n        // put operations with result here...\n\
-          \    } catch(const std::exception& e) {\n        std::cout << \"getAllChats()\
+          \ status = \"a\";\n    int page = 1;\n    int limit = 10;\n    std::string\
+          \ orderBy = \"id\";\n    int voice = 0;\n    int flat = 1;\n\n    try {\n\
+          \        pplx::task<std::shared_ptr<GetAllChatsPaginatedResponse>> result\
+          \ = api.getAllChats(status, page, limit, orderBy, voice, flat);\n      \
+          \  result.wait();\n        // put operations with result here...\n    }\
+          \ catch(const std::exception& e) {\n        std::cout << \"getAllChats()\
           \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
       - lang: "Python"
         source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
@@ -22981,8 +22972,8 @@ paths:
           \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
-          \ params, you can skip them\nstatus = \"sampleValue\"\npage = 1\nlimit =\
-          \ 10\norder_by = \"id\"\nvoice = 0\nflat = 1\n\ntry:\n    # GetAllChatsPaginatedResponse\
+          \ params, you can skip them\nstatus = \"a\"\npage = 1\nlimit = 10\norder_by\
+          \ = \"id\"\nvoice = 0\nflat = 1\n\ntry:\n    # GetAllChatsPaginatedResponse\
           \ object\n    result = api_instance.get_all_chats(status=status, page=page,\
           \ limit=limit, order_by=order_by, voice=voice, flat=flat)\n    # ...\nexcept\
           \ ApiException as e:\n    print(\"Exception when calling TextMagicApi->get_all_chats:\
@@ -22993,9 +22984,9 @@ paths:
           \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
           \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
           \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
-          \ params, you can skip them\nmy $status = 'sampleValue';\nmy $page = 1;\n\
-          my $limit = 10;\nmy $orderBy = 'id';\nmy $voice = 0;\nmy $flat = 1;\n\n\
-          eval {\n    # GetAllChatsPaginatedResponse object\n    my $result = $api_instance->get_all_chats(status\
+          \ params, you can skip them\nmy $status = 'a';\nmy $page = 1;\nmy $limit\
+          \ = 10;\nmy $orderBy = 'id';\nmy $voice = 0;\nmy $flat = 1;\n\neval {\n\
+          \    # GetAllChatsPaginatedResponse object\n    my $result = $api_instance->get_all_chats(status\
           \ => $status, page => $page, limit => $limit, orderBy => $orderBy, voice\
           \ => $voice, flat => $flat);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
           \ when calling TextMagicApi->get_all_chats: $@\\n\";\n}"
@@ -38531,8 +38522,9 @@ definitions:
       status:
         type: "string"
         example: "a"
-        description: "Default is empty string (false). If set then all entities with\
-          \ specified status will be affected."
+        description: "Default is empty string. If set then all entities with specified\
+          \ status will be affected."
+        default: ""
         enum:
         - "a"
         - "c"
@@ -38637,7 +38629,7 @@ definitions:
         type: "integer"
         example: 1
         description: "Define delay for sending question to recipients after previous\
-          \ answer. Default is 0"
+          \ answer."
     example:
       startNode: 1
       label: "Question 1"
@@ -38662,7 +38654,7 @@ definitions:
         type: "integer"
         example: 1
         description: "Define delay for sending question to recipients after previous\
-          \ answer. Default is 0"
+          \ answer."
     example:
       isEndNode: false
       label: "Question 1"
@@ -38897,7 +38889,7 @@ definitions:
       charsetLabel: "ISO-8859-1"
       chars: 5
 externalDocs:
-  description: "Old API documentation"
+  description: "API documentation"
   url: "http://docs.textmagictesting.com/"
 x-ignoredHeaderParameters:
 - "X-Ignore-Null-Values"
