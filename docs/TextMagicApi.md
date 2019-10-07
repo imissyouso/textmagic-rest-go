@@ -56,7 +56,7 @@ Method | HTTP request | Description
 [**DeleteTemplatesBulk**](TextMagicApi.md#DeleteTemplatesBulk) | **Post** /api/v2/templates/delete | Delete templates (bulk)
 [**DoAuth**](TextMagicApi.md#DoAuth) | **Post** /api/v2/auth | Authenticate user by given username and password.
 [**DoCarrierLookup**](TextMagicApi.md#DoCarrierLookup) | **Get** /api/v2/lookups/{phone} | Carrier Lookup
-[**DoEmailLookup**](TextMagicApi.md#DoEmailLookup) | **Get** /api/v2/email-lookups/{email} | Validate Email address using Email Lookup tool
+[**DoEmailLookup**](TextMagicApi.md#DoEmailLookup) | **Get** /api/v2/email-lookups/{email} | Email Lookup
 [**DuplicateSurvey**](TextMagicApi.md#DuplicateSurvey) | **Put** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
 [**GetAllBulkSessions**](TextMagicApi.md#GetAllBulkSessions) | **Get** /api/v2/bulks | Get all bulk sending sessions.
 [**GetAllChats**](TextMagicApi.md#GetAllChats) | **Get** /api/v2/chats | Get all chats
@@ -85,7 +85,7 @@ Method | HTTP request | Description
 [**GetContacts**](TextMagicApi.md#GetContacts) | **Get** /api/v2/contacts | Get all contacts
 [**GetContactsAutocomplete**](TextMagicApi.md#GetContactsAutocomplete) | **Get** /api/v2/contacts/autocomplete | Get contacts autocomplete suggestions
 [**GetContactsByListId**](TextMagicApi.md#GetContactsByListId) | **Get** /api/v2/lists/{id}/contacts | Get all contacts in a list
-[**GetCountries**](TextMagicApi.md#GetCountries) | **Get** /api/v2/countries | Return list of countries.
+[**GetCountries**](TextMagicApi.md#GetCountries) | **Get** /api/v2/countries | Get countries
 [**GetCurrentUser**](TextMagicApi.md#GetCurrentUser) | **Get** /api/v2/user | Get current account information
 [**GetCustomField**](TextMagicApi.md#GetCustomField) | **Get** /api/v2/customfields/{id} | Get the details of a specific custom field
 [**GetCustomFields**](TextMagicApi.md#GetCustomFields) | **Get** /api/v2/customfields | Get all custom fields
@@ -123,7 +123,7 @@ Method | HTTP request | Description
 [**GetSurveyNodes**](TextMagicApi.md#GetSurveyNodes) | **Get** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
 [**GetSurveys**](TextMagicApi.md#GetSurveys) | **Get** /api/v2/surveys | Get all user surveys.
 [**GetTemplate**](TextMagicApi.md#GetTemplate) | **Get** /api/v2/templates/{id} | Get a template details
-[**GetTimezones**](TextMagicApi.md#GetTimezones) | **Get** /api/v2/timezones | Return all available timezone IDs.
+[**GetTimezones**](TextMagicApi.md#GetTimezones) | **Get** /api/v2/timezones | Get timezones
 [**GetUnreadMessagesTotal**](TextMagicApi.md#GetUnreadMessagesTotal) | **Get** /api/v2/chats/unread/count | Get unread messages number
 [**GetUnsubscribedContact**](TextMagicApi.md#GetUnsubscribedContact) | **Get** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**GetUnsubscribers**](TextMagicApi.md#GetUnsubscribers) | **Get** /api/v2/unsubscribers | Get all unsubscribed contacts
@@ -135,7 +135,7 @@ Method | HTTP request | Description
 [**MergeSurveyNodes**](TextMagicApi.md#MergeSurveyNodes) | **Post** /api/v2/surveys/nodes/merge | Merge two question nodes.
 [**MuteChat**](TextMagicApi.md#MuteChat) | **Post** /api/v2/chats/mute | Mute chat sounds
 [**MuteChatsBulk**](TextMagicApi.md#MuteChatsBulk) | **Post** /api/v2/chats/mute/bulk | Mute chats (bulk)
-[**Ping**](TextMagicApi.md#Ping) | **Get** /api/v2/ping | Just does a pong.
+[**Ping**](TextMagicApi.md#Ping) | **Get** /api/v2/ping | Ping
 [**ReopenChatsBulk**](TextMagicApi.md#ReopenChatsBulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#RequestNewSubaccountToken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#RequestSenderId) | **Post** /api/v2/senderids | Apply for a new Sender ID
@@ -1601,14 +1601,14 @@ No authorization required
 > DoCarrierLookupResponse DoCarrierLookup(ctx, phone, optional)
 Carrier Lookup
 
-
+This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  > Numbers can be checked one by one. You cannot check multiple numbers in one request.   
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **phone** | **string**|  | 
+  **phone** | **string**| Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers).  | 
  **optional** | ***DoCarrierLookupOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -1617,7 +1617,7 @@ Optional parameters are passed through a pointer to a DoCarrierLookupOpts struct
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **country** | **optional.String**| Country code for local formatted numbers | [default to US]
+ **country** | **optional.String**| This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**.  | 
 
 ### Return type
 
@@ -1636,16 +1636,16 @@ Name | Type | Description  | Notes
 
 # **DoEmailLookup**
 > DoEmailLookupResponse DoEmailLookup(ctx, email)
-Validate Email address using Email Lookup tool
+Email Lookup
 
-
+To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  > Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
 
 ### Required Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **email** | **string**|  | 
+  **email** | **string**| Email address. | 
 
 ### Return type
 
@@ -2594,7 +2594,7 @@ Name | Type | Description  | Notes
 
 # **GetCountries**
 > GetCountriesResponse GetCountries(ctx, )
-Return list of countries.
+Get countries
 
 
 
@@ -3816,9 +3816,9 @@ Name | Type | Description  | Notes
 
 # **GetTimezones**
 > GetTimezonesResponse GetTimezones(ctx, optional)
-Return all available timezone IDs.
+Get timezones
 
-
+Return all available timezone IDs
 
 ### Required Parameters
 
@@ -4168,9 +4168,9 @@ Name | Type | Description  | Notes
 
 # **Ping**
 > PingResponse Ping(ctx, )
-Just does a pong.
+Ping
 
-
+Make a simple ping request
 
 ### Required Parameters
 This endpoint does not need any parameter.

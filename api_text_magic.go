@@ -5037,11 +5037,11 @@ func (a *TextMagicApiService) DoAuth(ctx context.Context, doAuthInputObject DoAu
 
 /* 
 TextMagicApiService Carrier Lookup
-
+This API call allows you to retrieve additional information about a phone number: region-specific phone number formatting, carrier, phone type (landline/mobile) and country information.  &gt; Numbers can be checked one by one. You cannot check multiple numbers in one request.   
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param phone
+ * @param phone Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164) or in [National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers). 
  * @param optional nil or *DoCarrierLookupOpts - Optional Parameters:
-     * @param "Country" (optional.String) -  Country code for local formatted numbers
+     * @param "Country" (optional.String) -  This option must be specified only if the phone number in a **[National format](https://en.wikipedia.org/wiki/National_conventions_for_writing_telephone_numbers)**. 
 
 @return DoCarrierLookupResponse
 */
@@ -5157,10 +5157,10 @@ func (a *TextMagicApiService) DoCarrierLookup(ctx context.Context, phone string,
 }
 
 /* 
-TextMagicApiService Validate Email address using Email Lookup tool
-
+TextMagicApiService Email Lookup
+To get more details about an email address or to check if it is a valid email, you can use the Email Lookup command. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).  This API call allows you to retrieve additional information about an email address, such as mailbox detection, syntax checks, DNS validation, deliverability status, and many more helpful values (see the table below).  &gt; Emails must be checked one by one. You cannot check multiple emails in one request. To upload and check emails in bulk, please use our [Web app](https://my.textmagic.com/online/email-lookup/).
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- * @param email
+ * @param email Email address.
 
 @return DoEmailLookupResponse
 */
@@ -8555,7 +8555,7 @@ func (a *TextMagicApiService) GetContactsByListId(ctx context.Context, id int32,
 }
 
 /* 
-TextMagicApiService Return list of countries.
+TextMagicApiService Get countries
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
@@ -13045,8 +13045,8 @@ func (a *TextMagicApiService) GetTemplate(ctx context.Context, id int32) (Messag
 }
 
 /* 
-TextMagicApiService Return all available timezone IDs.
-
+TextMagicApiService Get timezones
+Return all available timezone IDs
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetTimezonesOpts - Optional Parameters:
      * @param "Full" (optional.Int32) -  Return full info about timezones in array (0 or 1). Default is 0
@@ -14328,8 +14328,8 @@ func (a *TextMagicApiService) MuteChatsBulk(ctx context.Context, muteChatsBulkIn
 }
 
 /* 
-TextMagicApiService Just does a pong.
-
+TextMagicApiService Ping
+Make a simple ping request
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
 
 @return PingResponse
