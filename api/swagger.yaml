@@ -117,7 +117,7 @@ tags:
     \ after processing all the contacts you supplied during request.\n\n## How to\
     \ send a text message using an SMS template\n\nNext, let’s try to send an SMS\
     \ to a contact list using a message template instead of specifying the message\
-    \ text. An extra feature we can use is the\_[Custom fields](#tag/Custom-Fields)\
+    \ text. An extra feature we can use is the\_[Custom fields](http://docs.textmagictesting.com/#tag/Custom-Fields)\
     \ tags, which we can apply to send personalized texts to all recipients.\n\nAssuming\
     \ you have these items:\n\n*   A contact list with ID 10541 (with two or more\
     \ contacts). You can use test number 999 .\n*   The message template with ID 55313\
@@ -133,15 +133,16 @@ tags:
     \nThis is a sending session with more than one recipient (but less than 1,000);\_\
     see the notes above about sending bulk messages. We cannot select just one message\
     \ from this session, so the **messageId** is also empty. However, you can\_[get\
-    \ the session for the messages](#tag/Outbound-Message-Sessions) and then fetch\
-    \ the messages one by one.\n\n## How to send a text message with an attachment\n\
-    \nText messages can include only text symbols. And if you need to send a PDF document\
-    \ or an image you can upload it to some cloud storage service first and then insert\
-    \ a link to this document into your text message. TextMagic offers the Attachments\
-    \ feature which allows you to upload your document to TextMagic servers and get\
-    \ a relatively short download link. After that, you just need to insert this link\
-    \ into your message text.\n\nTo upload an attachment, use:\n\n> POST https://rest.textmagic.com/api/v2/messages/attachment\n\
-    \nwith a single parameter:\n\n|Parameter|Value|Description|\n|---------|-----|-----------|\n\
+    \ the session for the messages](http://docs.textmagictesting.com/#tag/Outbound-Message-Sessions)\
+    \ and then fetch the messages one by one.\n\n## How to send a text message with\
+    \ an attachment\n\nText messages can include only text symbols. And if you need\
+    \ to send a PDF document or an image you can upload it to some cloud storage service\
+    \ first and then insert a link to this document into your text message. TextMagic\
+    \ offers the Attachments feature which allows you to upload your document to TextMagic\
+    \ servers and get a relatively short download link. After that, you just need\
+    \ to insert this link into your message text.\n\nTo upload an attachment, use:\n\
+    \n> POST https://rest.textmagic.com/api/v2/messages/attachment\n\nwith a single\
+    \ parameter:\n\n|Parameter|Value|Description|\n|---------|-----|-----------|\n\
     |**file**|`[multipart/form-data]`|Your request with attachment should be sent\
     \ in `multipart/form-data` format.**Note:** Only .jpg, .gif, .png, .pdf, .txt,\
     \ .csv, .doc, .docx, .xls, .xlsx, .ppt, .pptx & .vcf attachment files up to 10\
@@ -176,13 +177,13 @@ tags:
     \ (phone number or alphanumeric Sender ID).|\n|**receiver**|`447860021130`|\n\
     |Recipient phone number.|**text**|`Hello John!`|\n|Message text (after tags substitution,\
     \ if any).|\n|**price**|`0.25`||Message cost (in account currency).|\n|**status**|`d`|Delivery\
-    \ status of the message. Please see the table at the [Sessions](#section/Delivery-status-codes)\
+    \ status of the message. Please see the table at the [Sessions](http://docs.textmagictesting.com/#section/Delivery-status-codes)\
     \ section to see different delivery statuses.|\n|**partsCount**|`2`|Message parts\
     \ (multiples of 160 characters) count.|\n|**messageTime**|`2015-06-19T09:48:24+0000`|Sending\
     \ time.|\n|**charset**|`UTF-16BE`|Message charset. Could be:*   **ISO-8859-1**\
     \ for plaintext SMS*   **UTF-16BE** for Unicode SMS\n|**firstName**|`John`|Contact\
-    \ first name. Could be substituted from your [Contacts](#tag/Contacts) (even if\
-    \ you submitted phone number instead of contact ID).|\n|**lastName**|`Conway`|Contact\
+    \ first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts)\
+    \ (even if you submitted phone number instead of contact ID).|\n|**lastName**|`Conway`|Contact\
     \ last name.|\n|**country**|`DK`|Two-letter ISO country code of the recipient\
     \ phone number.|\n|**referenceId**|`my-reference-id-319`|Custom message reference\
     \ ID. You can use your internal IDs to identify the DLRs more easily when doing\
@@ -273,13 +274,14 @@ tags:
 - name: "Chats"
   description: "In TextMagic, an SMS chat is a convenient grouping of inbound and\
     \ outbound messages, addressed to specified recipients and arranged as a sorted\
-    \ list. Take a look at the [SMS Chat](#tag/Chats) feature in TextMagic Online.\
-    \ Under the hood, this feature is represented by the **chat** resource.\n"
+    \ list. Take a look at the [SMS Chat](http://docs.textmagictesting.com/#tag/Chats)\
+    \ feature in TextMagic Online. Under the hood, this feature is represented by\
+    \ the **chat** resource.\n"
   x-displayName: "Chats"
 - name: "Outbound Message Sessions"
   description: "When you send an SMS to more than one recipient, it is collected as\
     \ one **message session**. However, the text in your messages (in one session)\
-    \ \nmay vary and you can send personalized texts using [Templates](#tag/Templates).\
+    \ \nmay vary and you can send personalized texts using [Templates](http://docs.textmagictesting.com/#tag/Templates).\
     \ But first, let’s learn how to manage SMS sessions \nvia the TextMagic API."
   x-displayName: "Sessions"
 - name: "Templates"
@@ -291,7 +293,8 @@ tags:
     \n| Tag | Description |\n|-----|-------------|\n| **First name** | Contact first\
     \ name. |\n| **Last name** | Contact last name. |\n| **Company name** | Contact\
     \ company. |\n| **Phone** | Contact phone number. |\n| **Email** | Email. |\n\
-    | [Custom fields](#tag/Custom-Fields) | Contact custom field values. |"
+    | [Custom fields](http://docs.textmagictesting.com/#tag/Custom-Fields) | Contact\
+    \ custom field values. |"
   x-displayName: "Templates"
 - name: "Send Email to SMS"
   description: ""
@@ -407,7 +410,7 @@ tags:
     **Location**\_header.|\n| 400 Bad request| Invalid parameters specified, some\
     \ required parameters are missing or malformed. Check the corresponding command\
     \ documentation.|\n| 401 Unauthorized| Current user has no rights to perform the\
-    \ specified action. For example, regular users cannot view [Invoices](#tag/Billing)\
+    \ specified action. For example, regular users cannot view [Invoices](http://docs.textmagictesting.com/#tag/Billing)\
     \ or [Sub-Accounts](#tag/User-Subaccounts).|\n| 404 Not found| Resource not found.|\n\
     | 429 Too many requests| Request limit reached. Please try again later.| \n| 500\
     \ Internal server error| Internal server error has occurred. Please try again\
@@ -493,7 +496,7 @@ tags:
     \n```javascript\n{\n    \"repositories\": [\n        {\n            \"type\":\
     \ \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.543\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.546\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -522,7 +525,7 @@ tags:
     \nThis library provides you with an easy way of sending SMS and receiving replies\
     \ by integrating TextMagic SMS Gateway into your Node.js application.\n\n[Get\
     \ it now on GitHub](https://github.com/textmagic/textmagic-rest-nodejs)\n## Installation\n\
-    \n```shell\nnpm install textmagic-client@2.0.543 --save\n```\n\n## Usage Example\n\
+    \n```shell\nnpm install textmagic-client@2.0.546 --save\n```\n\n## Usage Example\n\
     \nPlease follow the [installation](#installation) instructions and execute the\
     \ following JS code:\n\n```javascript\nconst textmagicClient = require('textmagic-client');\n\
     \nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
@@ -554,7 +557,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.543/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.546/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -617,22 +620,22 @@ tags:
     \ Requirements\n\n* CMake 2.8 and later (https://cmake.org/)\n* cpprest (https://github.com/microsoft/cpprestsdk)\n\
     \nUbuntu dependencies quick installation example:\n```shell\napt-get install build-essential\
     \ cmake libcpprest-dev\n```\n\n## Installation\n\nDownload and extract lib archive:\n\
-    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.543.tar.gz\
-    \ && \\\ntar zxf v2.0.543.tar.gz && \\\nrm -f v2.0.543.tar.gz && \\\ncd textmagic-rest-cpp-2.0.543\n\
+    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.546.tar.gz\
+    \ && \\\ntar zxf v2.0.546.tar.gz && \\\nrm -f v2.0.546.tar.gz && \\\ncd textmagic-rest-cpp-2.0.546\n\
     ```\nBuild using cmake\n```shell\ncmake . && cmake --build .\n```\nThe output\
-    \ library file will be placed in `textmagic-rest-cpp-2.0.543/lib` directory:\n\
+    \ library file will be placed in `textmagic-rest-cpp-2.0.546/lib` directory:\n\
     \n## Usage Example\nIn the example below, we assume that you moved the library\
-    \ sources `textmagic-rest-cpp-2.0.543` directory to your test project root directory.\n\
+    \ sources `textmagic-rest-cpp-2.0.546` directory to your test project root directory.\n\
     \nConfigure your `CMakeLists.txt` as shown here:\n```shell\ncmake_minimum_required(VERSION\
     \ 2.8)\nproject(test)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(app main.cpp)\n\
     \nadd_library(textmagic_client SHARED IMPORTED)\nset_property(TARGET textmagic_client\
-    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.543/lib/libtextmagic_client.so\"\
-    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.543\
-    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.543/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.543/api)\n\
+    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.546/lib/libtextmagic_client.so\"\
+    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.546\
+    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.546/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.546/api)\n\
     target_link_libraries(app boost_system cpprest crypto textmagic_client )\n```\n\
     \n`main.cpp` file example:\n```cpp\n#include <iostream>\n#include <fstream>\n\
-    #include \"textmagic-rest-cpp-2.0.543/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.543/ApiConfiguration.h\"\
-    \n#include \"textmagic-rest-cpp-2.0.543/api/TextMagicApi.h\"\n\nusing namespace\
+    #include \"textmagic-rest-cpp-2.0.546/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.546/ApiConfiguration.h\"\
+    \n#include \"textmagic-rest-cpp-2.0.546/api/TextMagicApi.h\"\n\nusing namespace\
     \ com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
     \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
     \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
@@ -671,7 +674,7 @@ tags:
     \ on GitHub\">Star</a>\n\nThis library provides you with an easy way of sending\
     \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Python\
     \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-python)\n\
-    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.543\n\
+    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.546\n\
     ```\n\n## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import\
     \ ApiException\n\n# Configure HTTP basic authorization: BasicAuth\nconfiguration\
     \ = TextMagic.Configuration()\nconfiguration.username = 'YOUR_USERNAME'\nconfiguration.password\
@@ -696,8 +699,8 @@ tags:
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your Perl application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-perl)\n##\
-    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.543.tar.gz\
-    \ && \\\ntar zxf v2.0.543.tar.gz && \\\nrm -f v2.0.543.tar.gz && \\\ncd textmagic-rest-perl-2.0.543\
+    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.546.tar.gz\
+    \ && \\\ntar zxf v2.0.546.tar.gz && \\\nrm -f v2.0.546.tar.gz && \\\ncd textmagic-rest-perl-2.0.546\
     \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
     \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
     \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
@@ -726,7 +729,7 @@ tags:
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.543'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.546'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     \ # Load the gem\nrequire 'textmagic_rest_client'\n\n # Setup authorization\n\
@@ -752,7 +755,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.543\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.546\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -834,7 +837,7 @@ tags:
   x-displayName: "SDK"
 - name: "Custom Fields"
   description: "With custom fields, you can store custom data in contacts and use\
-    \ the data with\_[Templates](#tag/Templates)."
+    \ the data with\_[Templates](http://docs.textmagictesting.com/#tag/Templates)."
 - name: "Common"
   description: ""
   x-displayName: "Timezones and Countries"
