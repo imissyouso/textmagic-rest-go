@@ -13373,7 +13373,7 @@ func (a *TextMagicApiService) GetUnsubscribedContact(ctx context.Context, id int
 
 /* 
 TextMagicApiService Get all unsubscribed contacts
-When one of your message recipients sends a request with one of the [STOP-words](/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
+When one of your message recipients sends a request with one of the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will be immediately opted-out of your send lists and their contact status will change to an unsubscribed contact. To retrieve information on all contacts who have unsubscribed, use: 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param optional nil or *GetUnsubscribersOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page.

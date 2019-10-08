@@ -30,12 +30,12 @@ tags:
     ```\nAll the URLs referenced in this documentation should use this base URL.\n\
     \n## How the REST API works\nREST APIs use the HTTP protocol to send and receive\
     \ messages. REST messages are usually encoded as JSON documents and are an improvement\
-    \ over older methods such as the XML based SOAP protocol. REST APIs use the same\
-    \ set of methods that web browsers use: **POST, GET, PUT** or\_**DELETE**. These\
-    \ correspond to the CRUD operations: **create, read, update** and **delete**.\
-    \ Often, REST URIs provide direct CRUD access to entities or collections of entities,\
-    \ for example: http://api.foo.com/people. In this instance, to delete a person’\
-    s endpoint, you might simply call the endpoint DELETE http://api.foo.com/people/{id}.\
+    \ over \nolder methods such as the XML based SOAP protocol. REST APIs use the\
+    \ same set of methods that web browsers use: **POST, GET, PUT** or\_**DELETE**.\
+    \ \nThese correspond to the CRUD operations: **create, read, update** and **delete**.\
+    \ Often, REST URIs provide direct CRUD access to entities or \ncollections of\
+    \ entities, for example: http://api.foo.com/people. In this instance, to delete\
+    \ a person’s endpoint, you might simply call the \nendpoint DELETE http://api.foo.com/people/{id}.\
     \ REST makes these types of operations simple.\n\n> **Example**\n>\n> Let’s take\
     \ the entity most often used in messaging: contacts. Imagine you want to perform\
     \ operations on your contacts list: well, it’s only a matter of calling the following\
@@ -47,34 +47,35 @@ tags:
     \ your TextMagic account!"
 - name: "Sandbox"
   description: "Sandbox is a tool to test TextMagic REST API requests without the\
-    \ need to install any applications or write any code.\n\n<a href=\"\">Go to TextMagic\
-    \ Sandbox</a>\n\n## The credentials area\nTo make requests using your TextMagic\
-    \ account, you need to enter your account `username` and your `API key` into\n\
-    the corresponding fields. To enter them, click the **Authorize** button which\
-    \ you can find at the right top corner of the page.\n\nThe credentials modal window\
-    \ will be shown. Put your `username` and `API key` and press **Authorize** button\
-    \ like shown on image below:\n\n<p style=\"text-align: center\">\n\t<img src=\"\
-    images/sandbox_auth_modal.png\" style=\"width:600px;\">\n<p>\n\n## Command documentation\n\
-    \nTo view the documentation for a command i.e. its parameters, filters, output\
-    \ format and return codes, simply click on its name:\n\n![alt text](images/sandbox_try_1.png)\n\
-    \n## How it works\n\nSandbox allows you to test the TextMagic REST API directly\
-    \ from your browser. No programming skills are required. To use Sandbox, simply\
-    \ click on the entry for the command you want to test and then press on \"Try\
-    \ it out\" button which is underlined on the image above.\n\nAs example, let's\
-    \ overview **create template** request:\n\n![alt text](images/sandbox_try_2.png)\n\
-    \nEnter the required parameters by editing input JSON structure (just use provided\
-    \ example) and then click **Execute** to make a request. The URL corresponds to\
-    \ the command you wish to use, e.g. `/api/v2/templates` corresponds to the templates\
-    \ command.\n\nYou will receive an HTTP response code along with a JSON response\
-    \ body showing whether the request was successful or not. You will find additional\
-    \ information provided in the HTTP response headers **Response Body** and the\
-    \ **Response Header** sections.\n\n![alt text](images/sandbox_try_3.png)\n\nWe\
-    \ have now **successfully created** a new message template, and saved it to the\
-    \ TextMagic database. It was created with an `ID` value of `631`. Now we can send\
-    \ a message using this template via API or TextMagic Online.\n\nLet’s retrieve\
-    \ the template now to verify that its content was saved correctly. To do this,\
-    \ use the GET `/api/v2/templates/{id}` command. Open it, enter the **template\
-    \ id** you obtained in the previous step and click **Execute**.\n\n![alt text](images/sandbox_try_4.png)"
+    \ need to install any applications or write any code.\n\n<a href=\"undefined\"\
+    \ target=\"_blank\">Go to TextMagic Sandbox</a>\n\n## The credentials area\nTo\
+    \ make requests using your TextMagic account, you need to enter your account `username`\
+    \ and your `API key` into\nthe corresponding fields. To enter them, click the\
+    \ **Authorize** button which you can find at the right top corner of the page.\n\
+    \nThe credentials modal window will be shown. Put your `username` and `API key`\
+    \ and press **Authorize** button like shown on image below:\n\n<p style=\"text-align:\
+    \ center\">\n\t<img src=\"images/sandbox_auth_modal.png\" style=\"width:600px;\"\
+    >\n<p>\n\n## Command documentation\n\nTo view the documentation for a command\
+    \ i.e. its parameters, filters, output format and return codes, simply click on\
+    \ its name:\n\n![alt text](images/sandbox_try_1.png)\n\n## How it works\n\nSandbox\
+    \ allows you to test the TextMagic REST API directly from your browser. No programming\
+    \ skills are required. To use Sandbox, simply click on the entry for the command\
+    \ you want to test and then press on \"Try it out\" button which is underlined\
+    \ on the image above.\n\nAs example, let's overview **create template** request:\n\
+    \n![alt text](images/sandbox_try_2.png)\n\nEnter the required parameters by editing\
+    \ input JSON structure (just use provided example) and then click **Execute**\
+    \ to make a request. The URL corresponds to the command you wish to use, e.g.\
+    \ `/api/v2/templates` corresponds to the templates command.\n\nYou will receive\
+    \ an HTTP response code along with a JSON response body showing whether the request\
+    \ was successful or not. You will find additional information provided in the\
+    \ HTTP response headers **Response Body** and the **Response Header** sections.\n\
+    \n![alt text](images/sandbox_try_3.png)\n\nWe have now **successfully created**\
+    \ a new message template, and saved it to the TextMagic database. It was created\
+    \ with an `ID` value of `631`. Now we can send a message using this template via\
+    \ API or TextMagic Online.\n\nLet’s retrieve the template now to verify that its\
+    \ content was saved correctly. To do this, use the GET `/api/v2/templates/{id}`\
+    \ command. Open it, enter the **template id** you obtained in the previous step\
+    \ and click **Execute**.\n\n![alt text](images/sandbox_try_4.png)"
 - name: "Outbound Messages"
   description: "The primary reason for using the TextMagic API is to send SMS text\
     \ messages. \n\n# Tutorials\n\nTODO: add some text\n\n## How to send a single\
@@ -116,7 +117,7 @@ tags:
     \ after processing all the contacts you supplied during request.\n\n## How to\
     \ send a text message using an SMS template\n\nNext, let’s try to send an SMS\
     \ to a contact list using a message template instead of specifying the message\
-    \ text. An extra feature we can use is the\_[Custom fields](/docs/api/custom-fields/)\
+    \ text. An extra feature we can use is the\_[Custom fields](#tag/Custom-Fields)\
     \ tags, which we can apply to send personalized texts to all recipients.\n\nAssuming\
     \ you have these items:\n\n*   A contact list with ID 10541 (with two or more\
     \ contacts). You can use test number 999 .\n*   The message template with ID 55313\
@@ -132,10 +133,10 @@ tags:
     \nThis is a sending session with more than one recipient (but less than 1,000);\_\
     see the notes above about sending bulk messages. We cannot select just one message\
     \ from this session, so the **messageId** is also empty. However, you can\_[get\
-    \ the session for the messages](/docs/api/sms-sessions/) and then fetch the messages\
-    \ one by one.\n\n## How to send a text message with an attachment\n\nText messages\
-    \ can include only text symbols. And if you need to send a PDF document or an\
-    \ image you can upload it to some cloud storage service first and then insert\
+    \ the session for the messages](#tag/Outbound-Message-Sessions) and then fetch\
+    \ the messages one by one.\n\n## How to send a text message with an attachment\n\
+    \nText messages can include only text symbols. And if you need to send a PDF document\
+    \ or an image you can upload it to some cloud storage service first and then insert\
     \ a link to this document into your text message. TextMagic offers the Attachments\
     \ feature which allows you to upload your document to TextMagic servers and get\
     \ a relatively short download link. After that, you just need to insert this link\
@@ -175,13 +176,13 @@ tags:
     \ (phone number or alphanumeric Sender ID).|\n|**receiver**|`447860021130`|\n\
     |Recipient phone number.|**text**|`Hello John!`|\n|Message text (after tags substitution,\
     \ if any).|\n|**price**|`0.25`||Message cost (in account currency).|\n|**status**|`d`|Delivery\
-    \ status of the message. Please see the table at the [Sessions](/docs/api/sms-sessions/#message-delivery-statuses)\
+    \ status of the message. Please see the table at the [Sessions](#section/Delivery-status-codes)\
     \ section to see different delivery statuses.|\n|**partsCount**|`2`|Message parts\
     \ (multiples of 160 characters) count.|\n|**messageTime**|`2015-06-19T09:48:24+0000`|Sending\
     \ time.|\n|**charset**|`UTF-16BE`|Message charset. Could be:*   **ISO-8859-1**\
     \ for plaintext SMS*   **UTF-16BE** for Unicode SMS\n|**firstName**|`John`|Contact\
-    \ first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even\
-    \ if you submitted phone number instead of contact ID).|\n|**lastName**|`Conway`|Contact\
+    \ first name. Could be substituted from your [Contacts](#tag/Contacts) (even if\
+    \ you submitted phone number instead of contact ID).|\n|**lastName**|`Conway`|Contact\
     \ last name.|\n|**country**|`DK`|Two-letter ISO country code of the recipient\
     \ phone number.|\n|**referenceId**|`my-reference-id-319`|Custom message reference\
     \ ID. You can use your internal IDs to identify the DLRs more easily when doing\
@@ -272,14 +273,13 @@ tags:
 - name: "Chats"
   description: "In TextMagic, an SMS chat is a convenient grouping of inbound and\
     \ outbound messages, addressed to specified recipients and arranged as a sorted\
-    \ list. Take a look at the [SMS Chat](https://my.textmagic.com/online/messages/conversation)\
-    \ feature in TextMagic Online. Under the hood, this feature is represented by\
-    \ the **chat** resource.\n"
+    \ list. Take a look at the [SMS Chat](#tag/Chats) feature in TextMagic Online.\
+    \ Under the hood, this feature is represented by the **chat** resource.\n"
   x-displayName: "Chats"
 - name: "Outbound Message Sessions"
   description: "When you send an SMS to more than one recipient, it is collected as\
     \ one **message session**. However, the text in your messages (in one session)\
-    \ \nmay vary and you can send personalized texts using [Templates](/docs/api/sms-templates/).\
+    \ \nmay vary and you can send personalized texts using [Templates](#tag/Templates).\
     \ But first, let’s learn how to manage SMS sessions \nvia the TextMagic API."
   x-displayName: "Sessions"
 - name: "Templates"
@@ -291,8 +291,7 @@ tags:
     \n| Tag | Description |\n|-----|-------------|\n| **First name** | Contact first\
     \ name. |\n| **Last name** | Contact last name. |\n| **Company name** | Contact\
     \ company. |\n| **Phone** | Contact phone number. |\n| **Email** | Email. |\n\
-    | TODO [Custom fields](/docs/api/custom-fields/) | Contact custom field values.\
-    \ |"
+    | [Custom fields](#tag/Custom-Fields) | Contact custom field values. |"
   x-displayName: "Templates"
 - name: "Send Email to SMS"
   description: ""
@@ -408,11 +407,11 @@ tags:
     **Location**\_header.|\n| 400 Bad request| Invalid parameters specified, some\
     \ required parameters are missing or malformed. Check the corresponding command\
     \ documentation.|\n| 401 Unauthorized| Current user has no rights to perform the\
-    \ specified action. For example, regular users cannot view [Invoices](/docs/api/invoices/)\
-    \ or [Sub-Accounts](/docs/api/sub-accounts/).|\n| 404 Not found| Resource not\
-    \ found.|\n| 429 Too many requests| Request limit reached. Please try again later.|\
-    \ \n| 500 Internal server error| Internal server error has occurred. Please try\
-    \ again later.|\n| 503 Service unavailable | Service is unavailable due to maintenance.|\n\
+    \ specified action. For example, regular users cannot view [Invoices](#tag/Billing)\
+    \ or [Sub-Accounts](#tag/User-Subaccounts).|\n| 404 Not found| Resource not found.|\n\
+    | 429 Too many requests| Request limit reached. Please try again later.| \n| 500\
+    \ Internal server error| Internal server error has occurred. Please try again\
+    \ later.|\n| 503 Service unavailable | Service is unavailable due to maintenance.|\n\
     \n## Error responses\nIn case of an error, the TextMagic API responds with one\
     \ of the HTTP error codes (4xx-5xx as shown below) and returns these common error\
     \ responses.\n<SchemaDefinition schemaRef=\"#/components/schemas/BadRequestResponse\"\
@@ -555,7 +554,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.514/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.520/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -753,7 +752,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.514\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.520\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -835,7 +834,7 @@ tags:
   x-displayName: "SDK"
 - name: "Custom Fields"
   description: "With custom fields, you can store custom data in contacts and use\
-    \ the data with\_[Templates](/docs/api/sms-templates/)."
+    \ the data with\_[Templates](#tag/Templates)."
 - name: "Common"
   description: ""
   x-displayName: "Timezones and Countries"
@@ -9345,10 +9344,10 @@ paths:
       - "TextMagic"
       summary: "Get all unsubscribed contacts"
       description: "When one of your message recipients sends a request with one of\
-        \ the [STOP-words](/sms-stop-command/), they will be immediately opted-out\
-        \ of your send lists and their contact status will change to an unsubscribed\
-        \ contact. To retrieve information on all contacts who have unsubscribed,\
-        \ use:\n"
+        \ the [STOP-words](https://www.textmagic.com/sms-stop-command/), they will\
+        \ be immediately opted-out of your send lists and their contact status will\
+        \ change to an unsubscribed contact. To retrieve information on all contacts\
+        \ who have unsubscribed, use:\n"
       operationId: "getUnsubscribers"
       parameters:
       - name: "page"
