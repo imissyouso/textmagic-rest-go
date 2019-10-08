@@ -114,7 +114,6 @@ Method | HTTP request | Description
 [**GetSenderIds**](TextMagicApi.md#GetSenderIds) | **Get** /api/v2/senderids | Get all your approved Sender IDs
 [**GetSenderSettings**](TextMagicApi.md#GetSenderSettings) | **Get** /api/v2/sender/settings | Get current sender settings
 [**GetSpendingStat**](TextMagicApi.md#GetSpendingStat) | **Get** /api/v2/stats/spending | Get spending statistics
-[**GetState**](TextMagicApi.md#GetState) | **Get** /api/v2/state | Get current entities state
 [**GetSubaccount**](TextMagicApi.md#GetSubaccount) | **Get** /api/v2/subaccounts/{id} | Get sub-account information
 [**GetSubaccounts**](TextMagicApi.md#GetSubaccounts) | **Get** /api/v2/subaccounts | Get sub-accounts list
 [**GetSubaccountsWithTokens**](TextMagicApi.md#GetSubaccountsWithTokens) | **Post** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
@@ -128,14 +127,12 @@ Method | HTTP request | Description
 [**GetUnsubscribedContact**](TextMagicApi.md#GetUnsubscribedContact) | **Get** /api/v2/unsubscribers/{id} | Get the details of a specific unsubscribed contact
 [**GetUnsubscribers**](TextMagicApi.md#GetUnsubscribers) | **Get** /api/v2/unsubscribers | Get all unsubscribed contacts
 [**GetUserDedicatedNumbers**](TextMagicApi.md#GetUserDedicatedNumbers) | **Get** /api/v2/numbers | Get all your dedicated numbers
-[**GetVersions**](TextMagicApi.md#GetVersions) | **Get** /api/v2/versions | Get minimal valid apps versions
 [**InviteSubaccount**](TextMagicApi.md#InviteSubaccount) | **Post** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#MarkChatsReadBulk) | **Post** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#MarkChatsUnreadBulk) | **Post** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**MergeSurveyNodes**](TextMagicApi.md#MergeSurveyNodes) | **Post** /api/v2/surveys/nodes/merge | Merge two question nodes.
 [**MuteChat**](TextMagicApi.md#MuteChat) | **Post** /api/v2/chats/mute | Mute chat sounds
 [**MuteChatsBulk**](TextMagicApi.md#MuteChatsBulk) | **Post** /api/v2/chats/mute/bulk | Mute chats (bulk)
-[**Ping**](TextMagicApi.md#Ping) | **Get** /api/v2/ping | Ping
 [**ReopenChatsBulk**](TextMagicApi.md#ReopenChatsBulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#RequestNewSubaccountToken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#RequestSenderId) | **Post** /api/v2/senderids | Apply for a new Sender ID
@@ -3540,30 +3537,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **GetState**
-> GetStateResponse GetState(ctx, )
-Get current entities state
-
-
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetStateResponse**](GetStateResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **GetSubaccount**
 > User GetSubaccount(ctx, id)
 Get sub-account information
@@ -3974,30 +3947,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **GetVersions**
-> GetVersionsResponse GetVersions(ctx, )
-Get minimal valid apps versions
-
-
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetVersionsResponse**](GetVersionsResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **InviteSubaccount**
 > InviteSubaccount(ctx, inviteSubaccountInputObject)
 Invite a new sub-account
@@ -4163,30 +4112,6 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **Ping**
-> PingResponse Ping(ctx, )
-Ping
-
-Make a simple ping request
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**PingResponse**](PingResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

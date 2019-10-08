@@ -554,7 +554,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.542/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.543/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -752,7 +752,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.542\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.543\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -1042,132 +1042,7 @@ paths:
           );\n\neval {\n    # DoAuthResponse object\n    my $result = $api_instance->do_auth(do_auth_input_object\
           \ => $input);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->do_auth: $@\\n\";\n}"
-  /api/v2/ping:
-    get:
-      tags:
-      - "TextMagic"
-      summary: "Ping"
-      description: "Make a simple ping request"
-      operationId: "ping"
-      parameters: []
-      responses:
-        200:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/PingResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-      x-hidden: true
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n\ntry {\n    // PingResponse class object\n    $result = $api->ping();\n\
-          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
-          \ TextMagicApi->ping: ', $e->getMessage(), PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n\n        try {\n            // PingResponse class object\n          \
-          \  PingResponse obj = apiInstance.ping();\n            // ...\n        }\
-          \ catch (ApiException e) {\n            System.err.println(\"Exception when\
-          \ calling ping\");\n            e.printStackTrace();\n        }\n    }\n\
-          }"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\n\n\
-          api.ping().then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
-          \    console.error(err);\n});"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\n\nbegin\n    # PingResponse\
-          \ object\n    result = api.ping()\n    # ...\nrescue TextMagic::ApiError\
-          \ => e\n    puts \"Exception when calling TextMagicApi->ping: #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n\n            try\
-          \ {\n                // PingResponse class object\n                var result\
-          \ = apiInstance.Ping();\n                // ...\n            } catch (Exception\
-          \ e) {\n                Console.WriteLine(\"Exception when calling ping:\
-          \ \"+e.Message);\n            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n\n        Try\n    \
-          \        ' PingResponse class object\n            Dim result = apiInstance.Ping()\n\
-          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
-          Exception when calling ping: \" + e.Message)\n        End Try\n    End Sub\n\
-          End Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    // tm.PingResponse struct\n    result,\
-          \ _, err := client.TextMagicApi.Ping(auth, )\n\n    if err != nil {\n  \
-          \      log.Fatal(err)\n    } else {\n        fmt.Printf(\"%+v\\n\", result)\n\
-          \        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    try {\n        pplx::task<std::shared_ptr<PingResponse>>\
-          \ result = api.ping();\n        result.wait();\n        // put operations\
-          \ with result here...\n    } catch(const std::exception& e) {\n        std::cout\
-          \ << \"ping() exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n\
-          }"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n\ntry:\n\
-          \    # PingResponse object\n    result = api_instance.ping()\n    # ...\n\
-          except ApiException as e:\n    print(\"Exception when calling TextMagicApi->ping:\
-          \ %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
-          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
-          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
-          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n\neval {\n\
-          \    # PingResponse object\n    my $result = $api_instance->ping();\n  \
-          \  # ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->ping:\
-          \ $@\\n\";\n}"
+  /api/v2/ping: {}
   /api/v2/timezones:
     get:
       tags:
@@ -1749,262 +1624,8 @@ paths:
           \ 'a';\nmy $deviceId = 123;\n\neval {\n    $api_instance->delete_push_token(type\
           \ => $type, deviceId => $deviceId);\n};\n\nif ($@) {\n    warn \"Exception\
           \ when calling TextMagicApi->delete_push_token: $@\\n\";\n}"
-  /api/v2/state:
-    get:
-      tags:
-      - "TextMagic"
-      summary: "Get current entities state"
-      description: ""
-      operationId: "getState"
-      parameters: []
-      responses:
-        200:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/GetStateResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-      x-hidden: true
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n\ntry {\n    // GetStateResponse class object\n    $result = $api->getState();\n\
-          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
-          \ TextMagicApi->getState: ', $e->getMessage(), PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n\n        try {\n            // GetStateResponse class object\n      \
-          \      GetStateResponse obj = apiInstance.getState();\n            // ...\n\
-          \        } catch (ApiException e) {\n            System.err.println(\"Exception\
-          \ when calling getState\");\n            e.printStackTrace();\n        }\n\
-          \    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\n\n\
-          api.getState().then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
-          \    console.error(err);\n});"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\n\nbegin\n    # GetStateResponse\
-          \ object\n    result = api.get_state()\n    # ...\nrescue TextMagic::ApiError\
-          \ => e\n    puts \"Exception when calling TextMagicApi->get_state: #{e}\"\
-          \nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n\n            try\
-          \ {\n                // GetStateResponse class object\n                var\
-          \ result = apiInstance.GetState();\n                // ...\n           \
-          \ } catch (Exception e) {\n                Console.WriteLine(\"Exception\
-          \ when calling getState: \"+e.Message);\n            }\n        }\n    }\n\
-          }"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n\n        Try\n    \
-          \        ' GetStateResponse class object\n            Dim result = apiInstance.GetState()\n\
-          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
-          Exception when calling getState: \" + e.Message)\n        End Try\n    End\
-          \ Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    // tm.GetStateResponse struct\n    result,\
-          \ _, err := client.TextMagicApi.GetState(auth, )\n\n    if err != nil {\n\
-          \        log.Fatal(err)\n    } else {\n        fmt.Printf(\"%+v\\n\", result)\n\
-          \        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    try {\n        pplx::task<std::shared_ptr<GetStateResponse>>\
-          \ result = api.getState();\n        result.wait();\n        // put operations\
-          \ with result here...\n    } catch(const std::exception& e) {\n        std::cout\
-          \ << \"getState() exception: \" << e.what() << '\\n';\n    }\n\n    return\
-          \ 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n\ntry:\n\
-          \    # GetStateResponse object\n    result = api_instance.get_state()\n\
-          \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
-          \ TextMagicApi->get_state: %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
-          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
-          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
-          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n\neval {\n\
-          \    # GetStateResponse object\n    my $result = $api_instance->get_state();\n\
-          \    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->get_state:\
-          \ $@\\n\";\n}"
-  /api/v2/versions:
-    get:
-      tags:
-      - "TextMagic"
-      summary: "Get minimal valid apps versions"
-      description: ""
-      operationId: "getVersions"
-      parameters: []
-      responses:
-        200:
-          description: "Returned when successful"
-          schema:
-            $ref: "#/definitions/GetVersionsResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-      x-hidden: true
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
-          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
-          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n\ntry {\n    // GetVersionsResponse class object\n    $result = $api->getVersions();\n\
-          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
-          \ TextMagicApi->getVersions: ', $e->getMessage(), PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n\n        try {\n            // GetVersionsResponse class object\n   \
-          \         GetVersionsResponse obj = apiInstance.getVersions();\n       \
-          \     // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
-          Exception when calling getVersions\");\n            e.printStackTrace();\n\
-          \        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\n\n\
-          api.getVersions().then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
-          \    console.error(err);\n});"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\n\nbegin\n    # GetVersionsResponse\
-          \ object\n    result = api.get_versions()\n    # ...\nrescue TextMagic::ApiError\
-          \ => e\n    puts \"Exception when calling TextMagicApi->get_versions: #{e}\"\
-          \nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n\n            try\
-          \ {\n                // GetVersionsResponse class object\n             \
-          \   var result = apiInstance.GetVersions();\n                // ...\n  \
-          \          } catch (Exception e) {\n                Console.WriteLine(\"\
-          Exception when calling getVersions: \"+e.Message);\n            }\n    \
-          \    }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n\n        Try\n    \
-          \        ' GetVersionsResponse class object\n            Dim result = apiInstance.GetVersions()\n\
-          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
-          Exception when calling getVersions: \" + e.Message)\n        End Try\n \
-          \   End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    // tm.GetVersionsResponse struct\n \
-          \   result, _, err := client.TextMagicApi.GetVersions(auth, )\n\n    if\
-          \ err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
-          %+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    try {\n        pplx::task<std::shared_ptr<GetVersionsResponse>>\
-          \ result = api.getVersions();\n        result.wait();\n        // put operations\
-          \ with result here...\n    } catch(const std::exception& e) {\n        std::cout\
-          \ << \"getVersions() exception: \" << e.what() << '\\n';\n    }\n\n    return\
-          \ 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n\ntry:\n\
-          \    # GetVersionsResponse object\n    result = api_instance.get_versions()\n\
-          \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
-          \ TextMagicApi->get_versions: %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
-          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
-          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
-          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n\neval {\n\
-          \    # GetVersionsResponse object\n    my $result = $api_instance->get_versions();\n\
-          \    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->get_versions:\
-          \ $@\\n\";\n}"
+  /api/v2/state: {}
+  /api/v2/versions: {}
   /api/v2/lookups/{phone}:
     get:
       tags:
@@ -28774,9 +28395,6 @@ definitions:
         type: "string"
         example: "2019-01-01T00:00:00.000Z"
         description: "Current date time"
-    example:
-      ping: "pong"
-      utcDateTime: "2019-01-01T00:00:00.000Z"
   GetContactImportSessionProgressResponse:
     required:
     - "processed"
@@ -28860,10 +28478,6 @@ definitions:
       desktop:
         type: "integer"
         example: 3
-    example:
-      desktop: 3
-      android: 2
-      ios: 1
   DoAuthResponse:
     required:
     - "disallowedRules"
@@ -29901,46 +29515,6 @@ definitions:
       customFieldsCacheClear:
         type: "integer"
         example: 1
-    example:
-      chatDeleted: 1
-      contactCacheClear: 1
-      systemCacheClear: 1
-      systemAccountStateChanged: 1
-      messageSent: 1
-      chatCacheClear: 1
-      contactStateChanged: 1
-      messageScheduleDeleted: 1
-      messageDeleted: 1
-      listStateChanged: 1
-      messageTemplateCacheClear: 1
-      listCacheClear: 1
-      callFinished: 1
-      listDeleted: 1
-      contactDeleted: 1
-      listAdded: 1
-      messageScheduleAdded: 1
-      messageScheduleCacheClear: 1
-      messageStateChanged: 1
-      chatMuted: 1
-      messageIncoming: 1
-      messageBulkEnd: 1
-      chatUnmuted: 1
-      messageIncomingCacheClear: 1
-      systemExit: 1
-      messageIncomingDeleted: 1
-      chatMarkedAsRead: 1
-      messageWipeEnd: 1
-      messageScheduleStateChanged: 1
-      customFieldsCacheClear: 1
-      messageSessionDeleted: 1
-      chatCreated: 1
-      contactImportEnd: 1
-      contactWipeEnd: 1
-      chatClosed: 1
-      systemAlert: 1
-      messageCacheClear: 1
-      contactAdded: 1
-      chatReopened: 1
   User:
     type: "object"
     required:
