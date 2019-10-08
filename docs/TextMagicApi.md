@@ -7,9 +7,7 @@ Method | HTTP request | Description
 [**AssignContactsToList**](TextMagicApi.md#AssignContactsToList) | **Put** /api/v2/lists/{id}/contacts | Assign contacts to a list
 [**BlockContact**](TextMagicApi.md#BlockContact) | **Post** /api/v2/contacts/block | Block contact by phone number
 [**BuyDedicatedNumber**](TextMagicApi.md#BuyDedicatedNumber) | **Post** /api/v2/numbers | Buy a dedicated number
-[**CancelSurvey**](TextMagicApi.md#CancelSurvey) | **Put** /api/v2/surveys/{id}/cancel | Cancel a survey.
 [**CancelVerification**](TextMagicApi.md#CancelVerification) | **Delete** /api/v2/verify/{verifyId} | Cancel verification process
-[**CheckPhoneVerificationCode**](TextMagicApi.md#CheckPhoneVerificationCode) | **Put** /api/v2/user/phone/verification | Check user phone verification code
 [**CheckPhoneVerificationCodeTFA**](TextMagicApi.md#CheckPhoneVerificationCodeTFA) | **Put** /api/v2/verify | Step 2: Check the verification code 
 [**ClearAndAssignContactsToList**](TextMagicApi.md#ClearAndAssignContactsToList) | **Post** /api/v2/lists/{id}/contacts | Reset list members to the specified contacts
 [**CloseChatsBulk**](TextMagicApi.md#CloseChatsBulk) | **Post** /api/v2/chats/close/bulk | Close chats (bulk)
@@ -19,9 +17,6 @@ Method | HTTP request | Description
 [**CreateContactNote**](TextMagicApi.md#CreateContactNote) | **Post** /api/v2/contacts/{id}/notes | Create a new contact note.
 [**CreateCustomField**](TextMagicApi.md#CreateCustomField) | **Post** /api/v2/customfields | Add a new custom field
 [**CreateList**](TextMagicApi.md#CreateList) | **Post** /api/v2/lists | Create a new list
-[**CreatePushToken**](TextMagicApi.md#CreatePushToken) | **Post** /api/v2/push/tokens | Add or update a device token.
-[**CreateSurvey**](TextMagicApi.md#CreateSurvey) | **Post** /api/v2/surveys | Create a new survey from the submitted data.
-[**CreateSurveyNode**](TextMagicApi.md#CreateSurveyNode) | **Post** /api/v2/surveys/{id}/nodes | Create a new node from the submitted data.
 [**CreateTemplate**](TextMagicApi.md#CreateTemplate) | **Post** /api/v2/templates | Create a template
 [**DeleteAllContacts**](TextMagicApi.md#DeleteAllContacts) | **Delete** /api/v2/contact/all | Delete contacts (bulk)
 [**DeleteAllOutboundMessages**](TextMagicApi.md#DeleteAllOutboundMessages) | **Delete** /api/v2/message/all | Delete all messages
@@ -46,18 +41,13 @@ Method | HTTP request | Description
 [**DeleteMessageSessionsBulk**](TextMagicApi.md#DeleteMessageSessionsBulk) | **Post** /api/v2/sessions/delete | Delete sessions (bulk)
 [**DeleteOutboundMessage**](TextMagicApi.md#DeleteOutboundMessage) | **Delete** /api/v2/messages/{id} | Delete message
 [**DeleteOutboundMessagesBulk**](TextMagicApi.md#DeleteOutboundMessagesBulk) | **Post** /api/v2/messages/delete | Delete messages (bulk)
-[**DeletePushToken**](TextMagicApi.md#DeletePushToken) | **Delete** /api/v2/push/tokens/{type}/{deviceId} | Delete a push notification device token.
 [**DeleteScheduledMessage**](TextMagicApi.md#DeleteScheduledMessage) | **Delete** /api/v2/schedules/{id} | Delete a single scheduled message
 [**DeleteScheduledMessagesBulk**](TextMagicApi.md#DeleteScheduledMessagesBulk) | **Post** /api/v2/schedules/delete | Delete scheduled messages (bulk)
 [**DeleteSenderId**](TextMagicApi.md#DeleteSenderId) | **Delete** /api/v2/senderids/{id} | Delete a Sender ID
-[**DeleteSurvey**](TextMagicApi.md#DeleteSurvey) | **Delete** /api/v2/surveys/{id} | Delete a survey.
-[**DeleteSurveyNode**](TextMagicApi.md#DeleteSurveyNode) | **Delete** /api/v2/surveys/nodes/{id} | Delete a node.
 [**DeleteTemplate**](TextMagicApi.md#DeleteTemplate) | **Delete** /api/v2/templates/{id} | Delete a template
 [**DeleteTemplatesBulk**](TextMagicApi.md#DeleteTemplatesBulk) | **Post** /api/v2/templates/delete | Delete templates (bulk)
-[**DoAuth**](TextMagicApi.md#DoAuth) | **Post** /api/v2/auth | Authenticate user by given username and password.
 [**DoCarrierLookup**](TextMagicApi.md#DoCarrierLookup) | **Get** /api/v2/lookups/{phone} | Carrier Lookup
 [**DoEmailLookup**](TextMagicApi.md#DoEmailLookup) | **Get** /api/v2/email-lookups/{email} | Email Lookup
-[**DuplicateSurvey**](TextMagicApi.md#DuplicateSurvey) | **Put** /api/v2/surveys/{id}/duplicate | Duplicate a survey.
 [**GetAllBulkSessions**](TextMagicApi.md#GetAllBulkSessions) | **Get** /api/v2/bulks | Get all bulk sending sessions.
 [**GetAllChats**](TextMagicApi.md#GetAllChats) | **Get** /api/v2/chats | Get all chats
 [**GetAllInboundMessages**](TextMagicApi.md#GetAllInboundMessages) | **Get** /api/v2/replies | Get all inbound messages
@@ -106,7 +96,6 @@ Method | HTTP request | Description
 [**GetMessagingStat**](TextMagicApi.md#GetMessagingStat) | **Get** /api/v2/stats/messaging | Get messaging statistics
 [**GetOutboundMessage**](TextMagicApi.md#GetOutboundMessage) | **Get** /api/v2/messages/{id} | Get a single message
 [**GetOutboundMessagesHistory**](TextMagicApi.md#GetOutboundMessagesHistory) | **Get** /api/v2/history | Get history
-[**GetPushTokens**](TextMagicApi.md#GetPushTokens) | **Get** /api/v2/push/tokens | Get all device tokens assigned to the current account
 [**GetScheduledMessage**](TextMagicApi.md#GetScheduledMessage) | **Get** /api/v2/schedules/{id} | Get a single scheduled message
 [**GetSenderId**](TextMagicApi.md#GetSenderId) | **Get** /api/v2/senderids/{id} | Get the details of a specific Sender ID
 [**GetSenderIds**](TextMagicApi.md#GetSenderIds) | **Get** /api/v2/senderids | Get all your approved Sender IDs
@@ -115,10 +104,6 @@ Method | HTTP request | Description
 [**GetSubaccount**](TextMagicApi.md#GetSubaccount) | **Get** /api/v2/subaccounts/{id} | Get sub-account information
 [**GetSubaccounts**](TextMagicApi.md#GetSubaccounts) | **Get** /api/v2/subaccounts | Get sub-accounts list
 [**GetSubaccountsWithTokens**](TextMagicApi.md#GetSubaccountsWithTokens) | **Post** /api/v2/subaccounts/tokens/list | Get all sub-accounts with their REST API tokens associated with app name
-[**GetSurvey**](TextMagicApi.md#GetSurvey) | **Get** /api/v2/surveys/{id} | Get a survey by id.
-[**GetSurveyNode**](TextMagicApi.md#GetSurveyNode) | **Get** /api/v2/surveys/nodes/{id} | Get a node by id.
-[**GetSurveyNodes**](TextMagicApi.md#GetSurveyNodes) | **Get** /api/v2/surveys/{id}/nodes | Fetch nodes by given survey id.
-[**GetSurveys**](TextMagicApi.md#GetSurveys) | **Get** /api/v2/surveys | Get all user surveys.
 [**GetTemplate**](TextMagicApi.md#GetTemplate) | **Get** /api/v2/templates/{id} | Get a template details
 [**GetTimezones**](TextMagicApi.md#GetTimezones) | **Get** /api/v2/timezones | Get timezones
 [**GetUnreadMessagesTotal**](TextMagicApi.md#GetUnreadMessagesTotal) | **Get** /api/v2/chats/unread/count | Get unread messages number
@@ -128,13 +113,11 @@ Method | HTTP request | Description
 [**InviteSubaccount**](TextMagicApi.md#InviteSubaccount) | **Post** /api/v2/subaccounts | Invite a new sub-account
 [**MarkChatsReadBulk**](TextMagicApi.md#MarkChatsReadBulk) | **Post** /api/v2/chats/read/bulk | Mark chats as read (bulk)
 [**MarkChatsUnreadBulk**](TextMagicApi.md#MarkChatsUnreadBulk) | **Post** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
-[**MergeSurveyNodes**](TextMagicApi.md#MergeSurveyNodes) | **Post** /api/v2/surveys/nodes/merge | Merge two question nodes.
 [**MuteChat**](TextMagicApi.md#MuteChat) | **Post** /api/v2/chats/mute | Mute chat sounds
 [**MuteChatsBulk**](TextMagicApi.md#MuteChatsBulk) | **Post** /api/v2/chats/mute/bulk | Mute chats (bulk)
 [**ReopenChatsBulk**](TextMagicApi.md#ReopenChatsBulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#RequestNewSubaccountToken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#RequestSenderId) | **Post** /api/v2/senderids | Apply for a new Sender ID
-[**ResetSurvey**](TextMagicApi.md#ResetSurvey) | **Put** /api/v2/surveys/{id}/reset | Reset a survey flow.
 [**SearchChats**](TextMagicApi.md#SearchChats) | **Get** /api/v2/chats/search | Find chats by message text
 [**SearchChatsByIds**](TextMagicApi.md#SearchChatsByIds) | **Get** /api/v2/chats/search/ids | Find chats (bulk)
 [**SearchChatsByReceipent**](TextMagicApi.md#SearchChatsByReceipent) | **Get** /api/v2/chats/search/recipients | Find chats by recipient
@@ -144,12 +127,9 @@ Method | HTTP request | Description
 [**SearchOutboundMessages**](TextMagicApi.md#SearchOutboundMessages) | **Get** /api/v2/messages/search | Find messages
 [**SearchScheduledMessages**](TextMagicApi.md#SearchScheduledMessages) | **Get** /api/v2/schedules/search | Find scheduled messages
 [**SearchTemplates**](TextMagicApi.md#SearchTemplates) | **Get** /api/v2/templates/search | Find templates by criteria
-[**SendEmailVerificationCode**](TextMagicApi.md#SendEmailVerificationCode) | **Get** /api/v2/user/email/verification | Send user email verification
 [**SendMessage**](TextMagicApi.md#SendMessage) | **Post** /api/v2/messages | Send message
-[**SendPhoneVerificationCode**](TextMagicApi.md#SendPhoneVerificationCode) | **Get** /api/v2/user/phone/verification | Send user phone verification
 [**SendPhoneVerificationCodeTFA**](TextMagicApi.md#SendPhoneVerificationCodeTFA) | **Post** /api/v2/verify | Step 1: Send a verification code 
 [**SetChatStatus**](TextMagicApi.md#SetChatStatus) | **Post** /api/v2/chats/status | Change chat status
-[**StartSurvey**](TextMagicApi.md#StartSurvey) | **Put** /api/v2/surveys/{id}/start | Start a survey.
 [**UnblockContact**](TextMagicApi.md#UnblockContact) | **Post** /api/v2/contacts/unblock | Unblock contact by phone number.
 [**UnblockContactsBulk**](TextMagicApi.md#UnblockContactsBulk) | **Post** /api/v2/contacts/unblock/bulk | Unblock contacts (bulk)
 [**UnmuteChatsBulk**](TextMagicApi.md#UnmuteChatsBulk) | **Post** /api/v2/chats/unmute/bulk | Unmute chats (bulk)
@@ -164,10 +144,7 @@ Method | HTTP request | Description
 [**UpdateCustomFieldValue**](TextMagicApi.md#UpdateCustomFieldValue) | **Put** /api/v2/customfields/{id}/update | Edit the custom field value of a specified contact
 [**UpdateInboundMessagesNotificationSettings**](TextMagicApi.md#UpdateInboundMessagesNotificationSettings) | **Put** /api/v2/user/notification/inbound | Update inbound messages notification settings
 [**UpdateList**](TextMagicApi.md#UpdateList) | **Put** /api/v2/lists/{id} | Edit a list
-[**UpdatePassword**](TextMagicApi.md#UpdatePassword) | **Put** /api/v2/user/password/change | Change user password.
 [**UpdateSenderSetting**](TextMagicApi.md#UpdateSenderSetting) | **Put** /api/v2/sender/settings | Change sender settings
-[**UpdateSurvey**](TextMagicApi.md#UpdateSurvey) | **Put** /api/v2/surveys/{id} | Update existing survey.
-[**UpdateSurveyNode**](TextMagicApi.md#UpdateSurveyNode) | **Put** /api/v2/surveys/nodes/{id} | Update existing node.
 [**UpdateTemplate**](TextMagicApi.md#UpdateTemplate) | **Put** /api/v2/templates/{id} | Update a template
 
 
@@ -256,34 +233,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CancelSurvey**
-> ResourceLinkResponse CancelSurvey(ctx, id)
-Cancel a survey.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **CancelVerification**
 > CancelVerification(ctx, verifyId)
 Cancel verification process
@@ -312,34 +261,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CheckPhoneVerificationCode**
-> CheckPhoneVerificationCode(ctx, checkPhoneVerificationCodeInputObject)
-Check user phone verification code
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **CheckPhoneVerificationCodeTFA**
 > CheckPhoneVerificationCodeTFA(ctx, checkPhoneVerificationCodeInputObject)
 Step 2: Check the verification code 
@@ -351,7 +272,7 @@ Check received code from user with the code which was actually sent.
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject1**](CheckPhoneVerificationCodeInputObject1.md)|  | 
+  **checkPhoneVerificationCodeInputObject** | [**CheckPhoneVerificationCodeInputObject**](CheckPhoneVerificationCodeInputObject.md)|  | 
 
 ### Return type
 
@@ -574,91 +495,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **createListInputObject** | [**CreateListInputObject**](CreateListInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **CreatePushToken**
-> CreatePushToken(ctx, createPushTokenInputObject)
-Add or update a device token.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **createPushTokenInputObject** | [**CreatePushTokenInputObject**](CreatePushTokenInputObject.md)|  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **CreateSurvey**
-> ResourceLinkResponse CreateSurvey(ctx, createSurveyInputObject)
-Create a new survey from the submitted data.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **createSurveyInputObject** | [**CreateSurveyInputObject**](CreateSurveyInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **CreateSurveyNode**
-> ResourceLinkResponse CreateSurveyNode(ctx, createSurveyNodeInputObject, id)
-Create a new node from the submitted data.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **createSurveyNodeInputObject** | [**CreateSurveyNodeInputObject**](CreateSurveyNodeInputObject.md)|  | 
-  **id** | **int32**|  | 
 
 ### Return type
 
@@ -1339,35 +1175,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **DeletePushToken**
-> DeletePushToken(ctx, type_, deviceId)
-Delete a push notification device token.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **type_** | **string**|  | 
-  **deviceId** | **int32**|  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **DeleteScheduledMessage**
 > DeleteScheduledMessage(ctx, id)
 Delete a single scheduled message
@@ -1452,62 +1259,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **DeleteSurvey**
-> DeleteSurvey(ctx, id)
-Delete a survey.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **DeleteSurveyNode**
-> DeleteSurveyNode(ctx, id)
-Delete a node.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **DeleteTemplate**
 > DeleteTemplate(ctx, id)
 Delete a template
@@ -1564,34 +1315,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **DoAuth**
-> DoAuthResponse DoAuth(ctx, doAuthInputObject)
-Authenticate user by given username and password.
-
-Returning a username and token that you should pass to the all requests (in X-TM-Username and X-TM-Key, respectively)
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **doAuthInputObject** | [**DoAuthInputObject**](DoAuthInputObject.md)|  | 
-
-### Return type
-
-[**DoAuthResponse**](DoAuthResponse.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **DoCarrierLookup**
 > DoCarrierLookupResponse DoCarrierLookup(ctx, phone, optional)
 Carrier Lookup
@@ -1645,34 +1368,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DoEmailLookupResponse**](DoEmailLookupResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **DuplicateSurvey**
-> ResourceLinkResponse DuplicateSurvey(ctx, id)
-Duplicate a survey.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
 
 ### Authorization
 
@@ -3294,30 +2989,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **GetPushTokens**
-> GetPushTokensResponse GetPushTokens(ctx, )
-Get all device tokens assigned to the current account
-
-
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetPushTokensResponse**](GetPushTokensResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **GetScheduledMessage**
 > MessagesIcs GetScheduledMessage(ctx, id)
 Get a single scheduled message
@@ -3573,126 +3244,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetSubaccountsWithTokensResponse**](GetSubaccountsWithTokensResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **GetSurvey**
-> Survey GetSurvey(ctx, id)
-Get a survey by id.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
-[**Survey**](Survey.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **GetSurveyNode**
-> SurveyNode GetSurveyNode(ctx, id)
-Get a node by id.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
-[**SurveyNode**](SurveyNode.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **GetSurveyNodes**
-> GetSurveyNodesResponse GetSurveyNodes(ctx, id)
-Fetch nodes by given survey id.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
-[**GetSurveyNodesResponse**](GetSurveyNodesResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **GetSurveys**
-> GetSurveysPaginatedResponse GetSurveys(ctx, optional)
-Get all user surveys.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
- **optional** | ***GetSurveysOpts** | optional parameters | nil if no parameters
-
-### Optional Parameters
-Optional parameters are passed through a pointer to a GetSurveysOpts struct
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
- **limit** | **optional.Int32**| The number of results per page. | [default to 10]
-
-### Return type
-
-[**GetSurveysPaginatedResponse**](GetSurveysPaginatedResponse.md)
 
 ### Authorization
 
@@ -3977,34 +3528,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **MergeSurveyNodes**
-> MergeSurveyNodes(ctx, mergeSurveyNodesInputObject)
-Merge two question nodes.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **mergeSurveyNodesInputObject** | [**MergeSurveyNodesInputObject**](MergeSurveyNodesInputObject.md)|  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **MuteChat**
 > ResourceLinkResponse MuteChat(ctx, muteChatInputObject)
 Mute chat sounds
@@ -4129,34 +3652,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **requestSenderIdInputObject** | [**RequestSenderIdInputObject**](RequestSenderIdInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **ResetSurvey**
-> ResourceLinkResponse ResetSurvey(ctx, id)
-Reset a survey flow.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
 
 ### Return type
 
@@ -4535,30 +4030,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **SendEmailVerificationCode**
-> SendEmailVerificationCode(ctx, )
-Send user email verification
-
-
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **SendMessage**
 > SendMessageResponse SendMessage(ctx, sendMessageInputObject)
 Send message
@@ -4575,30 +4046,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SendMessageResponse**](SendMessageResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **SendPhoneVerificationCode**
-> SendPhoneVerificationCode(ctx, )
-Send user phone verification
-
-
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
- (empty response body)
 
 ### Authorization
 
@@ -4651,34 +4098,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **setChatStatusInputObject** | [**SetChatStatusInputObject**](SetChatStatusInputObject.md)|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **StartSurvey**
-> ResourceLinkResponse StartSurvey(ctx, id)
-Start a survey.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
 
 ### Return type
 
@@ -5100,34 +4519,6 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UpdatePassword**
-> UpdatePassword(ctx, updatePasswordInputObject)
-Change user password.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **updatePasswordInputObject** | [**UpdatePasswordInputObject**](UpdatePasswordInputObject.md)|  | 
-
-### Return type
-
- (empty response body)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **UpdateSenderSetting**
 > UpdateSenderSetting(ctx, updateSenderSettingInputObject)
 Change sender settings
@@ -5153,64 +4544,6 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **UpdateSurvey**
-> ResourceLinkResponse UpdateSurvey(ctx, updateSurveyInputObject, id)
-Update existing survey.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **updateSurveyInputObject** | [**UpdateSurveyInputObject**](UpdateSurveyInputObject.md)|  | 
-  **id** | **int32**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **UpdateSurveyNode**
-> ResourceLinkResponse UpdateSurveyNode(ctx, updateSurveyNodeInputObject, id)
-Update existing node.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **updateSurveyNodeInputObject** | [**UpdateSurveyNodeInputObject**](UpdateSurveyNodeInputObject.md)|  | 
-  **id** | **int32**|  | 
-
-### Return type
-
-[**ResourceLinkResponse**](ResourceLinkResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
