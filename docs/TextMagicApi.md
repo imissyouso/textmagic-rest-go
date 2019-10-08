@@ -72,14 +72,12 @@ Method | HTTP request | Description
 [**GetBlockedContacts**](TextMagicApi.md#GetBlockedContacts) | **Get** /api/v2/contacts/block/list | Get blocked contacts
 [**GetBulkSession**](TextMagicApi.md#GetBulkSession) | **Get** /api/v2/bulks/{id} | Get bulk message session status.
 [**GetCallbackSettings**](TextMagicApi.md#GetCallbackSettings) | **Get** /api/v2/callback/settings | Fetch callback URL settings
-[**GetCallsPrices**](TextMagicApi.md#GetCallsPrices) | **Get** /api/v2/calls/price | Check pricing for a inbound/outbound call.
 [**GetChat**](TextMagicApi.md#GetChat) | **Get** /api/v2/chats/{id} | Get a single chat
 [**GetChatByPhone**](TextMagicApi.md#GetChatByPhone) | **Get** /api/v2/chats/{phone}/by/phone | Find chats by phone
 [**GetChatMessages**](TextMagicApi.md#GetChatMessages) | **Get** /api/v2/chats/{id}/message | Get chat messages
 [**GetContact**](TextMagicApi.md#GetContact) | **Get** /api/v2/contacts/{id} | Get the details of a specific contact
 [**GetContactByPhone**](TextMagicApi.md#GetContactByPhone) | **Get** /api/v2/contacts/phone/{phone} | Get the details of a specific contact by phone number
 [**GetContactIfBlocked**](TextMagicApi.md#GetContactIfBlocked) | **Get** /api/v2/contacts/block/phone | Check is that phone number blocked
-[**GetContactImportSessionProgress**](TextMagicApi.md#GetContactImportSessionProgress) | **Get** /api/v2/contacts/import/progress/{id} | Get contact import session progress.
 [**GetContactNote**](TextMagicApi.md#GetContactNote) | **Get** /api/v2/notes/{id} | Get a single contact note.
 [**GetContactNotes**](TextMagicApi.md#GetContactNotes) | **Get** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
 [**GetContacts**](TextMagicApi.md#GetContacts) | **Get** /api/v2/contacts | Get all contacts
@@ -2161,30 +2159,6 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **GetCallsPrices**
-> GetCallsPricesResponse GetCallsPrices(ctx, )
-Check pricing for a inbound/outbound call.
-
-
-
-### Required Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**GetCallsPricesResponse**](GetCallsPricesResponse.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **GetChat**
 > Chat GetChat(ctx, id)
 Get a single chat
@@ -2366,34 +2340,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Contact**](Contact.md)
-
-### Authorization
-
-[BasicAuth](../README.md#BasicAuth)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **GetContactImportSessionProgress**
-> GetContactImportSessionProgressResponse GetContactImportSessionProgress(ctx, id)
-Get contact import session progress.
-
-
-
-### Required Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-  **id** | **int32**|  | 
-
-### Return type
-
-[**GetContactImportSessionProgressResponse**](GetContactImportSessionProgressResponse.md)
 
 ### Authorization
 
