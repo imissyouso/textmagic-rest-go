@@ -10,21 +10,33 @@
 package TextMagic
 
 type SubaccountWithToken struct {
+	// Sub-account ID.
 	Id int32 `json:"id"`
+	// Username.
 	Username string `json:"username"`
+	// Account first name.
 	FirstName string `json:"firstName"`
+	// Account last name.
 	LastName string `json:"lastName"`
 	Email string `json:"email"`
+	// Current account status: * **A** for Active * **T** for Trial. 
 	Status string `json:"status"`
+	// Account balance (in account currency).
 	Balance float64 `json:"balance"`
+	// Contact phone number.
 	Phone string `json:"phone"`
+	// Account company name.
 	Company string `json:"company"`
 	Currency *Currency `json:"currency"`
 	Country *Country `json:"country"`
 	Timezone *Timezone `json:"timezone"`
+	// Type of account: *   **A** for Administrator sub-account *   **U** for Regular User 
 	SubaccountType string `json:"subaccountType"`
+	// Is account has confirmed Email.
 	EmailAccepted bool `json:"emailAccepted"`
+	// Is account has confirmed Phone number.
 	PhoneAccepted bool `json:"phoneAccepted"`
 	Avatar *UserImage `json:"avatar"`
+	// Access token of account.
 	Token string `json:"token"`
 }

@@ -560,7 +560,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.591/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.592/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -758,7 +758,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.591\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.592\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -24954,7 +24954,7 @@ definitions:
         description: "User email address."
       phone:
         type: "string"
-        example: "79030011222"
+        example: "447860021130"
         x-nullable: true
       company:
         type: "string"
@@ -24968,7 +24968,7 @@ definitions:
     example:
       firstName: "Charles"
       lastName: "Conway"
-      phone: "79030011222"
+      phone: "447860021130"
       timezone: 2
       company: "Example Ltd."
       email: "charles@example.com"
@@ -27746,14 +27746,14 @@ definitions:
         format: "date-time"
       caller:
         type: "string"
-        example: "19998887766"
+        example: "447860021131"
       via:
         type: "string"
         example: "1"
         description: "Inbound id"
       receiver:
         type: "string"
-        example: "19998887765"
+        example: "447860021130"
   MessagingStatItem:
     type: "object"
     required:
@@ -27874,31 +27874,41 @@ definitions:
       id:
         type: "integer"
         example: 1
+        description: "Sub-account ID."
       username:
         type: "string"
-        example: "Test"
+        example: "charles.conway"
+        description: "Username."
       firstName:
         type: "string"
-        example: "Test"
+        example: "Charles"
+        description: "Account first name."
       lastName:
         type: "string"
-        example: "Test"
+        example: "Conway"
+        description: "Account last name."
       email:
         type: "string"
-        example: "test@test.com"
+        example: "charles@example.com"
       status:
         type: "string"
-        example: "A"
+        description: "Current account status:\n* **A** for Active\n* **T** for Trial.\n"
+        enum:
+        - "A"
+        - "T"
       balance:
         type: "number"
         format: "double"
-        example: 1.0
+        example: 208.64
+        description: "Account balance (in account currency)."
       phone:
         type: "string"
-        example: "79030011222"
+        example: "447860021130"
+        description: "Contact phone number."
       company:
         type: "string"
-        example: "Dummy company"
+        example: "Example Ltd."
+        description: "Account company name."
       currency:
         $ref: "#/definitions/Currency"
       country:
@@ -27907,18 +27917,26 @@ definitions:
         $ref: "#/definitions/Timezone"
       subaccountType:
         type: "string"
-        example: "P"
+        example: "U"
+        description: "Type of account:\n*   **A** for Administrator sub-account\n\
+          *   **U** for Regular User\n"
+        enum:
+        - "A"
+        - "U"
       emailAccepted:
         type: "boolean"
         example: true
+        description: "Is account has confirmed Email."
       phoneAccepted:
         type: "boolean"
         example: true
+        description: "Is account has confirmed Phone number."
       avatar:
         $ref: "#/definitions/UserImage"
       token:
         type: "string"
-        example: "TokenOfSubaccountPlacedHere"
+        example: "RANDOM_TOKEN"
+        description: "Access token of account."
   FavoriteContact:
     required:
     - "avatar"
@@ -27934,24 +27952,24 @@ definitions:
       entityType:
         type: "string"
         example: "contact"
-        description: ""
+        description: "Entity type which should be marked as **favourite**."
         enum:
         - "list"
         - "contact"
       primaryLabel:
         type: "string"
         example: "Test list"
-        description: "Contact first name/last name if entityType is \\'contact\\',\
-          \ List name if entity type is \\'list\\'"
+        description: "Contact first name/last name if entityType is **contact**, List\
+          \ name if entity type is **list**"
       secondaryLabel:
         type: "string"
         example: "45"
-        description: "Phone number if entityType is \\'contact\\', List contacts number\
-          \ if entity type is \\'list\\'"
+        description: "Phone number if entityType is **contact**, List contacts number\
+          \ if entity type is **list**"
       tertiaryLabel:
         type: "string"
         example: "Australia"
-        description: "Contact country if entityType is \\'contact\\' else null"
+        description: "Contact country if entityType is **contact** else null"
       avatar:
         type: "string"
         example: "avatars/dummy_avatar.png"
