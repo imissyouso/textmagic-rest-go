@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **Phone** | **string** | Phone number in [E.164 format](https://en.wikipedia.org/wiki/E.164). | [default to null]
 **Email** | **string** | Contact email address. | [optional] [default to null]
 **CompanyName** | **string** | Contact company name | [optional] [default to null]
-**Lists** | **string** | Comma-separated [list](/docs/api/lists/) ID. Each contact must be assigned to at least one list. | [default to null]
+**Lists** | **string** | Comma-separated [list](http://docs.textmagictesting.com/section#Lists) ID. Each contact must be assigned to at least one list. | [default to null]
 **Favorited** | **bool** | Is contact favorited | [optional] [default to null]
 **Blocked** | **bool** | Is contact blocked for outgoing and incoming messaging | [optional] [default to null]
 **Type_** | **int32** | Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection) | [optional] [default to null]

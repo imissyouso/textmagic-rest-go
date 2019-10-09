@@ -26,7 +26,7 @@ type Contact struct {
 	Email string `json:"email"`
 	// Contact country.
 	Country *Country `json:"country"`
-	// See [Custom Fields](/docs/api/custom-fields/) section.
+	// See [Custom Fields](http://docs.textmagictesting.com/tag#Custom-Fields) section.
 	CustomFields []ContactCustomField `json:"customFields"`
 	User *User `json:"user"`
 	Lists []List `json:"lists"`

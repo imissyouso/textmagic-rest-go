@@ -81,12 +81,12 @@ tags:
     \ 2x\">"
 - name: "Outbound Messages"
   description: "The primary reason for using the TextMagic API is to send SMS text\
-    \ messages. \n\n# Tutorials\n\nTODO: add some text\n\n## How to send a single\
-    \ text message\n\nTo send a simple text message to one recipient, you should set\
-    \ only the `text` and the `phones` parameters. `text` should\ncontain that desired\
-    \ text and `phones` should be set to the recipient’s international phone number.\n\
-    \nFor example, to send an SMS message with the text “I love TextMagic” to the\
-    \ phone number +44 (0) 7 860021130, use the command:\n\n> POST https://rest.textmagic.com/api/v2/messages\n\
+    \ messages. \n\n# Tutorials\n\n## How to send a single text message\n\nTo send\
+    \ a simple text message to one recipient, you should set only the `text` and the\
+    \ `phones` parameters. `text` should\ncontain that desired text and `phones` should\
+    \ be set to the recipient’s international phone number.\n\nFor example, to send\
+    \ an SMS message with the text “I love TextMagic” to the phone number +44 (0)\
+    \ 7 860021130, use the command:\n\n> POST https://rest.textmagic.com/api/v2/messages\n\
     \nwith the following parameters:\n\n| Parameter | Value |\n| --------- | -----\
     \ |\n| text |I love TextMagic (don’t forget to urlencode your string!) |\n| phones\
     \ | 447860021130 |\n\nYou will receive a result like this:\n\n| Parameter | Example\
@@ -560,7 +560,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.573/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.577/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -758,7 +758,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.573\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.577\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -25252,7 +25252,7 @@ definitions:
         format: "float"
         example: 2.4
         description: "Dedicated number monthly fee for this country. Returned in current\
-          \ [account](/docs/api/account/) currency.TODO"
+          \ [account](http://docs.textmagictesting.com/tag#User) currency."
     example:
       price: 2.4
       numbers:
@@ -26126,7 +26126,8 @@ definitions:
         $ref: "#/definitions/Country"
       customFields:
         type: "array"
-        description: "See [Custom Fields](/docs/api/custom-fields/) section."
+        description: "See [Custom Fields](http://docs.textmagictesting.com/tag#Custom-Fields)\
+          \ section."
         items:
           $ref: "#/definitions/ContactCustomField"
       user:
@@ -26662,7 +26663,7 @@ definitions:
       firstName:
         type: "string"
         example: "John"
-        description: "TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/)\
+        description: "Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/tag#Contacts)\
           \ (even if you submitted phone number instead of contact ID).\n"
         x-nullable: true
       lastName:
@@ -26963,20 +26964,20 @@ definitions:
         type: "string"
         example: "Hello {First name}!"
         description: "Session text. If a template was used for the session text (see\
-          \ [Messages: Send](#tag/Outbound-Messages) for details), it may contain\
-          \ template tags.\n"
+          \ [Messages: Send](http://docs.textmagictesting.com/tag#Outbound-Messages)\
+          \ for details), it may contain template tags.\n"
         x-nullable: true
       source:
         type: "string"
         example: "O"
         description: "*   **O** for TextMagic Online\n*   **A** for API\n*   **M**\
-          \ for TextMagic Messenger\n*   **E** for [Email to SMS](/docs/api/send-email-to-sms/)\n\
-          *   **X** for [Distribution lists](/docs/api/distribution-lists/)\n"
+          \ for TextMagic Messenger\n*   **E** for [Email to SMS](http://docs.textmagictesting.com/tag#Send-Email-to-SMS)\n\
+          *   **X** for [Distribution lists](http://docs.textmagictesting.com/tag#Distribution-Lists)\n"
         x-nullable: true
       referenceId:
         type: "string"
         example: "my_reference_id_4991"
-        description: "Custom reference ID (see [Messages: Send](/docs/api/send-sms/)\
+        description: "Custom reference ID (see [Messages: Send](http://docs.textmagictesting.com/tag#Send-Email-to-SMS)\
           \ for details).\n"
         x-nullable: true
       price:
@@ -27487,7 +27488,8 @@ definitions:
         type: "string"
         example: "d"
         description: "Message status (for chats outbound only). See [message delivery\
-          \ statuses](/docs/api/sms-sessions/#message-delivery-statuses) for details."
+          \ statuses](http://docs.textmagictesting.com/section#Delivery-status-codes)\
+          \ for details."
       firstName:
         type: "string"
         example: "Charles"
@@ -27793,7 +27795,7 @@ definitions:
         format: "float"
         example: 30.15
         description: "Cost for sent messages during this period. The costs are in\
-          \ the [Account](/docs/api/account/) currency. TODO\n"
+          \ the [Account](http://docs.textmagictesting.com/tag#User) currency.\n"
         x-nullable: true
       messagesReceived:
         type: "integer"
@@ -33533,8 +33535,8 @@ definitions:
       lists:
         type: "string"
         example: "10541,18599"
-        description: "Contact [list](/docs/api/lists/) ID. Each contact must be assigned\
-          \ to at least one list."
+        description: "Contact [list](http://docs.textmagictesting.com/tag#Lists) ID.\
+          \ Each contact must be assigned to at least one list."
       favorited:
         type: "boolean"
         example: false
@@ -33607,8 +33609,8 @@ definitions:
       lists:
         type: "string"
         example: "10541,18599"
-        description: "Comma-separated [list](/docs/api/lists/) ID. Each contact must\
-          \ be assigned to at least one list."
+        description: "Comma-separated [list](http://docs.textmagictesting.com/section#Lists)\
+          \ ID. Each contact must be assigned to at least one list."
       favorited:
         type: "boolean"
         example: false
@@ -33704,7 +33706,7 @@ definitions:
       contactId:
         type: "integer"
         example: 50315
-        description: "[Contact](/docs/api/contacts/)\n"
+        description: "[Contact](http://docs.textmagictesting.com/tag#Contacts)\n"
       value:
         type: "string"
         example: "1983-08-31T00:00:00.000Z"
@@ -33842,7 +33844,8 @@ definitions:
       contacts:
         type: "string"
         example: "318,454,30091"
-        description: "Comma-separated array of [Contacts](/docs/api/contacts/) IDs."
+        description: "Comma-separated array of [Contacts](http://docs.textmagictesting.com/tag#Contacts)\
+          \ IDs."
     example:
       contacts: "318,454,30091"
   ClearAndAssignContactsToListInputObject:
@@ -33861,7 +33864,8 @@ definitions:
       contacts:
         type: "string"
         example: "318,454,30091"
-        description: "Comma-separated array of [Contacts](/docs/api/contacts/) IDs.\n"
+        description: "Comma-separated array of [Contacts](http://docs.textmagictesting.com/tag#Contacts)\
+          \ IDs.\n"
   DeleteListContactsBulkInputObject:
     properties:
       ids:
@@ -34343,7 +34347,7 @@ definitions:
         - "Common error message 2"
         description: "Array of messages with errors related to the entire request.\
           \ For example, you did not specify either the **text**\_or **templateId**\
-          \ when [sending the message](/docs/api/send-sms/).\n"
+          \ when [sending the message](http://docs.textmagictesting.com/tag#Outbound-Messages).\n"
         items:
           type: "string"
       fields:

@@ -32,7 +32,7 @@ type MessageOut struct {
 	// Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
 	Charset string `json:"charset"`
 	CharsetLabel string `json:"charsetLabel"`
-	// TODO: Contact first name. Could be substituted from your [Contacts](/docs/api/contacts/) (even if you submitted phone number instead of contact ID). 
+	// Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/tag#Contacts) (even if you submitted phone number instead of contact ID). 
 	FirstName string `json:"firstName"`
 	// Contact last name.
 	LastName string `json:"lastName"`
