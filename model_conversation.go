@@ -25,7 +25,7 @@ type Conversation struct {
 	Text string `json:"text"`
 	// Receiver phone number.
 	Receiver string `json:"receiver"`
-	// Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/section#Delivery-status-codes) for details.
+	// Message status (for chats outbound only). See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details.
 	Status string `json:"status"`
 	// Contact first name.
 	FirstName string `json:"firstName"`

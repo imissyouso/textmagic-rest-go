@@ -20,7 +20,7 @@ type CreateContactInputObject struct {
 	Email string `json:"email,omitempty"`
 	// Company name.
 	CompanyName string `json:"companyName,omitempty"`
-	// Contact [list](http://docs.textmagictesting.com/tag#Lists) ID. Each contact must be assigned to at least one list.
+	// Contact [list](http://docs.textmagictesting.com/#tag/Lists) ID. Each contact must be assigned to at least one list.
 	Lists string `json:"lists"`
 	// Is contact favorited
 	Favorited bool `json:"favorited,omitempty"`
