@@ -54,28 +54,31 @@ tags:
     \ **Authorize** button which you can find at the right top corner of the page.\n\
     \nThe credentials modal window will be shown. Put your `username` and `API key`\
     \ and press **Authorize** button like shown on image below:\n\n<p style=\"text-align:\
-    \ center\">\n\t<img src=\"images/sandbox_auth_modal.png\" style=\"width:600px;\"\
-    >\n<p>\n\n## Command documentation\n\nTo view the documentation for a command\
-    \ i.e. its parameters, filters, output format and return codes, simply click on\
-    \ its name:\n\n![alt text](images/sandbox_try_1.png)\n\n## How it works\n\nSandbox\
-    \ allows you to test the TextMagic REST API directly from your browser. No programming\
-    \ skills are required. To use Sandbox, simply click on the entry for the command\
-    \ you want to test and then press on \"Try it out\" button which is underlined\
-    \ on the image above.\n\nAs example, let's overview **create template** request:\n\
-    \n![alt text](images/sandbox_try_2.png)\n\nEnter the required parameters by editing\
-    \ input JSON structure (just use provided example) and then click **Execute**\
-    \ to make a request. The URL corresponds to the command you wish to use, e.g.\
-    \ `/api/v2/templates` corresponds to the templates command.\n\nYou will receive\
-    \ an HTTP response code along with a JSON response body showing whether the request\
-    \ was successful or not. You will find additional information provided in the\
-    \ HTTP response headers **Response Body** and the **Response Header** sections.\n\
-    \n![alt text](images/sandbox_try_3.png)\n\nWe have now **successfully created**\
-    \ a new message template, and saved it to the TextMagic database. It was created\
+    \ center\">\n\t<img srcset=\"images/sandbox_auth_modal_x1.png 1x, images/sandbox_auth_modal_x2.png\
+    \ 2x\" style=\"width:600px;\">\n<p>\n\n## Command documentation\n\nTo view the\
+    \ documentation for a command i.e. its parameters, filters, output format and\
+    \ return codes, simply click on its name:\n\n<img srcset=\"images/sandbox_try_1_x1.png\
+    \ 1x, images/sandbox_try_1_x2.png 2x\">\n\n## How it works\n\nSandbox allows you\
+    \ to test the TextMagic REST API directly from your browser. No programming skills\
+    \ are required. To use Sandbox, simply click on the entry for the command you\
+    \ want to test and then press on \"Try it out\" button which is underlined on\
+    \ the image above.\n\nAs example, let's overview **create template** request:\n\
+    \n<img srcset=\"images/sandbox_try_2_x1.png 1x, images/sandbox_try_2_x2.png 2x\"\
+    >\n\nEnter the required parameters by editing input JSON structure (just use provided\
+    \ example) and then click **Execute** to make a request. The URL corresponds to\
+    \ the command you wish to use, e.g. `/api/v2/templates` corresponds to the templates\
+    \ command.\n\nYou will receive an HTTP response code along with a JSON response\
+    \ body showing whether the request was successful or not. You will find additional\
+    \ information provided in the HTTP response headers **Response Body** and the\
+    \ **Response Header** sections.\n\n<img srcset=\"images/sandbox_try_3_x1.png 1x,\
+    \ images/sandbox_try_3_x2.png 2x\">\n\nWe have now **successfully created** a\
+    \ new message template, and saved it to the TextMagic database. It was created\
     \ with an `ID` value of `631`. Now we can send a message using this template via\
     \ API or TextMagic Online.\n\nLet’s retrieve the template now to verify that its\
     \ content was saved correctly. To do this, use the GET `/api/v2/templates/{id}`\
     \ command. Open it, enter the **template id** you obtained in the previous step\
-    \ and click **Execute**.\n\n![alt text](images/sandbox_try_4.png)"
+    \ and click **Execute**.\n\n<img srcset=\"images/sandbox_try_4_x1.png 1x, images/sandbox_try_4_x2.png\
+    \ 2x\">"
 - name: "Outbound Messages"
   description: "The primary reason for using the TextMagic API is to send SMS text\
     \ messages. \n\n# Tutorials\n\nTODO: add some text\n\n## How to send a single\
@@ -557,7 +560,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.563/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.570/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -755,7 +758,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.564\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.570\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
