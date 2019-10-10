@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ReplyRate** | **float32** | the number of incoming messages divided by the number of total messages. | [default to null]
+**ReplyRate** | **float32** | The number of incoming messages divided by the number of total messages. | [default to null]
 **Date** | [**time.Time**](time.Time.md) | Time interval start, empty if the **by** parameter was set to **off**.  | [default to null]
 **DeliveryRate** | **float32** | Message delivery rate:the number of delivered messages divided by the number of total messages. | [default to null]
 **Costs** | **float32** | Cost for sent messages during this period. The costs are in the [Account](http://docs.textmagictesting.com/#tag/User) currency.  | [default to null]

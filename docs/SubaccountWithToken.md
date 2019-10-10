@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **Username** | **string** | Username. | [default to null]
 **FirstName** | **string** | Account first name. | [default to null]
 **LastName** | **string** | Account last name. | [default to null]
-**Email** | **string** |  | [default to null]
+**Email** | **string** | Account Email address. | [default to null]
 **Status** | **string** | Current account status: * **A** for Active * **T** for Trial.  | [default to null]
 **Balance** | **float64** | Account balance (in account currency). | [default to null]
 **Phone** | **string** | Contact phone number. | [default to null]

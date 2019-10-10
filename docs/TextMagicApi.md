@@ -115,6 +115,7 @@ Method | HTTP request | Description
 [**MarkChatsUnreadBulk**](TextMagicApi.md#MarkChatsUnreadBulk) | **Post** /api/v2/chats/unread/bulk | Mark chats as unread (bulk)
 [**MuteChat**](TextMagicApi.md#MuteChat) | **Post** /api/v2/chats/mute | Mute chat sounds
 [**MuteChatsBulk**](TextMagicApi.md#MuteChatsBulk) | **Post** /api/v2/chats/mute/bulk | Mute chats (bulk)
+[**Ping**](TextMagicApi.md#Ping) | **Get** /api/v2/ping | Ping
 [**ReopenChatsBulk**](TextMagicApi.md#ReopenChatsBulk) | **Post** /api/v2/chats/reopen/bulk | Reopen chats (bulk)
 [**RequestNewSubaccountToken**](TextMagicApi.md#RequestNewSubaccountToken) | **Post** /api/v2/subaccounts/tokens | Request a new REST API token for sub-account
 [**RequestSenderId**](TextMagicApi.md#RequestSenderId) | **Post** /api/v2/senderids | Apply for a new Sender ID
@@ -3581,6 +3582,30 @@ Name | Type | Description  | Notes
 
  - **Content-Type**: application/json
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **Ping**
+> PingResponse Ping(ctx, )
+Ping
+
+Make a simple ping request
+
+### Required Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**PingResponse**](PingResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

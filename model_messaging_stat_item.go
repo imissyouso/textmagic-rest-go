@@ -14,7 +14,7 @@ import (
 )
 
 type MessagingStatItem struct {
-	// the number of incoming messages divided by the number of total messages.
+	// The number of incoming messages divided by the number of total messages.
 	ReplyRate float32 `json:"replyRate"`
 	// Time interval start, empty if the **by** parameter was set to **off**. 
 	Date time.Time `json:"date"`

@@ -18,6 +18,7 @@ type SubaccountWithToken struct {
 	FirstName string `json:"firstName"`
 	// Account last name.
 	LastName string `json:"lastName"`
+	// Account Email address.
 	Email string `json:"email"`
 	// Current account status: * **A** for Active * **T** for Trial. 
 	Status string `json:"status"`

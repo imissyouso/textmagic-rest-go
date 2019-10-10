@@ -10,6 +10,8 @@
 package TextMagic
 
 type PushToken struct {
+	// type of the token: * **GCM** — Google Cloud Messaging * **APN** — Apple Push Notification * **FCM** — Firebase Cloud Messaging 
 	Type_ string `json:"type"`
+	// Push token value.
 	Token string `json:"token"`
 }
