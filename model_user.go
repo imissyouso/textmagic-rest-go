@@ -12,7 +12,7 @@ package TextMagic
 type User struct {
 	// User ID.
 	Id int32 `json:"id"`
-	// Format for representation of time
+	// User's prefered format of time display * *12h* - AM/PM format * *24h* - 24 hour clock format 
 	DisplayTimeFormat string `json:"displayTimeFormat,omitempty"`
 	// Username.
 	Username string `json:"username"`
@@ -26,6 +26,7 @@ type User struct {
 	Status string `json:"status"`
 	// Account balance (in account currency).
 	Balance float32 `json:"balance"`
+	// User phone number
 	Phone string `json:"phone"`
 	// Account company name.
 	Company string `json:"company"`
@@ -34,7 +35,9 @@ type User struct {
 	Timezone *Timezone `json:"timezone"`
 	// Type of account: * **P** for Parent User * **A** for Administrator Sub-Account * **U** for Regular User 
 	SubaccountType string `json:"subaccountType"`
+	// Is account has confirmed Email.
 	EmailAccepted bool `json:"emailAccepted"`
+	// Is account has confirmed Phone number.
 	PhoneAccepted bool `json:"phoneAccepted"`
 	Avatar *UserImage `json:"avatar"`
 }

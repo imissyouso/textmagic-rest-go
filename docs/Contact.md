@@ -4,8 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **int32** | Contact ID. | [default to null]
-**Favorited** | **bool** |  | [default to null]
-**Blocked** | **bool** |  | [default to null]
+**Favorited** | **bool** | Is the Contact favourite? [Custom fields list](http://docs.textmagictesting.com/#operation/getFavourites). | [default to null]
+**Blocked** | **bool** | Is the Contact blocked? [Custom fields list](http://docs.textmagictesting.com/#operation/getBlockedContacts). | [default to null]
 **FirstName** | **string** | Contact first name. | [default to null]
 **LastName** | **string** | Contact last name. | [default to null]
 **CompanyName** | **string** | Company name. | [default to null]

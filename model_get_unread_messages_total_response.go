@@ -10,5 +10,6 @@
 package TextMagic
 
 type GetUnreadMessagesTotalResponse struct {
+	// Amount of unread messages.
 	Total int32 `json:"total"`
 }

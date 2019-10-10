@@ -10,8 +10,8 @@
 package TextMagic
 
 type UnsubscribeContactInputObject struct {
-	// Contact phone number
+	// Contact phone number.
 	Phone string `json:"phone,omitempty"`
-	// Default is 0 (false). If set to 1 incoming messages from this number will be blocked.
+	// If set to 1 incoming messages from this number will be blocked.
 	BlockIncoming int32 `json:"blockIncoming,omitempty"`
 }

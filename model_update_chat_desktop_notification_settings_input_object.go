@@ -10,12 +10,12 @@
 package TextMagic
 
 type UpdateChatDesktopNotificationSettingsInputObject struct {
-	// Notification sound is enable/disabled
+	// Enable notification sound?
 	PlaySound bool `json:"playSound"`
-	// Show desktop notifications about new messages
+	// Show desktop notifications about new messages.
 	ShowNotifications bool `json:"showNotifications"`
 	// Incoming message text will be displayed in desktop notifications.
 	ShowText bool `json:"showText,omitempty"`
-	// Sound Id of a notification
+	// Sound Id of a notification.
 	SoundId int32 `json:"soundId,omitempty"`
 }

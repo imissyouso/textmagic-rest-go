@@ -10,5 +10,6 @@
 package TextMagic
 
 type ContactImage struct {
+	// URI of a contact avatar.
 	Href string `json:"href"`
 }

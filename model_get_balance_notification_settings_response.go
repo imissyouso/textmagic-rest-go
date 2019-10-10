@@ -10,16 +10,16 @@
 package TextMagic
 
 type GetBalanceNotificationSettingsResponse struct {
-	// Should user receive low balance notification
+	// Should user receive low balance notification.
 	LowBalanceNotification bool `json:"lowBalanceNotification"`
-	// If balance is below this value, user receive low balance notification
+	// If balance is below this value, user receive low balance notification.
 	AlertBalance string `json:"alertBalance"`
-	// Low balance notification phone number
+	// Low balance notification phone number.
 	AlertPhone string `json:"alertPhone"`
-	// Low balance notification email 1
+	// Low balance notification email 1.
 	AlertEmail1 string `json:"alertEmail1"`
-	// Low balance notification email 2
+	// Low balance notification email 2.
 	AlertEmail2 string `json:"alertEmail2"`
-	// Low balance notification email 3
+	// Low balance notification email 3.
 	AlertEmail3 string `json:"alertEmail3"`
 }

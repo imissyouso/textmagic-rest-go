@@ -10,12 +10,18 @@
 package TextMagic
 
 type SendMessageResponse struct {
+	// Message ID.
 	Id int32 `json:"id"`
+	// URI of message session.
 	Href string `json:"href"`
 	Type_ string `json:"type"`
+	// Message session ID.
 	SessionId int32 `json:"sessionId"`
+	// Bulk Session ID. See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).
 	BulkId int32 `json:"bulkId"`
 	MessageId int32 `json:"messageId"`
+	// Message Schedule ID.
 	ScheduleId int32 `json:"scheduleId"`
+	// Message Chat ID.
 	ChatId int32 `json:"chatId"`
 }

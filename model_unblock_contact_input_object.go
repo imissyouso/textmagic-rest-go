@@ -10,6 +10,6 @@
 package TextMagic
 
 type UnblockContactInputObject struct {
-	// Contact phone number
+	// Contact phone number.
 	Phone string `json:"phone,omitempty"`
 }

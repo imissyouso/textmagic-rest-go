@@ -14,8 +14,9 @@ import (
 )
 
 type UserStatement struct {
-	Id int32 `json:"id"`
 	// User statement ID.
+	Id int32 `json:"id"`
+	// User ID.
 	UserId int32 `json:"userId"`
 	// User statement date.
 	Date time.Time `json:"date"`

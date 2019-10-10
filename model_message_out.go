@@ -21,13 +21,16 @@ type MessageOut struct {
 	// Recipient phone number.
 	Receiver string `json:"receiver,omitempty"`
 	Text string `json:"text"`
-	// Delivery status of the message. TODO: Please see the table below to see different delivery statuses. 
+	// Delivery status of the message. See [message delivery statuses](http://docs.textmagictesting.com/#section/Delivery-status-codes) for details. 
 	Status string `json:"status"`
+	// Recipient contact ID.
 	ContactId int32 `json:"contactId"`
+	// Message Session ID of a Message.
 	SessionId int32 `json:"sessionId"`
 	// Sending time.
 	MessageTime time.Time `json:"messageTime"`
 	Avatar string `json:"avatar"`
+	// Indicates that message has been deleted.
 	Deleted bool `json:"deleted,omitempty"`
 	// Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
 	Charset string `json:"charset"`
@@ -38,11 +41,14 @@ type MessageOut struct {
 	LastName string `json:"lastName"`
 	// Two-letter ISO country code of the recipient phone number. 
 	Country string `json:"country"`
+	// Receipent phone number.
 	Phone string `json:"phone,omitempty"`
+	// Message price.
 	Price float32 `json:"price,omitempty"`
 	// Message parts (multiples of 160 characters) count.
 	PartsCount int32 `json:"partsCount"`
 	FromEmail string `json:"fromEmail,omitempty"`
+	// Phone number which is used to send SMS.
 	FromNumber string `json:"fromNumber,omitempty"`
 	SmscId string `json:"smscId,omitempty"`
 	Contact string `json:"contact,omitempty"`

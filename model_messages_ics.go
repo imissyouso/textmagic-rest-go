@@ -21,6 +21,7 @@ type MessagesIcs struct {
 	// [iCal RRULE](http://www.kanzaki.com/docs/ical/rrule.html) string. 
 	Rrule string `json:"rrule"`
 	Session *MessageSession `json:"session"`
+	// Date and time when last message has been sent.
 	LastSent time.Time `json:"lastSent"`
 	ContactName string `json:"contactName"`
 	Parameters *MessagesIcsParameters `json:"parameters"`
@@ -29,9 +30,14 @@ type MessagesIcs struct {
 	TextParameters *MessagesIcsTextParameters `json:"textParameters"`
 	FirstOccurrence time.Time `json:"firstOccurrence"`
 	LastOccurrence time.Time `json:"lastOccurrence"`
+	// Amount of actual recipients.
 	RecipientsCount int32 `json:"recipientsCount"`
+	// User-friendly timezone name (with spaces replaced by underscores).
 	Timezone string `json:"timezone"`
+	// Indicates that schedling has been completed.
 	Completed bool `json:"completed"`
+	// null
 	Avatar string `json:"avatar"`
+	// Scheduling creation time.
 	CreatedAt time.Time `json:"createdAt"`
 }

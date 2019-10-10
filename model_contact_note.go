@@ -14,8 +14,11 @@ import (
 )
 
 type ContactNote struct {
+	// Contact note ID.
 	Id int32 `json:"id"`
+	// Contact note creation time.
 	CreatedAt time.Time `json:"createdAt"`
+	// Contact note text.
 	Note string `json:"note"`
 	User *User `json:"user"`
 }

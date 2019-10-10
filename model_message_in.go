@@ -24,8 +24,11 @@ type MessageIn struct {
 	MessageTime time.Time `json:"messageTime"`
 	// The text from the received message.
 	Text string `json:"text"`
+	// Sender contact ID.
 	ContactId int32 `json:"contactId,omitempty"`
+	// Sender contact first name.
 	FirstName string `json:"firstName,omitempty"`
+	// Sender contact last name.
 	LastName string `json:"lastName,omitempty"`
 	Avatar string `json:"avatar"`
 }

@@ -10,5 +10,6 @@
 package TextMagic
 
 type CreateContactNoteInputObject struct {
+	// Contact Note text.
 	Note string `json:"note,omitempty"`
 }

@@ -12,6 +12,6 @@ package TextMagic
 type UpdateTemplateInputObject struct {
 	// Template name
 	Name string `json:"name"`
-	// Template text. May contain tags inside braces
+	// Template text. May contain tags inside braces. See [Get timezones](http://docs.textmagictesting.com/#section/Custom-fields-list-(Merge-tags)).
 	Content string `json:"content"`
 }

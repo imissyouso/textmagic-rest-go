@@ -10,9 +10,12 @@
 package TextMagic
 
 type MessagesIcsTextParameters struct {
+	// Cost to check one number is constant – 0.04 in your account currency.
 	Cost float32 `json:"cost"`
+	// Message parts (multiples of 160 characters) count.
 	Parts int32 `json:"parts"`
 	Chars int32 `json:"chars"`
+	// Message charset. Could be: * **ISO-8859-1** for plaintext SMS * **UTF-16BE** for Unicode SMS 
 	Encoding string `json:"encoding"`
 	Countries []string `json:"countries"`
 	CharsetLabel string `json:"charsetLabel"`

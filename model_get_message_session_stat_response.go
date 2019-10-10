@@ -10,11 +10,17 @@
 package TextMagic
 
 type GetMessageSessionStatResponse struct {
+	// Amount of failed messages.
 	Failed int32 `json:"failed"`
+	// Amount of delivered messages.
 	Delivered int32 `json:"delivered"`
+	// Amount of accepted messages.
 	Accepted int32 `json:"accepted"`
+	// Amount of rejected messages.
 	Rejected int32 `json:"rejected"`
+	// Amount of schedules messages.
 	Scheduled int32 `json:"scheduled"`
 	All int32 `json:"all"`
+	// Total sent messages.
 	Sent int32 `json:"sent"`
 }

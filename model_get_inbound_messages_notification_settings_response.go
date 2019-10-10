@@ -10,18 +10,18 @@
 package TextMagic
 
 type GetInboundMessagesNotificationSettingsResponse struct {
-	// Should user receive notification about new incoming messages
+	// Should user receive notification about new incoming messages.
 	InboundMessageNotification bool `json:"inboundMessageNotification"`
-	// Should user receive notification about new forwarded calls
+	// Should user receive notification about new forwarded calls.
 	ForwardedCallNotification bool `json:"forwardedCallNotification"`
-	// Include SMS history into notification Email
+	// Include SMS history into notification Email.
 	IncludeSmsHistory bool `json:"includeSmsHistory"`
-	// Send Email notification in HTML format
+	// Send Email notification in HTML format.
 	SendInHtmlFormat bool `json:"sendInHtmlFormat"`
-	// New message notification email 2
+	// New message notification email 2.
 	AlertEmail1 string `json:"alertEmail1"`
-	// New message notification email 2
+	// New message notification email 2.
 	AlertEmail2 string `json:"alertEmail2"`
-	// New message notification email 3
+	// New message notification email 3.
 	AlertEmail3 string `json:"alertEmail3"`
 }

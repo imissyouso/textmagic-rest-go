@@ -3,14 +3,14 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [default to null]
-**Href** | **string** |  | [default to null]
+**Id** | **int32** | Message ID. | [default to null]
+**Href** | **string** | URI of message session. | [default to null]
 **Type_** | **string** |  | [default to null]
-**SessionId** | **int32** |  | [default to null]
-**BulkId** | **int32** |  | [default to null]
+**SessionId** | **int32** | Message session ID. | [default to null]
+**BulkId** | **int32** | Bulk Session ID. See [Sending more than 1,000 messages in one session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session). | [default to null]
 **MessageId** | **int32** |  | [default to null]
-**ScheduleId** | **int32** |  | [default to null]
-**ChatId** | **int32** |  | [default to null]
+**ScheduleId** | **int32** | Message Schedule ID. | [default to null]
+**ChatId** | **int32** | Message Chat ID. | [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

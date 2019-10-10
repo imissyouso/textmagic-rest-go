@@ -10,7 +10,10 @@
 package TextMagic
 
 type GetMessagePriceResponse struct {
+	// Total price of the mesasge.
 	Total float32 `json:"total"`
+	// Message parts (multiples of 160 characters) count.
 	Parts int32 `json:"parts"`
+	// List of countries where message will be sent with pricing explanation.
 	Countries *interface{} `json:"countries"`
 }

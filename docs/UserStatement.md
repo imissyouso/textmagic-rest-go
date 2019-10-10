@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Id** | **int32** |  | [default to null]
-**UserId** | **int32** | User statement ID. | [default to null]
+**Id** | **int32** | User statement ID. | [default to null]
+**UserId** | **int32** | User ID. | [default to null]
 **Date** | [**time.Time**](time.Time.md) | User statement date. | [default to null]
 **Balance** | **float64** |  | [default to null]
 **Delta** | **float32** | Balance change amount. | [default to null]

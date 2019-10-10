@@ -10,6 +10,7 @@
 package TextMagic
 
 type MessagesIcsParameters struct {
+	// Scheduled message text.
 	Text string `json:"text"`
 	Recipients *MessagesIcsParametersRecipients `json:"recipients"`
 }

@@ -10,10 +10,10 @@
 package TextMagic
 
 type MuteChatInputObject struct {
-	// Chat ID
+	// Chat ID.
 	Id int32 `json:"id"`
-	// Mute value
+	// Mute notifications sound.
 	Mute bool `json:"mute"`
-	// Mute for N hours
+	// Mute for N hours.
 	For_ int32 `json:"for,omitempty"`
 }

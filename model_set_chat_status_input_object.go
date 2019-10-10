@@ -10,8 +10,8 @@
 package TextMagic
 
 type SetChatStatusInputObject struct {
-	// Chat ID
+	// Chat ID.
 	Id int32 `json:"id"`
-	// Status
+	// Chat status:   * **a** - Active   * **c** - Closed   * **d** - Deleted 
 	Status string `json:"status"`
 }

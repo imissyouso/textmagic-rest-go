@@ -31,5 +31,6 @@ type Conversation struct {
 	FirstName string `json:"firstName"`
 	// Contact last name.
 	LastName string `json:"lastName"`
+	// Session ID of a message. See [message sessions](http://docs.textmagictesting.com/#tag/Outbound-Message-Sessions) for details.
 	SessionId int32 `json:"sessionId"`
 }

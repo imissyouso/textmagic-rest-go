@@ -11,6 +11,6 @@ package TextMagic
 
 type GetContactImportSessionProgressResponse struct {
 	Status int32 `json:"status"`
-	// How many contacts have been imported
+	// How many contacts have been imported.
 	Processed int32 `json:"processed"`
 }
