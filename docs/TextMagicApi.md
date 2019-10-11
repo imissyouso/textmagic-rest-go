@@ -138,7 +138,7 @@ Method | HTTP request | Description
 [**UpdateBalanceNotificationSettings**](TextMagicApi.md#UpdateBalanceNotificationSettings) | **Put** /api/v2/user/notification/balance | Update balance notification settings
 [**UpdateCallbackSettings**](TextMagicApi.md#UpdateCallbackSettings) | **Put** /api/v2/callback/settings | Update callback URL settings
 [**UpdateChatDesktopNotificationSettings**](TextMagicApi.md#UpdateChatDesktopNotificationSettings) | **Put** /api/v2/user/desktop/notification | Update chat desktop notification settings
-[**UpdateContact**](TextMagicApi.md#UpdateContact) | **Put** /api/v2/contact/{id}/normalized | Edit a contact
+[**UpdateContact**](TextMagicApi.md#UpdateContact) | **Put** /api/v2/contacts/{id}/normalized | Edit a contact
 [**UpdateContactNote**](TextMagicApi.md#UpdateContactNote) | **Put** /api/v2/notes/{id} | Update a contact note
 [**UpdateCurrentUser**](TextMagicApi.md#UpdateCurrentUser) | **Put** /api/v2/user | Edit current account info
 [**UpdateCustomField**](TextMagicApi.md#UpdateCustomField) | **Put** /api/v2/customfields/{id} | Edit a custom field

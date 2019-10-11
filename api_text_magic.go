@@ -14996,7 +14996,7 @@ func (a *TextMagicApiService) UpdateContact(ctx context.Context, updateContactIn
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/contact/{id}/normalized"
+	localVarPath := a.client.cfg.BasePath + "/api/v2/contacts/{id}/normalized"
 	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
 
 	localVarHeaderParams := make(map[string]string)
