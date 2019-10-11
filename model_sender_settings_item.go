@@ -9,8 +9,9 @@
 
 package TextMagic
 
-type GetSenderSettingsResponse struct {
-	User []SenderSettingsItem `json:"user"`
-	Special []SenderSettingsItem `json:"special"`
-	Other []SenderSettingsItem `json:"other"`
+type SenderSettingsItem struct {
+	// Two-letter ISO country code of the recipient phone number. 
+	Country string `json:"country"`
+	// Phone enabled for sending to specified country
+	Phone string `json:"phone"`
 }

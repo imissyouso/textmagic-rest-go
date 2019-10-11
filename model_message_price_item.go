@@ -9,8 +9,11 @@
 
 package TextMagic
 
-type GetSenderSettingsResponse struct {
-	User []SenderSettingsItem `json:"user"`
-	Special []SenderSettingsItem `json:"special"`
-	Other []SenderSettingsItem `json:"other"`
+type MessagePriceItem struct {
+	// Country name.
+	Name string `json:"name"`
+	// Price to send message to desired country.
+	Price string `json:"price"`
+	// Two-letter ISO country code of the recipient phone number.
+	Country string `json:"country"`
 }

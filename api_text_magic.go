@@ -965,7 +965,7 @@ func (a *TextMagicApiService) CreateContact(ctx context.Context, createContactIn
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/contacts"
+	localVarPath := a.client.cfg.BasePath + "/api/v2/contacts/normalized"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2901,7 +2901,7 @@ func (a *TextMagicApiService) DeleteInboundMessagesBulk(ctx context.Context, del
 
 /* 
 TextMagicApiService Delete a list
-&gt; When you delete a list, the contacts in it are deleted as well unless they were saved in other list. 
+This command has no parameters. If successful, this command will return the standard delete response (204 No Content), otherwise a standard error response will be returned.  When you delete a list, the contacts in it are deleted as well unless they were saved in other list.
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param id
 
@@ -9166,7 +9166,7 @@ func (a *TextMagicApiService) GetMessagePrice(ctx context.Context, localVarOptio
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/messages/price"
+	localVarPath := a.client.cfg.BasePath + "/api/v2/messages/price/normalized"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -10505,7 +10505,7 @@ func (a *TextMagicApiService) GetSenderSettings(ctx context.Context, localVarOpt
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/sender/settings"
+	localVarPath := a.client.cfg.BasePath + "/api/v2/sender/settings/normalized"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -14996,7 +14996,7 @@ func (a *TextMagicApiService) UpdateContact(ctx context.Context, updateContactIn
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/contacts/{id}"
+	localVarPath := a.client.cfg.BasePath + "/api/v2/contact/{id}/normalized"
 	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
 
 	localVarHeaderParams := make(map[string]string)
@@ -15806,7 +15806,7 @@ func (a *TextMagicApiService) UpdateSenderSetting(ctx context.Context, updateSen
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/sender/settings"
+	localVarPath := a.client.cfg.BasePath + "/api/v2/sender/settings/normalized"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

@@ -9,8 +9,9 @@
 
 package TextMagic
 
-type GetSenderSettingsResponse struct {
-	User []SenderSettingsItem `json:"user"`
-	Special []SenderSettingsItem `json:"special"`
-	Other []SenderSettingsItem `json:"other"`
+type UpdateSurveyCountryItem struct {
+	// Two-letter ISO country code
+	Country string `json:"country"`
+	// User inbound phone ID
+	UserInboundId int32 `json:"user_inbound_id"`
 }

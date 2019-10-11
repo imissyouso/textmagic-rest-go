@@ -560,7 +560,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.607/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.610/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -758,7 +758,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.607\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.610\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -2165,7 +2165,7 @@ paths:
           \ object\n    my $result = $api_instance->get_available_sender_setting_options(country\
           \ => $country);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->get_available_sender_setting_options: $@\\n\";\n}"
-  /api/v2/sender/settings:
+  /api/v2/sender/settings/normalized:
     get:
       tags:
       - "TextMagic"
@@ -6037,7 +6037,7 @@ paths:
           \ => 'undefined',\n);\n\neval {\n    $api_instance->update_callback_settings(update_callback_settings_input_object\
           \ => $input);\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->update_callback_settings:\
           \ $@\\n\";\n}"
-  /api/v2/calls/price: {}
+  /api/v2/calls/price/normalized: {}
   /api/v2/contacts/search:
     get:
       tags:
@@ -6722,6 +6722,7 @@ paths:
           \ => $limit, shared => $shared, orderBy => $orderBy, direction => $direction);\n\
           \    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->get_contacts:\
           \ $@\\n\";\n}"
+  /api/v2/contacts/normalized:
     post:
       tags:
       - "TextMagic"
@@ -6759,10 +6760,10 @@ paths:
           10541,18599\");\n\n// Optional parameters, you can skip these setters calls\n\
           $input->setFirstName(\"Charles\");\n$input->setLastName(\"Conway\");\n$input->setEmail(\"\
           charles@example.com\");\n$input->setCompanyName(\"Example Ltd.\");\n$input->setFavorited(false);\n\
-          $input->setBlocked(false);\n$input->setType(1);\n$input->setLocal(0);\n\
-          $input->setCountry(\"US\");\n\ntry {\n    // ResourceLinkResponse class\
-          \ object\n    $result = $api->createContact($input);\n    // ...\n} catch\
-          \ (Exception $e) {\n    echo 'Exception when calling TextMagicApi->createContact:\
+          $input->setBlocked(false);\n$input->setType(1);\n$input->setCustomFieldValues();\n\
+          $input->setLocal(0);\n$input->setCountry(\"US\");\n\ntry {\n    // ResourceLinkResponse\
+          \ class object\n    $result = $api->createContact($input);\n    // ...\n\
+          } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->createContact:\
           \ ', $e->getMessage(), PHP_EOL;\n}"
       - lang: "Java"
         source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
@@ -6779,10 +6780,11 @@ paths:
           \ you can skip these setters calls\n        input.setFirstName(\"Charles\"\
           );\n        input.setLastName(\"Conway\");\n        input.setEmail(\"charles@example.com\"\
           );\n        input.setCompanyName(\"Example Ltd.\");\n        input.setFavorited(false);\n\
-          \        input.setBlocked(false);\n        input.setType(1);\n        input.setLocal(0);\n\
-          \        input.setCountry(\"US\");\n\n        try {\n            // ResourceLinkResponse\
-          \ class object\n            ResourceLinkResponse obj = apiInstance.createContact(input);\n\
-          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
+          \        input.setBlocked(false);\n        input.setType(1);\n        input.setCustomFieldValues();\n\
+          \        input.setLocal(0);\n        input.setCountry(\"US\");\n\n     \
+          \   try {\n            // ResourceLinkResponse class object\n          \
+          \  ResourceLinkResponse obj = apiInstance.createContact(input);\n      \
+          \      // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
           Exception when calling createContact\");\n            e.printStackTrace();\n\
           \        }\n    }\n}"
       - lang: "JavaScript"
@@ -6795,7 +6797,7 @@ paths:
           \    // Optional parameters\n    firstName: \"Charles\",\n    lastName:\
           \ \"Conway\",\n    email: \"charles@example.com\",\n    companyName: \"\
           Example Ltd.\",\n    favorited: false,\n    blocked: false,\n    type: 1,\n\
-          \    local: 0,\n    country: \"US\",\n}\n\napi.createContact(input).then(function\
+          \    customFieldValues: ,\n    local: 0,\n    country: \"US\",\n}\n\napi.createContact(input).then(function\
           \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
           });"
       - lang: "Ruby"
@@ -6807,10 +6809,10 @@ paths:
           \n# Optional parameters, you can skip them\nobj.first_name = \"Charles\"\
           \nobj.last_name = \"Conway\"\nobj.email = \"charles@example.com\"\nobj.company_name\
           \ = \"Example Ltd.\"\nobj.favorited = false\nobj.blocked = false\nobj.type\
-          \ = 1\nobj.local = 0\nobj.country = \"US\"\n\nbegin\n    # ResourceLinkResponse\
-          \ object\n    result = api.create_contact(input)\n    # ...\nrescue TextMagic::ApiError\
-          \ => e\n    puts \"Exception when calling TextMagicApi->create_contact:\
-          \ #{e}\"\nend"
+          \ = 1\nobj.custom_field_values = \nobj.local = 0\nobj.country = \"US\"\n\
+          \nbegin\n    # ResourceLinkResponse object\n    result = api.create_contact(input)\n\
+          \    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception when calling\
+          \ TextMagicApi->create_contact: #{e}\"\nend"
       - lang: "C#"
         source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
           \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
@@ -6827,12 +6829,12 @@ paths:
           Conway\";\n            obj.Email = \"charles@example.com\";\n          \
           \  obj.CompanyName = \"Example Ltd.\";\n            obj.Favorited = false;\n\
           \            obj.Blocked = false;\n            obj.Type = 1;\n         \
-          \   obj.Local = 0;\n            obj.Country = \"US\";\n\n            try\
-          \ {\n                // ResourceLinkResponse class object\n            \
-          \    var result = apiInstance.CreateContact(obj);\n                // ...\n\
-          \            } catch (Exception e) {\n                Console.WriteLine(\"\
-          Exception when calling createContact: \"+e.Message);\n            }\n  \
-          \      }\n    }\n}"
+          \   obj.CustomFieldValues = ;\n            obj.Local = 0;\n            obj.Country\
+          \ = \"US\";\n\n            try {\n                // ResourceLinkResponse\
+          \ class object\n                var result = apiInstance.CreateContact(obj);\n\
+          \                // ...\n            } catch (Exception e) {\n         \
+          \       Console.WriteLine(\"Exception when calling createContact: \"+e.Message);\n\
+          \            }\n        }\n    }\n}"
       - lang: "VB.Net"
         source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
           Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
@@ -6845,12 +6847,12 @@ paths:
           ,\n            .Email = \"charles@example.com\",\n            .CompanyName\
           \ = \"Example Ltd.\",\n            .Lists = \"10541,18599\",\n         \
           \   .Favorited = false,\n            .Blocked = false,\n            .Type\
-          \ = 1,\n            .Local = 0,\n            .Country = \"US\"\n       \
-          \ }\n\n        Try\n            ' ResourceLinkResponse class object\n  \
-          \          Dim result = apiInstance.CreateContact(obj)\n            ' ...\n\
-          \        Catch e As Exception\n            Console.WriteLine(\"Exception\
-          \ when calling createContact: \" + e.Message)\n        End Try\n    End\
-          \ Sub\nEnd Module"
+          \ = 1,\n            .CustomFieldValues = ,\n            .Local = 0,\n  \
+          \          .Country = \"US\"\n        }\n\n        Try\n            ' ResourceLinkResponse\
+          \ class object\n            Dim result = apiInstance.CreateContact(obj)\n\
+          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling createContact: \" + e.Message)\n        End Try\n\
+          \    End Sub\nEnd Module"
       - lang: "Go"
         source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
           \n    // If you're using go.mod use line below to import our module\n  \
@@ -6865,10 +6867,11 @@ paths:
           \ them\n        FirstName: \"Charles\",\n        LastName: \"Conway\",\n\
           \        Email: \"charles@example.com\",\n        CompanyName: \"Example\
           \ Ltd.\",\n        Favorited: false,\n        Blocked: false,\n        Type:\
-          \ 1,\n        Local: 0,\n        Country: \"US\",\n    }\n\n    // tm.ResourceLinkResponse\
-          \ struct\n    result, _, err := client.TextMagicApi.CreateContact(auth,\
-          \ input)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n\
-          \        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+          \ 1,\n        CustomFieldValues: ,\n        Local: 0,\n        Country:\
+          \ \"US\",\n    }\n\n    // tm.ResourceLinkResponse struct\n    result, _,\
+          \ err := client.TextMagicApi.CreateContact(auth, input)\n\n    if err !=\
+          \ nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"%+v\\\
+          n\", result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
         source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
           \ where SDK lib is installed. See C++ SDK installation instructions for\
@@ -6886,11 +6889,12 @@ paths:
           Charles\");\n    input->setLastName(\"Conway\");\n    input->setEmail(\"\
           charles@example.com\");\n    input->setCompanyName(\"Example Ltd.\");\n\
           \    input->setFavorited(false);\n    input->setBlocked(false);\n    input->setType(1);\n\
-          \    input->setLocal(0);\n    input->setCountry(\"US\");\n\n    try {\n\
-          \        pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.createContact(input);\n\
-          \        result.wait();\n        // put operations with result here...\n\
-          \    } catch(const std::exception& e) {\n        std::cout << \"createContact()\
-          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+          \    input->setCustomFieldValues();\n    input->setLocal(0);\n    input->setCountry(\"\
+          US\");\n\n    try {\n        pplx::task<std::shared_ptr<ResourceLinkResponse>>\
+          \ result = api.createContact(input);\n        result.wait();\n        //\
+          \ put operations with result here...\n    } catch(const std::exception&\
+          \ e) {\n        std::cout << \"createContact() exception: \" << e.what()\
+          \ << '\\n';\n    }\n\n    return 0;\n}"
       - lang: "Python"
         source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
           \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
@@ -6903,8 +6907,8 @@ paths:
           \ you can skip them\ninput.first_name = \"Charles\"\ninput.last_name = \"\
           Conway\"\ninput.email = \"charles@example.com\"\ninput.company_name = \"\
           Example Ltd.\"\ninput.favorited = false\ninput.blocked = false\ninput.type\
-          \ = 1\ninput.local = 0\ninput.country = \"US\"\n\ntry:\n    # ResourceLinkResponse\
-          \ object\n    result = api_instance.create_contact(create_contact_input_object=input)\n\
+          \ = 1\ninput.custom_field_values = \ninput.local = 0\ninput.country = \"\
+          US\"\n\ntry:\n    # ResourceLinkResponse object\n    result = api_instance.create_contact(create_contact_input_object=input)\n\
           \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
           \ TextMagicApi->create_contact: %s\\n\" % e)\n"
       - lang: "Perl"
@@ -6918,8 +6922,8 @@ paths:
           \    # Optional parameters, you can skip them\n    firstName => 'Charles',\n\
           \    lastName => 'Conway',\n    email => 'charles@example.com',\n    companyName\
           \ => 'Example Ltd.',\n    favorited => 0,\n    blocked => 0,\n    type =>\
-          \ 1,\n    local => 0,\n    country => 'US',\n);\n\neval {\n    # ResourceLinkResponse\
-          \ object\n    my $result = $api_instance->create_contact(create_contact_input_object\
+          \ 1,\n    customFieldValues => ,\n    local => 0,\n    country => 'US',\n\
+          );\n\neval {\n    # ResourceLinkResponse object\n    my $result = $api_instance->create_contact(create_contact_input_object\
           \ => $input);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->create_contact: $@\\n\";\n}"
   /api/v2/contacts/phone/{phone}:
@@ -7200,220 +7204,6 @@ paths:
           \neval {\n    # Contact object\n    my $result = $api_instance->get_contact(id\
           \ => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->get_contact: $@\\n\";\n}"
-    put:
-      tags:
-      - "TextMagic"
-      summary: "Edit a contact"
-      description: ""
-      operationId: "updateContact"
-      parameters:
-      - in: "body"
-        name: "UpdateContactInputObject"
-        required: true
-        schema:
-          $ref: "#/definitions/UpdateContactInputObject"
-        x-exportParamName: "UpdateContactInputObject"
-      - name: "id"
-        in: "path"
-        required: true
-        type: "integer"
-        x-example: 1
-        x-exportParamName: "Id"
-      responses:
-        201:
-          description: "Contact has been created with success"
-          schema:
-            $ref: "#/definitions/ResourceLinkResponse"
-        400:
-          description: "Bad request"
-          schema:
-            $ref: "#/definitions/BadRequestResponse"
-        401:
-          description: "Unauthorized request"
-          schema:
-            $ref: "#/definitions/UnauthorizedResponse"
-        404:
-          description: "Request data not found"
-          schema:
-            $ref: "#/definitions/NotFoundResponse"
-      x-code-samples:
-      - lang: "PHP"
-        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
-          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
-          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
-          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
-          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new UpdateContactInputObject();\n\
-          \n// Required parameters\n$input->setPhone(\"447860021130\");\n$input->setLists(\"\
-          10541,18599\");\n\n// Optional parameters, you can skip these setters calls\n\
-          $input->setFirstName(\"Example first name\");\n$input->setLastName(\"Example\
-          \ first name\");\n$input->setEmail(\"charles@example.com\");\n$input->setCompanyName(\"\
-          My pretty company\");\n$input->setFavorited(false);\n$input->setBlocked(false);\n\
-          $input->setType(1);\n$input->setLocal(0);\n$input->setCountry(\"US\");\n\
-          $id = 1;\n\ntry {\n    // ResourceLinkResponse class object\n    $result\
-          \ = $api->updateContact($input$id);\n    // ...\n} catch (Exception $e)\
-          \ {\n    echo 'Exception when calling TextMagicApi->updateContact: ', $e->getMessage(),\
-          \ PHP_EOL;\n}"
-      - lang: "Java"
-        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
-          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
-          public class App {\n    public static void main(String[] args) {\n     \
-          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
-          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
-          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
-          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
-          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        UpdateContactInputObject input = new UpdateContactInputObject();\n\
-          \n        // Required parameters\n        input.setPhone(\"447860021130\"\
-          );\n        input.setLists(\"10541,18599\");\n\n        // Optional parameters,\
-          \ you can skip these setters calls\n        input.setFirstName(\"Example\
-          \ first name\");\n        input.setLastName(\"Example first name\");\n \
-          \       input.setEmail(\"charles@example.com\");\n        input.setCompanyName(\"\
-          My pretty company\");\n        input.setFavorited(false);\n        input.setBlocked(false);\n\
-          \        input.setType(1);\n        input.setLocal(0);\n        input.setCountry(\"\
-          US\");\n        int id = 1;\n\n        try {\n            // ResourceLinkResponse\
-          \ class object\n            ResourceLinkResponse obj = apiInstance.updateContact(inputid);\n\
-          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
-          Exception when calling updateContact\");\n            e.printStackTrace();\n\
-          \        }\n    }\n}"
-      - lang: "JavaScript"
-        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
-          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
-          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
-          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
-          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ input = {\n    phone: \"447860021130\",\n    lists: \"10541,18599\",\n\
-          \    // Optional parameters\n    firstName: \"Example first name\",\n  \
-          \  lastName: \"Example first name\",\n    email: \"charles@example.com\"\
-          ,\n    companyName: \"My pretty company\",\n    favorited: false,\n    blocked:\
-          \ false,\n    type: 1,\n    local: 0,\n    country: \"US\",\n}\nconst id\
-          \ = 1;\n\napi.updateContact(input, id).then(function (data) {\n    console.log(data);\n\
-          }).catch(function(err){\n    console.error(err);\n});"
-      - lang: "Ruby"
-        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
-          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
-          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::UpdateContactInputObject.new\n\
-          \n# Required parameters\nobj.phone = \"447860021130\"\nobj.lists = \"10541,18599\"\
-          \n# Optional parameters, you can skip them\nobj.first_name = \"Example first\
-          \ name\"\nobj.last_name = \"Example first name\"\nobj.email = \"charles@example.com\"\
-          \nobj.company_name = \"My pretty company\"\nobj.favorited = false\nobj.blocked\
-          \ = false\nobj.type = 1\nobj.local = 0\nobj.country = \"US\"\nid = 1\n\n\
-          begin\n    # ResourceLinkResponse object\n    result = api.update_contact(input,\
-          \ id)\n    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception\
-          \ when calling TextMagicApi->update_contact: #{e}\"\nend"
-      - lang: "C#"
-        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
-          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
-          {\n    class Program\n    {\n        static void Main(string[] args)\n \
-          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
-          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
-          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
-          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
-          \            var apiInstance = new TextMagicApi();\n\n            var obj\
-          \ = new UpdateContactInputObject();\n\n            // Required parameters\n\
-          \            obj.Phone = \"447860021130\";\n            obj.Lists = \"10541,18599\"\
-          ;\n\n            // Optional parameters, you can skip these setters calls\n\
-          \            obj.FirstName = \"Example first name\";\n            obj.LastName\
-          \ = \"Example first name\";\n            obj.Email = \"charles@example.com\"\
-          ;\n            obj.CompanyName = \"My pretty company\";\n            obj.Favorited\
-          \ = false;\n            obj.Blocked = false;\n            obj.Type = 1;\n\
-          \            obj.Local = 0;\n            obj.Country = \"US\";\n       \
-          \     int id = 1;\n\n            try {\n                // ResourceLinkResponse\
-          \ class object\n                var result = apiInstance.UpdateContact(objid);\n\
-          \                // ...\n            } catch (Exception e) {\n         \
-          \       Console.WriteLine(\"Exception when calling updateContact: \"+e.Message);\n\
-          \            }\n        }\n    }\n}"
-      - lang: "VB.Net"
-        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
-          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
-          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
-          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
-          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
-          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
-          \ UpdateContactInputObject With {\n            .FirstName = \"Example first\
-          \ name\",\n            .LastName = \"Example first name\",\n           \
-          \ .Phone = \"447860021130\",\n            .Email = \"charles@example.com\"\
-          ,\n            .CompanyName = \"My pretty company\",\n            .Lists\
-          \ = \"10541,18599\",\n            .Favorited = false,\n            .Blocked\
-          \ = false,\n            .Type = 1,\n            .Local = 0,\n          \
-          \  .Country = \"US\"\n        }\n        Dim id As Integer = 1\n\n     \
-          \   Try\n            ' ResourceLinkResponse class object\n            Dim\
-          \ result = apiInstance.UpdateContact(objid)\n            ' ...\n       \
-          \ Catch e As Exception\n            Console.WriteLine(\"Exception when calling\
-          \ updateContact: \" + e.Message)\n        End Try\n    End Sub\nEnd Module"
-      - lang: "Go"
-        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
-          \n    // If you're using go.mod use line below to import our module\n  \
-          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
-          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
-          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
-          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
-          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
-          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
-          \        // Required parameters\n        Phone: \"447860021130\",\n    \
-          \    Lists: \"10541,18599\",\n        // Optional parameters, you can skip\
-          \ them\n        FirstName: \"Example first name\",\n        LastName: \"\
-          Example first name\",\n        Email: \"charles@example.com\",\n       \
-          \ CompanyName: \"My pretty company\",\n        Favorited: false,\n     \
-          \   Blocked: false,\n        Type: 1,\n        Local: 0,\n        Country:\
-          \ \"US\",\n    }\n    // Required\n    var id int32 = 1\n\n    // tm.ResourceLinkResponse\
-          \ struct\n    result, _, err := client.TextMagicApi.UpdateContact(auth,\
-          \ input, id)\n\n    if err != nil {\n        log.Fatal(err)\n    } else\
-          \ {\n        fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
-      - lang: "Cpp"
-        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
-          \ where SDK lib is installed. See C++ SDK installation instructions for\
-          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
-          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
-          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
-          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
-          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
-          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
-          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<UpdateContactInputObject>\
-          \ input(new UpdateContactInputObject);\n    // Required parameters\n   \
-          \ input->setPhone(\"447860021130\");\n    input->setLists(\"10541,18599\"\
-          );\n    // Optional parameters, you can skip them\n    input->setFirstName(\"\
-          Example first name\");\n    input->setLastName(\"Example first name\");\n\
-          \    input->setEmail(\"charles@example.com\");\n    input->setCompanyName(\"\
-          My pretty company\");\n    input->setFavorited(false);\n    input->setBlocked(false);\n\
-          \    input->setType(1);\n    input->setLocal(0);\n    input->setCountry(\"\
-          US\");\n\n    int id = 1;\n\n    try {\n        pplx::task<std::shared_ptr<ResourceLinkResponse>>\
-          \ result = api.updateContact(input, id);\n        result.wait();\n     \
-          \   // put operations with result here...\n    } catch(const std::exception&\
-          \ e) {\n        std::cout << \"updateContact() exception: \" << e.what()\
-          \ << '\\n';\n    }\n\n    return 0;\n}"
-      - lang: "Python"
-        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
-          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
-          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
-          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
-          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
-          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
-          \ = TextMagic.UpdateContactInputObject()\n\n# Required parameters\ninput.phone\
-          \ = \"447860021130\"\ninput.lists = \"10541,18599\"\n# Optional parameters,\
-          \ you can skip them\ninput.first_name = \"Example first name\"\ninput.last_name\
-          \ = \"Example first name\"\ninput.email = \"charles@example.com\"\ninput.company_name\
-          \ = \"My pretty company\"\ninput.favorited = false\ninput.blocked = false\n\
-          input.type = 1\ninput.local = 0\ninput.country = \"US\"\nid = 1\n\ntry:\n\
-          \    # ResourceLinkResponse object\n    result = api_instance.update_contact(update_contact_input_object=input,\
-          \ id=id)\n    # ...\nexcept ApiException as e:\n    print(\"Exception when\
-          \ calling TextMagicApi->update_contact: %s\\n\" % e)\n"
-      - lang: "Perl"
-        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
-          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::UpdateContactInputObject;\n\
-          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
-          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
-          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
-          \nmy $input = Net::Sms::TextMagicClient::Object::UpdateContactInputObject->new(\n\
-          \    # Required parameters\n    phone => '447860021130',\n    lists => '10541,18599',\n\
-          \    # Optional parameters, you can skip them\n    firstName => 'Example\
-          \ first name',\n    lastName => 'Example first name',\n    email => 'charles@example.com',\n\
-          \    companyName => 'My pretty company',\n    favorited => 0,\n    blocked\
-          \ => 0,\n    type => 1,\n    local => 0,\n    country => 'US',\n);\nmy $id\
-          \ = 1;\n\neval {\n    # ResourceLinkResponse object\n    my $result = $api_instance->update_contact(update_contact_input_object\
-          \ => $input, id => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
-          \ when calling TextMagicApi->update_contact: $@\\n\";\n}"
     delete:
       tags:
       - "TextMagic"
@@ -7549,6 +7339,229 @@ paths:
           \neval {\n    $api_instance->delete_contact(id => $id);\n};\n\nif ($@) {\n\
           \    warn \"Exception when calling TextMagicApi->delete_contact: $@\\n\"\
           ;\n}"
+  /api/v2/contact/{id}/normalized:
+    put:
+      tags:
+      - "TextMagic"
+      summary: "Edit a contact"
+      description: ""
+      operationId: "updateContact"
+      parameters:
+      - in: "body"
+        name: "UpdateContactInputObject"
+        required: true
+        schema:
+          $ref: "#/definitions/UpdateContactInputObject"
+        x-exportParamName: "UpdateContactInputObject"
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        x-example: 1
+        x-exportParamName: "Id"
+      responses:
+        201:
+          description: "Contact has been created with success"
+          schema:
+            $ref: "#/definitions/ResourceLinkResponse"
+        400:
+          description: "Bad request"
+          schema:
+            $ref: "#/definitions/BadRequestResponse"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+        404:
+          description: "Request data not found"
+          schema:
+            $ref: "#/definitions/NotFoundResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Models\\;\nuse TextMagic\\Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\
+          \n$config = Configuration::getDefaultConfiguration()\n    ->setUsername('YOUR_USERNAME')\n\
+          \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
+          \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new UpdateContactInputObject();\n\
+          \n// Required parameters\n$input->setPhone(\"447860021130\");\n$input->setLists(\"\
+          10541,18599\");\n\n// Optional parameters, you can skip these setters calls\n\
+          $input->setFirstName(\"Example first name\");\n$input->setLastName(\"Example\
+          \ first name\");\n$input->setEmail(\"charles@example.com\");\n$input->setCompanyName(\"\
+          My pretty company\");\n$input->setFavorited(false);\n$input->setBlocked(false);\n\
+          $input->setType(1);\n$input->setCustomFieldValues();\n$input->setLocal(0);\n\
+          $input->setCountry(\"US\");\n$id = 1;\n\ntry {\n    // ResourceLinkResponse\
+          \ class object\n    $result = $api->updateContact($input$id);\n    // ...\n\
+          } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->updateContact:\
+          \ ', $e->getMessage(), PHP_EOL;\n}"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        UpdateContactInputObject input = new UpdateContactInputObject();\n\
+          \n        // Required parameters\n        input.setPhone(\"447860021130\"\
+          );\n        input.setLists(\"10541,18599\");\n\n        // Optional parameters,\
+          \ you can skip these setters calls\n        input.setFirstName(\"Example\
+          \ first name\");\n        input.setLastName(\"Example first name\");\n \
+          \       input.setEmail(\"charles@example.com\");\n        input.setCompanyName(\"\
+          My pretty company\");\n        input.setFavorited(false);\n        input.setBlocked(false);\n\
+          \        input.setType(1);\n        input.setCustomFieldValues();\n    \
+          \    input.setLocal(0);\n        input.setCountry(\"US\");\n        int\
+          \ id = 1;\n\n        try {\n            // ResourceLinkResponse class object\n\
+          \            ResourceLinkResponse obj = apiInstance.updateContact(inputid);\n\
+          \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
+          Exception when calling updateContact\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
+          \ input = {\n    phone: \"447860021130\",\n    lists: \"10541,18599\",\n\
+          \    // Optional parameters\n    firstName: \"Example first name\",\n  \
+          \  lastName: \"Example first name\",\n    email: \"charles@example.com\"\
+          ,\n    companyName: \"My pretty company\",\n    favorited: false,\n    blocked:\
+          \ false,\n    type: 1,\n    customFieldValues: ,\n    local: 0,\n    country:\
+          \ \"US\",\n}\nconst id = 1;\n\napi.updateContact(input, id).then(function\
+          \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::UpdateContactInputObject.new\n\
+          \n# Required parameters\nobj.phone = \"447860021130\"\nobj.lists = \"10541,18599\"\
+          \n# Optional parameters, you can skip them\nobj.first_name = \"Example first\
+          \ name\"\nobj.last_name = \"Example first name\"\nobj.email = \"charles@example.com\"\
+          \nobj.company_name = \"My pretty company\"\nobj.favorited = false\nobj.blocked\
+          \ = false\nobj.type = 1\nobj.custom_field_values = \nobj.local = 0\nobj.country\
+          \ = \"US\"\nid = 1\n\nbegin\n    # ResourceLinkResponse object\n    result\
+          \ = api.update_contact(input, id)\n    # ...\nrescue TextMagic::ApiError\
+          \ => e\n    puts \"Exception when calling TextMagicApi->update_contact:\
+          \ #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            var obj\
+          \ = new UpdateContactInputObject();\n\n            // Required parameters\n\
+          \            obj.Phone = \"447860021130\";\n            obj.Lists = \"10541,18599\"\
+          ;\n\n            // Optional parameters, you can skip these setters calls\n\
+          \            obj.FirstName = \"Example first name\";\n            obj.LastName\
+          \ = \"Example first name\";\n            obj.Email = \"charles@example.com\"\
+          ;\n            obj.CompanyName = \"My pretty company\";\n            obj.Favorited\
+          \ = false;\n            obj.Blocked = false;\n            obj.Type = 1;\n\
+          \            obj.CustomFieldValues = ;\n            obj.Local = 0;\n   \
+          \         obj.Country = \"US\";\n            int id = 1;\n\n           \
+          \ try {\n                // ResourceLinkResponse class object\n        \
+          \        var result = apiInstance.UpdateContact(objid);\n              \
+          \  // ...\n            } catch (Exception e) {\n                Console.WriteLine(\"\
+          Exception when calling updateContact: \"+e.Message);\n            }\n  \
+          \      }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
+          \ UpdateContactInputObject With {\n            .FirstName = \"Example first\
+          \ name\",\n            .LastName = \"Example first name\",\n           \
+          \ .Phone = \"447860021130\",\n            .Email = \"charles@example.com\"\
+          ,\n            .CompanyName = \"My pretty company\",\n            .Lists\
+          \ = \"10541,18599\",\n            .Favorited = false,\n            .Blocked\
+          \ = false,\n            .Type = 1,\n            .CustomFieldValues = ,\n\
+          \            .Local = 0,\n            .Country = \"US\"\n        }\n   \
+          \     Dim id As Integer = 1\n\n        Try\n            ' ResourceLinkResponse\
+          \ class object\n            Dim result = apiInstance.UpdateContact(objid)\n\
+          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling updateContact: \" + e.Message)\n        End Try\n\
+          \    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
+          \        // Required parameters\n        Phone: \"447860021130\",\n    \
+          \    Lists: \"10541,18599\",\n        // Optional parameters, you can skip\
+          \ them\n        FirstName: \"Example first name\",\n        LastName: \"\
+          Example first name\",\n        Email: \"charles@example.com\",\n       \
+          \ CompanyName: \"My pretty company\",\n        Favorited: false,\n     \
+          \   Blocked: false,\n        Type: 1,\n        CustomFieldValues: ,\n  \
+          \      Local: 0,\n        Country: \"US\",\n    }\n    // Required\n   \
+          \ var id int32 = 1\n\n    // tm.ResourceLinkResponse struct\n    result,\
+          \ _, err := client.TextMagicApi.UpdateContact(auth, input, id)\n\n    if\
+          \ err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
+          %+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<UpdateContactInputObject>\
+          \ input(new UpdateContactInputObject);\n    // Required parameters\n   \
+          \ input->setPhone(\"447860021130\");\n    input->setLists(\"10541,18599\"\
+          );\n    // Optional parameters, you can skip them\n    input->setFirstName(\"\
+          Example first name\");\n    input->setLastName(\"Example first name\");\n\
+          \    input->setEmail(\"charles@example.com\");\n    input->setCompanyName(\"\
+          My pretty company\");\n    input->setFavorited(false);\n    input->setBlocked(false);\n\
+          \    input->setType(1);\n    input->setCustomFieldValues();\n    input->setLocal(0);\n\
+          \    input->setCountry(\"US\");\n\n    int id = 1;\n\n    try {\n      \
+          \  pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.updateContact(input,\
+          \ id);\n        result.wait();\n        // put operations with result here...\n\
+          \    } catch(const std::exception& e) {\n        std::cout << \"updateContact()\
+          \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
+          \ = TextMagic.UpdateContactInputObject()\n\n# Required parameters\ninput.phone\
+          \ = \"447860021130\"\ninput.lists = \"10541,18599\"\n# Optional parameters,\
+          \ you can skip them\ninput.first_name = \"Example first name\"\ninput.last_name\
+          \ = \"Example first name\"\ninput.email = \"charles@example.com\"\ninput.company_name\
+          \ = \"My pretty company\"\ninput.favorited = false\ninput.blocked = false\n\
+          input.type = 1\ninput.custom_field_values = \ninput.local = 0\ninput.country\
+          \ = \"US\"\nid = 1\n\ntry:\n    # ResourceLinkResponse object\n    result\
+          \ = api_instance.update_contact(update_contact_input_object=input, id=id)\n\
+          \    # ...\nexcept ApiException as e:\n    print(\"Exception when calling\
+          \ TextMagicApi->update_contact: %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\nuse Net::Sms::TextMagicClient::Object::UpdateContactInputObject;\n\
+          \nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n    username\
+          \   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n    base_url\
+          \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
+          \nmy $input = Net::Sms::TextMagicClient::Object::UpdateContactInputObject->new(\n\
+          \    # Required parameters\n    phone => '447860021130',\n    lists => '10541,18599',\n\
+          \    # Optional parameters, you can skip them\n    firstName => 'Example\
+          \ first name',\n    lastName => 'Example first name',\n    email => 'charles@example.com',\n\
+          \    companyName => 'My pretty company',\n    favorited => 0,\n    blocked\
+          \ => 0,\n    type => 1,\n    customFieldValues => ,\n    local => 0,\n \
+          \   country => 'US',\n);\nmy $id = 1;\n\neval {\n    # ResourceLinkResponse\
+          \ object\n    my $result = $api_instance->update_contact(update_contact_input_object\
+          \ => $input, id => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
+          \ when calling TextMagicApi->update_contact: $@\\n\";\n}"
   /api/v2/contact/all:
     delete:
       tags:
@@ -10529,8 +10542,10 @@ paths:
       tags:
       - "TextMagic"
       summary: "Delete a list"
-      description: "> When you delete a list, the contacts in it are deleted as well\
-        \ unless they were saved in other list.\n"
+      description: "This command has no parameters. If successful, this command will\
+        \ return the standard delete response (204 No Content), otherwise a standard\
+        \ error response will be returned.\n\nWhen you delete a list, the contacts\
+        \ in it are deleted as well unless they were saved\_in other list."
       operationId: "deleteList"
       produces: []
       parameters:
@@ -15536,7 +15551,7 @@ paths:
           \neval {\n    # SendMessageResponse object\n    my $result = $api_instance->send_message(send_message_input_object\
           \ => $input);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when calling\
           \ TextMagicApi->send_message: $@\\n\";\n}"
-  /api/v2/messages/price:
+  /api/v2/messages/price/normalized:
     get:
       tags:
       - "TextMagic"
@@ -17182,7 +17197,7 @@ paths:
           \ query => $query);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception when\
           \ calling TextMagicApi->search_outbound_messages: $@\\n\";\n}"
   /api/v2/messages/attachment: {}
-  /api/v2/messages/prices: {}
+  /api/v2/messages/prices/normalized: {}
   /api/v2/history:
     get:
       tags:
@@ -24256,6 +24271,7 @@ paths:
   /api/v2/surveys/{id}/cancel: {}
   /api/v2/surveys/{id}/reset: {}
   /api/v2/surveys: {}
+  /api/v2/surveys/{id}/normalized: {}
   /api/v2/surveys/{id}: {}
   /api/v2/surveys/{id}/nodes: {}
   /api/v2/surveys/nodes/{id}: {}
@@ -25304,65 +25320,33 @@ definitions:
     - "user"
     properties:
       user:
-        type: "object"
-        example:
-          GB: "447520633183"
-        properties: {}
+        type: "array"
+        items:
+          $ref: "#/definitions/SenderSettingsItem"
       special:
-        type: "object"
-        example:
-          US: null
-          CA: null
-          FR: "Test sender id"
-        properties: {}
+        type: "array"
+        items:
+          $ref: "#/definitions/SenderSettingsItem"
       other:
-        type: "object"
-        example:
-          AF: "447624800500"
-          AL: "447624800500"
-          AU: "61428102137"
-          AT: "447624800500"
-          BE: "447624800500"
-          CL: "447624800500"
-          CR: "447624800500"
-          HR: "447624800500"
-          CZ: "447624800500"
-          DK: "4592450490"
-          EE: "447624800500"
-          FI: "3584573950033"
-          DE: "491771781422"
-          HK: "447624800500"
-          HU: "447624800500"
-          ID: "447624800500"
-          IE: "447624800500"
-          IL: "447624800500"
-        properties: {}
+        type: "array"
+        items:
+          $ref: "#/definitions/SenderSettingsItem"
     example:
       special:
-        US: null
-        CA: null
-        FR: "Test sender id"
+      - country: "US"
+        phone: "+447937946700"
+      - country: "US"
+        phone: "+447937946700"
       other:
-        AF: "447624800500"
-        AL: "447624800500"
-        AU: "61428102137"
-        AT: "447624800500"
-        BE: "447624800500"
-        CL: "447624800500"
-        CR: "447624800500"
-        HR: "447624800500"
-        CZ: "447624800500"
-        DK: "4592450490"
-        EE: "447624800500"
-        FI: "3584573950033"
-        DE: "491771781422"
-        HK: "447624800500"
-        HU: "447624800500"
-        ID: "447624800500"
-        IE: "447624800500"
-        IL: "447624800500"
+      - country: "US"
+        phone: "+447937946700"
+      - country: "US"
+        phone: "+447937946700"
       user:
-        GB: "447520633183"
+      - country: "US"
+        phone: "+447937946700"
+      - country: "US"
+        phone: "+447937946700"
   GetAvailableDedicatedNumbersResponse:
     type: "object"
     required:
@@ -25524,30 +25508,27 @@ definitions:
         description: "Message parts (multiples of 160 characters) count."
         x-nullable: true
       countries:
-        type: "object"
-        example:
-          GB:
-            country: "GB"
-            country_name: "United Kingdom"
-            allow_dedicated: true
-            count: 2
-            max: 0.04
-            sum: 0.08
-            landline: 0
-        description: "List of countries where message will be sent with pricing explanation."
-        properties: {}
+        type: "array"
+        items:
+          $ref: "#/definitions/GetMessagePriceResponseCountriesItem"
     example:
       total: 0.08
       parts: 6
       countries:
-        GB:
-          country: "GB"
-          country_name: "United Kingdom"
-          allow_dedicated: true
-          count: 2
-          max: 0.04
-          sum: 0.08
-          landline: 0
+      - country: "US"
+        max: 6.0
+        country_name: "United State"
+        count: 1.0
+        allow_dedicated: true
+        sum: "1"
+        landline: 0.0
+      - country: "US"
+        max: 6.0
+        country_name: "United State"
+        count: 1.0
+        allow_dedicated: true
+        sum: "1"
+        landline: 0.0
   GetMessagePreviewResponse:
     properties:
       messages:
@@ -25772,32 +25753,7 @@ definitions:
         type: "integer"
         example: 1094
         description: "Attachment size in bytes."
-  GetMessagePricesResponse:
-    example:
-      VU:
-        name: "Vanuatu"
-        price: "0.065"
-      VE:
-        name: "Venezuela"
-        price: "0.035"
-      VN:
-        name: "Vietnam"
-        price: "0.045"
-      VG:
-        name: "Virgin Islands"
-        price: "0.04"
-      VI:
-        name: "Virgin Islands US"
-        price: "0.04"
-      YE:
-        name: "Yemen"
-        price: "0.03"
-      ZM:
-        name: "Zambia"
-        price: "0.04"
-      ZW:
-        name: "Zimbabwe"
-        price: "0.04"
+  GetMessagePricesResponse: {}
   GetStateResponse:
     required:
     - "callFinished"
@@ -28210,6 +28166,115 @@ definitions:
       secondaryLabel: "45"
       entityId: 629
       avatar: "avatars/dummy_avatar.png"
+  CustomFieldListItem:
+    required:
+    - "id"
+    - "value"
+    properties:
+      id:
+        type: "integer"
+        example: 515
+        description: "Custom Field ID."
+      value:
+        type: "string"
+        example: "Custom value"
+        description: "Custom Field value."
+    example:
+      id: 515
+      value: "Custom value"
+  MessagePriceItem:
+    required:
+    - "country"
+    - "name"
+    - "price"
+    properties:
+      name:
+        type: "string"
+        example: "United Kingdom"
+        description: "Country name."
+      price:
+        type: "string"
+        example: "0.049"
+        description: "Price to send message to desired country."
+      country:
+        type: "string"
+        example: "UK"
+        description: "Two-letter ISO country code of the recipient phone number."
+  SenderSettingsItem:
+    required:
+    - "country"
+    - "phone"
+    properties:
+      country:
+        type: "string"
+        example: "US"
+        description: "Two-letter ISO country code of the recipient phone number.\n"
+      phone:
+        type: "string"
+        example: "+447937946700"
+        description: "Phone enabled for sending to specified country"
+    example:
+      country: "US"
+      phone: "+447937946700"
+  GetMessagePriceResponseCountriesItem:
+    required:
+    - "allow_dedicated"
+    - "count"
+    - "country"
+    - "country_name"
+    - "landline"
+    - "max"
+    - "sum"
+    properties:
+      country:
+        type: "string"
+        example: "US"
+        description: "Two-letter ISO country code"
+      country_name:
+        type: "string"
+        example: "United State"
+        description: "Country name"
+      allow_dedicated:
+        type: "boolean"
+        example: true
+        description: "Is allow to use dedicated number"
+      count:
+        type: "number"
+        example: 1.0
+        description: "Parts count to send"
+      max:
+        type: "number"
+        example: 6.0
+        description: "Maximum parts to send"
+      sum:
+        type: "string"
+        example: "1"
+        description: "Total price to send"
+      landline:
+        type: "number"
+        example: 0.0
+        description: "Is this landline number?"
+    example:
+      country: "US"
+      max: 6.0
+      country_name: "United State"
+      count: 1.0
+      allow_dedicated: true
+      sum: "1"
+      landline: 0.0
+  UpdateSurveyCountryItem:
+    required:
+    - "country"
+    - "user_inbound_id"
+    properties:
+      country:
+        type: "string"
+        example: "US"
+        description: "Two-letter ISO country code"
+      user_inbound_id:
+        type: "integer"
+        example: 10
+        description: "User inbound phone ID"
   GetTimezonesResponse:
     type: "object"
     example:
@@ -33798,11 +33863,9 @@ definitions:
         description: "Force type of phone. Possible values: 0 - landline, 1 - mobile.\
           \ Default is -1 (auto detection)."
       customFieldValues:
-        type: "object"
-        example:
-          2: "My test custom value for custom field with id 2"
-          5: "My test custom value for custom field with id 5"
-        properties: {}
+        type: "array"
+        items:
+          $ref: "#/definitions/CustomFieldListItem"
       local:
         type: "integer"
         example: 0
@@ -33818,8 +33881,10 @@ definitions:
       country: "US"
       blocked: false
       customFieldValues:
-        2: "My test custom value for custom field with id 2"
-        5: "My test custom value for custom field with id 5"
+      - id: 515
+        value: "Custom value"
+      - id: 515
+        value: "Custom value"
       phone: "447860021130"
       lists: "10541,18599"
       companyName: "Example Ltd."
@@ -33872,11 +33937,9 @@ definitions:
         description: "Force type of phone. Possible values: 0 - landline, 1 - mobile.\
           \ Default is -1 (auto detection)."
       customFieldValues:
-        type: "object"
-        example:
-          2: "My test custom value for custom field with id 2"
-          5: "My test custom value for custom field with id 5"
-        properties: {}
+        type: "array"
+        items:
+          $ref: "#/definitions/CustomFieldListItem"
       local:
         type: "integer"
         example: 0
@@ -33892,8 +33955,10 @@ definitions:
       country: "US"
       blocked: false
       customFieldValues:
-        2: "My test custom value for custom field with id 2"
-        5: "My test custom value for custom field with id 5"
+      - id: 515
+        value: "Custom value"
+      - id: 515
+        value: "Custom value"
       phone: "447860021130"
       lists: "10541,18599"
       companyName: "My pretty company"

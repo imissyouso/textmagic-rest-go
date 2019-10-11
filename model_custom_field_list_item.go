@@ -9,8 +9,9 @@
 
 package TextMagic
 
-type GetSenderSettingsResponse struct {
-	User []SenderSettingsItem `json:"user"`
-	Special []SenderSettingsItem `json:"special"`
-	Other []SenderSettingsItem `json:"other"`
+type CustomFieldListItem struct {
+	// Custom Field ID.
+	Id int32 `json:"id"`
+	// Custom Field value.
+	Value string `json:"value"`
 }

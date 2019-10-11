@@ -28,7 +28,7 @@ type CreateContactInputObject struct {
 	Blocked bool `json:"blocked,omitempty"`
 	// Force type of phone. Possible values: 0 - landline, 1 - mobile. Default is -1 (auto detection).
 	Type_ int32 `json:"type,omitempty"`
-	CustomFieldValues *interface{} `json:"customFieldValues,omitempty"`
+	CustomFieldValues []CustomFieldListItem `json:"customFieldValues,omitempty"`
 	// Treat phone number passed in request body as local
 	Local int32 `json:"local,omitempty"`
 	// 2-letter ISO country code for local phone numbers, used when local is  set to true. Default is account country
