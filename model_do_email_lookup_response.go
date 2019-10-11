@@ -42,6 +42,7 @@ type DoEmailLookupResponse struct {
 	IsInBlackList bool `json:"isInBlackList"`
 	// `true` if the email address domain has an MX record. 
 	HasMx bool `json:"hasMx"`
+	// `true` if the email address domain has an A record (IPv4). 
 	HasAa bool `json:"hasAa"`
 	// `true` if the email address domain has an AAAA record (IPv6). 
 	HasAaaa bool `json:"hasAaaa"`
