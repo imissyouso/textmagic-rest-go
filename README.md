@@ -11,7 +11,7 @@ TextMagic’s application programming interface (API) provides the communication
 
 With go.mod:
 ```bash
-go get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.615
+go get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.617
 ```
 
 without go.mod:
