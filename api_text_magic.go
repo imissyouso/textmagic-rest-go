@@ -15917,7 +15917,7 @@ func (a *TextMagicApiService) UpdateSenderSetting(ctx context.Context, updateSen
 	)
 
 	// create path and map variables
-	localVarPath := a.client.cfg.BasePath + "/api/v2/sender/settings/normalized"
+	localVarPath := a.client.cfg.BasePath + "/api/v2/sender/settings"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
