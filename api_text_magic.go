@@ -6722,6 +6722,117 @@ func (a *TextMagicApiService) GetContactIfBlocked(ctx context.Context, phone str
 }
 
 /* 
+TextMagicApiService Check import progress
+Get contact import session progress.
+ * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ * @param id
+
+@return GetContactImportSessionProgressResponse
+*/
+func (a *TextMagicApiService) GetContactImportSessionProgress(ctx context.Context, id int32) (GetContactImportSessionProgressResponse, *http.Response, error) {
+	var (
+		localVarHttpMethod = strings.ToUpper("Get")
+		localVarPostBody   interface{}
+		localVarFileName   string
+		localVarFileBytes  []byte
+		localVarReturnValue GetContactImportSessionProgressResponse
+	)
+
+	// create path and map variables
+	localVarPath := a.client.cfg.BasePath + "/api/v2/contacts/import/progress/{id}"
+	localVarPath = strings.Replace(localVarPath, "{"+"id"+"}", fmt.Sprintf("%v", id), -1)
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	// to determine the Content-Type header
+	localVarHttpContentTypes := []string{"application/json"}
+
+	// set Content-Type header
+	localVarHttpContentType := selectHeaderContentType(localVarHttpContentTypes)
+	if localVarHttpContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHttpContentType
+	}
+
+	// to determine the Accept header
+	localVarHttpHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHttpHeaderAccept := selectHeaderAccept(localVarHttpHeaderAccepts)
+	if localVarHttpHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHttpHeaderAccept
+	}
+	r, err := a.client.prepareRequest(ctx, localVarPath, localVarHttpMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, localVarFileName, localVarFileBytes)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHttpResponse, err := a.client.callAPI(r)
+	if err != nil || localVarHttpResponse == nil {
+		return localVarReturnValue, localVarHttpResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHttpResponse.Body)
+	localVarHttpResponse.Body.Close()
+	if err != nil {
+		return localVarReturnValue, localVarHttpResponse, err
+	}
+
+	if localVarHttpResponse.StatusCode < 300 {
+		// If we succeed, return the data, otherwise pass on to decode error.
+		err = a.client.decode(&localVarReturnValue, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+		if err == nil { 
+			return localVarReturnValue, localVarHttpResponse, err
+		}
+	}
+
+	if localVarHttpResponse.StatusCode >= 300 {
+		newErr := GenericSwaggerError{
+			body: localVarBody,
+			error: localVarHttpResponse.Status,
+		}
+		
+		if localVarHttpResponse.StatusCode == 200 {
+			var v GetContactImportSessionProgressResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		if localVarHttpResponse.StatusCode == 401 {
+			var v UnauthorizedResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		if localVarHttpResponse.StatusCode == 404 {
+			var v NotFoundResponse
+			err = a.client.decode(&v, localVarBody, localVarHttpResponse.Header.Get("Content-Type"));
+				if err != nil {
+					newErr.error = err.Error()
+					return localVarReturnValue, localVarHttpResponse, newErr
+				}
+				newErr.model = v
+				return localVarReturnValue, localVarHttpResponse, newErr
+		}
+		
+		return localVarReturnValue, localVarHttpResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHttpResponse, nil
+}
+
+/* 
 TextMagicApiService Get a contact note
 
  * @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
@@ -9774,7 +9885,7 @@ TextMagicApiService Get messaging statistics
  * @param optional nil or *GetMessagingStatOpts - Optional Parameters:
      * @param "By" (optional.String) -  *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year 
      * @param "Start" (optional.Int32) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
-     * @param "End" (optional.String) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
+     * @param "End" (optional.Int32) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 
 @return GetMessagingStatResponse
 */
@@ -9782,7 +9893,7 @@ TextMagicApiService Get messaging statistics
 type GetMessagingStatOpts struct { 
 	By optional.String
 	Start optional.Int32
-	End optional.String
+	End optional.Int32
 }
 
 func (a *TextMagicApiService) GetMessagingStat(ctx context.Context, localVarOptionals *GetMessagingStatOpts) (GetMessagingStatResponse, *http.Response, error) {
@@ -10596,7 +10707,7 @@ TextMagicApiService Get spending statistics
  * @param optional nil or *GetSpendingStatOpts - Optional Parameters:
      * @param "Page" (optional.Int32) -  Fetch specified results page.
      * @param "Limit" (optional.Int32) -  The number of results per page.
-     * @param "Start" (optional.Int32) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
+     * @param "Start" (optional.String) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior. 
      * @param "End" (optional.String) -  Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today. 
 
 @return GetSpendingStatPaginatedResponse
@@ -10605,7 +10716,7 @@ TextMagicApiService Get spending statistics
 type GetSpendingStatOpts struct { 
 	Page optional.Int32
 	Limit optional.Int32
-	Start optional.Int32
+	Start optional.String
 	End optional.String
 }
 
@@ -15473,7 +15584,7 @@ TextMagicApiService Edit the custom field value of a specified contact
 
 @return ResourceLinkResponse
 */
-func (a *TextMagicApiService) UpdateCustomFieldValue(ctx context.Context, updateCustomFieldValueInputObject UpdateCustomFieldValueInputObject, id string) (ResourceLinkResponse, *http.Response, error) {
+func (a *TextMagicApiService) UpdateCustomFieldValue(ctx context.Context, updateCustomFieldValueInputObject UpdateCustomFieldValueInputObject, id int32) (ResourceLinkResponse, *http.Response, error) {
 	var (
 		localVarHttpMethod = strings.ToUpper("Put")
 		localVarPostBody   interface{}

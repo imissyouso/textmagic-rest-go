@@ -499,7 +499,7 @@ tags:
     \n```javascript\n{\n    \"repositories\": [\n        {\n            \"type\":\
     \ \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.618\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.626\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -528,7 +528,7 @@ tags:
     \nThis library provides you with an easy way of sending SMS and receiving replies\
     \ by integrating TextMagic SMS Gateway into your Node.js application.\n\n[Get\
     \ it now on GitHub](https://github.com/textmagic/textmagic-rest-nodejs)\n## Installation\n\
-    \n```shell\nnpm install textmagic-client@2.0.618 --save\n```\n\n## Usage Example\n\
+    \n```shell\nnpm install textmagic-client@2.0.626 --save\n```\n\n## Usage Example\n\
     \nPlease follow the [installation](#installation) instructions and execute the\
     \ following JS code:\n\n```javascript\nconst textmagicClient = require('textmagic-client');\n\
     \nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
@@ -560,7 +560,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.618/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.626/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -623,22 +623,22 @@ tags:
     \ Requirements\n\n* CMake 2.8 and later (https://cmake.org/)\n* cpprest (https://github.com/microsoft/cpprestsdk)\n\
     \nUbuntu dependencies quick installation example:\n```shell\napt-get install build-essential\
     \ cmake libcpprest-dev\n```\n\n## Installation\n\nDownload and extract lib archive:\n\
-    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.618.tar.gz\
-    \ && \\\ntar zxf v2.0.618.tar.gz && \\\nrm -f v2.0.618.tar.gz && \\\ncd textmagic-rest-cpp-2.0.618\n\
+    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.626.tar.gz\
+    \ && \\\ntar zxf v2.0.626.tar.gz && \\\nrm -f v2.0.626.tar.gz && \\\ncd textmagic-rest-cpp-2.0.626\n\
     ```\nBuild using cmake\n```shell\ncmake . && cmake --build .\n```\nThe output\
-    \ library file will be placed in `textmagic-rest-cpp-2.0.618/lib` directory:\n\
+    \ library file will be placed in `textmagic-rest-cpp-2.0.626/lib` directory:\n\
     \n## Usage Example\nIn the example below, we assume that you moved the library\
-    \ sources `textmagic-rest-cpp-2.0.618` directory to your test project root directory.\n\
+    \ sources `textmagic-rest-cpp-2.0.626` directory to your test project root directory.\n\
     \nConfigure your `CMakeLists.txt` as shown here:\n```shell\ncmake_minimum_required(VERSION\
     \ 2.8)\nproject(test)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(app main.cpp)\n\
     \nadd_library(textmagic_client SHARED IMPORTED)\nset_property(TARGET textmagic_client\
-    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.618/lib/libtextmagic_client.so\"\
-    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.618\
-    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.618/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.618/api)\n\
+    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.626/lib/libtextmagic_client.so\"\
+    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.626\
+    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.626/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.626/api)\n\
     target_link_libraries(app boost_system cpprest crypto textmagic_client )\n```\n\
     \n`main.cpp` file example:\n```cpp\n#include <iostream>\n#include <fstream>\n\
-    #include \"textmagic-rest-cpp-2.0.618/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.618/ApiConfiguration.h\"\
-    \n#include \"textmagic-rest-cpp-2.0.618/api/TextMagicApi.h\"\n\nusing namespace\
+    #include \"textmagic-rest-cpp-2.0.626/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.626/ApiConfiguration.h\"\
+    \n#include \"textmagic-rest-cpp-2.0.626/api/TextMagicApi.h\"\n\nusing namespace\
     \ com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
     \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
     \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
@@ -677,7 +677,7 @@ tags:
     \ on GitHub\">Star</a>\n\nThis library provides you with an easy way of sending\
     \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Python\
     \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-python)\n\
-    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.618\n\
+    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.626\n\
     ```\n\n## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import\
     \ ApiException\n\n# Configure HTTP basic authorization: BasicAuth\nconfiguration\
     \ = TextMagic.Configuration()\nconfiguration.username = 'YOUR_USERNAME'\nconfiguration.password\
@@ -702,8 +702,8 @@ tags:
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your Perl application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-perl)\n##\
-    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.618.tar.gz\
-    \ && \\\ntar zxf v2.0.618.tar.gz && \\\nrm -f v2.0.618.tar.gz && \\\ncd textmagic-rest-perl-2.0.618\
+    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.626.tar.gz\
+    \ && \\\ntar zxf v2.0.626.tar.gz && \\\nrm -f v2.0.626.tar.gz && \\\ncd textmagic-rest-perl-2.0.626\
     \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
     \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
     \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
@@ -732,7 +732,7 @@ tags:
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.618'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.626'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     \ # Load the gem\nrequire 'textmagic_rest_client'\n\n # Setup authorization\n\
@@ -758,7 +758,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.618\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.626\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -2496,7 +2496,6 @@ paths:
           \ for the specified country."
         required: false
         type: "integer"
-        default: 1
         x-example: 447155
         x-exportParamName: "Prefix"
         x-optionalDataType: "Int32"
@@ -6938,7 +6937,7 @@ paths:
         in: "path"
         required: true
         type: "string"
-        default: "447860021130"
+        x-example: "447860021130"
         x-exportParamName: "Phone"
       responses:
         200:
@@ -9066,8 +9065,8 @@ paths:
       - name: "id"
         in: "path"
         required: true
-        type: "string"
-        default: "1"
+        type: "integer"
+        x-example: 554
         x-exportParamName: "Id"
       responses:
         201:
@@ -9094,8 +9093,8 @@ paths:
           \    ->setPassword('YOUR_PASSWORD');\n\n$api = new TextMagicApi(\n    new\
           \ GuzzleHttp\\Client(),\n    $config\n);\n\n$input = new UpdateCustomFieldValueInputObject();\n\
           \n// Optional parameters, you can skip these setters calls\n$input->setContactId(50315);\n\
-          $input->setValue(\"1983-08-31T00:00:00.000Z\");\n$id = \"1\";\n\ntry {\n\
-          \    // ResourceLinkResponse class object\n    $result = $api->updateCustomFieldValue($input$id);\n\
+          $input->setValue(\"1983-08-31T00:00:00.000Z\");\n$id = 554;\n\ntry {\n \
+          \   // ResourceLinkResponse class object\n    $result = $api->updateCustomFieldValue($input$id);\n\
           \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
           \ TextMagicApi->updateCustomFieldValue: ', $e->getMessage(), PHP_EOL;\n}"
       - lang: "Java"
@@ -9110,7 +9109,7 @@ paths:
           \n        UpdateCustomFieldValueInputObject input = new UpdateCustomFieldValueInputObject();\n\
           \n        // Optional parameters, you can skip these setters calls\n   \
           \     input.setContactId(50315);\n        input.setValue(\"1983-08-31T00:00:00.000Z\"\
-          );\n        String id = \"1\";\n\n        try {\n            // ResourceLinkResponse\
+          );\n        int id = 554;\n\n        try {\n            // ResourceLinkResponse\
           \ class object\n            ResourceLinkResponse obj = apiInstance.updateCustomFieldValue(inputid);\n\
           \            // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
           Exception when calling updateCustomFieldValue\");\n            e.printStackTrace();\n\
@@ -9122,7 +9121,7 @@ paths:
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
           \ input = {\n    // Optional parameters\n    contactId: 50315,\n    value:\
-          \ \"1983-08-31T00:00:00.000Z\",\n}\nconst id = \"1\";\n\napi.updateCustomFieldValue(input,\
+          \ \"1983-08-31T00:00:00.000Z\",\n}\nconst id = 554;\n\napi.updateCustomFieldValue(input,\
           \ id).then(function (data) {\n    console.log(data);\n}).catch(function(err){\n\
           \    console.error(err);\n});"
       - lang: "Ruby"
@@ -9131,7 +9130,7 @@ paths:
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nobj = new TextMagic::UpdateCustomFieldValueInputObject.new\n\
           # Optional parameters, you can skip them\nobj.contact_id = 50315\nobj.value\
-          \ = \"1983-08-31T00:00:00.000Z\"\nid = '1'\n\nbegin\n    # ResourceLinkResponse\
+          \ = \"1983-08-31T00:00:00.000Z\"\nid = 554\n\nbegin\n    # ResourceLinkResponse\
           \ object\n    result = api.update_custom_field_value(input, id)\n    # ...\n\
           rescue TextMagic::ApiError => e\n    puts \"Exception when calling TextMagicApi->update_custom_field_value:\
           \ #{e}\"\nend"
@@ -9147,7 +9146,7 @@ paths:
           \ = new UpdateCustomFieldValueInputObject();\n\n            // Optional\
           \ parameters, you can skip these setters calls\n            obj.ContactId\
           \ = 50315;\n            obj.Value = \"1983-08-31T00:00:00.000Z\";\n    \
-          \        string id = \"1\";\n\n            try {\n                // ResourceLinkResponse\
+          \        int id = 554;\n\n            try {\n                // ResourceLinkResponse\
           \ class object\n                var result = apiInstance.UpdateCustomFieldValue(objid);\n\
           \                // ...\n            } catch (Exception e) {\n         \
           \       Console.WriteLine(\"Exception when calling updateCustomFieldValue:\
@@ -9161,7 +9160,7 @@ paths:
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim obj = New\
           \ UpdateCustomFieldValueInputObject With {\n            .ContactId = 50315,\n\
           \            .Value = \"1983-08-31T00:00:00.000Z\"\n        }\n        Dim\
-          \ id As String = \"1\"\n\n        Try\n            ' ResourceLinkResponse\
+          \ id As Integer = 554\n\n        Try\n            ' ResourceLinkResponse\
           \ class object\n            Dim result = apiInstance.UpdateCustomFieldValue(objid)\n\
           \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
           Exception when calling updateCustomFieldValue: \" + e.Message)\n       \
@@ -9177,10 +9176,10 @@ paths:
           \ \"YOUR_PASSWORD\",\n    })\n\n    input := tm.SendMessageInputObject{\n\
           \        // Optional parameters, you can skip them\n        ContactId: 50315,\n\
           \        Value: \"1983-08-31T00:00:00.000Z\",\n    }\n    // Required\n\
-          \    var id string = \"1\"\n\n    // tm.ResourceLinkResponse struct\n  \
-          \  result, _, err := client.TextMagicApi.UpdateCustomFieldValue(auth, input,\
-          \ id)\n\n    if err != nil {\n        log.Fatal(err)\n    } else {\n   \
-          \     fmt.Printf(\"%+v\\n\", result)\n        // ...\n    }\n}\n"
+          \    var id int32 = 554\n\n    // tm.ResourceLinkResponse struct\n    result,\
+          \ _, err := client.TextMagicApi.UpdateCustomFieldValue(auth, input, id)\n\
+          \n    if err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
+          %+v\\n\", result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
         source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
           \ where SDK lib is installed. See C++ SDK installation instructions for\
@@ -9194,8 +9193,8 @@ paths:
           \    TextMagicApi api(apiClient);\n\n    std::shared_ptr<UpdateCustomFieldValueInputObject>\
           \ input(new UpdateCustomFieldValueInputObject);\n    // Optional parameters,\
           \ you can skip them\n    input->setContactId(50315);\n    input->setValue(\"\
-          1983-08-31T00:00:00.000Z\");\n\n    std::string id = \"1\";\n\n    try {\n\
-          \        pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.updateCustomFieldValue(input,\
+          1983-08-31T00:00:00.000Z\");\n\n    int id = 554;\n\n    try {\n       \
+          \ pplx::task<std::shared_ptr<ResourceLinkResponse>> result = api.updateCustomFieldValue(input,\
           \ id);\n        result.wait();\n        // put operations with result here...\n\
           \    } catch(const std::exception& e) {\n        std::cout << \"updateCustomFieldValue()\
           \ exception: \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
@@ -9208,7 +9207,7 @@ paths:
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\ninput\
           \ = TextMagic.UpdateCustomFieldValueInputObject()\n# Optional parameters,\
           \ you can skip them\ninput.contact_id = 50315\ninput.value = \"1983-08-31T00:00:00.000Z\"\
-          \nid = \"1\"\n\ntry:\n    # ResourceLinkResponse object\n    result = api_instance.update_custom_field_value(update_custom_field_value_input_object=input,\
+          \nid = 554\n\ntry:\n    # ResourceLinkResponse object\n    result = api_instance.update_custom_field_value(update_custom_field_value_input_object=input,\
           \ id=id)\n    # ...\nexcept ApiException as e:\n    print(\"Exception when\
           \ calling TextMagicApi->update_custom_field_value: %s\\n\" % e)\n"
       - lang: "Perl"
@@ -9219,7 +9218,7 @@ paths:
           \  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance = Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\
           \nmy $input = Net::Sms::TextMagicClient::Object::UpdateCustomFieldValueInputObject->new(\n\
           \    # Optional parameters, you can skip them\n    contactId => 50315,\n\
-          \    value => '1983-08-31T00:00:00.000Z',\n);\nmy $id = '1';\n\neval {\n\
+          \    value => '1983-08-31T00:00:00.000Z',\n);\nmy $id = 554;\n\neval {\n\
           \    # ResourceLinkResponse object\n    my $result = $api_instance->update_custom_field_value(update_custom_field_value_input_object\
           \ => $input, id => $id);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
           \ when calling TextMagicApi->update_custom_field_value: $@\\n\";\n}"
@@ -10079,7 +10078,7 @@ paths:
         description: "Find contacts or lists by specified search query"
         required: false
         type: "string"
-        default: "A"
+        x-example: "A"
         x-exportParamName: "Query"
         x-optionalDataType: "String"
       responses:
@@ -11056,7 +11055,7 @@ paths:
         description: "Phone number to check"
         required: true
         type: "string"
-        x-example: 447860021130
+        x-example: "447860021130"
         x-exportParamName: "Phone"
       responses:
         200:
@@ -11847,7 +11846,7 @@ paths:
         in: "path"
         required: true
         type: "integer"
-        default: 1
+        x-example: 1
         x-exportParamName: "Id"
       responses:
         201:
@@ -12011,7 +12010,7 @@ paths:
         in: "path"
         required: true
         type: "integer"
-        default: 1
+        x-example: 1
         x-exportParamName: "Id"
       responses:
         200:
@@ -12612,7 +12611,7 @@ paths:
         in: "path"
         required: true
         type: "integer"
-        default: 1
+        x-example: 1
         x-exportParamName: "Id"
       responses:
         204:
@@ -12733,7 +12732,152 @@ paths:
           \ ($@) {\n    warn \"Exception when calling TextMagicApi->delete_contact_avatar:\
           \ $@\\n\";\n}"
   /api/v2/contacts/import/normalized: {}
-  /api/v2/contacts/import/progress/{id}: {}
+  /api/v2/contacts/import/progress/{id}:
+    get:
+      tags:
+      - "TextMagic"
+      summary: "Check import progress"
+      description: "Get contact import session progress."
+      operationId: "getContactImportSessionProgress"
+      parameters:
+      - name: "id"
+        in: "path"
+        required: true
+        type: "integer"
+        x-example: 1
+        x-exportParamName: "Id"
+      responses:
+        200:
+          description: "Returned when successful"
+          schema:
+            $ref: "#/definitions/GetContactImportSessionProgressResponse"
+        401:
+          description: "Unauthorized request"
+          schema:
+            $ref: "#/definitions/UnauthorizedResponse"
+        404:
+          description: "Request data not found"
+          schema:
+            $ref: "#/definitions/NotFoundResponse"
+      x-code-samples:
+      - lang: "PHP"
+        source: "require_once(__DIR__ . '/vendor/autoload.php');\n\nuse TextMagic\\\
+          Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
+          \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
+          \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
+          );\n\n$id = 1;\n\ntry {\n    // GetContactImportSessionProgressResponse\
+          \ class object\n    $result = $api->getContactImportSessionProgress($id);\n\
+          \    // ...\n} catch (Exception $e) {\n    echo 'Exception when calling\
+          \ TextMagicApi->getContactImportSessionProgress: ', $e->getMessage(), PHP_EOL;\n\
+          }"
+      - lang: "Java"
+        source: "import com.textmagic.sdk.*;\nimport com.textmagic.sdk.api.TextMagicApi;\n\
+          import com.textmagic.sdk.auth.*;\nimport com.textmagic.sdk.model.*;\n\n\
+          public class App {\n    public static void main(String[] args) {\n     \
+          \   ApiClient defaultClient = Configuration.getDefaultApiClient();\n\n \
+          \       // Configure HTTP basic authorization: BasicAuth\n        HttpBasicAuth\
+          \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
+          );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
+          YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
+          \n        int id = 1;\n\n        try {\n            // GetContactImportSessionProgressResponse\
+          \ class object\n            GetContactImportSessionProgressResponse obj\
+          \ = apiInstance.getContactImportSessionProgress(id);\n            // ...\n\
+          \        } catch (ApiException e) {\n            System.err.println(\"Exception\
+          \ when calling getContactImportSessionProgress\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
+      - lang: "JavaScript"
+        source: "const textmagicClient = require('textmagic-client');\n\nconst client\
+          \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
+          const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
+          \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
+          auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
+          \ id = 1;\n\napi.getContactImportSessionProgress(id).then(function (data)\
+          \ {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
+          });"
+      - lang: "Ruby"
+        source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
+          \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
+          \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nid = 1\n\nbegin\n    # GetContactImportSessionProgressResponse\
+          \ object\n    result = api.get_contact_import_session_progress(id)\n   \
+          \ # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception when calling\
+          \ TextMagicApi->get_contact_import_session_progress: #{e}\"\nend"
+      - lang: "C#"
+        source: "using System;\nusing System.IO;\nusing TextMagicClient.Api;\nusing\
+          \ TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
+          {\n    class Program\n    {\n        static void Main(string[] args)\n \
+          \       {\n            // Configure HTTP basic authorization: BasicAuth\n\
+          \            Configuration.Default.Username = \"YOUR_USERNAME\";\n     \
+          \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
+          \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
+          \            var apiInstance = new TextMagicApi();\n\n            int id\
+          \ = 1;\n\n            try {\n                // GetContactImportSessionProgressResponse\
+          \ class object\n                var result = apiInstance.GetContactImportSessionProgress(id);\n\
+          \                // ...\n            } catch (Exception e) {\n         \
+          \       Console.WriteLine(\"Exception when calling getContactImportSessionProgress:\
+          \ \"+e.Message);\n            }\n        }\n    }\n}"
+      - lang: "VB.Net"
+        source: "Imports System\nImports System.IO\nImports TextMagicClient.Api\n\
+          Imports TextMagicClient.Client\nImports TextMagicClient.Model\n\nModule\
+          \ Program\n    Sub Main(args As String())\n        Configuration.Default.Username\
+          \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
+          \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
+          \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim id As Integer\
+          \ = 1\n\n        Try\n            ' GetContactImportSessionProgressResponse\
+          \ class object\n            Dim result = apiInstance.GetContactImportSessionProgress(id)\n\
+          \            ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling getContactImportSessionProgress: \" + e.Message)\n\
+          \        End Try\n    End Sub\nEnd Module"
+      - lang: "Go"
+        source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
+          \n    // If you're using go.mod use line below to import our module\n  \
+          \  // \ttm \"github.com/imissyouso/textmagic-rest-go/v2\"\n    tm \"github.com/imissyouso/textmagic-rest-go\"\
+          \n    \"log\"\n)\n\nfunc main() {\n    cfg := tm.NewConfiguration()\n  \
+          \  cfg.BasePath = \"https://rest.textmagic.com\"\n    client := tm.NewAPIClient(cfg)\n\
+          \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
+          \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
+          \ \"YOUR_PASSWORD\",\n    })\n    // Required\n    var id int32 = 1\n\n\
+          \    // tm.GetContactImportSessionProgressResponse struct\n    result, _,\
+          \ err := client.TextMagicApi.GetContactImportSessionProgress(auth, id)\n\
+          \n    if err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
+          %+v\\n\", result)\n        // ...\n    }\n}\n"
+      - lang: "Cpp"
+        source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
+          \ where SDK lib is installed. See C++ SDK installation instructions for\
+          \ more details\n#include \"textmagic-rest-cpp/ApiClient.h\"\n#include \"\
+          textmagic-rest-cpp/ApiConfiguration.h\"\n#include \"textmagic-rest-cpp/api/TextMagicApi.h\"\
+          \n\nusing namespace com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
+          \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
+          \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
+          );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
+          , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
+          \    TextMagicApi api(apiClient);\n\n    int id = 1;\n\n    try {\n    \
+          \    pplx::task<std::shared_ptr<GetContactImportSessionProgressResponse>>\
+          \ result = api.getContactImportSessionProgress(id);\n        result.wait();\n\
+          \        // put operations with result here...\n    } catch(const std::exception&\
+          \ e) {\n        std::cout << \"getContactImportSessionProgress() exception:\
+          \ \" << e.what() << '\\n';\n    }\n\n    return 0;\n}"
+      - lang: "Python"
+        source: "import TextMagic\nfrom TextMagic.rest import ApiException\n\nconfiguration\
+          \ = TextMagic.Configuration()\nconfiguration.host = \"https://rest.textmagic.com\"\
+          \n# put your Username and API Key from https://my.textmagic.com/online/api/rest-api/keys\
+          \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
+          \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
+          \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\nid = 1\n\
+          \ntry:\n    # GetContactImportSessionProgressResponse object\n    result\
+          \ = api_instance.get_contact_import_session_progress(id=id)\n    # ...\n\
+          except ApiException as e:\n    print(\"Exception when calling TextMagicApi->get_contact_import_session_progress:\
+          \ %s\\n\" % e)\n"
+      - lang: "Perl"
+        source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
+          use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
+          \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
+          \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
+          \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $id = 1;\n\
+          \neval {\n    # GetContactImportSessionProgressResponse object\n    my $result\
+          \ = $api_instance->get_contact_import_session_progress(id => $id);\n   \
+          \ # ...\n};\n\nif ($@) {\n    warn \"Exception when calling TextMagicApi->get_contact_import_session_progress:\
+          \ $@\\n\";\n}"
   /api/v2/email-lookups/{email}:
     get:
       tags:
@@ -20490,10 +20634,10 @@ paths:
         description: "Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time)\
           \ format. The default is today.\n"
         required: false
-        type: "string"
+        type: "integer"
         x-example: 1431648000
         x-exportParamName: "End"
-        x-optionalDataType: "String"
+        x-optionalDataType: "Int32"
       responses:
         200:
           description: "Returned when successful"
@@ -20515,7 +20659,7 @@ paths:
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
           );\n\n// Optional, you can pass them as null values to getMessagingStat\
           \ method below, default values will be used\n$by = \"off\";\n$start = 1430438400;\n\
-          $end = \"1431648000\";\n\ntry {\n    // GetMessagingStatResponse class object\n\
+          $end = 1431648000;\n\ntry {\n    // GetMessagingStatResponse class object\n\
           \    $result = $api->getMessagingStat($by, $start, $end);\n    // ...\n\
           } catch (Exception $e) {\n    echo 'Exception when calling TextMagicApi->getMessagingStat:\
           \ ', $e->getMessage(), PHP_EOL;\n}"
@@ -20530,9 +20674,9 @@ paths:
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        // Optional, you can pass them as null values to getMessagingStat\
           \ method below, default values will be used\n        String by = \"off\"\
-          ;\n        int start = 1430438400;\n        String end = \"1431648000\"\
-          ;\n\n        try {\n            // GetMessagingStatResponse class object\n\
-          \            GetMessagingStatResponse obj = apiInstance.getMessagingStat(by,\
+          ;\n        int start = 1430438400;\n        int end = 1431648000;\n\n  \
+          \      try {\n            // GetMessagingStatResponse class object\n   \
+          \         GetMessagingStatResponse obj = apiInstance.getMessagingStat(by,\
           \ start, end);\n            // ...\n        } catch (ApiException e) {\n\
           \            System.err.println(\"Exception when calling getMessagingStat\"\
           );\n            e.printStackTrace();\n        }\n    }\n}"
@@ -20543,7 +20687,7 @@ paths:
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
           \ = {\n// Optional parameters\n    by: \"off\",\n    start: 1430438400,\n\
-          \    end: \"1431648000\",\n}\n\napi.getMessagingStat().then(function (data)\
+          \    end: 1431648000,\n}\n\napi.getMessagingStat().then(function (data)\
           \ {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
           });"
       - lang: "Ruby"
@@ -20551,8 +20695,8 @@ paths:
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
-          \  by: 'off',\n  start: 1430438400,\n  end: '1431648000',\n}\n\nbegin\n\
-          \    # GetMessagingStatResponse object\n    result = api.get_messaging_stat(params)\n\
+          \  by: 'off',\n  start: 1430438400,\n  end: 1431648000,\n}\n\nbegin\n  \
+          \  # GetMessagingStatResponse object\n    result = api.get_messaging_stat(params)\n\
           \    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception when calling\
           \ TextMagicApi->get_messaging_stat: #{e}\"\nend"
       - lang: "C#"
@@ -20566,9 +20710,9 @@ paths:
           \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
           \ you can pass them as null values to getMessagingStat method below, default\
           \ values will be used\n            string by = \"off\";\n            int\
-          \ start = 1430438400;\n            string end = \"1431648000\";\n\n    \
-          \        try {\n                // GetMessagingStatResponse class object\n\
-          \                var result = apiInstance.GetMessagingStat(by, start, end);\n\
+          \ start = 1430438400;\n            int end = 1431648000;\n\n           \
+          \ try {\n                // GetMessagingStatResponse class object\n    \
+          \            var result = apiInstance.GetMessagingStat(by, start, end);\n\
           \                // ...\n            } catch (Exception e) {\n         \
           \       Console.WriteLine(\"Exception when calling getMessagingStat: \"\
           +e.Message);\n            }\n        }\n    }\n}"
@@ -20581,10 +20725,10 @@ paths:
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
           \ you can pass them as null values to getMessagingStat method below, default\
           \ values will be used\n        Dim by As String = \"off\"\n        Dim start\
-          \ As Integer = 1430438400\n        Dim end As String = \"1431648000\"\n\n\
-          \        Try\n            ' GetMessagingStatResponse class object\n    \
-          \        Dim result = apiInstance.GetMessagingStat(by, start, end)\n   \
-          \         ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          \ As Integer = 1430438400\n        Dim end As Integer = 1431648000\n\n \
+          \       Try\n            ' GetMessagingStatResponse class object\n     \
+          \       Dim result = apiInstance.GetMessagingStat(by, start, end)\n    \
+          \        ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
           Exception when calling getMessagingStat: \" + e.Message)\n        End Try\n\
           \    End Sub\nEnd Module"
       - lang: "Go"
@@ -20597,11 +20741,11 @@ paths:
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetMessagingStatOpts{\n \
           \       // Optional parameters\n        By: optional.NewString(\"off\"),\n\
-          \        Start: optional.NewInt32(1430438400),\n        End: optional.NewString(\"\
-          1431648000\"),\n    }\n\n    // tm.GetMessagingStatResponse struct\n   \
-          \ result, _, err := client.TextMagicApi.GetMessagingStat(auth, &opts)\n\n\
-          \    if err != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
-          %+v\\n\", result)\n        // ...\n    }\n}\n"
+          \        Start: optional.NewInt32(1430438400),\n        End: optional.NewInt32(1431648000),\n\
+          \    }\n\n    // tm.GetMessagingStatResponse struct\n    result, _, err\
+          \ := client.TextMagicApi.GetMessagingStat(auth, &opts)\n\n    if err !=\
+          \ nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"%+v\\\
+          n\", result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
         source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
           \ where SDK lib is installed. See C++ SDK installation instructions for\
@@ -20614,8 +20758,8 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
           \ if you want to use default value then pass boost::none value\n    std::string\
-          \ by = \"off\";\n    int start = 1430438400;\n    std::string end = \"1431648000\"\
-          ;\n\n    try {\n        pplx::task<std::shared_ptr<GetMessagingStatResponse>>\
+          \ by = \"off\";\n    int start = 1430438400;\n    int end = 1431648000;\n\
+          \n    try {\n        pplx::task<std::shared_ptr<GetMessagingStatResponse>>\
           \ result = api.getMessagingStat(by, start, end);\n        result.wait();\n\
           \        // put operations with result here...\n    } catch(const std::exception&\
           \ e) {\n        std::cout << \"getMessagingStat() exception: \" << e.what()\
@@ -20627,11 +20771,10 @@ paths:
           \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
-          \ params, you can skip them\nby = \"off\"\nstart = 1430438400\nend = \"\
-          1431648000\"\n\ntry:\n    # GetMessagingStatResponse object\n    result\
-          \ = api_instance.get_messaging_stat(by=by, start=start, end=end)\n    #\
-          \ ...\nexcept ApiException as e:\n    print(\"Exception when calling TextMagicApi->get_messaging_stat:\
-          \ %s\\n\" % e)\n"
+          \ params, you can skip them\nby = \"off\"\nstart = 1430438400\nend = 1431648000\n\
+          \ntry:\n    # GetMessagingStatResponse object\n    result = api_instance.get_messaging_stat(by=by,\
+          \ start=start, end=end)\n    # ...\nexcept ApiException as e:\n    print(\"\
+          Exception when calling TextMagicApi->get_messaging_stat: %s\\n\" % e)\n"
       - lang: "Perl"
         source: "use 5.010;\nuse strict;\nuse warnings;\nuse Net::Sms::TextMagicClient::ApiClient;\n\
           use Net::Sms::TextMagicClient::TextMagicApi;\n\nmy $client = Net::Sms::TextMagicClient::ApiClient::->new(\n\
@@ -20639,7 +20782,7 @@ paths:
           \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
           \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
           \ params, you can skip them\nmy $by = 'off';\nmy $start = 1430438400;\n\
-          my $end = '1431648000';\n\neval {\n    # GetMessagingStatResponse object\n\
+          my $end = 1431648000;\n\neval {\n    # GetMessagingStatResponse object\n\
           \    my $result = $api_instance->get_messaging_stat(by => $by, start =>\
           \ $start, end => $end);\n    # ...\n};\n\nif ($@) {\n    warn \"Exception\
           \ when calling TextMagicApi->get_messaging_stat: $@\\n\";\n}"
@@ -20672,10 +20815,10 @@ paths:
         description: "Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time)\
           \ format. The default is 7 days prior.\n"
         required: false
-        type: "integer"
+        type: "string"
         x-example: "2018-11-11 11:11"
         x-exportParamName: "Start"
-        x-optionalDataType: "Int32"
+        x-optionalDataType: "String"
       - name: "end"
         in: "query"
         description: "Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time)\
@@ -20706,7 +20849,7 @@ paths:
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
           );\n\n// Optional, you can pass them as null values to getSpendingStat method\
           \ below, default values will be used\n$page = 1;\n$limit = 10;\n$start =\
-          \ 2018-11-11 11:11;\n$end = \"2019-11-11 11:11\";\n\ntry {\n    // GetSpendingStatPaginatedResponse\
+          \ \"2018-11-11 11:11\";\n$end = \"2019-11-11 11:11\";\n\ntry {\n    // GetSpendingStatPaginatedResponse\
           \ class object\n    $result = $api->getSpendingStat($page, $limit, $start,\
           \ $end);\n    // ...\n} catch (Exception $e) {\n    echo 'Exception when\
           \ calling TextMagicApi->getSpendingStat: ', $e->getMessage(), PHP_EOL;\n\
@@ -20722,12 +20865,13 @@ paths:
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
           \n        // Optional, you can pass them as null values to getSpendingStat\
           \ method below, default values will be used\n        int page = 1;\n   \
-          \     int limit = 10;\n        int start = 2018-11-11 11:11;\n        String\
-          \ end = \"2019-11-11 11:11\";\n\n        try {\n            // GetSpendingStatPaginatedResponse\
-          \ class object\n            GetSpendingStatPaginatedResponse obj = apiInstance.getSpendingStat(page,\
-          \ limit, start, end);\n            // ...\n        } catch (ApiException\
-          \ e) {\n            System.err.println(\"Exception when calling getSpendingStat\"\
-          );\n            e.printStackTrace();\n        }\n    }\n}"
+          \     int limit = 10;\n        String start = \"2018-11-11 11:11\";\n  \
+          \      String end = \"2019-11-11 11:11\";\n\n        try {\n           \
+          \ // GetSpendingStatPaginatedResponse class object\n            GetSpendingStatPaginatedResponse\
+          \ obj = apiInstance.getSpendingStat(page, limit, start, end);\n        \
+          \    // ...\n        } catch (ApiException e) {\n            System.err.println(\"\
+          Exception when calling getSpendingStat\");\n            e.printStackTrace();\n\
+          \        }\n    }\n}"
       - lang: "JavaScript"
         source: "const textmagicClient = require('textmagic-client');\n\nconst client\
           \ = textmagicClient.ApiClient.instance;\nconst auth = client.authentications['BasicAuth'];\n\
@@ -20735,7 +20879,7 @@ paths:
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nparams\
           \ = {\n// Optional parameters\n    page: 1,\n    limit: 10,\n    start:\
-          \ 2018-11-11 11:11,\n    end: \"2019-11-11 11:11\",\n}\n\napi.getSpendingStat().then(function\
+          \ \"2018-11-11 11:11\",\n    end: \"2019-11-11 11:11\",\n}\n\napi.getSpendingStat().then(function\
           \ (data) {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
           });"
       - lang: "Ruby"
@@ -20743,7 +20887,7 @@ paths:
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
           end\n\napi = TextMagic::TextMagicApi.new\n\nparams = {\n  # Optional parameters\n\
-          \  page: 1,\n  limit: 10,\n  start: 2018-11-11 11:11,\n  end: '2019-11-11\
+          \  page: 1,\n  limit: 10,\n  start: '2018-11-11 11:11',\n  end: '2019-11-11\
           \ 11:11',\n}\n\nbegin\n    # GetSpendingStatPaginatedResponse object\n \
           \   result = api.get_spending_stat(params)\n    # ...\nrescue TextMagic::ApiError\
           \ => e\n    puts \"Exception when calling TextMagicApi->get_spending_stat:\
@@ -20759,8 +20903,8 @@ paths:
           \            var apiInstance = new TextMagicApi();\n\n            // Optional,\
           \ you can pass them as null values to getSpendingStat method below, default\
           \ values will be used\n            int page = 1;\n            int limit\
-          \ = 10;\n            int start = 2018-11-11 11:11;\n            string end\
-          \ = \"2019-11-11 11:11\";\n\n            try {\n                // GetSpendingStatPaginatedResponse\
+          \ = 10;\n            string start = \"2018-11-11 11:11\";\n            string\
+          \ end = \"2019-11-11 11:11\";\n\n            try {\n                // GetSpendingStatPaginatedResponse\
           \ class object\n                var result = apiInstance.GetSpendingStat(page,\
           \ limit, start, end);\n                // ...\n            } catch (Exception\
           \ e) {\n                Console.WriteLine(\"Exception when calling getSpendingStat:\
@@ -20774,13 +20918,13 @@ paths:
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        ' Optional,\
           \ you can pass them as null values to getSpendingStat method below, default\
           \ values will be used\n        Dim page As Integer = 1\n        Dim limit\
-          \ As Integer = 10\n        Dim start As Integer = 2018-11-11 11:11\n   \
-          \     Dim end As String = \"2019-11-11 11:11\"\n\n        Try\n        \
-          \    ' GetSpendingStatPaginatedResponse class object\n            Dim result\
-          \ = apiInstance.GetSpendingStat(page, limit, start, end)\n            '\
-          \ ...\n        Catch e As Exception\n            Console.WriteLine(\"Exception\
-          \ when calling getSpendingStat: \" + e.Message)\n        End Try\n    End\
-          \ Sub\nEnd Module"
+          \ As Integer = 10\n        Dim start As String = \"2018-11-11 11:11\"\n\
+          \        Dim end As String = \"2019-11-11 11:11\"\n\n        Try\n     \
+          \       ' GetSpendingStatPaginatedResponse class object\n            Dim\
+          \ result = apiInstance.GetSpendingStat(page, limit, start, end)\n      \
+          \      ' ...\n        Catch e As Exception\n            Console.WriteLine(\"\
+          Exception when calling getSpendingStat: \" + e.Message)\n        End Try\n\
+          \    End Sub\nEnd Module"
       - lang: "Go"
         source: "package main\n\nimport (\n    \"context\"\n    \"fmt\"\n    \"github.com/antihax/optional\"\
           \n    // If you're using go.mod use line below to import our module\n  \
@@ -20791,12 +20935,12 @@ paths:
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n\n    opts := tm.GetSpendingStatOpts{\n  \
           \      // Optional parameters\n        Page: optional.NewInt32(1),\n   \
-          \     Limit: optional.NewInt32(10),\n        Start: optional.NewInt32(2018-11-11\
-          \ 11:11),\n        End: optional.NewString(\"2019-11-11 11:11\"),\n    }\n\
-          \n    // tm.GetSpendingStatPaginatedResponse struct\n    result, _, err\
-          \ := client.TextMagicApi.GetSpendingStat(auth, &opts)\n\n    if err != nil\
-          \ {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"%+v\\n\"\
-          , result)\n        // ...\n    }\n}\n"
+          \     Limit: optional.NewInt32(10),\n        Start: optional.NewString(\"\
+          2018-11-11 11:11\"),\n        End: optional.NewString(\"2019-11-11 11:11\"\
+          ),\n    }\n\n    // tm.GetSpendingStatPaginatedResponse struct\n    result,\
+          \ _, err := client.TextMagicApi.GetSpendingStat(auth, &opts)\n\n    if err\
+          \ != nil {\n        log.Fatal(err)\n    } else {\n        fmt.Printf(\"\
+          %+v\\n\", result)\n        // ...\n    }\n}\n"
       - lang: "Cpp"
         source: "#include <iostream>\n#include <fstream>\n// Change paths to directory\
           \ where SDK lib is installed. See C++ SDK installation instructions for\
@@ -20809,8 +20953,8 @@ paths:
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
           \    TextMagicApi api(apiClient);\n\n    // Optional parameters. Important:\
           \ if you want to use default value then pass boost::none value\n    int\
-          \ page = 1;\n    int limit = 10;\n    int start = 2018-11-11 11:11;\n  \
-          \  std::string end = \"2019-11-11 11:11\";\n\n    try {\n        pplx::task<std::shared_ptr<GetSpendingStatPaginatedResponse>>\
+          \ page = 1;\n    int limit = 10;\n    std::string start = \"2018-11-11 11:11\"\
+          ;\n    std::string end = \"2019-11-11 11:11\";\n\n    try {\n        pplx::task<std::shared_ptr<GetSpendingStatPaginatedResponse>>\
           \ result = api.getSpendingStat(page, limit, start, end);\n        result.wait();\n\
           \        // put operations with result here...\n    } catch(const std::exception&\
           \ e) {\n        std::cout << \"getSpendingStat() exception: \" << e.what()\
@@ -20822,8 +20966,8 @@ paths:
           \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\n# Optional\
-          \ params, you can skip them\npage = 1\nlimit = 10\nstart = 2018-11-11 11:11\n\
-          end = \"2019-11-11 11:11\"\n\ntry:\n    # GetSpendingStatPaginatedResponse\
+          \ params, you can skip them\npage = 1\nlimit = 10\nstart = \"2018-11-11\
+          \ 11:11\"\nend = \"2019-11-11 11:11\"\n\ntry:\n    # GetSpendingStatPaginatedResponse\
           \ object\n    result = api_instance.get_spending_stat(page=page, limit=limit,\
           \ start=start, end=end)\n    # ...\nexcept ApiException as e:\n    print(\"\
           Exception when calling TextMagicApi->get_spending_stat: %s\\n\" % e)\n"
@@ -20834,7 +20978,7 @@ paths:
           \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
           \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\n# Optional\
           \ params, you can skip them\nmy $page = 1;\nmy $limit = 10;\nmy $start =\
-          \ 2018-11-11 11:11;\nmy $end = '2019-11-11 11:11';\n\neval {\n    # GetSpendingStatPaginatedResponse\
+          \ '2018-11-11 11:11';\nmy $end = '2019-11-11 11:11';\n\neval {\n    # GetSpendingStatPaginatedResponse\
           \ object\n    my $result = $api_instance->get_spending_stat(page => $page,\
           \ limit => $limit, start => $start, end => $end);\n    # ...\n};\n\nif ($@)\
           \ {\n    warn \"Exception when calling TextMagicApi->get_spending_stat:\
@@ -22312,7 +22456,7 @@ paths:
         in: "path"
         required: true
         type: "string"
-        default: "19998887766"
+        x-example: "447860021130"
         x-exportParamName: "Phone"
       responses:
         200:
@@ -22333,7 +22477,7 @@ paths:
           Api\\TextMagicApi;\nuse TextMagic\\Configuration;\n\n$config = Configuration::getDefaultConfiguration()\n\
           \    ->setUsername('YOUR_USERNAME')\n    ->setPassword('YOUR_PASSWORD');\n\
           \n$api = new TextMagicApi(\n    new GuzzleHttp\\Client(),\n    $config\n\
-          );\n\n$phone = \"19998887766\";\n// Optional, you can pass them as null\
+          );\n\n$phone = \"447860021130\";\n// Optional, you can pass them as null\
           \ values to getChatByPhone method below, default values will be used\n$upsert\
           \ = 0;\n$reopen = 0;\n\ntry {\n    // Chat class object\n    $result = $api->getChatByPhone($phone,\
           \ $upsert, $reopen);\n    // ...\n} catch (Exception $e) {\n    echo 'Exception\
@@ -22348,7 +22492,7 @@ paths:
           \ BasicAuth = (HttpBasicAuth) defaultClient.getAuthentication(\"BasicAuth\"\
           );\n        BasicAuth.setUsername(\"YOUR_USERNAME\");\n        BasicAuth.setPassword(\"\
           YOUR_PASSWORD\");\n\n        TextMagicApi apiInstance = new TextMagicApi();\n\
-          \n        String phone = \"19998887766\";\n        // Optional, you can\
+          \n        String phone = \"447860021130\";\n        // Optional, you can\
           \ pass them as null values to getChatByPhone method below, default values\
           \ will be used\n        int upsert = 0;\n        int reopen = 0;\n\n   \
           \     try {\n            // Chat class object\n            Chat obj = apiInstance.getChatByPhone(phone,\
@@ -22361,7 +22505,7 @@ paths:
           const api = new textmagicClient.TextMagicApi();\n\n// put your Username\
           \ and API Key from https://my.textmagic.com/online/api/rest-api/keys page.\n\
           auth.username = 'YOUR_USERNAME';\nauth.password = 'YOUR_API_KEY';\n\nconst\
-          \ phone = \"19998887766\";\nparams = {\n// Optional parameters\n    upsert:\
+          \ phone = \"447860021130\";\nparams = {\n// Optional parameters\n    upsert:\
           \ 0,\n    reopen: 0,\n}\n\napi.getChatByPhone(phone, ).then(function (data)\
           \ {\n    console.log(data);\n}).catch(function(err){\n    console.error(err);\n\
           });"
@@ -22369,7 +22513,7 @@ paths:
         source: "require 'textmagic_rest_client'\n\n# Setup authorization\nTextMagic.configure\
           \ do |config|\n    # Configure HTTP basic authorization: BasicAuth\n   \
           \ config.username = 'YOUR_USERNAME'\n    config.password = 'YOUR_PASSWORD'\n\
-          end\n\napi = TextMagic::TextMagicApi.new\n\nphone = '19998887766'\nparams\
+          end\n\napi = TextMagic::TextMagicApi.new\n\nphone = '447860021130'\nparams\
           \ = {\n  # Optional parameters\n  upsert: 0,\n  reopen: 0,\n}\n\nbegin\n\
           \    # Chat object\n    result = api.get_chat_by_phone(phone, params)\n\
           \    # ...\nrescue TextMagic::ApiError => e\n    puts \"Exception when calling\
@@ -22383,12 +22527,12 @@ paths:
           \       Configuration.Default.Password = \"YOUR_PASSWORD\";\n          \
           \  Configuration.Default.BasePath = \"https://rest.textmagic.com\";\n\n\
           \            var apiInstance = new TextMagicApi();\n\n            string\
-          \ phone = \"19998887766\";\n            // Optional, you can pass them as\
-          \ null values to getChatByPhone method below, default values will be used\n\
-          \            int upsert = 0;\n            int reopen = 0;\n\n          \
-          \  try {\n                // Chat class object\n                var result\
-          \ = apiInstance.GetChatByPhone(phone, upsert, reopen);\n               \
-          \ // ...\n            } catch (Exception e) {\n                Console.WriteLine(\"\
+          \ phone = \"447860021130\";\n            // Optional, you can pass them\
+          \ as null values to getChatByPhone method below, default values will be\
+          \ used\n            int upsert = 0;\n            int reopen = 0;\n\n   \
+          \         try {\n                // Chat class object\n                var\
+          \ result = apiInstance.GetChatByPhone(phone, upsert, reopen);\n        \
+          \        // ...\n            } catch (Exception e) {\n                Console.WriteLine(\"\
           Exception when calling getChatByPhone: \"+e.Message);\n            }\n \
           \       }\n    }\n}"
       - lang: "VB.Net"
@@ -22398,7 +22542,7 @@ paths:
           \ = \"YOUR_USERNAME\"\n        Configuration.Default.Password = \"YOUR_PASSWORD\"\
           \n        Configuration.Default.BasePath = \"https://rest.textmagic.com\"\
           \n\n        Dim apiInstance = New TextMagicApi()\n\n        Dim phone As\
-          \ String = \"19998887766\"\n        ' Optional, you can pass them as null\
+          \ String = \"447860021130\"\n        ' Optional, you can pass them as null\
           \ values to getChatByPhone method below, default values will be used\n \
           \       Dim upsert As Integer = 0\n        Dim reopen As Integer = 0\n\n\
           \        Try\n            ' Chat class object\n            Dim result =\
@@ -22415,7 +22559,7 @@ paths:
           \n    auth := context.WithValue(context.Background(), tm.ContextBasicAuth,\
           \ tm.BasicAuth{\n        UserName: \"YOUR_USERNAME\",\n        Password:\
           \ \"YOUR_PASSWORD\",\n    })\n    // Required\n    var phone string = \"\
-          19998887766\"\n\n    opts := tm.GetChatByPhoneOpts{\n        // Optional\
+          447860021130\"\n\n    opts := tm.GetChatByPhoneOpts{\n        // Optional\
           \ parameters\n        Upsert: optional.NewInt32(0),\n        Reopen: optional.NewInt32(0),\n\
           \    }\n\n    // tm.Chat struct\n    result, _, err := client.TextMagicApi.GetChatByPhone(auth,\
           \ phone, &opts)\n\n    if err != nil {\n        log.Fatal(err)\n    } else\
@@ -22430,7 +22574,7 @@ paths:
           \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
           );\n    apiConfig->getHttpConfig().set_credentials(web::credentials(\"YOUR_NAME\"\
           , \"YOUR_PASSWORD\"));\n    apiClient->setConfiguration(apiConfig);\n\n\
-          \    TextMagicApi api(apiClient);\n\n    std::string phone = \"19998887766\"\
+          \    TextMagicApi api(apiClient);\n\n    std::string phone = \"447860021130\"\
           ;\n    // Optional parameters. Important: if you want to use default value\
           \ then pass boost::none value\n    int upsert = 0;\n    int reopen = 0;\n\
           \n    try {\n        pplx::task<std::shared_ptr<Chat>> result = api.getChatByPhone(phone,\
@@ -22445,7 +22589,7 @@ paths:
           \ page.\nconfiguration.username = \"YOUR_USERNAME\"\nconfiguration.password\
           \ = \"YOUR_API_KEY\"\n\n# create an instance of the API class\napi_instance\
           \ = TextMagic.TextMagicApi(TextMagic.ApiClient(configuration))\n\nphone\
-          \ = \"19998887766\"\n# Optional params, you can skip them\nupsert = 0\n\
+          \ = \"447860021130\"\n# Optional params, you can skip them\nupsert = 0\n\
           reopen = 0\n\ntry:\n    # Chat object\n    result = api_instance.get_chat_by_phone(phone=phone,\
           \ upsert=upsert, reopen=reopen)\n    # ...\nexcept ApiException as e:\n\
           \    print(\"Exception when calling TextMagicApi->get_chat_by_phone: %s\\\
@@ -22456,8 +22600,8 @@ paths:
           \    username   => 'YOUR_USERNAME',\n    password   => 'YOUR_PASSWORD',\n\
           \    base_url  => 'https://rest.textmagic.com'\n);\n\nmy $api_instance =\
           \ Net::Sms::TextMagicClient::TextMagicApi::->new($client);\n\nmy $phone\
-          \ = '19998887766';\n# Optional params, you can skip them\nmy $upsert = 0;\n\
-          my $reopen = 0;\n\neval {\n    # Chat object\n    my $result = $api_instance->get_chat_by_phone(phone\
+          \ = '447860021130';\n# Optional params, you can skip them\nmy $upsert =\
+          \ 0;\nmy $reopen = 0;\n\neval {\n    # Chat object\n    my $result = $api_instance->get_chat_by_phone(phone\
           \ => $phone, upsert => $upsert, reopen => $reopen);\n    # ...\n};\n\nif\
           \ ($@) {\n    warn \"Exception when calling TextMagicApi->get_chat_by_phone:\
           \ $@\\n\";\n}"
@@ -24856,6 +25000,9 @@ definitions:
         type: "integer"
         example: 67
         description: "How many contacts have been imported."
+    example:
+      processed: 67
+      status: 0
   GetAvailableSenderSettingOptionsResponse:
     type: "object"
     required:
@@ -25519,17 +25666,17 @@ definitions:
       countries:
       - country: "US"
         max: 6.0
-        country_name: "United State"
+        allowDedicated: true
         count: 1.0
-        allow_dedicated: true
         sum: "1"
+        countryName: "United State"
         landline: 0.0
       - country: "US"
         max: 6.0
-        country_name: "United State"
+        allowDedicated: true
         count: 1.0
-        allow_dedicated: true
         sum: "1"
+        countryName: "United State"
         landline: 0.0
   GetMessagePreviewResponse:
     properties:
@@ -26972,7 +27119,7 @@ definitions:
       avatar:
         type: "string"
         example: "avatars/dummy_avatar.png"
-        description: "null"
+        description: "TODO"
         x-nullable: true
       createdAt:
         type: "string"
@@ -28220,10 +28367,10 @@ definitions:
       phone: "+447937946700"
   GetMessagePriceResponseCountriesItem:
     required:
-    - "allow_dedicated"
+    - "allowDedicated"
     - "count"
     - "country"
-    - "country_name"
+    - "countryName"
     - "landline"
     - "max"
     - "sum"
@@ -28232,11 +28379,11 @@ definitions:
         type: "string"
         example: "US"
         description: "Two-letter ISO country code"
-      country_name:
+      countryName:
         type: "string"
         example: "United State"
         description: "Country name"
-      allow_dedicated:
+      allowDedicated:
         type: "boolean"
         example: true
         description: "Is allow to use dedicated number"
@@ -28259,31 +28406,34 @@ definitions:
     example:
       country: "US"
       max: 6.0
-      country_name: "United State"
+      allowDedicated: true
       count: 1.0
-      allow_dedicated: true
       sum: "1"
+      countryName: "United State"
       landline: 0.0
   UpdateSurveyCountryItem:
     required:
     - "country"
-    - "user_inbound_id"
+    - "userInboundId"
     properties:
       country:
         type: "string"
         example: "US"
         description: "Two-letter ISO country code"
-      user_inbound_id:
+      userInboundId:
         type: "integer"
         example: 10
         description: "User inbound phone ID"
   ImportColumnMappingItem:
+    required:
+    - "columnPositionInFile"
+    - "fieldOrCustomFieldId"
     properties:
-      column_position_in_file:
+      columnPositionInFile:
         type: "string"
         example: "0"
         description: "Column position in file (indexed from 0)"
-      field_or_custom_field_id:
+      fieldOrCustomFieldId:
         type: "string"
         example: "10"
         description: "Field or custom field id"
@@ -28519,6 +28669,26 @@ definitions:
         status: "A"
       page: 1
   GetCallsPricesResponse:
+    required:
+    - "country"
+    - "forward"
+    - "inbound"
+    - "outbound"
+    properties:
+      outbound:
+        type: "number"
+        description: "Price for outbound message"
+      inbound:
+        type: "number"
+        description: "Price for inbound message"
+      forward:
+        type: "number"
+        description: "Price for forward"
+      country:
+        type: "string"
+        example: "US"
+        description: "2-letter ISO country code for local phone numbers, used when\
+          \ local is  set to true. Default is account country"
     example:
       GF:
         outbound: "0.197"

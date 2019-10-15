@@ -11,7 +11,7 @@ package TextMagic
 
 type ImportColumnMappingItem struct {
 	// Column position in file (indexed from 0)
-	ColumnPositionInFile string `json:"column_position_in_file,omitempty"`
+	ColumnPositionInFile string `json:"columnPositionInFile"`
 	// Field or custom field id
-	FieldOrCustomFieldId string `json:"field_or_custom_field_id,omitempty"`
+	FieldOrCustomFieldId string `json:"fieldOrCustomFieldId"`
 }

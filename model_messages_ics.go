@@ -36,7 +36,7 @@ type MessagesIcs struct {
 	Timezone string `json:"timezone"`
 	// Indicates that schedling has been completed.
 	Completed bool `json:"completed"`
-	// null
+	// TODO
 	Avatar string `json:"avatar"`
 	// Scheduling creation time.
 	CreatedAt time.Time `json:"createdAt"`

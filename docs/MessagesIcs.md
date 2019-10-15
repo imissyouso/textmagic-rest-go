@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **RecipientsCount** | **int32** | Amount of actual recipients. | [default to null]
 **Timezone** | **string** | User-friendly timezone name (with spaces replaced by underscores). | [default to null]
 **Completed** | **bool** | Indicates that schedling has been completed. | [default to null]
-**Avatar** | **string** | null | [default to null]
+**Avatar** | **string** | TODO | [default to null]
 **CreatedAt** | [**time.Time**](time.Time.md) | Scheduling creation time. | [default to null]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -13,9 +13,9 @@ type GetMessagePriceResponseCountriesItem struct {
 	// Two-letter ISO country code
 	Country string `json:"country"`
 	// Country name
-	CountryName string `json:"country_name"`
+	CountryName string `json:"countryName"`
 	// Is allow to use dedicated number
-	AllowDedicated bool `json:"allow_dedicated"`
+	AllowDedicated bool `json:"allowDedicated"`
 	// Parts count to send
 	Count float32 `json:"count"`
 	// Maximum parts to send

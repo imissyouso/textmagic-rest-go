@@ -68,6 +68,7 @@ Method | HTTP request | Description
 [**GetContact**](TextMagicApi.md#GetContact) | **Get** /api/v2/contacts/{id} | Get the details of a specific contact
 [**GetContactByPhone**](TextMagicApi.md#GetContactByPhone) | **Get** /api/v2/contacts/phone/{phone} | Get the details of a specific contact by phone number
 [**GetContactIfBlocked**](TextMagicApi.md#GetContactIfBlocked) | **Get** /api/v2/contacts/block/phone | Check is that phone number blocked
+[**GetContactImportSessionProgress**](TextMagicApi.md#GetContactImportSessionProgress) | **Get** /api/v2/contacts/import/progress/{id} | Check import progress
 [**GetContactNote**](TextMagicApi.md#GetContactNote) | **Get** /api/v2/notes/{id} | Get a contact note
 [**GetContactNotes**](TextMagicApi.md#GetContactNotes) | **Get** /api/v2/contacts/{id}/notes | Fetch notes assigned to the given contact.
 [**GetContacts**](TextMagicApi.md#GetContacts) | **Get** /api/v2/contacts | Get all contacts
@@ -1663,7 +1664,7 @@ Optional parameters are passed through a pointer to a GetAvailableDedicatedNumbe
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 
- **prefix** | **optional.Int32**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | [default to 1]
+ **prefix** | **optional.Int32**| Desired number prefix. Should include country code (i.e. 447 for UK phone number format). Leave blank to get all the available numbers for the specified country. | 
  **tollfree** | **optional.Int32**| Should we show only tollfree numbers (tollfree available only for US). | [default to 0]
 
 ### Return type
@@ -2048,6 +2049,34 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **GetContactImportSessionProgress**
+> GetContactImportSessionProgressResponse GetContactImportSessionProgress(ctx, id)
+Check import progress
+
+Get contact import session progress.
+
+### Required Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+  **id** | **int32**|  | 
+
+### Return type
+
+[**GetContactImportSessionProgressResponse**](GetContactImportSessionProgressResponse.md)
+
+### Authorization
+
+[BasicAuth](../README.md#BasicAuth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **GetContactNote**
 > ContactNote GetContactNote(ctx, id)
 Get a contact note
@@ -2415,7 +2444,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
  **limit** | **optional.Int32**| The number of results per page. | [default to 10]
- **query** | **optional.String**| Find contacts or lists by specified search query | [default to A]
+ **query** | **optional.String**| Find contacts or lists by specified search query | 
 
 ### Return type
 
@@ -2906,7 +2935,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **by** | **optional.String**| *   **off** to get total values per specified time interval *   **day** to show values grouped by day *   **month** to show values grouped by month *   **year** to show values grouped by year  | [default to off]
  **start** | **optional.Int32**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | 
- **end** | **optional.String**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | 
+ **end** | **optional.Int32**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | 
 
 ### Return type
 
@@ -3137,7 +3166,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **optional.Int32**| Fetch specified results page. | [default to 1]
  **limit** | **optional.Int32**| The number of results per page. | [default to 10]
- **start** | **optional.Int32**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | 
+ **start** | **optional.String**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is 7 days prior.  | 
  **end** | **optional.String**| Time period start in [UNIX timestamp](https://en.wikipedia.org/wiki/Unix_time) format. The default is today.  | 
 
 ### Return type
@@ -4462,7 +4491,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
   **updateCustomFieldValueInputObject** | [**UpdateCustomFieldValueInputObject**](UpdateCustomFieldValueInputObject.md)|  | 
-  **id** | **string**|  | 
+  **id** | **int32**|  | 
 
 ### Return type
 
