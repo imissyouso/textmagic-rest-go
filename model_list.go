@@ -21,10 +21,11 @@ type List struct {
 	// List members count.
 	MembersCount int32 `json:"membersCount"`
 	User *User `json:"user"`
+	// Internal service field.
 	Service bool `json:"service"`
 	// Is the list **shared** among all sub-accounts?
 	Shared bool `json:"shared"`
 	Avatar *ListImage `json:"avatar"`
-	// Indicates that List is used as a default. All new contacts will be added in this List by default.
+	// Indicates that List is used as a default. All new contacts that added via Web-app will be added in this List by default.
 	IsDefault bool `json:"isDefault"`
 }

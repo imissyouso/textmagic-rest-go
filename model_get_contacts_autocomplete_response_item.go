@@ -12,13 +12,13 @@ package TextMagic
 type GetContactsAutocompleteResponseItem struct {
 	// Id of entity. 0 if object is a Reply
 	EntityId int32 `json:"entityId"`
-	// 
+	// Entry type: * **contact** if it is related to a contact * **list** if it is related to a contact list * **reply** if it is related to an incoming message 
 	EntityType string `json:"entityType"`
 	// Id of contact/list if entityType is contact/list OR phone number if entityType is reply.
 	Value string `json:"value"`
 	// Name of the contact/list if entityType is contact/list OR phone number if entityType is reply.
 	Label string `json:"label"`
-	// If contact or list was shared by another user then name if this user will be shown.
+	// If contact or list was shared by another sub-account then name if this user will be shown.
 	SharedBy string `json:"sharedBy"`
 	// Contact avatar URI.
 	Avatar string `json:"avatar"`

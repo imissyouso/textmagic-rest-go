@@ -23,12 +23,16 @@ type MessagesIcs struct {
 	Session *MessageSession `json:"session"`
 	// Date and time when last message has been sent.
 	LastSent time.Time `json:"lastSent"`
+	// Aggregated contact information. If the message scheduled to be sent to a single contact, a full name will be returned here. Otherwise, a total amount contacts will be returned.
 	ContactName string `json:"contactName"`
 	Parameters *MessagesIcsParameters `json:"parameters"`
 	Type_ string `json:"type"`
+	// A human-readable summary of the sending schedule.
 	Summary string `json:"summary"`
 	TextParameters *MessagesIcsTextParameters `json:"textParameters"`
+	// First occurence date.
 	FirstOccurrence time.Time `json:"firstOccurrence"`
+	// Last occurence date (could be `null` if the schedule is endless).
 	LastOccurrence time.Time `json:"lastOccurrence"`
 	// Amount of actual recipients.
 	RecipientsCount int32 `json:"recipientsCount"`
@@ -36,7 +40,7 @@ type MessagesIcs struct {
 	Timezone string `json:"timezone"`
 	// Indicates that schedling has been completed.
 	Completed bool `json:"completed"`
-	// TODO
+	// A relative link to the contact avatar.
 	Avatar string `json:"avatar"`
 	// Scheduling creation time.
 	CreatedAt time.Time `json:"createdAt"`

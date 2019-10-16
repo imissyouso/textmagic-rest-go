@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ForwardedCallNotification** | **bool** | Should user receive notification about new forwarded calls. | [default to null]
 **IncludeSmsHistory** | **bool** | Include SMS history into notification Email. | [default to null]
 **SendInHtmlFormat** | **bool** | Send Email notification in HTML format. | [default to null]
-**AlertEmail1** | **string** | New message notification email 2. | [default to null]
+**AlertEmail1** | **string** | New message notification email 1. | [default to null]
 **AlertEmail2** | **string** | New message notification email 2. | [default to null]
 **AlertEmail3** | **string** | New message notification email 3. | [default to null]
 

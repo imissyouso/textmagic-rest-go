@@ -34,6 +34,7 @@ type MessageOut struct {
 	Deleted bool `json:"deleted,omitempty"`
 	// Message charset. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS 
 	Charset string `json:"charset"`
+	// Human-readable message charset label. Could be: *   **ISO-8859-1** for plaintext SMS *   **UTF-16BE** for Unicode SMS *   **Voice** for voice services (Text-to-Speech or Voice Broadcast) messages 
 	CharsetLabel string `json:"charsetLabel"`
 	// Contact first name. Could be substituted from your [Contacts](http://docs.textmagictesting.com/#tag/Contacts) (even if you submitted phone number instead of contact ID). 
 	FirstName string `json:"firstName"`
@@ -47,6 +48,7 @@ type MessageOut struct {
 	Price float32 `json:"price,omitempty"`
 	// Message parts (multiples of 160 characters) count.
 	PartsCount int32 `json:"partsCount"`
+	// User email which this message came from. For Email2SMS and Distribution Lists messages it will be an original email address, in other cases it is an account email address.
 	FromEmail string `json:"fromEmail,omitempty"`
 	// Phone number which is used to send SMS.
 	FromNumber string `json:"fromNumber,omitempty"`

@@ -18,9 +18,10 @@ type GetMessageSessionStatResponse struct {
 	Accepted int32 `json:"accepted"`
 	// Amount of rejected messages.
 	Rejected int32 `json:"rejected"`
-	// Amount of schedules messages.
+	// Amount of scheduled messages.
 	Scheduled int32 `json:"scheduled"`
+	// Total amount of messages.
 	All int32 `json:"all"`
-	// Total sent messages.
+	// Amount of sent but not yet delivered messages.
 	Sent int32 `json:"sent"`
 }

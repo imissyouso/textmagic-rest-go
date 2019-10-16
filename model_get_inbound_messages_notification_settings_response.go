@@ -18,7 +18,7 @@ type GetInboundMessagesNotificationSettingsResponse struct {
 	IncludeSmsHistory bool `json:"includeSmsHistory"`
 	// Send Email notification in HTML format.
 	SendInHtmlFormat bool `json:"sendInHtmlFormat"`
-	// New message notification email 2.
+	// New message notification email 1.
 	AlertEmail1 string `json:"alertEmail1"`
 	// New message notification email 2.
 	AlertEmail2 string `json:"alertEmail2"`

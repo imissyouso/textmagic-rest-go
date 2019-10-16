@@ -499,7 +499,7 @@ tags:
     \n```javascript\n{\n    \"repositories\": [\n        {\n            \"type\":\
     \ \"git\",\n            \"url\": \"https://github.com/imissyouso/textmagic-rest-php.git\"\
     \n        }\n    ],\n    \"require\": {\n        \"imissyouso/textmagic-rest-php\"\
-    : \"dev-master#v2.0.636\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
+    : \"dev-master#v2.0.631\"\n    }\n}\n```\n\nThen run `composer install`\n\n###\
     \ Manual Installation\n\nDownload the files and include `autoload.php`:\n\n```php\n\
     require_once(__DIR__.'/vendor/autoload.php');\n```\n\n## Usage Example\n\nPlease\
     \ follow the [installation](#installation) instructions and execute the following\
@@ -528,7 +528,7 @@ tags:
     \nThis library provides you with an easy way of sending SMS and receiving replies\
     \ by integrating TextMagic SMS Gateway into your Node.js application.\n\n[Get\
     \ it now on GitHub](https://github.com/textmagic/textmagic-rest-nodejs)\n## Installation\n\
-    \n```shell\nnpm install textmagic-client@2.0.636 --save\n```\n\n## Usage Example\n\
+    \n```shell\nnpm install textmagic-client@2.0.631 --save\n```\n\n## Usage Example\n\
     \nPlease follow the [installation](#installation) instructions and execute the\
     \ following JS code:\n\n```javascript\nconst textmagicClient = require('textmagic-client');\n\
     \nconst fs = require('fs');\nconst client = textmagicClient.ApiClient.instance;\n\
@@ -560,7 +560,7 @@ tags:
     Install-Package Newtonsoft.Json\nInstall-Package JsonSubTypes\n```\n\nNOTE: RestSharp\
     \ versions later than 105.1.0 have a bug which causes file uploads to fail. See\
     \ [RestSharp#742](https://github.com/restsharp/RestSharp/issues/742)\n\n## Installation\n\
-    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.636/).\n\
+    Add the library to your project references or install it as a [NuGet package](https://www.nuget.org/packages/TextMagicClient/2.0.639/).\n\
     \n## C# usage example\n```csharp\nusing System;\nusing System.IO;\nusing TextMagicClient.Api;\n\
     using TextMagicClient.Client;\nusing TextMagicClient.Model;\n\nnamespace ExampleApp\n\
     {\n    class Program\n    {\n        static void Main(string[] args)\n       \
@@ -623,22 +623,22 @@ tags:
     \ Requirements\n\n* CMake 2.8 and later (https://cmake.org/)\n* cpprest (https://github.com/microsoft/cpprestsdk)\n\
     \nUbuntu dependencies quick installation example:\n```shell\napt-get install build-essential\
     \ cmake libcpprest-dev\n```\n\n## Installation\n\nDownload and extract lib archive:\n\
-    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.636.tar.gz\
-    \ && \\\ntar zxf v2.0.636.tar.gz && \\\nrm -f v2.0.636.tar.gz && \\\ncd textmagic-rest-cpp-2.0.636\n\
+    ```shell\nwget https://github.com/imissyouso/textmagic-rest-cpp/archive/v2.0.631.tar.gz\
+    \ && \\\ntar zxf v2.0.631.tar.gz && \\\nrm -f v2.0.631.tar.gz && \\\ncd textmagic-rest-cpp-2.0.631\n\
     ```\nBuild using cmake\n```shell\ncmake . && cmake --build .\n```\nThe output\
-    \ library file will be placed in `textmagic-rest-cpp-2.0.636/lib` directory:\n\
+    \ library file will be placed in `textmagic-rest-cpp-2.0.631/lib` directory:\n\
     \n## Usage Example\nIn the example below, we assume that you moved the library\
-    \ sources `textmagic-rest-cpp-2.0.636` directory to your test project root directory.\n\
+    \ sources `textmagic-rest-cpp-2.0.631` directory to your test project root directory.\n\
     \nConfigure your `CMakeLists.txt` as shown here:\n```shell\ncmake_minimum_required(VERSION\
     \ 2.8)\nproject(test)\n\nset(CMAKE_CXX_STANDARD 14)\n\nadd_executable(app main.cpp)\n\
     \nadd_library(textmagic_client SHARED IMPORTED)\nset_property(TARGET textmagic_client\
-    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.636/lib/libtextmagic_client.so\"\
-    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.636\
-    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.636/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.636/api)\n\
+    \ PROPERTY IMPORTED_LOCATION \"${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.631/lib/libtextmagic_client.so\"\
+    )\n\ntarget_include_directories (app PRIVATE ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.631\
+    \ ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.631/model ${PROJECT_SOURCE_DIR}/textmagic-rest-cpp-2.0.631/api)\n\
     target_link_libraries(app boost_system cpprest crypto textmagic_client )\n```\n\
     \n`main.cpp` file example:\n```cpp\n#include <iostream>\n#include <fstream>\n\
-    #include \"textmagic-rest-cpp-2.0.636/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.636/ApiConfiguration.h\"\
-    \n#include \"textmagic-rest-cpp-2.0.636/api/TextMagicApi.h\"\n\nusing namespace\
+    #include \"textmagic-rest-cpp-2.0.631/ApiClient.h\"\n#include \"textmagic-rest-cpp-2.0.631/ApiConfiguration.h\"\
+    \n#include \"textmagic-rest-cpp-2.0.631/api/TextMagicApi.h\"\n\nusing namespace\
     \ com::textmagic::client::api;\n\nint main() {\n    std::shared_ptr<ApiClient>\
     \ apiClient(new ApiClient);\n    std::shared_ptr<ApiConfiguration> apiConfig(new\
     \ ApiConfiguration);\n\n    apiConfig->setBaseUrl(\"https://rest.textmagic.com\"\
@@ -677,7 +677,7 @@ tags:
     \ on GitHub\">Star</a>\n\nThis library provides you with an easy way of sending\
     \ SMS and receiving replies by integrating TextMagic SMS Gateway into your Python\
     \ application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-python)\n\
-    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.636\n\
+    ## Installation\n\n```shell\npip install git+https://github.com/imissyouso/textmagic-rest-python.git@v2.0.631\n\
     ```\n\n## Usage Example\n\n```python\nimport TextMagic\nfrom TextMagic.rest import\
     \ ApiException\n\n# Configure HTTP basic authorization: BasicAuth\nconfiguration\
     \ = TextMagic.Configuration()\nconfiguration.username = 'YOUR_USERNAME'\nconfiguration.password\
@@ -702,8 +702,8 @@ tags:
     \ GitHub\">Star</a>\n\nThis library provides you with an easy way of sending SMS\
     \ and receiving replies by integrating TextMagic SMS Gateway into your Perl application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-perl)\n##\
-    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.636.tar.gz\
-    \ && \\\ntar zxf v2.0.636.tar.gz && \\\nrm -f v2.0.636.tar.gz && \\\ncd textmagic-rest-perl-2.0.636\
+    \ Installation\n\n```bash\nwget https://github.com/imissyouso/textmagic-rest-perl/archive/v2.0.631.tar.gz\
+    \ && \\\ntar zxf v2.0.631.tar.gz && \\\nrm -f v2.0.631.tar.gz && \\\ncd textmagic-rest-perl-2.0.631\
     \ && \\\nperl Makefile.pl && \\\nmake && \\\nmake install && \\\ncpanm --installdeps\
     \ .\n```\n\n## Usage Example\n\nPlease follow the [installation](#installation)\
     \ instructions and execute the following Perl code:\n\n```perl\nuse 5.010;\nuse\
@@ -732,7 +732,7 @@ tags:
     \ and receiving replies by integrating TextMagic SMS Gateway into your Ruby application.\n\
     \n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-ruby)\n##\
     \ Installation\n\nAdd these lines into your Gemfile\n```ruby\ngem 'textmagic_rest_client',\
-    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.636'\n\
+    \ :git => 'https://github.com/imissyouso/textmagic-rest-ruby.git', :tag => 'v2.0.631'\n\
     ```\n\nRun the bundler install command\n``` shell\nbundle install\n```\n\n## Usage\
     \ Example\n\nCreate the test file `test.rb` and put the following code:\n```ruby\n\
     \ # Load the gem\nrequire 'textmagic_rest_client'\n\n # Setup authorization\n\
@@ -758,7 +758,7 @@ tags:
     Star imissyouso/textmagic-rest-go on GitHub\">Star</a>\n\nThis library provides\
     \ you with an easy way of sending SMS and receiving replies by integrating TextMagic\
     \ SMS Gateway into your Go application.\n\n[Get it now on GitHub](https://github.com/textmagic/textmagic-rest-go)\n\
-    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.636\n\
+    ## Installation\n\nWith go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go/v2@v2.0.639\n\
     ```\n\nwithout go.mod:\n```bash\ngo get -u github.com/imissyouso/textmagic-rest-go\n\
     ```\n\n## Dependencies:\n\n- https://github.com/antihax/optional - this library\
     \ is used to provide optional argument types for API calls. See the `GetAllOutboundMessages`\
@@ -24997,6 +24997,9 @@ definitions:
     properties:
       status:
         type: "integer"
+        description: "Session status:\n* **1** if session has been initialized but\
+          \ not yet started\n* **3** if session is being processed\n* **4** if session\
+          \ has errors\n* **5** if session completed successfully\n"
       processed:
         type: "integer"
         example: 67
@@ -25159,7 +25162,7 @@ definitions:
       alertEmail1:
         type: "string"
         example: "test@test.com"
-        description: "New message notification email 2."
+        description: "New message notification email 1."
       alertEmail2:
         type: "string"
         example: "test@test.com"
@@ -25288,11 +25291,13 @@ definitions:
       entityType:
         type: "string"
         example: "contact"
-        description: ""
+        description: "Entry type:\n* **contact** if it is related to a contact\n*\
+          \ **list** if it is related to a contact list\n* **reply** if it is related\
+          \ to an incoming message\n"
         enum:
-        - "list"
-        - "contact"
         - "reply"
+        - "contact"
+        - "list"
       value:
         type: "string"
         example: "22"
@@ -25306,8 +25311,8 @@ definitions:
       sharedBy:
         type: "string"
         example: "John Doe"
-        description: "If contact or list was shared by another user then name if this\
-          \ user will be shown."
+        description: "If contact or list was shared by another sub-account then name\
+          \ if this user will be shown."
       avatar:
         type: "string"
         example: "avatars/dummy_avatar.png"
@@ -25768,6 +25773,17 @@ definitions:
       type:
         type: "string"
         example: "session"
+        description: "Message response type:\n* **message** when message sent to a\
+          \ single recipient\n* **session** when message sent to multiple recipients\n\
+          * **schedule** when message has been scheduled for sending\n* **bulk** when\
+          \ message sent to multiple recipient and the number of recipients requires\
+          \ asynchronous processiong See [Sending more than 1,000 messages in one\
+          \ session](http://docs.textmagictesting.com/#section/Tutorials/Sending-more-than-1000-messages-in-one-session).\n"
+        enum:
+        - "message"
+        - "session"
+        - "schedule"
+        - "bulk"
       sessionId:
         type: "integer"
         example: 10489
@@ -25782,6 +25798,7 @@ definitions:
       messageId:
         type: "integer"
         example: "null"
+        description: "Message ID."
         x-nullable: true
       scheduleId:
         type: "integer"
@@ -25831,14 +25848,15 @@ definitions:
       scheduled:
         type: "integer"
         example: 0
-        description: "Amount of schedules messages."
+        description: "Amount of scheduled messages."
       all:
         type: "integer"
         example: 1
+        description: "Total amount of messages."
       sent:
         type: "integer"
         example: 1
-        description: "Total sent messages."
+        description: "Amount of sent but not yet delivered messages."
     example:
       all: 1
       rejected: 12
@@ -26433,6 +26451,27 @@ definitions:
           $ref: "#/definitions/List"
       phoneType:
         type: "string"
+        description: "Phone number type:\n* **0** if it is fixed-line;\n* **1** if\
+          \ it is mobile;\n* **2** if it is mobile or fixed-line (in case we cannot\
+          \ distingush between fixed-line or mobile);\n* **3** if it is toll-free;\n\
+          * **4** if it is a premium rate phone;\n* **5** if it is a shared cost phone;\n\
+          * **6** if it is a VoIP;\n* **7** if it is a [Personal Number]();\n* **8**\
+          \ if it is a pager;\n* **9** if it is an Universal Access Number;\n* **10**\
+          \ if the phone type is unknown;\n* **-1** if the phone type is not yet processed\
+          \ or cannot be determined.\n"
+        enum:
+        - "-1"
+        - "0"
+        - "1"
+        - "2"
+        - "3"
+        - "4"
+        - "5"
+        - "6"
+        - "7"
+        - "8"
+        - "9"
+        - "10"
         x-nullable: true
       avatar:
         $ref: "#/definitions/ContactImage"
@@ -26445,7 +26484,7 @@ definitions:
       country:
         name: "India"
         id: "US"
-      phoneType: "phoneType"
+      phoneType: "-1"
       notes:
       - createdAt: "2015-06-19T09:48:24+0000"
         note: "Test note"
@@ -26703,6 +26742,7 @@ definitions:
         $ref: "#/definitions/User"
       service:
         type: "boolean"
+        description: "Internal service field."
       shared:
         type: "boolean"
         example: false
@@ -26712,8 +26752,8 @@ definitions:
         $ref: "#/definitions/ListImage"
       isDefault:
         type: "boolean"
-        description: "Indicates that List is used as a default. All new contacts will\
-          \ be added in this List by default."
+        description: "Indicates that List is used as a default. All new contacts that\
+          \ added via Web-app will be added in this List by default."
         x-nullable: true
     example:
       shared: false
@@ -26964,6 +27004,9 @@ definitions:
       charsetLabel:
         type: "string"
         example: "ISO-8859-1"
+        description: "Human-readable message charset label. Could be:\n*   **ISO-8859-1**\
+          \ for plaintext SMS\n*   **UTF-16BE** for Unicode SMS\n*   **Voice** for\
+          \ voice services (Text-to-Speech or Voice Broadcast) messages\n"
         x-nullable: true
       firstName:
         type: "string"
@@ -27000,6 +27043,9 @@ definitions:
       fromEmail:
         type: "string"
         example: "test@email.com"
+        description: "User email which this message came from. For Email2SMS and Distribution\
+          \ Lists messages it will be an original email address, in other cases it\
+          \ is an account email address."
         x-nullable: true
       fromNumber:
         type: "string"
@@ -27108,25 +27154,39 @@ definitions:
         x-nullable: true
       contactName:
         type: "string"
-        example: "Test contact name TODO"
+        example: "15 recipients"
+        description: "Aggregated contact information. If the message scheduled to\
+          \ be sent to a single contact, a full name will be returned here. Otherwise,\
+          \ a total amount contacts will be returned."
       parameters:
         $ref: "#/definitions/MessagesIcs_parameters"
       type:
         type: "string"
         example: "once"
+        enum:
+        - "Once"
+        - "Hourly"
+        - "Daily"
+        - "Weekly"
+        - "Monthly"
+        - "Yearly"
       summary:
         type: "string"
+        example: "Every 2 weeks on Monday, Tuesday, Thursday at 10:30 (UTC+03:00)"
+        description: "A human-readable summary of the sending schedule."
       textParameters:
         $ref: "#/definitions/MessagesIcs_textParameters"
       firstOccurrence:
         type: "string"
         format: "date-time"
         example: "2015-06-19T09:48:24+0000"
+        description: "First occurence date."
         x-nullable: true
       lastOccurrence:
         type: "string"
         format: "date-time"
         example: "2015-06-19T09:48:24+0000"
+        description: "Last occurence date (could be `null` if the schedule is endless)."
         x-nullable: true
       recipientsCount:
         type: "integer"
@@ -27144,7 +27204,7 @@ definitions:
       avatar:
         type: "string"
         example: "avatars/dummy_avatar.png"
-        description: "TODO"
+        description: "A relative link to the contact avatar."
         x-nullable: true
       createdAt:
         type: "string"
@@ -27152,7 +27212,7 @@ definitions:
         example: "2015-06-19T09:48:24+0000"
         description: "Scheduling creation time."
     example:
-      summary: "summary"
+      summary: "Every 2 weeks on Monday, Tuesday, Thursday at 10:30 (UTC+03:00)"
       session:
         numbersCount: 18
         price: 3.45
@@ -27162,7 +27222,7 @@ definitions:
         text: "Hello {First name}!"
         source: "O"
         referenceId: "my_reference_id_4991"
-      contactName: "Test contact name TODO"
+      contactName: "15 recipients"
       timezone: "Europe/Tallinn"
       completed: true
       avatar: "avatars/dummy_avatar.png"
@@ -27604,7 +27664,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -28745,7 +28805,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -28943,7 +29003,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -29172,7 +29232,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -29370,7 +29430,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -30019,7 +30079,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -30217,7 +30277,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -30533,7 +30593,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -30731,7 +30791,7 @@ definitions:
         country:
           name: "India"
           id: "US"
-        phoneType: "phoneType"
+        phoneType: "-1"
         notes:
         - createdAt: "2015-06-19T09:48:24+0000"
           note: "Test note"
@@ -31454,7 +31514,7 @@ definitions:
       pageCount: 10
       limit: 10
       resources:
-      - summary: "summary"
+      - summary: "Every 2 weeks on Monday, Tuesday, Thursday at 10:30 (UTC+03:00)"
         session:
           numbersCount: 18
           price: 3.45
@@ -31464,7 +31524,7 @@ definitions:
           text: "Hello {First name}!"
           source: "O"
           referenceId: "my_reference_id_4991"
-        contactName: "Test contact name TODO"
+        contactName: "15 recipients"
         timezone: "Europe/Tallinn"
         completed: true
         avatar: "avatars/dummy_avatar.png"
@@ -31498,7 +31558,7 @@ definitions:
             - 39318
             - 39318
           text: "I Love TextMagic!"
-      - summary: "summary"
+      - summary: "Every 2 weeks on Monday, Tuesday, Thursday at 10:30 (UTC+03:00)"
         session:
           numbersCount: 18
           price: 3.45
@@ -31508,7 +31568,7 @@ definitions:
           text: "Hello {First name}!"
           source: "O"
           referenceId: "my_reference_id_4991"
-        contactName: "Test contact name TODO"
+        contactName: "15 recipients"
         timezone: "Europe/Tallinn"
         completed: true
         avatar: "avatars/dummy_avatar.png"
@@ -31569,7 +31629,7 @@ definitions:
       pageCount: 10
       limit: 10
       resources:
-      - summary: "summary"
+      - summary: "Every 2 weeks on Monday, Tuesday, Thursday at 10:30 (UTC+03:00)"
         session:
           numbersCount: 18
           price: 3.45
@@ -31579,7 +31639,7 @@ definitions:
           text: "Hello {First name}!"
           source: "O"
           referenceId: "my_reference_id_4991"
-        contactName: "Test contact name TODO"
+        contactName: "15 recipients"
         timezone: "Europe/Tallinn"
         completed: true
         avatar: "avatars/dummy_avatar.png"
@@ -31613,7 +31673,7 @@ definitions:
             - 39318
             - 39318
           text: "I Love TextMagic!"
-      - summary: "summary"
+      - summary: "Every 2 weeks on Monday, Tuesday, Thursday at 10:30 (UTC+03:00)"
         session:
           numbersCount: 18
           price: 3.45
@@ -31623,7 +31683,7 @@ definitions:
           text: "Hello {First name}!"
           source: "O"
           referenceId: "my_reference_id_4991"
-        contactName: "Test contact name TODO"
+        contactName: "15 recipients"
         timezone: "Europe/Tallinn"
         completed: true
         avatar: "avatars/dummy_avatar.png"
@@ -31867,7 +31927,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -32082,7 +32142,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -32371,7 +32431,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -32586,7 +32646,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -32828,7 +32888,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -33043,7 +33103,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -33285,7 +33345,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -33500,7 +33560,7 @@ definitions:
           country:
             name: "India"
             id: "US"
-          phoneType: "phoneType"
+          phoneType: "-1"
           notes:
           - createdAt: "2015-06-19T09:48:24+0000"
             note: "Test note"
@@ -34973,6 +35033,7 @@ definitions:
       chars:
         type: "integer"
         example: 125
+        description: "Characters count."
         x-nullable: true
       encoding:
         type: "string"
@@ -34993,6 +35054,9 @@ definitions:
       charsetLabel:
         type: "string"
         example: "ISO-8859-1"
+        description: "Human-readable message charset label. Could be:\n*   **ISO-8859-1**\
+          \ for plaintext SMS\n*   **UTF-16BE** for Unicode SMS\n*   **Voice** for\
+          \ voice services (Text-to-Speech or Voice Broadcast) messages\n"
         x-nullable: true
     example:
       cost: 0.04
