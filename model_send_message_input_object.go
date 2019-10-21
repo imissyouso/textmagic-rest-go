@@ -35,7 +35,7 @@ type SendMessageInputObject struct {
 	// One of allowed Sender ID (phone number or alphanumeric sender ID). If specified Sender ID is not allowed for some destinations, a fallback default Sender ID will be used to ensure delivery. See [Get timezones](http://docs.textmagictesting.com/#tag/Sender-IDs).
 	From string `json:"from,omitempty"`
 	// iCal RRULE parameter to create recurrent scheduled messages. When used, sendingTime is mandatory as start point of sending. See https://www.textmagic.com/free-tools/rrule-generator for format details.
-	Rule string `json:"rule,omitempty"`
+	Rrule string `json:"rrule,omitempty"`
 	// Should sending method try to create new Chat(if not exist) with specified recipients.
 	CreateChat bool `json:"createChat,omitempty"`
 	// Send Text to Speech message.

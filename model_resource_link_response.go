@@ -9,6 +9,7 @@
 
 package TextMagic
 
+// Response contains paginated list of data items.
 type ResourceLinkResponse struct {
 	// Resource ID.
 	Id int32 `json:"id"`

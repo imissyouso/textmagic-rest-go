@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | **int32** | HTTP error code. | [optional] [default to null]
+**Code** | **int32** | Error code. Meanings of error codes are similar to [HTTP response codes](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes). | [optional] [default to null]
 **Message** | **string** | Brief error message. You could display this message to your user or save it in a log. | [optional] [default to null]
 **Errors** | [***BadRequestResponseErrors**](BadRequestResponse_errors.md) |  | [optional] [default to null]
 

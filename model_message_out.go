@@ -52,12 +52,4 @@ type MessageOut struct {
 	FromEmail string `json:"fromEmail,omitempty"`
 	// Phone number which is used to send SMS.
 	FromNumber string `json:"fromNumber,omitempty"`
-	SmscId string `json:"smscId,omitempty"`
-	Contact string `json:"contact,omitempty"`
-	Source string `json:"source,omitempty"`
-	DeliveredCount int32 `json:"deliveredCount,omitempty"`
-	NumbersCount int32 `json:"numbersCount,omitempty"`
-	UserId int32 `json:"userId,omitempty"`
-	CreditsPrice string `json:"creditsPrice,omitempty"`
-	Chars int32 `json:"chars,omitempty"`
 }
